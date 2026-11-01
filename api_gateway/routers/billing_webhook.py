@@ -54,8 +54,8 @@ from pydantic import BaseModel, ConfigDict, Field
 
 router = APIRouter(tags=["Billing & Stripe Webhooks"])
 
-RUBRICWARD_STRIPE_ICON_FILE_DEFAULT = "file_1UWoK1CGhMI1IjipmLv2iM1F"
-RUBRICWARD_STRIPE_LOGO_FILE_DEFAULT = "file_1UWoK2CGhMI1IjiphUswlc5T"
+RUBRICWARD_STRIPE_ICON_FILE_DEFAULT = "file_1UX603CGhMI1Ijip32ZgFajz"
+RUBRICWARD_STRIPE_LOGO_FILE_DEFAULT = "file_1UX604CGhMI1IjipCqf3PdAQ"
 RUBRICWARD_STRIPE_ACCOUNT_DEFAULT = "acct_1Rj7l8CGhMI1Ijip"
 
 RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
@@ -248,8 +248,8 @@ def _create_stripe_branded_checkout_url(
         "subscription_data[metadata][tier]": str(entry["tier"]),
         "subscription_data[metadata][billing_cycle]": norm_billing,
         "branding_settings[display_name]": "RubricWard",
-        "branding_settings[background_color]": "#FAF8F5",
-        "branding_settings[button_color]": "#1E3A8A",
+        "branding_settings[background_color]": "#F2F9F8",
+        "branding_settings[button_color]": "#0F766E",
         "branding_settings[border_style]": "rounded",
         "branding_settings[icon][type]": "file",
         "branding_settings[icon][file]": icon_file,

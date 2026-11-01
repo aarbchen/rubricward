@@ -1628,10 +1628,11 @@ def build_site_files() -> None:
         b4.setAttribute('onclick', `openCamberCheckoutModal('${{k4}}')`);
         b4.setAttribute('data-stripe-link', window.RUBRICWARD_STRIPE_LINKS[k4]);
       }}
-      if (sl1) sl1.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k1]);
-      if (sl2) sl2.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k2]);
-      if (sl3) sl3.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k3]);
-      if (sl4) sl4.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k4]);
+      const billParam = isAnnual ? 'annual' : 'monthly';
+      if (sl1) sl1.setAttribute('href', 'https://rubricward.com/v1/billing/checkout?plan=tier1&billing=' + billParam);
+      if (sl2) sl2.setAttribute('href', 'https://rubricward.com/v1/billing/checkout?plan=tier2&billing=' + billParam);
+      if (sl3) sl3.setAttribute('href', 'https://rubricward.com/v1/billing/checkout?plan=tier3&billing=' + billParam);
+      if (sl4) sl4.setAttribute('href', 'https://rubricward.com/v1/billing/checkout?plan=tier4&billing=' + billParam);
     }}
 
     function openCamberCheckoutModal(tierKey) {{
@@ -1657,7 +1658,9 @@ def build_site_files() -> None:
       if (nameEl) nameEl.textContent = info.name;
       if (priceEl) priceEl.textContent = info.price;
       if (descEl) descEl.textContent = info.desc;
-      if (directLinkEl && info.stripeUrl) directLinkEl.setAttribute('href', info.stripeUrl);
+      const _parts = (window.ACTIVE_CHECKOUT_TIER || 'tier2_monthly').split('_');
+      const _brandedHref = 'https://rubricward.com/v1/billing/checkout?plan=' + (_parts[0] || 'tier2') + '&billing=' + (_parts[1] || 'monthly');
+      if (directLinkEl) directLinkEl.setAttribute('href', _brandedHref);
       if (resBox) resBox.classList.add('hidden');
       if (modal) modal.classList.remove('hidden');
       return info;
@@ -2956,7 +2959,7 @@ def build_site_files() -> None:
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
           <button type="submit" class="w-full py-3 rounded-xl bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Provision RubricWard Workspace &amp; API Key &rarr;</button>
-          <a id="checkout-modal-direct-stripe-link" href="https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-[#1E3A8A] hover:bg-[#0A0D14] text-white font-mono text-xs font-bold text-center transition">Complete Payment on Stripe &rarr;</a>
+          <a id="checkout-modal-direct-stripe-link" href="https://rubricward.com/v1/billing/checkout?plan=tier2&amp;billing=monthly" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-[#1E3A8A] hover:bg-[#0A0D14] text-white font-mono text-xs font-bold text-center transition">Complete Payment on Stripe &rarr;</a>
         </div>
       </form>
       <div id="checkout-modal-status" class="text-xs font-mono font-bold text-[#065F46]">Zero Lock-In &bull; Instant <code class="text-[#1E3A8A]">cd_live_...</code> API Key &amp; 6-File OpenXML (.DOCX + .XLSX) Access</div>
@@ -3777,7 +3780,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         </div>
         <div class="space-y-2">
           <button type="button" id="btn-checkout-tier1" data-stripe-link="https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i" onclick="openCamberCheckoutModal('tier1_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] font-bold text-xs font-mono transition">Activate Tier 1</button>
-          <a id="stripe-link-tier1" href="https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <a id="stripe-link-tier1" href="https://rubricward.com/v1/billing/checkout?plan=tier1&amp;billing=monthly" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
@@ -3789,7 +3792,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         </div>
         <div class="space-y-2">
           <button type="button" id="btn-checkout-tier2" data-stripe-link="https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k" onclick="openCamberCheckoutModal('tier2_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold text-xs font-mono transition">Activate Tier 2 Autopilot</button>
-          <a id="stripe-link-tier2" href="https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#1E3A8A] border border-[#93C5FD] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <a id="stripe-link-tier2" href="https://rubricward.com/v1/billing/checkout?plan=tier2&amp;billing=monthly" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#1E3A8A] border border-[#93C5FD] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
@@ -3801,7 +3804,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         </div>
         <div class="space-y-2">
           <button type="button" id="btn-checkout-tier3" data-stripe-link="https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m" onclick="openCamberCheckoutModal('tier3_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#1E3A8A] hover:bg-[#0A0D14] text-white font-bold text-xs font-mono transition">Activate Tier 3 Compiler</button>
-          <a id="stripe-link-tier3" href="https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <a id="stripe-link-tier3" href="https://rubricward.com/v1/billing/checkout?plan=tier3&amp;billing=monthly" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
@@ -3813,7 +3816,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         </div>
         <div class="space-y-2">
           <button type="button" id="btn-checkout-tier4" data-stripe-link="https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o" onclick="openCamberCheckoutModal('tier4_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] font-bold text-xs font-mono transition">Activate Tier 4 OEM</button>
-          <a id="stripe-link-tier4" href="https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <a id="stripe-link-tier4" href="https://rubricward.com/v1/billing/checkout?plan=tier4&amp;billing=monthly" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
     </div>

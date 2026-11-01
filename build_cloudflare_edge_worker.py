@@ -166,7 +166,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7S2Xtq7uxth3",
     price_id: "price_1UX1DrCGhMI1Ijip9ii9DAJJ",
     payment_link_id: "plink_1UX1DrCGhMI1IjipaBSrWZt2",
-    url: "https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i",
+    url: "https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     zip_compiler_included: false,
   }},
   tier1_annual: {{
@@ -178,7 +178,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7S2Xtq7uxth3",
     price_id: "price_1UX1DsCGhMI1IjipZTHNJCnb",
     payment_link_id: "plink_1UX1DsCGhMI1IjipDBRZVMW3",
-    url: "https://buy.stripe.com/5kQcN46iK2pd68MfeY7wA0j",
+    url: "https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     zip_compiler_included: false,
   }},
   tier2_monthly: {{
@@ -190,7 +190,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7Scll5eScNEe",
     price_id: "price_1UX1DtCGhMI1IjiplKs9mqqj",
     payment_link_id: "plink_1UX1DuCGhMI1Ijip970Sdvax",
-    url: "https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k",
+    url: "https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     zip_compiler_included: true,
   }},
   tier2_annual: {{
@@ -202,7 +202,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7Scll5eScNEe",
     price_id: "price_1UX1DuCGhMI1IjipvoX6LqRg",
     payment_link_id: "plink_1UX1DvCGhMI1IjiptIVmMD0J",
-    url: "https://buy.stripe.com/dRmdR8ePg4xl8gU8QA7wA0l",
+    url: "https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     zip_compiler_included: true,
   }},
   tier3_monthly: {{
@@ -214,7 +214,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7SAl5NeCG5lL",
     price_id: "price_1UX1DvCGhMI1IjipJermub29",
     payment_link_id: "plink_1UX1DwCGhMI1IjipOFjtfx6f",
-    url: "https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m",
+    url: "https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     zip_compiler_included: true,
   }},
   tier3_annual: {{
@@ -226,7 +226,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7SAl5NeCG5lL",
     price_id: "price_1UX1DwCGhMI1Ijipt8YrWKjX",
     payment_link_id: "plink_1UX1DxCGhMI1IjipuaS3ChAK",
-    url: "https://buy.stripe.com/bJecN46iKfbZ0OsfeY7wA0n",
+    url: "https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     zip_compiler_included: true,
   }},
   tier4_monthly: {{
@@ -238,7 +238,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7SG4WSmA0rgJ",
     price_id: "price_1UX1DyCGhMI1IjipzoXYNULY",
     payment_link_id: "plink_1UX1DyCGhMI1IjipB8z3q5Eu",
-    url: "https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o",
+    url: "https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     zip_compiler_included: true,
   }},
   tier4_annual: {{
@@ -250,7 +250,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7SG4WSmA0rgJ",
     price_id: "price_1UX1DyCGhMI1IjipyDtDW5iE",
     payment_link_id: "plink_1UX1DzCGhMI1Ijipqx1ysQPF",
-    url: "https://buy.stripe.com/5kQ14m6iK1l940EfeY7wA0p",
+    url: "https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     zip_compiler_included: true,
   }},
 }};
@@ -283,8 +283,8 @@ async function handleStripeCheckoutRequest(path, method, url, body, env) {{
     ? String(env.STRIPE_SECRET_KEY || env.STRIPE_API_KEY).trim()
     : "";
   const stripeAcct = (env && env.STRIPE_ACCOUNT_ID) ? String(env.STRIPE_ACCOUNT_ID).trim() : "acct_1Rj7l8CGhMI1Ijip";
-  const iconFile = (env && env.RUBRICWARD_STRIPE_ICON_FILE) ? String(env.RUBRICWARD_STRIPE_ICON_FILE).trim() : "file_1UWoK1CGhMI1IjipmLv2iM1F";
-  const logoFile = (env && env.RUBRICWARD_STRIPE_LOGO_FILE) ? String(env.RUBRICWARD_STRIPE_LOGO_FILE).trim() : "file_1UWoK2CGhMI1IjiphUswlc5T";
+  const iconFile = (env && env.RUBRICWARD_STRIPE_ICON_FILE) ? String(env.RUBRICWARD_STRIPE_ICON_FILE).trim() : "file_1UX603CGhMI1Ijip32ZgFajz";
+  const logoFile = (env && env.RUBRICWARD_STRIPE_LOGO_FILE) ? String(env.RUBRICWARD_STRIPE_LOGO_FILE).trim() : "file_1UX604CGhMI1IjipCqf3PdAQ";
 
   if (stripeKey) {{
     try {{
@@ -305,8 +305,8 @@ async function handleStripeCheckoutRequest(path, method, url, body, env) {{
       form.set("subscription_data[metadata][tier]", chosen.tier);
       form.set("subscription_data[metadata][billing_cycle]", billKey);
       form.set("branding_settings[display_name]", "RubricWard");
-      form.set("branding_settings[background_color]", "#FAF8F5");
-      form.set("branding_settings[button_color]", "#059669");
+      form.set("branding_settings[background_color]", "#F2F9F8");
+      form.set("branding_settings[button_color]", "#0F766E");
       form.set("branding_settings[border_style]", "rounded");
       form.set("branding_settings[icon][type]", "file");
       form.set("branding_settings[icon][file]", iconFile);
@@ -1377,17 +1377,17 @@ export default {{
         "product_id": "prod_VY7Scll5eScNEe",
         "price_id": "price_1UX1DtCGhMI1IjiplKs9mqqj",
         "payment_link_id": "plink_1UX1DuCGhMI1Ijip970Sdvax",
-        "base_checkout_url": "https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k",
-        "checkout_url": "https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k?client_reference_id=rubricward_tier2_monthly",
+        "base_checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
         "links": {
-            "tier1_monthly": "https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i",
-            "tier1_annual": "https://buy.stripe.com/5kQcN46iK2pd68MfeY7wA0j",
-            "tier2_monthly": "https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k",
-            "tier2_annual": "https://buy.stripe.com/dRmdR8ePg4xl8gU8QA7wA0l",
-            "tier3_monthly": "https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m",
-            "tier3_annual": "https://buy.stripe.com/bJecN46iKfbZ0OsfeY7wA0n",
-            "tier4_monthly": "https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o",
-            "tier4_annual": "https://buy.stripe.com/5kQ14m6iK1l940EfeY7wA0p",
+            "tier1_monthly": "https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "tier1_annual": "https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "tier2_monthly": "https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "tier2_annual": "https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "tier3_monthly": "https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "tier3_annual": "https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "tier4_monthly": "https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "tier4_annual": "https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
         },
         "portals_included": 52,
         "states_included": 50,
@@ -1405,26 +1405,26 @@ export default {{
   <title>RubricWard // Redirecting to Stripe Checkout</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#FAF8F5] text-[#0A0D14] min-h-screen flex items-center justify-center p-6 font-sans">
+<body class="bg-[#F2F9F8] text-[#071C21] min-h-screen flex items-center justify-center p-6 font-sans">
   <div class="max-w-lg w-full bg-white border-2 border-[#0A0D14] rounded-2xl p-8 shadow-lg space-y-4">
-    <div class="text-xs font-mono font-bold text-[#059669] uppercase tracking-wider">RUBRICWARD // SELF-SERVE STRIPE CHECKOUT</div>
+    <div class="text-xs font-mono font-bold text-[#0F766E] uppercase tracking-wider">RUBRICWARD // SELF-SERVE STRIPE CHECKOUT</div>
     <h1 class="text-xl font-extrabold text-[#0A0D14]" id="checkout-heading">Redirecting to RubricWard Stripe Checkout...</h1>
     <p class="text-xs font-medium text-[#111827]">Instant <code class="font-mono font-bold text-[#059669]">cd_live_...</code> API &amp; MCP Key provisioning across all 50 U.S. State Commercial Payer TiC MRFs + CMS MPFS/OPPS + Federal NSA IDR.</p>
     <div>
-      <a id="direct-stripe-btn" href="https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k" class="inline-block px-5 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#059669] text-white font-mono text-xs font-bold transition">Continue to Stripe Checkout &rarr;</a>
+      <a id="direct-stripe-btn" href="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" class="inline-block px-5 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#059669] text-white font-mono text-xs font-bold transition">Continue to Stripe Checkout &rarr;</a>
     </div>
   </div>
   <script>
     (function() {
       const links = {
-        tier1_monthly: 'https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i',
-        tier1_annual: 'https://buy.stripe.com/5kQcN46iK2pd68MfeY7wA0j',
-        tier2_monthly: 'https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k',
-        tier2_annual: 'https://buy.stripe.com/dRmdR8ePg4xl8gU8QA7wA0l',
-        tier3_monthly: 'https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m',
-        tier3_annual: 'https://buy.stripe.com/bJecN46iKfbZ0OsfeY7wA0n',
-        tier4_monthly: 'https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o',
-        tier4_annual: 'https://buy.stripe.com/5kQ14m6iK1l940EfeY7wA0p'
+        tier1_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+        tier1_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+        tier2_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+        tier2_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+        tier3_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+        tier3_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+        tier4_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+        tier4_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl'
       };
       const qs = new URLSearchParams(window.location.search || '');
       const rawPlan = (qs.get('plan') || qs.get('tier') || 'tier2').toLowerCase();
@@ -1433,7 +1433,7 @@ export default {{
       const billKey = (rawBill.includes('ann') || rawBill.includes('yr')) ? 'annual' : 'monthly';
       const base = links[tierKey + '_' + billKey] || links.tier2_monthly;
       const email = (qs.get('email') || qs.get('prefilled_email') || '').trim();
-      const target = base + '?client_reference_id=rubricward_' + tierKey + '_' + billKey + (email ? '&prefilled_email=' + encodeURIComponent(email) : '');
+      const target = base.startsWith('https://checkout.stripe.com/') ? base : (base + '?client_reference_id=rubricward_' + tierKey + '_' + billKey + (email ? '&prefilled_email=' + encodeURIComponent(email) : ''));
       const btn = document.getElementById('direct-stripe-btn');
       if (btn) btn.setAttribute('href', target);
       window.location.replace(target);
@@ -1455,7 +1455,7 @@ export default {{
   <title>RubricWard // 6-File OpenXML (.DOCX + .XLSX) Appeal &amp; IDR Arbitration Package Download</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#FAF8F5] text-[#0A0D14] min-h-screen flex items-center justify-center p-6 font-sans">
+<body class="bg-[#F2F9F8] text-[#071C21] min-h-screen flex items-center justify-center p-6 font-sans">
   <div class="max-w-xl w-full bg-white border-2 border-[#0A0D14] rounded-2xl p-8 shadow-lg">
     <div class="text-xs font-mono font-bold text-[#059669] uppercase tracking-wider">RUBRICWARD // 6-FILE OPENXML APPEAL &amp; IDR ARBITRATION COMPILER</div>
     <h1 class="text-2xl font-extrabold text-[#0A0D14] mt-1" id="pkg-heading">Downloading 6-File OpenXML Appeal &amp; IDR Arbitration Package (.ZIP)...</h1>
@@ -1519,8 +1519,8 @@ def deploy_worker_to_cloudflare(worker_path: Path = None) -> bool:
     anthropic_key = (os.getenv("ANTHROPIC_API_KEY") or "").strip()
     stripe_key = (os.getenv("STRIPE_SECRET_KEY") or os.getenv("STRIPE_API_KEY") or "").strip()
     stripe_acct = (os.getenv("STRIPE_ACCOUNT_ID") or "acct_1Rj7l8CGhMI1Ijip").strip()
-    stripe_icon = (os.getenv("RUBRICWARD_STRIPE_ICON_FILE") or "file_1UWoK1CGhMI1IjipmLv2iM1F").strip()
-    stripe_logo = (os.getenv("RUBRICWARD_STRIPE_LOGO_FILE") or "file_1UWoK2CGhMI1IjiphUswlc5T").strip()
+    stripe_icon = (os.getenv("RUBRICWARD_STRIPE_ICON_FILE") or "file_1UX603CGhMI1Ijip32ZgFajz").strip()
+    stripe_logo = (os.getenv("RUBRICWARD_STRIPE_LOGO_FILE") or "file_1UX604CGhMI1IjipCqf3PdAQ").strip()
     if not cf_token and not (cf_email and cf_global_key):
         print("[!] CLOUDFLARE_API_TOKEN not set in D:\\RubricWard\\.env")
         return False

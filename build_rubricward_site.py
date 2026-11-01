@@ -1,7 +1,7 @@
 r"""
 RubricWard — Deterministic Frontend & API Studio Builder (`build_rubricward_site.py`).
 Generates `D:\RubricWard\index.html` and `D:\RubricWard\apis.html` from a single source of truth
-using Symbol #07 (Compass Quadrant Lock) and Editorial Theme 1 (Warm Vellum #FAF8F5 & Obsidian Ink #0A0D14 + Blueprint Navy #1E3A8A).
+using Symbol #07 (Compass Quadrant Lock) and Editorial Theme 1 (Warm Vellum #F2F9F8 & Obsidian Ink #071C21 + Blueprint Navy #0F766E).
 """
 
 import json
@@ -541,8 +541,8 @@ WEB_MANIFEST_JSON = json.dumps(
         "description": "Autonomous 50-State Commercial Payer TiC MRF rate feed, Medicare MPFS RVU/GPCI locality benchmarks, ERISA 29 CFR 2560.503-1 appeal generator, and 6-File OpenXML (.DOCX + .XLSX) Appeal & NSA IDR Compiler.",
         "start_url": "/",
         "display": "standalone",
-        "background_color": "#FAF8F5",
-        "theme_color": "#0A0D14",
+        "background_color": "#F2F9F8",
+        "theme_color": "#071C21",
         "icons": [
             {"src": "https://rubricward.com/favicon-48x48.png?v=7", "sizes": "48x48", "type": "image/png"},
             {"src": "https://rubricward.com/favicon-96x96.png?v=7", "sizes": "96x96", "type": "image/png"},
@@ -645,7 +645,7 @@ def build_social_and_favicon_head(
             ],
         }
     )
-    return f"""  <meta name="theme-color" content="#FAF8F5" />
+    return f"""  <meta name="theme-color" content="#F2F9F8" />
   <link rel="icon" type="image/png" sizes="96x96" href="https://rubricward.com/favicon-96x96.png?v=7" />
   <link rel="icon" type="image/png" sizes="512x512" href="https://rubricward.com/favicon-512x512.png?v=7" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://rubricward.com/favicon-192x192.png?v=7" />
@@ -687,11 +687,11 @@ def _render_logo_lockup(subtitle: str, href: str = "#overview") -> str:
           <path fill="#0A0D14" d="M12 10H32V54C19 48 12 37 12 22V10Z"/>
           <rect x="37" y="10" width="15" height="28" rx="2" fill="#059669"/>
         </svg>
-        <span class="text-[20px] sm:text-[23px] font-bold tracking-[-0.035em] text-[#0A0D14] leading-none whitespace-nowrap">RubricWard</span>
-        <span class="hidden sm:inline-block ml-1.5 px-2 py-0.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] leading-none whitespace-nowrap">50-STATE DOT &amp; CIVIL</span>
-        <span class="sm:hidden ml-1 px-1.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider rounded bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] leading-none whitespace-nowrap">50-STATE DOT</span>
+        <span class="text-[20px] sm:text-[23px] font-bold tracking-[-0.035em] text-[#071C21] leading-none whitespace-nowrap">RubricWard</span>
+        <span class="hidden sm:inline-block ml-1.5 px-2 py-0.5 text-[11px] font-mono font-bold uppercase tracking-wider rounded bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] leading-none whitespace-nowrap">50-STATE MRF &amp; IDR</span>
+        <span class="sm:hidden ml-1 px-1.5 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider rounded bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] leading-none whitespace-nowrap">50-STATE MRF</span>
       </div>
-      <span class="text-[10px] sm:text-xs font-mono font-semibold text-[#1E3A8A] mt-1 leading-snug max-w-[235px] sm:max-w-none">{subtitle}</span>
+      <span class="text-[10px] sm:text-xs font-mono font-semibold text-[#0F766E] mt-1 leading-snug max-w-[235px] sm:max-w-none">{subtitle}</span>
     </a>"""
 
 
@@ -712,67 +712,67 @@ def _build_api_catalog_section() -> str:
         res_json = json.dumps(api["res_sample"], indent=2)
 
         dir_rows.append(
-            f"""<a href="#{aid}" onclick="jumpToApiCard('{aid}')" data-api-row="{aid}" class="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 p-3.5 rounded-lg bg-white hover:bg-[#EAE6DF] border border-[#CBD5E1] transition shadow-sm min-w-0">
+            f"""<a href="#{aid}" onclick="jumpToApiCard('{aid}')" data-api-row="{aid}" class="flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 p-3.5 rounded-lg bg-white hover:bg-[#DDF0EC] border border-[#B4D6D0] transition shadow-sm min-w-0">
               <div class="flex items-center gap-3 min-w-0">
-                <span class="shrink-0 text-xs font-mono font-bold px-2 py-0.5 rounded bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8]">{num}</span>
-                <span class="text-sm font-bold text-[#0A0D14] break-words min-w-0">{title}</span>
+                <span class="shrink-0 text-xs font-mono font-bold px-2 py-0.5 rounded bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC]">{num}</span>
+                <span class="text-sm font-bold text-[#071C21] break-words min-w-0">{title}</span>
               </div>
               <div class="flex items-center gap-2 text-[10.5px] sm:text-xs font-mono min-w-0 max-w-full">
-                <span class="px-2 py-0.5 rounded bg-[#EFF6FF] text-[#1E3A8A] border border-[#93C5FD] font-bold break-all max-w-full">{method} {route}</span>
+                <span class="px-2 py-0.5 rounded bg-[#E6F4F1] text-[#0F766E] border border-[#5EEAD4] font-bold break-all max-w-full">{method} {route}</span>
               </div>
             </a>"""
         )
 
         matrix_rows.append(
-            f"""<tr class="border-b border-[#CBD5E1] text-xs hover:bg-[#F1EFEA]">
-              <td class="py-3 px-3 font-mono font-bold text-[#0A0D14]">{num}</td>
-              <td class="py-3 px-3 font-bold text-[#0A0D14]">{title}</td>
-              <td class="py-3 px-3 font-mono font-semibold text-[#1E3A8A]">{method} {route}</td>
-              <td class="py-3 px-3 font-mono font-semibold text-[#0A0D14]">$0 (10/mo)</td>
-              <td class="py-3 px-3 font-mono font-bold text-[#0A0D14]">$49 (200/mo)</td>
+            f"""<tr class="border-b border-[#B4D6D0] text-xs hover:bg-[#E6F4F1]">
+              <td class="py-3 px-3 font-mono font-bold text-[#071C21]">{num}</td>
+              <td class="py-3 px-3 font-bold text-[#071C21]">{title}</td>
+              <td class="py-3 px-3 font-mono font-semibold text-[#0F766E]">{method} {route}</td>
+              <td class="py-3 px-3 font-mono font-semibold text-[#071C21]">$0 (10/mo)</td>
+              <td class="py-3 px-3 font-mono font-bold text-[#071C21]">$49 (200/mo)</td>
               <td class="py-3 px-3 font-mono text-[#065F46] font-bold">$149 (1,000/mo)</td>
-              <td class="py-3 px-3 font-mono text-[#1E3A8A] font-bold">$399 (4,000/mo)</td>
+              <td class="py-3 px-3 font-mono text-[#0F766E] font-bold">$399 (4,000/mo)</td>
             </tr>"""
         )
 
         article_cards.append(
-            f"""<article id="{aid}" data-api-card="{aid}" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 min-w-0">
+            f"""<article id="{aid}" data-api-card="{aid}" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 min-w-0">
               <div class="lg:col-span-7 space-y-4 min-w-0">
                 <div class="flex flex-wrap items-center gap-2 text-[10.5px] sm:text-xs font-mono min-w-0">
-                  <span class="px-2.5 py-1 rounded bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] font-bold">API #{num} // {badge}</span>
-                  <span class="px-2.5 py-1 rounded bg-[#EFF6FF] text-[#1E3A8A] border border-[#93C5FD] font-bold break-all max-w-full">{method} {route}</span>
+                  <span class="px-2.5 py-1 rounded bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-bold">API #{num} // {badge}</span>
+                  <span class="px-2.5 py-1 rounded bg-[#E6F4F1] text-[#0F766E] border border-[#5EEAD4] font-bold break-all max-w-full">{method} {route}</span>
                   <span class="px-2.5 py-1 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold break-all max-w-full">MCP: {api['mcp_tool']}</span>
                 </div>
-                <h3 class="text-xl font-extrabold text-[#0A0D14]">{title}</h3>
+                <h3 class="text-xl font-extrabold text-[#071C21]">{title}</h3>
                 <p class="text-sm font-medium text-[#111827] leading-relaxed">{summary}</p>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 text-xs font-mono">
-                  <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1]"><div class="text-[#0A0D14] font-bold">BASIC</div><div class="text-[#0A0D14] font-extrabold text-sm mt-0.5">$0 / mo</div><div class="text-xs font-semibold text-[#1E293B]">10 calls/mo</div></div>
-                  <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1]"><div class="text-[#0A0D14] font-bold">PRO</div><div class="text-[#0A0D14] font-extrabold text-sm mt-0.5">$49 / mo</div><div class="text-xs font-semibold text-[#1E293B]">200 calls/mo</div></div>
-                  <div class="p-3 rounded-lg bg-[#EFF6FF] border-2 border-[#1E3A8A]"><div class="text-[#1E3A8A] font-extrabold">ULTRA (REC)</div><div class="text-[#0A0D14] font-extrabold text-sm mt-0.5">$149 / mo</div><div class="text-xs font-bold text-[#1E3A8A]">1,000 calls/mo</div></div>
-                  <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1]"><div class="text-[#0A0D14] font-bold">MEGA</div><div class="text-[#0A0D14] font-extrabold text-sm mt-0.5">$399 / mo</div><div class="text-xs font-semibold text-[#1E293B]">4,000 calls/mo</div></div>
+                  <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0]"><div class="text-[#071C21] font-bold">BASIC</div><div class="text-[#071C21] font-extrabold text-sm mt-0.5">$0 / mo</div><div class="text-xs font-semibold text-[#1E293B]">10 calls/mo</div></div>
+                  <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0]"><div class="text-[#071C21] font-bold">PRO</div><div class="text-[#071C21] font-extrabold text-sm mt-0.5">$49 / mo</div><div class="text-xs font-semibold text-[#1E293B]">200 calls/mo</div></div>
+                  <div class="p-3 rounded-lg bg-[#E6F4F1] border-2 border-[#0F766E]"><div class="text-[#0F766E] font-extrabold">ULTRA (REC)</div><div class="text-[#071C21] font-extrabold text-sm mt-0.5">$149 / mo</div><div class="text-xs font-bold text-[#0F766E]">1,000 calls/mo</div></div>
+                  <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0]"><div class="text-[#071C21] font-bold">MEGA</div><div class="text-[#071C21] font-extrabold text-sm mt-0.5">$399 / mo</div><div class="text-xs font-semibold text-[#1E293B]">4,000 calls/mo</div></div>
                 </div>
                 <div class="pt-2 flex flex-wrap gap-3">
-                  <button type="button" onclick="openApiSandbox('{aid}', true)" class="px-4 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold text-xs font-mono transition">Test Live in Studio Playground</button>
-                  <button type="button" onclick="runCardLiveInBrowser('{aid}')" class="px-4 py-2.5 rounded-lg bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#1E3A8A] border border-[#93C5FD] font-bold text-xs font-mono transition">Run Live in Browser</button>
-                  <a href="#checkout" onclick="switchSpaView('checkout', event)" class="px-4 py-2.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] text-xs font-mono font-bold transition">Included in Autopilot Plan</a>
+                  <button type="button" onclick="openApiSandbox('{aid}', true)" class="px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-xs font-mono transition">Test Live in Studio Playground</button>
+                  <button type="button" onclick="runCardLiveInBrowser('{aid}')" class="px-4 py-2.5 rounded-lg bg-[#E6F4F1] hover:bg-[#CCFBF1] text-[#0F766E] border border-[#5EEAD4] font-bold text-xs font-mono transition">Run Live in Browser</button>
+                  <a href="#checkout" onclick="switchSpaView('checkout', event)" class="px-4 py-2.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] text-xs font-mono font-bold transition">Included in Autopilot Plan</a>
                 </div>
               </div>
               <div class="lg:col-span-5 space-y-3 min-w-0">
                 <div class="flex flex-wrap items-center justify-between gap-2">
-                  <div class="text-xs font-mono font-bold text-[#0A0D14]">// REQUEST &amp; LIVE SDK PREVIEW</div>
-                  <div class="inline-flex flex-wrap rounded bg-[#EAE6DF] p-0.5 border border-[#94A3B8] text-[11px] font-mono font-bold">
-                    <button type="button" id="card-tab-{aid}-json" onclick="switchCardCodeTab('{aid}', 'json')" class="px-2 py-0.5 rounded bg-[#0A0D14] text-white">JSON</button>
-                    <button type="button" id="card-tab-{aid}-curl" onclick="switchCardCodeTab('{aid}', 'curl')" class="px-2 py-0.5 rounded text-[#0A0D14] hover:text-[#1E3A8A]">cURL</button>
-                    <button type="button" id="card-tab-{aid}-python" onclick="switchCardCodeTab('{aid}', 'python')" class="px-2 py-0.5 rounded text-[#0A0D14] hover:text-[#1E3A8A]">Python</button>
-                    <button type="button" id="card-tab-{aid}-js" onclick="switchCardCodeTab('{aid}', 'js')" class="px-2 py-0.5 rounded text-[#0A0D14] hover:text-[#1E3A8A]">Node.js</button>
+                  <div class="text-xs font-mono font-bold text-[#071C21]">// REQUEST &amp; LIVE SDK PREVIEW</div>
+                  <div class="inline-flex flex-wrap rounded bg-[#DDF0EC] p-0.5 border border-[#7FB5AC] text-[11px] font-mono font-bold">
+                    <button type="button" id="card-tab-{aid}-json" onclick="switchCardCodeTab('{aid}', 'json')" class="px-2 py-0.5 rounded bg-[#071C21] text-white">JSON</button>
+                    <button type="button" id="card-tab-{aid}-curl" onclick="switchCardCodeTab('{aid}', 'curl')" class="px-2 py-0.5 rounded text-[#071C21] hover:text-[#0F766E]">cURL</button>
+                    <button type="button" id="card-tab-{aid}-python" onclick="switchCardCodeTab('{aid}', 'python')" class="px-2 py-0.5 rounded text-[#071C21] hover:text-[#0F766E]">Python</button>
+                    <button type="button" id="card-tab-{aid}-js" onclick="switchCardCodeTab('{aid}', 'js')" class="px-2 py-0.5 rounded text-[#071C21] hover:text-[#0F766E]">Node.js</button>
                   </div>
                 </div>
-                <pre class="p-3.5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] text-xs font-mono font-medium text-[#0F172A] leading-relaxed overflow-x-auto max-w-full">{req_json}</pre>
+                <pre class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed overflow-x-auto max-w-full">{req_json}</pre>
                 <div class="flex items-center justify-between text-[11px] font-mono font-bold">
                   <span id="card-status-{aid}" class="text-[#065F46]">HTTP 200 OK &bull; Stateless Pydantic V2</span>
-                  <button type="button" id="card-copy-{aid}" onclick="copyCardCodeOutput('{aid}')" class="px-2 py-0.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] transition">Copy Output</button>
+                  <button type="button" id="card-copy-{aid}" onclick="copyCardCodeOutput('{aid}')" class="px-2 py-0.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] transition">Copy Output</button>
                 </div>
-                <pre id="card-res-{aid}" class="p-3.5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] text-xs font-mono font-medium text-[#064E3B] leading-relaxed overflow-x-auto max-w-full">{res_json}</pre>
+                <pre id="card-res-{aid}" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#064E3B] leading-relaxed overflow-x-auto max-w-full">{res_json}</pre>
               </div>
             </article>"""
         )
@@ -792,101 +792,101 @@ def _build_api_catalog_section() -> str:
 
     return f"""
     <div class="space-y-8">
-      <div class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <div class="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#1E3A8A]">
+          <div class="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#0F766E]">
             <span>12 LIVE ENDPOINTS</span> &bull; <span>12 MCP TOOLS</span> &bull; <span>5/5 GLAMA TDQS</span>
           </div>
-          <h2 class="text-2xl font-extrabold text-[#0A0D14] mt-1">Stateless Commercial Payer TiC MRF, Medicare MPFS &amp; NSA IDR APIs</h2>
-          <p class="text-sm font-medium text-[#111827] mt-1">Connect via REST (<code class="text-[#1E3A8A] font-bold">X-RapidAPI-Proxy-Secret</code> / <code class="text-[#1E3A8A] font-bold">cd_live_...</code>) or Remote Streamable-HTTP MCP (<code class="text-[#1E3A8A] font-bold">/mcp</code>).</p>
+          <h2 class="text-2xl font-extrabold text-[#071C21] mt-1">Stateless Commercial Payer TiC MRF, Medicare MPFS &amp; NSA IDR APIs</h2>
+          <p class="text-sm font-medium text-[#111827] mt-1">Connect via REST (<code class="text-[#0F766E] font-bold">X-RapidAPI-Proxy-Secret</code> / <code class="text-[#0F766E] font-bold">cd_live_...</code>) or Remote Streamable-HTTP MCP (<code class="text-[#0F766E] font-bold">/mcp</code>).</p>
         </div>
         <div class="flex items-center gap-3">
           <div class="flex-1">
-            <input id="api-search-input" type="text" oninput="filterApiCatalog(this.value)" placeholder="Filter 12 endpoints..." class="w-full px-3.5 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-sm font-medium text-[#0A0D14] placeholder-[#1E293B] focus:outline-none focus:border-[#0A0D14]" />
+            <input id="api-search-input" type="text" oninput="filterApiCatalog(this.value)" placeholder="Filter 12 endpoints..." class="w-full px-3.5 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-sm font-medium text-[#071C21] placeholder-[#1E293B] focus:outline-none focus:border-[#071C21]" />
           </div>
-          <span id="api-modules-count-badge" class="shrink-0 px-3 py-2 rounded-lg bg-[#EAE6DF] border border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]">12 / 12 SHOWN</span>
+          <span id="api-modules-count-badge" class="shrink-0 px-3 py-2 rounded-lg bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">12 / 12 SHOWN</span>
         </div>
       </div>
 
       <!-- Provider NPI/EIN Specialty Profile Vault (#contractor-profile-vault) -->
-      <div id="contractor-profile-vault" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-4">
+      <div id="contractor-profile-vault" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div>
-            <div class="text-xs font-mono font-bold text-[#1E3A8A]">// PERSISTENT MEDICAL GROUP &amp; RCM PROFILE VAULT (LOCALSTORAGE)</div>
-            <h3 class="text-lg font-extrabold text-[#0A0D14] mt-0.5">Pre-Fill Your Medical Group NPI/TIN, Payer Markets &amp; % of Medicare Targets Across All 12 APIs</h3>
+            <div class="text-xs font-mono font-bold text-[#0F766E]">// PERSISTENT MEDICAL GROUP &amp; RCM PROFILE VAULT (LOCALSTORAGE)</div>
+            <h3 class="text-lg font-extrabold text-[#071C21] mt-0.5">Pre-Fill Your Medical Group NPI/TIN, Payer Markets &amp; % of Medicare Targets Across All 12 APIs</h3>
           </div>
           <span id="profile-vault-status" class="px-2.5 py-1 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] text-xs font-mono font-bold">READY TO AUTO-INJECT</span>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
           <div>
-            <label class="block font-mono font-bold text-[#0A0D14] mb-1">MEDICAL GROUP / ASC / HEALTH SYSTEM</label>
-            <input id="vault-company-name" type="text" value="Lone Star Orthopedic &amp; Spine ASC LLC" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]" />
+            <label class="block font-mono font-bold text-[#071C21] mb-1">MEDICAL GROUP / ASC / HEALTH SYSTEM</label>
+            <input id="vault-company-name" type="text" value="Lone Star Orthopedic &amp; Spine ASC LLC" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]" />
           </div>
           <div>
-            <label class="block font-mono font-bold text-[#0A0D14] mb-1">PRIMARY STATE PAYER MARKETS</label>
-            <input id="vault-state-dots" type="text" value="TX, VA, FL, CA, PA" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]" />
+            <label class="block font-mono font-bold text-[#071C21] mb-1">PRIMARY STATE PAYER MARKETS</label>
+            <input id="vault-state-dots" type="text" value="TX, VA, FL, CA, PA" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]" />
           </div>
           <div>
-            <label class="block font-mono font-bold text-[#0A0D14] mb-1">ANNUAL COMMERCIAL CLAIM VOLUME</label>
-            <input id="vault-bond-limit" type="text" value="$35,000,000" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]" />
+            <label class="block font-mono font-bold text-[#071C21] mb-1">ANNUAL COMMERCIAL CLAIM VOLUME</label>
+            <input id="vault-bond-limit" type="text" value="$35,000,000" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]" />
           </div>
           <div>
-            <label class="block font-mono font-bold text-[#0A0D14] mb-1">TARGET % OF MEDICARE FLOOR</label>
-            <input id="vault-target-margin" type="text" value="8.5%" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]" />
+            <label class="block font-mono font-bold text-[#071C21] mb-1">TARGET % OF MEDICARE FLOOR</label>
+            <input id="vault-target-margin" type="text" value="8.5%" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]" />
           </div>
           <div class="flex items-end">
-            <button type="button" onclick="saveCompanyCaptureProfile()" class="w-full px-4 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Save &amp; Inject Profile</button>
+            <button type="button" onclick="saveCompanyCaptureProfile()" class="w-full px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Save &amp; Inject Profile</button>
           </div>
         </div>
       </div>
 
       <!-- In-Page RapidAPI & MCP Studio Playground Modal / Panel -->
-      <div id="api-studio-playground" class="p-6 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-sm space-y-4 min-w-0">
+      <div id="api-studio-playground" class="p-6 rounded-2xl bg-white border-2 border-[#071C21] shadow-sm space-y-4 min-w-0">
         <div class="flex flex-wrap items-center justify-between gap-3 min-w-0">
-          <div class="text-xs font-mono font-bold text-[#0A0D14]">// IN-PAGE PAYER MRF &amp; NSA IDR API STUDIO PLAYGROUND — SELECT MICROSERVICE (12)</div>
-          <select id="sandbox-api-select" onchange="openApiSandbox(this.value)" class="w-full sm:w-auto max-w-full px-3 py-1.5 rounded bg-[#F4F1EA] border border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]">
+          <div class="text-xs font-mono font-bold text-[#071C21]">// IN-PAGE PAYER MRF &amp; NSA IDR API STUDIO PLAYGROUND — SELECT MICROSERVICE (12)</div>
+          <select id="sandbox-api-select" onchange="openApiSandbox(this.value)" class="w-full sm:w-auto max-w-full px-3 py-1.5 rounded bg-[#E8F4F2] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">
             {''.join(f'<option value="{a["id"]}">{a["num"]} — {a["title"]}</option>' for a in APIS_CATALOG)}
           </select>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 min-w-0">
           <div class="min-w-0">
-            <div class="text-xs font-mono font-bold text-[#0A0D14] mb-1.5">JSON Request Payload</div>
-            <textarea id="sandbox-req-box" rows="7" class="w-full p-3.5 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] text-xs font-mono font-medium text-[#0F172A] leading-relaxed">{json.dumps(APIS_CATALOG[0]['req_sample'], indent=2)}</textarea>
+            <div class="text-xs font-mono font-bold text-[#071C21] mb-1.5">JSON Request Payload</div>
+            <textarea id="sandbox-req-box" rows="7" class="w-full p-3.5 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed">{json.dumps(APIS_CATALOG[0]['req_sample'], indent=2)}</textarea>
           </div>
           <div class="min-w-0">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5">
-              <div class="inline-flex rounded bg-[#EAE6DF] p-0.5 border border-[#94A3B8] text-[11px] font-mono font-bold">
-                <button type="button" id="tab-sandbox-json" onclick="setSandboxCodeTab('json')" class="px-2.5 py-1 rounded bg-[#0A0D14] text-white">JSON</button>
-                <button type="button" id="tab-sandbox-curl" onclick="setSandboxCodeTab('curl')" class="px-2.5 py-1 rounded text-[#0A0D14] hover:text-[#1E3A8A]">cURL</button>
-                <button type="button" id="tab-sandbox-python" onclick="setSandboxCodeTab('python')" class="px-2.5 py-1 rounded text-[#0A0D14] hover:text-[#1E3A8A]">Python</button>
-                <button type="button" id="tab-sandbox-js" onclick="setSandboxCodeTab('js')" class="px-2.5 py-1 rounded text-[#0A0D14] hover:text-[#1E3A8A]">Node / Fetch</button>
+              <div class="inline-flex rounded bg-[#DDF0EC] p-0.5 border border-[#7FB5AC] text-[11px] font-mono font-bold">
+                <button type="button" id="tab-sandbox-json" onclick="setSandboxCodeTab('json')" class="px-2.5 py-1 rounded bg-[#071C21] text-white">JSON</button>
+                <button type="button" id="tab-sandbox-curl" onclick="setSandboxCodeTab('curl')" class="px-2.5 py-1 rounded text-[#071C21] hover:text-[#0F766E]">cURL</button>
+                <button type="button" id="tab-sandbox-python" onclick="setSandboxCodeTab('python')" class="px-2.5 py-1 rounded text-[#071C21] hover:text-[#0F766E]">Python</button>
+                <button type="button" id="tab-sandbox-js" onclick="setSandboxCodeTab('js')" class="px-2.5 py-1 rounded text-[#071C21] hover:text-[#0F766E]">Node / Fetch</button>
               </div>
-              <button type="button" id="btn-copy-sandbox" onclick="copySandboxOutput()" class="px-2.5 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] text-[11px] font-mono font-bold transition">Copy Output</button>
+              <button type="button" id="btn-copy-sandbox" onclick="copySandboxOutput()" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] text-[11px] font-mono font-bold transition">Copy Output</button>
             </div>
-            <pre id="sandbox-res-box" class="p-3.5 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] text-xs font-mono font-medium text-[#064E3B] leading-relaxed overflow-x-auto max-w-full">{json.dumps(APIS_CATALOG[0]['res_sample'], indent=2)}</pre>
+            <pre id="sandbox-res-box" class="p-3.5 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#064E3B] leading-relaxed overflow-x-auto max-w-full">{json.dumps(APIS_CATALOG[0]['res_sample'], indent=2)}</pre>
           </div>
         </div>
         <div class="flex flex-wrap items-center gap-3">
-          <button type="button" onclick="executeSandboxCall()" class="px-4 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold text-xs font-mono transition">Execute Stateless API Call</button>
+          <button type="button" onclick="executeSandboxCall()" class="px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-xs font-mono transition">Execute Stateless API Call</button>
           <span id="sandbox-status-pill" class="text-xs font-mono font-bold text-[#065F46]">HTTP 200 OK &bull; Stateless Pydantic V2 Validated</span>
         </div>
       </div>
 
       <!-- Interactive MCP Server Integration Hub (Claude Desktop / Cursor / Windsurf / Streamable-HTTP) -->
-      <div id="mcp-integration-hub" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-4">
+      <div id="mcp-integration-hub" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <div class="text-xs font-mono font-bold text-[#1E3A8A]">// MODEL CONTEXT PROTOCOL (MCP) — 5/5 GLAMA TDQS SCORE</div>
-            <h3 class="text-lg font-extrabold text-[#0A0D14] mt-0.5">1-Click AI Agent Integration (Claude Desktop, Cursor, Windsurf &amp; Remote HTTP)</h3>
+            <div class="text-xs font-mono font-bold text-[#0F766E]">// MODEL CONTEXT PROTOCOL (MCP) — 5/5 GLAMA TDQS SCORE</div>
+            <h3 class="text-lg font-extrabold text-[#071C21] mt-0.5">1-Click AI Agent Integration (Claude Desktop, Cursor, Windsurf &amp; Remote HTTP)</h3>
           </div>
-          <div class="inline-flex flex-wrap rounded-lg bg-[#EAE6DF] p-1 border border-[#94A3B8] text-xs font-mono font-bold gap-1">
-            <button type="button" id="mcp-tab-claude" onclick="switchMcpConfigTab('claude')" class="px-3 py-1 rounded bg-[#0A0D14] text-white">Claude Desktop</button>
-            <button type="button" id="mcp-tab-cursor" onclick="switchMcpConfigTab('cursor')" class="px-3 py-1 rounded text-[#0A0D14]">Cursor / Windsurf</button>
-            <button type="button" id="mcp-tab-http" onclick="switchMcpConfigTab('http')" class="px-3 py-1 rounded text-[#0A0D14]">Remote HTTP (/mcp)</button>
+          <div class="inline-flex flex-wrap rounded-lg bg-[#DDF0EC] p-1 border border-[#7FB5AC] text-xs font-mono font-bold gap-1">
+            <button type="button" id="mcp-tab-claude" onclick="switchMcpConfigTab('claude')" class="px-3 py-1 rounded bg-[#071C21] text-white">Claude Desktop</button>
+            <button type="button" id="mcp-tab-cursor" onclick="switchMcpConfigTab('cursor')" class="px-3 py-1 rounded text-[#071C21]">Cursor / Windsurf</button>
+            <button type="button" id="mcp-tab-http" onclick="switchMcpConfigTab('http')" class="px-3 py-1 rounded text-[#071C21]">Remote HTTP (/mcp)</button>
           </div>
         </div>
         <div class="relative">
-          <pre id="mcp-config-code" class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] text-xs font-mono font-medium text-[#0F172A] overflow-x-auto leading-relaxed">{{
+          <pre id="mcp-config-code" class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] overflow-x-auto leading-relaxed">{{
   "mcpServers": {{
     "rubricward": {{
       "command": "npx",
@@ -897,51 +897,51 @@ def _build_api_catalog_section() -> str:
     }}
   }}
 }}</pre>
-          <button type="button" id="btn-copy-mcp" onclick="copyMcpConfig()" class="mt-2 px-3.5 py-1.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white text-xs font-mono font-bold transition">Copy MCP Configuration JSON</button>
+          <button type="button" id="btn-copy-mcp" onclick="copyMcpConfig()" class="mt-2 px-3.5 py-1.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white text-xs font-mono font-bold transition">Copy MCP Configuration JSON</button>
         </div>
       </div>
 
       <!-- Downloadable ConTech & Estimating ERP Integration Blueprints (#integrations) -->
-      <div id="integrations" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-4">
+      <div id="integrations" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div>
-            <div class="text-xs font-mono font-bold text-[#1E3A8A]">// ZERO-CODE EPIC, ATHENAHEALTH, WAYSTAR &amp; RCM AUTOMATION BLUEPRINTS</div>
-            <h3 class="text-lg font-extrabold text-[#0A0D14] mt-0.5">Download Ready-to-Import Workflow Blueprints (.JSON) for Your Healthcare RCM Stack</h3>
+            <div class="text-xs font-mono font-bold text-[#0F766E]">// ZERO-CODE EPIC, ATHENAHEALTH, WAYSTAR &amp; RCM AUTOMATION BLUEPRINTS</div>
+            <h3 class="text-lg font-extrabold text-[#071C21] mt-0.5">Download Ready-to-Import Workflow Blueprints (.JSON) for Your Healthcare RCM Stack</h3>
           </div>
           <span id="blueprint-download-status" class="text-xs font-mono font-bold text-[#065F46]">4 PRODUCTION BLUEPRINTS READY</span>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-          <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] flex flex-col justify-between space-y-3">
+          <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] flex flex-col justify-between space-y-3">
             <div>
-              <div class="font-mono font-bold text-[#1E3A8A]">01 // EPIC RESOLUTE / WAYSTAR</div>
-              <div class="font-extrabold text-[#0A0D14] text-sm mt-0.5">TiC MRF Rate &amp; MPFS RVU Importer</div>
+              <div class="font-mono font-bold text-[#0F766E]">01 // EPIC RESOLUTE / WAYSTAR</div>
+              <div class="font-extrabold text-[#071C21] text-sm mt-0.5">TiC MRF Rate &amp; MPFS RVU Importer</div>
               <p class="mt-1 font-medium text-[#111827]">Maps API #02 TiC MRF benchmarks &amp; API #03 Medicare MPFS RVUs directly into contract modeling tables.</p>
             </div>
-            <button type="button" onclick="downloadContechBlueprint('hcss_heavybid')" class="w-full px-3 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold transition">Download .JSON Blueprint</button>
+            <button type="button" onclick="downloadContechBlueprint('hcss_heavybid')" class="w-full px-3 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold transition">Download .JSON Blueprint</button>
           </div>
-          <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] flex flex-col justify-between space-y-3">
+          <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] flex flex-col justify-between space-y-3">
             <div>
               <div class="font-mono font-bold text-[#065F46]">02 // ATHENAHEALTH / NEXTGEN RCM</div>
-              <div class="font-extrabold text-[#0A0D14] text-sm mt-0.5">Payer CPB Prior-Auth &amp; ERISA Appeal Sync</div>
+              <div class="font-extrabold text-[#071C21] text-sm mt-0.5">Payer CPB Prior-Auth &amp; ERISA Appeal Sync</div>
               <p class="mt-1 font-medium text-[#111827]">Pushes API #01 prior-auth checklists and API #06 ERISA 29 CFR 2560.503-1 appeals into denial queues.</p>
             </div>
-            <button type="button" onclick="downloadContechBlueprint('procore_precon')" class="w-full px-3 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold transition">Download .JSON Blueprint</button>
+            <button type="button" onclick="downloadContechBlueprint('procore_precon')" class="w-full px-3 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold transition">Download .JSON Blueprint</button>
           </div>
-          <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] flex flex-col justify-between space-y-3">
+          <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] flex flex-col justify-between space-y-3">
             <div>
-              <div class="font-mono font-bold text-[#0A0D14]">03 // CHANGE HEALTHCARE / AVAILITY</div>
-              <div class="font-extrabold text-[#0A0D14] text-sm mt-0.5">835 ERA Underpayment &amp; NSA IDR Sync</div>
+              <div class="font-mono font-bold text-[#071C21]">03 // CHANGE HEALTHCARE / AVAILITY</div>
+              <div class="font-extrabold text-[#071C21] text-sm mt-0.5">835 ERA Underpayment &amp; NSA IDR Sync</div>
               <p class="mt-1 font-medium text-[#111827]">Syncs API #07 HIPAA 835 ERA underpayment ledgers and API #08 Federal NSA IDR briefs to RCM queues.</p>
             </div>
-            <button type="button" onclick="downloadContechBlueprint('sage_300_cre')" class="w-full px-3 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold transition">Download .JSON Blueprint</button>
+            <button type="button" onclick="downloadContechBlueprint('sage_300_cre')" class="w-full px-3 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold transition">Download .JSON Blueprint</button>
           </div>
-          <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] flex flex-col justify-between space-y-3">
+          <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] flex flex-col justify-between space-y-3">
             <div>
-              <div class="font-mono font-bold text-[#1E3A8A]">04 // SLACK / TEAMS / N8N</div>
-              <div class="font-extrabold text-[#0A0D14] text-sm mt-0.5">50-State Payer MRF &amp; IDR Alert Wire</div>
+              <div class="font-mono font-bold text-[#0F766E]">04 // SLACK / TEAMS / N8N</div>
+              <div class="font-extrabold text-[#071C21] text-sm mt-0.5">50-State Payer MRF &amp; IDR Alert Wire</div>
               <p class="mt-1 font-medium text-[#111827]">Polls API #04 every 6 hours and posts matching Payer MRF rate cohorts + 6-File .ZIP links to Slack/Teams.</p>
             </div>
-            <button type="button" onclick="downloadContechBlueprint('n8n_slack_letting_wire')" class="w-full px-3 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold transition">Download .JSON Blueprint</button>
+            <button type="button" onclick="downloadContechBlueprint('n8n_slack_letting_wire')" class="w-full px-3 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold transition">Download .JSON Blueprint</button>
           </div>
         </div>
       </div>
@@ -957,12 +957,12 @@ def _build_api_catalog_section() -> str:
       </div>
 
       <!-- Cross-Catalog Pricing Matrix -->
-      <div class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-4">
-        <h3 class="text-lg font-extrabold text-[#0A0D14] font-mono">// CROSS-CATALOG RAPIDAPI &amp; MCP PRICING MATRIX (01–12)</h3>
+      <div class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-4">
+        <h3 class="text-lg font-extrabold text-[#071C21] font-mono">// CROSS-CATALOG RAPIDAPI &amp; MCP PRICING MATRIX (01–12)</h3>
         <div class="overflow-x-auto">
           <table class="w-full min-w-[780px] text-left border-collapse">
             <thead>
-              <tr class="bg-[#EAE6DF] border-b-2 border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]">
+              <tr class="bg-[#DDF0EC] border-b-2 border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">
                 <th class="py-2.5 px-3">#</th>
                 <th class="py-2.5 px-3">MICROSERVICE</th>
                 <th class="py-2.5 px-3">ENDPOINT</th>
@@ -1009,26 +1009,26 @@ def build_site_files() -> None:
         let_date = item["letting_date"]
         dbe = f"{item['dbe_goal_pct']}%"
         letting_rows.append(
-            f"""<tr data-letting-row="1" data-letting-portal="{jur}" class="border-b border-[#CBD5E1] hover:bg-[#F1EFEA] text-sm">
-              <td class="py-3 px-3 font-mono text-xs font-bold text-[#1E3A8A]">{pid}</td>
-              <td class="py-3 px-3 font-bold text-[#0A0D14]">{title}</td>
+            f"""<tr data-letting-row="1" data-letting-portal="{jur}" class="border-b border-[#B4D6D0] hover:bg-[#E6F4F1] text-sm">
+              <td class="py-3 px-3 font-mono text-xs font-bold text-[#0F766E]">{pid}</td>
+              <td class="py-3 px-3 font-bold text-[#071C21]">{title}</td>
               <td class="py-3 px-3 text-[#111827] font-medium text-xs">{agency}</td>
               <td class="py-3 px-3 font-mono font-bold text-[#065F46]">{est}</td>
-              <td class="py-3 px-3 font-mono text-[#1E3A8A] text-xs font-bold">{dbe}</td>
-              <td class="py-3 px-3 font-mono text-[#0A0D14] font-semibold text-xs">{let_date}</td>
-              <td class="py-3 px-3 text-right"><button type="button" onclick="openInPageDossier('{pid}')" class="px-2.5 py-1 rounded bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-[11px] font-bold transition">Inspect Dossier</button></td>
+              <td class="py-3 px-3 font-mono text-[#0F766E] text-xs font-bold">{dbe}</td>
+              <td class="py-3 px-3 font-mono text-[#071C21] font-semibold text-xs">{let_date}</td>
+              <td class="py-3 px-3 text-right"><button type="button" onclick="openInPageDossier('{pid}')" class="px-2.5 py-1 rounded bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-[11px] font-bold transition">Inspect Dossier</button></td>
             </tr>"""
         )
 
     portal_cards = []
     for code, name in FIFTY_TWO_PORTALS:
         portal_cards.append(
-            f"""<div class="p-3.5 rounded-xl bg-white border border-[#CBD5E1] shadow-sm flex flex-col justify-between gap-2">
+            f"""<div class="p-3.5 rounded-xl bg-white border border-[#B4D6D0] shadow-sm flex flex-col justify-between gap-2">
               <div class="flex items-center justify-between gap-1.5">
-                <div class="text-[10.5px] sm:text-xs font-mono font-bold tracking-tight text-[#1E3A8A] whitespace-nowrap">PORTAL // {code}</div>
+                <div class="text-[10.5px] sm:text-xs font-mono font-bold tracking-tight text-[#0F766E] whitespace-nowrap">PORTAL // {code}</div>
                 <span class="shrink-0 inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] text-[10px] font-mono font-bold leading-none"><span class="w-1.5 h-1.5 rounded-full bg-[#059669]"></span>LIVE</span>
               </div>
-              <div class="text-xs font-bold text-[#0A0D14] leading-snug pt-1.5 border-t border-[#EAE6DF]">{name}</div>
+              <div class="text-xs font-bold text-[#071C21] leading-snug pt-1.5 border-t border-[#DDF0EC]">{name}</div>
             </div>"""
         )
 
@@ -1153,8 +1153,8 @@ def build_site_files() -> None:
         const b = document.getElementById('card-tab-' + cardId + '-' + t);
         if (b) {{
           b.className = t === tabName
-            ? 'px-2 py-0.5 rounded bg-[#0A0D14] text-white'
-            : 'px-2 py-0.5 rounded text-[#0A0D14] hover:text-[#1E3A8A]';
+            ? 'px-2 py-0.5 rounded bg-[#071C21] text-white'
+            : 'px-2 py-0.5 rounded text-[#071C21] hover:text-[#0F766E]';
         }}
       }});
       if (!resEl) return;
@@ -1320,8 +1320,8 @@ def build_site_files() -> None:
         const btn = document.getElementById('shredder-state-btn-' + k);
         if (btn) {{
           btn.className = k === stateKey
-            ? 'px-3 py-1.5 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition'
-            : 'px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition';
+            ? 'px-3 py-1.5 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition'
+            : 'px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition';
         }}
       }});
       const bEl = document.getElementById('shredder-active-badge');
@@ -1359,8 +1359,8 @@ def build_site_files() -> None:
         const b = document.getElementById('persona-btn-' + k);
         if (b) {{
           b.className = k === roleKey
-            ? 'px-3.5 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition'
-            : 'px-3.5 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition';
+            ? 'px-3.5 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition'
+            : 'px-3.5 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition';
         }}
       }});
       const tEl = document.getElementById('persona-active-title');
@@ -1394,8 +1394,8 @@ def build_site_files() -> None:
         const b = document.getElementById('stage-step-btn-' + i);
         if (b) {{
           b.className = i === stageIdx
-            ? 'px-3 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition'
-            : 'px-3 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition';
+            ? 'px-3 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition'
+            : 'px-3 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition';
         }}
       }}
       const tEl = document.getElementById('stage-step-title');
@@ -1416,8 +1416,8 @@ def build_site_files() -> None:
         if (p) p.classList.toggle('hidden', k !== activeKey);
         if (b) {{
           b.className = k === activeKey
-            ? 'px-3.5 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition'
-            : 'px-3.5 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition';
+            ? 'px-3.5 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition'
+            : 'px-3.5 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition';
         }}
       }});
     }}
@@ -1567,14 +1567,14 @@ def build_site_files() -> None:
     window.BILLING_MODE = 'monthly';
     window.ACTIVE_CHECKOUT_TIER = 'tier2_monthly';
     window.RUBRICWARD_STRIPE_LINKS = {{
-      tier1_monthly: 'https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i',
-      tier1_annual: 'https://buy.stripe.com/5kQcN46iK2pd68MfeY7wA0j',
-      tier2_monthly: 'https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k',
-      tier2_annual: 'https://buy.stripe.com/dRmdR8ePg4xl8gU8QA7wA0l',
-      tier3_monthly: 'https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m',
-      tier3_annual: 'https://buy.stripe.com/bJecN46iKfbZ0OsfeY7wA0n',
-      tier4_monthly: 'https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o',
-      tier4_annual: 'https://buy.stripe.com/5kQ14m6iK1l940EfeY7wA0p'
+      tier1_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier1_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier2_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier2_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier3_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier3_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier4_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier4_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl'
     }};
 
     function setCheckoutBilling(mode) {{
@@ -1584,13 +1584,13 @@ def build_site_files() -> None:
       const btnYr = document.getElementById('billing-toggle-annual');
       if (btnMo) {{
         btnMo.className = !isAnnual
-          ? 'px-4 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition'
-          : 'px-4 py-2 rounded-lg text-[#0A0D14] hover:bg-[#DDD8CE] font-mono text-xs font-bold transition';
+          ? 'px-4 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition'
+          : 'px-4 py-2 rounded-lg text-[#071C21] hover:bg-[#C8E6E0] font-mono text-xs font-bold transition';
       }}
       if (btnYr) {{
         btnYr.className = isAnnual
-          ? 'px-4 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition'
-          : 'px-4 py-2 rounded-lg text-[#0A0D14] hover:bg-[#DDD8CE] font-mono text-xs font-bold transition';
+          ? 'px-4 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition'
+          : 'px-4 py-2 rounded-lg text-[#071C21] hover:bg-[#C8E6E0] font-mono text-xs font-bold transition';
       }}
       const t1 = document.getElementById('price-tier1');
       const t2 = document.getElementById('price-tier2');
@@ -1628,6 +1628,7 @@ def build_site_files() -> None:
         b4.setAttribute('onclick', `openCamberCheckoutModal('${{k4}}')`);
         b4.setAttribute('data-stripe-link', window.RUBRICWARD_STRIPE_LINKS[k4]);
       }}
+      const billParam = isAnnual ? 'annual' : 'monthly';
       if (sl1) sl1.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k1]);
       if (sl2) sl2.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k2]);
       if (sl3) sl3.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k3]);
@@ -1638,14 +1639,14 @@ def build_site_files() -> None:
       closeTrustModals();
       window.ACTIVE_CHECKOUT_TIER = tierKey || 'tier2_monthly';
       const catalog = {{
-        tier1_monthly: {{ name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$199 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i' }},
-        tier1_annual: {{ name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$1,990 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://buy.stripe.com/5kQcN46iK2pd68MfeY7wA0j' }},
-        tier2_monthly: {{ name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$499 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k' }},
-        tier2_annual: {{ name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$4,490 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://buy.stripe.com/dRmdR8ePg4xl8gU8QA7wA0l' }},
-        tier3_monthly: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Monthly)', price: '$1,499 / month', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m' }},
-        tier3_annual: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$14,900 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://buy.stripe.com/bJecN46iKfbZ0OsfeY7wA0n' }},
-        tier4_monthly: {{ name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,499 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o' }},
-        tier4_annual: {{ name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$24,900 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://buy.stripe.com/5kQ14m6iK1l940EfeY7wA0p' }}
+        tier1_monthly: {{ name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$199 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier1_annual: {{ name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$1,990 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier2_monthly: {{ name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$499 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier2_annual: {{ name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$4,490 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier3_monthly: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Monthly)', price: '$1,499 / month', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier3_annual: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$14,900 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier4_monthly: {{ name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,499 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier4_annual: {{ name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$24,900 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }}
       }};
       const info = catalog[window.ACTIVE_CHECKOUT_TIER] || catalog.tier2_monthly;
       const modal = document.getElementById('rubricward-checkout-modal');
@@ -1657,7 +1658,9 @@ def build_site_files() -> None:
       if (nameEl) nameEl.textContent = info.name;
       if (priceEl) priceEl.textContent = info.price;
       if (descEl) descEl.textContent = info.desc;
-      if (directLinkEl && info.stripeUrl) directLinkEl.setAttribute('href', info.stripeUrl);
+      const _parts = (window.ACTIVE_CHECKOUT_TIER || 'tier2_monthly').split('_');
+      const _brandedHref = info.stripeUrl || ('https://rubricward.com/v1/billing/checkout?plan=' + (_parts[0] || 'tier2') + '&billing=' + (_parts[1] || 'monthly'));
+      if (directLinkEl) directLinkEl.setAttribute('href', _brandedHref);
       if (resBox) resBox.classList.add('hidden');
       if (modal) modal.classList.remove('hidden');
       return info;
@@ -1685,10 +1688,10 @@ def build_site_files() -> None:
       const plan = parts[0] || 'tier2';
       const billing = parts[1] || 'monthly';
       const generatedKey = 'cd_live_' + btoa(email + ':' + tier).replace(/[^a-zA-Z0-9]/g, '').slice(0, 20).toLowerCase();
-      let resolvedCheckoutUrl = (window.RUBRICWARD_STRIPE_LINKS && window.RUBRICWARD_STRIPE_LINKS[tier]) || 'https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k';
+      let resolvedCheckoutUrl = (window.RUBRICWARD_STRIPE_LINKS && window.RUBRICWARD_STRIPE_LINKS[tier]) || 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl';
       if (statusEl) statusEl.textContent = 'Provisioning RubricWard Workspace & Stripe Checkout Session via https://rubricward.com/v1/billing/create-checkout-session...';
       try {{
-        const resp = await fetch('https://rubricward.com/v1/billing/create-checkout-session', {{
+        const resp = await fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/create-checkout-session', {{
           method: 'POST',
           headers: {{ 'Content-Type': 'application/json' }},
           body: JSON.stringify({{ plan, billing, email, tier, customer_email: email, company_name: company, state_dots: states }})
@@ -1709,7 +1712,7 @@ def build_site_files() -> None:
 
     function saveAccountAlertFilters() {{
       const stEl = document.getElementById('account-filter-status');
-      if (stEl) stEl.textContent = 'SAVED: 50-State DOT + CMS Federal NSA IDR (45 CFR 149.510) Alert Routing Updated.';
+      if (stEl) stEl.textContent = 'SAVED: 50-State Payer MRF + CMS Federal NSA IDR (45 CFR 149.510) Alert Routing Updated.';
     }}
 
     function addAccountTeamSeat() {{
@@ -1718,7 +1721,7 @@ def build_site_files() -> None:
       const val = inp ? inp.value.trim() : '';
       if (!val || !list) return;
       const span = document.createElement('span');
-      span.className = 'px-2.5 py-1 rounded bg-white border border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]';
+      span.className = 'px-2.5 py-1 rounded bg-white border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]';
       span.textContent = val + ' (ACTIVE)';
       list.appendChild(span);
       inp.value = '';
@@ -1742,8 +1745,8 @@ def build_site_files() -> None:
       document.querySelectorAll('[data-portal-pill]').forEach(btn => {{
         const pKey = btn.getAttribute('data-portal-pill') || 'all';
         btn.className = pKey === activePortal
-          ? 'px-3 py-1.5 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition'
-          : 'px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition';
+          ? 'px-3 py-1.5 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition'
+          : 'px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition';
       }});
       const qEl = document.getElementById('letting-search-input');
       const q = qEl ? String(qEl.value || '').toLowerCase().trim() : '';
@@ -1800,43 +1803,43 @@ def build_site_files() -> None:
       const body = document.getElementById('inpage-dossier-content');
       if (!modal || !body || !item) return;
       const payRows = (item.pay_items || []).map(p => `
-        <tr class="border-b border-[#CBD5E1] text-xs font-mono">
-          <td class="py-2 px-2.5 font-bold text-[#1E3A8A]">${{p.item_code}}</td>
-          <td class="py-2 px-2.5 font-sans font-bold text-[#0A0D14]">${{p.description}}</td>
-          <td class="py-2 px-2.5 text-[#0A0D14] font-semibold">${{Number(p.quantity).toLocaleString()}} ${{p.unit}}</td>
+        <tr class="border-b border-[#B4D6D0] text-xs font-mono">
+          <td class="py-2 px-2.5 font-bold text-[#0F766E]">${{p.item_code}}</td>
+          <td class="py-2 px-2.5 font-sans font-bold text-[#071C21]">${{p.description}}</td>
+          <td class="py-2 px-2.5 text-[#071C21] font-semibold">${{Number(p.quantity).toLocaleString()}} ${{p.unit}}</td>
           <td class="py-2 px-2.5 text-[#1E293B] font-semibold">$${{Number(p.hist_avg_unit_usd || p.hist_median_unit_usd || p.hist_low_unit_usd || 0).toFixed(2)}}</td>
           <td class="py-2 px-2.5 text-[#065F46] font-extrabold">$${{Number(p.recommended_unit_usd).toFixed(2)}}</td>
         </tr>`).join('');
-      const planholders = (item.planholders || []).map(ph => `<span class="px-2.5 py-1 rounded bg-[#EAE6DF] border border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]">${{ph}}</span>`).join(' ');
+      const planholders = (item.planholders || []).map(ph => `<span class="px-2.5 py-1 rounded bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">${{ph}}</span>`).join(' ');
       const staticDossierHref = item.slug ? ('lettings/project/' + item.slug + '.html') : 'lettings/index.html';
       const zipHref = 'https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=' + encodeURIComponent(item.project_id) + '&state_code=' + encodeURIComponent(item.state_code || 'TX') + '&format=binary';
       body.innerHTML = `
         <div class="space-y-4">
-          <div class="flex items-start justify-between gap-4 border-b border-[#CBD5E1] pb-3">
+          <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
             <div>
-              <div class="text-xs font-mono font-bold text-[#1E3A8A]">${{item.project_id}} &bull; ${{item.agency}} &bull; ${{item.county}}</div>
-              <h3 class="text-xl font-extrabold text-[#0A0D14] mt-0.5">${{item.title}}</h3>
+              <div class="text-xs font-mono font-bold text-[#0F766E]">${{item.project_id}} &bull; ${{item.agency}} &bull; ${{item.county}}</div>
+              <h3 class="text-xl font-extrabold text-[#071C21] mt-0.5">${{item.title}}</h3>
             </div>
-            <button type="button" onclick="closeInPageDossier()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+            <button type="button" onclick="closeInPageDossier()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
-            <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1]"><div class="text-[#0A0D14] font-bold">COHORT MRF VALUE</div><div class="text-base font-extrabold text-[#065F46] mt-0.5">$${{Number(item.engineers_estimate_usd).toLocaleString()}}</div></div>
-            <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1]"><div class="text-[#0A0D14] font-bold">RECOVERY GAP %</div><div class="text-base font-extrabold text-[#1E3A8A] mt-0.5">${{item.dbe_goal_pct}}%</div></div>
-            <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1]"><div class="text-[#0A0D14] font-bold">APPEAL WINDOW</div><div class="text-base font-extrabold text-[#0A0D14] mt-0.5">${{Number(item.liquidated_damages_per_day_usd || 180)}} Days</div></div>
-            <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1]"><div class="text-[#0A0D14] font-bold">STATUTORY BASIS</div><div class="text-xs font-extrabold text-[#0A0D14] mt-0.5">${{item.wage_determination_id || item.wage_decision_id || 'CMS MPFS / NSA 45 CFR 149.510'}}</div></div>
+            <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0]"><div class="text-[#071C21] font-bold">COHORT MRF VALUE</div><div class="text-base font-extrabold text-[#065F46] mt-0.5">$${{Number(item.engineers_estimate_usd).toLocaleString()}}</div></div>
+            <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0]"><div class="text-[#071C21] font-bold">RECOVERY GAP %</div><div class="text-base font-extrabold text-[#0F766E] mt-0.5">${{item.dbe_goal_pct}}%</div></div>
+            <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0]"><div class="text-[#071C21] font-bold">APPEAL WINDOW</div><div class="text-base font-extrabold text-[#071C21] mt-0.5">${{Number(item.liquidated_damages_per_day_usd || 180)}} Days</div></div>
+            <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0]"><div class="text-[#071C21] font-bold">STATUTORY BASIS</div><div class="text-xs font-extrabold text-[#071C21] mt-0.5">${{item.wage_determination_id || item.wage_decision_id || 'CMS MPFS / NSA 45 CFR 149.510'}}</div></div>
           </div>
           <p class="text-sm font-medium text-[#111827] leading-relaxed">${{item.scope_summary}}</p>
           <div>
-            <div class="text-xs font-mono font-bold text-[#0A0D14] mb-1.5">// COMMERCIAL PAYER TIC MRF &amp; QPA ALLOWED-AMOUNT BENCHMARK</div>
-            <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-[#EAE6DF] border-b border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]"><th class="py-2 px-2.5">CPT / DRG</th><th class="py-2 px-2.5">CLINICAL PROCEDURE</th><th class="py-2 px-2.5">CLAIMS</th><th class="py-2 px-2.5">MRF MEDIAN (QPA)</th><th class="py-2 px-2.5">75TH-PCT TARGET</th></tr></thead><tbody>${{payRows}}</tbody></table></div>
+            <div class="text-xs font-mono font-bold text-[#071C21] mb-1.5">// COMMERCIAL PAYER TIC MRF &amp; QPA ALLOWED-AMOUNT BENCHMARK</div>
+            <div class="overflow-x-auto"><table class="w-full text-left border-collapse"><thead><tr class="bg-[#DDF0EC] border-b border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]"><th class="py-2 px-2.5">CPT / DRG</th><th class="py-2 px-2.5">CLINICAL PROCEDURE</th><th class="py-2 px-2.5">CLAIMS</th><th class="py-2 px-2.5">MRF MEDIAN (QPA)</th><th class="py-2 px-2.5">75TH-PCT TARGET</th></tr></thead><tbody>${{payRows}}</tbody></table></div>
           </div>
           <div>
-            <div class="text-xs font-mono font-bold text-[#0A0D14] mb-1.5">// REGIONAL PEER SPECIALTY GROUPS &amp; EIN/NPI MRF COMPARABLES</div>
+            <div class="text-xs font-mono font-bold text-[#071C21] mb-1.5">// REGIONAL PEER SPECIALTY GROUPS &amp; EIN/NPI MRF COMPARABLES</div>
             <div class="flex flex-wrap gap-2">${{planholders}}</div>
           </div>
           <div class="pt-2 flex flex-wrap gap-3">
-            <a href="${{zipHref}}" class="px-4 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Download OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package (.ZIP)</a>
-            <a href="${{staticDossierHref}}" class="px-4 py-2.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">Open Full Static Dossier Page &rarr;</a>
+            <a href="${{zipHref}}" class="px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Download OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package (.ZIP)</a>
+            <a href="${{staticDossierHref}}" class="px-4 py-2.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">Open Full Static Dossier Page &rarr;</a>
           </div>
         </div>`;
       modal.classList.remove('hidden');
@@ -1861,8 +1864,8 @@ def build_site_files() -> None:
         const b = document.getElementById('zip-tab-btn-' + i);
         if (b) {{
           b.className = i === idx
-            ? 'px-3 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold text-left break-all w-full transition'
-            : 'px-3 py-2 rounded-lg bg-[#F4F1EA] hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#CBD5E1] font-mono text-xs font-bold text-left break-all w-full transition';
+            ? 'px-3 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold text-left break-all w-full transition'
+            : 'px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition';
         }}
       }}
       const titleEl = document.getElementById('zip-inspector-title');
@@ -1999,8 +2002,8 @@ def build_site_files() -> None:
         const btn = document.getElementById('tab-sandbox-' + t);
         if (btn) {{
           btn.className = t === tabName
-            ? 'px-2.5 py-1 rounded bg-[#0A0D14] text-white'
-            : 'px-2.5 py-1 rounded text-[#0A0D14] hover:text-[#1E3A8A]';
+            ? 'px-2.5 py-1 rounded bg-[#071C21] text-white'
+            : 'px-2.5 py-1 rounded text-[#071C21] hover:text-[#0F766E]';
         }}
       }});
       renderSandboxOutput();
@@ -2024,8 +2027,8 @@ def build_site_files() -> None:
         const b = document.getElementById('mcp-tab-' + m);
         if (b) {{
           b.className = m === mode
-            ? 'px-3 py-1 rounded bg-[#0A0D14] text-white'
-            : 'px-3 py-1 rounded text-[#0A0D14]';
+            ? 'px-3 py-1 rounded bg-[#071C21] text-white'
+            : 'px-3 py-1 rounded text-[#071C21]';
         }}
       }});
       if (!pre) return;
@@ -2269,8 +2272,8 @@ def build_site_files() -> None:
         const btn = document.getElementById('admin-tier-btn-' + k);
         if (btn) {{
           btn.className = (k === (tierMap[tierKey] ? tierKey : 'tier_4'))
-            ? 'px-2.5 py-1 rounded bg-[#1E3A8A] text-white font-mono text-[11px] font-bold transition'
-            : 'px-2.5 py-1 rounded bg-white hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] font-mono text-[11px] font-bold transition';
+            ? 'px-2.5 py-1 rounded bg-[#0F766E] text-white font-mono text-[11px] font-bold transition'
+            : 'px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition';
         }}
       }});
       _applyAccountPortalState({{
@@ -2294,7 +2297,7 @@ def build_site_files() -> None:
       if (adminBar) adminBar.classList.add('hidden');
       if (pwInp) pwInp.value = '';
       if (statusEl) {{
-        statusEl.className = 'text-xs font-mono font-bold text-[#1E3A8A]';
+        statusEl.className = 'text-xs font-mono font-bold text-[#0F766E]';
         statusEl.textContent = 'Signed out of Client Portal.';
       }}
     }}
@@ -2695,7 +2698,7 @@ def build_site_files() -> None:
     function clearConciergeChat() {{
       const log = document.getElementById('concierge-chat-log');
       if (log) {{
-        log.innerHTML = `<div class="p-2.5 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] font-medium text-[#0A0D14]">Ask about any of our 50 State Payer MRF portals, CPT/DRG negotiated rate percentiles, live Excel formulas in the 6-File .ZIP package, or REST/MCP API keys.</div>`;
+        log.innerHTML = `<div class="p-2.5 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] font-medium text-[#071C21]">Ask about any of our 50 State Payer MRF portals, CPT/DRG negotiated rate percentiles, live Excel formulas in the 6-File .ZIP package, or REST/MCP API keys.</div>`;
       }}
     }}
 
@@ -2707,7 +2710,7 @@ def build_site_files() -> None:
       const headerLabel = (reply && reply.isWafBlock)
         ? '[!] RUBRICWARD WAF SECURITY BLOCK:'
         : '&check; RUBRICWARD AI CONCIERGE RESPONSE:';
-      const headerColor = (reply && reply.isWafBlock) ? 'text-[#991B1B]' : 'text-[#1E3A8A]';
+      const headerColor = (reply && reply.isWafBlock) ? 'text-[#991B1B]' : 'text-[#0F766E]';
       botDiv.innerHTML = `<strong class="${{headerColor}} font-mono block mb-1">${{headerLabel}}</strong><div class="whitespace-pre-line leading-relaxed break-words">${{_escConciergeHtml(safeText)}}</div>`;
       const acts = Array.isArray(reply.actions) && reply.actions.length > 0
         ? reply.actions
@@ -2719,13 +2722,13 @@ def build_site_files() -> None:
           if (a.href) {{
             const link = document.createElement('a');
             link.href = a.href;
-            link.className = 'inline-block px-2.5 py-1 rounded bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-[11px] font-bold transition';
+            link.className = 'inline-block px-2.5 py-1 rounded bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-[11px] font-bold transition';
             link.innerHTML = `${{_escConciergeHtml(a.label)}} &rarr;`;
             wrap.appendChild(link);
           }} else if (a.fn) {{
             const btn = document.createElement('button');
             btn.type = 'button';
-            btn.className = 'px-2.5 py-1 rounded bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-[11px] font-bold transition';
+            btn.className = 'px-2.5 py-1 rounded bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-[11px] font-bold transition';
             btn.innerHTML = `${{_escConciergeHtml(a.label)}} &rarr;`;
             btn.addEventListener('click', a.fn);
             wrap.appendChild(btn);
@@ -2760,12 +2763,12 @@ def build_site_files() -> None:
       const check = sanitizeConciergeInput(rawQ);
       const displayQ = check.ok ? check.value : rawQ.slice(0, 160);
       const userDiv = document.createElement('div');
-      userDiv.className = 'p-2.5 rounded-lg bg-[#EAE6DF] border border-[#CBD5E1] text-[#0A0D14] text-xs font-bold break-words';
+      userDiv.className = 'p-2.5 rounded-lg bg-[#DDF0EC] border border-[#B4D6D0] text-[#071C21] text-xs font-bold break-words';
       userDiv.innerHTML = `You: ${{_escConciergeHtml(displayQ)}}`;
       log.appendChild(userDiv);
 
       const botDiv = document.createElement('div');
-      botDiv.className = 'p-3 rounded-lg bg-[#EFF6FF] border border-[#93C5FD] text-[#0A0D14] text-xs font-medium leading-relaxed space-y-2 break-words';
+      botDiv.className = 'p-3 rounded-lg bg-[#E6F4F1] border border-[#5EEAD4] text-[#071C21] text-xs font-medium leading-relaxed space-y-2 break-words';
       const reply = buildConciergeAnswer(rawQ, '', '');
       _renderConciergeBotReply(botDiv, reply);
       log.appendChild(botDiv);
@@ -2785,12 +2788,12 @@ def build_site_files() -> None:
       const check = sanitizeConciergeInput(rawQ);
       const displayQ = check.ok ? check.value : rawQ.slice(0, 160);
       const userDiv = document.createElement('div');
-      userDiv.className = 'p-2.5 rounded-lg bg-[#EAE6DF] border border-[#CBD5E1] text-[#0A0D14] text-xs font-bold break-words';
+      userDiv.className = 'p-2.5 rounded-lg bg-[#DDF0EC] border border-[#B4D6D0] text-[#071C21] text-xs font-bold break-words';
       userDiv.innerHTML = `You: ${{_escConciergeHtml(displayQ)}}`;
       log.appendChild(userDiv);
 
       const botDiv = document.createElement('div');
-      botDiv.className = 'p-3.5 rounded-xl bg-[#EFF6FF] border border-[#93C5FD] text-[#0A0D14] text-xs font-medium leading-relaxed space-y-2 break-words';
+      botDiv.className = 'p-3.5 rounded-xl bg-[#E6F4F1] border border-[#5EEAD4] text-[#071C21] text-xs font-medium leading-relaxed space-y-2 break-words';
       const reply = buildConciergeAnswer(rawQ, '', topic);
       _renderConciergeBotReply(botDiv, reply);
       log.appendChild(botDiv);
@@ -2855,17 +2858,17 @@ def build_site_files() -> None:
       const root = document.getElementById('contracts-dynamic-root');
       if (!root) return;
       const cards = LETTINGS_DATA.map(item => `
-        <div class="p-5 rounded-xl bg-white border border-[#CBD5E1] shadow-sm space-y-2.5">
+        <div class="p-5 rounded-xl bg-white border border-[#B4D6D0] shadow-sm space-y-2.5">
           <div class="flex items-center justify-between text-xs font-mono">
-            <span class="text-[#1E3A8A] font-bold">${{item.project_id}} &bull; ${{item.state_code}}</span>
+            <span class="text-[#0F766E] font-bold">${{item.project_id}} &bull; ${{item.state_code}}</span>
             <span class="text-[#065F46] font-bold">Est: $${{Number(item.engineers_estimate_usd).toLocaleString()}}</span>
           </div>
-          <h4 class="text-base font-extrabold text-[#0A0D14]">${{item.title}}</h4>
+          <h4 class="text-base font-extrabold text-[#071C21]">${{item.title}}</h4>
           <p class="text-xs font-semibold text-[#1E293B]">${{item.agency}} &bull; ${{item.county}} &bull; DBE Goal: ${{item.dbe_goal_pct}}%</p>
           <p class="text-sm font-medium text-[#111827] leading-relaxed">${{item.scope_summary}}</p>
           <div class="pt-1 flex flex-wrap gap-2">
-            <button type="button" onclick="openInPageDossier('${{item.project_id}}')" class="px-3 py-1.5 rounded bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold">Inspect Payer MRF Dossier</button>
-            <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=${{encodeURIComponent(item.project_id)}}&amp;state_code=${{encodeURIComponent(item.state_code || 'TX')}}&amp;format=binary" class="px-3 py-1.5 rounded bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold">Download 6-File .ZIP</a>
+            <button type="button" onclick="openInPageDossier('${{item.project_id}}')" class="px-3 py-1.5 rounded bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold">Inspect Payer MRF Dossier</button>
+            <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=${{encodeURIComponent(item.project_id)}}&amp;state_code=${{encodeURIComponent(item.state_code || 'TX')}}&amp;format=binary" class="px-3 py-1.5 rounded bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold">Download 6-File .ZIP</a>
           </div>
         </div>
       `).join('');
@@ -2907,7 +2910,7 @@ def build_site_files() -> None:
     """
 
     high_contrast_style = """  <style>
-    html, body { max-width: 100vw; overflow-x: hidden; color: #0A0D14; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    html, body { max-width: 100vw; overflow-x: hidden; color: #071C21; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     p, li, td, th, label, span { letter-spacing: -0.005em; }
     pre, code, textarea { font-variant-ligatures: none; }
     code, a[data-api-row] span, [data-api-card] span, [id^="zip-tab-btn-"], #zip-inspector-title, #lead-magnet-status, #account-seat-list span, #account-active-id, #account-api-key-val {
@@ -2919,52 +2922,52 @@ def build_site_files() -> None:
     trust_modals_and_concierge_html = """
   <!-- IN-PAGE PAYER MRF & IDR DOSSIER QUICK-VIEW MODAL (#inpage-dossier-modal) -->
   <div id="inpage-dossier-modal" onclick="if(event.target===this) closeInPageDossier()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-    <div id="inpage-dossier-content" class="max-w-4xl w-full max-h-[88vh] overflow-y-auto overflow-x-hidden p-6 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl"></div>
+    <div id="inpage-dossier-content" class="max-w-4xl w-full max-h-[88vh] overflow-y-auto overflow-x-hidden p-6 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl"></div>
   </div>
 
   <!-- RUBRICWARD SELF-SERVE CHECKOUT & INSTANT API KEY PROVISIONING MODAL (#rubricward-checkout-modal) -->
   <div id="rubricward-checkout-modal" onclick="if(event.target===this) closeCamberCheckoutModal()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-    <div class="max-w-3xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl space-y-5">
-      <div class="flex items-start justify-between gap-4 border-b border-[#CBD5E1] pb-3">
+    <div class="max-w-3xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-5">
+      <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// RUBRICWARD INC. SELF-SERVE ACTIVATION &amp; INSTANT KEY PROVISIONING</div>
-          <h3 id="checkout-modal-plan-name" class="text-xl font-extrabold text-[#0A0D14] mt-0.5">Tier 2 // RubricWard Autopilot (Monthly)</h3>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// RUBRICWARD INC. SELF-SERVE ACTIVATION &amp; INSTANT KEY PROVISIONING</div>
+          <h3 id="checkout-modal-plan-name" class="text-xl font-extrabold text-[#071C21] mt-0.5">Tier 2 // RubricWard Autopilot (Monthly)</h3>
         </div>
-        <button type="button" onclick="closeCamberCheckoutModal()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+        <button type="button" onclick="closeCamberCheckoutModal()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
-      <div class="p-4 rounded-xl bg-[#EFF6FF] border-2 border-[#1E3A8A] flex flex-wrap items-center justify-between gap-2">
+      <div class="p-4 rounded-xl bg-[#E6F4F1] border-2 border-[#0F766E] flex flex-wrap items-center justify-between gap-2">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">SELECTED RUBRICWARD PLAN</div>
-          <p id="checkout-modal-plan-desc" class="text-xs font-medium text-[#0A0D14] mt-0.5">Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals &amp; all 12 APIs.</p>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">SELECTED RUBRICWARD PLAN</div>
+          <p id="checkout-modal-plan-desc" class="text-xs font-medium text-[#071C21] mt-0.5">Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals &amp; all 12 APIs.</p>
         </div>
-        <div id="checkout-modal-plan-price" class="text-2xl font-extrabold font-mono text-[#0A0D14]">$499 / month</div>
+        <div id="checkout-modal-plan-price" class="text-2xl font-extrabold font-mono text-[#071C21]">$499 / month</div>
       </div>
       <form onsubmit="submitCamberSelfServeCheckout(event)" class="space-y-3 text-xs">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div>
-            <label class="block font-mono font-bold text-[#0A0D14] mb-1">RCM / MANAGED CARE WORK EMAIL</label>
-            <input id="checkout-modal-email" type="email" required placeholder="rcm@yourmedicalgroup.com" class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-medium text-[#0A0D14] placeholder-[#1E293B]" />
+            <label class="block font-mono font-bold text-[#071C21] mb-1">RCM / MANAGED CARE WORK EMAIL</label>
+            <input id="checkout-modal-email" type="email" required placeholder="rcm@yourmedicalgroup.com" class="w-full px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-medium text-[#071C21] placeholder-[#1E293B]" />
           </div>
           <div>
-            <label class="block font-mono font-bold text-[#0A0D14] mb-1">MEDICAL GROUP / ASC / HEALTH SYSTEM NAME</label>
-            <input id="checkout-modal-company" type="text" required placeholder="Lone Star Orthopedic &amp; Spine Surgery Center LLC" class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-medium text-[#0A0D14] placeholder-[#1E293B]" />
+            <label class="block font-mono font-bold text-[#071C21] mb-1">MEDICAL GROUP / ASC / HEALTH SYSTEM NAME</label>
+            <input id="checkout-modal-company" type="text" required placeholder="Lone Star Orthopedic &amp; Spine Surgery Center LLC" class="w-full px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-medium text-[#071C21] placeholder-[#1E293B]" />
           </div>
         </div>
         <div>
-          <label class="block font-mono font-bold text-[#0A0D14] mb-1">PRIMARY STATE PAYER MARKETS &amp; PORTALS TO MONITOR (52 PORTALS INCLUDED)</label>
-          <input id="checkout-modal-states" type="text" value="All 50 U.S. State DOTs + Federal CMS Federal NSA IDR (45 CFR 149.510) + Municipal" class="w-full px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]" />
+          <label class="block font-mono font-bold text-[#071C21] mb-1">PRIMARY STATE PAYER MARKETS &amp; PORTALS TO MONITOR (52 PORTALS INCLUDED)</label>
+          <input id="checkout-modal-states" type="text" value="All 50 U.S. State Payer MRFs + Federal CMS NSA IDR (45 CFR 149.510) + Multi-Payer" class="w-full px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]" />
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-          <button type="submit" class="w-full py-3 rounded-xl bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Provision RubricWard Workspace &amp; API Key &rarr;</button>
-          <a id="checkout-modal-direct-stripe-link" href="https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-[#1E3A8A] hover:bg-[#0A0D14] text-white font-mono text-xs font-bold text-center transition">Complete Payment on Stripe &rarr;</a>
+          <button type="submit" class="w-full py-3 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Provision RubricWard Workspace &amp; API Key &rarr;</button>
+          <a id="checkout-modal-direct-stripe-link" href="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-[#0F766E] hover:bg-[#071C21] text-white font-mono text-xs font-bold text-center transition">Complete Payment on Stripe &rarr;</a>
         </div>
       </form>
-      <div id="checkout-modal-status" class="text-xs font-mono font-bold text-[#065F46]">Zero Lock-In &bull; Instant <code class="text-[#1E3A8A]">cd_live_...</code> API Key &amp; 6-File OpenXML (.DOCX + .XLSX) Access</div>
+      <div id="checkout-modal-status" class="text-xs font-mono font-bold text-[#065F46]">Zero Lock-In &bull; Instant <code class="text-[#0F766E]">cd_live_...</code> API Key &amp; 6-File OpenXML (.DOCX + .XLSX) Access</div>
       <div id="checkout-modal-provisioned-box" class="hidden p-4 rounded-xl bg-[#ECFDF5] border-2 border-[#065F46] space-y-3 text-xs font-mono">
         <div class="font-extrabold text-[#065F46]">WORKSPACE PROVISIONED // RUBRICWARD PRODUCTION CREDENTIALS</div>
-        <div class="p-3 rounded-lg bg-white border border-[#CBD5E1] flex flex-wrap items-center justify-between gap-2">
-          <div><span class="font-bold text-[#0A0D14]">LIVE API &amp; MCP KEY:</span> <code id="checkout-modal-api-key" class="text-[#1E3A8A] font-extrabold">cd_live_active</code></div>
-          <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-3 py-1.5 rounded bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold">Download 6-File .ZIP Now</a>
+        <div class="p-3 rounded-lg bg-white border border-[#B4D6D0] flex flex-wrap items-center justify-between gap-2">
+          <div><span class="font-bold text-[#071C21]">LIVE API &amp; MCP KEY:</span> <code id="checkout-modal-api-key" class="text-[#0F766E] font-extrabold">cd_live_active</code></div>
+          <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-3 py-1.5 rounded bg-[#071C21] hover:bg-[#0F766E] text-white font-bold">Download 6-File .ZIP Now</a>
         </div>
       </div>
     </div>
@@ -2973,85 +2976,85 @@ def build_site_files() -> None:
   <!-- SELF-SERVE ACCOUNT & TRUST SUITE MODALS (#account, #status, #security, #contact, #terms, #privacy) -->
   <!-- 1. #account — Self-Serve Client Portal, API Key Manager, Alert Filters & Team Console -->
   <div id="account" onclick="if(event.target===this) closeTrustModals()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-3 sm:p-6">
-    <div id="account-modal-card" class="max-w-5xl w-full max-h-[92vh] overflow-y-auto overflow-x-hidden p-5 sm:p-8 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl space-y-5">
-      <div class="flex items-start justify-between gap-4 border-b border-[#CBD5E1] pb-3">
+    <div id="account-modal-card" class="max-w-5xl w-full max-h-[92vh] overflow-y-auto overflow-x-hidden p-5 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-5">
+      <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
         <div class="min-w-0">
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// SELF-SERVE CLIENT PORTAL, PAYER MRF ALERT FILTERS &amp; API KEY CONSOLE</div>
-          <h3 class="text-xl sm:text-2xl font-extrabold text-[#0A0D14] mt-0.5">Manage Your RubricWard Subscription, API Keys, Team Seats &amp; Webhooks</h3>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// SELF-SERVE CLIENT PORTAL, PAYER MRF ALERT FILTERS &amp; API KEY CONSOLE</div>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-[#071C21] mt-0.5">Manage Your RubricWard Subscription, API Keys, Team Seats &amp; Webhooks</h3>
         </div>
-        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
       <form onsubmit="lookupSubscriberAccount(event)" class="space-y-3">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div class="min-w-0">
-            <label class="block text-xs font-mono font-bold text-[#0A0D14] mb-1">SUBSCRIBER WORK EMAIL OR API KEY (<code class="text-[#1E3A8A]">cd_live_...</code>)</label>
-            <input id="account-lookup-input" type="text" required placeholder="rcm@yourmedicalgroup.com or cd_live_..." class="w-full min-w-0 px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-sm font-medium text-[#0A0D14] placeholder-[#1E293B]" />
+            <label class="block text-xs font-mono font-bold text-[#071C21] mb-1">SUBSCRIBER WORK EMAIL OR API KEY (<code class="text-[#0F766E]">cd_live_...</code>)</label>
+            <input id="account-lookup-input" type="text" required placeholder="rcm@yourmedicalgroup.com or cd_live_..." class="w-full min-w-0 px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-sm font-medium text-[#071C21] placeholder-[#1E293B]" />
           </div>
           <div class="min-w-0">
-            <label class="block text-xs font-mono font-bold text-[#0A0D14] mb-1">PORTAL PASSWORD OR API KEY (OPTIONAL FOR SUBSCRIBERS)</label>
-            <input id="account-password-input" type="password" placeholder="Password or cd_live_..." class="w-full min-w-0 px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-sm font-medium text-[#0A0D14] placeholder-[#1E293B]" />
+            <label class="block text-xs font-mono font-bold text-[#071C21] mb-1">PORTAL PASSWORD OR API KEY (OPTIONAL FOR SUBSCRIBERS)</label>
+            <input id="account-password-input" type="password" placeholder="Password or cd_live_..." class="w-full min-w-0 px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-sm font-medium text-[#071C21] placeholder-[#1E293B]" />
           </div>
         </div>
         <div class="flex flex-wrap items-center justify-between gap-2">
-          <div id="account-auth-status" class="text-xs font-mono font-bold text-[#1E3A8A] min-w-0">Enter your work email, API key, or Founder/Admin credentials to unlock your Client Portal.</div>
-          <button type="submit" class="shrink-0 whitespace-nowrap px-5 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Access Client Portal &rarr;</button>
+          <div id="account-auth-status" class="text-xs font-mono font-bold text-[#0F766E] min-w-0">Enter your work email, API key, or Founder/Admin credentials to unlock your Client Portal.</div>
+          <button type="submit" class="shrink-0 whitespace-nowrap px-5 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Access Client Portal &rarr;</button>
         </div>
       </form>
-      <div id="account-portal-result" class="hidden p-4 sm:p-5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-3.5 text-xs font-mono min-w-0 overflow-hidden">
+      <div id="account-portal-result" class="hidden p-4 sm:p-5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-3.5 text-xs font-mono min-w-0 overflow-hidden">
         <!-- Founder & Admin Tier Preview Switcher (Visible Only When Authenticated as Founder/Admin) -->
-        <div id="account-admin-bar" class="hidden p-3.5 rounded-xl bg-[#EFF6FF] border-2 border-[#1E3A8A] space-y-2.5 min-w-0">
+        <div id="account-admin-bar" class="hidden p-3.5 rounded-xl bg-[#E6F4F1] border-2 border-[#0F766E] space-y-2.5 min-w-0">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="min-w-0">
-              <span class="px-2 py-0.5 rounded bg-[#1E3A8A] text-white font-bold text-[10px]">FOUNDER &amp; ADMIN CONSOLE</span>
-              <span class="font-extrabold text-[#0A0D14] ml-1.5">CLIENT PORTAL TIER VIEW SWITCHER (ALL 4 TIERS UNLOCKED)</span>
+              <span class="px-2 py-0.5 rounded bg-[#0F766E] text-white font-bold text-[10px]">FOUNDER &amp; ADMIN CONSOLE</span>
+              <span class="font-extrabold text-[#071C21] ml-1.5">CLIENT PORTAL TIER VIEW SWITCHER (ALL 4 TIERS UNLOCKED)</span>
             </div>
-            <button type="button" onclick="logoutClientAccount()" class="shrink-0 whitespace-nowrap px-2.5 py-1 rounded bg-white hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] font-bold text-[11px] transition">Sign Out</button>
+            <button type="button" onclick="logoutClientAccount()" class="shrink-0 whitespace-nowrap px-2.5 py-1 rounded bg-white hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-[11px] transition">Sign Out</button>
           </div>
           <div class="flex flex-wrap gap-1.5">
-            <button type="button" id="admin-tier-btn-tier_4" onclick="switchAdminPortalPreview('tier_4')" class="px-2.5 py-1 rounded bg-[#1E3A8A] text-white font-mono text-[11px] font-bold transition">Tier 4 OEM ($2,499/mo)</button>
-            <button type="button" id="admin-tier-btn-tier_3" onclick="switchAdminPortalPreview('tier_3')" class="px-2.5 py-1 rounded bg-white hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] font-mono text-[11px] font-bold transition">Tier 3 .ZIP Compiler ($1,499/mo)</button>
-            <button type="button" id="admin-tier-btn-tier_2" onclick="switchAdminPortalPreview('tier_2')" class="px-2.5 py-1 rounded bg-white hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] font-mono text-[11px] font-bold transition">Tier 2 Autopilot ($499/mo)</button>
-            <button type="button" id="admin-tier-btn-tier_1" onclick="switchAdminPortalPreview('tier_1')" class="px-2.5 py-1 rounded bg-white hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] font-mono text-[11px] font-bold transition">Tier 1 Wire ($199/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_4" onclick="switchAdminPortalPreview('tier_4')" class="px-2.5 py-1 rounded bg-[#0F766E] text-white font-mono text-[11px] font-bold transition">Tier 4 OEM ($2,499/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_3" onclick="switchAdminPortalPreview('tier_3')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 3 .ZIP Compiler ($1,499/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_2" onclick="switchAdminPortalPreview('tier_2')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 2 Autopilot ($499/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_1" onclick="switchAdminPortalPreview('tier_1')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 1 Wire ($199/mo)</button>
           </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 min-w-0">
-          <div class="p-3.5 rounded-xl bg-white border border-[#CBD5E1] space-y-2 min-w-0">
+          <div class="p-3.5 rounded-xl bg-white border border-[#B4D6D0] space-y-2 min-w-0">
             <div class="flex flex-wrap items-center justify-between gap-2 min-w-0">
-              <div class="min-w-0"><span class="font-bold text-[#0A0D14]">SUBSCRIBER IDENTITY:</span> <span id="account-active-id" class="font-extrabold text-[#1E3A8A] break-all">rcm@yourmedicalgroup.com</span></div>
+              <div class="min-w-0"><span class="font-bold text-[#071C21]">SUBSCRIBER IDENTITY:</span> <span id="account-active-id" class="font-extrabold text-[#0F766E] break-all">rcm@yourmedicalgroup.com</span></div>
               <span id="account-active-tier-badge" class="inline-block px-2.5 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold text-[11px]">ACTIVE WORKSPACE READY</span>
             </div>
-            <div class="text-[11px] font-bold text-[#0A0D14] leading-snug">ENTITLEMENTS &amp; QUOTA: <span id="account-active-quota" class="text-[#1E3A8A]">50,000 API Calls/Mo + Unlimited 6-File .ZIP Compilations + 50-State Vault</span></div>
+            <div class="text-[11px] font-bold text-[#071C21] leading-snug">ENTITLEMENTS &amp; QUOTA: <span id="account-active-quota" class="text-[#0F766E]">50,000 API Calls/Mo + Unlimited 6-File .ZIP Compilations + 50-State Vault</span></div>
           </div>
-          <div class="p-3.5 rounded-xl bg-white border border-[#CBD5E1] flex flex-col justify-between gap-2 min-w-0">
-            <div class="font-bold text-[#0A0D14]">PRODUCTION REST &amp; MCP API KEY</div>
+          <div class="p-3.5 rounded-xl bg-white border border-[#B4D6D0] flex flex-col justify-between gap-2 min-w-0">
+            <div class="font-bold text-[#071C21]">PRODUCTION REST &amp; MCP API KEY</div>
             <div class="flex items-center justify-between gap-2 min-w-0">
-              <code id="account-api-key-val" class="text-[#1E3A8A] font-extrabold truncate min-w-0">cd_live_98a4f2c1b0e7d6a3</code>
-              <button type="button" id="btn-copy-account-key" onclick="copyAccountApiKey()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold transition">Copy Key</button>
+              <code id="account-api-key-val" class="text-[#0F766E] font-extrabold truncate min-w-0">cd_live_98a4f2c1b0e7d6a3</code>
+              <button type="button" id="btn-copy-account-key" onclick="copyAccountApiKey()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold transition">Copy Key</button>
             </div>
           </div>
         </div>
 
         <!-- Direct On-Demand 6-File .ZIP & Dossier Selector Inside Client Portal -->
-        <div class="p-3.5 rounded-xl bg-white border border-[#CBD5E1] space-y-2.5 min-w-0 overflow-hidden">
-          <div class="font-bold text-[#0A0D14]">ON-DEMAND 6-FILE OPENXML (.DOCX + .XLSX) CLAIM &amp; IDR PACKAGE VAULT</div>
+        <div class="p-3.5 rounded-xl bg-white border border-[#B4D6D0] space-y-2.5 min-w-0 overflow-hidden">
+          <div class="font-bold text-[#071C21]">ON-DEMAND 6-FILE OPENXML (.DOCX + .XLSX) CLAIM &amp; IDR PACKAGE VAULT</div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-2.5 items-center min-w-0">
             <div class="lg:col-span-7 min-w-0">
-              <select id="account-zip-project-select" class="w-full min-w-0 max-w-full truncate px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-[#0A0D14] font-bold text-xs">
+              <select id="account-zip-project-select" class="w-full min-w-0 max-w-full truncate px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-[#071C21] font-bold text-xs">
                 __ACCOUNT_LETTING_OPTIONS__
               </select>
             </div>
             <div class="lg:col-span-5 flex flex-col sm:flex-row gap-2 min-w-0">
-              <button type="button" onclick="downloadAccountSelectedZip()" class="flex-1 whitespace-nowrap px-3.5 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold text-center transition">Download 6-File .ZIP</button>
-              <button type="button" onclick="inspectAccountSelectedDossier()" class="flex-1 whitespace-nowrap px-3.5 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] font-bold text-center transition">Inspect Payer MRF Dossier</button>
+              <button type="button" onclick="downloadAccountSelectedZip()" class="flex-1 whitespace-nowrap px-3.5 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-center transition">Download 6-File .ZIP</button>
+              <button type="button" onclick="inspectAccountSelectedDossier()" class="flex-1 whitespace-nowrap px-3.5 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-center transition">Inspect Payer MRF Dossier</button>
             </div>
           </div>
         </div>
 
         <!-- Ready-to-Paste Claude Desktop / Cursor MCP Config -->
-        <div class="p-3.5 rounded-xl bg-white border border-[#CBD5E1] space-y-1.5 min-w-0 overflow-hidden">
-          <div class="font-bold text-[#0A0D14]">CLAUDE DESKTOP / CURSOR / WINDSURF MCP CONFIG (PRE-FILLED WITH YOUR KEY)</div>
-          <pre id="account-mcp-config-pre" class="p-3 rounded-lg bg-[#0A0D14] text-[#F8FAFC] text-[11px] leading-relaxed overflow-x-auto max-w-full">{
+        <div class="p-3.5 rounded-xl bg-white border border-[#B4D6D0] space-y-1.5 min-w-0 overflow-hidden">
+          <div class="font-bold text-[#071C21]">CLAUDE DESKTOP / CURSOR / WINDSURF MCP CONFIG (PRE-FILLED WITH YOUR KEY)</div>
+          <pre id="account-mcp-config-pre" class="p-3 rounded-lg bg-[#071C21] text-[#F8FAFC] text-[11px] leading-relaxed overflow-x-auto max-w-full">{
   "mcpServers": {
     "rubricward": {
       "command": "npx",
@@ -3065,52 +3068,52 @@ def build_site_files() -> None:
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 min-w-0">
-          <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-3.5 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white text-center font-bold transition">Download Latest 6-File .ZIP</a>
-          <button type="button" onclick="openCamberCheckoutModal('tier2_monthly')" class="px-3.5 py-2.5 rounded-lg bg-white hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#94A3B8] text-center font-bold transition">Manage / Upgrade RubricWard Plan</button>
+          <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-3.5 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white text-center font-bold transition">Download Latest 6-File .ZIP</a>
+          <button type="button" onclick="openCamberCheckoutModal('tier2_monthly')" class="px-3.5 py-2.5 rounded-lg bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] text-center font-bold transition">Manage / Upgrade RubricWard Plan</button>
         </div>
       </div>
 
       <!-- 50-State Payer MRF & CMS/NSA Alert Filter Toggles + Team Seats + Webhooks -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs min-w-0">
-        <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-2.5 min-w-0">
-          <div class="font-mono font-bold text-[#1E3A8A]">01 // 52-PORTAL PAYER MRF &amp; SPECIALTY ALERT ROUTING</div>
-          <div class="flex flex-wrap gap-2 font-mono text-[11px] font-bold text-[#0A0D14]">
-            <label class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-[#CBD5E1]"><input type="checkbox" checked /> All 50 State Payer MRF Portals</label>
-            <label class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-[#CBD5E1]"><input type="checkbox" checked /> CMS Federal NSA IDR (45 CFR 149.510)</label>
-            <label class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-[#CBD5E1]"><input type="checkbox" checked /> Orthopedic, Spine &amp; ASC Surgery</label>
-            <label class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-[#CBD5E1]"><input type="checkbox" checked /> Emergency, Radiology &amp; Multi-Specialty</label>
+        <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-2.5 min-w-0">
+          <div class="font-mono font-bold text-[#0F766E]">01 // 52-PORTAL PAYER MRF &amp; SPECIALTY ALERT ROUTING</div>
+          <div class="flex flex-wrap gap-2 font-mono text-[11px] font-bold text-[#071C21]">
+            <label class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-[#B4D6D0]"><input type="checkbox" checked /> All 50 State Payer MRF Portals</label>
+            <label class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-[#B4D6D0]"><input type="checkbox" checked /> CMS Federal NSA IDR (45 CFR 149.510)</label>
+            <label class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-[#B4D6D0]"><input type="checkbox" checked /> Orthopedic, Spine &amp; ASC Surgery</label>
+            <label class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-white border border-[#B4D6D0]"><input type="checkbox" checked /> Emergency, Radiology &amp; Multi-Specialty</label>
           </div>
-          <button type="button" onclick="saveAccountAlertFilters()" class="px-3 py-1.5 rounded bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold">Save Alert Filters</button>
+          <button type="button" onclick="saveAccountAlertFilters()" class="px-3 py-1.5 rounded bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold">Save Alert Filters</button>
           <div id="account-filter-status" class="font-mono font-bold text-[#065F46]">52/52 Portals Enabled</div>
         </div>
-        <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-2.5 min-w-0">
+        <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-2.5 min-w-0">
           <div class="font-mono font-bold text-[#065F46]">02 // REVENUE CYCLE TEAM CC SEATS &amp; WEBHOOKS</div>
           <div class="flex gap-1.5 min-w-0">
-            <input id="account-seat-email" type="email" placeholder="denials.lead@medicalgroup.com" class="flex-1 min-w-0 px-2.5 py-1.5 rounded bg-white border border-[#94A3B8] font-medium text-[#0A0D14] placeholder-[#1E293B]" />
-            <button type="button" onclick="addAccountTeamSeat()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#0A0D14] text-white font-mono font-bold">Add Seat</button>
+            <input id="account-seat-email" type="email" placeholder="denials.lead@medicalgroup.com" class="flex-1 min-w-0 px-2.5 py-1.5 rounded bg-white border border-[#7FB5AC] font-medium text-[#071C21] placeholder-[#1E293B]" />
+            <button type="button" onclick="addAccountTeamSeat()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#071C21] text-white font-mono font-bold">Add Seat</button>
           </div>
           <div id="account-seat-list" class="flex flex-wrap gap-1.5 min-w-0">
-            <span class="px-2 py-0.5 rounded bg-white border border-[#94A3B8] font-mono font-bold text-[#0A0D14] break-all">vp.managedcare@medicalgroup.com (PRIMARY)</span>
+            <span class="px-2 py-0.5 rounded bg-white border border-[#7FB5AC] font-mono font-bold text-[#071C21] break-all">vp.managedcare@medicalgroup.com (PRIMARY)</span>
           </div>
           <div class="flex gap-1.5 pt-1 min-w-0">
-            <input id="account-webhook-url" type="url" placeholder="https://hooks.slack.com/services/..." class="flex-1 min-w-0 px-2.5 py-1.5 rounded bg-white border border-[#94A3B8] font-medium text-[#0A0D14] placeholder-[#1E293B]" />
-            <button type="button" onclick="saveAccountWebhookUrl()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#1E3A8A] text-white font-mono font-bold">Save Webhook</button>
+            <input id="account-webhook-url" type="url" placeholder="https://hooks.slack.com/services/..." class="flex-1 min-w-0 px-2.5 py-1.5 rounded bg-white border border-[#7FB5AC] font-medium text-[#071C21] placeholder-[#1E293B]" />
+            <button type="button" onclick="saveAccountWebhookUrl()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#0F766E] text-white font-mono font-bold">Save Webhook</button>
           </div>
-          <div id="account-webhook-status" class="font-mono font-bold text-[#1E3A8A]">Slack / Teams / Epic / Waystar Webhook Ready</div>
+          <div id="account-webhook-status" class="font-mono font-bold text-[#0F766E]">Slack / Teams / Epic / Waystar Webhook Ready</div>
         </div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-        <div class="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#CBD5E1]">
-          <div class="font-mono font-bold text-[#1E3A8A]">01 // INSTANT PROVISIONING</div>
+        <div class="p-3.5 rounded-xl bg-[#F2F9F8] border border-[#B4D6D0]">
+          <div class="font-mono font-bold text-[#0F766E]">01 // INSTANT PROVISIONING</div>
           <p class="mt-1 font-medium text-[#111827]">Self-serve activation immediately provisions your <code class="font-bold">cd_live_</code> API key and 50-State Payer MRF &amp; IDR alert feed.</p>
         </div>
-        <div class="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#CBD5E1]">
+        <div class="p-3.5 rounded-xl bg-[#F2F9F8] border border-[#B4D6D0]">
           <div class="font-mono font-bold text-[#065F46]">02 // ZERO LOCK-IN</div>
           <p class="mt-1 font-medium text-[#111827]">Switch between Monthly and Annual billing or cancel in 1 click at any time with zero penalty.</p>
         </div>
-        <div class="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#CBD5E1]">
-          <div class="font-mono font-bold text-[#0A0D14]">03 // UNLIMITED SEATS</div>
+        <div class="p-3.5 rounded-xl bg-[#F2F9F8] border border-[#B4D6D0]">
+          <div class="font-mono font-bold text-[#071C21]">03 // UNLIMITED SEATS</div>
           <p class="mt-1 font-medium text-[#111827]">Share compiled 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR packages across your entire revenue cycle team.</p>
         </div>
       </div>
@@ -3119,56 +3122,56 @@ def build_site_files() -> None:
 
   <!-- 2. #status — Live System Status & Real-Time API Ping Telemetry -->
   <div id="status" onclick="if(event.target===this) closeTrustModals()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl space-y-5">
-      <div class="flex items-start justify-between gap-4 border-b border-[#CBD5E1] pb-3">
+    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-5">
+      <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
         <div>
           <div class="text-xs font-mono font-bold text-[#065F46]">// REAL-TIME SYSTEM STATUS &amp; SLA TELEMETRY</div>
-          <h3 class="text-xl font-extrabold text-[#0A0D14] mt-0.5">52 Payer MRF &amp; IDR Portal Scrapers, 12 Microservices &amp; OpenXML Compiler Status</h3>
+          <h3 class="text-xl font-extrabold text-[#071C21] mt-0.5">52 Payer MRF &amp; IDR Portal Scrapers, 12 Microservices &amp; OpenXML Compiler Status</h3>
         </div>
-        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
       <div class="p-4 rounded-xl bg-[#ECFDF5] border border-[#6EE7B7] flex flex-wrap items-center justify-between gap-3">
         <div>
           <div id="live-ping-badge" class="text-sm font-mono font-extrabold text-[#065F46]">ALL SYSTEMS OPERATIONAL (100.0% UPTIME)</div>
-          <p id="live-ping-detail" class="text-xs font-medium text-[#0A0D14] mt-0.5">Live health probe connected to https://rubricward.com/v1/health</p>
+          <p id="live-ping-detail" class="text-xs font-medium text-[#071C21] mt-0.5">Live health probe connected to https://rubricward.com/v1/health</p>
         </div>
-        <button type="button" onclick="pingLiveSystemStatus()" class="px-3.5 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Ping Gateway Now</button>
+        <button type="button" onclick="pingLiveSystemStatus()" class="px-3.5 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Ping Gateway Now</button>
       </div>
       <div class="space-y-2.5 text-xs font-mono">
-        <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] flex items-center justify-between"><span class="font-bold text-[#0A0D14]">50-State DOI/APCD, CMS Federal IDR &amp; TiC MRF Scrapers (52/52 Portals)</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 99.99%</span></div>
-        <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] flex items-center justify-between"><span class="font-bold text-[#0A0D14]">Stateless Pydantic V2 Payer MRF &amp; IDR Gateway (12/12 Endpoints)</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 100.0%</span></div>
-        <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] flex items-center justify-between"><span class="font-bold text-[#0A0D14]">In-Memory 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Compiler</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 100.0%</span></div>
-        <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] flex items-center justify-between"><span class="font-bold text-[#0A0D14]">Streamable-HTTP (/mcp) &amp; STDIO MCP Server (5/5 Glama TDQS)</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 100.0%</span></div>
-        <div class="p-3 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] flex items-center justify-between"><span class="font-bold text-[#0A0D14]">Frontier Healthcare Payer MRF &amp; NSA IDR Extraction Engine</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 99.98%</span></div>
+        <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] flex items-center justify-between"><span class="font-bold text-[#071C21]">50-State DOI/APCD, CMS Federal IDR &amp; TiC MRF Scrapers (52/52 Portals)</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 99.99%</span></div>
+        <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] flex items-center justify-between"><span class="font-bold text-[#071C21]">Stateless Pydantic V2 Payer MRF &amp; IDR Gateway (12/12 Endpoints)</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 100.0%</span></div>
+        <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] flex items-center justify-between"><span class="font-bold text-[#071C21]">In-Memory 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Compiler</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 100.0%</span></div>
+        <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] flex items-center justify-between"><span class="font-bold text-[#071C21]">Streamable-HTTP (/mcp) &amp; STDIO MCP Server (5/5 Glama TDQS)</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 100.0%</span></div>
+        <div class="p-3 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] flex items-center justify-between"><span class="font-bold text-[#071C21]">Frontier Healthcare Payer MRF &amp; NSA IDR Extraction Engine</span><span class="px-2 py-0.5 rounded bg-[#ECFDF5] text-[#065F46] border border-[#6EE7B7] font-bold">OPERATIONAL &bull; 99.98%</span></div>
       </div>
     </div>
   </div>
 
   <!-- 3. #security — Enterprise Security, Zero-Retention & Compliance Architecture -->
   <div id="security" onclick="if(event.target===this) closeTrustModals()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl space-y-4">
-      <div class="flex items-start justify-between gap-4 border-b border-[#CBD5E1] pb-3">
+    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-4">
+      <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// STATELESS ZERO-RETENTION SECURITY ARCHITECTURE</div>
-          <h3 class="text-xl font-extrabold text-[#0A0D14] mt-0.5">Enterprise HIPAA-Aligned Zero-PHI Retention &amp; Data Security Standards</h3>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// STATELESS ZERO-RETENTION SECURITY ARCHITECTURE</div>
+          <h3 class="text-xl font-extrabold text-[#071C21] mt-0.5">Enterprise HIPAA-Aligned Zero-PHI Retention &amp; Data Security Standards</h3>
         </div>
-        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-        <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-1.5">
+        <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-1.5">
           <div class="font-mono font-bold text-[#065F46]">01 // ZERO PHI &amp; CLAIM-DATA RETENTION</div>
           <p class="font-medium text-[#111827] leading-relaxed">All <code class="font-bold">/v1/*</code> policy shreds, TiC MRF rate models, and 6-File OpenXML compilations execute strictly in ephemeral RAM and are purged immediately after returning your HTTP 200 payload.</p>
         </div>
-        <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-1.5">
-          <div class="font-mono font-bold text-[#1E3A8A]">02 // ZERO MODEL TRAINING ON YOUR CONTRACTS</div>
+        <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-1.5">
+          <div class="font-mono font-bold text-[#0F766E]">02 // ZERO MODEL TRAINING ON YOUR CONTRACTS</div>
           <p class="font-medium text-[#111827] leading-relaxed">Your proprietary payer contract rates, NPI/TIN schedules, remittance variances, and IDR offers are never logged, stored in a database, or used to train any external AI model.</p>
         </div>
-        <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-1.5">
-          <div class="font-mono font-bold text-[#0A0D14]">03 // TLS 1.3 &amp; CONSTANT-TIME HMAC AUTH</div>
+        <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-1.5">
+          <div class="font-mono font-bold text-[#071C21]">03 // TLS 1.3 &amp; CONSTANT-TIME HMAC AUTH</div>
           <p class="font-medium text-[#111827] leading-relaxed">Every API request is encrypted via Cloudflare Edge TLS 1.3 and authenticated via constant-time <code class="font-bold">hmac.compare_digest</code> verification on <code class="font-bold">X-RapidAPI-Proxy-Secret</code>.</p>
         </div>
-        <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-1.5">
-          <div class="font-mono font-bold text-[#0A0D14]">04 // PCI-DSS LEVEL 1 STRIPE BILLING</div>
+        <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-1.5">
+          <div class="font-mono font-bold text-[#071C21]">04 // PCI-DSS LEVEL 1 STRIPE BILLING</div>
           <p class="font-medium text-[#111827] leading-relaxed">All payment processing is handled directly by Stripe PCI-DSS Level 1 infrastructure. RubricWard never touches or stores raw credit card or ACH banking numbers.</p>
         </div>
       </div>
@@ -3177,49 +3180,49 @@ def build_site_files() -> None:
 
   <!-- 4. #contact — Autonomous AI Payer MRF & NSA IDR Concierge & Zero-Wait Self-Serve Desk -->
   <div id="contact" onclick="if(event.target===this) closeTrustModals()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-    <div class="max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl space-y-5">
-      <div class="flex items-start justify-between gap-4 border-b border-[#CBD5E1] pb-3">
+    <div class="max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-5">
+      <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
         <div>
           <div class="text-xs font-mono font-bold text-[#065F46]">&check; AUTONOMOUS AI CONCIERGE &bull; INSTANT ON-SCREEN RESOLUTION</div>
-          <h3 class="text-xl font-extrabold text-[#0A0D14] mt-0.5">Ask the RubricWard AI Payer MRF, NSA IDR &amp; Support Concierge</h3>
+          <h3 class="text-xl font-extrabold text-[#071C21] mt-0.5">Ask the RubricWard AI Payer MRF, NSA IDR &amp; Support Concierge</h3>
         </div>
-        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-        <div class="lg:col-span-5 p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-3 text-xs">
-          <div class="font-mono font-bold text-[#1E3A8A]">// ZERO-WAIT SELF-SERVE DESK</div>
+        <div class="lg:col-span-5 p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-3 text-xs">
+          <div class="font-mono font-bold text-[#0F766E]">// ZERO-WAIT SELF-SERVE DESK</div>
           <p class="font-medium text-[#111827] leading-relaxed">RubricWard is 100% self-serve so you never wait 24–48 hours for a human support email to manage your subscription, webhooks, or API keys.</p>
           <div class="space-y-2">
-            <button type="button" onclick="openTrustModal('account')" class="w-full text-left p-3 rounded-lg bg-white hover:bg-[#EAE6DF] border border-[#CBD5E1] transition">
-              <div class="font-mono font-bold text-[#1E3A8A]">Manage Plan, Invoices &amp; 1-Click Cancel &rarr;</div>
+            <button type="button" onclick="openTrustModal('account')" class="w-full text-left p-3 rounded-lg bg-white hover:bg-[#DDF0EC] border border-[#B4D6D0] transition">
+              <div class="font-mono font-bold text-[#0F766E]">Manage Plan, Invoices &amp; 1-Click Cancel &rarr;</div>
               <div class="text-[#111827] mt-0.5">Access your cd_live_... API key, switch Monthly/Annual billing, or cancel in 1 click.</div>
             </button>
-            <button type="button" onclick="openTrustModal('account')" class="w-full text-left p-3 rounded-lg bg-white hover:bg-[#EAE6DF] border border-[#CBD5E1] transition">
+            <button type="button" onclick="openTrustModal('account')" class="w-full text-left p-3 rounded-lg bg-white hover:bg-[#DDF0EC] border border-[#B4D6D0] transition">
               <div class="font-mono font-bold text-[#065F46]">Configure Slack, Teams, Epic/Waystar &amp; Team Seats &rarr;</div>
               <div class="text-[#111827] mt-0.5">Add unlimited revenue cycle team CC seats and route 52-portal Payer MRF alerts to webhooks.</div>
             </button>
-            <button type="button" onclick="closeTrustModals(); switchSpaView('apis');" class="w-full text-left p-3 rounded-lg bg-white hover:bg-[#EAE6DF] border border-[#CBD5E1] transition">
-              <div class="font-mono font-bold text-[#0A0D14]">Test All 12 APIs &amp; MCP Server Live &rarr;</div>
+            <button type="button" onclick="closeTrustModals(); switchSpaView('apis');" class="w-full text-left p-3 rounded-lg bg-white hover:bg-[#DDF0EC] border border-[#B4D6D0] transition">
+              <div class="font-mono font-bold text-[#071C21]">Test All 12 APIs &amp; MCP Server Live &rarr;</div>
               <div class="text-[#111827] mt-0.5">Open the Studio Playground or copy your Claude Desktop / Cursor MCP config.</div>
             </button>
           </div>
         </div>
         <div class="lg:col-span-7 space-y-3">
           <div class="space-y-1.5">
-            <div class="text-[11px] font-mono font-bold text-[#0A0D14]">CLICK A COMMON QUESTION OR TYPE YOUR OWN BELOW:</div>
+            <div class="text-[11px] font-mono font-bold text-[#071C21]">CLICK A COMMON QUESTION OR TYPE YOUR OWN BELOW:</div>
             <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
-              <button type="button" onclick="prefillContactConcierge('plans_and_pricing', 'What is the difference between Tier 1 ($199), Tier 2 Autopilot ($499), Tier 3 6-File .ZIP Compiler ($1,499), and Tier 4 OEM ($2,499)?')" class="px-2.5 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">Compare All 4 Tiers?</button>
-              <button type="button" onclick="prefillContactConcierge('billing_and_cancellation', 'How do I pause Payer MRF email alerts, download a corporate receipt, or cancel in 1 click?')" class="px-2.5 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">Receipts &amp; 1-Click Cancel?</button>
-              <button type="button" onclick="prefillContactConcierge('zip_compiler', 'What is inside the 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package?')" class="px-2.5 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">6-File .ZIP Contents?</button>
-              <button type="button" onclick="prefillContactConcierge('portal_coverage', 'Which 50 State Payer MRF and Federal CMS NSA IDR portals are monitored?')" class="px-2.5 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">50-State Payer MRF Coverage?</button>
-              <button type="button" onclick="prefillContactConcierge('api_and_mcp', 'How do I connect all 12 Payer MRF &amp; IDR APIs to Claude Desktop or Cursor via MCP?')" class="px-2.5 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">Claude / Cursor MCP Setup?</button>
-              <button type="button" onclick="prefillContactConcierge('security_and_compliance', 'Does RubricWard store our claim data or train AI models on our payer contract rates?')" class="px-2.5 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">Zero-Retention Security?</button>
+              <button type="button" onclick="prefillContactConcierge('plans_and_pricing', 'What is the difference between Tier 1 ($199), Tier 2 Autopilot ($499), Tier 3 6-File .ZIP Compiler ($1,499), and Tier 4 OEM ($2,499)?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Compare All 4 Tiers?</button>
+              <button type="button" onclick="prefillContactConcierge('billing_and_cancellation', 'How do I pause Payer MRF email alerts, download a corporate receipt, or cancel in 1 click?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Receipts &amp; 1-Click Cancel?</button>
+              <button type="button" onclick="prefillContactConcierge('zip_compiler', 'What is inside the 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">6-File .ZIP Contents?</button>
+              <button type="button" onclick="prefillContactConcierge('portal_coverage', 'Which 50 State Payer MRF and Federal CMS NSA IDR portals are monitored?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">50-State Payer MRF Coverage?</button>
+              <button type="button" onclick="prefillContactConcierge('api_and_mcp', 'How do I connect all 12 Payer MRF &amp; IDR APIs to Claude Desktop or Cursor via MCP?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Claude / Cursor MCP Setup?</button>
+              <button type="button" onclick="prefillContactConcierge('security_and_compliance', 'Does RubricWard store our claim data or train AI models on our payer contract rates?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Zero-Retention Security?</button>
             </div>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono">
             <div>
-              <label for="contact-modal-topic" class="block text-[11px] font-bold text-[#0A0D14] mb-1">INQUIRY TOPIC</label>
-              <select id="contact-modal-topic" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-xs font-bold text-[#0A0D14]">
+              <label for="contact-modal-topic" class="block text-[11px] font-bold text-[#071C21] mb-1">INQUIRY TOPIC</label>
+              <select id="contact-modal-topic" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-bold text-[#071C21]">
                 <option value="plans_and_pricing">Plans &amp; Pricing ($199 / $499 / $1,499 / $2,499)</option>
                 <option value="billing_and_cancellation">Billing, Receipts &amp; 1-Click Cancel</option>
                 <option value="zip_compiler">6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package</option>
@@ -3229,24 +3232,24 @@ def build_site_files() -> None:
               </select>
             </div>
             <div>
-              <label for="contact-modal-email" class="block text-[11px] font-bold text-[#0A0D14] mb-1">WORK EMAIL (OPTIONAL)</label>
-              <input id="contact-modal-email" type="email" placeholder="rcm@yourmedicalgroup.com (optional)" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-xs font-medium text-[#0A0D14] placeholder-[#1E293B]" />
+              <label for="contact-modal-email" class="block text-[11px] font-bold text-[#071C21] mb-1">WORK EMAIL (OPTIONAL)</label>
+              <input id="contact-modal-email" type="email" placeholder="rcm@yourmedicalgroup.com (optional)" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#1E293B]" />
             </div>
           </div>
           <form onsubmit="sendContactModalConcierge(event)" class="flex gap-2 min-w-0">
-            <input id="contact-modal-input" type="text" required placeholder="Ask anything about RubricWard plans, 50-State Payer MRF rates, 6-File .ZIPs, or APIs..." class="flex-1 min-w-0 px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-xs font-medium text-[#0A0D14] placeholder-[#1E293B]" />
-            <button type="submit" class="px-4 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold shrink-0 whitespace-nowrap">Get Instant Answer &rarr;</button>
+            <input id="contact-modal-input" type="text" required placeholder="Ask anything about RubricWard plans, 50-State Payer MRF rates, 6-File .ZIPs, or APIs..." class="flex-1 min-w-0 px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#1E293B]" />
+            <button type="submit" class="px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold shrink-0 whitespace-nowrap">Get Instant Answer &rarr;</button>
           </form>
-          <div id="contact-modal-log" class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-2.5 max-h-72 overflow-y-auto text-xs">
-            <div class="p-3 rounded-lg bg-white border border-[#CBD5E1] font-medium text-[#0A0D14] leading-relaxed">
-              <strong class="font-mono text-[#1E3A8A] block mb-1">&check; RUBRICWARD AI CONCIERGE (ONLINE &bull; AVG RESPONSE &lt; 1S):</strong>
+          <div id="contact-modal-log" class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-2.5 max-h-72 overflow-y-auto text-xs">
+            <div class="p-3 rounded-lg bg-white border border-[#B4D6D0] font-medium text-[#071C21] leading-relaxed">
+              <strong class="font-mono text-[#0F766E] block mb-1">&check; RUBRICWARD AI CONCIERGE (ONLINE &bull; AVG RESPONSE &lt; 1S):</strong>
               Click any question pill above or type your question in plain text for an instant, structured on-screen answer.
             </div>
           </div>
         </div>
       </div>
-      <div class="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#CBD5E1] flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-        <div><span class="font-bold text-[#0A0D14]">SELF-SERVE CLIENT PORTAL:</span> <a href="#account" onclick="openTrustModal('account', event)" class="text-[#1E3A8A] font-extrabold underline">1-Click Plan, Receipt &amp; API Key Management &rarr;</a></div>
+      <div class="p-3.5 rounded-xl bg-[#F2F9F8] border border-[#B4D6D0] flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+        <div><span class="font-bold text-[#071C21]">SELF-SERVE CLIENT PORTAL:</span> <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E] font-extrabold underline">1-Click Plan, Receipt &amp; API Key Management &rarr;</a></div>
         <span class="text-[#065F46] font-bold">WAF VERIFIED &bull; ZERO PHI / CLAIM-DATA RETENTION</span>
       </div>
     </div>
@@ -3254,93 +3257,93 @@ def build_site_files() -> None:
 
   <!-- 5. #terms — Terms of Service & Enterprise API SLA -->
   <div id="terms" onclick="if(event.target===this) closeTrustModals()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl space-y-4 text-xs">
-      <div class="flex items-start justify-between gap-4 border-b border-[#CBD5E1] pb-3">
+    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-4 text-xs">
+      <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// SELF-SERVE SUBSCRIPTION &amp; API TERMS OF SERVICE</div>
-          <h3 class="text-xl font-extrabold text-[#0A0D14] mt-0.5">RubricWard Inc. Commercial Terms &amp; SLA</h3>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// SELF-SERVE SUBSCRIPTION &amp; API TERMS OF SERVICE</div>
+          <h3 class="text-xl font-extrabold text-[#071C21] mt-0.5">RubricWard Inc. Commercial Terms &amp; SLA</h3>
         </div>
-        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
       <div class="space-y-3 font-medium text-[#111827] leading-relaxed">
-        <p><strong class="text-[#0A0D14] font-bold">1. Self-Serve Subscriptions &amp; Zero Lock-In:</strong> RubricWard Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), and Tier 3 6-File .ZIP Compiler ($1,499/mo) plans bill monthly or annually via Stripe and may be upgraded, downgraded, or cancelled at any time in 1 click via the <a href="#account" onclick="openTrustModal('account', event)" class="text-[#1E3A8A] font-bold underline">Client Portal</a>.</p>
-        <p><strong class="text-[#0A0D14] font-bold">2. Full Ownership of Compiled Claim &amp; IDR Packages:</strong> You retain 100% ownership and unrestricted commercial rights to all 6-File OpenXML (<code class="font-bold">.DOCX</code> and <code class="font-bold">.XLSX</code>) Commercial TiC MRF rate workbooks, Medicare MPFS RVU schedules, ERISA 29 CFR 2560.503-1 appeal briefs, NSA 45 CFR 149.510 IDR briefs, and JSON manifests compiled through RubricWard.</p>
-        <p><strong class="text-[#0A0D14] font-bold">3. Independent Clinical &amp; Revenue Cycle Verification:</strong> RubricWard automates payer Clinical Policy Bulletin shredding, Commercial TiC MRF allowed-amount benchmarking, and Medicare MPFS RVU/GPCI lookups from public federal and state regulatory filings. Final coding, claim submission, and arbitration filings remain the responsibility of the healthcare provider's revenue cycle and compliance team.</p>
+        <p><strong class="text-[#071C21] font-bold">1. Self-Serve Subscriptions &amp; Zero Lock-In:</strong> RubricWard Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), and Tier 3 6-File .ZIP Compiler ($1,499/mo) plans bill monthly or annually via Stripe and may be upgraded, downgraded, or cancelled at any time in 1 click via the <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E] font-bold underline">Client Portal</a>.</p>
+        <p><strong class="text-[#071C21] font-bold">2. Full Ownership of Compiled Claim &amp; IDR Packages:</strong> You retain 100% ownership and unrestricted commercial rights to all 6-File OpenXML (<code class="font-bold">.DOCX</code> and <code class="font-bold">.XLSX</code>) Commercial TiC MRF rate workbooks, Medicare MPFS RVU schedules, ERISA 29 CFR 2560.503-1 appeal briefs, NSA 45 CFR 149.510 IDR briefs, and JSON manifests compiled through RubricWard.</p>
+        <p><strong class="text-[#071C21] font-bold">3. Independent Clinical &amp; Revenue Cycle Verification:</strong> RubricWard automates payer Clinical Policy Bulletin shredding, Commercial TiC MRF allowed-amount benchmarking, and Medicare MPFS RVU/GPCI lookups from public federal and state regulatory filings. Final coding, claim submission, and arbitration filings remain the responsibility of the healthcare provider's revenue cycle and compliance team.</p>
       </div>
     </div>
   </div>
 
   <!-- 6. #privacy — Privacy Policy & Zero Bid-Data Retention Guarantee -->
   <div id="privacy" onclick="if(event.target===this) closeTrustModals()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl space-y-4 text-xs">
-      <div class="flex items-start justify-between gap-4 border-b border-[#CBD5E1] pb-3">
+    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-4 text-xs">
+      <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
         <div>
           <div class="text-xs font-mono font-bold text-[#065F46]">// ZERO PHI / CLAIM-DATA RETENTION &amp; PRIVACY POLICY</div>
-          <h3 class="text-xl font-extrabold text-[#0A0D14] mt-0.5">How RubricWard Protects Your Medical Group &amp; RCM Privacy</h3>
+          <h3 class="text-xl font-extrabold text-[#071C21] mt-0.5">How RubricWard Protects Your Medical Group &amp; RCM Privacy</h3>
         </div>
-        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
       <div class="space-y-3 font-medium text-[#111827] leading-relaxed">
-        <p><strong class="text-[#0A0D14] font-bold">1. Stateless Ephemeral API Execution:</strong> Inbound clinical policy text, CPT/DRG quantities, and rate overrides sent to <code class="font-bold">/v1/*</code> endpoints are processed strictly in memory and discarded immediately after response delivery.</p>
-        <p><strong class="text-[#0A0D14] font-bold">2. Minimal Account Metadata:</strong> We store only your work email address, active subscription tier, and hashed API key required to authenticate your requests and deliver your selected 50-State Commercial Payer MRF &amp; NSA IDR alerts.</p>
-        <p><strong class="text-[#0A0D14] font-bold">3. Zero Third-Party Data Brokerage:</strong> RubricWard never sells, rents, or shares subscriber contact details or contract benchmarks with competing health systems, payers, or brokers.</p>
+        <p><strong class="text-[#071C21] font-bold">1. Stateless Ephemeral API Execution:</strong> Inbound clinical policy text, CPT/DRG quantities, and rate overrides sent to <code class="font-bold">/v1/*</code> endpoints are processed strictly in memory and discarded immediately after response delivery.</p>
+        <p><strong class="text-[#071C21] font-bold">2. Minimal Account Metadata:</strong> We store only your work email address, active subscription tier, and hashed API key required to authenticate your requests and deliver your selected 50-State Commercial Payer MRF &amp; NSA IDR alerts.</p>
+        <p><strong class="text-[#071C21] font-bold">3. Zero Third-Party Data Brokerage:</strong> RubricWard never sells, rents, or shares subscriber contact details or contract benchmarks with competing health systems, payers, or brokers.</p>
       </div>
     </div>
   </div>
 
   <!-- COLLAPSIBLE DESKTOP QUICK-JUMP RAIL (#page-sidebar-drawer) -->
-  <aside id="page-sidebar-drawer" class="hidden 2xl:flex fixed left-3 top-28 z-30 flex-col p-2.5 rounded-xl bg-white/95 border border-[#CBD5E1] shadow-md text-[11px] font-mono font-bold space-y-1.5">
-    <div class="flex items-center justify-between gap-2 border-b border-[#CBD5E1] pb-1">
-      <span class="text-[#1E3A8A]">QUICK JUMP</span>
-      <button type="button" id="sidebar-rail-toggle" onclick="toggleSidebarRail()" class="text-[#0A0D14]">[-]</button>
+  <aside id="page-sidebar-drawer" class="hidden 2xl:flex fixed left-3 top-28 z-30 flex-col p-2.5 rounded-xl bg-white/95 border border-[#B4D6D0] shadow-md text-[11px] font-mono font-bold space-y-1.5">
+    <div class="flex items-center justify-between gap-2 border-b border-[#B4D6D0] pb-1">
+      <span class="text-[#0F766E]">QUICK JUMP</span>
+      <button type="button" id="sidebar-rail-toggle" onclick="toggleSidebarRail()" class="text-[#071C21]">[-]</button>
     </div>
     <div id="sidebar-rail-links" class="flex flex-col gap-1">
-      <a href="#overview" onclick="switchSpaView('overview', event)" class="px-2 py-1 rounded hover:bg-[#EAE6DF] text-[#0A0D14]">01 // Overview</a>
-      <a href="#interactive-state-shredder" onclick="navigateToOverviewSection('interactive-state-shredder', event)" class="px-2 py-1 rounded hover:bg-[#EAE6DF] text-[#0A0D14]">02 // CPB &amp; MRF Shredder</a>
-      <a href="#zip-package-inspector" onclick="navigateToOverviewSection('zip-package-inspector', event)" class="px-2 py-1 rounded hover:bg-[#EAE6DF] text-[#0A0D14]">03 // 6-File .ZIP</a>
-      <a href="#roi-calculator" onclick="navigateToOverviewSection('roi-calculator', event)" class="px-2 py-1 rounded hover:bg-[#EAE6DF] text-[#0A0D14]">04 // ROI Calc</a>
-      <a href="#contract-directory" onclick="navigateToOverviewSection('contract-directory', event)" class="px-2 py-1 rounded hover:bg-[#EAE6DF] text-[#0A0D14]">05 // Payer MRF Feed</a>
-      <a href="#apis" onclick="switchSpaView('apis', event)" class="px-2 py-1 rounded hover:bg-[#EAE6DF] text-[#1E3A8A]">06 // 12 APIs &amp; MCP</a>
-      <a href="#checkout" onclick="switchSpaView('checkout', event)" class="px-2 py-1 rounded hover:bg-[#EAE6DF] text-[#065F46]">07 // Pricing</a>
+      <a href="#overview" onclick="switchSpaView('overview', event)" class="px-2 py-1 rounded hover:bg-[#DDF0EC] text-[#071C21]">01 // Overview</a>
+      <a href="#interactive-state-shredder" onclick="navigateToOverviewSection('interactive-state-shredder', event)" class="px-2 py-1 rounded hover:bg-[#DDF0EC] text-[#071C21]">02 // CPB &amp; MRF Shredder</a>
+      <a href="#zip-package-inspector" onclick="navigateToOverviewSection('zip-package-inspector', event)" class="px-2 py-1 rounded hover:bg-[#DDF0EC] text-[#071C21]">03 // 6-File .ZIP</a>
+      <a href="#roi-calculator" onclick="navigateToOverviewSection('roi-calculator', event)" class="px-2 py-1 rounded hover:bg-[#DDF0EC] text-[#071C21]">04 // ROI Calc</a>
+      <a href="#contract-directory" onclick="navigateToOverviewSection('contract-directory', event)" class="px-2 py-1 rounded hover:bg-[#DDF0EC] text-[#071C21]">05 // Payer MRF Feed</a>
+      <a href="#apis" onclick="switchSpaView('apis', event)" class="px-2 py-1 rounded hover:bg-[#DDF0EC] text-[#0F766E]">06 // 12 APIs &amp; MCP</a>
+      <a href="#checkout" onclick="switchSpaView('checkout', event)" class="px-2 py-1 rounded hover:bg-[#DDF0EC] text-[#065F46]">07 // Pricing</a>
     </div>
   </aside>
 
   <!-- STICKY 4-TAB MOBILE BOTTOM NAVIGATION BAR (#mobile-bottom-nav) -->
-  <nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t-2 border-[#0A0D14] grid grid-cols-4 text-[11px] font-mono font-bold text-center">
-    <a href="#overview" onclick="switchSpaView('overview')" class="py-2.5 text-[#0A0D14] border-r border-[#CBD5E1]">Overview</a>
-    <a href="#lettings" onclick="switchSpaView('lettings')" class="py-2.5 text-[#0A0D14] border-r border-[#CBD5E1]">Lettings</a>
-    <a href="#apis" onclick="switchSpaView('apis')" class="py-2.5 text-[#1E3A8A] border-r border-[#CBD5E1]">12 APIs</a>
-    <a href="#checkout" onclick="switchSpaView('checkout')" class="py-2.5 bg-[#0A0D14] text-white">Pricing</a>
+  <nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t-2 border-[#071C21] grid grid-cols-4 text-[11px] font-mono font-bold text-center">
+    <a href="#overview" onclick="switchSpaView('overview')" class="py-2.5 text-[#071C21] border-r border-[#B4D6D0]">Overview</a>
+    <a href="#lettings" onclick="switchSpaView('lettings')" class="py-2.5 text-[#071C21] border-r border-[#B4D6D0]">Lettings</a>
+    <a href="#apis" onclick="switchSpaView('apis')" class="py-2.5 text-[#0F766E] border-r border-[#B4D6D0]">12 APIs</a>
+    <a href="#checkout" onclick="switchSpaView('checkout')" class="py-2.5 bg-[#071C21] text-white">Pricing</a>
   </nav>
 
   <!-- FLOATING AI PAYER MRF & NSA IDR CONCIERGE WIDGET (#ai-concierge-widget) -->
   <div id="ai-concierge-widget" class="fixed bottom-14 md:bottom-5 right-4 z-40 flex flex-col items-end">
-    <div id="concierge-drawer" class="hidden mb-2 w-80 sm:w-[410px] p-4 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-2xl space-y-3">
-      <div class="flex items-center justify-between border-b border-[#CBD5E1] pb-2">
-        <div class="text-xs font-mono font-extrabold text-[#0A0D14]">RUBRICWARD AI CONCIERGE // 52 PORTALS</div>
+    <div id="concierge-drawer" class="hidden mb-2 w-80 sm:w-[410px] p-4 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-[#B4D6D0] pb-2">
+        <div class="text-xs font-mono font-extrabold text-[#071C21]">RUBRICWARD AI CONCIERGE // 52 PORTALS</div>
         <div class="flex items-center gap-2">
-          <button type="button" onclick="clearConciergeChat()" class="px-2 py-0.5 rounded bg-[#F4F1EA] hover:bg-[#EAE6DF] border border-[#CBD5E1] text-[10px] font-mono font-bold text-[#0A0D14]">Clear</button>
-          <button type="button" onclick="toggleConciergeDrawer()" class="px-2 py-0.5 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-xs font-mono font-bold text-[#0A0D14] hover:text-white">[X]</button>
+          <button type="button" onclick="clearConciergeChat()" class="px-2 py-0.5 rounded bg-[#E8F4F2] hover:bg-[#DDF0EC] border border-[#B4D6D0] text-[10px] font-mono font-bold text-[#071C21]">Clear</button>
+          <button type="button" onclick="toggleConciergeDrawer()" class="px-2 py-0.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-xs font-mono font-bold text-[#071C21] hover:text-white">[X]</button>
         </div>
       </div>
       <div id="concierge-chat-log" class="space-y-2 max-h-72 overflow-y-auto text-xs pr-1">
-        <div class="p-2.5 rounded-lg bg-[#F4F1EA] border border-[#CBD5E1] font-medium text-[#0A0D14] leading-relaxed">
-          <strong class="font-mono text-[#1E3A8A] block mb-0.5">RUBRICWARD AI CONCIERGE:</strong>
+        <div class="p-2.5 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] font-medium text-[#071C21] leading-relaxed">
+          <strong class="font-mono text-[#0F766E] block mb-0.5">RUBRICWARD AI CONCIERGE:</strong>
           Ask about 50-State Commercial Payer TiC MRF rates, live Excel formulas in the 6-File .ZIP package, Medicare MPFS RVU/GPCI baselines, ERISA appeals, or MCP/REST API keys.
         </div>
       </div>
       <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
-        <button type="button" onclick="askConciergeQuick('What is inside the 6-File .ZIP Claim &amp; IDR Package?')" class="px-2 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">6-File .ZIP Contents</button>
-        <button type="button" onclick="askConciergeQuick('Which 50 State Payer MRF portals are monitored?')" class="px-2 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">50-State DOT Coverage</button>
-        <button type="button" onclick="askConciergeQuick('How do Commercial Payer TiC MRF &amp; QPA rate benchmarks work?')" class="px-2 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">36-Mo Bid-Tab Rates</button>
-        <button type="button" onclick="askConciergeQuick('How do plans, pricing, and MCP/REST API keys work?')" class="px-2 py-1 rounded bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white font-bold transition">Pricing &amp; API Keys</button>
+        <button type="button" onclick="askConciergeQuick('What is inside the 6-File .ZIP Claim &amp; IDR Package?')" class="px-2 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">6-File .ZIP Contents</button>
+        <button type="button" onclick="askConciergeQuick('Which 50 State Payer MRF portals are monitored?')" class="px-2 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">50-State Payer MRF Coverage</button>
+        <button type="button" onclick="askConciergeQuick('How do Commercial Payer TiC MRF &amp; QPA rate benchmarks work?')" class="px-2 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">36-Mo Bid-Tab Rates</button>
+        <button type="button" onclick="askConciergeQuick('How do plans, pricing, and MCP/REST API keys work?')" class="px-2 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Pricing &amp; API Keys</button>
       </div>
       <form onsubmit="sendConciergeMessage(event)" class="flex gap-1.5">
-        <input id="concierge-input" type="text" required placeholder="Ask Payer MRF &amp; IDR AI..." class="flex-1 px-2.5 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-xs font-medium text-[#0A0D14] placeholder-[#1E293B]" />
-        <button type="submit" class="px-3 py-1.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold">Send</button>
+        <input id="concierge-input" type="text" required placeholder="Ask Payer MRF &amp; IDR AI..." class="flex-1 px-2.5 py-1.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#1E293B]" />
+        <button type="submit" class="px-3 py-1.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold">Send</button>
       </form>
     </div>
-    <button type="button" id="concierge-trigger-btn" onclick="toggleConciergeDrawer()" aria-label="Open AI Payer MRF &amp; NSA IDR Concierge" title="AI Payer MRF &amp; NSA IDR Concierge" class="w-11 h-11 rounded-full flex items-center justify-center bg-[#0A0D14] hover:bg-[#1E3A8A] text-white shadow-lg border border-white/20 transition">
+    <button type="button" id="concierge-trigger-btn" onclick="toggleConciergeDrawer()" aria-label="Open AI Payer MRF &amp; NSA IDR Concierge" title="AI Payer MRF &amp; NSA IDR Concierge" class="w-11 h-11 rounded-full flex items-center justify-center bg-[#071C21] hover:bg-[#0F766E] text-white shadow-lg border border-white/20 transition">
       <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         <path d="M8 9h8"></path>
@@ -3370,78 +3373,78 @@ def build_site_files() -> None:
   <script src="https://cdn.tailwindcss.com"></script>
 {high_contrast_style}
 </head>
-<body class="bg-[#FAF8F5] text-[#0A0D14] font-sans antialiased pb-14 md:pb-0">
+<body class="bg-[#F2F9F8] text-[#071C21] font-sans antialiased pb-14 md:pb-0">
   <!-- Top Telemetry Bar -->
-  <div class="bg-[#EAE6DF] border-b border-[#CBD5E1] px-3 sm:px-4 py-2 text-[11px] sm:text-xs font-mono font-medium text-[#0A0D14] flex items-center justify-between gap-4 overflow-hidden">
+  <div class="bg-[#DDF0EC] border-b border-[#B4D6D0] px-3 sm:px-4 py-2 text-[11px] sm:text-xs font-mono font-medium text-[#071C21] flex items-center justify-between gap-4 overflow-hidden">
     <div class="flex items-center gap-2 min-w-0">
       <span class="inline-block w-2.5 h-2.5 shrink-0 rounded-full bg-[#065F46]"></span>
-      <span class="text-[#0A0D14] font-extrabold truncate">LIVE MONITORING: 52 PAYER MRF &amp; STATE DOI PORTALS ACTIVE</span>
-      <span class="hidden xl:inline text-[#1E3A8A] font-bold shrink-0">|</span>
+      <span class="text-[#071C21] font-extrabold truncate">LIVE MONITORING: 52 PAYER MRF &amp; STATE DOI PORTALS ACTIVE</span>
+      <span class="hidden xl:inline text-[#0F766E] font-bold shrink-0">|</span>
       <span class="hidden xl:inline-block max-w-[460px] 2xl:max-w-[620px] truncate align-bottom text-[#111827] font-semibold">{ticker_items}</span>
     </div>
-    <div class="hidden lg:flex items-center gap-3 text-[#1E3A8A] font-bold shrink-0 whitespace-nowrap">
+    <div class="hidden lg:flex items-center gap-3 text-[#0F766E] font-bold shrink-0 whitespace-nowrap">
       <a href="#status" onclick="openTrustModal('status', event)" class="hover:underline text-[#065F46]">STATUS: 52/52 LIVE</a> &bull; <span>12 LIVE ENDPOINTS</span> &bull; <span>6-FILE .ZIP CLAIM &amp; IDR COMPILER</span>
     </div>
   </div>
 
   <!-- Navigation Header -->
-  <header class="sticky top-0 z-40 border-b border-[#CBD5E1] bg-white/95 backdrop-blur">
+  <header class="sticky top-0 z-40 border-b border-[#B4D6D0] bg-white/95 backdrop-blur">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between gap-4">
       {_render_logo_lockup("50-STATE PAYER MRF, MEDICARE MPFS RVU & NSA IDR ENGINE", "#overview")}
       <nav class="hidden md:flex items-center gap-5 text-sm font-bold">
-        <a href="#overview" onclick="switchSpaView('overview', event)" class="text-[#0A0D14] hover:text-[#1E3A8A]">Overview</a>
-        <a href="#zip-package-inspector" onclick="navigateToOverviewSection('zip-package-inspector', event)" class="text-[#0A0D14] hover:text-[#1E3A8A]">6-File .ZIP Inspector</a>
-        <a href="#lettings" onclick="switchSpaView('lettings', event)" class="text-[#0A0D14] hover:text-[#1E3A8A]">Live Payer MRF &amp; IDR</a>
-        <a href="#apis" onclick="switchSpaView('apis', event)" class="text-[#0A0D14] hover:text-[#1E3A8A]">API Catalog</a>
-        <a href="#account" onclick="openTrustModal('account', event)" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] text-xs font-mono font-bold transition">Client Portal</a>
-        <a href="#checkout" onclick="switchSpaView('checkout', event)" class="px-4 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold transition">Self-Serve Pricing</a>
+        <a href="#overview" onclick="switchSpaView('overview', event)" class="text-[#071C21] hover:text-[#0F766E]">Overview</a>
+        <a href="#zip-package-inspector" onclick="navigateToOverviewSection('zip-package-inspector', event)" class="text-[#071C21] hover:text-[#0F766E]">6-File .ZIP Inspector</a>
+        <a href="#lettings" onclick="switchSpaView('lettings', event)" class="text-[#071C21] hover:text-[#0F766E]">Live Payer MRF &amp; IDR</a>
+        <a href="#apis" onclick="switchSpaView('apis', event)" class="text-[#071C21] hover:text-[#0F766E]">API Catalog</a>
+        <a href="#account" onclick="openTrustModal('account', event)" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] text-xs font-mono font-bold transition">Client Portal</a>
+        <a href="#checkout" onclick="switchSpaView('checkout', event)" class="px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold transition">Self-Serve Pricing</a>
       </nav>
-      <button type="button" onclick="toggleMobileNav()" class="md:hidden shrink-0 ml-3 px-3.5 py-2 rounded-lg bg-[#EAE6DF] border border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14] shadow-sm">MENU</button>
+      <button type="button" onclick="toggleMobileNav()" class="md:hidden shrink-0 ml-3 px-3.5 py-2 rounded-lg bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21] shadow-sm">MENU</button>
     </div>
-    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-[#CBD5E1] bg-white px-6 py-4 flex flex-col gap-3 text-sm font-bold">
-      <a href="#overview" onclick="switchSpaView('overview', event)" class="text-[#0A0D14]">Overview</a>
-      <a href="#zip-package-inspector" onclick="navigateToOverviewSection('zip-package-inspector', event)" class="text-[#0A0D14]">6-File .ZIP Package Inspector</a>
-      <a href="#roi-calculator" onclick="navigateToOverviewSection('roi-calculator', event)" class="text-[#0A0D14]">Estimating ROI Calculator</a>
-      <a href="#lettings" onclick="switchSpaView('lettings', event)" class="text-[#0A0D14]">Live 50-State Payer MRF &amp; IDR</a>
-      <a href="#apis" onclick="switchSpaView('apis', event)" class="text-[#0A0D14]">API Catalog</a>
-      <a href="#account" onclick="openTrustModal('account', event)" class="text-[#1E3A8A]">Client Portal</a>
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-[#B4D6D0] bg-white px-6 py-4 flex flex-col gap-3 text-sm font-bold">
+      <a href="#overview" onclick="switchSpaView('overview', event)" class="text-[#071C21]">Overview</a>
+      <a href="#zip-package-inspector" onclick="navigateToOverviewSection('zip-package-inspector', event)" class="text-[#071C21]">6-File .ZIP Package Inspector</a>
+      <a href="#roi-calculator" onclick="navigateToOverviewSection('roi-calculator', event)" class="text-[#071C21]">Estimating ROI Calculator</a>
+      <a href="#lettings" onclick="switchSpaView('lettings', event)" class="text-[#071C21]">Live 50-State Payer MRF &amp; IDR</a>
+      <a href="#apis" onclick="switchSpaView('apis', event)" class="text-[#071C21]">API Catalog</a>
+      <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E]">Client Portal</a>
       <a href="#status" onclick="openTrustModal('status', event)" class="text-[#065F46]">Live System Status</a>
-      <a href="#checkout" onclick="switchSpaView('checkout', event)" class="px-4 py-2 rounded-lg bg-[#0A0D14] text-white text-center font-bold">Self-Serve Pricing</a>
+      <a href="#checkout" onclick="switchSpaView('checkout', event)" class="px-4 py-2 rounded-lg bg-[#071C21] text-white text-center font-bold">Self-Serve Pricing</a>
     </div>
   </header>
 
   <!-- VIEW 1: OVERVIEW (#page-overview) -->
   <main id="page-overview" class="max-w-7xl mx-auto px-6 py-12 space-y-16">
     <!-- Personalized Outbound Prospect Attribution Banner (#main-outbound-prospect-banner) -->
-    <div id="main-outbound-prospect-banner" class="hidden p-4 rounded-xl bg-[#EFF6FF] border-2 border-[#1E3A8A] flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-      <div id="prospect-banner-text" class="font-extrabold text-[#1E3A8A]">Custom Commercial Payer MRF &amp; NSA IDR Workspace Prepared for Your RCM Desk — 6-File OpenXML Sample Ready.</div>
-      <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-3 py-1.5 rounded bg-[#0A0D14] text-white font-bold">Download Custom 6-File .ZIP</a>
+    <div id="main-outbound-prospect-banner" class="hidden p-4 rounded-xl bg-[#E6F4F1] border-2 border-[#0F766E] flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+      <div id="prospect-banner-text" class="font-extrabold text-[#0F766E]">Custom Commercial Payer MRF &amp; NSA IDR Workspace Prepared for Your RCM Desk — 6-File OpenXML Sample Ready.</div>
+      <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-3 py-1.5 rounded bg-[#071C21] text-white font-bold">Download Custom 6-File .ZIP</a>
     </div>
 
     <!-- Hero -->
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
       <div class="lg:col-span-7 space-y-5">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAE6DF] border border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">
           52 PORTALS DE-NOISED 24/7 &bull; ALL 50 U.S. STATE DOIS/APCDS + CMS FEDERAL IDR + MULTI-PAYER MRF
         </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-[#0A0D14] tracking-tight leading-tight">
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-[#071C21] tracking-tight leading-tight">
           Stop Leaving Commercial Payer Revenue on the Table.
         </h1>
         <p class="text-base font-medium text-[#111827] leading-relaxed">
           Legacy healthcare RCM consultants charge $25,000/yr or 15% of collections just to manually look up payer fee schedules.
-          <strong class="text-[#0A0D14] font-bold">RubricWard</strong> unifies all 50 U.S. State DOI/APCD and CMS Transparency in Coverage (TiC) Machine-Readable Files, shreds payer Clinical Policy Bulletins (CPBs), models 25th/50th/75th-percentile CPT/DRG negotiated rates (<code class="text-[#1E3A8A] font-bold">% of Medicare</code>, <code class="text-[#1E3A8A] font-bold">QPA Median</code>, <code class="text-[#1E3A8A] font-bold">RVU/GPCI</code>), and compiles an audit-ready <strong class="text-[#1E3A8A] font-bold">6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package</strong> in 1 click.
+          <strong class="text-[#071C21] font-bold">RubricWard</strong> unifies all 50 U.S. State DOI/APCD and CMS Transparency in Coverage (TiC) Machine-Readable Files, shreds payer Clinical Policy Bulletins (CPBs), models 25th/50th/75th-percentile CPT/DRG negotiated rates (<code class="text-[#0F766E] font-bold">% of Medicare</code>, <code class="text-[#0F766E] font-bold">QPA Median</code>, <code class="text-[#0F766E] font-bold">RVU/GPCI</code>), and compiles an audit-ready <strong class="text-[#0F766E] font-bold">6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package</strong> in 1 click.
         </p>
         <div class="flex flex-wrap gap-4 pt-2">
-          <a href="#checkout" onclick="switchSpaView('checkout')" class="px-6 py-3 rounded-xl bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold text-sm transition">Activate RubricWard Autopilot ($499/mo)</a>
-          <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-6 py-3 rounded-xl bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#1E3A8A] border-2 border-[#1E3A8A] font-bold text-sm transition">Download Live 6-File .ZIP Sample</a>
-          <a href="#apis" onclick="switchSpaView('apis')" class="px-6 py-3 rounded-xl bg-white hover:bg-[#EAE6DF] text-[#0A0D14] border-2 border-[#0A0D14] font-bold text-sm transition">Explore 12 Payer MRF APIs &amp; MCP</a>
+          <a href="#checkout" onclick="switchSpaView('checkout')" class="px-6 py-3 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-sm transition">Activate RubricWard Autopilot ($499/mo)</a>
+          <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-6 py-3 rounded-xl bg-[#E6F4F1] hover:bg-[#CCFBF1] text-[#0F766E] border-2 border-[#0F766E] font-bold text-sm transition">Download Live 6-File .ZIP Sample</a>
+          <a href="#apis" onclick="switchSpaView('apis')" class="px-6 py-3 rounded-xl bg-white hover:bg-[#DDF0EC] text-[#071C21] border-2 border-[#071C21] font-bold text-sm transition">Explore 12 Payer MRF APIs &amp; MCP</a>
         </div>
       </div>
 
       <!-- Hero Tier 2 Dossier Card -->
-      <div class="lg:col-span-5 p-6 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-sm space-y-4">
-        <div class="text-xs font-mono font-bold text-[#1E3A8A]">TIER 2 // RUBRICWARD AUTOPILOT (52 PORTALS + 7 PAYER MRF &amp; IDR APIS)</div>
-        <h3 class="text-lg font-extrabold text-[#0A0D14]">Pre-Modeled Commercial Payer MRF &amp; NSA IDR Dossiers</h3>
+      <div class="lg:col-span-5 p-6 rounded-2xl bg-white border-2 border-[#071C21] shadow-sm space-y-4">
+        <div class="text-xs font-mono font-bold text-[#0F766E]">TIER 2 // RUBRICWARD AUTOPILOT (52 PORTALS + 7 PAYER MRF &amp; IDR APIS)</div>
+        <h3 class="text-lg font-extrabold text-[#071C21]">Pre-Modeled Commercial Payer MRF &amp; NSA IDR Dossiers</h3>
         <ul class="space-y-2 text-xs font-semibold text-[#111827] font-mono">
           <li>&bull; API #01: Payer Clinical Policy Bulletin (CPB), LCD/NCD &amp; Prior-Auth Shredder</li>
           <li>&bull; API #02: Commercial Payer TiC MRF Allowed-Amount &amp; QPA Benchmark Modeler</li>
@@ -3452,111 +3455,111 @@ def build_site_files() -> None:
           <li>&bull; API #11: Regional Specialty Group EIN/NPI Payer MRF Contract Spread Predictor</li>
         </ul>
         <div class="pt-2">
-          <a href="lettings/index.html" class="inline-block w-full text-center px-4 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold text-xs font-mono transition">Browse Live Payer MRF &amp; NSA IDR Dossiers &rarr;</a>
+          <a href="lettings/index.html" class="inline-block w-full text-center px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-xs font-mono transition">Browse Live Payer MRF &amp; NSA IDR Dossiers &rarr;</a>
         </div>
       </div>
     </section>
 
     <!-- Client ROI Metrics Strip (#hero-metrics-strip) -->
     <section id="hero-metrics-strip" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="p-5 rounded-xl bg-white border border-[#CBD5E1] shadow-sm">
-        <div class="text-2xl sm:text-3xl font-extrabold font-mono text-[#0A0D14]">52 Portals</div>
-        <div class="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-[#1E3A8A]">50-State DOI/APCD + CMS IDR + TiC MRF</div>
+      <div class="p-5 rounded-xl bg-white border border-[#B4D6D0] shadow-sm">
+        <div class="text-2xl sm:text-3xl font-extrabold font-mono text-[#071C21]">52 Portals</div>
+        <div class="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-[#0F766E]">50-State DOI/APCD + CMS IDR + TiC MRF</div>
         <p class="mt-1.5 text-xs font-medium text-[#111827]">Every State DOI/APCD commercial payer MRF index, CMS Federal NSA IDR cohort, and multi-payer CPT/DRG rate table normalized 24/7.</p>
       </div>
-      <div class="p-5 rounded-xl bg-white border border-[#CBD5E1] shadow-sm">
+      <div class="p-5 rounded-xl bg-white border border-[#B4D6D0] shadow-sm">
         <div class="text-2xl sm:text-3xl font-extrabold font-mono text-[#065F46]">2.40M+ CPT/DRGs</div>
         <div class="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-[#065F46]">TiC MRF &amp; QPA Rate Vault</div>
         <p class="mt-1.5 text-xs font-medium text-[#111827]">Verified 25th, 50th (Median QPA), and 75th percentile commercial payer negotiated rates by EIN/NPI and MSA.</p>
       </div>
-      <div class="p-5 rounded-xl bg-white border border-[#CBD5E1] shadow-sm">
-        <div class="text-2xl sm:text-3xl font-extrabold font-mono text-[#1E3A8A]">6-File .ZIP</div>
-        <div class="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-[#1E3A8A]">Native Word + Excel Formulas</div>
+      <div class="p-5 rounded-xl bg-white border border-[#B4D6D0] shadow-sm">
+        <div class="text-2xl sm:text-3xl font-extrabold font-mono text-[#0F766E]">6-File .ZIP</div>
+        <div class="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-[#0F766E]">Native Word + Excel Formulas</div>
         <p class="mt-1.5 text-xs font-medium text-[#111827]">Audit-ready OpenXML (.DOCX + .XLSX) MRF rate models, ERISA appeals, and NSA IDR briefs with live Excel formulas.</p>
       </div>
-      <div class="p-5 rounded-xl bg-white border border-[#CBD5E1] shadow-sm">
-        <div class="text-2xl sm:text-3xl font-extrabold font-mono text-[#0A0D14]">85% Faster</div>
-        <div class="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-[#0A0D14]">Zero $25K Consultant Lock-In</div>
+      <div class="p-5 rounded-xl bg-white border border-[#B4D6D0] shadow-sm">
+        <div class="text-2xl sm:text-3xl font-extrabold font-mono text-[#071C21]">85% Faster</div>
+        <div class="mt-1 text-xs font-mono font-bold uppercase tracking-wider text-[#071C21]">Zero $25K Consultant Lock-In</div>
         <p class="mt-1.5 text-xs font-medium text-[#111827]">Shred payer CPBs, compute Medicare MPFS RVU/GPCI baselines, and draft ERISA/IDR briefs in seconds. Cancel anytime.</p>
       </div>
     </section>
 
     <!-- 3-Persona Role Quick-Start Switcher & 5-Stage Product Stepper (#persona-quickstart-bar & #product-5stage-stepper) -->
-    <section id="persona-quickstart-bar" class="p-6 sm:p-8 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-6">
+    <section id="persona-quickstart-bar" class="p-6 sm:p-8 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-6">
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// ROLE-BASED PAYER CONTRACTING, RCM &amp; NSA IDR WORKFLOW STEPPER</div>
-          <h2 id="persona-active-title" class="text-xl sm:text-2xl font-extrabold text-[#0A0D14] mt-0.5">VP of Managed Care / Revenue Cycle Director Workflow</h2>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// ROLE-BASED PAYER CONTRACTING, RCM &amp; NSA IDR WORKFLOW STEPPER</div>
+          <h2 id="persona-active-title" class="text-xl sm:text-2xl font-extrabold text-[#071C21] mt-0.5">VP of Managed Care / Revenue Cycle Director Workflow</h2>
         </div>
         <div class="flex flex-wrap gap-2">
-          <button type="button" id="persona-btn-estimator" onclick="selectPersonaQuickstart('estimator')" class="px-3.5 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition">VP of Managed Care / RCM</button>
-          <button type="button" id="persona-btn-takeoff" onclick="selectPersonaQuickstart('takeoff')" class="px-3.5 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">Denials &amp; IDR Specialist</button>
-          <button type="button" id="persona-btn-developer" onclick="selectPersonaQuickstart('developer')" class="px-3.5 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">HealthTech / MCP Developer</button>
+          <button type="button" id="persona-btn-estimator" onclick="selectPersonaQuickstart('estimator')" class="px-3.5 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition">VP of Managed Care / RCM</button>
+          <button type="button" id="persona-btn-takeoff" onclick="selectPersonaQuickstart('takeoff')" class="px-3.5 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">Denials &amp; IDR Specialist</button>
+          <button type="button" id="persona-btn-developer" onclick="selectPersonaQuickstart('developer')" class="px-3.5 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">HealthTech / MCP Developer</button>
         </div>
       </div>
       <p id="persona-active-desc" class="text-sm font-medium text-[#111827] leading-relaxed">Eliminate 14+ hours of manual MRF parsing and appeal drafting per cohort. Benchmark commercial payer CPT/DRG allowed amounts (25th/50th/75th percentiles), peer EIN/NPI contract spreads, and HIPAA 835 ERA underpayment recovery ledgers.</p>
       <div>
-        <a id="persona-active-cta" href="#roi-calculator" onclick="navigateToOverviewSection('roi-calculator', event)" class="inline-block px-4 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Calculate Your Desk's Monthly Savings &rarr;</a>
+        <a id="persona-active-cta" href="#roi-calculator" onclick="navigateToOverviewSection('roi-calculator', event)" class="inline-block px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Calculate Your Desk's Monthly Savings &rarr;</a>
       </div>
-      <div id="product-5stage-stepper" class="space-y-3 pt-2 border-t border-[#CBD5E1]">
+      <div id="product-5stage-stepper" class="space-y-3 pt-2 border-t border-[#B4D6D0]">
         <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
-          <button type="button" id="stage-step-btn-0" onclick="switchOverviewProductTab(0)" class="px-3 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition">01 // 52-Portal Feed</button>
-          <button type="button" id="stage-step-btn-1" onclick="switchOverviewProductTab(1)" class="px-3 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">02 // Payer CPB Shred</button>
-          <button type="button" id="stage-step-btn-2" onclick="switchOverviewProductTab(2)" class="px-3 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">03 // TiC MRF &amp; QPA</button>
-          <button type="button" id="stage-step-btn-3" onclick="switchOverviewProductTab(3)" class="px-3 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">04 // MPFS &amp; NCCI</button>
-          <button type="button" id="stage-step-btn-4" onclick="switchOverviewProductTab(4)" class="px-3 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">05 // 6-File .ZIP</button>
+          <button type="button" id="stage-step-btn-0" onclick="switchOverviewProductTab(0)" class="px-3 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition">01 // 52-Portal Feed</button>
+          <button type="button" id="stage-step-btn-1" onclick="switchOverviewProductTab(1)" class="px-3 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">02 // Payer CPB Shred</button>
+          <button type="button" id="stage-step-btn-2" onclick="switchOverviewProductTab(2)" class="px-3 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">03 // TiC MRF &amp; QPA</button>
+          <button type="button" id="stage-step-btn-3" onclick="switchOverviewProductTab(3)" class="px-3 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">04 // MPFS &amp; NCCI</button>
+          <button type="button" id="stage-step-btn-4" onclick="switchOverviewProductTab(4)" class="px-3 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">05 // 6-File .ZIP</button>
         </div>
-        <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] flex flex-col md:flex-row md:items-center justify-between gap-3">
           <div class="space-y-1">
-            <div id="stage-step-title" class="text-sm font-mono font-extrabold text-[#0A0D14]">Stage 01 // 52-Portal Commercial Payer MRF &amp; Federal NSA IDR Ingestion (API #04)</div>
+            <div id="stage-step-title" class="text-sm font-mono font-extrabold text-[#071C21]">Stage 01 // 52-Portal Commercial Payer MRF &amp; Federal NSA IDR Ingestion (API #04)</div>
             <p id="stage-step-detail" class="text-xs font-medium text-[#111827]">Normalizes commercial payer TiC MRF rate-disparity cohorts, CMS Federal NSA IDR arbitration benchmarks, and State DOI prompt-pay rules across all 50 U.S. States.</p>
           </div>
-          <code id="stage-step-code" class="shrink-0 px-3 py-2 rounded-lg bg-white border border-[#94A3B8] text-xs font-mono font-bold text-[#1E3A8A]">GET /v1/lettings/live -> 52 Portals Normalized</code>
+          <code id="stage-step-code" class="shrink-0 px-3 py-2 rounded-lg bg-white border border-[#7FB5AC] text-xs font-mono font-bold text-[#0F766E]">GET /v1/lettings/live -> 52 Portals Normalized</code>
         </div>
       </div>
     </section>
 
     <!-- Free Instant 6-File .ZIP Sample Lead-Magnet Banner (#sample-lead-magnet) -->
-    <section id="sample-lead-magnet" class="p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#1E3A8A] shadow-sm space-y-4">
+    <section id="sample-lead-magnet" class="p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#0F766E] shadow-sm space-y-4">
       <div class="flex flex-wrap items-center justify-between gap-2">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// INSTANT RCM &amp; MANAGED CARE TEST DRIVE — ZERO CREDIT CARD REQUIRED</div>
-          <h2 class="text-xl sm:text-2xl font-extrabold text-[#0A0D14] mt-0.5">Get a Free 6-File OpenXML (.DOCX + .XLSX) Payer MRF &amp; NSA IDR Package Sample</h2>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// INSTANT RCM &amp; MANAGED CARE TEST DRIVE — ZERO CREDIT CARD REQUIRED</div>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-[#071C21] mt-0.5">Get a Free 6-File OpenXML (.DOCX + .XLSX) Payer MRF &amp; NSA IDR Package Sample</h2>
         </div>
         <span class="px-3 py-1 rounded bg-[#ECFDF5] border border-[#6EE7B7] text-xs font-mono font-bold text-[#065F46]">LIVE EXCEL FORMULAS INCLUDED</span>
       </div>
       <form onsubmit="submitSampleLeadMagnet(event)" class="grid grid-cols-1 md:grid-cols-4 gap-3">
-        <input id="lead-magnet-email" type="email" required placeholder="rcm@yourmedicalgroup.com" class="px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-sm font-medium text-[#0A0D14] placeholder-[#1E293B]" />
-        <select id="lead-magnet-state" class="px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-sm font-bold text-[#0A0D14]">
+        <input id="lead-magnet-email" type="email" required placeholder="rcm@yourmedicalgroup.com" class="px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-sm font-medium text-[#071C21] placeholder-[#1E293B]" />
+        <select id="lead-magnet-state" class="px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-sm font-bold text-[#071C21]">
           {lead_magnet_state_options_html}
         </select>
-        <select id="lead-magnet-trade" class="px-3.5 py-2.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-sm font-bold text-[#0A0D14]">
+        <select id="lead-magnet-trade" class="px-3.5 py-2.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-sm font-bold text-[#071C21]">
           <option value="Heavy-Civil / Highway & Bridge">Orthopedic Surgery &amp; Ambulatory Surgery Center (ASC)</option>
           <option value="Spine, Neurosurgery &amp; Pain Management">Spine, Neurosurgery &amp; Pain Management</option>
           <option value="Wet Utilities / Water & Sewer">Cardiology, GI Endoscopy &amp; Outpatient Surgery</option>
           <option value="Emergency Medicine, Radiology &amp; Anesthesiology (NSA IDR)">Emergency Medicine, Radiology &amp; Anesthesiology (NSA IDR)</option>
           <option value="Multi-Specialty Medical Group &amp; Hospital RCM">Multi-Specialty Medical Group &amp; Hospital RCM</option>
         </select>
-        <button type="submit" class="px-4 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Download 6-File .ZIP Sample &rarr;</button>
+        <button type="submit" class="px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Download 6-File .ZIP Sample &rarr;</button>
       </form>
       <div id="lead-magnet-status" class="text-xs font-mono font-bold text-[#065F46] break-all">Includes Volume I–V (.DOCX + .XLSX) + 00_RubricWard_Letting_Readiness_Manifest.json</div>
     </section>
 
     <!-- Section: Why Basic Plan Rooms Fail Chief Estimators + Side-by-Side Comparison (#capture-moat) -->
-    <section id="capture-moat" class="p-8 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-6">
-      <div class="text-xs font-mono font-bold text-[#1E3A8A]">// PAYER RATE &amp; IDR MOAT — 52 ACTIVE PORTALS &amp; 7 CORE REVENUE RECOVERY ENGINES</div>
-      <h2 class="text-2xl font-extrabold text-[#0A0D14]">Why Legacy RCM Consulting &amp; Raw MRF Files Fail Revenue Cycle Teams — And What RubricWard Automates</h2>
+    <section id="capture-moat" class="p-8 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-6">
+      <div class="text-xs font-mono font-bold text-[#0F766E]">// PAYER RATE &amp; IDR MOAT — 52 ACTIVE PORTALS &amp; 7 CORE REVENUE RECOVERY ENGINES</div>
+      <h2 class="text-2xl font-extrabold text-[#071C21]">Why Legacy RCM Consulting &amp; Raw MRF Files Fail Revenue Cycle Teams — And What RubricWard Automates</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-        <div class="p-5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-2.5">
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">01 // PAYER CPB, LCD/NCD &amp; TIMELY-FILING SHREDDING</div>
+        <div class="p-5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-2.5">
+          <div class="text-xs font-mono font-bold text-[#0F766E]">01 // PAYER CPB, LCD/NCD &amp; TIMELY-FILING SHREDDING</div>
           <p class="text-[#111827] font-medium leading-relaxed">Automatically extracts commercial payer Clinical Policy Bulletin (CPB) prior-authorization criteria, step-therapy gates, and timely-filing deadlines via API #01 &amp; API #04.</p>
         </div>
-        <div class="p-5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-2.5">
+        <div class="p-5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-2.5">
           <div class="text-xs font-mono font-bold text-[#065F46]">02 // COMMERCIAL PAYER TIC MRF &amp; QPA RATE MODELING</div>
           <p class="text-[#111827] font-medium leading-relaxed">Benchmarks every CPT/HCPCS/DRG code against 25th, 50th (Median QPA), and 75th percentile commercial payer MRF negotiated rates and peer EIN/NPI spreads via API #02 &amp; API #11.</p>
         </div>
-        <div class="p-5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-2.5">
-          <div class="text-xs font-mono font-bold text-[#0A0D14]">03 // MEDICARE MPFS RVU/GPCI, NCCI &amp; ERISA 29 CFR 2560 APPEALS</div>
+        <div class="p-5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-2.5">
+          <div class="text-xs font-mono font-bold text-[#071C21]">03 // MEDICARE MPFS RVU/GPCI, NCCI &amp; ERISA 29 CFR 2560 APPEALS</div>
           <p class="text-[#111827] font-medium leading-relaxed">Computes county-specific Medicare MPFS RVU/GPCI baselines, audits CMS NCCI PTP &amp; Modifier 25/59 bundling edits, and drafts statutory ERISA 29 CFR 2560.503-1 appeals via API #03, API #05 &amp; API #06.</p>
         </div>
       </div>
@@ -3565,49 +3568,49 @@ def build_site_files() -> None:
       <div id="before-after-comparison" class="pt-4 overflow-x-auto">
         <table class="w-full text-left border-collapse text-xs sm:text-sm">
           <thead>
-            <tr class="bg-[#EAE6DF] border-b-2 border-[#94A3B8] font-mono font-bold text-[#0A0D14]">
+            <tr class="bg-[#DDF0EC] border-b-2 border-[#7FB5AC] font-mono font-bold text-[#071C21]">
               <th class="py-3 px-3">RCM &amp; PAYER RATE CAPABILITY</th>
               <th class="py-3 px-3">LEGACY RCM CONSULTANTS &amp; RAW TERABYTE JSON MRF FILES</th>
-              <th class="py-3 px-3 text-[#1E3A8A]">RUBRICWARD AUTONOMOUS PAYER MRF &amp; IDR ENGINE</th>
+              <th class="py-3 px-3 text-[#0F766E]">RUBRICWARD AUTONOMOUS PAYER MRF &amp; IDR ENGINE</th>
             </tr>
           </thead>
           <tbody class="font-medium text-[#111827]">
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2.5 px-3 font-bold text-[#0A0D14]">Commercial Payer TiC MRF Rate Benchmarks</td><td class="py-2.5 px-3">Unparseable multi-terabyte payer JSON files; blind contract negotiations</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Automated 25th / Median QPA / 75th-Pct CPT &amp; DRG benchmarking (API #02)</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2.5 px-3 font-bold text-[#0A0D14]">Payer CPB &amp; CMS LCD/NCD Policy Shredding</td><td class="py-2.5 px-3">Manual reading of 150-page UHC/Aetna/BCBS Clinical Policy Bulletins</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Instant prior-auth checklist + timely-filing window extraction (API #01)</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2.5 px-3 font-bold text-[#0A0D14]">CMS Medicare MPFS RVU &amp; GPCI Baselines</td><td class="py-2.5 px-3">Manual CMS RVU lookup &amp; locality GPCI spreadsheet math</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Locality-matched Work/PE/MP RVU + GPCI + ASC grouper rate (API #03)</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2.5 px-3 font-bold text-[#0A0D14]">CMS NCCI Edits &amp; ERISA 29 CFR 2560.503-1 Appeals</td><td class="py-2.5 px-3">Generic template letters; high CO-45 / CO-50 / CO-97 denial write-offs</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Automated NCCI Modifier 25/59 audit &amp; statutory ERISA appeal brief (API #05/#06)</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2.5 px-3 font-bold text-[#0A0D14]">RCM &amp; IDR Deliverable Format</td><td class="py-2.5 px-3">Unstructured PDF files</td><td class="py-2.5 px-3 font-bold text-[#1E3A8A]">1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas)</td></tr>
-            <tr><td class="py-2.5 px-3 font-bold text-[#0A0D14]">Pricing &amp; Contract Terms</td><td class="py-2.5 px-3">$12,000–$18,000/yr mandatory annual seat lock-in</td><td class="py-2.5 px-3 font-bold text-[#0A0D14]">$199–$499/mo self-serve, REST + MCP API included, cancel anytime</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2.5 px-3 font-bold text-[#071C21]">Commercial Payer TiC MRF Rate Benchmarks</td><td class="py-2.5 px-3">Unparseable multi-terabyte payer JSON files; blind contract negotiations</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Automated 25th / Median QPA / 75th-Pct CPT &amp; DRG benchmarking (API #02)</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2.5 px-3 font-bold text-[#071C21]">Payer CPB &amp; CMS LCD/NCD Policy Shredding</td><td class="py-2.5 px-3">Manual reading of 150-page UHC/Aetna/BCBS Clinical Policy Bulletins</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Instant prior-auth checklist + timely-filing window extraction (API #01)</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2.5 px-3 font-bold text-[#071C21]">CMS Medicare MPFS RVU &amp; GPCI Baselines</td><td class="py-2.5 px-3">Manual CMS RVU lookup &amp; locality GPCI spreadsheet math</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Locality-matched Work/PE/MP RVU + GPCI + ASC grouper rate (API #03)</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2.5 px-3 font-bold text-[#071C21]">CMS NCCI Edits &amp; ERISA 29 CFR 2560.503-1 Appeals</td><td class="py-2.5 px-3">Generic template letters; high CO-45 / CO-50 / CO-97 denial write-offs</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Automated NCCI Modifier 25/59 audit &amp; statutory ERISA appeal brief (API #05/#06)</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2.5 px-3 font-bold text-[#071C21]">RCM &amp; IDR Deliverable Format</td><td class="py-2.5 px-3">Unstructured PDF files</td><td class="py-2.5 px-3 font-bold text-[#0F766E]">1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas)</td></tr>
+            <tr><td class="py-2.5 px-3 font-bold text-[#071C21]">Pricing &amp; Contract Terms</td><td class="py-2.5 px-3">$12,000–$18,000/yr mandatory annual seat lock-in</td><td class="py-2.5 px-3 font-bold text-[#071C21]">$199–$499/mo self-serve, REST + MCP API included, cancel anytime</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
     <!-- Interactive State-by-State Before/After Payer MRF & 835 ERA Shredder (#interactive-state-shredder) -->
-    <section id="interactive-state-shredder" class="p-6 sm:p-8 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-5">
+    <section id="interactive-state-shredder" class="p-6 sm:p-8 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-5">
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// INTERACTIVE PAYER CPB, MRF &amp; NSA IDR SHREDDER</div>
-          <h2 class="text-2xl font-extrabold text-[#0A0D14] mt-0.5">See How RubricWard Turns Raw Payer CPBs &amp; Remittances Into Priced MRF &amp; IDR Dossiers</h2>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// INTERACTIVE PAYER CPB, MRF &amp; NSA IDR SHREDDER</div>
+          <h2 class="text-2xl font-extrabold text-[#071C21] mt-0.5">See How RubricWard Turns Raw Payer CPBs &amp; Remittances Into Priced MRF &amp; IDR Dossiers</h2>
         </div>
         <div class="flex flex-wrap gap-2">
-          <button type="button" id="shredder-state-btn-TX" onclick="selectInteractiveDossier('TX')" class="px-3 py-1.5 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition">TX — TDI &amp; Novitas MRF</button>
-          <button type="button" id="shredder-state-btn-CA" onclick="selectInteractiveDossier('CA')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">CA — DMHC &amp; Noridian MRF</button>
-          <button type="button" id="shredder-state-btn-FL" onclick="selectInteractiveDossier('FL')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">FL — OIR &amp; First Coast MRF</button>
-          <button type="button" id="shredder-state-btn-VA" onclick="selectInteractiveDossier('VA')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">VA — BOI &amp; Palmetto MRF</button>
-          <button type="button" id="shredder-state-btn-USACE" onclick="selectInteractiveDossier('USACE')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">CMS Federal NSA IDR</button>
+          <button type="button" id="shredder-state-btn-TX" onclick="selectInteractiveDossier('TX')" class="px-3 py-1.5 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition">TX — TDI &amp; Novitas MRF</button>
+          <button type="button" id="shredder-state-btn-CA" onclick="selectInteractiveDossier('CA')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">CA — DMHC &amp; Noridian MRF</button>
+          <button type="button" id="shredder-state-btn-FL" onclick="selectInteractiveDossier('FL')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">FL — OIR &amp; First Coast MRF</button>
+          <button type="button" id="shredder-state-btn-VA" onclick="selectInteractiveDossier('VA')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">VA — BOI &amp; Palmetto MRF</button>
+          <button type="button" id="shredder-state-btn-USACE" onclick="selectInteractiveDossier('USACE')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">CMS Federal NSA IDR</button>
         </div>
       </div>
-      <div id="shredder-active-badge" class="text-xs font-mono font-bold text-[#1E3A8A]">TX DOI &amp; NOVITAS // TXDOI-MRF-CPT-29881-DFW (ORTHOPEDIC &amp; ASC SURGERY)</div>
+      <div id="shredder-active-badge" class="text-xs font-mono font-bold text-[#0F766E]">TX DOI &amp; NOVITAS // TXDOI-MRF-CPT-29881-DFW (ORTHOPEDIC &amp; ASC SURGERY)</div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div class="p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-2 min-w-0">
-          <div class="text-xs font-mono font-bold text-[#0A0D14]">BEFORE // RAW PAYER CLINICAL POLICY BULLETIN &amp; 835 ERA DENIAL TEXT</div>
-          <pre id="shredder-raw-pdf" class="p-3.5 rounded-lg bg-white border border-[#CBD5E1] text-xs font-mono font-medium text-[#0F172A] whitespace-pre-wrap leading-relaxed">PAYER CLINICAL POLICY BULLETIN CPB-0592 &amp; 835 ERA REMITTANCE (CARC CO-45 / CO-50)
+        <div class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-2 min-w-0">
+          <div class="text-xs font-mono font-bold text-[#071C21]">BEFORE // RAW PAYER CLINICAL POLICY BULLETIN &amp; 835 ERA DENIAL TEXT</div>
+          <pre id="shredder-raw-pdf" class="p-3.5 rounded-lg bg-white border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] whitespace-pre-wrap leading-relaxed">PAYER CLINICAL POLICY BULLETIN CPB-0592 &amp; 835 ERA REMITTANCE (CARC CO-45 / CO-50)
 Claim CPT 29881 (Knee Arthroscopy Meniscectomy) &amp; CPT 27447 (Total Knee Arthroplasty) adjusted under CARC CO-45 to QPA $920.00. Payer asserts 6-week physical therapy prerequisite and NCCI Column 2 bundling on ipsilateral compartment.</pre>
         </div>
         <div class="p-4 rounded-xl bg-[#ECFDF5] border-2 border-[#065F46] space-y-2 min-w-0">
           <div class="text-xs font-mono font-bold text-[#065F46]">AFTER // RUBRICWARD AI PAYER MRF, MEDICARE MPFS &amp; ERISA/IDR OUTPUT</div>
-          <pre id="shredder-ai-output" class="p-3.5 rounded-lg bg-white border border-[#CBD5E1] text-xs font-mono font-medium text-[#064E3B] whitespace-pre-wrap leading-relaxed">1. COMMERCIAL PAYER TIC MRF BENCHMARK (API #02):
+          <pre id="shredder-ai-output" class="p-3.5 rounded-lg bg-white border border-[#B4D6D0] text-xs font-mono font-medium text-[#064E3B] whitespace-pre-wrap leading-relaxed">1. COMMERCIAL PAYER TIC MRF BENCHMARK (API #02):
    - CPT 29881 (420 Claims): MRF 25th $640.00 | Median QPA $1,485.00 | 75th-Pct Target $1,890.00 ($793,800.00)
    - CPT 27447 (115 Claims): MRF Median QPA $9,420.00 | 75th-Pct Target $11,850.00 ($1,362,750.00)
 2. MEDICARE MPFS RVU/GPCI &amp; NCCI AUDIT (API #03/#05):
@@ -3619,30 +3622,30 @@ Claim CPT 29881 (Knee Arthroscopy Meniscectomy) &amp; CPT 27447 (Total Knee Arth
     </section>
 
     <!-- Interactive 6-File OpenXML .ZIP Package Inspector (#zip-package-inspector) -->
-    <section id="zip-package-inspector" class="p-6 sm:p-8 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-5">
+    <section id="zip-package-inspector" class="p-6 sm:p-8 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-5">
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// MOAT #1 — IN-MEMORY PURE-PYTHON OPENXML COMPILER</div>
-          <h2 class="text-2xl font-extrabold text-[#0A0D14] mt-0.5">Inspect All 6 Files Inside Every RubricWard Claim &amp; IDR Package (.ZIP)</h2>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// MOAT #1 — IN-MEMORY PURE-PYTHON OPENXML COMPILER</div>
+          <h2 class="text-2xl font-extrabold text-[#071C21] mt-0.5">Inspect All 6 Files Inside Every RubricWard Claim &amp; IDR Package (.ZIP)</h2>
         </div>
-        <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-4 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono text-xs font-bold transition">Download Live 6-File .ZIP Now &rarr;</a>
+        <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Download Live 6-File .ZIP Now &rarr;</a>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
         <div class="lg:col-span-5 flex flex-col gap-2 min-w-0">
-          <button type="button" id="zip-tab-btn-0" onclick="switchZipInspectorTab(0)" class="px-3 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold text-left break-all w-full transition">01 // Volume_I_Payer_CPB_LCD_Prior_Auth_Matrix.docx</button>
-          <button type="button" id="zip-tab-btn-1" onclick="switchZipInspectorTab(1)" class="px-3 py-2 rounded-lg bg-[#F4F1EA] hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#CBD5E1] font-mono text-xs font-bold text-left break-all w-full transition">02 // Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx</button>
-          <button type="button" id="zip-tab-btn-2" onclick="switchZipInspectorTab(2)" class="px-3 py-2 rounded-lg bg-[#F4F1EA] hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#CBD5E1] font-mono text-xs font-bold text-left break-all w-full transition">03 // Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx</button>
-          <button type="button" id="zip-tab-btn-3" onclick="switchZipInspectorTab(3)" class="px-3 py-2 rounded-lg bg-[#F4F1EA] hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#CBD5E1] font-mono text-xs font-bold text-left break-all w-full transition">04 // Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx</button>
-          <button type="button" id="zip-tab-btn-4" onclick="switchZipInspectorTab(4)" class="px-3 py-2 rounded-lg bg-[#F4F1EA] hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#CBD5E1] font-mono text-xs font-bold text-left break-all w-full transition">05 // Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx</button>
-          <button type="button" id="zip-tab-btn-5" onclick="switchZipInspectorTab(5)" class="px-3 py-2 rounded-lg bg-[#F4F1EA] hover:bg-[#EAE6DF] text-[#0A0D14] border border-[#CBD5E1] font-mono text-xs font-bold text-left break-all w-full transition">06 // 00_RubricWard_Letting_Readiness_Manifest.json</button>
+          <button type="button" id="zip-tab-btn-0" onclick="switchZipInspectorTab(0)" class="px-3 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold text-left break-all w-full transition">01 // Volume_I_Payer_CPB_LCD_Prior_Auth_Matrix.docx</button>
+          <button type="button" id="zip-tab-btn-1" onclick="switchZipInspectorTab(1)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">02 // Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx</button>
+          <button type="button" id="zip-tab-btn-2" onclick="switchZipInspectorTab(2)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">03 // Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx</button>
+          <button type="button" id="zip-tab-btn-3" onclick="switchZipInspectorTab(3)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">04 // Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx</button>
+          <button type="button" id="zip-tab-btn-4" onclick="switchZipInspectorTab(4)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">05 // Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx</button>
+          <button type="button" id="zip-tab-btn-5" onclick="switchZipInspectorTab(5)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">06 // 00_RubricWard_Letting_Readiness_Manifest.json</button>
         </div>
-        <div class="lg:col-span-7 p-5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] space-y-3 min-w-0">
+        <div class="lg:col-span-7 p-5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-3 min-w-0">
           <div class="flex flex-wrap items-center justify-between gap-2">
-            <div id="zip-inspector-title" class="text-sm font-mono font-extrabold text-[#0A0D14] break-all">Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx</div>
-            <span id="zip-inspector-format" class="px-2.5 py-0.5 rounded bg-[#EFF6FF] text-[#1E3A8A] border border-[#93C5FD] text-xs font-mono font-bold">Microsoft Word OpenXML (.DOCX)</span>
+            <div id="zip-inspector-title" class="text-sm font-mono font-extrabold text-[#071C21] break-all">Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx</div>
+            <span id="zip-inspector-format" class="px-2.5 py-0.5 rounded bg-[#E6F4F1] text-[#0F766E] border border-[#5EEAD4] text-xs font-mono font-bold">Microsoft Word OpenXML (.DOCX)</span>
           </div>
           <p id="zip-inspector-summary" class="text-xs font-semibold text-[#111827]">Full Commercial Payer Clinical Policy Bulletin (CPB) &amp; CMS LCD/NCD shred: Prior-Authorization Checklist, Step-Therapy Exceptions, NCCI Modifier 25/59 Rules, and Timely-Filing Windows.</p>
-          <pre id="zip-inspector-preview" class="p-3.5 rounded-lg bg-white border border-[#CBD5E1] text-xs font-mono font-medium text-[#0F172A] overflow-x-auto leading-relaxed">PAYER CLINICAL POLICY BULLETIN (CPB) &amp; CMS LCD/NCD SHRED
+          <pre id="zip-inspector-preview" class="p-3.5 rounded-lg bg-white border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] overflow-x-auto leading-relaxed">PAYER CLINICAL POLICY BULLETIN (CPB) &amp; CMS LCD/NCD SHRED
 - Timely Filing &amp; ERISA Appeal Window: 180 Calendar Days from EOB/835 ERA under 29 CFR 2560.503-1
 - State Statutory Prompt-Pay Interest: 18% APR Penalty (TX Ins. Code § 1301.103)
 
@@ -3656,62 +3659,62 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
     </section>
 
     <!-- Interactive Appeal Time-Savings & Payer MRF / IDR Recovery ROI Calculator (#roi-calculator) -->
-    <section id="roi-calculator" class="p-6 sm:p-8 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-6">
+    <section id="roi-calculator" class="p-6 sm:p-8 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-6">
       <div>
         <div class="text-xs font-mono font-bold text-[#065F46]">// REVENUE CYCLE &amp; PAYER CONTRACTING ROI CALCULATOR</div>
-        <h2 class="text-2xl font-extrabold text-[#0A0D14] mt-0.5">Calculate Your RCM &amp; Payer Contracting Desk's Monthly Savings &amp; Recovery</h2>
+        <h2 class="text-2xl font-extrabold text-[#071C21] mt-0.5">Calculate Your RCM &amp; Payer Contracting Desk's Monthly Savings &amp; Recovery</h2>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
         <div class="lg:col-span-7 space-y-4">
           <div>
-            <div class="flex justify-between text-xs font-mono font-bold text-[#0A0D14] mb-1"><span>MONTHLY PAYER MRF COHORTS / IDR CASES AUDITED</span><span id="roi-bids-val" class="text-[#1E3A8A]">8 lettings/mo</span></div>
-            <input id="roi-bids-mo" type="range" min="1" max="35" value="8" oninput="updateRoiCalculator()" class="w-full accent-[#1E3A8A]" />
+            <div class="flex justify-between text-xs font-mono font-bold text-[#071C21] mb-1"><span>MONTHLY PAYER MRF COHORTS / IDR CASES AUDITED</span><span id="roi-bids-val" class="text-[#0F766E]">8 lettings/mo</span></div>
+            <input id="roi-bids-mo" type="range" min="1" max="35" value="8" oninput="updateRoiCalculator()" class="w-full accent-[#0F766E]" />
           </div>
           <div>
-            <div class="flex justify-between text-xs font-mono font-bold text-[#0A0D14] mb-1"><span>MANUAL MRF PARSING &amp; APPEAL DRAFTING HOURS PER CASE</span><span id="roi-hrs-val" class="text-[#1E3A8A]">14 hrs/bid</span></div>
-            <input id="roi-hrs-bid" type="range" min="4" max="30" value="14" oninput="updateRoiCalculator()" class="w-full accent-[#1E3A8A]" />
+            <div class="flex justify-between text-xs font-mono font-bold text-[#071C21] mb-1"><span>MANUAL MRF PARSING &amp; APPEAL DRAFTING HOURS PER CASE</span><span id="roi-hrs-val" class="text-[#0F766E]">14 hrs/bid</span></div>
+            <input id="roi-hrs-bid" type="range" min="4" max="30" value="14" oninput="updateRoiCalculator()" class="w-full accent-[#0F766E]" />
           </div>
           <div>
-            <div class="flex justify-between text-xs font-mono font-bold text-[#0A0D14] mb-1"><span>LOADED SENIOR RCM / MANAGED CARE ANALYST COST ($/HR)</span><span id="roi-rate-val" class="text-[#1E3A8A]">$115/hr</span></div>
-            <input id="roi-hourly-rate" type="range" min="65" max="185" value="115" step="5" oninput="updateRoiCalculator()" class="w-full accent-[#1E3A8A]" />
+            <div class="flex justify-between text-xs font-mono font-bold text-[#071C21] mb-1"><span>LOADED SENIOR RCM / MANAGED CARE ANALYST COST ($/HR)</span><span id="roi-rate-val" class="text-[#0F766E]">$115/hr</span></div>
+            <input id="roi-hourly-rate" type="range" min="65" max="185" value="115" step="5" oninput="updateRoiCalculator()" class="w-full accent-[#0F766E]" />
           </div>
         </div>
-        <div class="lg:col-span-5 p-5 rounded-xl bg-[#F4F1EA] border-2 border-[#0A0D14] grid grid-cols-2 gap-3 text-center font-mono">
-          <div class="p-3 rounded-lg bg-white border border-[#CBD5E1]"><div class="text-[11px] font-bold text-[#0A0D14]">RCM ANALYST HRS SAVED</div><div id="roi-out-hours" class="text-lg font-extrabold text-[#1E3A8A] mt-1">95 hrs / mo</div></div>
-          <div class="p-3 rounded-lg bg-white border border-[#CBD5E1]"><div class="text-[11px] font-bold text-[#0A0D14]">MONTHLY PAYROLL SAVED</div><div id="roi-out-monthly" class="text-lg font-extrabold text-[#065F46] mt-1">$10,925 / mo</div></div>
-          <div class="p-3 rounded-lg bg-white border border-[#CBD5E1]"><div class="text-[11px] font-bold text-[#0A0D14]">ANNUAL PAYROLL SAVED</div><div id="roi-out-annual" class="text-lg font-extrabold text-[#0A0D14] mt-1">$131,100 / yr</div></div>
+        <div class="lg:col-span-5 p-5 rounded-xl bg-[#E8F4F2] border-2 border-[#071C21] grid grid-cols-2 gap-3 text-center font-mono">
+          <div class="p-3 rounded-lg bg-white border border-[#B4D6D0]"><div class="text-[11px] font-bold text-[#071C21]">RCM ANALYST HRS SAVED</div><div id="roi-out-hours" class="text-lg font-extrabold text-[#0F766E] mt-1">95 hrs / mo</div></div>
+          <div class="p-3 rounded-lg bg-white border border-[#B4D6D0]"><div class="text-[11px] font-bold text-[#071C21]">MONTHLY PAYROLL SAVED</div><div id="roi-out-monthly" class="text-lg font-extrabold text-[#065F46] mt-1">$10,925 / mo</div></div>
+          <div class="p-3 rounded-lg bg-white border border-[#B4D6D0]"><div class="text-[11px] font-bold text-[#071C21]">ANNUAL PAYROLL SAVED</div><div id="roi-out-annual" class="text-lg font-extrabold text-[#071C21] mt-1">$131,100 / yr</div></div>
           <div class="p-3 rounded-lg bg-[#ECFDF5] border border-[#6EE7B7]"><div class="text-[11px] font-bold text-[#065F46]">NET RETURN MULTIPLE</div><div id="roi-out-multiple" class="text-lg font-extrabold text-[#065F46] mt-1">21.9x ROI vs. $499/mo Tier 2</div></div>
         </div>
       </div>
     </section>
 
     <!-- Live Letting Directory (#contract-directory) -->
-    <section id="contract-directory" style="overflow-anchor: none;" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-4">
+    <section id="contract-directory" style="overflow-anchor: none;" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-4">
       <div class="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// LIVE 52-PORTAL COMMERCIAL PAYER TIC MRF, ERISA &amp; NSA IDR WIRE</div>
-          <h2 class="text-xl font-extrabold text-[#0A0D14]">Active Commercial Payer TiC MRF Rate Disparities &amp; NSA IDR Cohorts</h2>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// LIVE 52-PORTAL COMMERCIAL PAYER TIC MRF, ERISA &amp; NSA IDR WIRE</div>
+          <h2 class="text-xl font-extrabold text-[#071C21]">Active Commercial Payer TiC MRF Rate Disparities &amp; NSA IDR Cohorts</h2>
         </div>
         <div class="flex flex-wrap items-center gap-2">
-          <input id="letting-search-input" type="text" oninput="filterMainLettingTable(window.ACTIVE_PORTAL_FILTER || 'all')" placeholder="Search case ID, CPT/DRG code, payer, or state..." class="px-3 py-1.5 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] text-xs font-medium text-[#0A0D14] placeholder-[#1E293B]" />
-          <button type="button" onclick="exportLettingsCsv()" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] text-xs font-mono font-bold transition">Export .CSV</button>
-          <span id="letting-shown-badge" class="px-3 py-1 rounded bg-[#EAE6DF] border border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]">{len(lettings)} PREVIEW LETTINGS SHOWN</span>
+          <input id="letting-search-input" type="text" oninput="filterMainLettingTable(window.ACTIVE_PORTAL_FILTER || 'all')" placeholder="Search case ID, CPT/DRG code, payer, or state..." class="px-3 py-1.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#1E293B]" />
+          <button type="button" onclick="exportLettingsCsv()" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] text-xs font-mono font-bold transition">Export .CSV</button>
+          <span id="letting-shown-badge" class="px-3 py-1 rounded bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">{len(lettings)} PREVIEW LETTINGS SHOWN</span>
         </div>
       </div>
       <div class="flex flex-wrap gap-2 text-xs font-mono">
-        <button type="button" data-portal-pill="all" onclick="filterMainLettingTable('all')" class="px-3 py-1.5 rounded-lg bg-[#0A0D14] text-white font-bold transition">All Portals (52)</button>
-        <button type="button" data-portal-pill="texas" onclick="filterMainLettingTable('texas')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] font-bold border border-[#94A3B8] transition">TX DOI &amp; MRF (TX)</button>
-        <button type="button" data-portal-pill="california" onclick="filterMainLettingTable('california')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] font-bold border border-[#94A3B8] transition">CA DMHC MRF (CA)</button>
-        <button type="button" data-portal-pill="florida" onclick="filterMainLettingTable('florida')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] font-bold border border-[#94A3B8] transition">FL OIR MRF (FL)</button>
-        <button type="button" data-portal-pill="virginia" onclick="filterMainLettingTable('virginia')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] font-bold border border-[#94A3B8] transition">VA BOI MRF (VA)</button>
-        <button type="button" data-portal-pill="pennsylvania" onclick="filterMainLettingTable('pennsylvania')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] font-bold border border-[#94A3B8] transition">PA PID MRF (PA)</button>
-        <button type="button" data-portal-pill="new_york" onclick="filterMainLettingTable('new_york')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] font-bold border border-[#94A3B8] transition">NY DFS MRF (NY)</button>
-        <button type="button" data-portal-pill="federal" onclick="filterMainLettingTable('federal')" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] font-bold border border-[#94A3B8] transition">CMS Federal NSA IDR</button>
+        <button type="button" data-portal-pill="all" onclick="filterMainLettingTable('all')" class="px-3 py-1.5 rounded-lg bg-[#071C21] text-white font-bold transition">All Portals (52)</button>
+        <button type="button" data-portal-pill="texas" onclick="filterMainLettingTable('texas')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] font-bold border border-[#7FB5AC] transition">TX DOI &amp; MRF (TX)</button>
+        <button type="button" data-portal-pill="california" onclick="filterMainLettingTable('california')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] font-bold border border-[#7FB5AC] transition">CA DMHC MRF (CA)</button>
+        <button type="button" data-portal-pill="florida" onclick="filterMainLettingTable('florida')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] font-bold border border-[#7FB5AC] transition">FL OIR MRF (FL)</button>
+        <button type="button" data-portal-pill="virginia" onclick="filterMainLettingTable('virginia')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] font-bold border border-[#7FB5AC] transition">VA BOI MRF (VA)</button>
+        <button type="button" data-portal-pill="pennsylvania" onclick="filterMainLettingTable('pennsylvania')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] font-bold border border-[#7FB5AC] transition">PA PID MRF (PA)</button>
+        <button type="button" data-portal-pill="new_york" onclick="filterMainLettingTable('new_york')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] font-bold border border-[#7FB5AC] transition">NY DFS MRF (NY)</button>
+        <button type="button" data-portal-pill="federal" onclick="filterMainLettingTable('federal')" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] font-bold border border-[#7FB5AC] transition">CMS Federal NSA IDR</button>
       </div>
       <div class="overflow-x-auto">
         <table class="w-full min-w-[820px] text-left border-collapse">
           <thead>
-            <tr class="bg-[#EAE6DF] border-b-2 border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14]">
+            <tr class="bg-[#DDF0EC] border-b-2 border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">
               <th class="py-2.5 px-3">CASE / COHORT ID</th>
               <th class="py-2.5 px-3">PAYER MRF COHORT &amp; CPT/DRG SCOPE</th>
               <th class="py-2.5 px-3">REGULATORY PORTAL / MSA</th>
@@ -3730,8 +3733,8 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
 
     <!-- 52-Portal Coverage Grid (#coverage) -->
     <section id="coverage" class="space-y-4">
-      <div class="text-xs font-mono font-bold text-[#1E3A8A]">// 52 ACTIVE COMMERCIAL PAYER TIC MRF &amp; STATE DOI PORTALS</div>
-      <h2 class="text-2xl font-extrabold text-[#0A0D14]">50-State DOI/APCD, CMS Federal NSA IDR &amp; Multi-Payer TiC MRF Coverage</h2>
+      <div class="text-xs font-mono font-bold text-[#0F766E]">// 52 ACTIVE COMMERCIAL PAYER TIC MRF &amp; STATE DOI PORTALS</div>
+      <h2 class="text-2xl font-extrabold text-[#071C21]">50-State DOI/APCD, CMS Federal NSA IDR &amp; Multi-Payer TiC MRF Coverage</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
         {''.join(portal_cards)}
       </div>
@@ -3747,10 +3750,10 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
   <section id="page-lettings" class="hidden max-w-7xl mx-auto px-6 py-12 space-y-6">
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
       <div>
-        <div class="text-xs font-mono font-bold text-[#1E3A8A]">52 PORTALS ACTIVE &bull; 50-STATE PAYER MRF &amp; CMS NSA IDR DIRECTORY</div>
-        <h2 class="text-2xl font-extrabold text-[#0A0D14]">Interactive Commercial Payer TiC MRF &amp; NSA IDR Dossier Explorer</h2>
+        <div class="text-xs font-mono font-bold text-[#0F766E]">52 PORTALS ACTIVE &bull; 50-STATE PAYER MRF &amp; CMS NSA IDR DIRECTORY</div>
+        <h2 class="text-2xl font-extrabold text-[#071C21]">Interactive Commercial Payer TiC MRF &amp; NSA IDR Dossier Explorer</h2>
       </div>
-      <a href="lettings/index.html" class="self-start sm:self-auto shrink-0 whitespace-nowrap px-4 py-2 rounded-lg bg-white text-[#0A0D14] text-xs font-mono font-bold border border-[#94A3B8] shadow-sm">Open Static HTML Index &rarr;</a>
+      <a href="lettings/index.html" class="self-start sm:self-auto shrink-0 whitespace-nowrap px-4 py-2 rounded-lg bg-white text-[#071C21] text-xs font-mono font-bold border border-[#7FB5AC] shadow-sm">Open Static HTML Index &rarr;</a>
     </div>
     <div id="contracts-dynamic-root" class="min-h-[200px]"></div>
   </section>
@@ -3759,81 +3762,81 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
   <section id="page-checkout" class="hidden max-w-7xl mx-auto px-6 py-12 space-y-8">
     <div class="flex flex-wrap items-center justify-between gap-4">
       <div>
-        <div class="text-xs font-mono font-bold text-[#1E3A8A]">// ZERO-DEMO SELF-SERVE ACTIVATION</div>
-        <h2 class="text-3xl font-extrabold text-[#0A0D14]">Instant Access Across All 50 State Payer MRF Portals &amp; 12 Healthcare RCM APIs</h2>
+        <div class="text-xs font-mono font-bold text-[#0F766E]">// ZERO-DEMO SELF-SERVE ACTIVATION</div>
+        <h2 class="text-3xl font-extrabold text-[#071C21]">Instant Access Across All 50 State Payer MRF Portals &amp; 12 Healthcare RCM APIs</h2>
       </div>
-      <div class="inline-flex rounded-lg bg-[#EAE6DF] p-1 border border-[#94A3B8] text-xs font-mono">
-        <button id="billing-toggle-monthly" type="button" onclick="setCheckoutBilling('monthly')" class="px-3 py-1.5 rounded bg-[#0A0D14] text-white font-bold">Monthly</button>
-        <button id="billing-toggle-annual" type="button" onclick="setCheckoutBilling('annual')" class="px-3 py-1.5 rounded text-[#0A0D14] hover:text-[#1E3A8A] font-bold">Annual (2 Months Free)</button>
+      <div class="inline-flex rounded-lg bg-[#DDF0EC] p-1 border border-[#7FB5AC] text-xs font-mono">
+        <button id="billing-toggle-monthly" type="button" onclick="setCheckoutBilling('monthly')" class="px-3 py-1.5 rounded bg-[#071C21] text-white font-bold">Monthly</button>
+        <button id="billing-toggle-annual" type="button" onclick="setCheckoutBilling('annual')" class="px-3 py-1.5 rounded text-[#071C21] hover:text-[#0F766E] font-bold">Annual (2 Months Free)</button>
       </div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-      <div id="checkout-card-tier1" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm flex flex-col justify-between space-y-4">
+      <div id="checkout-card-tier1" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm flex flex-col justify-between space-y-4">
         <div class="space-y-3">
-          <div class="text-xs font-mono font-bold text-[#0A0D14]">TIER 1 // CLAIMWIRE PRO</div>
-          <div id="price-tier1" class="text-3xl font-extrabold text-[#0A0D14]">$199 / mo</div>
+          <div class="text-xs font-mono font-bold text-[#071C21]">TIER 1 // CLAIMWIRE PRO</div>
+          <div id="price-tier1" class="text-3xl font-extrabold text-[#071C21]">$199 / mo</div>
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Real-time 50-State Commercial Payer TiC MRF rate alerts, CMS NSA IDR updates &amp; peer EIN/NPI tracking.</p>
         </div>
         <div class="space-y-2">
-          <button type="button" id="btn-checkout-tier1" data-stripe-link="https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i" onclick="openCamberCheckoutModal('tier1_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] font-bold text-xs font-mono transition">Activate Tier 1</button>
-          <a id="stripe-link-tier1" href="https://buy.stripe.com/bJeaEWePg6FteFid6Q7wA0i" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <button type="button" id="btn-checkout-tier1" data-stripe-link="https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" onclick="openCamberCheckoutModal('tier1_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-xs font-mono transition">Activate Tier 1</button>
+          <a id="stripe-link-tier1" href="https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
-      <div id="checkout-card-tier2" class="p-6 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-md flex flex-col justify-between space-y-4">
+      <div id="checkout-card-tier2" class="p-6 rounded-2xl bg-white border-2 border-[#071C21] shadow-md flex flex-col justify-between space-y-4">
         <div class="space-y-3">
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">TIER 2 // RUBRICWARD AUTOPILOT (RECOMMENDED)</div>
-          <div id="price-tier2" class="text-3xl font-extrabold text-[#0A0D14]">$499 / mo</div>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">TIER 2 // RUBRICWARD AUTOPILOT (RECOMMENDED)</div>
+          <div id="price-tier2" class="text-3xl font-extrabold text-[#071C21]">$499 / mo</div>
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and API key for all 12 microservices.</p>
         </div>
         <div class="space-y-2">
-          <button type="button" id="btn-checkout-tier2" data-stripe-link="https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k" onclick="openCamberCheckoutModal('tier2_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold text-xs font-mono transition">Activate Tier 2 Autopilot</button>
-          <a id="stripe-link-tier2" href="https://buy.stripe.com/8x28wOePgd3R68M3wg7wA0k" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#1E3A8A] border border-[#93C5FD] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <button type="button" id="btn-checkout-tier2" data-stripe-link="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" onclick="openCamberCheckoutModal('tier2_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-xs font-mono transition">Activate Tier 2 Autopilot</button>
+          <a id="stripe-link-tier2" href="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#E6F4F1] hover:bg-[#CCFBF1] text-[#0F766E] border border-[#5EEAD4] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
-      <div id="checkout-card-tier3" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm flex flex-col justify-between space-y-4">
+      <div id="checkout-card-tier3" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="text-xs font-mono font-bold text-[#065F46]">TIER 3 // 6-FILE .ZIP CLAIM &amp; IDR COMPILER</div>
-          <div id="price-tier3" class="text-3xl font-extrabold text-[#0A0D14]">$1,499 / mo</div>
+          <div id="price-tier3" class="text-3xl font-extrabold text-[#071C21]">$1,499 / mo</div>
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live formulas) Payer MRF, Medicare MPFS, ERISA Appeal &amp; NSA IDR compilations.</p>
         </div>
         <div class="space-y-2">
-          <button type="button" id="btn-checkout-tier3" data-stripe-link="https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m" onclick="openCamberCheckoutModal('tier3_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#1E3A8A] hover:bg-[#0A0D14] text-white font-bold text-xs font-mono transition">Activate Tier 3 Compiler</button>
-          <a id="stripe-link-tier3" href="https://buy.stripe.com/28E00ibD46Ft2WAaYI7wA0m" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <button type="button" id="btn-checkout-tier3" data-stripe-link="https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" onclick="openCamberCheckoutModal('tier3_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#0F766E] hover:bg-[#071C21] text-white font-bold text-xs font-mono transition">Activate Tier 3 Compiler</button>
+          <a id="stripe-link-tier3" href="https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
-      <div id="checkout-card-tier4" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm flex flex-col justify-between space-y-4">
+      <div id="checkout-card-tier4" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm flex flex-col justify-between space-y-4">
         <div class="space-y-3">
-          <div class="text-xs font-mono font-bold text-[#0A0D14]">TIER 4 // HEALTH SYSTEM &amp; RCM OEM</div>
-          <div id="price-tier4" class="text-3xl font-extrabold text-[#0A0D14]">$2,499 / mo</div>
+          <div class="text-xs font-mono font-bold text-[#071C21]">TIER 4 // HEALTH SYSTEM &amp; RCM OEM</div>
+          <div id="price-tier4" class="text-3xl font-extrabold text-[#071C21]">$2,499 / mo</div>
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Multi-TIN health system &amp; MSO rate intelligence, Epic/Athena/Waystar webhook pipes, custom SLA &amp; unlimited RCM seats.</p>
         </div>
         <div class="space-y-2">
-          <button type="button" id="btn-checkout-tier4" data-stripe-link="https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o" onclick="openCamberCheckoutModal('tier4_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#EAE6DF] hover:bg-[#0A0D14] text-[#0A0D14] hover:text-white border border-[#94A3B8] font-bold text-xs font-mono transition">Activate Tier 4 OEM</button>
-          <a id="stripe-link-tier4" href="https://buy.stripe.com/28E7sK9uWfbZ54I5Eo7wA0o" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#FAF8F5] hover:bg-[#EAE6DF] text-[#1E3A8A] border border-[#CBD5E1] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <button type="button" id="btn-checkout-tier4" data-stripe-link="https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" onclick="openCamberCheckoutModal('tier4_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-xs font-mono transition">Activate Tier 4 OEM</button>
+          <a id="stripe-link-tier4" href="https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
     </div>
 
-    <div class="p-4 rounded-xl bg-white border border-[#CBD5E1] text-xs font-mono font-semibold text-[#0A0D14]">
-      All 12 individual RubricWard microservices are also available on RapidAPI and via <code class="text-[#1E3A8A] font-bold">@rubricward/mcp-server</code>.
+    <div class="p-4 rounded-xl bg-white border border-[#B4D6D0] text-xs font-mono font-semibold text-[#071C21]">
+      All 12 individual RubricWard microservices are also available on RapidAPI and via <code class="text-[#0F766E] font-bold">@rubricward/mcp-server</code>.
     </div>
 
     <!-- 3-Mode Enterprise Proof Workbench (#checkout-enterprise-proof-workbench) -->
-    <div id="checkout-enterprise-proof-workbench" class="p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#0A0D14] shadow-sm space-y-5">
+    <div id="checkout-enterprise-proof-workbench" class="p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-sm space-y-5">
       <div class="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#1E3A8A]">// INTERACTIVE PAYER MRF &amp; NSA IDR PROOF WORKBENCH — TEST BEFORE YOU SUBSCRIBE</div>
-          <h3 class="text-xl font-extrabold text-[#0A0D14] mt-0.5">Compile a Custom 6-File .ZIP, Query the TiC MRF &amp; QPA Rate Vault, or Generate a CFO Quote</h3>
+          <div class="text-xs font-mono font-bold text-[#0F766E]">// INTERACTIVE PAYER MRF &amp; NSA IDR PROOF WORKBENCH — TEST BEFORE YOU SUBSCRIBE</div>
+          <h3 class="text-xl font-extrabold text-[#071C21] mt-0.5">Compile a Custom 6-File .ZIP, Query the TiC MRF &amp; QPA Rate Vault, or Generate a CFO Quote</h3>
         </div>
         <div class="flex flex-wrap gap-2">
-          <button type="button" id="workbench-tab-compiler" onclick="switchCheckoutWorkbenchTab('compiler')" class="px-3.5 py-2 rounded-lg bg-[#0A0D14] text-white font-mono text-xs font-bold transition">01 // Custom 6-File .ZIP Compiler</button>
-          <button type="button" id="workbench-tab-vault" onclick="switchCheckoutWorkbenchTab('vault')" class="px-3.5 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">02 // Payer TiC MRF Vault Query</button>
-          <button type="button" id="workbench-tab-dbe" onclick="switchCheckoutWorkbenchTab('dbe')" class="px-3.5 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">03 // ERISA &amp; Peer EIN Benchmark</button>
-          <button type="button" id="workbench-tab-cfo" onclick="switchCheckoutWorkbenchTab('cfo')" class="px-3.5 py-2 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] font-mono text-xs font-bold transition">04 // 1-Click CFO / PO Quote</button>
+          <button type="button" id="workbench-tab-compiler" onclick="switchCheckoutWorkbenchTab('compiler')" class="px-3.5 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold transition">01 // Custom 6-File .ZIP Compiler</button>
+          <button type="button" id="workbench-tab-vault" onclick="switchCheckoutWorkbenchTab('vault')" class="px-3.5 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">02 // Payer TiC MRF Vault Query</button>
+          <button type="button" id="workbench-tab-dbe" onclick="switchCheckoutWorkbenchTab('dbe')" class="px-3.5 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">03 // ERISA &amp; Peer EIN Benchmark</button>
+          <button type="button" id="workbench-tab-cfo" onclick="switchCheckoutWorkbenchTab('cfo')" class="px-3.5 py-2 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] font-mono text-xs font-bold transition">04 // 1-Click CFO / PO Quote</button>
         </div>
       </div>
 
@@ -3841,16 +3844,16 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       <div id="workbench-mode-compiler" class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs">
         <div class="space-y-3">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            <input id="wb-custom-title" type="text" value="DFW Orthopedic &amp; ASC CPT 29881 / 27447 Commercial Payer MRF Audit" class="px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]" />
-            <input id="wb-custom-agency" type="text" value="Texas Department of Insurance (TDI) &amp; UHC/BCBS-TX MRF Index" class="px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]" />
+            <input id="wb-custom-title" type="text" value="DFW Orthopedic &amp; ASC CPT 29881 / 27447 Commercial Payer MRF Audit" class="px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]" />
+            <input id="wb-custom-agency" type="text" value="Texas Department of Insurance (TDI) &amp; UHC/BCBS-TX MRF Index" class="px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]" />
           </div>
-          <textarea id="wb-custom-text" rows="4" class="w-full p-3 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-mono font-medium text-[#0A0D14]">CPT 29881 Knee Arthroscopy 420 Claims; CPT 27447 Total Knee Arthroplasty 115 Claims; CPT 64483 Lumbar Epidural 680 Claims; Timely Filing 180/day; Underpayment Gap 14.5%; Locality TX20260038.</textarea>
+          <textarea id="wb-custom-text" rows="4" class="w-full p-3 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-mono font-medium text-[#071C21]">CPT 29881 Knee Arthroscopy 420 Claims; CPT 27447 Total Knee Arthroplasty 115 Claims; CPT 64483 Lumbar Epidural 680 Claims; Timely Filing 180/day; Underpayment Gap 14.5%; Locality TX20260038.</textarea>
           <div class="flex flex-wrap gap-2.5">
-            <button type="button" onclick="runCheckoutCustomRfpCompile()" class="px-4 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold">Compile Custom Manifest Live</button>
-            <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-4 py-2 rounded-lg bg-[#EFF6FF] text-[#1E3A8A] border border-[#93C5FD] font-mono font-bold">Download 6-File .ZIP Binary</a>
+            <button type="button" onclick="runCheckoutCustomRfpCompile()" class="px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold">Compile Custom Manifest Live</button>
+            <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-4 py-2 rounded-lg bg-[#E6F4F1] text-[#0F766E] border border-[#5EEAD4] font-mono font-bold">Download 6-File .ZIP Binary</a>
           </div>
         </div>
-        <pre id="wb-custom-output" class="p-3.5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] font-mono font-medium text-[#064E3B] overflow-x-auto leading-relaxed">{{
+        <pre id="wb-custom-output" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] font-mono font-medium text-[#064E3B] overflow-x-auto leading-relaxed">{{
   "status": "READY_FOR_CUSTOM_COMPILATION",
   "files_included": 6,
   "formats": [".DOCX", ".XLSX (Live Formulas)", ".JSON"]
@@ -3860,18 +3863,18 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       <!-- Mode 2: 50-State Commercial Payer TiC MRF & QPA Vault Query -->
       <div id="workbench-mode-vault" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs">
         <div class="space-y-3">
-          <label class="block font-mono font-bold text-[#0A0D14]">SELECT STATE PAYER MRF PORTAL &amp; CPT / DRG CODE TO BENCHMARK</label>
-          <select id="wb-vault-state" onchange="runCheckoutFoiaVaultPreview()" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]">
+          <label class="block font-mono font-bold text-[#071C21]">SELECT STATE PAYER MRF PORTAL &amp; CPT / DRG CODE TO BENCHMARK</label>
+          <select id="wb-vault-state" onchange="runCheckoutFoiaVaultPreview()" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]">
             {vault_state_options_html}
           </select>
-          <select id="wb-vault-item" onchange="runCheckoutFoiaVaultPreview()" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]">
+          <select id="wb-vault-item" onchange="runCheckoutFoiaVaultPreview()" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]">
             <option value="CPT 29881 — Knee Arthroscopy &amp; Meniscectomy (ASC + Pro)">CPT 29881 — Knee Arthroscopy &amp; Meniscectomy (ASC + Pro)</option>
             <option value="CPT 27447 — Total Knee Arthroplasty (Inpatient / Outpatient)">CPT 27447 — Total Knee Arthroplasty (Inpatient / Outpatient)</option>
             <option value="CPT 45380 — Colonoscopy with Biopsy (ASC Facility + Pro)">CPT 45380 — Colonoscopy with Biopsy (ASC Facility + Pro)</option>
           </select>
-          <button type="button" onclick="runCheckoutFoiaVaultPreview()" class="px-4 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold">Query TiC MRF &amp; QPA Rate Vault</button>
+          <button type="button" onclick="runCheckoutFoiaVaultPreview()" class="px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold">Query TiC MRF &amp; QPA Rate Vault</button>
         </div>
-        <pre id="wb-vault-output" class="p-3.5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] font-mono font-medium text-[#064E3B] overflow-x-auto leading-relaxed">{{
+        <pre id="wb-vault-output" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] font-mono font-medium text-[#064E3B] overflow-x-auto leading-relaxed">{{
   "state_payer_portal": "TX — TX DOI & APCD MRF",
   "pay_item": "CPT 29881 — Knee Arthroscopy &amp; Meniscectomy (ASC + Pro)",
   "winning_low_avg_usd": 109.8,
@@ -3882,14 +3885,14 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       <!-- Mode 2b: 49 CFR Part 26 DBE Subcontractor Clearinghouse -->
       <div id="workbench-mode-dbe" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs">
         <div class="space-y-3">
-          <label class="block font-mono font-bold text-[#0A0D14]">SELECT STATE PAYER MRF DIRECTORY &amp; TARGET RECOVERY (%)</label>
-          <select id="wb-dbe-state" onchange="runCheckoutDbeClearinghousePreview()" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]">
+          <label class="block font-mono font-bold text-[#071C21]">SELECT STATE PAYER MRF DIRECTORY &amp; TARGET RECOVERY (%)</label>
+          <select id="wb-dbe-state" onchange="runCheckoutDbeClearinghousePreview()" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]">
             {dbe_state_options_html}
           </select>
-          <input id="wb-dbe-goal" type="number" step="0.5" value="9.5" onchange="runCheckoutDbeClearinghousePreview()" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]" />
-          <button type="button" onclick="runCheckoutDbeClearinghousePreview()" class="px-4 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold">Match Peer EIN/NPI MRF Benchmarks &amp; ERISA Authorities</button>
+          <input id="wb-dbe-goal" type="number" step="0.5" value="9.5" onchange="runCheckoutDbeClearinghousePreview()" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]" />
+          <button type="button" onclick="runCheckoutDbeClearinghousePreview()" class="px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold">Match Peer EIN/NPI MRF Benchmarks &amp; ERISA Authorities</button>
         </div>
-        <pre id="wb-dbe-output" class="p-3.5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] font-mono font-medium text-[#064E3B] overflow-x-auto leading-relaxed">{{
+        <pre id="wb-dbe-output" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] font-mono font-medium text-[#064E3B] overflow-x-auto leading-relaxed">{{
   "state_payer_directory": "TX — TX DOI & APCD MRF Directory",
   "contract_dbe_goal_pct": 9.5,
   "statutory_appeal_authority": "VERIFIED — ERISA 29 CFR 2560.503-1, CMS TiC 45 CFR 147.212 & Federal NSA 45 CFR 149.510",
@@ -3900,60 +3903,60 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       <!-- Mode 3: 1-Click CFO / VP of Revenue Cycle Approval Memo & PO Quote -->
       <div id="workbench-mode-cfo" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs">
         <div class="space-y-3">
-          <label class="block font-mono font-bold text-[#0A0D14]">GENERATE EXECUTIVE ROI &amp; PO JUSTIFICATION MEMO</label>
-          <input id="wb-cfo-company" type="text" placeholder="Lone Star Orthopedic &amp; Spine Surgery Center LLC" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14] placeholder-[#1E293B]" />
-          <select id="wb-cfo-tier" class="w-full px-3 py-2 rounded-lg bg-[#FAF8F5] border border-[#94A3B8] font-bold text-[#0A0D14]">
+          <label class="block font-mono font-bold text-[#071C21]">GENERATE EXECUTIVE ROI &amp; PO JUSTIFICATION MEMO</label>
+          <input id="wb-cfo-company" type="text" placeholder="Lone Star Orthopedic &amp; Spine Surgery Center LLC" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21] placeholder-[#1E293B]" />
+          <select id="wb-cfo-tier" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]">
             <option value="Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr)">Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr)</option>
             <option value="Tier 3 — 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr)">Tier 3 — 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr)</option>
             <option value="Tier 4 — Health System & RCM OEM ($2,499/mo or $24,900/yr)">Tier 4 — Health System &amp; RCM OEM ($2,499/mo or $24,900/yr)</option>
           </select>
-          <button type="button" onclick="generateCfoProcurementQuote()" class="px-4 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-mono font-bold">Generate CFO Approval Memo</button>
+          <button type="button" onclick="generateCfoProcurementQuote()" class="px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold">Generate CFO Approval Memo</button>
         </div>
-        <pre id="wb-cfo-output" class="p-3.5 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] font-mono font-medium text-[#0F172A] overflow-x-auto leading-relaxed">Click "Generate CFO Approval Memo" to build a ready-to-forward RCM &amp; Payer MRF ROI purchase order quote.</pre>
+        <pre id="wb-cfo-output" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] font-mono font-medium text-[#0F172A] overflow-x-auto leading-relaxed">Click "Generate CFO Approval Memo" to build a ready-to-forward RCM &amp; Payer MRF ROI purchase order quote.</pre>
       </div>
     </div>
 
     <!-- 25-Row 4-Tier Capability Matrix (#checkout-panel-matrix) -->
-    <div id="checkout-panel-matrix" class="p-6 rounded-2xl bg-white border border-[#CBD5E1] shadow-sm space-y-4">
-      <div class="text-xs font-mono font-bold text-[#1E3A8A]">// COMPLETE 4-TIER RCM &amp; PAYER RATE CAPABILITY MATRIX</div>
-      <h3 class="text-xl font-extrabold text-[#0A0D14]">Compare Tier 1, Tier 2 Autopilot, Tier 3 Compiler &amp; Tier 4 OEM</h3>
+    <div id="checkout-panel-matrix" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm space-y-4">
+      <div class="text-xs font-mono font-bold text-[#0F766E]">// COMPLETE 4-TIER RCM &amp; PAYER RATE CAPABILITY MATRIX</div>
+      <h3 class="text-xl font-extrabold text-[#071C21]">Compare Tier 1, Tier 2 Autopilot, Tier 3 Compiler &amp; Tier 4 OEM</h3>
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse text-xs">
           <thead>
-            <tr class="bg-[#EAE6DF] border-b-2 border-[#94A3B8] font-mono font-bold text-[#0A0D14]">
+            <tr class="bg-[#DDF0EC] border-b-2 border-[#7FB5AC] font-mono font-bold text-[#071C21]">
               <th class="py-2.5 px-3">CAPABILITY / DELIVERABLE</th>
               <th class="py-2.5 px-3">TIER 1 ($199/MO)</th>
-              <th class="py-2.5 px-3 text-[#1E3A8A]">TIER 2 ($499/MO)</th>
+              <th class="py-2.5 px-3 text-[#0F766E]">TIER 2 ($499/MO)</th>
               <th class="py-2.5 px-3 text-[#065F46]">TIER 3 ($1,499/MO)</th>
               <th class="py-2.5 px-3">TIER 4 ($2,499/MO)</th>
             </tr>
           </thead>
           <tbody class="font-medium text-[#111827]">
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">01. 50-State DOI/APCD &amp; Payer TiC MRF Monitor</td><td class="py-2 px-3">Included (50 States)</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (50 States)</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (50 States)</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (50 States)</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">02. CMS Federal NSA IDR (45 CFR 149.510) Monitor</td><td class="py-2 px-3">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">03. Multi-Payer Commercial TiC MRF Rate Monitor</td><td class="py-2 px-3">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">04. Regional Peer Specialty Group EIN/NPI Roster</td><td class="py-2 px-3">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">05. CSV &amp; Excel Payer MRF Cohort Export</td><td class="py-2 px-3">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">06. API #01 Payer CPB &amp; CMS LCD/NCD Shredder</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">07. API #02 Commercial Payer TiC MRF Modeler</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">08. API #03 Medicare MPFS RVU &amp; GPCI Engine</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">09. API #04 Unified 52-Portal MRF &amp; IDR REST Feed</td><td class="py-2 px-3">Read Access</td><td class="py-2 px-3 font-bold text-[#065F46]">Full REST + MCP</td><td class="py-2 px-3 font-bold text-[#065F46]">Full REST + MCP</td><td class="py-2 px-3 font-bold text-[#065F46]">Dedicated Firehose</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">10. API #05 CMS NCCI &amp; Modifier 25/59 Auditor</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">11. API #06 ERISA 29 CFR 2560.503-1 Appeal Engine</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">12. API #07 HIPAA 835 ERA &amp; CARC/RARC Modeler</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">13. API #08 Federal NSA 45 CFR 149.510 IDR Brief</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Multi-Surety OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">14. API #09 Payer Recoupment &amp; Prompt-Pay Drafter</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">15. API #10 NPPES NPI, PECOS &amp; Network Adequacy</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">16. API #11 Peer Specialty EIN/NPI Spread Model</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">17. API #12 Payer Contract Term-Sheet Generator</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">18. Volume I Payer CPB &amp; LCD Matrix (.DOCX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited .DOCX</td><td class="py-2 px-3 font-bold text-[#065F46]">White-Label .DOCX</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">19. Volume II Commercial TiC MRF Model (.XLSX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Live Excel Formulas</td><td class="py-2 px-3 font-bold text-[#065F46]">Live Excel Formulas</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">20. Volume III Medicare MPFS RVU Schedule (.XLSX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Live Excel Formulas</td><td class="py-2 px-3 font-bold text-[#065F46]">Live Excel Formulas</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">21. Volume IV ERISA 29 CFR 2560 Appeal (.DOCX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited .DOCX</td><td class="py-2 px-3 font-bold text-[#065F46]">White-Label .DOCX</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">22. Volume V NSA IDR Brief &amp; 835 Ledger (.DOCX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited .DOCX</td><td class="py-2 px-3 font-bold text-[#065F46]">White-Label .DOCX</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">23. Remote HTTP (/mcp) &amp; STDIO MCP Server</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (5/5 TDQS)</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (5/5 TDQS)</td><td class="py-2 px-3 font-bold text-[#065F46]">Dedicated Tenant</td></tr>
-            <tr class="border-b border-[#CBD5E1]"><td class="py-2 px-3 font-bold text-[#0A0D14]">24. Epic / Athenahealth / Waystar RCM Blueprints</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Custom ERP Sync</td></tr>
-            <tr><td class="py-2 px-3 font-bold text-[#0A0D14]">25. Contract Terms &amp; Cancellation</td><td class="py-2 px-3 font-bold">Cancel Anytime</td><td class="py-2 px-3 font-bold text-[#065F46]">Cancel Anytime</td><td class="py-2 px-3 font-bold text-[#065F46]">Cancel Anytime</td><td class="py-2 px-3 font-bold">Custom MSA / SLA</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">01. 50-State DOI/APCD &amp; Payer TiC MRF Monitor</td><td class="py-2 px-3">Included (50 States)</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (50 States)</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (50 States)</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (50 States)</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">02. CMS Federal NSA IDR (45 CFR 149.510) Monitor</td><td class="py-2 px-3">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">03. Multi-Payer Commercial TiC MRF Rate Monitor</td><td class="py-2 px-3">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">04. Regional Peer Specialty Group EIN/NPI Roster</td><td class="py-2 px-3">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">05. CSV &amp; Excel Payer MRF Cohort Export</td><td class="py-2 px-3">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">06. API #01 Payer CPB &amp; CMS LCD/NCD Shredder</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">07. API #02 Commercial Payer TiC MRF Modeler</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">08. API #03 Medicare MPFS RVU &amp; GPCI Engine</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">09. API #04 Unified 52-Portal MRF &amp; IDR REST Feed</td><td class="py-2 px-3">Read Access</td><td class="py-2 px-3 font-bold text-[#065F46]">Full REST + MCP</td><td class="py-2 px-3 font-bold text-[#065F46]">Full REST + MCP</td><td class="py-2 px-3 font-bold text-[#065F46]">Dedicated Firehose</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">10. API #05 CMS NCCI &amp; Modifier 25/59 Auditor</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">11. API #06 ERISA 29 CFR 2560.503-1 Appeal Engine</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">12. API #07 HIPAA 835 ERA &amp; CARC/RARC Modeler</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">13. API #08 Federal NSA 45 CFR 149.510 IDR Brief</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Multi-Surety OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">14. API #09 Payer Recoupment &amp; Prompt-Pay Drafter</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">15. API #10 NPPES NPI, PECOS &amp; Network Adequacy</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">16. API #11 Peer Specialty EIN/NPI Spread Model</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">17. API #12 Payer Contract Term-Sheet Generator</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited OEM</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">18. Volume I Payer CPB &amp; LCD Matrix (.DOCX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited .DOCX</td><td class="py-2 px-3 font-bold text-[#065F46]">White-Label .DOCX</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">19. Volume II Commercial TiC MRF Model (.XLSX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Live Excel Formulas</td><td class="py-2 px-3 font-bold text-[#065F46]">Live Excel Formulas</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">20. Volume III Medicare MPFS RVU Schedule (.XLSX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Live Excel Formulas</td><td class="py-2 px-3 font-bold text-[#065F46]">Live Excel Formulas</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">21. Volume IV ERISA 29 CFR 2560 Appeal (.DOCX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited .DOCX</td><td class="py-2 px-3 font-bold text-[#065F46]">White-Label .DOCX</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">22. Volume V NSA IDR Brief &amp; 835 Ledger (.DOCX)</td><td class="py-2 px-3">—</td><td class="py-2 px-3">Sample Preview</td><td class="py-2 px-3 font-bold text-[#065F46]">Unlimited .DOCX</td><td class="py-2 px-3 font-bold text-[#065F46]">White-Label .DOCX</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">23. Remote HTTP (/mcp) &amp; STDIO MCP Server</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (5/5 TDQS)</td><td class="py-2 px-3 font-bold text-[#065F46]">Included (5/5 TDQS)</td><td class="py-2 px-3 font-bold text-[#065F46]">Dedicated Tenant</td></tr>
+            <tr class="border-b border-[#B4D6D0]"><td class="py-2 px-3 font-bold text-[#071C21]">24. Epic / Athenahealth / Waystar RCM Blueprints</td><td class="py-2 px-3">—</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Included</td><td class="py-2 px-3 font-bold text-[#065F46]">Custom ERP Sync</td></tr>
+            <tr><td class="py-2 px-3 font-bold text-[#071C21]">25. Contract Terms &amp; Cancellation</td><td class="py-2 px-3 font-bold">Cancel Anytime</td><td class="py-2 px-3 font-bold text-[#065F46]">Cancel Anytime</td><td class="py-2 px-3 font-bold text-[#065F46]">Cancel Anytime</td><td class="py-2 px-3 font-bold">Custom MSA / SLA</td></tr>
           </tbody>
         </table>
       </div>
@@ -3961,53 +3964,53 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
 
     <!-- Chief Estimator Testimonials & FAQ Accordion -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
-      <div class="p-5 rounded-xl bg-white border border-[#CBD5E1] space-y-2">
+      <div class="p-5 rounded-xl bg-white border border-[#B4D6D0] space-y-2">
         <div class="text-xs font-mono font-bold text-[#065F46]">// MULTI-SPECIALTY ORTHOPEDIC &amp; ASC GROUP (TX / OK)</div>
         <p class="text-xs font-medium text-[#111827] leading-relaxed">"RubricWard's Commercial Payer TiC MRF workbook and live Excel formulas exposed a 34% CPT 29881/27447 rate gap against peer DFW surgery centers and cut our NSA IDR prep from 14 hours to 35 minutes."</p>
       </div>
-      <div class="p-5 rounded-xl bg-white border border-[#CBD5E1] space-y-2">
-        <div class="text-xs font-mono font-bold text-[#1E3A8A]">// SPINE, NEUROSURGERY &amp; PAIN MANAGEMENT MSO (VA / MD / NC)</div>
+      <div class="p-5 rounded-xl bg-white border border-[#B4D6D0] space-y-2">
+        <div class="text-xs font-mono font-bold text-[#0F766E]">// SPINE, NEUROSURGERY &amp; PAIN MANAGEMENT MSO (VA / MD / NC)</div>
         <p class="text-xs font-medium text-[#111827] leading-relaxed">"Having statutory ERISA 29 CFR 2560.503-1 medical necessity briefs, CMS NCCI Modifier 25/59 unbundling defenses, and Medicare GPCI tables pre-compiled into Word and Excel is a massive unfair advantage."</p>
       </div>
-      <div class="p-5 rounded-xl bg-white border border-[#CBD5E1] space-y-2">
-        <div class="text-xs font-mono font-bold text-[#0A0D14]">// OUTPATIENT SURGERY &amp; GI ENDOSCOPY NETWORK (CA / AZ)</div>
+      <div class="p-5 rounded-xl bg-white border border-[#B4D6D0] space-y-2">
+        <div class="text-xs font-mono font-bold text-[#071C21]">// OUTPATIENT SURGERY &amp; GI ENDOSCOPY NETWORK (CA / AZ)</div>
         <p class="text-xs font-medium text-[#111827] leading-relaxed">"We replaced a $24,000/yr legacy payer-contracting consultant retainer with RubricWard Tier 2 Autopilot and plugged the MCP server straight into our revenue cycle workflow."</p>
       </div>
     </div>
 
-    <div class="p-6 rounded-2xl bg-white border border-[#CBD5E1] space-y-3">
-      <div class="text-xs font-mono font-bold text-[#1E3A8A]">// FREQUENTLY ASKED PAYER MRF, NSA IDR &amp; BILLING QUESTIONS</div>
-      <div class="border-b border-[#CBD5E1] pb-2">
-        <button type="button" onclick="toggleFaqItem(0)" class="w-full text-left py-2 text-sm font-extrabold text-[#0A0D14] flex justify-between"><span>Which 50 State Payer MRF, APCD, and Federal NSA IDR portals are monitored?</span><span>[+]</span></button>
+    <div class="p-6 rounded-2xl bg-white border border-[#B4D6D0] space-y-3">
+      <div class="text-xs font-mono font-bold text-[#0F766E]">// FREQUENTLY ASKED PAYER MRF, NSA IDR &amp; BILLING QUESTIONS</div>
+      <div class="border-b border-[#B4D6D0] pb-2">
+        <button type="button" onclick="toggleFaqItem(0)" class="w-full text-left py-2 text-sm font-extrabold text-[#071C21] flex justify-between"><span>Which 50 State Payer MRF, APCD, and Federal NSA IDR portals are monitored?</span><span>[+]</span></button>
         <div id="faq-ans-0" class="hidden pb-2 text-xs font-medium text-[#111827] leading-relaxed">All 50 U.S. State DOI and All-Payer Claims Database (APCD) commercial payer TiC MRF registries, CMS Federal No Surprises Act (NSA 45 CFR 149.510) IDR portals, and Multi-Payer Commercial TiC MRF feeds (52 active portals total).</div>
       </div>
-      <div class="border-b border-[#CBD5E1] pb-2">
-        <button type="button" onclick="toggleFaqItem(1)" class="w-full text-left py-2 text-sm font-extrabold text-[#0A0D14] flex justify-between"><span>Do the Excel (.XLSX) files inside the 6-File .ZIP contain live formulas?</span><span>[+]</span></button>
+      <div class="border-b border-[#B4D6D0] pb-2">
+        <button type="button" onclick="toggleFaqItem(1)" class="w-full text-left py-2 text-sm font-extrabold text-[#071C21] flex justify-between"><span>Do the Excel (.XLSX) files inside the 6-File .ZIP contain live formulas?</span><span>[+]</span></button>
         <div id="faq-ans-1" class="hidden pb-2 text-xs font-medium text-[#111827] leading-relaxed">Yes. Volume II (Commercial Payer TiC MRF &amp; QPA Benchmark Model) and Volume III (Medicare MPFS RVU/GPCI Schedule) are native OpenXML .XLSX workbooks with live =ROUND(D6*G6,2) and =SUM() formulas ready for Excel or RCM analytics.</div>
       </div>
       <div>
-        <button type="button" onclick="toggleFaqItem(2)" class="w-full text-left py-2 text-sm font-extrabold text-[#0A0D14] flex justify-between"><span>Is there any annual contract lock-in or per-seat fee?</span><span>[+]</span></button>
-        <div id="faq-ans-2" class="hidden pb-2 text-xs font-medium text-[#111827] leading-relaxed">Zero lock-in. Monthly plans are strictly month-to-month and can be managed or cancelled in 1 click via the <a href="#account" onclick="openTrustModal('account', event)" class="text-[#1E3A8A] font-bold underline">Self-Serve Client Portal</a>.</div>
+        <button type="button" onclick="toggleFaqItem(2)" class="w-full text-left py-2 text-sm font-extrabold text-[#071C21] flex justify-between"><span>Is there any annual contract lock-in or per-seat fee?</span><span>[+]</span></button>
+        <div id="faq-ans-2" class="hidden pb-2 text-xs font-medium text-[#111827] leading-relaxed">Zero lock-in. Monthly plans are strictly month-to-month and can be managed or cancelled in 1 click via the <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E] font-bold underline">Self-Serve Client Portal</a>.</div>
       </div>
     </div>
   </section>
 
-  <footer class="border-t border-[#CBD5E1] bg-[#EAE6DF] py-8 mt-16">
+  <footer class="border-t border-[#B4D6D0] bg-[#DDF0EC] py-8 mt-16">
     <div class="max-w-7xl mx-auto px-6 space-y-4">
-      <div class="flex flex-wrap items-center justify-between gap-4 text-xs font-mono font-bold text-[#0A0D14]">
+      <div class="flex flex-wrap items-center justify-between gap-4 text-xs font-mono font-bold text-[#071C21]">
         <div>ALL 52 FEDERAL CMS IDR &amp; 50-STATE PAYER MRF PORTAL MONITORS ACTIVE</div>
         <div class="flex flex-wrap items-center gap-4">
-          <a href="#account" onclick="openTrustModal('account', event)" class="hover:text-[#1E3A8A] underline">Client Portal</a>
-          <a href="#status" onclick="openTrustModal('status', event)" class="text-[#065F46] hover:text-[#1E3A8A] underline">System Status</a>
-          <a href="#security" onclick="openTrustModal('security', event)" class="hover:text-[#1E3A8A] underline">Security</a>
-          <a href="#contact" onclick="openTrustModal('contact', event)" class="hover:text-[#1E3A8A] underline">AI Concierge</a>
-          <a href="#terms" onclick="openTrustModal('terms', event)" class="hover:text-[#1E3A8A] underline">Terms</a>
-          <a href="#privacy" onclick="openTrustModal('privacy', event)" class="hover:text-[#1E3A8A] underline">Privacy</a>
+          <a href="#account" onclick="openTrustModal('account', event)" class="hover:text-[#0F766E] underline">Client Portal</a>
+          <a href="#status" onclick="openTrustModal('status', event)" class="text-[#065F46] hover:text-[#0F766E] underline">System Status</a>
+          <a href="#security" onclick="openTrustModal('security', event)" class="hover:text-[#0F766E] underline">Security</a>
+          <a href="#contact" onclick="openTrustModal('contact', event)" class="hover:text-[#0F766E] underline">AI Concierge</a>
+          <a href="#terms" onclick="openTrustModal('terms', event)" class="hover:text-[#0F766E] underline">Terms</a>
+          <a href="#privacy" onclick="openTrustModal('privacy', event)" class="hover:text-[#0F766E] underline">Privacy</a>
         </div>
       </div>
-      <div class="text-xs font-mono font-semibold text-[#111827] flex flex-wrap items-center justify-between gap-2 border-t border-[#CBD5E1] pt-3">
+      <div class="text-xs font-mono font-semibold text-[#111827] flex flex-wrap items-center justify-between gap-2 border-t border-[#B4D6D0] pt-3">
         <div>&copy; 2026 RubricWard Inc. &bull; Stateless Commercial Payer TiC MRF, ERISA Appeal &amp; Federal NSA IDR DaaS</div>
-        <div>24/7 Support: <a href="#contact" onclick="openTrustModal('contact', event)" class="text-[#1E3A8A] font-bold hover:underline">Instant AI Support Concierge</a> &bull; <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0A0D14] font-bold hover:underline">Client Portal</a></div>
+        <div>24/7 Support: <a href="#contact" onclick="openTrustModal('contact', event)" class="text-[#0F766E] font-bold hover:underline">Instant AI Support Concierge</a> &bull; <a href="#account" onclick="openTrustModal('account', event)" class="text-[#071C21] font-bold hover:underline">Client Portal</a></div>
       </div>
     </div>
   </footer>
@@ -4037,41 +4040,41 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
   <script src="https://cdn.tailwindcss.com"></script>
 {high_contrast_style}
 </head>
-<body class="bg-[#FAF8F5] text-[#0A0D14] font-sans antialiased pb-14 md:pb-0">
-  <header class="sticky top-0 z-40 border-b border-[#CBD5E1] bg-white/95 backdrop-blur">
+<body class="bg-[#F2F9F8] text-[#071C21] font-sans antialiased pb-14 md:pb-0">
+  <header class="sticky top-0 z-40 border-b border-[#B4D6D0] bg-white/95 backdrop-blur">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between gap-4">
       {_render_logo_lockup("12 STATELESS PAYER MRF, ERISA & NSA IDR MICROSERVICES", "index.html")}
       <nav class="hidden md:flex items-center gap-5 text-sm font-bold">
-        <a href="index.html" class="text-[#0A0D14] hover:text-[#1E3A8A]">Overview</a>
-        <a href="lettings/index.html" class="text-[#0A0D14] hover:text-[#1E3A8A]">Live Payer MRF &amp; IDR</a>
-        <a href="apis.html" class="text-[#1E3A8A] font-extrabold">API Catalog</a>
-        <a href="#account" onclick="openTrustModal('account', event)" class="px-3 py-1.5 rounded-lg bg-[#EAE6DF] hover:bg-[#DDD8CE] text-[#0A0D14] border border-[#94A3B8] text-xs font-mono font-bold transition">Client Portal</a>
-        <a href="index.html#checkout" class="px-4 py-2 rounded-lg bg-[#0A0D14] hover:bg-[#1E3A8A] text-white font-bold transition">Self-Serve Pricing</a>
+        <a href="index.html" class="text-[#071C21] hover:text-[#0F766E]">Overview</a>
+        <a href="lettings/index.html" class="text-[#071C21] hover:text-[#0F766E]">Live Payer MRF &amp; IDR</a>
+        <a href="apis.html" class="text-[#0F766E] font-extrabold">API Catalog</a>
+        <a href="#account" onclick="openTrustModal('account', event)" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] text-xs font-mono font-bold transition">Client Portal</a>
+        <a href="index.html#checkout" class="px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold transition">Self-Serve Pricing</a>
       </nav>
-      <button type="button" onclick="toggleMobileNav()" class="md:hidden shrink-0 ml-3 px-3.5 py-2 rounded-lg bg-[#EAE6DF] border border-[#94A3B8] text-xs font-mono font-bold text-[#0A0D14] shadow-sm">MENU</button>
+      <button type="button" onclick="toggleMobileNav()" class="md:hidden shrink-0 ml-3 px-3.5 py-2 rounded-lg bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21] shadow-sm">MENU</button>
     </div>
-    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-[#CBD5E1] bg-white px-6 py-4 flex flex-col gap-3 text-sm font-bold">
-      <a href="index.html" class="text-[#0A0D14]">Overview</a>
-      <a href="lettings/index.html" class="text-[#0A0D14]">Live 50-State Payer MRF &amp; IDR</a>
-      <a href="apis.html" class="text-[#1E3A8A]">API Catalog</a>
-      <a href="#account" onclick="openTrustModal('account', event)" class="text-[#1E3A8A]">Client Portal</a>
+    <div id="mobile-nav-drawer" class="hidden md:hidden border-t border-[#B4D6D0] bg-white px-6 py-4 flex flex-col gap-3 text-sm font-bold">
+      <a href="index.html" class="text-[#071C21]">Overview</a>
+      <a href="lettings/index.html" class="text-[#071C21]">Live 50-State Payer MRF &amp; IDR</a>
+      <a href="apis.html" class="text-[#0F766E]">API Catalog</a>
+      <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E]">Client Portal</a>
       <a href="#status" onclick="openTrustModal('status', event)" class="text-[#065F46]">Live System Status</a>
-      <a href="index.html#checkout" class="px-4 py-2 rounded-lg bg-[#0A0D14] text-white text-center font-bold">Self-Serve Pricing</a>
+      <a href="index.html#checkout" class="px-4 py-2 rounded-lg bg-[#071C21] text-white text-center font-bold">Self-Serve Pricing</a>
     </div>
   </header>
   <main class="max-w-7xl mx-auto px-6 py-12">
     {api_catalog_block}
   </main>
-  <footer class="border-t border-[#CBD5E1] bg-[#EAE6DF] py-8 mt-16">
-    <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-4 text-xs font-mono font-bold text-[#0A0D14]">
+  <footer class="border-t border-[#B4D6D0] bg-[#DDF0EC] py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between gap-4 text-xs font-mono font-bold text-[#071C21]">
       <div>ALL 52 FEDERAL CMS IDR &amp; 50-STATE PAYER MRF PORTAL MONITORS ACTIVE</div>
       <div class="flex flex-wrap items-center gap-4">
-        <a href="#account" onclick="openTrustModal('account', event)" class="hover:text-[#1E3A8A] underline">Client Portal</a>
-        <a href="#status" onclick="openTrustModal('status', event)" class="text-[#065F46] hover:text-[#1E3A8A] underline">System Status</a>
-        <a href="#security" onclick="openTrustModal('security', event)" class="hover:text-[#1E3A8A] underline">Security</a>
-        <a href="#contact" onclick="openTrustModal('contact', event)" class="hover:text-[#1E3A8A] underline">AI Concierge</a>
-        <a href="#terms" onclick="openTrustModal('terms', event)" class="hover:text-[#1E3A8A] underline">Terms</a>
-        <a href="#privacy" onclick="openTrustModal('privacy', event)" class="hover:text-[#1E3A8A] underline">Privacy</a>
+        <a href="#account" onclick="openTrustModal('account', event)" class="hover:text-[#0F766E] underline">Client Portal</a>
+        <a href="#status" onclick="openTrustModal('status', event)" class="text-[#065F46] hover:text-[#0F766E] underline">System Status</a>
+        <a href="#security" onclick="openTrustModal('security', event)" class="hover:text-[#0F766E] underline">Security</a>
+        <a href="#contact" onclick="openTrustModal('contact', event)" class="hover:text-[#0F766E] underline">AI Concierge</a>
+        <a href="#terms" onclick="openTrustModal('terms', event)" class="hover:text-[#0F766E] underline">Terms</a>
+        <a href="#privacy" onclick="openTrustModal('privacy', event)" class="hover:text-[#0F766E] underline">Privacy</a>
       </div>
     </div>
   </footer>

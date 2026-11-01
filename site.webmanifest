@@ -4,8 +4,8 @@
   "description": "Autonomous 50-State Commercial Payer TiC MRF rate feed, Medicare MPFS RVU/GPCI locality benchmarks, ERISA 29 CFR 2560.503-1 appeal generator, and 6-File OpenXML (.DOCX + .XLSX) Appeal & NSA IDR Compiler.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAF8F5",
-  "theme_color": "#0A0D14",
+  "background_color": "#F2F9F8",
+  "theme_color": "#071C21",
   "icons": [
     {
       "src": "https://rubricward.com/favicon-48x48.png?v=7",
