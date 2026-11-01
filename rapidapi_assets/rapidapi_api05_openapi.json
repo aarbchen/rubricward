@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Build America Buy America BABA & 23 CFR 635.410 Material Auditor API",
+    "title": "CMS NCCI Procedure-to-Procedure PTP Unbundling MUE & Modifier Scrubber API",
     "version": "1.0.0",
-    "description": "Audit construction Bills of Materials against Build America, Buy America (BABA) and FHWA 23 CFR 635.410 domestic iron, steel, and manufactured product rules."
+    "description": "Scrub surgical and outpatient claim lines against CMS National Correct Coding Initiative (NCCI) PTP column-1/column-2 edits, MUE caps, and Modifier -25/-59/-XS rules."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/audit/baba-buy-america": {
       "post": {
-        "summary": "Audit BABA & Buy America Material Compliance",
-        "description": "Audit construction Bills of Materials against Build America, Buy America (BABA) and FHWA 23 CFR 635.410 domestic iron, steel, and manufactured product rules.",
-        "operationId": "auditBabaBuyAmerica",
+        "summary": "Audit Claim Lines Against CMS NCCI PTP & MUE Edits",
+        "description": "Scrub surgical and outpatient claim lines against CMS National Correct Coding Initiative (NCCI) PTP column-1/column-2 edits, MUE caps, and Modifier -25/-59/-XS rules.",
+        "operationId": "auditCmsNcciPtpMue",
         "requestBody": {
           "required": true,
           "content": {
@@ -23,55 +23,31 @@
               "schema": {
                 "type": "object",
                 "required": [
-                  "project_name",
-                  "bom_items"
+                  "project_id"
                 ],
                 "properties": {
-                  "project_name": {
+                  "project_id": {
                     "type": "string",
-                    "description": "Infrastructure project title.",
-                    "default": "PennDOT I-81 Bridge Replacement"
+                    "description": "Claim Cohort or Encounter ID.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW"
                   },
                   "funding_agency": {
                     "type": "string",
-                    "description": "Federal funding agency (FHWA, FTA, EPA SRF, USACE).",
-                    "default": "FHWA / DOT"
-                  },
-                  "bom_items": {
-                    "type": "array",
-                    "description": "Bill of Materials items with category, origin, domestic_cost_pct, and extended_cost_usd.",
-                    "items": {
-                      "type": "object"
-                    }
+                    "description": "Governing coding edit standard or commercial payer.",
+                    "default": "CMS NCCI / Commercial Payer Claims Editing Engine"
                   }
                 }
               },
               "example": {
-                "project_name": "PennDOT I-81 Composite Bridge Deck Replacement",
-                "funding_agency": "FHWA / DOT",
-                "bom_items": [
-                  {
-                    "material_name": "ASTM A709 Grade 50W Structural Steel Plate Girders",
-                    "category": "Iron/Steel",
-                    "country_of_melt_and_pour": "US",
-                    "domestic_cost_pct": 100.0,
-                    "extended_cost_usd": 1420000
-                  },
-                  {
-                    "material_name": "Elastomeric Bridge Bearing Pads",
-                    "category": "Construction Material",
-                    "country_of_melt_and_pour": "US",
-                    "domestic_cost_pct": 92.0,
-                    "extended_cost_usd": 84000
-                  }
-                ]
+                "project_id": "TXDOI-MRF-CPT-29881-DFW",
+                "funding_agency": "CMS NCCI / Commercial Payer Claims Editing Engine"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

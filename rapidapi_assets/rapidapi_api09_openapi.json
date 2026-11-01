@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Construction RFI Differing Site Conditions & AIA G701 Change Order API",
+    "title": "ERISA 29 CFR 2560.503-1 Medical Necessity & IRO Appeal Drafter API",
     "version": "1.0.0",
-    "description": "Analyze plan discrepancies or Differing Site Conditions (FAR 52.236-2), calculate Critical Path Time-Impact float consumption, and draft AIA G701 Change Orders."
+    "description": "Draft citation-backed ERISA 29 CFR 2560.503-1 Level-1/Level-2 medical necessity appeals demanding same-specialty peer review and complete administrative claim files."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/generate/rfi-change-order-claim": {
       "post": {
-        "summary": "Generate Construction RFI & AIA G701 Change Order Claim",
-        "description": "Analyze plan discrepancies or Differing Site Conditions (FAR 52.236-2), calculate Critical Path Time-Impact float consumption, and draft AIA G701 Change Orders.",
-        "operationId": "generateRfiChangeOrderClaim",
+        "summary": "Generate ERISA 29 CFR 2560.503-1 Medical Necessity Appeal",
+        "description": "Draft citation-backed ERISA 29 CFR 2560.503-1 Level-1/Level-2 medical necessity appeals demanding same-specialty peer review and complete administrative claim files.",
+        "operationId": "generateErisaMedicalNecessityAppeal",
         "requestBody": {
           "required": true,
           "content": {
@@ -23,50 +23,38 @@
               "schema": {
                 "type": "object",
                 "required": [
-                  "project_name",
-                  "field_condition_description"
+                  "project_id",
+                  "issue_summary"
                 ],
                 "properties": {
-                  "project_name": {
+                  "project_id": {
                     "type": "string",
-                    "description": "Active project contract name.",
-                    "default": "USACE Floodwall Monolith"
+                    "description": "Denied Claim or Cohort ID.",
+                    "default": "CADMHC-MRF-CPT-63030-SFO"
                   },
-                  "contract_clause_reference": {
+                  "issue_summary": {
                     "type": "string",
-                    "description": "Applicable notice/change clause (e.g., FAR 52.236-2, AIA A201 4.3.4).",
-                    "default": "FAR 52.236-2 Differing Site Conditions"
-                  },
-                  "field_condition_description": {
-                    "type": "string",
-                    "description": "Detailed narrative of plan discrepancy or subsurface condition.",
-                    "minLength": 20
+                    "description": "Clinical summary of the CARC/RARC denial and documented objective medical necessity evidence.",
+                    "minLength": 10
                   },
                   "direct_cost_impact_usd": {
                     "type": "number",
-                    "description": "Estimated direct labor, equipment, and material cost impact in USD.",
-                    "default": 184500
-                  },
-                  "critical_path_delay_days": {
-                    "type": "integer",
-                    "description": "Estimated CPM schedule delay in calendar days.",
-                    "default": 14
+                    "description": "Disputed principal claim allowed amount under commercial MRF 75th percentile in USD.",
+                    "default": 68500
                   }
                 }
               },
               "example": {
-                "project_name": "USACE Norfolk District Floodwall Sector Gate Monolith",
-                "contract_clause_reference": "FAR 52.236-2 Differing Site Conditions (Type I)",
-                "field_condition_description": "Geotechnical boring log B-14 indicated stiff clay at El. -18.0 FT, but sheet-pile driving encountered uncharted submerged timber wharf pilings and granite riprap from El. -11.5 FT to -19.0 FT.",
-                "direct_cost_impact_usd": 184500,
-                "critical_path_delay_days": 14
+                "project_id": "CADMHC-MRF-CPT-63030-SFO",
+                "issue_summary": "Payer issued CARC 50 (Not Medically Necessary) denial on CPT 63030 Lumbar Microdiscectomy despite MRI confirming L4-L5 extruded disc herniation and 8 weeks failed PT.",
+                "direct_cost_impact_usd": 68500
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

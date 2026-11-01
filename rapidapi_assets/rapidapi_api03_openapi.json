@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Davis-Bacon 29 CFR 5 & State Prevailing Wage Fringe Calculator API",
+    "title": "CMS Medicare Physician Fee Schedule MPFS RVU GPCI & ASC Calculator API",
     "version": "1.0.0",
-    "description": "Calculate federal Davis-Bacon (29 CFR Part 5) and State Little Davis-Bacon prevailing wage base rates, fringe burdens, and WH-347 payroll costs."
+    "description": "Calculate locality-adjusted CMS Medicare Physician Fee Schedule (MPFS) Work/PE/MP RVU rates, GPCI locality multipliers, and commercial percent-of-Medicare schedules."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/calculate/davis-bacon-prevailing-wage": {
       "post": {
-        "summary": "Calculate Davis-Bacon Prevailing Wage & Fringe Burden",
-        "description": "Calculate federal Davis-Bacon (29 CFR Part 5) and State Little Davis-Bacon prevailing wage base rates, fringe burdens, and WH-347 payroll costs.",
-        "operationId": "calculateDavisBaconPrevailingWage",
+        "summary": "Calculate CMS Medicare MPFS RVU & GPCI Locality Schedule",
+        "description": "Calculate locality-adjusted CMS Medicare Physician Fee Schedule (MPFS) Work/PE/MP RVU rates, GPCI locality multipliers, and commercial percent-of-Medicare schedules.",
+        "operationId": "calculateMedicareMpfsRvuGpci",
         "requestBody": {
           "required": true,
           "content": {
@@ -24,8 +24,7 @@
                 "type": "object",
                 "required": [
                   "state_code",
-                  "county_name",
-                  "crew_classifications"
+                  "county"
                 ],
                 "properties": {
                   "state_code": {
@@ -33,46 +32,35 @@
                     "description": "Two-letter U.S. state code.",
                     "default": "TX"
                   },
-                  "county_name": {
+                  "county": {
                     "type": "string",
-                    "description": "Project county name for wage determination lookup.",
-                    "default": "Harris County"
+                    "description": "CMS Medicare GPCI locality or county name.",
+                    "default": "Dallas / Tarrant County (DFW Locality)"
                   },
                   "construction_type": {
                     "type": "string",
-                    "description": "Davis-Bacon construction category (Highway, Heavy, Building, Residential).",
-                    "default": "Highway"
+                    "description": "Place of Service setting (ASC / Outpatient Facility, HOPD, Inpatient, Office).",
+                    "default": "ASC / Outpatient Facility"
                   },
-                  "crew_classifications": {
-                    "type": "array",
-                    "description": "List of labor trade classifications and estimated hours.",
-                    "items": {
-                      "type": "object"
-                    }
+                  "estimated_crew_hours": {
+                    "type": "integer",
+                    "description": "Total annual claim encounters across the specialty cohort.",
+                    "default": 1250
                   }
                 }
               },
               "example": {
                 "state_code": "TX",
-                "county_name": "Harris County",
-                "construction_type": "Highway",
-                "crew_classifications": [
-                  {
-                    "trade": "Power Equipment Operator (Asphalt Paver / Roller)",
-                    "estimated_hours": 1450
-                  },
-                  {
-                    "trade": "Cement Mason / Concrete Finisher",
-                    "estimated_hours": 980
-                  }
-                ]
+                "county": "Dallas / Tarrant County (DFW Locality)",
+                "construction_type": "ASC / Outpatient Facility",
+                "estimated_crew_hours": 1250
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

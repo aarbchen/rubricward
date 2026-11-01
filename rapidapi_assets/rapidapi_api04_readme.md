@@ -1,14 +1,14 @@
-# 52-Portal Live State DOT Lettings, USACE & Public Works Feed API
+# 52-Portal Live Commercial Payer MRF Rate Disparities & NSA IDR Feed API
 
-**By RubricWard Preconstruction & DOT Systems** (`https://rubricward.com`)
+**By RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR Systems** (`https://rubricward.com`)
 
-Stream AI-vetted heavy-civil, highway, bridge, water/sewer, and commercial construction lettings across all 50 State DOTs, USACE, and Municipal portals.
+Stream pre-vetted commercial payer TiC MRF rate-disparity cohorts, ERISA claim underpayments, and Federal No Surprises Act (NSA) IDR arbitration cases across 52 portals.
 
 ---
 
-## Key Capabilities & Construction Preconstruction Use Cases
-- **Stateless & Deterministic:** Zero database side effects; processes project manuals, DOT pay items, Davis-Bacon wage classifications, and AIA billing schedules in memory.
-- **Built for ConTech ERPs, Heavy-Civil Estimators & Surety Underwriters:** Ready to plug directly into Procore, Autodesk Construction Cloud, HeavyBid workflows, or AI estimating agents via `@rubricward/mcp-server`.
+## Key Capabilities & Healthcare Revenue Cycle Use Cases
+- **Stateless & Deterministic:** Zero database side effects; processes commercial payer Clinical Policy Bulletins, CMS TiC MRF CPT/DRG rate cohorts, Medicare MPFS RVU/GPCI baselines, and X12 835 remittances in memory.
+- **Built for Healthcare RCM Platforms, Specialty Physician Groups, ASCs & ERISA Appeal Attorneys:** Ready to plug into Epic, Athenahealth, Waystar, or AI revenue cycle agents via `@rubricward/mcp-server`.
 - **Route:** `GET /v1/lettings/live`
 
 ---
@@ -26,6 +26,6 @@ Stream AI-vetted heavy-civil, highway, bridge, water/sewer, and commercial const
 
 ## Pricing Tiers
 - **BASIC (`$0 / mo`):** `10 requests / month` hard limit (`10 requests / hour` rate limit) for testing and evaluation.
-- **PRO (`$49 / mo`):** `200 requests / month` for active estimating teams and specialty subcontractors.
-- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for regional general contractors and heavy-civil primes.
-- **MEGA (`$399 / mo`):** `4,000 requests / month` for ConTech SaaS platforms, surety brokerages, and multi-office builders.
+- **PRO (`$49 / mo`):** `200 requests / month` for specialty physician groups and ASC billing teams.
+- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for multi-specialty groups, RCM billing companies, and NSA IDR arbitration desks.
+- **MEGA (`$399 / mo`):** `4,000 requests / month` for hospital health systems, healthcare fintech platforms, and ERISA litigation firms.

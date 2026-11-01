@@ -1,3 +1,13 @@
+User-agent: Google-Favicon
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: https://rubricward.com/sitemap.xml

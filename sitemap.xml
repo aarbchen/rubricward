@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://rubricward.com/</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://rubricward.com/apis.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://rubricward.com/lettings/index.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/uhc-bcbs-tx-commercial-mrf-rate-disparity-asc-facility-fee-nsa.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/anthem-blue-cross-aetna-mrf-rate-spread-knox-keene-prompt-pay.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/florida-blue-unitedhealthcare-gi-endoscopy-asc-mrf-rate-spread.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/anthem-healthkeepers-cigna-emergency-medicine-radiology-out-of.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/highmark-bcbs-independence-blue-cross-ophthalmology-cataract-asc.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/empire-bcbs-emblemhealth-oxford-anesthesiology-plastic.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/bcbs-il-unitedhealthcare-cardiology-outpatient-cath-lab-mrf-rate.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/anthem-bcbs-ga-ambetter-general-surgery-bariatric-asc-mrf-rate.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/blue-cross-nc-cigna-diagnostic-imaging-idtf-mri-mrf-rate.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/anthem-bcbs-oh-medical-mutual-urology-lithotripsy-asc-mrf-rate.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/federal-no-surprises-act-45-cfr-149-510-certified-idr-entity.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-  <url><loc>https://rubricward.com/lettings/project/multi-state-ambulatory-surgery-center-asc-payer-contract.html</loc><lastmod>2026-11-01</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rubricward.com/</loc></url>
+  <url><loc>https://rubricward.com/apis.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/index.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/cadmhc-mrf-cpt-63030-sfo-cadmhc-mrf-cpt-63030-sfo-anthem-blue.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/floir-mrf-cpt-45378-mia-floir-mrf-cpt-45378-mia-florida-blue.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/papid-mrf-cpt-66984-phl-papid-mrf-cpt-66984-phl-highmark-bcbs.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/nydfs-mrf-cpt-01402-nyc-nydfs-mrf-cpt-01402-nyc-empire-bcbs.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/ildoi-mrf-cpt-93458-chi-ildoi-mrf-cpt-93458-chi-bcbs-il.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/gaoci-mrf-cpt-47562-atl-gaoci-mrf-cpt-47562-atl-anthem-bcbs-ga.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/ncdoi-mrf-cpt-70553-clt-ncdoi-mrf-cpt-70553-clt-blue-cross-nc.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/ohodi-mrf-cpt-52356-cmh-ohodi-mrf-cpt-52356-cmh-anthem-bcbs-oh.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/cms-nsa-idr-2026-q4-fed-cms-nsa-idr-2026-q4-fed-federal-no.html</loc></url>
+  <url><loc>https://rubricward.com/lettings/project/municipal-asc-rcm-2026-09-municipal-asc-rcm-2026-09-multi-state.html</loc></url>
 </urlset>

@@ -376,13 +376,13 @@ def check_portal_parity_and_telemetry() -> List[str]:
         pseo_src = fh.read()
 
     required_index_portal_markers = [
-        "LIVE MONITORING: 52 GOVERNMENT &amp; DOT PORTALS ACTIVE",
-        "ALL 50 STATE DOTS ACTIVE",
+        "LIVE MONITORING: 52 PAYER MRF &amp; STATE DOI PORTALS ACTIVE",
+        "ALL 50 STATE PAYER MRF PORTALS ACTIVE",
         "52 PORTALS DE-NOISED 24/7",
         "All Portals (52)",
-        "// 52 ACTIVE PROCUREMENT &amp; STATE DOT LETTING PORTALS",
-        "52 PORTALS ACTIVE &bull; 50-STATE DOT &amp; USACE DIRECTORY",
-        "ALL 52 FEDERAL USACE &amp; 50-STATE DOT PORTAL MONITORS ACTIVE",
+        "// 52 ACTIVE COMMERCIAL PAYER TIC MRF &amp; STATE DOI PORTALS",
+        "52 PORTALS ACTIVE &bull; 50-STATE PAYER MRF &amp; CMS NSA IDR DIRECTORY",
+        "ALL 52 FEDERAL CMS IDR &amp; 50-STATE PAYER MRF PORTAL MONITORS ACTIVE",
         '"portals_monitored": 52',
     ]
     for marker in required_index_portal_markers:
@@ -608,18 +608,18 @@ def check_product_output_quality_controls() -> List[str]:
         )
 
         expected_statutes = {
-            "TX": "Texas Public Information Act",
-            "CA": "California Public Records Act",
-            "FL": "Florida Public Records Law",
-            "VA": "Virginia Freedom of Information Act",
-            "PA": "Pennsylvania Right-to-Know Law",
-            "NY": "New York Freedom of Information Law",
-            "IL": "Illinois Freedom of Information Act",
-            "GA": "Georgia Open Records Act",
-            "NC": "North Carolina Public Records Law",
-            "OH": "Ohio Public Records Act",
-            "US": "5 U.S.C. § 552",
-            "MU": "Municipal Open Records",
+            "TX": "Texas Insurance Code § 1301.103",
+            "CA": "California Health and Safety Code § 1371",
+            "FL": "Florida Statutes § 627.6131",
+            "VA": "Virginia Code § 38.2-3407.15",
+            "PA": "Pennsylvania 40 P.S. § 991.2166",
+            "NY": "New York Insurance Law § 3224-a",
+            "IL": "Illinois Insurance Code 215 ILCS 5/368a",
+            "GA": "Georgia Prompt-Pay Act O.C.G.A. § 33-24-59.14",
+            "NC": "North Carolina Gen. Stat. § 58-3-225",
+            "OH": "Ohio Revised Code § 3901.389",
+            "US": "Federal No Surprises Act 42 U.S.C. § 300gg-111",
+            "MU": "Multi-Payer ERISA 29 CFR § 2560.503-1",
         }
         forbidden_fake_names = ("Apex Civil", "Granite State Paving", "Acme Corp", "Sample LLC")
 
@@ -654,7 +654,7 @@ def check_product_output_quality_controls() -> List[str]:
                         combined_text += data.decode("utf-8", errors="ignore") + "\n"
                 if expected_statute not in combined_text:
                     errors.append(f"[{state_code}] Expected open-records statute `{expected_statute}` missing in `.ZIP`")
-                if state_code != "TX" and "Texas Government Code Chapter 552" in combined_text:
+                if state_code != "TX" and "Texas Insurance Code § 1301.103" in combined_text:
                     errors.append(f"[{state_code}] Leaked `Texas Government Code Chapter 552` into non-TX `.ZIP`")
                 for fake_name in forbidden_fake_names:
                     if fake_name.lower() in combined_text.lower():
@@ -791,7 +791,7 @@ try {
     throw new Error('setCheckoutBilling(monthly) failed: ' + elements['price-tier2'].textContent);
   }
   sandbox.selectInteractiveDossier('CA');
-  if (!elements['shredder-active-badge'].textContent.includes('CALTRANS')) {
+  if (!elements['shredder-active-badge'].textContent.includes('CA DMHC')) {
     throw new Error('selectInteractiveDossier(CA) failed');
   }
   sandbox.selectPersonaQuickstart('takeoff');
@@ -849,7 +849,7 @@ try {
   const ansZip = sandbox.buildConciergeAnswer('What is inside the 6-File .ZIP Bid Package?', '');
   const ansUnit = sandbox.buildConciergeAnswer('How do 36-month DOT unit-price bid tabulations work?', '');
   const ansPrice = sandbox.buildConciergeAnswer('How do plans, pricing, and MCP/REST API keys work?', '');
-  if (!ansHi || !ansHi.text.includes('Welcome to the RubricWard AI Preconstruction') || ansHi.text.includes('matching live DOT letting')) {
+  if (!ansHi || !ansHi.text.includes('Welcome to the RubricWard AI Payer MRF') || ansHi.text.includes('matching live DOT letting')) {
     throw new Error('buildConciergeAnswer("hi") failed to return welcome greeting');
   }
   for (const r of [ansHi, ansUnsub, ansSky, ansLetting, ans50, ansZip, ansUnit, ansPrice]) {
@@ -857,7 +857,7 @@ try {
       throw new Error('buildConciergeAnswer() returned empty or undefined in response: ' + (r && r.text));
     }
   }
-  if (!ans50.text.includes('52 active public construction portals') || ans50.text === ansZip.text || ansUnit.text === ansPrice.text || ansUnsub.text === ansPrice.text) {
+  if (!ans50.text.includes('52 active healthcare payer rate-transparency & dispute portals') || ans50.text === ansZip.text || ansUnit.text === ansPrice.text || ansUnsub.text === ansPrice.text) {
     throw new Error('buildConciergeAnswer() did not return distinct, question-specific answers');
   }
   const secAttacks = [

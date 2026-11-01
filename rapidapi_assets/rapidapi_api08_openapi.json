@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Miller Act 40 USC 3131 & Surety Bond Capacity Underwriter API",
+    "title": "50-State Prompt-Pay Statute Interest Penalty & Clean-Claim Calculator API",
     "version": "1.0.0",
-    "description": "Underwrite contractor working capital, net worth, and WIP backlog to calculate Single/Aggregate Surety Bond limits and sliding-scale bond premiums."
+    "description": "Calculate 50-state statutory prompt-pay interest penalties (TX Ins. Code Ch. 1301 18% APR, CA H&S 1371 15% APR, FL 627.6131 12% APR) on overdue commercial payer claims."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/audit/surety-miller-act-bond": {
       "post": {
-        "summary": "Underwrite Miller Act Surety Bond Capacity & Premium",
-        "description": "Underwrite contractor working capital, net worth, and WIP backlog to calculate Single/Aggregate Surety Bond limits and sliding-scale bond premiums.",
-        "operationId": "auditSuretyMillerActBond",
+        "summary": "Calculate 50-State Prompt-Pay Statutory Interest Penalty",
+        "description": "Calculate 50-state statutory prompt-pay interest penalties (TX Ins. Code Ch. 1301 18% APR, CA H&S 1371 15% APR, FL 627.6131 12% APR) on overdue commercial payer claims.",
+        "operationId": "calculatePromptPayInterestPenalty",
         "requestBody": {
           "required": true,
           "content": {
@@ -24,58 +24,31 @@
                 "type": "object",
                 "required": [
                   "contractor_name",
-                  "current_assets_usd",
-                  "current_liabilities_usd",
-                  "tangible_net_worth_usd",
                   "target_project_bid_usd"
                 ],
                 "properties": {
                   "contractor_name": {
                     "type": "string",
-                    "description": "Legal name of construction contractor.",
-                    "default": "Lone Star Heavy Civil Constructors Inc."
-                  },
-                  "current_assets_usd": {
-                    "type": "number",
-                    "description": "CPA-reviewed current assets in USD.",
-                    "default": 6400000
-                  },
-                  "current_liabilities_usd": {
-                    "type": "number",
-                    "description": "Current liabilities in USD.",
-                    "default": 2950000
-                  },
-                  "tangible_net_worth_usd": {
-                    "type": "number",
-                    "description": "Tangible net worth (equity) in USD.",
-                    "default": 5100000
-                  },
-                  "uncompleted_wip_backlog_usd": {
-                    "type": "number",
-                    "description": "Current uncompleted Work-in-Progress (WIP) backlog in USD.",
-                    "default": 19500000
+                    "description": "Provider Group or Hospital legal name.",
+                    "default": "Texas Orthopedic & Spine Surgical Associates PLLC"
                   },
                   "target_project_bid_usd": {
                     "type": "number",
-                    "description": "New project contract value requiring 100% Performance & Payment Bonds.",
-                    "default": 11200000
+                    "description": "Net overdue clean-claim principal balance subject to statutory prompt-pay interest (USD).",
+                    "default": 1830000
                   }
                 }
               },
               "example": {
-                "contractor_name": "Lone Star Heavy Civil Constructors Inc.",
-                "current_assets_usd": 6400000,
-                "current_liabilities_usd": 2950000,
-                "tangible_net_worth_usd": 5100000,
-                "uncompleted_wip_backlog_usd": 19500000,
-                "target_project_bid_usd": 11200000
+                "contractor_name": "Texas Orthopedic & Spine Surgical Associates PLLC",
+                "target_project_bid_usd": 1830000
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

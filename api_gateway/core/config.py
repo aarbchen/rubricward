@@ -13,7 +13,7 @@ except ImportError:
 class Settings(BaseSettings):
     model_config = ConfigDict(env_file=".env", extra="ignore")
 
-    PROJECT_NAME: str = "RubricWard Preconstruction, 50-State DOT Bid-Tab & Prevailing-Wage API Gateway"
+    PROJECT_NAME: str = "RubricWard Commercial Payer MRF, Medicare RVU/GPCI, ERISA Appeal & NSA IDR API Gateway"
     VERSION: str = "1.0.0"
     API_V1_STR: str = "/v1"
 

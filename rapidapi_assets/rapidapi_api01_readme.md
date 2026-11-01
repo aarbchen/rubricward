@@ -1,14 +1,14 @@
-# CSI MasterFormat Divisions 00-48 Spec & Submittal Shredder API
+# Commercial Payer Clinical Policy Bulletin CPB & LCD Prior-Auth Shredder API
 
-**By RubricWard Preconstruction & DOT Systems** (`https://rubricward.com`)
+**By RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR Systems** (`https://rubricward.com`)
 
-Shred raw Construction Project Manuals into CSI MasterFormat Divisions 00-48 tables, submittal logs, liquidated damages, and retainage rules.
+Shred commercial payer Clinical Policy Bulletins (UHC, Anthem, Aetna, Cigna) and Medicare LCD/NCD guidelines into CPT medical necessity rules and ERISA appeal triggers.
 
 ---
 
-## Key Capabilities & Construction Preconstruction Use Cases
-- **Stateless & Deterministic:** Zero database side effects; processes project manuals, DOT pay items, Davis-Bacon wage classifications, and AIA billing schedules in memory.
-- **Built for ConTech ERPs, Heavy-Civil Estimators & Surety Underwriters:** Ready to plug directly into Procore, Autodesk Construction Cloud, HeavyBid workflows, or AI estimating agents via `@rubricward/mcp-server`.
+## Key Capabilities & Healthcare Revenue Cycle Use Cases
+- **Stateless & Deterministic:** Zero database side effects; processes commercial payer Clinical Policy Bulletins, CMS TiC MRF CPT/DRG rate cohorts, Medicare MPFS RVU/GPCI baselines, and X12 835 remittances in memory.
+- **Built for Healthcare RCM Platforms, Specialty Physician Groups, ASCs & ERISA Appeal Attorneys:** Ready to plug into Epic, Athenahealth, Waystar, or AI revenue cycle agents via `@rubricward/mcp-server`.
 - **Route:** `POST /v1/shred/csi-masterformat`
 
 ---
@@ -17,10 +17,9 @@ Shred raw Construction Project Manuals into CSI MasterFormat Divisions 00-48 tab
 
 ```json
 {
-  "project_name": "TxDOT IH-45 Corridor Mill & Superpave Overlay",
-  "solicitation_number": "CSJ-0912-72-614",
-  "state_code": "TX",
-  "specification_text": "SECTION 01 11 00 SUMMARY OF WORK: Liquidated damages of $2,500/calendar day apply beyond 240 calendar days. Retainage 5%. SECTION 03 30 00 CAST-IN-PLACE CONCRETE: Submit mix design and mill certs. SECTION 32 12 16 ASPHALT PAVING: TxDOT Item 3076 Superpave D-GR-B 18,500 Tons."
+  "project_id": "TXDOI-MRF-CPT-29881-DFW",
+  "target_trade": "Orthopedic Surgery & Ambulatory Surgery Center (ASC)",
+  "spec_text": "COMMERCIAL PAYER CLINICAL POLICY BULLETIN (CPB-0742): Lumbar Laminotomy (CPT 63030) and Arthroscopic Meniscectomy (CPT 29881) require 6 weeks of documented supervised physical therapy, NSAID trial, and MRI confirming nerve root compression. ERISA appeal deadline is 180 calendar days under 29 CFR 2560.503-1."
 }
 ```
 
@@ -28,6 +27,6 @@ Shred raw Construction Project Manuals into CSI MasterFormat Divisions 00-48 tab
 
 ## Pricing Tiers
 - **BASIC (`$0 / mo`):** `10 requests / month` hard limit (`10 requests / hour` rate limit) for testing and evaluation.
-- **PRO (`$49 / mo`):** `200 requests / month` for active estimating teams and specialty subcontractors.
-- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for regional general contractors and heavy-civil primes.
-- **MEGA (`$399 / mo`):** `4,000 requests / month` for ConTech SaaS platforms, surety brokerages, and multi-office builders.
+- **PRO (`$49 / mo`):** `200 requests / month` for specialty physician groups and ASC billing teams.
+- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for multi-specialty groups, RCM billing companies, and NSA IDR arbitration desks.
+- **MEGA (`$399 / mo`):** `4,000 requests / month` for hospital health systems, healthcare fintech platforms, and ERISA litigation firms.

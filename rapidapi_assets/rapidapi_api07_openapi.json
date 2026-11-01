@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "AIA G702 G703 Schedule of Values SOV & Retainage Billing Generator API",
+    "title": "HIPAA X12 835 Electronic Remittance Advice ERA CARC Underpayment Auditor API",
     "version": "1.0.0",
-    "description": "Convert construction bid items into a balanced, front-load-compliant AIA G702 Application for Payment and G703 Continuation Sheet with retainage math."
+    "description": "Audit HIPAA X12 835 Electronic Remittance Advice (ERA) payment lines and CARC/RARC adjustments (CARC 45, 50, 96, 97, 197) against contracted fee schedules and TiC MRF benchmarks."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/generate/aia-g702-g703-pay-app": {
       "post": {
-        "summary": "Generate AIA G702 & G703 Schedule of Values Pay App",
-        "description": "Convert construction bid items into a balanced, front-load-compliant AIA G702 Application for Payment and G703 Continuation Sheet with retainage math.",
-        "operationId": "generateAiaG702G703PayApp",
+        "summary": "Audit HIPAA X12 835 ERA Remittance & CARC Underpayments",
+        "description": "Audit HIPAA X12 835 Electronic Remittance Advice (ERA) payment lines and CARC/RARC adjustments (CARC 45, 50, 96, 97, 197) against contracted fee schedules and TiC MRF benchmarks.",
+        "operationId": "auditHipaa835EraRemittance",
         "requestBody": {
           "required": true,
           "content": {
@@ -23,63 +23,38 @@
               "schema": {
                 "type": "object",
                 "required": [
-                  "project_name",
-                  "sov_lines"
+                  "project_id",
+                  "contract_sum_usd"
                 ],
                 "properties": {
-                  "project_name": {
+                  "project_id": {
                     "type": "string",
-                    "description": "Construction contract title.",
-                    "default": "Walnut Creek WWTP Rehab"
+                    "description": "Remittance Audit Batch ID.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW"
                   },
-                  "application_number": {
-                    "type": "integer",
-                    "description": "Monthly progress pay application number.",
-                    "default": 4
+                  "contractor_name": {
+                    "type": "string",
+                    "description": "Billing Provider Group or ASC legal name.",
+                    "default": "Texas Orthopedic & Spine Surgical Associates PLLC"
                   },
-                  "retainage_pct": {
+                  "contract_sum_usd": {
                     "type": "number",
-                    "description": "Contract retainage withhold percentage.",
-                    "default": 5.0
-                  },
-                  "sov_lines": {
-                    "type": "array",
-                    "description": "Schedule of Values line items with scheduled_value_usd, prev_completed_usd, this_period_usd, stored_materials_usd.",
-                    "items": {
-                      "type": "object"
-                    }
+                    "description": "Total contracted expected allowed amount across the remittance batch in USD.",
+                    "default": 1840000
                   }
                 }
               },
               "example": {
-                "project_name": "City of Austin Walnut Creek WWTP Digester Rehab",
-                "application_number": 4,
-                "retainage_pct": 5.0,
-                "sov_lines": [
-                  {
-                    "item_no": "01",
-                    "description": "Mobilization, Bonds & Submittals",
-                    "scheduled_value_usd": 380000,
-                    "prev_completed_usd": 380000,
-                    "this_period_usd": 0,
-                    "stored_materials_usd": 0
-                  },
-                  {
-                    "item_no": "02",
-                    "description": "Cast-in-Place Structural Digester Wall Rehab",
-                    "scheduled_value_usd": 1950000,
-                    "prev_completed_usd": 820000,
-                    "this_period_usd": 465000,
-                    "stored_materials_usd": 115000
-                  }
-                ]
+                "project_id": "TXDOI-MRF-CPT-29881-DFW",
+                "contractor_name": "Texas Orthopedic & Spine Surgical Associates PLLC",
+                "contract_sum_usd": 1840000
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

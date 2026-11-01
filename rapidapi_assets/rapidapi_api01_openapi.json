@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "CSI MasterFormat Divisions 00-48 Spec & Submittal Shredder API",
+    "title": "Commercial Payer Clinical Policy Bulletin CPB & LCD Prior-Auth Shredder API",
     "version": "1.0.0",
-    "description": "Shred raw Construction Project Manuals into CSI MasterFormat Divisions 00-48 tables, submittal logs, liquidated damages, and retainage rules."
+    "description": "Shred commercial payer Clinical Policy Bulletins (UHC, Anthem, Aetna, Cigna) and Medicare LCD/NCD guidelines into CPT medical necessity rules and ERISA appeal triggers."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/shred/csi-masterformat": {
       "post": {
-        "summary": "Shred CSI MasterFormat Specification",
-        "description": "Shred raw Construction Project Manuals into CSI MasterFormat Divisions 00-48 tables, submittal logs, liquidated damages, and retainage rules.",
-        "operationId": "shredCsiMasterformatSpec",
+        "summary": "Shred Commercial Payer Clinical Policy Bulletin",
+        "description": "Shred commercial payer Clinical Policy Bulletins (UHC, Anthem, Aetna, Cigna) and Medicare LCD/NCD guidelines into CPT medical necessity rules and ERISA appeal triggers.",
+        "operationId": "shredCommercialPayerCpb",
         "requestBody": {
           "required": true,
           "content": {
@@ -23,43 +23,37 @@
               "schema": {
                 "type": "object",
                 "required": [
-                  "specification_text"
+                  "spec_text"
                 ],
                 "properties": {
-                  "project_name": {
+                  "project_id": {
                     "type": "string",
-                    "description": "Project title or letting name.",
-                    "default": "TxDOT IH-45 Mill & Overlay"
+                    "description": "Claim Cohort ID, Payer Policy ID, or NSA IDR Case Reference.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW"
                   },
-                  "solicitation_number": {
+                  "target_trade": {
                     "type": "string",
-                    "description": "Official DOT CSJ, USACE, or Municipal solicitation ID.",
-                    "default": "CSJ-0912-72-614"
+                    "description": "Clinical specialty focus (e.g., Orthopedic Surgery & ASC, Neurosurgery / Spine).",
+                    "default": "Orthopedic Surgery & ASC"
                   },
-                  "state_code": {
+                  "spec_text": {
                     "type": "string",
-                    "description": "Two-letter U.S. state postal code.",
-                    "default": "TX"
-                  },
-                  "specification_text": {
-                    "type": "string",
-                    "description": "Unstructured Project Manual or CSI specification text to shred.",
-                    "minLength": 20
+                    "description": "Unstructured Commercial Payer Clinical Policy Bulletin (CPB) or Medicare LCD/NCD text to shred.",
+                    "minLength": 10
                   }
                 }
               },
               "example": {
-                "project_name": "TxDOT IH-45 Corridor Mill & Superpave Overlay",
-                "solicitation_number": "CSJ-0912-72-614",
-                "state_code": "TX",
-                "specification_text": "SECTION 01 11 00 SUMMARY OF WORK: Liquidated damages of $2,500/calendar day apply beyond 240 calendar days. Retainage 5%. SECTION 03 30 00 CAST-IN-PLACE CONCRETE: Submit mix design and mill certs. SECTION 32 12 16 ASPHALT PAVING: TxDOT Item 3076 Superpave D-GR-B 18,500 Tons."
+                "project_id": "TXDOI-MRF-CPT-29881-DFW",
+                "target_trade": "Orthopedic Surgery & Ambulatory Surgery Center (ASC)",
+                "spec_text": "COMMERCIAL PAYER CLINICAL POLICY BULLETIN (CPB-0742): Lumbar Laminotomy (CPT 63030) and Arthroscopic Meniscectomy (CPT 29881) require 6 weeks of documented supervised physical therapy, NSAID trial, and MRI confirming nerve root compression. ERISA appeal deadline is 180 calendar days under 29 CFR 2560.503-1."
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

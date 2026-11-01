@@ -1,40 +1,40 @@
 {
-  "name": "RubricWard | 50-State DOT Bid-Tab, Prevailing-Wage & Construction Takeoff Intelligence",
+  "name": "RubricWard | 50-State Commercial Payer TiC MRF, Medicare MPFS & NSA IDR Intelligence",
   "short_name": "RubricWard",
-  "description": "Autonomous 50-State DOT heavy-civil letting feed, 36-month historical unit-price bid tabulations, Davis-Bacon WH-347 prevailing wages, and 6-File OpenXML (.DOCX + .XLSX) Takeoff Compiler.",
+  "description": "Autonomous 50-State Commercial Payer TiC MRF rate feed, Medicare MPFS RVU/GPCI locality benchmarks, ERISA 29 CFR 2560.503-1 appeal generator, and 6-File OpenXML (.DOCX + .XLSX) Appeal & NSA IDR Compiler.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAF8F5",
   "theme_color": "#0A0D14",
   "icons": [
     {
-      "src": "https://rubricward.com/favicon-48x48.png?v=6",
+      "src": "https://rubricward.com/favicon-48x48.png?v=7",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "https://rubricward.com/favicon-96x96.png?v=6",
+      "src": "https://rubricward.com/favicon-96x96.png?v=7",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "https://rubricward.com/favicon-144x144.png?v=6",
+      "src": "https://rubricward.com/favicon-144x144.png?v=7",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "https://rubricward.com/apple-touch-icon.png?v=6",
+      "src": "https://rubricward.com/apple-touch-icon.png?v=7",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "https://rubricward.com/favicon-192x192.png?v=6",
+      "src": "https://rubricward.com/favicon-192x192.png?v=7",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://rubricward.com/favicon-512x512.png?v=6",
+      "src": "https://rubricward.com/favicon-512x512.png?v=7",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

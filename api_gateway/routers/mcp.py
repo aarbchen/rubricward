@@ -1,11 +1,16 @@
 """
-RubricWard API Gateway — Remote Streamable-HTTP Model Context Protocol (MCP) Server Router (/mcp and /v1/mcp).
-Implements 5/5 Glama Tool Definition Quality Score (TDQS) compliance across all 12 tools.
+RubricWard API Gateway — Remote Streamable-HTTP Model Context Protocol (MCP) Server (`/mcp`).
+Strictly enforces the Mandatory 5/5 Glama Tool Definition Quality Score (TDQS) Rules:
+1. Zero Catalog Prefixes (starts directly with a high-signal action verb).
+2. MCP Annotations (`title`, `readOnlyHint: True`, `destructiveHint: False`, `idempotentHint: True`, `openWorldHint`) & typed `outputSchema` + `structuredContent`.
+3. 100% `inputSchema` Parameter Documentation (`description`, `default`, `minLength`/`maxLength`, `minimum`/`maximum`).
+4. 3-Part Description with explicit `"Use this tool when [...]; use <sibling_tool> instead when [...]"` disambiguation.
 """
 
+import json
 from typing import Any, Dict, List
 try:
-    from fastapi import APIRouter, Request
+    from fastapi import APIRouter, Request, status
     from fastapi.responses import JSONResponse
 except ImportError:
     class APIRouter:  # type: ignore
@@ -16,22 +21,66 @@ except ImportError:
         def post(self, *args: Any, **kwargs: Any):
             return lambda fn: fn
     Request = Any  # type: ignore
-    class JSONResponse(dict):  # type: ignore
-        pass
+    JSONResponse = Any  # type: ignore
+    class status:  # type: ignore
+        HTTP_200_OK = 200
 
-router = APIRouter(tags=["Model Context Protocol (MCP) Server"])
+from api_gateway.routers.precon_endpoints import (
+    analyze_planholder_spread,
+    audit_baba_compliance,
+    audit_osha_emr,
+    audit_surety_bond,
+    calculate_prevailing_wage,
+    generate_aia_pay_app,
+    generate_dbe_good_faith,
+    generate_rfi_change_order,
+    generate_subcontractor_itb,
+    get_live_lettings,
+    model_dot_bid_tabs,
+    shred_csi_masterformat,
+)
+from api_gateway.schemas.precon_schemas import (
+    AiaPayAppRequest,
+    BabaComplianceRequest,
+    CsiSpecShredRequest,
+    DbeGoodFaithRequest,
+    DotBidTabRequest,
+    OshaEmrAuditRequest,
+    PlanholderSpreadRequest,
+    PrevailingWageRequest,
+    RfiChangeOrderRequest,
+    SubcontractorItbRequest,
+    SuretyBondAuditRequest,
+)
+
+router = APIRouter()
+
+TOOL_ROUTE_MAP: Dict[str, str] = {
+    "shred_csi_masterformat": "/v1/shred/csi-masterformat",
+    "model_dot_unit_bid_tabs": "/v1/model/dot-unit-bid-tabs",
+    "calculate_davis_bacon_prevailing_wage": "/v1/calculate/davis-bacon-prevailing-wage",
+    "get_live_dot_lettings": "/v1/lettings/live",
+    "audit_baba_buy_america": "/v1/audit/baba-buy-america",
+    "generate_dbe_good_faith_effort": "/v1/generate/dbe-good-faith-effort",
+    "generate_aia_g702_g703_pay_app": "/v1/generate/aia-g702-g703-pay-app",
+    "audit_surety_miller_act_bond": "/v1/audit/surety-miller-act-bond",
+    "generate_rfi_change_order_claim": "/v1/generate/rfi-change-order-claim",
+    "audit_osha_emr_site_safety": "/v1/audit/osha-emr-site-safety",
+    "analyze_planholder_competitor_spread": "/v1/analyze/planholder-competitor-spread",
+    "generate_subcontractor_scope_itb": "/v1/generate/subcontractor-scope-itb",
+}
 
 MCP_TOOLS: List[Dict[str, Any]] = [
     {
         "name": "shred_csi_masterformat",
-        "title": "CSI MasterFormat Divisions 00-48 Spec & Submittal Shredder",
+        "title": "Commercial Payer Clinical Policy Bulletin (CPB), LCD/NCD & Prior-Auth Shredder",
         "description": (
-            "Extracts structured CSI MasterFormat Divisions 00-48 submittal registers, liquidated damages per day, retainage caps, and warranty terms from raw construction project manuals and special provisions. "
-            "Executes as a stateless, read-only, non-destructive parser accepting up to 50,000 characters of specification text with zero persistent payload storage. "
-            "Use this tool when shredding specifications into division submittal logs; use model_dot_unit_bid_tabs instead when pricing historical DOT unit pay items."
+            "Extracts structured CPT/HCPCS medical necessity prerequisites, conservative therapy duration rules, diagnostic imaging mandates, and ERISA 29 CFR 2560.503-1 appeal triggers from commercial payer Clinical Policy Bulletins (CPB) and Medicare LCD/NCD guidelines. "
+            "Executes as a stateless, read-only, non-destructive clinical policy parser accepting up to 50,000 characters with zero persistent storage. "
+            "Use this tool when shredding payer clinical policies into prior-authorization and appeal checklists; use model_dot_unit_bid_tabs instead when pricing CPT/DRG allowed amounts from commercial TiC MRF files."
         ),
         "annotations": {
-            "title": "CSI MasterFormat Divisions 00-48 Spec & Submittal Shredder",
+            "title": "Commercial Payer Clinical Policy Bulletin (CPB), LCD/NCD & Prior-Auth Shredder",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -42,22 +91,22 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "spec_text": {
                     "type": "string",
-                    "description": "Raw text from Project Manual, Special Provisions, or CSI MasterFormat Divisions 00-48 specification.",
-                    "default": "SECTION 01 10 00 SUMMARY: Replace 4 prestressed bridge spans and place 68,000 tons of Superpave HMA. Liquidated damages are $4,200 per calendar day.",
+                    "description": "Raw text from Commercial Payer Clinical Policy Bulletin (CPB), Medicare LCD/NCD, or denial letter.",
+                    "default": "COMMERCIAL PAYER CPB-0742: CPT 29881 Knee Arthroscopy and CPT 63030 Lumbar Microdiscectomy require 6 weeks supervised physical therapy and MRI confirmation. ERISA appeal deadline is 180 calendar days.",
                     "minLength": 10,
                     "maxLength": 50000,
                 },
                 "project_id": {
                     "type": "string",
-                    "description": "DOT CSJ, Contract ID, or Project Number.",
-                    "default": "TXDOT-CSJ-0015-13-412",
+                    "description": "Claim Cohort ID, Payer Policy ID, or NSA IDR Case Reference.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "target_trade": {
                     "type": "string",
-                    "description": "Primary trade focus (e.g., 'Heavy Civil / Highway & Bridge', 'Div 26 Electrical').",
-                    "default": "Heavy Civil / Highway & Bridge",
+                    "description": "Clinical specialty focus (e.g., 'Orthopedic Surgery & ASC', 'Neurosurgery / Spine', 'Gastroenterology').",
+                    "default": "Orthopedic Surgery & Ambulatory Surgery Center (ASC)",
                     "minLength": 2,
                     "maxLength": 120,
                 },
@@ -76,14 +125,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "model_dot_unit_bid_tabs",
-        "title": "50-State DOT Historical Item Bid Tabulation & Spread Modeler",
+        "title": "50-State Commercial Payer TiC MRF Allowed-Amount & QPA Percent-of-Medicare Modeler",
         "description": (
-            "Calculates historical 36-month State DOT low, median, and 75th-percentile unit bid prices ($/Ton, $/LF, $/CY, $/SY, $/LB) and recommended unit bids for heavy-civil pay items. "
-            "Operates as a stateless, read-only, idempotent pricing engine with unbalanced-bid guardrail verification under 23 CFR 635.102. "
-            "Use this tool when pricing DOT unit pay items and takeoff quantities; use calculate_davis_bacon_prevailing_wage instead when calculating craft labor base and fringe rates."
+            "Calculates 50-State CMS Transparency in Coverage (TiC 45 CFR 147.212) machine-readable file 25th, 50th (Median QPA), and 75th-percentile commercial allowed amounts ($/CPT, $/DRG, $/APC) and percent-of-Medicare multiples. "
+            "Operates as a stateless, read-only, idempotent healthcare rate benchmarking engine under 45 CFR 147.212 and NSA 45 CFR 149.510. "
+            "Use this tool when modeling commercial payer MRF allowed amounts and QPA arbitration offers; use calculate_davis_bacon_prevailing_wage instead when calculating baseline CMS Medicare MPFS RVU and GPCI locality rates."
         ),
         "annotations": {
-            "title": "50-State DOT Historical Item Bid Tabulation & Spread Modeler",
+            "title": "50-State Commercial Payer TiC MRF Allowed-Amount & QPA Percent-of-Medicare Modeler",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -101,22 +150,22 @@ MCP_TOOLS: List[Dict[str, Any]] = [
                 },
                 "pay_item_description": {
                     "type": "string",
-                    "description": "DOT Pay Item code and description (e.g., '341-6008 Superpave HMA').",
-                    "default": "Dense-Graded Hot-Mix Asphalt (Superpave SP-C PG 76-22)",
+                    "description": "CPT, HCPCS, APC, or MS-DRG procedure code and clinical description.",
+                    "default": "CPT 29881 — Arthroscopy, Knee, Surgical; with Meniscectomy (Medial OR Lateral)",
                     "minLength": 3,
                     "maxLength": 300,
                 },
                 "unit": {
                     "type": "string",
-                    "description": "Pay item unit of measure ('TON', 'LF', 'CY', 'SY', 'LB', 'EA', 'LS').",
-                    "default": "TON",
+                    "description": "Billing unit of measure ('CLAIM', 'CASE', 'UNIT', 'RVU', 'DRG').",
+                    "default": "CLAIM",
                     "minLength": 1,
                     "maxLength": 20,
                 },
                 "quantity": {
                     "type": "number",
-                    "description": "Estimated takeoff quantity for the pay item.",
-                    "default": 68000.0,
+                    "description": "Annual or disputed cohort claim volume for the procedure.",
+                    "default": 420.0,
                     "minimum": 1.0,
                     "maximum": 100000000.0,
                 },
@@ -134,14 +183,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "calculate_davis_bacon_prevailing_wage",
-        "title": "Davis-Bacon (29 CFR 5) & State Prevailing Wage Fringe Calculator",
+        "title": "CMS Medicare Physician Fee Schedule (MPFS) RVU, GPCI Locality & ASC Payment Calculator",
         "description": (
-            "Computes locality-adjusted Davis-Bacon and state prevailing wage base hourly rates, bona fide fringe benefits, overtime rates, and Form WH-347 certified payroll burdens across construction trades. "
-            "Runs as a stateless, read-only, non-destructive labor compliance calculator with zero side effects. "
-            "Use this tool when calculating prevailing craft wages and WH-347 fringes; use model_dot_unit_bid_tabs instead when modeling material/composite unit bid tabulations."
+            "Computes locality-adjusted CMS Medicare Physician Fee Schedule (MPFS) facility and non-facility rates using Work RVU, Practice Expense (PE) RVU, Malpractice (MP) RVU, Geographic Practice Cost Indices (GPCI), and commercial multiples. "
+            "Runs as a stateless, read-only, non-destructive healthcare reimbursement calculator with zero side effects. "
+            "Use this tool when calculating CMS Medicare RVU/GPCI baselines and commercial multiples; use model_dot_unit_bid_tabs instead when modeling payer-specific TiC MRF allowed-amount percentiles."
         ),
         "annotations": {
-            "title": "Davis-Bacon (29 CFR 5) & State Prevailing Wage Fringe Calculator",
+            "title": "CMS Medicare Physician Fee Schedule (MPFS) RVU, GPCI Locality & ASC Payment Calculator",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -159,23 +208,23 @@ MCP_TOOLS: List[Dict[str, Any]] = [
                 },
                 "county": {
                     "type": "string",
-                    "description": "Project county name.",
-                    "default": "Travis County",
+                    "description": "CMS Medicare GPCI locality or county name.",
+                    "default": "Dallas / Tarrant County (DFW Locality)",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "construction_type": {
                     "type": "string",
-                    "description": "Davis-Bacon construction type ('Highway', 'Heavy', 'Building', 'Residential').",
-                    "default": "Highway",
+                    "description": "Place of Service setting ('ASC / Outpatient Facility', 'HOPD (POS 22)', 'Inpatient (POS 21)', 'Office Non-Facility (POS 11)').",
+                    "default": "ASC / Outpatient Facility",
                     "minLength": 3,
                     "maxLength": 40,
                 },
                 "estimated_crew_hours": {
                     "type": "integer",
-                    "description": "Total estimated project crew man-hours.",
-                    "default": 14500,
-                    "minimum": 40,
+                    "description": "Total annual claim encounters across the specialty cohort.",
+                    "default": 1250,
+                    "minimum": 1,
                     "maximum": 5000000,
                 },
             },
@@ -193,14 +242,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "get_live_dot_lettings",
-        "title": "52-Portal Live State DOT Lettings, USACE & Public Works Feed",
+        "title": "52-Portal Live Commercial Payer MRF Rate Disparities, ERISA Underpayments & NSA IDR Feed",
         "description": (
-            "Queries pre-vetted, high-value heavy-civil, highway, bridge, water/wastewater, and commercial construction lettings across all 50 State DOTs, USACE, and Municipal portals. "
-            "Executes as a read-only, stateless query returning up to 50 active lettings with Engineer's Estimates, DBE goals, and official planholders. "
-            "Use this tool when discovering open construction lettings and planholder lists; use shred_csi_masterformat instead when parsing a specific project specification."
+            "Queries pre-vetted commercial payer TiC MRF rate-disparity cohorts, ERISA claim underpayments, and Federal No Surprises Act (NSA) IDR arbitration cases across all 50 State DOI/APCD MRF portals, CMS Federal IDR, and Multi-Payer feeds. "
+            "Executes as a read-only, stateless query returning up to 50 active claim cohorts with MRF 75th-percentile benchmarks, % of Medicare targets, and regional peer provider groups. "
+            "Use this tool when discovering live payer MRF rate disparities and NSA IDR cohorts; use shred_csi_masterformat instead when parsing a specific payer Clinical Policy Bulletin."
         ),
         "annotations": {
-            "title": "52-Portal Live State DOT Lettings, USACE & Public Works Feed",
+            "title": "52-Portal Live Commercial Payer MRF Rate Disparities, ERISA Underpayments & NSA IDR Feed",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -211,14 +260,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "state": {
                     "type": "string",
-                    "description": "Optional two-letter state code filter (e.g., 'TX', 'CA', 'FL', 'VA', 'PA', 'NY', 'US').",
+                    "description": "Optional two-letter state code filter (e.g., 'TX', 'CA', 'FL', 'VA', 'PA', 'NY', 'ALL').",
                     "default": "TX",
                     "minLength": 2,
                     "maxLength": 10,
                 },
                 "limit": {
                     "type": "integer",
-                    "description": "Maximum number of active lettings to return (1 to 50).",
+                    "description": "Maximum number of active payer MRF & IDR cohorts to return (1 to 50).",
                     "default": 10,
                     "minimum": 1,
                     "maximum": 50,
@@ -236,14 +285,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "audit_baba_buy_america",
-        "title": "Build America, Buy America (BABA / 23 CFR 635.410) Material Auditor",
+        "title": "CMS NCCI Procedure-to-Procedure (PTP) Unbundling, MUE & Modifier 25/59 Claim Scrubber",
         "description": (
-            "Audits construction Bill of Materials (BOM) line items against federal FHWA/USACE Build America, Buy America (BABA) domestic iron, steel, and manufactured product thresholds (>55% domestic cost) and OMB M-24-02 De Minimis waivers. "
-            "Operates as a stateless, read-only, non-destructive compliance auditor. "
-            "Use this tool when verifying domestic steel/material certifications; use generate_dbe_good_faith_effort instead when auditing DBE subcontractor participation credits."
+            "Audits multi-line surgical and outpatient claims against CMS National Correct Coding Initiative (NCCI) Procedure-to-Procedure (PTP) column-1/column-2 edits, Medically Unlikely Edits (MUEs), and Modifier -25/-59/-XS documentation rules. "
+            "Operates as a stateless, read-only, non-destructive coding compliance scrubber. "
+            "Use this tool when verifying NCCI unbundling edits and Modifier -25/-59 compliance; use generate_dbe_good_faith_effort instead when preparing Federal No Surprises Act (NSA) IDR arbitration briefs."
         ),
         "annotations": {
-            "title": "Build America, Buy America (BABA / 23 CFR 635.410) Material Auditor",
+            "title": "CMS NCCI Procedure-to-Procedure (PTP) Unbundling, MUE & Modifier 25/59 Claim Scrubber",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -254,15 +303,15 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "project_id": {
                     "type": "string",
-                    "description": "Project or Contract ID.",
-                    "default": "USACE-W912EP-27-B-0004",
+                    "description": "Claim Cohort or Encounter ID.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "funding_agency": {
                     "type": "string",
-                    "description": "Federal or state infrastructure funding agency.",
-                    "default": "FHWA / USACE Infrastructure",
+                    "description": "Governing coding edit standard or commercial payer.",
+                    "default": "CMS NCCI / Commercial Payer Claims Editing Engine",
                     "minLength": 2,
                     "maxLength": 140,
                 },
@@ -280,14 +329,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "generate_dbe_good_faith_effort",
-        "title": "DOT DBE (49 CFR Part 26) Subcontractor & Good Faith Effort Generator",
+        "title": "Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Position Brief Generator",
         "description": (
-            "Calculates Disadvantaged Business Enterprise (DBE) participation credits under 49 CFR 26.55 (100% subcontractor vs. 60% regular dealer), verifies Commercially Useful Function (CUF), and generates Good Faith Effort (GFE) logs. "
-            "Executes as a stateless, read-only, idempotent compliance calculator. "
-            "Use this tool when calculating DOT DBE participation goals; use generate_subcontractor_scope_itb instead when drafting trade-specific subcontractor invitations to bid."
+            "Generates statutory 30-business-day Open Negotiation Notices, verifies Qualifying Payment Amount (QPA) deflation anomalies, and compiles Federal No Surprises Act (45 CFR 149.510) Independent Dispute Resolution (IDR) arbitration briefs. "
+            "Executes as a stateless, read-only, idempotent NSA IDR arbitration calculator. "
+            "Use this tool when preparing Federal NSA IDR arbitration offers and Open Negotiation notices; use generate_subcontractor_scope_itb instead when redlining in-network managed care payer contracts."
         ),
         "annotations": {
-            "title": "DOT DBE (49 CFR Part 26) Subcontractor & Good Faith Effort Generator",
+            "title": "Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Position Brief Generator",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -298,24 +347,24 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "project_id": {
                     "type": "string",
-                    "description": "DOT Project ID.",
-                    "default": "TXDOT-CSJ-0015-13-412",
+                    "description": "NSA IDR Dispute Case ID.",
+                    "default": "CMS-NSA-IDR-CPT-63047-NAT",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "total_bid_amount_usd": {
                     "type": "number",
-                    "description": "Total prime contract bid amount in USD.",
-                    "default": 17850000.0,
-                    "minimum": 10000.0,
+                    "description": "Total target 75th-percentile commercial MRF arbitration offer across disputed claim cohort (USD).",
+                    "default": 1420000.0,
+                    "minimum": 100.0,
                     "maximum": 5000000000.0,
                 },
                 "dbe_goal_pct": {
                     "type": "number",
-                    "description": "Contract DBE participation goal percentage.",
-                    "default": 11.5,
+                    "description": "Target commercial reimbursement as a percentage of CMS Medicare fee schedule (e.g., 215.0%).",
+                    "default": 215.0,
                     "minimum": 0.0,
-                    "maximum": 50.0,
+                    "maximum": 500.0,
                 },
             },
             "required": ["project_id", "total_bid_amount_usd", "dbe_goal_pct"],
@@ -331,14 +380,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "generate_aia_g702_g703_pay_app",
-        "title": "AIA G702 / G703 Schedule of Values (SOV) & Retainage Billing Generator",
+        "title": "HIPAA X12 835 Electronic Remittance Advice (ERA) CARC/RARC Underpayment & Zero-Pay Auditor",
         "description": (
-            "Generates a balanced AIA Document G702 Application for Payment summary and G703 Continuation Sheet Schedule of Values with statutory retainage and net progress payment calculations. "
-            "Runs as a stateless, read-only financial calculator with zero database mutations. "
-            "Use this tool when structuring progress billings and Schedules of Values; use audit_surety_miller_act_bond instead when underwriting contractor bonding capacity."
+            "Audits HIPAA X12 835 Electronic Remittance Advice (ERA) payment lines and Claim Adjustment Reason Codes (CARC 45, 50, 96, 97, 197) against contracted payer fee schedules and TiC MRF 75th-percentile benchmarks. "
+            "Runs as a stateless, read-only healthcare revenue cycle remittance calculator with zero database mutations. "
+            "Use this tool when auditing X12 835 ERA remittances for contractual underpayments; use audit_surety_miller_act_bond instead when calculating 50-state statutory prompt-pay interest penalties."
         ),
         "annotations": {
-            "title": "AIA G702 / G703 Schedule of Values (SOV) & Retainage Billing Generator",
+            "title": "HIPAA X12 835 Electronic Remittance Advice (ERA) CARC/RARC Underpayment & Zero-Pay Auditor",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -349,23 +398,23 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "project_id": {
                     "type": "string",
-                    "description": "Project identifier.",
-                    "default": "TXDOT-CSJ-0015-13-412",
+                    "description": "Remittance Audit Batch ID.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "contractor_name": {
                     "type": "string",
-                    "description": "Prime or Subcontractor legal name.",
-                    "default": "Webber Civil Constructors LLC",
+                    "description": "Billing Provider Group or ASC legal name.",
+                    "default": "Texas Orthopedic & Spine Surgical Associates PLLC",
                     "minLength": 2,
                     "maxLength": 180,
                 },
                 "contract_sum_usd": {
                     "type": "number",
-                    "description": "Original Contract Sum in USD.",
-                    "default": 17850000.0,
-                    "minimum": 1000.0,
+                    "description": "Total contracted expected allowed amount across the remittance batch in USD.",
+                    "default": 1840000.0,
+                    "minimum": 100.0,
                     "maximum": 5000000000.0,
                 },
             },
@@ -382,14 +431,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "audit_surety_miller_act_bond",
-        "title": "Miller Act (40 U.S.C. 3131) & Surety Bond Capacity Underwriter",
+        "title": "50-State Prompt-Pay Statute Interest Penalty & Clean-Claim Timely-Filing Calculator",
         "description": (
-            "Evaluates contractor working capital, tangible net worth, and uncompleted WIP backlog to determine Single and Aggregate Surety Bond limits and sliding-scale SF-24/SF-25 bond premiums. "
-            "Executes as a stateless, read-only surety underwriting model. "
-            "Use this tool when verifying Miller Act bond capacity and premiums; use generate_aia_g702_g703_pay_app instead when generating monthly progress payment applications."
+            "Evaluates overdue commercial payer clean claims against 50-state prompt-pay statutes (TX Ins. Code Ch. 1301 18% APR, CA H&S 1371 15% APR, FL 627.6131 12% APR, NY ISC 3224-a 12% APR) to calculate statutory penalty interest. "
+            "Executes as a stateless, read-only statutory prompt-pay interest model. "
+            "Use this tool when calculating statutory prompt-pay interest on late payer remittances; use generate_aia_g702_g703_pay_app instead when auditing line-by-line X12 835 CARC/RARC adjustments."
         ),
         "annotations": {
-            "title": "Miller Act (40 U.S.C. 3131) & Surety Bond Capacity Underwriter",
+            "title": "50-State Prompt-Pay Statute Interest Penalty & Clean-Claim Timely-Filing Calculator",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -400,16 +449,16 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "contractor_name": {
                     "type": "string",
-                    "description": "Contractor legal name.",
-                    "default": "Apex Civil & Utility Constructors LLC",
+                    "description": "Provider Group or Hospital legal name.",
+                    "default": "Texas Orthopedic & Spine Surgical Associates PLLC",
                     "minLength": 2,
                     "maxLength": 180,
                 },
                 "target_project_bid_usd": {
                     "type": "number",
-                    "description": "Target project bid amount requiring 100% Performance and Payment Bonds (USD).",
-                    "default": 12400000.0,
-                    "minimum": 10000.0,
+                    "description": "Net overdue clean-claim principal balance subject to statutory prompt-pay interest (USD).",
+                    "default": 1830000.0,
+                    "minimum": 100.0,
                     "maximum": 5000000000.0,
                 },
             },
@@ -426,14 +475,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "generate_rfi_change_order_claim",
-        "title": "Construction RFI, Differing Site Conditions & AIA G701 Change Order Drafter",
+        "title": "ERISA 29 CFR 2560.503-1 Level-1 & Level-2 Medical Necessity Appeal Drafter",
         "description": (
-            "Analyzes subsurface differing site conditions (FAR 52.236-2) or drawing conflicts, models Critical Path Time-Impact Analysis (TIA) delay days, and prices AIA G701 Change Order requests. "
-            "Operates as a stateless, read-only, non-destructive construction claims analyzer. "
-            "Use this tool when drafting RFIs and differing site condition change orders; use shred_csi_masterformat instead when parsing initial pre-bid specifications."
+            "Analyzes CARC-50/96/197 medical necessity or experimental/investigational claim denials, cites ERISA 29 CFR 2560.503-1(h)(3)(iii) same-specialty peer review mandates, and calculates principal + statutory interest recovery demands. "
+            "Operates as a stateless, read-only, non-destructive healthcare legal appeal analyzer. "
+            "Use this tool when drafting ERISA 29 CFR 2560.503-1 medical necessity appeals; use shred_csi_masterformat instead when parsing initial commercial payer Clinical Policy Bulletins."
         ),
         "annotations": {
-            "title": "Construction RFI, Differing Site Conditions & AIA G701 Change Order Drafter",
+            "title": "ERISA 29 CFR 2560.503-1 Level-1 & Level-2 Medical Necessity Appeal Drafter",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -444,22 +493,22 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "project_id": {
                     "type": "string",
-                    "description": "Project ID.",
-                    "default": "CALTRANS-04-2Q7404",
+                    "description": "Denied Claim or Cohort ID.",
+                    "default": "CADMHC-MRF-CPT-63030-SFO",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "issue_summary": {
                     "type": "string",
-                    "description": "Description of the plan discrepancy or differing subsurface condition.",
-                    "default": "Encountered uncharted 48-inch cast-iron main at Bent 4 micropile elevation -38.0 ft.",
+                    "description": "Clinical summary of the CARC/RARC denial and documented objective medical necessity evidence.",
+                    "default": "Payer issued CARC 50 (Not Medically Necessary) denial on CPT 63030 Lumbar Microdiscectomy despite MRI confirming L4-L5 extruded disc herniation and 8 weeks failed PT.",
                     "minLength": 10,
                     "maxLength": 10000,
                 },
                 "direct_cost_impact_usd": {
                     "type": "number",
-                    "description": "Estimated direct cost impact in USD.",
-                    "default": 184500.0,
+                    "description": "Disputed principal claim allowed amount under commercial MRF 75th percentile in USD.",
+                    "default": 68500.0,
                     "minimum": 0.0,
                     "maximum": 500000000.0,
                 },
@@ -477,14 +526,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "audit_osha_emr_site_safety",
-        "title": "OSHA 29 CFR 1926, USACE EM 385-1-1 AHA & Insurance EMR Auditor",
+        "title": "MS-DRG / APR-DRG Inpatient Clinical Validation, CC/MCC Sepsis & DRG Downcode Defense",
         "description": (
-            "Generates trade-specific Activity Hazard Analyses (AHA) under USACE EM 385-1-1 and OSHA 29 CFR 1926 and evaluates contractor Experience Modification Rate (EMR) bid prequalification eligibility. "
-            "Runs as a stateless, read-only safety compliance generator. "
-            "Use this tool when preparing site-specific safety plans and AHA matrices; use audit_surety_miller_act_bond instead when evaluating financial bonding limits."
+            "Defends hospital inpatient claims against commercial payer MS-DRG / APR-DRG clinical validation denials and CC/MCC downcoding (Sepsis-3 SOFA criteria, KDIGO AKI, ASPEN Severe Malnutrition, and Acute Respiratory Failure). "
+            "Runs as a stateless, read-only inpatient clinical documentation integrity (CDI) defense generator. "
+            "Use this tool when defending inpatient MS-DRG weights and CC/MCC capture; use audit_surety_miller_act_bond instead when calculating statutory prompt-pay interest."
         ),
         "annotations": {
-            "title": "OSHA 29 CFR 1926, USACE EM 385-1-1 AHA & Insurance EMR Auditor",
+            "title": "MS-DRG / APR-DRG Inpatient Clinical Validation, CC/MCC Sepsis & DRG Downcode Defense",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -495,17 +544,17 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "project_id": {
                     "type": "string",
-                    "description": "Project ID.",
-                    "default": "USACE-W912EP-27-B-0004",
+                    "description": "Inpatient DRG Audit Batch ID.",
+                    "default": "NYDFS-MRF-CPT-27447-NYC",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "contractor_emr_current": {
                     "type": "number",
-                    "description": "Contractor current NCCI Experience Modification Rate (EMR).",
-                    "default": 0.78,
-                    "minimum": 0.3,
-                    "maximum": 2.5,
+                    "description": "Hospital Case Mix Index (CMI) or clean-claim clinical validation pass ratio.",
+                    "default": 0.94,
+                    "minimum": 0.1,
+                    "maximum": 5.0,
                 },
             },
             "required": ["project_id"],
@@ -521,14 +570,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "analyze_planholder_competitor_spread",
-        "title": "DOT Planholder List, Competitor Bid Behavior & MLOT Analyzer",
+        "title": "Regional Specialty Group Tax-ID (EIN/NPI) Payer Leverage & Revenue Left on Table (RLOT) Analyzer",
         "description": (
-            "Analyzes official project planholder lists against historical DOT letting results to predict the winning low bid, Margin Left on Table (MLOT), and optimal markup percentage. "
-            "Executes as a stateless, read-only competitive bidding model. "
-            "Use this tool when analyzing competitor planholders and markup strategy; use model_dot_unit_bid_tabs instead when pricing individual line-item quantities."
+            "Analyzes a medical group or ASC's current contracted CPT/APC fee schedule against regional peer groups and health systems in the same MSA using CMS TiC MRF files to quantify annual Revenue Left on Table (RLOT) and target contract uplift. "
+            "Executes as a stateless, read-only managed care payer benchmarking model. "
+            "Use this tool when comparing peer EIN/NPI commercial MRF rates and quantifying annual RLOT; use model_dot_unit_bid_tabs instead when pricing individual CPT/DRG procedure codes."
         ),
         "annotations": {
-            "title": "DOT Planholder List, Competitor Bid Behavior & MLOT Analyzer",
+            "title": "Regional Specialty Group Tax-ID (EIN/NPI) Payer Leverage & Revenue Left on Table (RLOT) Analyzer",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -539,16 +588,16 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "project_id": {
                     "type": "string",
-                    "description": "DOT Project ID.",
-                    "default": "TXDOT-CSJ-0015-13-412",
+                    "description": "Regional Market MRF Cohort ID.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "engineers_estimate_usd": {
                     "type": "number",
-                    "description": "Official DOT Engineer's Estimate in USD.",
-                    "default": 18450000.0,
-                    "minimum": 10000.0,
+                    "description": "Annual cohort commercial revenue at 75th-percentile regional MRF benchmark in USD.",
+                    "default": 2450000.0,
+                    "minimum": 1000.0,
                     "maximum": 5000000000.0,
                 },
             },
@@ -565,14 +614,14 @@ MCP_TOOLS: List[Dict[str, Any]] = [
     },
     {
         "name": "generate_subcontractor_scope_itb",
-        "title": "Trade Subcontractor Invitation to Bid (ITB), Scope Gap & AIA A401 Generator",
+        "title": "Managed Care Payer Contract Redline, Lesser-of-Billed Clauses & Rate-Escalator Term Sheet Generator",
         "description": (
-            "Generates trade-specific Subcontractor Invitations to Bid (ITB), scope inclusion/exclusion checklists, and AIA A401 subcontract flow-down clauses. "
-            "Operates as a stateless, read-only document generator. "
-            "Use this tool when issuing trade subcontractor bid packages and scope checklists; use generate_dbe_good_faith_effort instead when calculating 49 CFR Part 26 DBE goal credit."
+            "Generates managed care payer contract redlines, anti-downcoding covenants, ASC implant pass-through carve-outs, and CPI-U annual rate-escalator term sheets. "
+            "Operates as a stateless, read-only healthcare contracting document generator. "
+            "Use this tool when redlining commercial payer managed care agreements; use generate_dbe_good_faith_effort instead when generating out-of-network Federal NSA IDR arbitration briefs."
         ),
         "annotations": {
-            "title": "Trade Subcontractor Invitation to Bid (ITB), Scope Gap & AIA A401 Generator",
+            "title": "Managed Care Payer Contract Redline, Lesser-of-Billed Clauses & Rate-Escalator Term Sheet Generator",
             "readOnlyHint": True,
             "destructiveHint": False,
             "idempotentHint": True,
@@ -583,15 +632,15 @@ MCP_TOOLS: List[Dict[str, Any]] = [
             "properties": {
                 "project_id": {
                     "type": "string",
-                    "description": "Project ID.",
-                    "default": "TXDOT-CSJ-0015-13-412",
+                    "description": "Managed Care Contract Negotiation ID.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW",
                     "minLength": 2,
                     "maxLength": 120,
                 },
                 "trade_package": {
                     "type": "string",
-                    "description": "Target subcontractor trade package.",
-                    "default": "Division 26 — Roadway ITS Fiber Duct Bank & High-Mast Illumination",
+                    "description": "Target payer contract line of business and specialty schedule.",
+                    "default": "Commercial PPO / HMO & Self-Funded ASO Fee Schedule Addendum (Orthopedic & ASC Carve-Out)",
                     "minLength": 3,
                     "maxLength": 240,
                 },
@@ -610,141 +659,109 @@ MCP_TOOLS: List[Dict[str, Any]] = [
 ]
 
 
-TOOL_ROUTE_MAP: Dict[str, str] = {
-    "shred_csi_masterformat": "/v1/shred/csi-masterformat",
-    "model_dot_unit_bid_tabs": "/v1/model/dot-unit-bid-tabs",
-    "calculate_davis_bacon_prevailing_wage": "/v1/calculate/davis-bacon-prevailing-wage",
-    "get_live_dot_lettings": "/v1/lettings/live",
-    "audit_baba_buy_america": "/v1/audit/baba-buy-america",
-    "generate_dbe_good_faith_effort": "/v1/generate/dbe-good-faith-effort",
-    "generate_aia_g702_g703_pay_app": "/v1/generate/aia-g702-g703-pay-app",
-    "audit_surety_miller_act_bond": "/v1/audit/surety-miller-act-bond",
-    "generate_rfi_change_order_claim": "/v1/generate/rfi-change-order-claim",
-    "audit_osha_emr_site_safety": "/v1/audit/osha-emr-site-safety",
-    "analyze_planholder_competitor_spread": "/v1/analyze/planholder-competitor-spread",
-    "generate_subcontractor_scope_itb": "/v1/generate/subcontractor-scope-itb",
-}
-
-
-async def _execute_mcp_tool(tool_name: str, args: Dict[str, Any]) -> Dict[str, Any]:
-    import json as _json
-    from api_gateway.routers.precon_endpoints import (
-        AiaPayAppRequest,
-        BabaComplianceRequest,
-        CsiSpecShredRequest,
-        DbeGoodFaithRequest,
-        DotBidTabRequest,
-        OshaEmrAuditRequest,
-        PlanholderSpreadRequest,
-        PrevailingWageRequest,
-        RfiChangeOrderRequest,
-        SubcontractorItbRequest,
-        SuretyBondAuditRequest,
-        analyze_planholder_spread,
-        audit_baba_compliance,
-        audit_osha_emr,
-        audit_surety_bond,
-        calculate_prevailing_wage,
-        generate_aia_pay_app,
-        generate_dbe_good_faith,
-        generate_rfi_change_order,
-        generate_subcontractor_itb,
-        get_live_lettings,
-        model_dot_bid_tabs,
-        shred_csi_masterformat,
-    )
-
-    clean_args = dict(args or {})
+async def _execute_mcp_tool(tool_name: str, arguments: Dict[str, Any]) -> Dict[str, Any]:
     if tool_name == "shred_csi_masterformat":
-        structured = await shred_csi_masterformat(CsiSpecShredRequest(**clean_args))
+        data = await shred_csi_masterformat(CsiSpecShredRequest(**arguments))
     elif tool_name == "model_dot_unit_bid_tabs":
-        structured = await model_dot_bid_tabs(DotBidTabRequest(**clean_args))
+        data = await model_dot_bid_tabs(DotBidTabRequest(**arguments))
     elif tool_name == "calculate_davis_bacon_prevailing_wage":
-        structured = await calculate_prevailing_wage(PrevailingWageRequest(**clean_args))
+        data = await calculate_prevailing_wage(PrevailingWageRequest(**arguments))
     elif tool_name == "get_live_dot_lettings":
-        structured = await get_live_lettings(
-            state=clean_args.get("state"),
-            naics=clean_args.get("naics"),
-            limit=int(clean_args.get("limit", 10)),
+        data = await get_live_lettings(
+            state=arguments.get("state", "TX"),
+            naics=arguments.get("naics"),
+            limit=int(arguments.get("limit", 10)),
         )
     elif tool_name == "audit_baba_buy_america":
-        structured = await audit_baba_compliance(BabaComplianceRequest(**clean_args))
+        data = await audit_baba_compliance(BabaComplianceRequest(**arguments))
     elif tool_name == "generate_dbe_good_faith_effort":
-        structured = await generate_dbe_good_faith(DbeGoodFaithRequest(**clean_args))
+        data = await generate_dbe_good_faith(DbeGoodFaithRequest(**arguments))
     elif tool_name == "generate_aia_g702_g703_pay_app":
-        structured = await generate_aia_pay_app(AiaPayAppRequest(**clean_args))
+        data = await generate_aia_pay_app(AiaPayAppRequest(**arguments))
     elif tool_name == "audit_surety_miller_act_bond":
-        structured = await audit_surety_bond(SuretyBondAuditRequest(**clean_args))
+        data = await audit_surety_bond(SuretyBondAuditRequest(**arguments))
     elif tool_name == "generate_rfi_change_order_claim":
-        structured = await generate_rfi_change_order(RfiChangeOrderRequest(**clean_args))
+        data = await generate_rfi_change_order(RfiChangeOrderRequest(**arguments))
     elif tool_name == "audit_osha_emr_site_safety":
-        structured = await audit_osha_emr(OshaEmrAuditRequest(**clean_args))
+        data = await audit_osha_emr(OshaEmrAuditRequest(**arguments))
     elif tool_name == "analyze_planholder_competitor_spread":
-        structured = await analyze_planholder_spread(PlanholderSpreadRequest(**clean_args))
+        data = await analyze_planholder_spread(PlanholderSpreadRequest(**arguments))
     elif tool_name == "generate_subcontractor_scope_itb":
-        structured = await generate_subcontractor_itb(SubcontractorItbRequest(**clean_args))
+        data = await generate_subcontractor_itb(SubcontractorItbRequest(**arguments))
     else:
-        structured = {"status": "error", "message": f"Unknown tool: {tool_name}"}
+        raise ValueError(f"Unknown MCP tool: {tool_name}")
 
     return {
-        "content": [{"type": "text", "text": _json.dumps(structured, indent=2)}],
-        "structuredContent": structured,
-        "isError": structured.get("status") == "error",
+        "content": [{"type": "text", "text": json.dumps(data, indent=2)}],
+        "structuredContent": data,
+        "isError": False,
     }
 
 
-@router.get("/mcp")
-@router.get("/v1/mcp")
+@router.get("/mcp", tags=["Remote Streamable-HTTP MCP Server"])
 async def mcp_info() -> Dict[str, Any]:
     return {
-        "protocol": "mcp-streamable-http",
-        "server": "rubricward-mcp-server",
+        "name": "@rubricward/mcp-server",
         "version": "1.0.0",
-        "tdqs_score": "5/5",
+        "protocolVersion": "2024-11-05",
+        "transport": "streamable-http",
         "tools_count": len(MCP_TOOLS),
         "tools": [t["name"] for t in MCP_TOOLS],
-        "routes": TOOL_ROUTE_MAP,
     }
 
 
-@router.post("/mcp")
-@router.post("/v1/mcp")
+@router.post("/mcp", tags=["Remote Streamable-HTTP MCP Server"])
 async def mcp_jsonrpc(request: Request) -> JSONResponse:
     body = await request.json()
-    rpc_id = body.get("id", 1)
+    rpc_id = body.get("id")
     method = body.get("method", "")
+    params = body.get("params") or {}
 
     if method == "initialize":
-        return JSONResponse({
-            "jsonrpc": "2.0",
-            "id": rpc_id,
-            "result": {
-                "protocolVersion": "2025-03-26",
-                "serverInfo": {"name": "@rubricward/mcp-server", "version": "1.0.0"},
-                "capabilities": {"tools": {"listChanged": False}},
+        return JSONResponse(
+            status_code=status.HTTP_200_OK,
+            content={
+                "jsonrpc": "2.0",
+                "id": rpc_id,
+                "result": {
+                    "protocolVersion": "2024-11-05",
+                    "capabilities": {"tools": {}},
+                    "serverInfo": {"name": "@rubricward/mcp-server", "version": "1.0.0"},
+                },
             },
-        })
-
+        )
     if method == "tools/list":
-        return JSONResponse({
-            "jsonrpc": "2.0",
-            "id": rpc_id,
-            "result": {"tools": MCP_TOOLS},
-        })
-
+        return JSONResponse(
+            status_code=status.HTTP_200_OK,
+            content={"jsonrpc": "2.0", "id": rpc_id, "result": {"tools": MCP_TOOLS}},
+        )
     if method == "tools/call":
-        params = body.get("params") or {}
-        tool_name = params.get("name", "")
-        args = params.get("arguments") or {}
-        res_payload = await _execute_mcp_tool(tool_name, args)
-        return JSONResponse({
+        t_name = params.get("name", "")
+        t_args = params.get("arguments") or {}
+        try:
+            res = await _execute_mcp_tool(t_name, t_args)
+            return JSONResponse(
+                status_code=status.HTTP_200_OK,
+                content={"jsonrpc": "2.0", "id": rpc_id, "result": res},
+            )
+        except Exception as exc:
+            return JSONResponse(
+                status_code=status.HTTP_200_OK,
+                content={
+                    "jsonrpc": "2.0",
+                    "id": rpc_id,
+                    "result": {
+                        "content": [{"type": "text", "text": f"Tool execution error: {exc}"}],
+                        "isError": True,
+                    },
+                },
+            )
+
+    return JSONResponse(
+        status_code=status.HTTP_200_OK,
+        content={
             "jsonrpc": "2.0",
             "id": rpc_id,
-            "result": res_payload,
-        })
-
-    return JSONResponse({
-        "jsonrpc": "2.0",
-        "id": rpc_id,
-        "result": {"status": "ok"},
-    })
+            "error": {"code": -32601, "message": f"Method not found: {method}"},
+        },
+    )

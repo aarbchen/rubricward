@@ -1,6 +1,6 @@
 {
   "status": "healthy",
-  "service": "RubricWard Preconstruction & DOT API Gateway",
+  "service": "RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR API Gateway",
   "version": "1.0.0",
   "model": "claude-sonnet-5-5",
   "portals_active": 52,

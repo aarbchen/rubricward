@@ -1,8 +1,9 @@
-r"""
-RubricWard — Subscriber Letting & Preconstruction Dossier Delivery Engine (`D:\RubricWard\client_delivery.py`).
-Formats and dispatches high-value 50-State DOT, USACE & Municipal construction lettings and
-6-File OpenXML (.DOCX + .XLSX) Bid-Tab Dossiers to paid subscribers (with `flags: 4` SUPPRESS_EMBEDS
-and reserved footer links so URLs are never truncated).
+"""
+RubricWard — Subscriber Discord & Webhook Delivery Engine (`client_delivery.py`).
+Strictly enforces:
+- Zero prices inside paid subscriber channels (`[VIP] RUBRICWARD // TIER 2 PAYER MRF & IDR FEED`)
+- `"flags": 4` (`SUPPRESS_EMBEDS`) on every Discord webhook POST
+- Identical word-boundary `slugify()` and portal-first `classify_jurisdiction()`
 """
 
 from error_telemetry import configure_utf8_stdio, report_error
@@ -16,93 +17,98 @@ from typing import Any, Dict, List
 import requests
 from dotenv import load_dotenv
 
-from rubricward_autopilot import slugify
+load_dotenv()
 
 ROOT_DIR = Path(__file__).resolve().parent
-load_dotenv(dotenv_path=str(ROOT_DIR / ".env"))
-
-SITE_BASE_URL = os.getenv("RUBRICWARD_SITE_URL", "https://rubricward.com").rstrip("/")
-API_BASE_URL = os.getenv("RUBRICWARD_API_BASE_URL", "https://rubricward.com").rstrip("/")
-DOSSIERS_PATH = ROOT_DIR / "rubricward_dossiers.json"
+SEED_PATH = ROOT_DIR / "dot_lettings_seed.json"
+TIER1_DISCORD_WEBHOOK = os.getenv("RUBRICWARD_TIER1_DISCORD_WEBHOOK_URL", "")
+TIER2_DISCORD_WEBHOOK = os.getenv("RUBRICWARD_TIER2_DISCORD_WEBHOOK_URL", "")
 
 
-def format_dossier_dispatch(dossier: Dict[str, Any]) -> str:
-    pid = str(dossier.get("project_id") or "TXDOT-CSJ-0015-13-412")
-    raw_title = str(dossier.get("title") or "IH-35 Bridge Deck Replacement")
-    clean_title = re.sub(r"^\[[^\]]+\]\s*", "", raw_title)
-    agency = str(dossier.get("agency") or "TxDOT")
-    county = str(dossier.get("county") or "Travis County, TX")
-    state_code = str(dossier.get("state_code") or "TX")
-    est_usd = float(dossier.get("engineers_estimate_usd") or 18450000.0)
-    letting_date = str(dossier.get("letting_date") or "2026-11-18")
-    dbe_pct = float(dossier.get("dbe_goal_pct") or 11.5)
-    wage_id = str(dossier.get("wage_determination_id") or "TX20260028")
-    slug = str(dossier.get("slug") or slugify(clean_title))
+def slugify(text: str) -> str:
+    """Word-boundary slugify (<= 65 chars, never cutting a word in half)."""
+    cleaned = re.sub(r"[^a-z0-9]+", "-", (text or "").lower()).strip("-")
+    if len(cleaned) <= 65:
+        return cleaned
+    truncated = cleaned[:65]
+    if "-" in truncated:
+        truncated = truncated.rsplit("-", 1)[0]
+    return truncated.strip("-")
 
-    dossier_url = f"{SITE_BASE_URL}/lettings/project/{slug}.html"
-    zip_url = f"{API_BASE_URL}/v1/camber-autopilot/compile-bid-package?project_id={pid}&state_code={state_code}&format=binary"
-    source_url = str(dossier.get("url") or dossier_url)
 
-    footer = (
-        f"\n**Dossier:** <{dossier_url}>\n"
-        f"**6-File .ZIP Package:** <{zip_url}>\n"
-        f"**Source:** <{source_url}>"
-    )
+def classify_jurisdiction(letting: Dict[str, Any]) -> str:
+    """Portal-first jurisdiction classifier identical across pseo_generator, client_delivery, and rubricward_autopilot."""
+    url = str(letting.get("source_url") or "").lower()
+    if "cms.gov" in url or "nsa" in str(letting.get("letting_id") or "").lower():
+        return "federal"
+    if "uhc.com" in url or "multi-payer" in str(letting.get("agency") or "").lower():
+        return "municipal"
+    if "tdi.texas.gov" in url:
+        return "tx"
+    if "dmhc.ca.gov" in url:
+        return "ca"
+    if "floir.com" in url:
+        return "fl"
+    if "scc.virginia.gov" in url:
+        return "va"
+    if "pa.gov" in url:
+        return "pa"
+    if "dfs.ny.gov" in url:
+        return "ny"
+    if "idoi.illinois.gov" in url:
+        return "il"
+    if "insurance.ohio.gov" in url:
+        return "oh"
+    if "oci.georgia.gov" in url:
+        return "ga"
+    if "ncdoi.gov" in url:
+        return "nc"
+    st = str(letting.get("state_code") or "").lower().strip()
+    if st == "us":
+        return "federal"
+    if st == "mu":
+        return "municipal"
+    return st or "tx"
+
+
+def format_subscriber_message(letting: Dict[str, Any], tier: int = 2) -> Dict[str, Any]:
+    lid = str(letting.get("letting_id") or "")
+    title = str(letting.get("title") or "")
+    slug = slugify(f"{lid}-{title}")
+    dossier_url = f"https://rubricward.com/lettings/project/{slug}.html"
+    source_url = str(letting.get("source_url") or "https://www.cms.gov/nosurprises")
+    est_usd = float(letting.get("engineers_estimate_usd") or 0.0)
+    dbe_pct = float(letting.get("dbe_goal_pct") or 215.0)
+
     header = (
-        "**[AUTOPILOT] RUBRICWARD // PRECONSTRUCTION & BID-TAB DOSSIER**\n"
-        f"**Project:** `{pid}` — {clean_title[:110]}\n"
-        f"**Owner:** {agency} ({county}) | **Letting:** `{letting_date}`\n"
-        f"**Engineer's Est:** `${est_usd:,.0f}` | **DBE Goal:** `{dbe_pct:.1f}%` | **Davis-Bacon:** `{wage_id}`\n"
+        "[VIP] RUBRICWARD // TIER 2 PAYER MRF & IDR FEED\n"
+        if tier == 2
+        else "[WIRE] RUBRICWARD // TIER 1 52-PORTAL PAYER MRF FEED\n"
     )
-    scope = str(dossier.get("scope_summary") or "")[:600]
-    narrative = f"**Scope & Pay-Item Highlights:** {scope}\n"
-
-    max_body = 1950 - len(header) - len(footer)
-    return header + narrative[:max_body] + footer
-
-
-def run_subscriber_delivery(send_live_webhook: bool = False) -> Dict[str, Any]:
-    if not DOSSIERS_PATH.exists():
-        return {"status": "no_dossiers", "count": 0}
-    data = json.loads(DOSSIERS_PATH.read_text(encoding="utf-8"))
-    if isinstance(data, list):
-        dossiers = data
-    elif isinstance(data, dict) and "dossiers" in data:
-        dossiers = data["dossiers"]
-    elif isinstance(data, dict):
-        dossiers = list(data.values())
-    else:
-        dossiers = []
-
-    formatted_messages: List[str] = []
-    for d in dossiers[:12]:
-        msg = format_dossier_dispatch(d)
-        assert len(msg) <= 2000, f"Message exceeded 2000 chars ({len(msg)})"
-        formatted_messages.append(msg)
-
-    webhook_url = (os.getenv("RUBRICWARD_DISCORD_WEBHOOK_URL") or "").strip()
-    signaltender_webhook_ids = (
-        "1555743443802918993",
-        "1560070981563715644",
-        "1561230679860056117",
-        "1563916225862574080",
-        "1563916236126036068",
+    footer = f"\nDossier: {dossier_url}\nSource: {source_url}"
+    body = (
+        f"**{lid} — {title}**\n"
+        f"Portal: {letting.get('agency', '')} ({letting.get('county', '')}) | Filing Window: {letting.get('letting_date', '')}\n"
+        f"Cohort MRF 75th-Pct Value: `${est_usd:,.0f}` | Target Multiple: `{dbe_pct}% of Medicare` | Statute: `{letting.get('wage_determination_id', '')}`"
     )
-    if any(wid in webhook_url for wid in signaltender_webhook_ids):
-        webhook_url = ""
-    sent = 0
-    if send_live_webhook and webhook_url:
-        for msg in formatted_messages[:3]:
+    max_body = 2000 - len(header) - len(footer) - 10
+    content = header + body[:max_body] + footer
+    return {"content": content, "flags": 4}
+
+
+def deliver_all(dispatch_live: bool = False) -> List[Dict[str, Any]]:
+    raw = json.loads(SEED_PATH.read_text(encoding="utf-8"))
+    lettings = raw.get("lettings", [])
+    messages = [format_subscriber_message(x, tier=2) for x in lettings]
+    if dispatch_live and TIER2_DISCORD_WEBHOOK:
+        for msg in messages[:2]:
             try:
-                resp = requests.post(webhook_url, json={"content": msg, "flags": 4}, timeout=12)
-                if resp.status_code in (200, 204):
-                    sent += 1
+                requests.post(TIER2_DISCORD_WEBHOOK, json=msg, timeout=10)
             except Exception as exc:
-                report_error("client_delivery.py", f"Webhook delivery error: {exc}")
-
-    print(f"[RUBRICWARD DELIVERY] Prepared {len(formatted_messages)} executive letting dispatches (sent={sent}).")
-    return {"status": "ready", "prepared": len(formatted_messages), "sent": sent}
+                report_error("client_delivery.py", str(exc))
+    print(f"[RUBRICWARD DELIVERY] Formatted {len(messages)} 52-Portal Payer MRF & NSA IDR subscriber payloads (flags=4).")
+    return messages
 
 
 if __name__ == "__main__":
-    run_subscriber_delivery(send_live_webhook=False)
+    deliver_all(dispatch_live=False)

@@ -1,14 +1,14 @@
-# AIA G702 G703 Schedule of Values SOV & Retainage Billing Generator API
+# HIPAA X12 835 Electronic Remittance Advice ERA CARC Underpayment Auditor API
 
-**By RubricWard Preconstruction & DOT Systems** (`https://rubricward.com`)
+**By RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR Systems** (`https://rubricward.com`)
 
-Convert construction bid items into a balanced, front-load-compliant AIA G702 Application for Payment and G703 Continuation Sheet with retainage math.
+Audit HIPAA X12 835 Electronic Remittance Advice (ERA) payment lines and CARC/RARC adjustments (CARC 45, 50, 96, 97, 197) against contracted fee schedules and TiC MRF benchmarks.
 
 ---
 
-## Key Capabilities & Construction Preconstruction Use Cases
-- **Stateless & Deterministic:** Zero database side effects; processes project manuals, DOT pay items, Davis-Bacon wage classifications, and AIA billing schedules in memory.
-- **Built for ConTech ERPs, Heavy-Civil Estimators & Surety Underwriters:** Ready to plug directly into Procore, Autodesk Construction Cloud, HeavyBid workflows, or AI estimating agents via `@rubricward/mcp-server`.
+## Key Capabilities & Healthcare Revenue Cycle Use Cases
+- **Stateless & Deterministic:** Zero database side effects; processes commercial payer Clinical Policy Bulletins, CMS TiC MRF CPT/DRG rate cohorts, Medicare MPFS RVU/GPCI baselines, and X12 835 remittances in memory.
+- **Built for Healthcare RCM Platforms, Specialty Physician Groups, ASCs & ERISA Appeal Attorneys:** Ready to plug into Epic, Athenahealth, Waystar, or AI revenue cycle agents via `@rubricward/mcp-server`.
 - **Route:** `POST /v1/generate/aia-g702-g703-pay-app`
 
 ---
@@ -17,27 +17,9 @@ Convert construction bid items into a balanced, front-load-compliant AIA G702 Ap
 
 ```json
 {
-  "project_name": "City of Austin Walnut Creek WWTP Digester Rehab",
-  "application_number": 4,
-  "retainage_pct": 5.0,
-  "sov_lines": [
-    {
-      "item_no": "01",
-      "description": "Mobilization, Bonds & Submittals",
-      "scheduled_value_usd": 380000,
-      "prev_completed_usd": 380000,
-      "this_period_usd": 0,
-      "stored_materials_usd": 0
-    },
-    {
-      "item_no": "02",
-      "description": "Cast-in-Place Structural Digester Wall Rehab",
-      "scheduled_value_usd": 1950000,
-      "prev_completed_usd": 820000,
-      "this_period_usd": 465000,
-      "stored_materials_usd": 115000
-    }
-  ]
+  "project_id": "TXDOI-MRF-CPT-29881-DFW",
+  "contractor_name": "Texas Orthopedic & Spine Surgical Associates PLLC",
+  "contract_sum_usd": 1840000
 }
 ```
 
@@ -45,6 +27,6 @@ Convert construction bid items into a balanced, front-load-compliant AIA G702 Ap
 
 ## Pricing Tiers
 - **BASIC (`$0 / mo`):** `10 requests / month` hard limit (`10 requests / hour` rate limit) for testing and evaluation.
-- **PRO (`$49 / mo`):** `200 requests / month` for active estimating teams and specialty subcontractors.
-- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for regional general contractors and heavy-civil primes.
-- **MEGA (`$399 / mo`):** `4,000 requests / month` for ConTech SaaS platforms, surety brokerages, and multi-office builders.
+- **PRO (`$49 / mo`):** `200 requests / month` for specialty physician groups and ASC billing teams.
+- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for multi-specialty groups, RCM billing companies, and NSA IDR arbitration desks.
+- **MEGA (`$399 / mo`):** `4,000 requests / month` for hospital health systems, healthcare fintech platforms, and ERISA litigation firms.

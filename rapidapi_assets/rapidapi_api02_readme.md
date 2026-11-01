@@ -1,14 +1,14 @@
-# 50-State DOT Historical Item Bid Tabulation & Spread Modeler API
+# 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Rate Modeler API
 
-**By RubricWard Preconstruction & DOT Systems** (`https://rubricward.com`)
+**By RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR Systems** (`https://rubricward.com`)
 
-Model 50-State DOT historical unit-price bid tabulations ($/Ton, $/LF, $/CY), low/median/high bidder spreads, and recommended unit bid prices.
+Model 50-State CMS Transparency in Coverage (TiC 45 CFR 147.212) machine-readable file 25th, 50th (Median QPA), and 75th-percentile commercial allowed amounts by CPT/DRG.
 
 ---
 
-## Key Capabilities & Construction Preconstruction Use Cases
-- **Stateless & Deterministic:** Zero database side effects; processes project manuals, DOT pay items, Davis-Bacon wage classifications, and AIA billing schedules in memory.
-- **Built for ConTech ERPs, Heavy-Civil Estimators & Surety Underwriters:** Ready to plug directly into Procore, Autodesk Construction Cloud, HeavyBid workflows, or AI estimating agents via `@rubricward/mcp-server`.
+## Key Capabilities & Healthcare Revenue Cycle Use Cases
+- **Stateless & Deterministic:** Zero database side effects; processes commercial payer Clinical Policy Bulletins, CMS TiC MRF CPT/DRG rate cohorts, Medicare MPFS RVU/GPCI baselines, and X12 835 remittances in memory.
+- **Built for Healthcare RCM Platforms, Specialty Physician Groups, ASCs & ERISA Appeal Attorneys:** Ready to plug into Epic, Athenahealth, Waystar, or AI revenue cycle agents via `@rubricward/mcp-server`.
 - **Route:** `POST /v1/model/dot-unit-bid-tabs`
 
 ---
@@ -18,22 +18,9 @@ Model 50-State DOT historical unit-price bid tabulations ($/Ton, $/LF, $/CY), lo
 ```json
 {
   "state_code": "TX",
-  "dot_agency": "TxDOT",
-  "letting_quarter": "2026-Q4",
-  "pay_items": [
-    {
-      "item_code": "3076-6001",
-      "description": "Dense-Graded Hot-Mix Asphalt (Superpave)",
-      "unit": "TON",
-      "quantity": 18500
-    },
-    {
-      "item_code": "0464-6008",
-      "description": "Reinforced Concrete Pipe (Class III 36-Inch)",
-      "unit": "LF",
-      "quantity": 2400
-    }
-  ]
+  "pay_item_description": "CPT 29881 \u2014 Arthroscopy, Knee, Surgical; with Meniscectomy (Medial OR Lateral)",
+  "unit": "CLAIM",
+  "quantity": 420
 }
 ```
 
@@ -41,6 +28,6 @@ Model 50-State DOT historical unit-price bid tabulations ($/Ton, $/LF, $/CY), lo
 
 ## Pricing Tiers
 - **BASIC (`$0 / mo`):** `10 requests / month` hard limit (`10 requests / hour` rate limit) for testing and evaluation.
-- **PRO (`$49 / mo`):** `200 requests / month` for active estimating teams and specialty subcontractors.
-- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for regional general contractors and heavy-civil primes.
-- **MEGA (`$399 / mo`):** `4,000 requests / month` for ConTech SaaS platforms, surety brokerages, and multi-office builders.
+- **PRO (`$49 / mo`):** `200 requests / month` for specialty physician groups and ASC billing teams.
+- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for multi-specialty groups, RCM billing companies, and NSA IDR arbitration desks.
+- **MEGA (`$399 / mo`):** `4,000 requests / month` for hospital health systems, healthcare fintech platforms, and ERISA litigation firms.

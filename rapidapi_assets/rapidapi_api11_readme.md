@@ -1,14 +1,14 @@
-# DOT Planholder List Competitor Bid Behavior & MLOT Analyzer API
+# Specialty Group EIN NPI Payer Leverage & Revenue Left on Table RLOT API
 
-**By RubricWard Preconstruction & DOT Systems** (`https://rubricward.com`)
+**By RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR Systems** (`https://rubricward.com`)
 
-Analyze official DOT planholder lists against historical head-to-head letting results to predict aggressive bidders, Margin Left on Table (MLOT), and optimal markup.
+Compare a medical group or ASC's contracted CPT/APC fee schedule against regional peer EIN/NPI groups in the same MSA using CMS TiC MRF files to quantify annual RLOT.
 
 ---
 
-## Key Capabilities & Construction Preconstruction Use Cases
-- **Stateless & Deterministic:** Zero database side effects; processes project manuals, DOT pay items, Davis-Bacon wage classifications, and AIA billing schedules in memory.
-- **Built for ConTech ERPs, Heavy-Civil Estimators & Surety Underwriters:** Ready to plug directly into Procore, Autodesk Construction Cloud, HeavyBid workflows, or AI estimating agents via `@rubricward/mcp-server`.
+## Key Capabilities & Healthcare Revenue Cycle Use Cases
+- **Stateless & Deterministic:** Zero database side effects; processes commercial payer Clinical Policy Bulletins, CMS TiC MRF CPT/DRG rate cohorts, Medicare MPFS RVU/GPCI baselines, and X12 835 remittances in memory.
+- **Built for Healthcare RCM Platforms, Specialty Physician Groups, ASCs & ERISA Appeal Attorneys:** Ready to plug into Epic, Athenahealth, Waystar, or AI revenue cycle agents via `@rubricward/mcp-server`.
 - **Route:** `POST /v1/analyze/planholder-competitor-spread`
 
 ---
@@ -17,21 +17,8 @@ Analyze official DOT planholder lists against historical head-to-head letting re
 
 ```json
 {
-  "letting_id": "GDOT-PI-0017482",
-  "engineers_estimate_usd": 9400000,
-  "our_direct_cost_usd": 8150000,
-  "planholders": [
-    {
-      "contractor_name": "C.W. Matthews Contracting Co.",
-      "historical_avg_vs_engineer_pct": -4.2,
-      "recent_win_rate_pct": 34.0
-    },
-    {
-      "contractor_name": "E.R. Snell Contractor Inc.",
-      "historical_avg_vs_engineer_pct": -2.8,
-      "recent_win_rate_pct": 28.5
-    }
-  ]
+  "project_id": "TXDOI-MRF-CPT-29881-DFW",
+  "engineers_estimate_usd": 2450000
 }
 ```
 
@@ -39,6 +26,6 @@ Analyze official DOT planholder lists against historical head-to-head letting re
 
 ## Pricing Tiers
 - **BASIC (`$0 / mo`):** `10 requests / month` hard limit (`10 requests / hour` rate limit) for testing and evaluation.
-- **PRO (`$49 / mo`):** `200 requests / month` for active estimating teams and specialty subcontractors.
-- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for regional general contractors and heavy-civil primes.
-- **MEGA (`$399 / mo`):** `4,000 requests / month` for ConTech SaaS platforms, surety brokerages, and multi-office builders.
+- **PRO (`$49 / mo`):** `200 requests / month` for specialty physician groups and ASC billing teams.
+- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for multi-specialty groups, RCM billing companies, and NSA IDR arbitration desks.
+- **MEGA (`$399 / mo`):** `4,000 requests / month` for hospital health systems, healthcare fintech platforms, and ERISA litigation firms.

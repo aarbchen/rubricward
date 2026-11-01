@@ -1,14 +1,14 @@
-# Build America Buy America BABA & 23 CFR 635.410 Material Auditor API
+# CMS NCCI Procedure-to-Procedure PTP Unbundling MUE & Modifier Scrubber API
 
-**By RubricWard Preconstruction & DOT Systems** (`https://rubricward.com`)
+**By RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR Systems** (`https://rubricward.com`)
 
-Audit construction Bills of Materials against Build America, Buy America (BABA) and FHWA 23 CFR 635.410 domestic iron, steel, and manufactured product rules.
+Scrub surgical and outpatient claim lines against CMS National Correct Coding Initiative (NCCI) PTP column-1/column-2 edits, MUE caps, and Modifier -25/-59/-XS rules.
 
 ---
 
-## Key Capabilities & Construction Preconstruction Use Cases
-- **Stateless & Deterministic:** Zero database side effects; processes project manuals, DOT pay items, Davis-Bacon wage classifications, and AIA billing schedules in memory.
-- **Built for ConTech ERPs, Heavy-Civil Estimators & Surety Underwriters:** Ready to plug directly into Procore, Autodesk Construction Cloud, HeavyBid workflows, or AI estimating agents via `@rubricward/mcp-server`.
+## Key Capabilities & Healthcare Revenue Cycle Use Cases
+- **Stateless & Deterministic:** Zero database side effects; processes commercial payer Clinical Policy Bulletins, CMS TiC MRF CPT/DRG rate cohorts, Medicare MPFS RVU/GPCI baselines, and X12 835 remittances in memory.
+- **Built for Healthcare RCM Platforms, Specialty Physician Groups, ASCs & ERISA Appeal Attorneys:** Ready to plug into Epic, Athenahealth, Waystar, or AI revenue cycle agents via `@rubricward/mcp-server`.
 - **Route:** `POST /v1/audit/baba-buy-america`
 
 ---
@@ -17,24 +17,8 @@ Audit construction Bills of Materials against Build America, Buy America (BABA) 
 
 ```json
 {
-  "project_name": "PennDOT I-81 Composite Bridge Deck Replacement",
-  "funding_agency": "FHWA / DOT",
-  "bom_items": [
-    {
-      "material_name": "ASTM A709 Grade 50W Structural Steel Plate Girders",
-      "category": "Iron/Steel",
-      "country_of_melt_and_pour": "US",
-      "domestic_cost_pct": 100.0,
-      "extended_cost_usd": 1420000
-    },
-    {
-      "material_name": "Elastomeric Bridge Bearing Pads",
-      "category": "Construction Material",
-      "country_of_melt_and_pour": "US",
-      "domestic_cost_pct": 92.0,
-      "extended_cost_usd": 84000
-    }
-  ]
+  "project_id": "TXDOI-MRF-CPT-29881-DFW",
+  "funding_agency": "CMS NCCI / Commercial Payer Claims Editing Engine"
 }
 ```
 
@@ -42,6 +26,6 @@ Audit construction Bills of Materials against Build America, Buy America (BABA) 
 
 ## Pricing Tiers
 - **BASIC (`$0 / mo`):** `10 requests / month` hard limit (`10 requests / hour` rate limit) for testing and evaluation.
-- **PRO (`$49 / mo`):** `200 requests / month` for active estimating teams and specialty subcontractors.
-- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for regional general contractors and heavy-civil primes.
-- **MEGA (`$399 / mo`):** `4,000 requests / month` for ConTech SaaS platforms, surety brokerages, and multi-office builders.
+- **PRO (`$49 / mo`):** `200 requests / month` for specialty physician groups and ASC billing teams.
+- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for multi-specialty groups, RCM billing companies, and NSA IDR arbitration desks.
+- **MEGA (`$399 / mo`):** `4,000 requests / month` for hospital health systems, healthcare fintech platforms, and ERISA litigation firms.

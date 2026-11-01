@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "Trade Subcontractor Invitation to Bid ITB Scope Gap & AIA A401 API",
+    "title": "Managed Care Payer Contract Redline & Rate-Escalator Term Sheet API",
     "version": "1.0.0",
-    "description": "Generate CSI-aligned Subcontractor Scope Sheets, Scope-Gap Inclusions/Exclusions Checklists, and AIA A401 Subcontract flow-down clauses."
+    "description": "Generate managed care payer contract redlines, anti-downcoding covenants, ASC implant pass-through carve-outs, and CPI-U annual rate-escalator term sheets."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/generate/subcontractor-scope-itb": {
       "post": {
-        "summary": "Generate Subcontractor ITB Scope Sheet & AIA A401 Flow-Downs",
-        "description": "Generate CSI-aligned Subcontractor Scope Sheets, Scope-Gap Inclusions/Exclusions Checklists, and AIA A401 Subcontract flow-down clauses.",
-        "operationId": "generateSubcontractorScopeItb",
+        "summary": "Generate Managed Care Payer Contract Redline & Term Sheet",
+        "description": "Generate managed care payer contract redlines, anti-downcoding covenants, ASC implant pass-through carve-outs, and CPI-U annual rate-escalator term sheets.",
+        "operationId": "generateManagedCareContractRedline",
         "requestBody": {
           "required": true,
           "content": {
@@ -23,50 +23,32 @@
               "schema": {
                 "type": "object",
                 "required": [
-                  "project_name",
-                  "trade_division",
-                  "scope_highlights"
+                  "project_id",
+                  "trade_package"
                 ],
                 "properties": {
-                  "project_name": {
+                  "project_id": {
                     "type": "string",
-                    "description": "Project title.",
-                    "default": "VAMC Seismic & MEP Modernization"
+                    "description": "Managed Care Contract Negotiation ID.",
+                    "default": "TXDOI-MRF-CPT-29881-DFW"
                   },
-                  "trade_division": {
+                  "trade_package": {
                     "type": "string",
-                    "description": "Target CSI MasterFormat division and trade.",
-                    "default": "Division 26 - Electrical"
-                  },
-                  "prime_contract_liquidated_damages_per_day_usd": {
-                    "type": "number",
-                    "description": "Prime contract daily liquidated damages flow-down in USD.",
-                    "default": 3500
-                  },
-                  "scope_highlights": {
-                    "type": "array",
-                    "description": "Key scope inclusions to verify in subcontractor buyout.",
-                    "items": {
-                      "type": "string"
-                    }
+                    "description": "Target payer contract line of business and specialty schedule.",
+                    "default": "Commercial PPO / HMO & Self-Funded ASO Fee Schedule Addendum"
                   }
                 }
               },
               "example": {
-                "project_name": "VA Medical Center Seismic Structural & MEP Modernization",
-                "trade_division": "Division 26 - Electrical & Medium-Voltage Switchgear",
-                "prime_contract_liquidated_damages_per_day_usd": 3500,
-                "scope_highlights": [
-                  "Furnish and install two 2,500 kVA 15kV pad-mounted transformers and emergency generator paralleling switchgear",
-                  "Include all trenching, concrete duct banks, arc-flash study, and NETA acceptance testing"
-                ]
+                "project_id": "TXDOI-MRF-CPT-29881-DFW",
+                "trade_package": "Commercial PPO / HMO & Self-Funded ASO Fee Schedule Addendum (Orthopedic & ASC Carve-Out)"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

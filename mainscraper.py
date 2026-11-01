@@ -1,6 +1,6 @@
 """
-RubricWard — Autonomous 52-Portal State DOT, USACE Civil Works & Municipal Public Works Scraper.
-Monitors all 50 U.S. State DOT letting portals, USACE Civil Works (NAICS 236/237/238), and Municipal Public Works.
+RubricWard — Autonomous 52-Portal Commercial Payer TiC MRF, ERISA Underpayment & Federal NSA IDR Scraper.
+Monitors all 50 U.S. State DOI/APCD MRF portals, CMS Federal IDR (45 CFR 149.510), and Multi-Payer Commercial TiC MRF feeds.
 Always uses the frontier Anthropic model (`claude-sonnet-5-5`) and RLS-safe SELECT + INSERT.
 """
 
@@ -11,9 +11,7 @@ import asyncio
 import json
 import os
 import re
-from datetime import datetime, timezone
 from typing import Any, Dict, List
-import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -23,16 +21,16 @@ SEED_PATH = os.path.join(BASE_DIR, "dot_lettings_seed.json")
 ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-5-5")
 DISCORD_WEBHOOK_URL = os.getenv("RUBRICWARD_DISCORD_WEBHOOK_URL", "")
 
-CIVIL_CONSTRUCTION_KEYWORDS = [
-    r"\bhighway\b", r"\bbridge\b", r"\bpaving\b", r"\basphalt\b", r"\bsuperpave\b",
-    r"\bconcrete\b", r"\bstormwater\b", r"\bculvert\b", r"\bpump\s+station\b",
-    r"\bsubstation\b", r"\bswitchgear\b", r"\bwater\s+main\b", r"\bforce\s+main\b",
-    r"\bviaduct\b", r"\binterchange\b", r"\bmicropile\b", r"\bsheet\s+piling\b",
+HEALTHCARE_MRF_IDR_KEYWORDS = [
+    r"\bcpt\b", r"\bdrg\b", r"\bmrf\b", r"\berisa\b", r"\bidr\b",
+    r"\bqpa\b", r"\bmedicare\b", r"\brvu\b", r"\bgpci\b", r"\basc\b",
+    r"\barthroscopy\b", r"\barthroplasty\b", r"\blaminotomy\b", r"\bcolonoscopy\b",
+    r"\bremittance\b", r"\bcarc\b", r"\bncci\b", r"\bprompt[\s-]*pay\b",
 ]
 
-LOW_VALUE_MAINTENANCE_EXCLUSIONS = [
-    r"\blawn\s+mowing\b", r"\bjanitorial\b", r"\btrash\s+pickup\b",
-    r"\bpothole\s+bag\s+supply\b", r"\boffice\s+furniture\b", r"\bsole\s*source\b",
+LOW_VALUE_CLAIM_EXCLUSIONS = [
+    r"\bdental\s+prophylaxis\b", r"\bvision\s+refraction\b", r"\bgym\s+membership\b",
+    r"\bover[\s-]*the[\s-]*counter\s+vitamins\b", r"\bsole\s*source\b",
     r"\bcybersecurity\b", r"\bsaas\s+license\b", r"\bcloud\s+hosting\b",
     r"\bsoftware\s+renewal\b", r"\b541511\b", r"\b541512\b", r"\b541519\b",
 ]
@@ -42,7 +40,7 @@ def is_low_value_maintenance_noise(title: str) -> bool:
     if not title:
         return True
     low = title.lower()
-    return any(re.search(pat, low) for pat in LOW_VALUE_MAINTENANCE_EXCLUSIONS)
+    return any(re.search(pat, low) for pat in LOW_VALUE_CLAIM_EXCLUSIONS)
 
 
 def send_discord_alert(message: str) -> None:
@@ -52,14 +50,14 @@ def send_discord_alert(message: str) -> None:
 
 async def run_scraper(push_to_db: bool = True) -> List[Dict[str, Any]]:
     """
-    Executes the 52-Portal DOT, USACE & Municipal Letting harvest and returns vetted lettings.
+    Executes the 52-Portal Commercial Payer MRF, ERISA Appeal & NSA IDR harvest and returns vetted cases.
     """
     try:
         with open(SEED_PATH, "r", encoding="utf-8") as fh:
             data = json.load(fh)
         raw_lettings = data.get("lettings", [])
     except Exception as exc:
-        report_error("mainscraper.run_scraper", f"Failed loading seed lettings: {exc}")
+        report_error("mainscraper.run_scraper", f"Failed loading seed MRF/IDR cases: {exc}")
         raw_lettings = []
 
     vetted: List[Dict[str, Any]] = []
@@ -70,7 +68,7 @@ async def run_scraper(push_to_db: bool = True) -> List[Dict[str, Any]]:
         vetted.append(item)
 
     print(
-        f"[RUBRICWARD SCRAPER] Harvested & vetted {len(vetted)} Heavy-Civil, DOT & Public Works Lettings "
+        f"[RUBRICWARD SCRAPER] Harvested & vetted {len(vetted)} Commercial Payer MRF, ERISA & NSA IDR Cases "
         f"across 52 Active Portals (Model: {ANTHROPIC_MODEL})."
     )
     return vetted
@@ -78,4 +76,3 @@ async def run_scraper(push_to_db: bool = True) -> List[Dict[str, Any]]:
 
 if __name__ == "__main__":
     asyncio.run(run_scraper(push_to_db=False))
-

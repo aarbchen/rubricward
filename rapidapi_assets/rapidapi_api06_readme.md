@@ -1,14 +1,14 @@
-# DOT DBE 49 CFR Part 26 Subcontractor & Good Faith Effort Generator API
+# Federal No Surprises Act NSA 45 CFR 149.510 Open Negotiation & IDR API
 
-**By RubricWard Preconstruction & DOT Systems** (`https://rubricward.com`)
+**By RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR Systems** (`https://rubricward.com`)
 
-Calculate certified DBE/MBE/WBE participation credit (100% subcontractor vs. 60% regular dealer) and generate audit-proof 49 CFR Part 26 Good Faith Effort logs.
+Generate statutory 30-business-day Open Negotiation Notices, verify QPA deflation anomalies, and compile Federal No Surprises Act (45 CFR 149.510) IDR arbitration briefs.
 
 ---
 
-## Key Capabilities & Construction Preconstruction Use Cases
-- **Stateless & Deterministic:** Zero database side effects; processes project manuals, DOT pay items, Davis-Bacon wage classifications, and AIA billing schedules in memory.
-- **Built for ConTech ERPs, Heavy-Civil Estimators & Surety Underwriters:** Ready to plug directly into Procore, Autodesk Construction Cloud, HeavyBid workflows, or AI estimating agents via `@rubricward/mcp-server`.
+## Key Capabilities & Healthcare Revenue Cycle Use Cases
+- **Stateless & Deterministic:** Zero database side effects; processes commercial payer Clinical Policy Bulletins, CMS TiC MRF CPT/DRG rate cohorts, Medicare MPFS RVU/GPCI baselines, and X12 835 remittances in memory.
+- **Built for Healthcare RCM Platforms, Specialty Physician Groups, ASCs & ERISA Appeal Attorneys:** Ready to plug into Epic, Athenahealth, Waystar, or AI revenue cycle agents via `@rubricward/mcp-server`.
 - **Route:** `POST /v1/generate/dbe-good-faith-effort`
 
 ---
@@ -17,25 +17,9 @@ Calculate certified DBE/MBE/WBE participation credit (100% subcontractor vs. 60%
 
 ```json
 {
-  "project_name": "FDOT SR-826 Palmetto Expressway Interchange Reconstruction",
-  "total_base_bid_usd": 14850000,
-  "dbe_goal_percent": 11.5,
-  "proposed_dbe_commitments": [
-    {
-      "firm_name": "Sunshine Barricade & MOT LLC",
-      "certification": "FDOT DBE",
-      "role": "Subcontractor",
-      "work_scope": "Maintenance of Traffic & Pavement Markings",
-      "quote_amount_usd": 1180000
-    },
-    {
-      "firm_name": "Gulfstream Aggregate Supply Inc.",
-      "certification": "FDOT DBE",
-      "role": "Regular Dealer",
-      "work_scope": "Limestone Base & Pipe Bedding",
-      "quote_amount_usd": 920000
-    }
-  ]
+  "project_id": "CMS-NSA-IDR-CPT-63047-NAT",
+  "total_bid_amount_usd": 1420000,
+  "dbe_goal_pct": 215.0
 }
 ```
 
@@ -43,6 +27,6 @@ Calculate certified DBE/MBE/WBE participation credit (100% subcontractor vs. 60%
 
 ## Pricing Tiers
 - **BASIC (`$0 / mo`):** `10 requests / month` hard limit (`10 requests / hour` rate limit) for testing and evaluation.
-- **PRO (`$49 / mo`):** `200 requests / month` for active estimating teams and specialty subcontractors.
-- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for regional general contractors and heavy-civil primes.
-- **MEGA (`$399 / mo`):** `4,000 requests / month` for ConTech SaaS platforms, surety brokerages, and multi-office builders.
+- **PRO (`$49 / mo`):** `200 requests / month` for specialty physician groups and ASC billing teams.
+- **ULTRA (`$149 / mo` — Recommended):** `1,000 requests / month` for multi-specialty groups, RCM billing companies, and NSA IDR arbitration desks.
+- **MEGA (`$399 / mo`):** `4,000 requests / month` for hospital health systems, healthcare fintech platforms, and ERISA litigation firms.

@@ -1,19 +1,18 @@
-# `@rubricward/mcp-server` — Construction Preconstruction, 50-State DOT Bid-Tab & Prevailing-Wage MCP Server
+# `@rubricward/mcp-server` — Commercial Payer TiC MRF, Medicare RVU/GPCI, ERISA Appeal & NSA IDR MCP Server
 
-Connect Claude Desktop, Cursor, Windsurf, or any Model Context Protocol (MCP) agent directly to RubricWard's preconstruction, DOT unit-bid tabulation, Davis-Bacon `WH-347`, and AIA `G702/G703` microservices.
+Connect Claude Desktop, Cursor, Windsurf, or any Model Context Protocol (MCP) agent directly to RubricWard's commercial payer Transparency in Coverage (`TiC 45 CFR 147.212`) machine-readable file (`MRF`), Medicare Physician Fee Schedule (`MPFS RVU/GPCI`), ERISA `29 CFR 2560.503-1` medical necessity appeal, and Federal No Surprises Act (`NSA 45 CFR 149.510`) IDR arbitration microservices.
 
-| Tool Name | Endpoint Route | Core Preconstruction Capability |
+| Tool Name | Endpoint Route | Core Healthcare Revenue Cycle & Payer Intelligence Capability |
 | :--- | :--- | :--- |
-| `shred_csi_masterformat` | `POST /v1/shred/csi-masterformat` | Shreds CSI MasterFormat Divisions `00–48` into submittal logs & liquidated damages. |
-| `model_dot_unit_bid_tabs` | `POST /v1/model/dot-unit-bid-tabs` | Models 36-month State DOT historical unit bid prices (`$/Ton`, `$/LF`, `$/CY`). |
-| `calculate_davis_bacon_prevailing_wage` | `POST /v1/calculate/davis-bacon-prevailing-wage` | Computes `29 CFR Part 5` Davis-Bacon base + fringe rates & `WH-347` certified payroll. |
-| `get_live_dot_lettings` | `GET /v1/lettings/live` | Queries 52 active State DOT, USACE Civil & Municipal public works lettings. |
-| `audit_baba_buy_america` | `POST /v1/audit/baba-buy-america` | Audits BOMs for `BABA` (`23 CFR 635.410`) domestic iron/steel & De Minimis waivers. |
-| `generate_dbe_good_faith_effort` | `POST /v1/generate/dbe-good-faith-effort` | Calculates `49 CFR Part 26` DBE subcontractor credit (100% vs. 60%) & `GFE` logs. |
-| `generate_aia_g702_g703_pay_app` | `POST /v1/generate/aia-g702-g703-pay-app` | Builds balanced AIA `G702/G703` Schedules of Values (`SOV`) & retainage math. |
-| `audit_surety_miller_act_bond` | `POST /v1/audit/surety-miller-act-bond` | Underwrites Miller Act (`40 U.S.C. 3131`) single/aggregate bond limits & premiums. |
-| `generate_rfi_change_order_claim` | `POST /v1/generate/rfi-change-order-claim` | Drafts RFIs, Differing Site Condition (`FAR 52.236-2`) claims & AIA `G701` pricing. |
-| `audit_osha_emr_site_safety` | `POST /v1/audit/osha-emr-site-safety` | Generates `OSHA 1926` / `USACE EM 385-1-1` Activity Hazard Analyses (`AHA`) & EMR audits. |
-| `analyze_planholder_competitor_spread` | `POST /v1/analyze/planholder-competitor-spread` | Predicts low-bid spread & Margin Left on Table (`MLOT`) from DOT planholder lists. |
-| `generate_subcontractor_scope_itb` | `POST /v1/generate/subcontractor-scope-itb` | Generates trade Subcontractor `ITB` scope checklists & AIA `A401` flow-downs. |
-
+| `shred_csi_masterformat` | `POST /v1/shred/csi-masterformat` | Shreds commercial payer Clinical Policy Bulletins (`CPB`) & Medicare `LCD/NCD` rules into prior-auth criteria & ERISA appeal triggers. |
+| `model_dot_unit_bid_tabs` | `POST /v1/model/dot-unit-bid-tabs` | Models 50-State Commercial Payer TiC MRF allowed amounts (`25th / 50th QPA / 75th`) & `% of Medicare` multiples by CPT/DRG. |
+| `calculate_davis_bacon_prevailing_wage` | `POST /v1/calculate/davis-bacon-prevailing-wage` | Computes locality-adjusted CMS Medicare `MPFS RVU` (`Work + PE + MP`), `GPCI`, and ASC payment rates. |
+| `get_live_dot_lettings` | `GET /v1/lettings/live` | Queries 52 active State DOI/APCD MRF, CMS Federal IDR & Commercial Payer rate-disparity cohorts. |
+| `audit_baba_buy_america` | `POST /v1/audit/baba-buy-america` | Scrubs multi-line claims against CMS `NCCI PTP` unbundling edits, `MUE` caps & Modifier `25/59/XS` rules. |
+| `generate_dbe_good_faith_effort` | `POST /v1/generate/dbe-good-faith-effort` | Generates Federal No Surprises Act (`NSA 45 CFR 149.510`) 30-day Open Negotiation & IDR arbitration briefs. |
+| `generate_aia_g702_g703_pay_app` | `POST /v1/generate/aia-g702-g703-pay-app` | Audits HIPAA `X12 835` Electronic Remittance Advice (`ERA`) `CARC/RARC` adjustments & contractual underpayments. |
+| `audit_surety_miller_act_bond` | `POST /v1/audit/surety-miller-act-bond` | Calculates 50-State Statutory Prompt-Pay interest penalties (`12%–18% APR`) & clean-claim timely-filing deadlines. |
+| `generate_rfi_change_order_claim` | `POST /v1/generate/rfi-change-order-claim` | Drafts citation-backed `ERISA 29 CFR 2560.503-1` Level-1/Level-2 medical necessity & experimental/investigational appeals. |
+| `audit_osha_emr_site_safety` | `POST /v1/audit/osha-emr-site-safety` | Defends inpatient `MS-DRG / APR-DRG` claims against payer clinical validation & `CC/MCC` downcoding denials. |
+| `analyze_planholder_competitor_spread` | `POST /v1/analyze/planholder-competitor-spread` | Analyzes regional specialty group `EIN/NPI` MRF rate spreads to quantify Revenue Left on Table (`RLOT`). |
+| `generate_subcontractor_scope_itb` | `POST /v1/generate/subcontractor-scope-itb` | Generates managed care payer contract redlines, anti-recoupment clauses & CPI-U rate-escalator term sheets. |

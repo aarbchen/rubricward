@@ -1,7 +1,8 @@
 """
 RubricWard API Gateway — FastAPI Application Entrypoint.
-Mounts all 12 Construction, 50-State DOT Bid-Tab & Prevailing-Wage Microservices,
-the 6-File OpenXML .ZIP Bid Package Compiler, and the Remote Streamable-HTTP MCP Server.
+Mounts all 12 Commercial Payer TiC MRF, Medicare MPFS RVU/GPCI, ERISA 29 CFR 2560.503-1 Appeal,
+and Federal No Surprises Act (NSA 45 CFR 149.510) IDR Arbitration Microservices,
+the 6-File OpenXML .ZIP Claim/IDR Package Compiler, and the Remote Streamable-HTTP MCP Server.
 """
 
 from contextlib import asynccontextmanager
@@ -30,10 +31,11 @@ app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.VERSION,
     description=(
-        "Stateless B2B Construction Preconstruction, 50-State DOT Historical Item Bid Tabulation, "
-        "Davis-Bacon Prevailing Wage (29 CFR Part 5 / WH-347), CSI MasterFormat Divisions 00-48 Spec Shredding, "
-        "Build America Buy America (BABA), DOT DBE (49 CFR Part 26), AIA G702/G703 Pay-App, Miller Act Surety Bond, "
-        "and 1-Click 6-File OpenXML (.DOCX + .XLSX) Bid Package Compiler API Gateway."
+        "Stateless B2B Healthcare Commercial Payer Rate-Transparency (CMS TiC 45 CFR 147.212 MRF), "
+        "Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator, Clinical Policy Bulletin (CPB) Shredder, "
+        "CMS NCCI PTP/MUE Scrubber, Federal No Surprises Act (NSA 45 CFR 149.510) IDR Arbitration Brief Generator, "
+        "ERISA 29 CFR 2560.503-1 Medical Necessity Appeal Drafter, HIPAA X12 835 Remittance Auditor, "
+        "and 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package Compiler API Gateway."
     ),
     docs_url="/docs",
     redoc_url="/redoc",
@@ -63,7 +65,7 @@ async def serve_index():
     index_path = ROOT_DIR / "index.html"
     if index_path.exists():
         return FileResponse(str(index_path), media_type="text/html")
-    return HTMLResponse("<h1>RubricWard Preconstruction & DOT API Gateway</h1>")
+    return HTMLResponse("<h1>RubricWard Commercial Payer MRF, ERISA Appeal & NSA IDR API Gateway</h1>")
 
 
 @app.get("/apis", include_in_schema=False)
@@ -112,7 +114,6 @@ async def serve_bimi_svg():
         if candidate.exists():
             return FileResponse(str(candidate), media_type="image/svg+xml")
     return HTMLResponse("", media_type="image/svg+xml")
-
 
 
 @app.get("/favicon.ico", include_in_schema=False)
@@ -169,6 +170,3 @@ async def serve_sized_favicon_png(dims: str):
         if candidate.exists():
             return FileResponse(str(candidate), media_type="image/png")
     return await serve_favicon_svg()
-
-
-

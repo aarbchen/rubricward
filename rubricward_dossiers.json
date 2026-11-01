@@ -1,1663 +1,426 @@
 {
-  "TXDOI-MRF-CPT-29881-DFW": {
-    "project_id": "TXDOI-MRF-CPT-29881-DFW",
-    "slug": "uhc-bcbs-tx-commercial-mrf-rate-disparity-asc-facility-fee-nsa",
-    "title": "[TXDOI-MRF-CPT-29881-DFW] UHC & BCBS-TX Commercial MRF Rate Disparity, ASC Facility Fee & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic Surgery)",
-    "agency": "Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index \u2014 Dallas-Fort Worth MSA",
-    "jurisdiction": "texas",
-    "state_code": "TX",
-    "county": "Travis County, TX",
-    "letting_date": "2026-11-18",
-    "engineers_estimate_usd": 1845000.0,
-    "recommended_low_bid_usd": 1737990.0,
-    "dbe_goal_pct": 14.5,
-    "liquidated_damages_per_day_usd": 420,
-    "wage_determination_id": "TX-GPCI-2026-DFW (Medicare Locality 04412-11 & TX Ins. Code \u00a7 1301.103 18% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
-      "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
-      "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
-      "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
-      "Div 32 TX Ins. Code \u00a7 1301.103 Prompt-Pay Penalty"
-    ],
-    "planholders": [
-      "Texas Orthopedic Specialists PA",
-      "Baylor Scott & White Surgicare",
-      "Lonestar Ambulatory Surgery Center LLC",
-      "Austin Spine & Neurosurgery Associates",
-      "Methodist Orthopedic Surgical Group"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-29881",
-        "description": "Knee Arthroscopy, Surgical, with Meniscectomy (Medial OR Lateral, ASC Facility + Pro)",
-        "unit": "CLAIM",
-        "quantity": 420,
-        "hist_low_unit_usd": 640.0,
-        "hist_median_unit_usd": 1485.0,
-        "recommended_unit_usd": 1890.0
-      },
-      {
-        "item_code": "CPT-27447",
-        "description": "Arthroplasty, Knee, Condyle and Plateau; Medial AND Lateral Compartments (Total Knee)",
-        "unit": "CLAIM",
-        "quantity": 115,
-        "hist_low_unit_usd": 4850.0,
-        "hist_median_unit_usd": 9420.0,
-        "recommended_unit_usd": 11850.0
-      },
-      {
-        "item_code": "CPT-29827",
-        "description": "Shoulder Arthroscopy, Surgical, with Rotator Cuff Repair (Modifier 59 / XU Audit)",
-        "unit": "CLAIM",
-        "quantity": 210,
-        "hist_low_unit_usd": 1120.0,
-        "hist_median_unit_usd": 2340.0,
-        "recommended_unit_usd": 2890.0
-      },
-      {
-        "item_code": "CPT-64483",
-        "description": "Transforaminal Epidural Injection, Lumbar or Sacral, Single Level (Fluoroscopic Guidance)",
-        "unit": "CLAIM",
-        "quantity": 680,
-        "hist_low_unit_usd": 285.0,
-        "hist_median_unit_usd": 615.0,
-        "recommended_unit_usd": 780.0
-      },
-      {
-        "item_code": "CPT-99214-25",
-        "description": "Level 4 Established Patient Office/Outpatient E/M with Significant Separately Identifiable Mod 25",
-        "unit": "CLAIM",
-        "quantity": 1450,
-        "hist_low_unit_usd": 118.0,
-        "hist_median_unit_usd": 176.0,
-        "recommended_unit_usd": 208.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+  "model": "claude-sonnet-5-5",
+  "count": 12,
+  "dossiers": [
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx",
+      "jurisdiction": "tx",
       "state_code": "TX",
-      "pay_item_description": "Knee Arthroscopy, Surgical, with Meniscectomy (Medial OR Lateral, ASC Facility + Pro)",
-      "unit": "CLAIM",
-      "quantity": 420.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 108.1,
-        "historical_median_bid_unit_usd": 120.32,
-        "historical_75th_percentile_unit_usd": 137.24,
-        "recommended_competitive_unit_bid_usd": 112.74
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 45402.0,
-        "extended_at_recommended_bid_usd": 47350.8,
-        "extended_at_median_bid_usd": 50534.4,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "TX",
+      "title": "[TXDOI-MRF-CPT-29881-DFW] UHC & BCBS-TX Commercial MRF Rate Disparity, ASC Facility Fee & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic Surgery)",
+      "agency": "Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index \u2014 Dallas-Fort Worth MSA",
       "county": "Travis County, TX",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "TX20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 57.19,
-      "fully_burdened_crew_hourly_usd": 67.77,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 982665.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-11-18",
+      "engineers_estimate_usd": 1845000.0,
+      "recommended_low_bid_usd": 1780425.0,
+      "predicted_second_bid_usd": 1845000.0,
+      "predicted_mlot_usd": 258300.0,
+      "recommended_markup_pct": 14.5,
+      "dbe_goal_pct": 14.5,
+      "wage_determination_id": "TX-GPCI-2026-DFW (Medicare Locality 04412-11 & TX Ins. Code \u00a7 1301.103 18% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 420,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 39.95,
-          "bona_fide_fringe_hourly_usd": 17.3,
-          "total_prevailing_package_hourly_usd": 57.25,
-          "overtime_1_5x_hourly_usd": 77.23,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 35.91,
-          "bona_fide_fringe_hourly_usd": 14.95,
-          "total_prevailing_package_hourly_usd": 50.86,
-          "overtime_1_5x_hourly_usd": 68.81,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 39.29,
-          "bona_fide_fringe_hourly_usd": 19.83,
-          "total_prevailing_package_hourly_usd": 59.12,
-          "overtime_1_5x_hourly_usd": 78.77,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 42.86,
-          "bona_fide_fringe_hourly_usd": 18.66,
-          "total_prevailing_package_hourly_usd": 61.52,
-          "overtime_1_5x_hourly_usd": 82.95,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Texas Orthopedic Specialists PA",
+        "Baylor Scott & White Surgicare",
+        "Lonestar Ambulatory Surgery Center LLC",
+        "Austin Spine & Neurosurgery Associates",
+        "Methodist Orthopedic Surgical Group"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/uhc-bcbs-tx-commercial-mrf-rate-disparity-asc-facility-fee-nsa.html",
-    "source_url": "https://www.tdi.texas.gov/health/payor-mrf-benchmarks.html#TXDOI-MRF-CPT-29881-DFW",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `TXDOI-MRF-CPT-29881-DFW` \u2014 [TXDOI-MRF-CPT-29881-DFW] UHC & BCBS-TX Commercial MRF Rate Disparity, ASC Facility Fee & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic Surgery)\n**Agency:** Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index \u2014 Dallas-Fort Worth MSA (Travis County, TX) | **Letting Date:** `2026-11-18`\n**Engineer's Estimate:** `$1,845,000` | **Recommended Low-Bid Target:** `$1,737,990` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal, Div 05 Federal NSA 45 CFR 149.510 IDR Brief, Div 26 CMS NCCI PTP & Modifier 25/59 Audit\n**Lead Pay Item Benchmark:** Knee Arthroscopy, Surgical, with Meniscectomy (Medial OR Lateral, ASC Facility + Pro) -> `$112.74/CLAIM`\n**Davis-Bacon Crew Rate:** `$67.77/hr` fully burdened (`TX-GPCI-2026-DFW (Medicare Locality 04412-11 & TX Ins. Code \u00a7 1301.103 18% Prompt-Pay)`)\n**DBE Goal:** `14.5%` (`49 CFR Part 26`) | **Liquidated Damages:** `$420/day`\n**Official Planholders (5):** Texas Orthopedic Specialists PA, Baylor Scott & White Surgicare, Lonestar Ambulatory Surgery Center LLC, Austin Spine & Neurosurgery Associates\nDossier: https://rubricward.com/lettings/project/uhc-bcbs-tx-commercial-mrf-rate-disparity-asc-facility-fee-nsa.html\nSource: https://www.tdi.texas.gov/health/payor-mrf-benchmarks.html#TXDOI-MRF-CPT-29881-DFW",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "CADMHC-MRF-CPT-63030-SFO": {
-    "project_id": "CADMHC-MRF-CPT-63030-SFO",
-    "slug": "anthem-blue-cross-aetna-mrf-rate-spread-knox-keene-prompt-pay",
-    "title": "[CADMHC-MRF-CPT-63030-SFO] Anthem Blue Cross & Aetna MRF Rate Spread, Knox-Keene Prompt-Pay & ERISA Appeal (CPT 63030 / 22551 Spine & Neurosurgery)",
-    "agency": "California Department of Managed Health Care (DMHC) & Noridian JE MRF Index \u2014 Bay Area MSA",
-    "jurisdiction": "california",
-    "state_code": "CA",
-    "county": "San Mateo County, CA",
-    "letting_date": "2026-11-20",
-    "engineers_estimate_usd": 2480000.0,
-    "recommended_low_bid_usd": 2336160.0,
-    "dbe_goal_pct": 18.0,
-    "liquidated_damages_per_day_usd": 650,
-    "wage_determination_id": "CA-GPCI-2026-SFO (Medicare Locality 01112-07 & CA Health & Safety \u00a7 1371 15% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 ERISA & Noridian LCD L34220 Appeal",
-      "Div 05 Federal NSA IDR QPA Rebuttal",
-      "Div 26 NCCI Spine Arthrodesis Edit Audit",
-      "Div 31 Bay Area GPCI Locality RVU Schedule",
-      "Div 33 CA Health & Safety Code \u00a7 1371 Interest"
-    ],
-    "planholders": [
-      "Pacific Spine & Neurosurgery Institute",
-      "Silicon Valley Ambulatory Surgery Center",
-      "Golden State Orthopedic & Spine Medical Group",
-      "Bay Area Minimally Invasive Surgery Center",
-      "Peninsula Neurosurgical Associates Inc."
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-63030",
-        "description": "Laminotomy (Hemilaminectomy) with Decompression of Nerve Root(s), 1 Interspace, Lumbar",
-        "unit": "CLAIM",
-        "quantity": 185,
-        "hist_low_unit_usd": 1450.0,
-        "hist_median_unit_usd": 3420.0,
-        "recommended_unit_usd": 4280.0
-      },
-      {
-        "item_code": "CPT-22551",
-        "description": "Arthrodesis, Anterior Interbody, Including Disc Space Prep & Decompression, Cervical Below C2 (ACDF)",
-        "unit": "CLAIM",
-        "quantity": 140,
-        "hist_low_unit_usd": 2890.0,
-        "hist_median_unit_usd": 6450.0,
-        "recommended_unit_usd": 8190.0
-      },
-      {
-        "item_code": "CPT-22612",
-        "description": "Arthrodesis, Posterior or Posterolateral Technique, Single Interspace, Lumbar",
-        "unit": "CLAIM",
-        "quantity": 95,
-        "hist_low_unit_usd": 2650.0,
-        "hist_median_unit_usd": 5890.0,
-        "recommended_unit_usd": 7450.0
-      },
-      {
-        "item_code": "CPT-20931",
-        "description": "Allograft, Structural, for Spine Surgery Only (List Separately Add-On Code)",
-        "unit": "CLAIM",
-        "quantity": 235,
-        "hist_low_unit_usd": 310.0,
-        "hist_median_unit_usd": 740.0,
-        "recommended_unit_usd": 920.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-cadmhc-mrf-cpt-63030-sfo-anthem-blue",
+      "jurisdiction": "ca",
       "state_code": "CA",
-      "pay_item_description": "Laminotomy (Hemilaminectomy) with Decompression of Nerve Root(s), 1 Interspace, Lumbar",
-      "unit": "CLAIM",
-      "quantity": 185.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 158.7,
-        "historical_median_bid_unit_usd": 176.64,
-        "historical_75th_percentile_unit_usd": 201.48,
-        "recommended_competitive_unit_bid_usd": 165.52
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 29359.5,
-        "extended_at_recommended_bid_usd": 30621.2,
-        "extended_at_median_bid_usd": 32678.4,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "CA",
+      "title": "[CADMHC-MRF-CPT-63030-SFO] Anthem Blue Cross & Aetna MRF Rate Spread, Knox-Keene Prompt-Pay & ERISA Appeal (CPT 63030 / 22551 Spine & Neurosurgery)",
+      "agency": "California Department of Managed Health Care (DMHC) & Noridian JE MRF Index \u2014 Bay Area MSA",
       "county": "San Mateo County, CA",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "CA20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 83.95,
-      "fully_burdened_crew_hourly_usd": 99.48,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 1442460.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-11-20",
+      "engineers_estimate_usd": 2480000.0,
+      "recommended_low_bid_usd": 2393200.0,
+      "predicted_second_bid_usd": 2480000.0,
+      "predicted_mlot_usd": 347200.0,
+      "recommended_markup_pct": 18.0,
+      "dbe_goal_pct": 18.0,
+      "wage_determination_id": "CA-GPCI-2026-SFO (Medicare Locality 01112-07 & CA Health & Safety \u00a7 1371 15% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 650,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 58.65,
-          "bona_fide_fringe_hourly_usd": 25.39,
-          "total_prevailing_package_hourly_usd": 84.04,
-          "overtime_1_5x_hourly_usd": 113.36,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 52.72,
-          "bona_fide_fringe_hourly_usd": 21.94,
-          "total_prevailing_package_hourly_usd": 74.66,
-          "overtime_1_5x_hourly_usd": 101.02,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 57.68,
-          "bona_fide_fringe_hourly_usd": 29.12,
-          "total_prevailing_package_hourly_usd": 86.8,
-          "overtime_1_5x_hourly_usd": 115.64,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 62.93,
-          "bona_fide_fringe_hourly_usd": 27.39,
-          "total_prevailing_package_hourly_usd": 90.32,
-          "overtime_1_5x_hourly_usd": 121.78,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Pacific Spine & Neurosurgery Institute",
+        "Silicon Valley Ambulatory Surgery Center",
+        "Golden State Orthopedic & Spine Medical Group",
+        "Bay Area Minimally Invasive Surgery Center",
+        "Peninsula Neurosurgical Associates Inc."
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-cadmhc-mrf-cpt-63030-sfo-anthem-blue.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/anthem-blue-cross-aetna-mrf-rate-spread-knox-keene-prompt-pay.html",
-    "source_url": "https://www.dmhc.ca.gov/DataResearch/FinancialSummaryData.aspx#CADMHC-MRF-CPT-63030-SFO",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `CADMHC-MRF-CPT-63030-SFO` \u2014 [CADMHC-MRF-CPT-63030-SFO] Anthem Blue Cross & Aetna MRF Rate Spread, Knox-Keene Prompt-Pay & ERISA Appeal (CPT 63030 / 22551 Spine & Neurosurgery)\n**Agency:** California Department of Managed Health Care (DMHC) & Noridian JE MRF Index \u2014 Bay Area MSA (San Mateo County, CA) | **Letting Date:** `2026-11-20`\n**Engineer's Estimate:** `$2,480,000` | **Recommended Low-Bid Target:** `$2,336,160` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 ERISA & Noridian LCD L34220 Appeal, Div 05 Federal NSA IDR QPA Rebuttal, Div 26 NCCI Spine Arthrodesis Edit Audit\n**Lead Pay Item Benchmark:** Laminotomy (Hemilaminectomy) with Decompression of Nerve Root(s), 1 Interspace, Lumbar -> `$165.52/CLAIM`\n**Davis-Bacon Crew Rate:** `$99.48/hr` fully burdened (`CA-GPCI-2026-SFO (Medicare Locality 01112-07 & CA Health & Safety \u00a7 1371 15% Prompt-Pay)`)\n**DBE Goal:** `18.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$650/day`\n**Official Planholders (5):** Pacific Spine & Neurosurgery Institute, Silicon Valley Ambulatory Surgery Center, Golden State Orthopedic & Spine Medical Group, Bay Area Minimally Invasive Surgery Center\nDossier: https://rubricward.com/lettings/project/anthem-blue-cross-aetna-mrf-rate-spread-knox-keene-prompt-pay.html\nSource: https://www.dmhc.ca.gov/DataResearch/FinancialSummaryData.aspx#CADMHC-MRF-CPT-63030-SFO",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "FLOIR-MRF-CPT-45378-MIA": {
-    "project_id": "FLOIR-MRF-CPT-45378-MIA",
-    "slug": "florida-blue-unitedhealthcare-gi-endoscopy-asc-mrf-rate-spread",
-    "title": "[FLOIR-MRF-CPT-45378-MIA] Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL Stat. \u00a7 627.6131 Prompt-Pay Audit (CPT 45378 / 43239)",
-    "agency": "Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index \u2014 Miami-Dade MSA",
-    "jurisdiction": "florida",
-    "state_code": "FL",
-    "county": "Miami-Dade County, FL",
-    "letting_date": "2026-11-24",
-    "engineers_estimate_usd": 1560000.0,
-    "recommended_low_bid_usd": 1469520.0,
-    "dbe_goal_pct": 12.65,
-    "liquidated_damages_per_day_usd": 380,
-    "wage_determination_id": "FL-GPCI-2026-MIA (Medicare Locality 09102-04 & FL Stat. \u00a7 627.6131 12% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 First Coast MAC LCD GI Appeal",
-      "Div 26 Anesthesia 00812 / 00731 NSA IDR",
-      "Div 32 ASC Facility Grouping G0105 / G0121",
-      "Div 33 FL Stat. \u00a7 627.6131 12% Late Interest"
-    ],
-    "planholders": [
-      "Gastro Health South Florida ASC LLC",
-      "Biscayne Endoscopy & Surgical Center",
-      "Coral Gables Digestive Health Specialists",
-      "Sunshine State Anesthesia Partners PA",
-      "Palm Beach Gastroenterology Consultants"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-45380",
-        "description": "Colonoscopy, Flexible; with Biopsy, Single or Multiple (ASC Facility + Professional)",
-        "unit": "CLAIM",
-        "quantity": 920,
-        "hist_low_unit_usd": 410.0,
-        "hist_median_unit_usd": 895.0,
-        "recommended_unit_usd": 1140.0
-      },
-      {
-        "item_code": "CPT-45385",
-        "description": "Colonoscopy, Flexible; with Removal of Tumor(s), Polyp(s), or Lesion(s) by Snare Technique",
-        "unit": "CLAIM",
-        "quantity": 640,
-        "hist_low_unit_usd": 485.0,
-        "hist_median_unit_usd": 1060.0,
-        "recommended_unit_usd": 1345.0
-      },
-      {
-        "item_code": "CPT-43239",
-        "description": "Esophagogastroduodenoscopy (EGD), Flexible, Transoral; with Biopsy, Single or Multiple",
-        "unit": "CLAIM",
-        "quantity": 580,
-        "hist_low_unit_usd": 365.0,
-        "hist_median_unit_usd": 780.0,
-        "recommended_unit_usd": 985.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-floir-mrf-cpt-45378-mia-florida-blue",
+      "jurisdiction": "fl",
       "state_code": "FL",
-      "pay_item_description": "Colonoscopy, Flexible; with Biopsy, Single or Multiple (ASC Facility + Professional)",
-      "unit": "CLAIM",
-      "quantity": 920.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 105.8,
-        "historical_median_bid_unit_usd": 117.76,
-        "historical_75th_percentile_unit_usd": 134.32,
-        "recommended_competitive_unit_bid_usd": 110.34
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 97336.0,
-        "extended_at_recommended_bid_usd": 101512.8,
-        "extended_at_median_bid_usd": 108339.2,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "FL",
+      "title": "[FLOIR-MRF-CPT-45378-MIA] Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL Stat. \u00a7 627.6131 Prompt-Pay Audit (CPT 45378 / 43239)",
+      "agency": "Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index \u2014 Miami-Dade MSA",
       "county": "Miami-Dade County, FL",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "FL20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 55.97,
-      "fully_burdened_crew_hourly_usd": 66.32,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 961640.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-11-24",
+      "engineers_estimate_usd": 1560000.0,
+      "recommended_low_bid_usd": 1505400.0,
+      "predicted_second_bid_usd": 1560000.0,
+      "predicted_mlot_usd": 218400.0,
+      "recommended_markup_pct": 12.65,
+      "dbe_goal_pct": 12.65,
+      "wage_determination_id": "FL-GPCI-2026-MIA (Medicare Locality 09102-04 & FL Stat. \u00a7 627.6131 12% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 380,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 39.1,
-          "bona_fide_fringe_hourly_usd": 16.93,
-          "total_prevailing_package_hourly_usd": 56.03,
-          "overtime_1_5x_hourly_usd": 75.58,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 35.14,
-          "bona_fide_fringe_hourly_usd": 14.63,
-          "total_prevailing_package_hourly_usd": 49.77,
-          "overtime_1_5x_hourly_usd": 67.34,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 38.46,
-          "bona_fide_fringe_hourly_usd": 19.41,
-          "total_prevailing_package_hourly_usd": 57.87,
-          "overtime_1_5x_hourly_usd": 77.1,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 41.95,
-          "bona_fide_fringe_hourly_usd": 18.26,
-          "total_prevailing_package_hourly_usd": 60.21,
-          "overtime_1_5x_hourly_usd": 81.19,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Gastro Health South Florida ASC LLC",
+        "Biscayne Endoscopy & Surgical Center",
+        "Coral Gables Digestive Health Specialists",
+        "Sunshine State Anesthesia Partners PA",
+        "Palm Beach Gastroenterology Consultants"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-floir-mrf-cpt-45378-mia-florida-blue.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/florida-blue-unitedhealthcare-gi-endoscopy-asc-mrf-rate-spread.html",
-    "source_url": "https://floir.com/sections/pandc/productreview/mrf-index.aspx#FLOIR-MRF-CPT-45378-MIA",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `FLOIR-MRF-CPT-45378-MIA` \u2014 [FLOIR-MRF-CPT-45378-MIA] Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL Stat. \u00a7 627.6131 Prompt-Pay Audit (CPT 45378 / 43239)\n**Agency:** Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index \u2014 Miami-Dade MSA (Miami-Dade County, FL) | **Letting Date:** `2026-11-24`\n**Engineer's Estimate:** `$1,560,000` | **Recommended Low-Bid Target:** `$1,469,520` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 First Coast MAC LCD GI Appeal, Div 26 Anesthesia 00812 / 00731 NSA IDR, Div 32 ASC Facility Grouping G0105 / G0121\n**Lead Pay Item Benchmark:** Colonoscopy, Flexible; with Biopsy, Single or Multiple (ASC Facility + Professional) -> `$110.34/CLAIM`\n**Davis-Bacon Crew Rate:** `$66.32/hr` fully burdened (`FL-GPCI-2026-MIA (Medicare Locality 09102-04 & FL Stat. \u00a7 627.6131 12% Prompt-Pay)`)\n**DBE Goal:** `12.65%` (`49 CFR Part 26`) | **Liquidated Damages:** `$380/day`\n**Official Planholders (5):** Gastro Health South Florida ASC LLC, Biscayne Endoscopy & Surgical Center, Coral Gables Digestive Health Specialists, Sunshine State Anesthesia Partners PA\nDossier: https://rubricward.com/lettings/project/florida-blue-unitedhealthcare-gi-endoscopy-asc-mrf-rate-spread.html\nSource: https://floir.com/sections/pandc/productreview/mrf-index.aspx#FLOIR-MRF-CPT-45378-MIA",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "VABOI-MRF-CPT-99285-RIC": {
-    "project_id": "VABOI-MRF-CPT-99285-RIC",
-    "slug": "anthem-healthkeepers-cigna-emergency-medicine-radiology-out-of",
-    "title": "[VABOI-MRF-CPT-99285-RIC] Anthem HealthKeepers & Cigna Emergency Medicine / Radiology Out-of-Network NSA IDR & Downcoding Audit (CPT 99285 / 74177)",
-    "agency": "Virginia Bureau of Insurance (SCC) & Palmetto GBA JM MRF Index \u2014 Northern VA / Richmond MSA",
-    "jurisdiction": "virginia",
-    "state_code": "VA",
-    "county": "Henrico County, VA",
-    "letting_date": "2026-11-25",
-    "engineers_estimate_usd": 2120000.0,
-    "recommended_low_bid_usd": 1997040.0,
-    "dbe_goal_pct": 12.0,
-    "liquidated_damages_per_day_usd": 450,
-    "wage_determination_id": "VA-GPCI-2026-NOVA (Medicare Locality 00904-01 & VA Code \u00a7 38.2-3407.15 Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 Prudent Layperson 42 CFR 438.114 Appeal",
-      "Div 26 Federal NSA 45 CFR 149.510 IDR Brief",
-      "Div 31 EDI 835 CARC CO-4 / CO-150 Downcode Audit",
-      "Div 33 VA Code \u00a7 38.2-3407.15 Ethics & Prompt-Pay"
-    ],
-    "planholders": [
-      "Commonwealth Emergency Physicians PC",
-      "Dominion Diagnostic Imaging Associates",
-      "Tidewater Acute Care Specialists",
-      "Shenandoah Valley Radiology Group",
-      "Northern Virginia Urgent & Emergency Care"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-99285",
-        "description": "Emergency Department Visit, High Severity & High Medical Decision Making (Prudent Layperson Defense)",
-        "unit": "CLAIM",
-        "quantity": 1850,
-        "hist_low_unit_usd": 215.0,
-        "hist_median_unit_usd": 585.0,
-        "recommended_unit_usd": 745.0
-      },
-      {
-        "item_code": "CPT-99291",
-        "description": "Critical Care, Evaluation and Management of the Critically Ill or Critically Injured Patient; First 30-74 Min",
-        "unit": "CLAIM",
-        "quantity": 410,
-        "hist_low_unit_usd": 310.0,
-        "hist_median_unit_usd": 790.0,
-        "recommended_unit_usd": 985.0
-      },
-      {
-        "item_code": "CPT-74177",
-        "description": "CT Abdomen and Pelvis with Contrast Material(s) (26 Professional Component + TC)",
-        "unit": "CLAIM",
-        "quantity": 960,
-        "hist_low_unit_usd": 195.0,
-        "hist_median_unit_usd": 460.0,
-        "recommended_unit_usd": 595.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-vaboi-mrf-cpt-99285-ric-anthem",
+      "jurisdiction": "va",
       "state_code": "VA",
-      "pay_item_description": "Emergency Department Visit, High Severity & High Medical Decision Making (Prudent Layperson Defense)",
-      "unit": "CLAIM",
-      "quantity": 1850.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 119.6,
-        "historical_median_bid_unit_usd": 133.12,
-        "historical_75th_percentile_unit_usd": 151.84,
-        "recommended_competitive_unit_bid_usd": 124.74
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 221260.0,
-        "extended_at_recommended_bid_usd": 230769.0,
-        "extended_at_median_bid_usd": 246272.0,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "VA",
+      "title": "[VABOI-MRF-CPT-99285-RIC] Anthem HealthKeepers & Cigna Emergency Medicine / Radiology Out-of-Network NSA IDR & Downcoding Audit (CPT 99285 / 74177)",
+      "agency": "Virginia Bureau of Insurance (SCC) & Palmetto GBA JM MRF Index \u2014 Northern VA / Richmond MSA",
       "county": "Henrico County, VA",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "VA20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 63.27,
-      "fully_burdened_crew_hourly_usd": 74.97,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 1087065.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-11-25",
+      "engineers_estimate_usd": 2120000.0,
+      "recommended_low_bid_usd": 2045800.0,
+      "predicted_second_bid_usd": 2120000.0,
+      "predicted_mlot_usd": 296800.0,
+      "recommended_markup_pct": 12.0,
+      "dbe_goal_pct": 12.0,
+      "wage_determination_id": "VA-GPCI-2026-NOVA (Medicare Locality 00904-01 & VA Code \u00a7 38.2-3407.15 Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 450,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 44.2,
-          "bona_fide_fringe_hourly_usd": 19.14,
-          "total_prevailing_package_hourly_usd": 63.34,
-          "overtime_1_5x_hourly_usd": 85.44,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 39.73,
-          "bona_fide_fringe_hourly_usd": 16.54,
-          "total_prevailing_package_hourly_usd": 56.27,
-          "overtime_1_5x_hourly_usd": 76.13,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 43.47,
-          "bona_fide_fringe_hourly_usd": 21.94,
-          "total_prevailing_package_hourly_usd": 65.41,
-          "overtime_1_5x_hourly_usd": 87.14,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 47.42,
-          "bona_fide_fringe_hourly_usd": 20.64,
-          "total_prevailing_package_hourly_usd": 68.06,
-          "overtime_1_5x_hourly_usd": 91.77,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Commonwealth Emergency Physicians PC",
+        "Dominion Diagnostic Imaging Associates",
+        "Tidewater Acute Care Specialists",
+        "Shenandoah Valley Radiology Group",
+        "Northern Virginia Urgent & Emergency Care"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-vaboi-mrf-cpt-99285-ric-anthem.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/anthem-healthkeepers-cigna-emergency-medicine-radiology-out-of.html",
-    "source_url": "https://scc.virginia.gov/pages/Bureau-of-Insurance#VABOI-MRF-CPT-99285-RIC",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `VABOI-MRF-CPT-99285-RIC` \u2014 [VABOI-MRF-CPT-99285-RIC] Anthem HealthKeepers & Cigna Emergency Medicine / Radiology Out-of-Network NSA IDR & Downcoding Audit (CPT 99285 / 74177)\n**Agency:** Virginia Bureau of Insurance (SCC) & Palmetto GBA JM MRF Index \u2014 Northern VA / Richmond MSA (Henrico County, VA) | **Letting Date:** `2026-11-25`\n**Engineer's Estimate:** `$2,120,000` | **Recommended Low-Bid Target:** `$1,997,040` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 Prudent Layperson 42 CFR 438.114 Appeal, Div 26 Federal NSA 45 CFR 149.510 IDR Brief, Div 31 EDI 835 CARC CO-4 / CO-150 Downcode Audit\n**Lead Pay Item Benchmark:** Emergency Department Visit, High Severity & High Medical Decision Making (Prudent Layperson Defense) -> `$124.74/CLAIM`\n**Davis-Bacon Crew Rate:** `$74.97/hr` fully burdened (`VA-GPCI-2026-NOVA (Medicare Locality 00904-01 & VA Code \u00a7 38.2-3407.15 Prompt-Pay)`)\n**DBE Goal:** `12.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$450/day`\n**Official Planholders (5):** Commonwealth Emergency Physicians PC, Dominion Diagnostic Imaging Associates, Tidewater Acute Care Specialists, Shenandoah Valley Radiology Group\nDossier: https://rubricward.com/lettings/project/anthem-healthkeepers-cigna-emergency-medicine-radiology-out-of.html\nSource: https://scc.virginia.gov/pages/Bureau-of-Insurance#VABOI-MRF-CPT-99285-RIC",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "PAPID-MRF-CPT-66984-PHL": {
-    "project_id": "PAPID-MRF-CPT-66984-PHL",
-    "slug": "highmark-bcbs-independence-blue-cross-ophthalmology-cataract-asc",
-    "title": "[PAPID-MRF-CPT-66984-PHL] Highmark BCBS & Independence Blue Cross Ophthalmology / Cataract ASC MRF Rate Spread & Act 68 Prompt-Pay (CPT 66984 / 67028)",
-    "agency": "Pennsylvania Insurance Department (PID) & Novitas JL MRF Index \u2014 Philadelphia MSA",
-    "jurisdiction": "pennsylvania",
-    "state_code": "PA",
-    "county": "Montgomery County, PA",
-    "letting_date": "2026-11-26",
-    "engineers_estimate_usd": 1420000.0,
-    "recommended_low_bid_usd": 1337640.0,
-    "dbe_goal_pct": 11.0,
-    "liquidated_damages_per_day_usd": 350,
-    "wage_determination_id": "PA-GPCI-2026-PHL (Medicare Locality 12502-01 & 40 P.S. \u00a7 991.2166 10% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 Novitas MAC LCD L35091 Cataract Appeal",
-      "Div 26 Bilateral & J-Code Anti-VEGF Buy-and-Bill",
-      "Div 31 Philadelphia GPCI Locality RVU Schedule",
-      "Div 33 PA Act 68 (40 P.S. \u00a7 991.2166) Interest"
-    ],
-    "planholders": [
-      "Keystone Eye & Laser Surgery Center",
-      "Delaware Valley Retina Associates PC",
-      "Main Line Ophthalmic Surgical Institute",
-      "Allegheny Ophthalmic & Cataract Center",
-      "Penn-Jersey Vision Surgery Partners"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-66984",
-        "description": "Extracapsular Cataract Removal with Insertion of Intraocular Lens Prosthesis (ASC + Pro)",
-        "unit": "CLAIM",
-        "quantity": 780,
-        "hist_low_unit_usd": 820.0,
-        "hist_median_unit_usd": 1740.0,
-        "recommended_unit_usd": 2190.0
-      },
-      {
-        "item_code": "CPT-67028",
-        "description": "Intravitreal Injection of a Pharmacologic Agent (Separate Procedure + J-Code Audit)",
-        "unit": "CLAIM",
-        "quantity": 1620,
-        "hist_low_unit_usd": 115.0,
-        "hist_median_unit_usd": 245.0,
-        "recommended_unit_usd": 310.0
-      },
-      {
-        "item_code": "CPT-66821",
-        "description": "Discission of Secondary Membranous Cataract (Posterior Capsulotomy), Laser Surgery",
-        "unit": "CLAIM",
-        "quantity": 410,
-        "hist_low_unit_usd": 260.0,
-        "hist_median_unit_usd": 530.0,
-        "recommended_unit_usd": 670.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-papid-mrf-cpt-66984-phl-highmark-bcbs",
+      "jurisdiction": "pa",
       "state_code": "PA",
-      "pay_item_description": "Extracapsular Cataract Removal with Insertion of Intraocular Lens Prosthesis (ASC + Pro)",
-      "unit": "CLAIM",
-      "quantity": 780.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 135.7,
-        "historical_median_bid_unit_usd": 151.04,
-        "historical_75th_percentile_unit_usd": 172.28,
-        "recommended_competitive_unit_bid_usd": 141.53
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 105846.0,
-        "extended_at_recommended_bid_usd": 110393.4,
-        "extended_at_median_bid_usd": 117811.2,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "PA",
+      "title": "[PAPID-MRF-CPT-66984-PHL] Highmark BCBS & Independence Blue Cross Ophthalmology / Cataract ASC MRF Rate Spread & Act 68 Prompt-Pay (CPT 66984 / 67028)",
+      "agency": "Pennsylvania Insurance Department (PID) & Novitas JL MRF Index \u2014 Philadelphia MSA",
       "county": "Montgomery County, PA",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "PA20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 71.79,
-      "fully_burdened_crew_hourly_usd": 85.07,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 1233515.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-11-26",
+      "engineers_estimate_usd": 1420000.0,
+      "recommended_low_bid_usd": 1370300.0,
+      "predicted_second_bid_usd": 1420000.0,
+      "predicted_mlot_usd": 198800.0,
+      "recommended_markup_pct": 11.0,
+      "dbe_goal_pct": 11.0,
+      "wage_determination_id": "PA-GPCI-2026-PHL (Medicare Locality 12502-01 & 40 P.S. \u00a7 991.2166 10% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 350,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 50.15,
-          "bona_fide_fringe_hourly_usd": 21.71,
-          "total_prevailing_package_hourly_usd": 71.86,
-          "overtime_1_5x_hourly_usd": 96.94,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 45.08,
-          "bona_fide_fringe_hourly_usd": 18.76,
-          "total_prevailing_package_hourly_usd": 63.84,
-          "overtime_1_5x_hourly_usd": 86.38,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 49.32,
-          "bona_fide_fringe_hourly_usd": 24.9,
-          "total_prevailing_package_hourly_usd": 74.22,
-          "overtime_1_5x_hourly_usd": 98.88,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 53.81,
-          "bona_fide_fringe_hourly_usd": 23.42,
-          "total_prevailing_package_hourly_usd": 77.23,
-          "overtime_1_5x_hourly_usd": 104.14,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Keystone Eye & Laser Surgery Center",
+        "Delaware Valley Retina Associates PC",
+        "Main Line Ophthalmic Surgical Institute",
+        "Allegheny Ophthalmic & Cataract Center",
+        "Penn-Jersey Vision Surgery Partners"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-papid-mrf-cpt-66984-phl-highmark-bcbs.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/highmark-bcbs-independence-blue-cross-ophthalmology-cataract-asc.html",
-    "source_url": "https://www.insurance.pa.gov/Companies/ProductAndRateRequire/Pages/default.aspx#PAPID-MRF-CPT-66984-PHL",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `PAPID-MRF-CPT-66984-PHL` \u2014 [PAPID-MRF-CPT-66984-PHL] Highmark BCBS & Independence Blue Cross Ophthalmology / Cataract ASC MRF Rate Spread & Act 68 Prompt-Pay (CPT 66984 / 67028)\n**Agency:** Pennsylvania Insurance Department (PID) & Novitas JL MRF Index \u2014 Philadelphia MSA (Montgomery County, PA) | **Letting Date:** `2026-11-26`\n**Engineer's Estimate:** `$1,420,000` | **Recommended Low-Bid Target:** `$1,337,640` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 Novitas MAC LCD L35091 Cataract Appeal, Div 26 Bilateral & J-Code Anti-VEGF Buy-and-Bill, Div 31 Philadelphia GPCI Locality RVU Schedule\n**Lead Pay Item Benchmark:** Extracapsular Cataract Removal with Insertion of Intraocular Lens Prosthesis (ASC + Pro) -> `$141.53/CLAIM`\n**Davis-Bacon Crew Rate:** `$85.07/hr` fully burdened (`PA-GPCI-2026-PHL (Medicare Locality 12502-01 & 40 P.S. \u00a7 991.2166 10% Prompt-Pay)`)\n**DBE Goal:** `11.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$350/day`\n**Official Planholders (5):** Keystone Eye & Laser Surgery Center, Delaware Valley Retina Associates PC, Main Line Ophthalmic Surgical Institute, Allegheny Ophthalmic & Cataract Center\nDossier: https://rubricward.com/lettings/project/highmark-bcbs-independence-blue-cross-ophthalmology-cataract-asc.html\nSource: https://www.insurance.pa.gov/Companies/ProductAndRateRequire/Pages/default.aspx#PAPID-MRF-CPT-66984-PHL",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "NYDFS-MRF-CPT-01402-NYC": {
-    "project_id": "NYDFS-MRF-CPT-01402-NYC",
-    "slug": "empire-bcbs-emblemhealth-oxford-anesthesiology-plastic",
-    "title": "[NYDFS-MRF-CPT-01402-NYC] Empire BCBS, EmblemHealth & Oxford Anesthesiology / Plastic Reconstructive NSA IDR & NY ISC \u00a7 3224-a Prompt-Pay (CPT 01402 / 19318)",
-    "agency": "New York State Department of Financial Services (NYDFS) & NGS JK MRF Index \u2014 New York Metro MSA",
-    "jurisdiction": "new_york",
-    "state_code": "NY",
-    "county": "Nassau County, NY",
-    "letting_date": "2026-11-27",
-    "engineers_estimate_usd": 3150000.0,
-    "recommended_low_bid_usd": 2967300.0,
-    "dbe_goal_pct": 16.5,
-    "liquidated_damages_per_day_usd": 720,
-    "wage_determination_id": "NY-GPCI-2026-NYC (Medicare Locality 13202-01 & NY Ins. Law \u00a7 3224-a 12% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 Federal NSA & NY Financial Services Law Art. 6 IDR",
-      "Div 26 Anesthesia Base + Time Unit Conversion Audit",
-      "Div 31 NYC Manhattan/Queens/LI GPCI RVU Schedule",
-      "Div 33 NY Insurance Law \u00a7 3224-a 12% Statutory Interest"
-    ],
-    "planholders": [
-      "Metropolitan Anesthesia Partners LLP",
-      "Long Island Reconstructive & Microsurgery PC",
-      "Tri-State Perioperative Medical Associates",
-      "Westchester Surgical & Anesthesia Group",
-      "Hudson Valley Specialty Surgery Center"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-01402",
-        "description": "Anesthesia for Total Knee Arthroplasty (Base Units + Time Units Conversion Factor Benchmark)",
-        "unit": "CLAIM",
-        "quantity": 620,
-        "hist_low_unit_usd": 520.0,
-        "hist_median_unit_usd": 1480.0,
-        "recommended_unit_usd": 1920.0
-      },
-      {
-        "item_code": "CPT-19318",
-        "description": "Breast Reduction / Reconstructive Mammaplasty (Bilateral Mod 50 & ERISA Medical Necessity)",
-        "unit": "CLAIM",
-        "quantity": 180,
-        "hist_low_unit_usd": 2450.0,
-        "hist_median_unit_usd": 6850.0,
-        "recommended_unit_usd": 8900.0
-      },
-      {
-        "item_code": "CPT-19380",
-        "description": "Revision of Reconstructed Breast (WHCRA 29 U.S.C. \u00a7 1185b Federal Mandate Appeal)",
-        "unit": "CLAIM",
-        "quantity": 145,
-        "hist_low_unit_usd": 2100.0,
-        "hist_median_unit_usd": 5920.0,
-        "recommended_unit_usd": 7650.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-nydfs-mrf-cpt-01402-nyc-empire-bcbs",
+      "jurisdiction": "ny",
       "state_code": "NY",
-      "pay_item_description": "Anesthesia for Total Knee Arthroplasty (Base Units + Time Units Conversion Factor Benchmark)",
-      "unit": "CLAIM",
-      "quantity": 620.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 186.02,
-        "historical_median_bid_unit_usd": 200.93,
-        "historical_75th_percentile_unit_usd": 224.36,
-        "recommended_competitive_unit_bid_usd": 191.69
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 115332.4,
-        "extended_at_recommended_bid_usd": 118847.8,
-        "extended_at_median_bid_usd": 124576.6,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "NY",
+      "title": "[NYDFS-MRF-CPT-01402-NYC] Empire BCBS, EmblemHealth & Oxford Anesthesiology / Plastic Reconstructive NSA IDR & NY ISC \u00a7 3224-a Prompt-Pay (CPT 01402 / 19318)",
+      "agency": "New York State Department of Financial Services (NYDFS) & NGS JK MRF Index \u2014 New York Metro MSA",
       "county": "Nassau County, NY",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "NY20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 86.39,
-      "fully_burdened_crew_hourly_usd": 102.37,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 1484365.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-11-27",
+      "engineers_estimate_usd": 3150000.0,
+      "recommended_low_bid_usd": 3039750.0,
+      "predicted_second_bid_usd": 3150000.0,
+      "predicted_mlot_usd": 441000.0,
+      "recommended_markup_pct": 16.5,
+      "dbe_goal_pct": 16.5,
+      "wage_determination_id": "NY-GPCI-2026-NYC (Medicare Locality 13202-01 & NY Ins. Law \u00a7 3224-a 12% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 720,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 60.35,
-          "bona_fide_fringe_hourly_usd": 26.13,
-          "total_prevailing_package_hourly_usd": 86.48,
-          "overtime_1_5x_hourly_usd": 116.66,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 54.24,
-          "bona_fide_fringe_hourly_usd": 22.58,
-          "total_prevailing_package_hourly_usd": 76.82,
-          "overtime_1_5x_hourly_usd": 103.94,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 59.36,
-          "bona_fide_fringe_hourly_usd": 29.96,
-          "total_prevailing_package_hourly_usd": 89.32,
-          "overtime_1_5x_hourly_usd": 119.0,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 64.75,
-          "bona_fide_fringe_hourly_usd": 28.19,
-          "total_prevailing_package_hourly_usd": 92.94,
-          "overtime_1_5x_hourly_usd": 125.31,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Metropolitan Anesthesia Partners LLP",
+        "Long Island Reconstructive & Microsurgery PC",
+        "Tri-State Perioperative Medical Associates",
+        "Westchester Surgical & Anesthesia Group",
+        "Hudson Valley Specialty Surgery Center"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-nydfs-mrf-cpt-01402-nyc-empire-bcbs.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/empire-bcbs-emblemhealth-oxford-anesthesiology-plastic.html",
-    "source_url": "https://www.dfs.ny.gov/consumers/health_insurance/surprise_medical_bills#NYDFS-MRF-CPT-01402-NYC",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `NYDFS-MRF-CPT-01402-NYC` \u2014 [NYDFS-MRF-CPT-01402-NYC] Empire BCBS, EmblemHealth & Oxford Anesthesiology / Plastic Reconstructive NSA IDR & NY ISC \u00a7 3224-a Prompt-Pay (CPT 01402 / 19318)\n**Agency:** New York State Department of Financial Services (NYDFS) & NGS JK MRF Index \u2014 New York Metro MSA (Nassau County, NY) | **Letting Date:** `2026-11-27`\n**Engineer's Estimate:** `$3,150,000` | **Recommended Low-Bid Target:** `$2,967,300` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 Federal NSA & NY Financial Services Law Art. 6 IDR, Div 26 Anesthesia Base + Time Unit Conversion Audit, Div 31 NYC Manhattan/Queens/LI GPCI RVU Schedule\n**Lead Pay Item Benchmark:** Anesthesia for Total Knee Arthroplasty (Base Units + Time Units Conversion Factor Benchmark) -> `$191.69/CLAIM`\n**Davis-Bacon Crew Rate:** `$102.37/hr` fully burdened (`NY-GPCI-2026-NYC (Medicare Locality 13202-01 & NY Ins. Law \u00a7 3224-a 12% Prompt-Pay)`)\n**DBE Goal:** `16.5%` (`49 CFR Part 26`) | **Liquidated Damages:** `$720/day`\n**Official Planholders (5):** Metropolitan Anesthesia Partners LLP, Long Island Reconstructive & Microsurgery PC, Tri-State Perioperative Medical Associates, Westchester Surgical & Anesthesia Group\nDossier: https://rubricward.com/lettings/project/empire-bcbs-emblemhealth-oxford-anesthesiology-plastic.html\nSource: https://www.dfs.ny.gov/consumers/health_insurance/surprise_medical_bills#NYDFS-MRF-CPT-01402-NYC",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "ILDOI-MRF-CPT-93458-CHI": {
-    "project_id": "ILDOI-MRF-CPT-93458-CHI",
-    "slug": "bcbs-il-unitedhealthcare-cardiology-outpatient-cath-lab-mrf-rate",
-    "title": "[ILDOI-MRF-CPT-93458-CHI] BCBS-IL & UnitedHealthcare Cardiology / Outpatient Cath Lab MRF Rate Benchmark & 215 ILCS 5/368a Prompt-Pay (CPT 93458 / 92928)",
-    "agency": "Illinois Department of Insurance (IDOI) & NGS J6 MRF Index \u2014 Chicago Metro MSA",
-    "jurisdiction": "illinois",
-    "state_code": "IL",
-    "county": "Cook County, IL",
-    "letting_date": "2026-11-28",
-    "engineers_estimate_usd": 1940000.0,
-    "recommended_low_bid_usd": 1827480.0,
-    "dbe_goal_pct": 13.0,
-    "liquidated_damages_per_day_usd": 480,
-    "wage_determination_id": "IL-GPCI-2026-CHI (Medicare Locality 06102-16 & 215 ILCS 5/368a 9% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 NGS MAC LCD L33612 Cardiology Appeal",
-      "Div 26 NCCI Cath + PCI Bundling Audit",
-      "Div 31 Chicago Metro GPCI Locality RVU Schedule",
-      "Div 33 215 ILCS 5/368a 9% Monthly Late Interest"
-    ],
-    "planholders": [
-      "Midwest Heart & Vascular Institute",
-      "Chicagoland Outpatient Cath & Endovascular ASC",
-      "Prairie State Cardiology Associates SC",
-      "North Shore Interventional Vascular Group",
-      "DuPage Cardiovascular & Rhythm Specialists"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-93458",
-        "description": "Catheter Placement in Coronary Artery(s) for Coronary Angiography with Left Heart Cath",
-        "unit": "CLAIM",
-        "quantity": 310,
-        "hist_low_unit_usd": 1650.0,
-        "hist_median_unit_usd": 3890.0,
-        "recommended_unit_usd": 4850.0
-      },
-      {
-        "item_code": "CPT-92928",
-        "description": "Percutaneous Transcatheter Placement of Intracoronary Stent(s), Single Major Coronary Artery",
-        "unit": "CLAIM",
-        "quantity": 165,
-        "hist_low_unit_usd": 3950.0,
-        "hist_median_unit_usd": 8450.0,
-        "recommended_unit_usd": 10600.0
-      },
-      {
-        "item_code": "CPT-93306",
-        "description": "Echocardiography, Transthoracic, Real-Time with 2D, Spectral & Color Flow Doppler Complete",
-        "unit": "CLAIM",
-        "quantity": 1420,
-        "hist_low_unit_usd": 185.0,
-        "hist_median_unit_usd": 420.0,
-        "recommended_unit_usd": 535.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-ildoi-mrf-cpt-93458-chi-bcbs-il",
+      "jurisdiction": "il",
       "state_code": "IL",
-      "pay_item_description": "Catheter Placement in Coronary Artery(s) for Coronary Angiography with Left Heart Cath",
-      "unit": "CLAIM",
-      "quantity": 310.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 147.2,
-        "historical_median_bid_unit_usd": 163.84,
-        "historical_75th_percentile_unit_usd": 186.88,
-        "recommended_competitive_unit_bid_usd": 153.52
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 45632.0,
-        "extended_at_recommended_bid_usd": 47591.2,
-        "extended_at_median_bid_usd": 50790.4,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "IL",
+      "title": "[ILDOI-MRF-CPT-93458-CHI] BCBS-IL & UnitedHealthcare Cardiology / Outpatient Cath Lab MRF Rate Benchmark & 215 ILCS 5/368a Prompt-Pay (CPT 93458 / 92928)",
+      "agency": "Illinois Department of Insurance (IDOI) & NGS J6 MRF Index \u2014 Chicago Metro MSA",
       "county": "Cook County, IL",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "IL20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 77.87,
-      "fully_burdened_crew_hourly_usd": 92.28,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 1338060.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-11-28",
+      "engineers_estimate_usd": 1940000.0,
+      "recommended_low_bid_usd": 1872100.0,
+      "predicted_second_bid_usd": 1940000.0,
+      "predicted_mlot_usd": 271600.0,
+      "recommended_markup_pct": 13.0,
+      "dbe_goal_pct": 13.0,
+      "wage_determination_id": "IL-GPCI-2026-CHI (Medicare Locality 06102-16 & 215 ILCS 5/368a 9% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 480,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 54.4,
-          "bona_fide_fringe_hourly_usd": 23.55,
-          "total_prevailing_package_hourly_usd": 77.95,
-          "overtime_1_5x_hourly_usd": 105.15,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 48.9,
-          "bona_fide_fringe_hourly_usd": 20.35,
-          "total_prevailing_package_hourly_usd": 69.25,
-          "overtime_1_5x_hourly_usd": 93.7,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 53.5,
-          "bona_fide_fringe_hourly_usd": 27.01,
-          "total_prevailing_package_hourly_usd": 80.51,
-          "overtime_1_5x_hourly_usd": 107.26,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 58.37,
-          "bona_fide_fringe_hourly_usd": 25.41,
-          "total_prevailing_package_hourly_usd": 83.78,
-          "overtime_1_5x_hourly_usd": 112.96,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Midwest Heart & Vascular Institute",
+        "Chicagoland Outpatient Cath & Endovascular ASC",
+        "Prairie State Cardiology Associates SC",
+        "North Shore Interventional Vascular Group",
+        "DuPage Cardiovascular & Rhythm Specialists"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-ildoi-mrf-cpt-93458-chi-bcbs-il.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/bcbs-il-unitedhealthcare-cardiology-outpatient-cath-lab-mrf-rate.html",
-    "source_url": "https://idoi.illinois.gov/consumers/consumerinsurance/health.html#ILDOI-MRF-CPT-93458-CHI",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `ILDOI-MRF-CPT-93458-CHI` \u2014 [ILDOI-MRF-CPT-93458-CHI] BCBS-IL & UnitedHealthcare Cardiology / Outpatient Cath Lab MRF Rate Benchmark & 215 ILCS 5/368a Prompt-Pay (CPT 93458 / 92928)\n**Agency:** Illinois Department of Insurance (IDOI) & NGS J6 MRF Index \u2014 Chicago Metro MSA (Cook County, IL) | **Letting Date:** `2026-11-28`\n**Engineer's Estimate:** `$1,940,000` | **Recommended Low-Bid Target:** `$1,827,480` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 NGS MAC LCD L33612 Cardiology Appeal, Div 26 NCCI Cath + PCI Bundling Audit, Div 31 Chicago Metro GPCI Locality RVU Schedule\n**Lead Pay Item Benchmark:** Catheter Placement in Coronary Artery(s) for Coronary Angiography with Left Heart Cath -> `$153.52/CLAIM`\n**Davis-Bacon Crew Rate:** `$92.28/hr` fully burdened (`IL-GPCI-2026-CHI (Medicare Locality 06102-16 & 215 ILCS 5/368a 9% Prompt-Pay)`)\n**DBE Goal:** `13.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$480/day`\n**Official Planholders (5):** Midwest Heart & Vascular Institute, Chicagoland Outpatient Cath & Endovascular ASC, Prairie State Cardiology Associates SC, North Shore Interventional Vascular Group\nDossier: https://rubricward.com/lettings/project/bcbs-il-unitedhealthcare-cardiology-outpatient-cath-lab-mrf-rate.html\nSource: https://idoi.illinois.gov/consumers/consumerinsurance/health.html#ILDOI-MRF-CPT-93458-CHI",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "GAOCI-MRF-CPT-47562-ATL": {
-    "project_id": "GAOCI-MRF-CPT-47562-ATL",
-    "slug": "anthem-bcbs-ga-ambetter-general-surgery-bariatric-asc-mrf-rate",
-    "title": "[GAOCI-MRF-CPT-47562-ATL] Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. \u00a7 33-24-59.14 Prompt-Pay (CPT 47562 / 49650)",
-    "agency": "Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index \u2014 Atlanta MSA",
-    "jurisdiction": "georgia",
-    "state_code": "GA",
-    "county": "Fulton County, GA",
-    "letting_date": "2026-11-30",
-    "engineers_estimate_usd": 1680000.0,
-    "recommended_low_bid_usd": 1582560.0,
-    "dbe_goal_pct": 12.5,
-    "liquidated_damages_per_day_usd": 410,
-    "wage_determination_id": "GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. \u00a7 33-24-59.14 12% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 ERISA Medical Necessity & Prior-Auth Appeal",
-      "Div 26 GA Surprise Billing Consumer Protection Act IDR",
-      "Div 31 Atlanta GPCI Locality RVU Schedule",
-      "Div 33 O.C.G.A. \u00a7 33-24-59.14 12% Statutory Interest"
-    ],
-    "planholders": [
-      "Peachtree Surgical & Bariatric Specialists",
-      "Atlanta Minimally Invasive Surgery Center",
-      "Piedmont Perimeter General Surgery Group",
-      "Southern Regional Endosurgery Associates",
-      "Buckhead Ambulatory Surgical Partners"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-47562",
-        "description": "Laparoscopy, Surgical; Cholecystectomy (ASC Facility + Professional Fee Benchmark)",
-        "unit": "CLAIM",
-        "quantity": 390,
-        "hist_low_unit_usd": 1280.0,
-        "hist_median_unit_usd": 2890.0,
-        "recommended_unit_usd": 3650.0
-      },
-      {
-        "item_code": "CPT-49650",
-        "description": "Laparoscopy, Surgical; Repair Initial Inguinal Hernia (Mesh Prosthesis Included)",
-        "unit": "CLAIM",
-        "quantity": 440,
-        "hist_low_unit_usd": 1190.0,
-        "hist_median_unit_usd": 2640.0,
-        "recommended_unit_usd": 3340.0
-      },
-      {
-        "item_code": "CPT-43775",
-        "description": "Laparoscopy, Surgical, Gastric Restrictive Procedure; Longitudinal Gastrectomy (Sleeve)",
-        "unit": "CLAIM",
-        "quantity": 150,
-        "hist_low_unit_usd": 2950.0,
-        "hist_median_unit_usd": 6420.0,
-        "recommended_unit_usd": 8150.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-gaoci-mrf-cpt-47562-atl-anthem-bcbs-ga",
+      "jurisdiction": "ga",
       "state_code": "GA",
-      "pay_item_description": "Laparoscopy, Surgical; Cholecystectomy (ASC Facility + Professional Fee Benchmark)",
-      "unit": "CLAIM",
-      "quantity": 390.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 124.45,
-        "historical_median_bid_unit_usd": 134.42,
-        "historical_75th_percentile_unit_usd": 150.1,
-        "recommended_competitive_unit_bid_usd": 128.24
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 48535.5,
-        "extended_at_recommended_bid_usd": 50013.6,
-        "extended_at_median_bid_usd": 52423.8,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "GA",
+      "title": "[GAOCI-MRF-CPT-47562-ATL] Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. \u00a7 33-24-59.14 Prompt-Pay (CPT 47562 / 49650)",
+      "agency": "Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index \u2014 Atlanta MSA",
       "county": "Fulton County, GA",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "GA20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 57.8,
-      "fully_burdened_crew_hourly_usd": 68.49,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 993105.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-11-30",
+      "engineers_estimate_usd": 1680000.0,
+      "recommended_low_bid_usd": 1621200.0,
+      "predicted_second_bid_usd": 1680000.0,
+      "predicted_mlot_usd": 235200.0,
+      "recommended_markup_pct": 12.5,
+      "dbe_goal_pct": 12.5,
+      "wage_determination_id": "GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. \u00a7 33-24-59.14 12% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 410,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 40.38,
-          "bona_fide_fringe_hourly_usd": 17.48,
-          "total_prevailing_package_hourly_usd": 57.86,
-          "overtime_1_5x_hourly_usd": 78.05,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 36.29,
-          "bona_fide_fringe_hourly_usd": 15.11,
-          "total_prevailing_package_hourly_usd": 51.4,
-          "overtime_1_5x_hourly_usd": 69.55,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 39.71,
-          "bona_fide_fringe_hourly_usd": 20.05,
-          "total_prevailing_package_hourly_usd": 59.76,
-          "overtime_1_5x_hourly_usd": 79.61,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 43.32,
-          "bona_fide_fringe_hourly_usd": 18.86,
-          "total_prevailing_package_hourly_usd": 62.18,
-          "overtime_1_5x_hourly_usd": 83.84,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Peachtree Surgical & Bariatric Specialists",
+        "Atlanta Minimally Invasive Surgery Center",
+        "Piedmont Perimeter General Surgery Group",
+        "Southern Regional Endosurgery Associates",
+        "Buckhead Ambulatory Surgical Partners"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-gaoci-mrf-cpt-47562-atl-anthem-bcbs-ga.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/anthem-bcbs-ga-ambetter-general-surgery-bariatric-asc-mrf-rate.html",
-    "source_url": "https://oci.georgia.gov/insurance-resources/health#GAOCI-MRF-CPT-47562-ATL",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `GAOCI-MRF-CPT-47562-ATL` \u2014 [GAOCI-MRF-CPT-47562-ATL] Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. \u00a7 33-24-59.14 Prompt-Pay (CPT 47562 / 49650)\n**Agency:** Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index \u2014 Atlanta MSA (Fulton County, GA) | **Letting Date:** `2026-11-30`\n**Engineer's Estimate:** `$1,680,000` | **Recommended Low-Bid Target:** `$1,582,560` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 ERISA Medical Necessity & Prior-Auth Appeal, Div 26 GA Surprise Billing Consumer Protection Act IDR, Div 31 Atlanta GPCI Locality RVU Schedule\n**Lead Pay Item Benchmark:** Laparoscopy, Surgical; Cholecystectomy (ASC Facility + Professional Fee Benchmark) -> `$128.24/CLAIM`\n**Davis-Bacon Crew Rate:** `$68.49/hr` fully burdened (`GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. \u00a7 33-24-59.14 12% Prompt-Pay)`)\n**DBE Goal:** `12.5%` (`49 CFR Part 26`) | **Liquidated Damages:** `$410/day`\n**Official Planholders (5):** Peachtree Surgical & Bariatric Specialists, Atlanta Minimally Invasive Surgery Center, Piedmont Perimeter General Surgery Group, Southern Regional Endosurgery Associates\nDossier: https://rubricward.com/lettings/project/anthem-bcbs-ga-ambetter-general-surgery-bariatric-asc-mrf-rate.html\nSource: https://oci.georgia.gov/insurance-resources/health#GAOCI-MRF-CPT-47562-ATL",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "NCDOI-MRF-CPT-70553-CLT": {
-    "project_id": "NCDOI-MRF-CPT-70553-CLT",
-    "slug": "blue-cross-nc-cigna-diagnostic-imaging-idtf-mri-mrf-rate",
-    "title": "[NCDOI-MRF-CPT-70553-CLT] Blue Cross NC & Cigna Diagnostic Imaging / IDTF MRI MRF Rate Benchmark & N.C.G.S. \u00a7 58-3-225 Prompt-Pay (CPT 70553 / 72148)",
-    "agency": "North Carolina Department of Insurance (NCDOI) & Palmetto GBA JM MRF Index \u2014 Charlotte / Raleigh MSA",
-    "jurisdiction": "north_carolina",
-    "state_code": "NC",
-    "county": "Mecklenburg County, NC",
-    "letting_date": "2026-12-01",
-    "engineers_estimate_usd": 1390000.0,
-    "recommended_low_bid_usd": 1309380.0,
-    "dbe_goal_pct": 11.5,
-    "liquidated_damages_per_day_usd": 360,
-    "wage_determination_id": "NC-GPCI-2026-CLT (Medicare Locality 11502-00 & N.C.G.S. \u00a7 58-3-225 18% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 RBM (EviCore / Carelon) Prior-Auth Rebuttal",
-      "Div 26 MPPR Diagnostic Imaging 25% Reduction Audit",
-      "Div 31 North Carolina GPCI Locality RVU Schedule",
-      "Div 33 N.C.G.S. \u00a7 58-3-225 18% Annual Late Interest"
-    ],
-    "planholders": [
-      "Carolina Advanced MRI & Diagnostic Imaging",
-      "Piedmont Triad Radiology Associates PA",
-      "Queen City Open Upright MRI Center",
-      "Research Triangle Musculoskeletal Imaging",
-      "Blue Ridge Outpatient Diagnostic Partners"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-70553",
-        "description": "Magnetic Resonance (e.g., Proton) Imaging, Brain (Including Brain Stem); w/o & w/ Contrast",
-        "unit": "CLAIM",
-        "quantity": 820,
-        "hist_low_unit_usd": 340.0,
-        "hist_median_unit_usd": 790.0,
-        "recommended_unit_usd": 985.0
-      },
-      {
-        "item_code": "CPT-72148",
-        "description": "Magnetic Resonance Imaging, Spinal Canal and Contents, Lumbar; without Contrast Material",
-        "unit": "CLAIM",
-        "quantity": 1350,
-        "hist_low_unit_usd": 245.0,
-        "hist_median_unit_usd": 565.0,
-        "recommended_unit_usd": 715.0
-      },
-      {
-        "item_code": "CPT-73721",
-        "description": "Magnetic Resonance Imaging, Any Joint of Lower Extremity; without Contrast Material",
-        "unit": "CLAIM",
-        "quantity": 980,
-        "hist_low_unit_usd": 235.0,
-        "hist_median_unit_usd": 540.0,
-        "recommended_unit_usd": 685.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-ncdoi-mrf-cpt-70553-clt-blue-cross-nc",
+      "jurisdiction": "nc",
       "state_code": "NC",
-      "pay_item_description": "Magnetic Resonance (e.g., Proton) Imaging, Brain (Including Brain Stem); w/o & w/ Contrast",
-      "unit": "CLAIM",
-      "quantity": 820.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 106.95,
-        "historical_median_bid_unit_usd": 119.04,
-        "historical_75th_percentile_unit_usd": 135.78,
-        "recommended_competitive_unit_bid_usd": 111.54
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 87699.0,
-        "extended_at_recommended_bid_usd": 91462.8,
-        "extended_at_median_bid_usd": 97612.8,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "NC",
+      "title": "[NCDOI-MRF-CPT-70553-CLT] Blue Cross NC & Cigna Diagnostic Imaging / IDTF MRI MRF Rate Benchmark & N.C.G.S. \u00a7 58-3-225 Prompt-Pay (CPT 70553 / 72148)",
+      "agency": "North Carolina Department of Insurance (NCDOI) & Palmetto GBA JM MRF Index \u2014 Charlotte / Raleigh MSA",
       "county": "Mecklenburg County, NC",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "NC20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 56.58,
-      "fully_burdened_crew_hourly_usd": 67.05,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 972225.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-12-01",
+      "engineers_estimate_usd": 1390000.0,
+      "recommended_low_bid_usd": 1341350.0,
+      "predicted_second_bid_usd": 1390000.0,
+      "predicted_mlot_usd": 194600.0,
+      "recommended_markup_pct": 11.5,
+      "dbe_goal_pct": 11.5,
+      "wage_determination_id": "NC-GPCI-2026-CLT (Medicare Locality 11502-00 & N.C.G.S. \u00a7 58-3-225 18% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 360,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 39.52,
-          "bona_fide_fringe_hourly_usd": 17.11,
-          "total_prevailing_package_hourly_usd": 56.63,
-          "overtime_1_5x_hourly_usd": 76.39,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 35.53,
-          "bona_fide_fringe_hourly_usd": 14.79,
-          "total_prevailing_package_hourly_usd": 50.32,
-          "overtime_1_5x_hourly_usd": 68.09,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 38.87,
-          "bona_fide_fringe_hourly_usd": 19.62,
-          "total_prevailing_package_hourly_usd": 58.49,
-          "overtime_1_5x_hourly_usd": 77.92,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 42.41,
-          "bona_fide_fringe_hourly_usd": 18.46,
-          "total_prevailing_package_hourly_usd": 60.87,
-          "overtime_1_5x_hourly_usd": 82.07,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Carolina Advanced MRI & Diagnostic Imaging",
+        "Piedmont Triad Radiology Associates PA",
+        "Queen City Open Upright MRI Center",
+        "Research Triangle Musculoskeletal Imaging",
+        "Blue Ridge Outpatient Diagnostic Partners"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-ncdoi-mrf-cpt-70553-clt-blue-cross-nc.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/blue-cross-nc-cigna-diagnostic-imaging-idtf-mri-mrf-rate.html",
-    "source_url": "https://www.ncdoi.gov/consumers/health-insurance#NCDOI-MRF-CPT-70553-CLT",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `NCDOI-MRF-CPT-70553-CLT` \u2014 [NCDOI-MRF-CPT-70553-CLT] Blue Cross NC & Cigna Diagnostic Imaging / IDTF MRI MRF Rate Benchmark & N.C.G.S. \u00a7 58-3-225 Prompt-Pay (CPT 70553 / 72148)\n**Agency:** North Carolina Department of Insurance (NCDOI) & Palmetto GBA JM MRF Index \u2014 Charlotte / Raleigh MSA (Mecklenburg County, NC) | **Letting Date:** `2026-12-01`\n**Engineer's Estimate:** `$1,390,000` | **Recommended Low-Bid Target:** `$1,309,380` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 RBM (EviCore / Carelon) Prior-Auth Rebuttal, Div 26 MPPR Diagnostic Imaging 25% Reduction Audit, Div 31 North Carolina GPCI Locality RVU Schedule\n**Lead Pay Item Benchmark:** Magnetic Resonance (e.g., Proton) Imaging, Brain (Including Brain Stem); w/o & w/ Contrast -> `$111.54/CLAIM`\n**Davis-Bacon Crew Rate:** `$67.05/hr` fully burdened (`NC-GPCI-2026-CLT (Medicare Locality 11502-00 & N.C.G.S. \u00a7 58-3-225 18% Prompt-Pay)`)\n**DBE Goal:** `11.5%` (`49 CFR Part 26`) | **Liquidated Damages:** `$360/day`\n**Official Planholders (5):** Carolina Advanced MRI & Diagnostic Imaging, Piedmont Triad Radiology Associates PA, Queen City Open Upright MRI Center, Research Triangle Musculoskeletal Imaging\nDossier: https://rubricward.com/lettings/project/blue-cross-nc-cigna-diagnostic-imaging-idtf-mri-mrf-rate.html\nSource: https://www.ncdoi.gov/consumers/health-insurance#NCDOI-MRF-CPT-70553-CLT",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "OHODI-MRF-CPT-52356-CMH": {
-    "project_id": "OHODI-MRF-CPT-52356-CMH",
-    "slug": "anthem-bcbs-oh-medical-mutual-urology-lithotripsy-asc-mrf-rate",
-    "title": "[OHODI-MRF-CPT-52356-CMH] Anthem BCBS-OH & Medical Mutual Urology / Lithotripsy ASC MRF Rate Spread & O.R.C. \u00a7 3901.389 Prompt-Pay (CPT 52356 / 50590)",
-    "agency": "Ohio Department of Insurance (ODI) & CGS J15 MRF Index \u2014 Columbus / Cleveland MSA",
-    "jurisdiction": "ohio",
-    "state_code": "OH",
-    "county": "Franklin County, OH",
-    "letting_date": "2026-12-02",
-    "engineers_estimate_usd": 1490000.0,
-    "recommended_low_bid_usd": 1403580.0,
-    "dbe_goal_pct": 11.0,
-    "liquidated_damages_per_day_usd": 370,
-    "wage_determination_id": "OH-GPCI-2026-CMH (Medicare Locality 15202-00 & O.R.C. \u00a7 3901.389 18% Prompt-Pay)",
-    "csi_divisions": [
-      "Div 01 CMS TiC MRF Rate Percentiles",
-      "Div 03 CGS MAC LCD Urology Appeal",
-      "Div 26 NCCI Cystourethroscopy & Stent Edit Audit",
-      "Div 31 Ohio GPCI Locality RVU Schedule",
-      "Div 33 Ohio Rev. Code \u00a7 3901.389 18% Interest"
-    ],
-    "planholders": [
-      "Buckeye Urology & Stone Surgery Center",
-      "Ohio Valley Lithotripsy & Endourology",
-      "Great Lakes Urologic Surgical Associates",
-      "Central Ohio Continence & Prostate Institute",
-      "Cuyahoga Ambulatory Urology Partners"
-    ],
-    "pay_items": [
-      {
-        "item_code": "CPT-52356",
-        "description": "Cystourethroscopy, with Ureteroscopy and/or Pyeloscopy; with Lithotripsy & Indwelling Stent",
-        "unit": "CLAIM",
-        "quantity": 460,
-        "hist_low_unit_usd": 1480.0,
-        "hist_median_unit_usd": 3290.0,
-        "recommended_unit_usd": 4120.0
-      },
-      {
-        "item_code": "CPT-50590",
-        "description": "Lithotripsy, Extracorporeal Shock Wave (ESWL) (ASC Facility + Professional Fee)",
-        "unit": "CLAIM",
-        "quantity": 320,
-        "hist_low_unit_usd": 1350.0,
-        "hist_median_unit_usd": 2980.0,
-        "recommended_unit_usd": 3740.0
-      },
-      {
-        "item_code": "CPT-52000-59",
-        "description": "Diagnostic Cystourethroscopy (Modifier 59 / XU Distinct Procedural Service Defense)",
-        "unit": "CLAIM",
-        "quantity": 890,
-        "hist_low_unit_usd": 195.0,
-        "hist_median_unit_usd": 410.0,
-        "recommended_unit_usd": 515.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-ohodi-mrf-cpt-52356-cmh-anthem-bcbs-oh",
+      "jurisdiction": "oh",
       "state_code": "OH",
-      "pay_item_description": "Cystourethroscopy, with Ureteroscopy and/or Pyeloscopy; with Lithotripsy & Indwelling Stent",
-      "unit": "CLAIM",
-      "quantity": 460.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 121.9,
-        "historical_median_bid_unit_usd": 135.68,
-        "historical_75th_percentile_unit_usd": 154.76,
-        "recommended_competitive_unit_bid_usd": 127.14
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 56074.0,
-        "extended_at_recommended_bid_usd": 58484.4,
-        "extended_at_median_bid_usd": 62412.8,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "OH",
+      "title": "[OHODI-MRF-CPT-52356-CMH] Anthem BCBS-OH & Medical Mutual Urology / Lithotripsy ASC MRF Rate Spread & O.R.C. \u00a7 3901.389 Prompt-Pay (CPT 52356 / 50590)",
+      "agency": "Ohio Department of Insurance (ODI) & CGS J15 MRF Index \u2014 Columbus / Cleveland MSA",
       "county": "Franklin County, OH",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "OH20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 64.49,
-      "fully_burdened_crew_hourly_usd": 76.42,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 1108090.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-12-02",
+      "engineers_estimate_usd": 1490000.0,
+      "recommended_low_bid_usd": 1437850.0,
+      "predicted_second_bid_usd": 1490000.0,
+      "predicted_mlot_usd": 208600.0,
+      "recommended_markup_pct": 11.0,
+      "dbe_goal_pct": 11.0,
+      "wage_determination_id": "OH-GPCI-2026-CMH (Medicare Locality 15202-00 & O.R.C. \u00a7 3901.389 18% Prompt-Pay)",
+      "liquidated_damages_per_day_usd": 370,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 45.05,
-          "bona_fide_fringe_hourly_usd": 19.5,
-          "total_prevailing_package_hourly_usd": 64.55,
-          "overtime_1_5x_hourly_usd": 87.07,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 40.49,
-          "bona_fide_fringe_hourly_usd": 16.85,
-          "total_prevailing_package_hourly_usd": 57.34,
-          "overtime_1_5x_hourly_usd": 77.59,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 44.31,
-          "bona_fide_fringe_hourly_usd": 22.37,
-          "total_prevailing_package_hourly_usd": 66.68,
-          "overtime_1_5x_hourly_usd": 88.84,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 48.34,
-          "bona_fide_fringe_hourly_usd": 21.04,
-          "total_prevailing_package_hourly_usd": 69.38,
-          "overtime_1_5x_hourly_usd": 93.55,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Buckeye Urology & Stone Surgery Center",
+        "Ohio Valley Lithotripsy & Endourology",
+        "Great Lakes Urologic Surgical Associates",
+        "Central Ohio Continence & Prostate Institute",
+        "Cuyahoga Ambulatory Urology Partners"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-ohodi-mrf-cpt-52356-cmh-anthem-bcbs-oh.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/anthem-bcbs-oh-medical-mutual-urology-lithotripsy-asc-mrf-rate.html",
-    "source_url": "https://insurance.ohio.gov/consumers/health#OHODI-MRF-CPT-52356-CMH",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `OHODI-MRF-CPT-52356-CMH` \u2014 [OHODI-MRF-CPT-52356-CMH] Anthem BCBS-OH & Medical Mutual Urology / Lithotripsy ASC MRF Rate Spread & O.R.C. \u00a7 3901.389 Prompt-Pay (CPT 52356 / 50590)\n**Agency:** Ohio Department of Insurance (ODI) & CGS J15 MRF Index \u2014 Columbus / Cleveland MSA (Franklin County, OH) | **Letting Date:** `2026-12-02`\n**Engineer's Estimate:** `$1,490,000` | **Recommended Low-Bid Target:** `$1,403,580` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC MRF Rate Percentiles, Div 03 CGS MAC LCD Urology Appeal, Div 26 NCCI Cystourethroscopy & Stent Edit Audit, Div 31 Ohio GPCI Locality RVU Schedule\n**Lead Pay Item Benchmark:** Cystourethroscopy, with Ureteroscopy and/or Pyeloscopy; with Lithotripsy & Indwelling Stent -> `$127.14/CLAIM`\n**Davis-Bacon Crew Rate:** `$76.42/hr` fully burdened (`OH-GPCI-2026-CMH (Medicare Locality 15202-00 & O.R.C. \u00a7 3901.389 18% Prompt-Pay)`)\n**DBE Goal:** `11.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$370/day`\n**Official Planholders (5):** Buckeye Urology & Stone Surgery Center, Ohio Valley Lithotripsy & Endourology, Great Lakes Urologic Surgical Associates, Central Ohio Continence & Prostate Institute\nDossier: https://rubricward.com/lettings/project/anthem-bcbs-oh-medical-mutual-urology-lithotripsy-asc-mrf-rate.html\nSource: https://insurance.ohio.gov/consumers/health#OHODI-MRF-CPT-52356-CMH",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "CMS-NSA-IDR-2026-Q4-FED": {
-    "project_id": "CMS-NSA-IDR-2026-Q4-FED",
-    "slug": "federal-no-surprises-act-45-cfr-149-510-certified-idr-entity",
-    "title": "[CMS-NSA-IDR-2026-Q4-FED] Federal No Surprises Act (45 CFR 149.510) Certified IDR Entity Arbitration & ERISA 29 CFR 2560.503-1 Multi-Specialty Benchmark",
-    "agency": "Centers for Medicare & Medicaid Services (CMS) CCIIO & EBSA Federal IDR Portal \u2014 National Docket",
-    "jurisdiction": "municipal",
-    "state_code": "US",
-    "county": "National Federal Jurisdiction, US",
-    "letting_date": "2026-12-03",
-    "engineers_estimate_usd": 3850000.0,
-    "recommended_low_bid_usd": 3626700.0,
-    "dbe_goal_pct": 15.0,
-    "liquidated_damages_per_day_usd": 850,
-    "wage_determination_id": "CMS-MPFS-2026-NAT (National Conversion Factor $33.29 & 45 CFR \u00a7 149.510 IDR Precedent)",
-    "csi_divisions": [
-      "Div 01 CMS TiC National Payer MRF Percentiles",
-      "Div 03 ERISA 29 U.S.C. \u00a7 1024(b)(4) Plan Doc Demand",
-      "Div 05 Federal NSA 45 CFR 149.510 IDR Position Brief",
-      "Div 26 TMA III / IV QPA Calculation Challenge",
-      "Div 31 Medicare National RVU & OPPS/ASC Crosswalk"
-    ],
-    "planholders": [
-      "National Acute Care Physician Partners",
-      "American Out-of-Network Surgical Recovery Group",
-      "Apex Healthcare Revenue Cycle & IDR Advisors",
-      "Summit Multi-Specialty Arbitration Collective",
-      "Vanguard Perioperative & Trauma Medical Group"
-    ],
-    "pay_items": [
-      {
-        "item_code": "IDR-SURG-01",
-        "description": "Complex Out-of-Network Inpatient/ASC Surgical Claim Batch (45 CFR 149.510 Batching Eligible)",
-        "unit": "BATCH",
-        "quantity": 180,
-        "hist_low_unit_usd": 3200.0,
-        "hist_median_unit_usd": 9450.0,
-        "recommended_unit_usd": 12400.0
-      },
-      {
-        "item_code": "IDR-EMER-02",
-        "description": "High-Acuity Emergency Medicine & Trauma Critical Care IDR Batch (CPT 99285 / 99291)",
-        "unit": "BATCH",
-        "quantity": 420,
-        "hist_low_unit_usd": 1150.0,
-        "hist_median_unit_usd": 3180.0,
-        "recommended_unit_usd": 4150.0
-      },
-      {
-        "item_code": "IDR-ANES-03",
-        "description": "Out-of-Network Surgical Anesthesiology Base + Time Unit IDR Batch (2.8x\u20133.4x QPA Precedent)",
-        "unit": "BATCH",
-        "quantity": 310,
-        "hist_low_unit_usd": 1420.0,
-        "hist_median_unit_usd": 3890.0,
-        "recommended_unit_usd": 4950.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-cms-nsa-idr-2026-q4-fed-federal-no",
+      "jurisdiction": "federal",
       "state_code": "US",
-      "pay_item_description": "Complex Out-of-Network Inpatient/ASC Surgical Claim Batch (45 CFR 149.510 Batching Eligible)",
-      "unit": "BATCH",
-      "quantity": 180.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 115.0,
-        "historical_median_bid_unit_usd": 128.0,
-        "historical_75th_percentile_unit_usd": 146.0,
-        "recommended_competitive_unit_bid_usd": 119.94
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 20700.0,
-        "extended_at_recommended_bid_usd": 21589.2,
-        "extended_at_median_bid_usd": 23040.0,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "US",
+      "title": "[CMS-NSA-IDR-2026-Q4-FED] Federal No Surprises Act (45 CFR 149.510) Certified IDR Entity Arbitration & ERISA 29 CFR 2560.503-1 Multi-Specialty Benchmark",
+      "agency": "Centers for Medicare & Medicaid Services (CMS) CCIIO & EBSA Federal IDR Portal \u2014 National Docket",
       "county": "National Federal Jurisdiction, US",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "US20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 60.84,
-      "fully_burdened_crew_hourly_usd": 72.1,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 1045450.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-12-03",
+      "engineers_estimate_usd": 3850000.0,
+      "recommended_low_bid_usd": 3715250.0,
+      "predicted_second_bid_usd": 3850000.0,
+      "predicted_mlot_usd": 539000.0,
+      "recommended_markup_pct": 15.0,
+      "dbe_goal_pct": 15.0,
+      "wage_determination_id": "CMS-MPFS-2026-NAT (National Conversion Factor $33.29 & 45 CFR \u00a7 149.510 IDR Precedent)",
+      "liquidated_damages_per_day_usd": 850,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 42.5,
-          "bona_fide_fringe_hourly_usd": 18.4,
-          "total_prevailing_package_hourly_usd": 60.9,
-          "overtime_1_5x_hourly_usd": 82.15,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 38.2,
-          "bona_fide_fringe_hourly_usd": 15.9,
-          "total_prevailing_package_hourly_usd": 54.1,
-          "overtime_1_5x_hourly_usd": 73.2,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 41.8,
-          "bona_fide_fringe_hourly_usd": 21.1,
-          "total_prevailing_package_hourly_usd": 62.9,
-          "overtime_1_5x_hourly_usd": 83.8,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 45.6,
-          "bona_fide_fringe_hourly_usd": 19.85,
-          "total_prevailing_package_hourly_usd": 65.45,
-          "overtime_1_5x_hourly_usd": 88.25,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "National Acute Care Physician Partners",
+        "American Out-of-Network Surgical Recovery Group",
+        "Apex Healthcare Revenue Cycle & IDR Advisors",
+        "Summit Multi-Specialty Arbitration Collective",
+        "Vanguard Perioperative & Trauma Medical Group"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-cms-nsa-idr-2026-q4-fed-federal-no.html"
     },
-    "dossier_url": "https://rubricward.com/lettings/project/federal-no-surprises-act-45-cfr-149-510-certified-idr-entity.html",
-    "source_url": "https://www.cms.gov/nosurprises/help-resolve-payment-disputes/payment-disputes-between-providers-and-health-plans#CMS-NSA-IDR-2026-Q4-FED",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `CMS-NSA-IDR-2026-Q4-FED` \u2014 [CMS-NSA-IDR-2026-Q4-FED] Federal No Surprises Act (45 CFR 149.510) Certified IDR Entity Arbitration & ERISA 29 CFR 2560.503-1 Multi-Specialty Benchmark\n**Agency:** Centers for Medicare & Medicaid Services (CMS) CCIIO & EBSA Federal IDR Portal \u2014 National Docket (National Federal Jurisdiction, US) | **Letting Date:** `2026-12-03`\n**Engineer's Estimate:** `$3,850,000` | **Recommended Low-Bid Target:** `$3,626,700` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 CMS TiC National Payer MRF Percentiles, Div 03 ERISA 29 U.S.C. \u00a7 1024(b)(4) Plan Doc Demand, Div 05 Federal NSA 45 CFR 149.510 IDR Position Brief, Div 26 TMA III / IV QPA Calculation Challenge\n**Lead Pay Item Benchmark:** Complex Out-of-Network Inpatient/ASC Surgical Claim Batch (45 CFR 149.510 Batching Eligible) -> `$119.94/BATCH`\n**Davis-Bacon Crew Rate:** `$72.1/hr` fully burdened (`CMS-MPFS-2026-NAT (National Conversion Factor $33.29 & 45 CFR \u00a7 149.510 IDR Precedent)`)\n**DBE Goal:** `15.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$850/day`\n**Official Planholders (5):** National Acute Care Physician Partners, American Out-of-Network Surgical Recovery Group, Apex Healthcare Revenue Cycle & IDR Advisors, Summit Multi-Specialty Arbitration Collective\nDossier: https://rubricward.com/lettings/project/federal-no-surprises-act-45-cfr-149-510-certified-idr-entity.html\nSource: https://www.cms.gov/nosurprises/help-resolve-payment-disputes/payment-disputes-between-providers-and-health-plans#CMS-NSA-IDR-2026-Q4-FED",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  },
-  "MUNICIPAL-ASC-RCM-2026-09": {
-    "project_id": "MUNICIPAL-ASC-RCM-2026-09",
-    "slug": "multi-state-ambulatory-surgery-center-asc-payer-contract",
-    "title": "[MUNICIPAL-ASC-RCM-2026-09] Multi-State Ambulatory Surgery Center (ASC) Payer Contract Renegotiation, 835 Underpayment & GFE Compliance Audit",
-    "agency": "Multi-State Self-Funded Municipal / Public Employee Health Plan & Commercial ASC Network Index",
-    "jurisdiction": "municipal",
-    "state_code": "MU",
-    "county": "Multi-State Regional MSA",
-    "letting_date": "2026-12-04",
-    "engineers_estimate_usd": 2250000.0,
-    "recommended_low_bid_usd": 2119500.0,
-    "dbe_goal_pct": 14.0,
-    "liquidated_damages_per_day_usd": 520,
-    "wage_determination_id": "CMS-ASC-2026-REG (Medicare ASC Wage Index & 45 CFR \u00a7 149.610 Good Faith Estimate)",
-    "csi_divisions": [
-      "Div 01 Commercial Payer Fee-Schedule Renegotiation",
-      "Div 03 EDI 835 Silent Underpayment & MPPR Audit",
-      "Div 26 Implant Carve-Out (HCPCS C1713 / L8699) Recovery",
-      "Div 31 Hospital Outpatient (HOPD) vs. ASC Site-of-Service Lift",
-      "Div 33 45 CFR 149.610 Co-Provider Good Faith Estimate (GFE)"
-    ],
-    "planholders": [
-      "Premier Multi-Specialty ASC Management LLC",
-      "Tri-County Outpatient Surgical Center",
-      "Meridian Orthopedic & Pain Surgery Center",
-      "Integrity Medical Billing & RCM Solutions",
-      "Horizon Surgical Partners Holdings"
-    ],
-    "pay_items": [
-      {
-        "item_code": "ASC-ORTHO-1",
-        "description": "Outpatient Total Joint & Arthroscopy ASC Facility Fee Carve-Out Schedule (185% of Medicare ASC)",
-        "unit": "CASE",
-        "quantity": 280,
-        "hist_low_unit_usd": 2850.0,
-        "hist_median_unit_usd": 5420.0,
-        "recommended_unit_usd": 6850.0
-      },
-      {
-        "item_code": "ASC-IMPL-C1713",
-        "description": "Surgical Anchor/Screw/Plate Implant Pass-Through Reimbursement (HCPCS C1713 Invoice + 15%)",
-        "unit": "CASE",
-        "quantity": 390,
-        "hist_low_unit_usd": 950.0,
-        "hist_median_unit_usd": 2150.0,
-        "recommended_unit_usd": 2680.0
-      },
-      {
-        "item_code": "ASC-PAIN-63650",
-        "description": "Percutaneous Implantation of Neurostimulator Electrode Array, Epidural (Spinal Cord Stimulator Trial)",
-        "unit": "CASE",
-        "quantity": 95,
-        "hist_low_unit_usd": 3400.0,
-        "hist_median_unit_usd": 7250.0,
-        "recommended_unit_usd": 8950.0
-      }
-    ],
-    "bid_tab_benchmark": {
-      "status": "success",
+    {
+      "letting_id": "TXDOI-MRF-CPT-29881-DFW",
+      "slug": "txdoi-mrf-cpt-29881-dfw-municipal-asc-rcm-2026-09-multi-state",
+      "jurisdiction": "municipal",
       "state_code": "MU",
-      "pay_item_description": "Outpatient Total Joint & Arthroscopy ASC Facility Fee Carve-Out Schedule (185% of Medicare ASC)",
-      "unit": "CASE",
-      "quantity": 280.0,
-      "historical_36mo_lettings_sampled": 42,
-      "unit_price_benchmarks": {
-        "historical_winning_low_unit_usd": 115.0,
-        "historical_median_bid_unit_usd": 128.0,
-        "historical_75th_percentile_unit_usd": 146.0,
-        "recommended_competitive_unit_bid_usd": 119.94
-      },
-      "extended_item_totals": {
-        "extended_at_winning_low_usd": 32200.0,
-        "extended_at_recommended_bid_usd": 33583.2,
-        "extended_at_median_bid_usd": 35840.0,
-        "estimated_margin_left_on_table_pct": 3.25
-      },
-      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
-    },
-    "prevailing_wage_summary": {
-      "status": "success",
-      "state_code": "MU",
+      "title": "[MUNICIPAL-ASC-RCM-2026-09] Multi-State Ambulatory Surgery Center (ASC) Payer Contract Renegotiation, 835 Underpayment & GFE Compliance Audit",
+      "agency": "Multi-State Self-Funded Municipal / Public Employee Health Plan & Commercial ASC Network Index",
       "county": "Multi-State Regional MSA",
-      "construction_type": "Highway & Heavy Civil",
-      "wage_determination_reference": "MU20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
-      "weighted_composite_hourly_usd": 60.84,
-      "fully_burdened_crew_hourly_usd": 72.1,
-      "estimated_crew_hours": 14500,
-      "total_estimated_prevailing_labor_usd": 1045450.0,
-      "certified_payroll_compliance_notes": [
-        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
-        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
-        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      "letting_date": "2026-12-04",
+      "engineers_estimate_usd": 2250000.0,
+      "recommended_low_bid_usd": 2171250.0,
+      "predicted_second_bid_usd": 2250000.0,
+      "predicted_mlot_usd": 315000.0,
+      "recommended_markup_pct": 14.0,
+      "dbe_goal_pct": 14.0,
+      "wage_determination_id": "CMS-ASC-2026-REG (Medicare ASC Wage Index & 45 CFR \u00a7 149.610 Good Faith Estimate)",
+      "liquidated_damages_per_day_usd": 520,
+      "tier2_api_suite_connected": [
+        "#02 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler",
+        "#03 CMS Medicare Physician Fee Schedule (MPFS) RVU & GPCI Locality Calculator",
+        "#05 CMS NCCI Procedure-to-Procedure (PTP) & MUE Claim Scrubber",
+        "#06 Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Generator",
+        "#11 Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer"
       ],
-      "wage_classifications": [
-        {
-          "classification": "Operating Engineer (Paver / Heavy Crane)",
-          "davis_bacon_base_hourly_usd": 42.5,
-          "bona_fide_fringe_hourly_usd": 18.4,
-          "total_prevailing_package_hourly_usd": 60.9,
-          "overtime_1_5x_hourly_usd": 82.15,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Cement Mason / Bridge Finisher",
-          "davis_bacon_base_hourly_usd": 38.2,
-          "bona_fide_fringe_hourly_usd": 15.9,
-          "total_prevailing_package_hourly_usd": 54.1,
-          "overtime_1_5x_hourly_usd": 73.2,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Ironworker (Structural & Rebar)",
-          "davis_bacon_base_hourly_usd": 41.8,
-          "bona_fide_fringe_hourly_usd": 21.1,
-          "total_prevailing_package_hourly_usd": 62.9,
-          "overtime_1_5x_hourly_usd": 83.8,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        },
-        {
-          "classification": "Traffic Signal & ITS Electrician",
-          "davis_bacon_base_hourly_usd": 45.6,
-          "bona_fide_fringe_hourly_usd": 19.85,
-          "total_prevailing_package_hourly_usd": 65.45,
-          "overtime_1_5x_hourly_usd": 88.25,
-          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
-        }
-      ]
-    },
-    "dossier_url": "https://rubricward.com/lettings/project/multi-state-ambulatory-surgery-center-asc-payer-contract.html",
-    "source_url": "https://www.cms.gov/medicare/payment/prospective-payment-systems/ambulatory-surgical-center-asc#MUNICIPAL-ASC-RCM-2026-09",
-    "discord_payload": {
-      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `MUNICIPAL-ASC-RCM-2026-09` \u2014 [MUNICIPAL-ASC-RCM-2026-09] Multi-State Ambulatory Surgery Center (ASC) Payer Contract Renegotiation, 835 Underpayment & GFE Compliance Audit\n**Agency:** Multi-State Self-Funded Municipal / Public Employee Health Plan & Commercial ASC Network Index (Multi-State Regional MSA) | **Letting Date:** `2026-12-04`\n**Engineer's Estimate:** `$2,250,000` | **Recommended Low-Bid Target:** `$2,119,500` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 Commercial Payer Fee-Schedule Renegotiation, Div 03 EDI 835 Silent Underpayment & MPPR Audit, Div 26 Implant Carve-Out (HCPCS C1713 / L8699) Recovery, Div 31 Hospital Outpatient (HOPD) vs. ASC Site-of-Service Lift\n**Lead Pay Item Benchmark:** Outpatient Total Joint & Arthroscopy ASC Facility Fee Carve-Out Schedule (185% of Medicare ASC) -> `$119.94/CASE`\n**Davis-Bacon Crew Rate:** `$72.1/hr` fully burdened (`CMS-ASC-2026-REG (Medicare ASC Wage Index & 45 CFR \u00a7 149.610 Good Faith Estimate)`)\n**DBE Goal:** `14.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$520/day`\n**Official Planholders (5):** Premier Multi-Specialty ASC Management LLC, Tri-County Outpatient Surgical Center, Meridian Orthopedic & Pain Surgery Center, Integrity Medical Billing & RCM Solutions\nDossier: https://rubricward.com/lettings/project/multi-state-ambulatory-surgery-center-asc-payer-contract.html\nSource: https://www.cms.gov/medicare/payment/prospective-payment-systems/ambulatory-surgical-center-asc#MUNICIPAL-ASC-RCM-2026-09",
-      "flags": 4
-    },
-    "generated_at_utc": "2026-11-01T16:03:39Z"
-  }
+      "unit_bid_tab_preview": [],
+      "planholders": [
+        "Premier Multi-Specialty ASC Management LLC",
+        "Tri-County Outpatient Surgical Center",
+        "Meridian Orthopedic & Pain Surgery Center",
+        "Integrity Medical Billing & RCM Solutions",
+        "Horizon Surgical Partners Holdings"
+      ],
+      "source_url": "https://www.cms.gov/nosurprises",
+      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-municipal-asc-rcm-2026-09-multi-state.html"
+    }
+  ]
 }

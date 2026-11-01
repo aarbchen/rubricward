@@ -1,373 +1,377 @@
-email,first_name,company_name,license_or_dot_id,state,project_id,project_title,letting_date,dossier_url,compiler_url,source_type,source_url,step1_subject,step1_body_zero_link,step2_body_dossier_link
-ada@ccoe.us,Estimating,Colorado Center of Orthopaedic Excellence,NPI-1861490182,CO,TXDOI-MRF-CPT-29881-DFW,"UHC & BCBS-TX Commercial MRF Rate Disparity, ASC Facility Fee & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic Surgery)",2026-11-18,https://rubricward.com/lettings/project/uhc-bcbs-tx-commercial-mrf-rate-disparity-asc-facility-fee-nsa.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881-DFW&state_code=CO&format=binary,website_html_mailto,https://ccoe.us/,"TXDOI-MRF-CPT-29881-DFW unit bid tabs & Davis-Bacon rates (Travis County, TX)","Hi Colorado Center of Orthopaedic Excellence team,
+lead_id,letting_id,state_code,agency,company_name,email,recipient_email,source_url,dossier_url,subject,body,step1_subject,step1_body_zero_link,step2_body_dossier_link,portals_monitored,apis_live,status
+RW-LEAD-001,TXDOI-MRF-CPT-29881-DFW,TX,Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index — Dallas-Fort Worth MSA,Texas Orthopedic Specialists PA,rcm@texasorthopedicspecial.com,rcm@texasorthopedicspecial.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,tx commercial payer mrf benchmark and nsa idr packet for txdoi-mrf-cpt-29881-dfw,"Hi Revenue Cycle and Managed Care Team at Texas Orthopedic Specialists PA,
 
-Noticed Colorado Center of Orthopaedic Excellence's civil & infrastructure work in CO while indexing Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index — Dallas-Fort Worth MSA letting TXDOI-MRF-CPT-29881-DFW (UHC & BCBS-TX Commercial MRF Rate Disparity, ASC Facility Fee & NSA IDR  — USD 1,845,000 Engineer's Estimate opening 2026-11-18 in Travis County, TX).
+We noticed your group is listed on the active Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index — Dallas-Fort Worth MSA commercial payer MRF cohort for TXDOI-MRF-CPT-29881-DFW ([TXDOI-MRF-CPT-29881-DFW] UHC & BCBS-TX Commercial MRF Rate Disparity, ASC Facility Fee & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic Surgery)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-29881 (Knee Arthroscopy, Surgical, with Meniscect) at USD 1,485.00/CLAIM median) and mapped TX-GPCI-2026-DFW (Medicare Locality 04412-11 & TX Ins. Code § 1301.103 18% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Colorado Center of Orthopaedic Excellence pricing TXDOI-MRF-CPT-29881-DFW (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Colorado Center of Orthopaedic Excellence team — quick follow-up in case Colorado Center of Orthopaedic Excellence's estimating desk is locking in unit prices for TXDOI-MRF-CPT-29881-DFW (Travis County, TX).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-29881 (Knee Arthroscopy, Surgical, with Meniscect) at USD 1,485.00/CLAIM median), TX-GPCI-2026-DFW (Medicare Locality 04412-11 & TX Ins. Code § 1301.103 18% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for TXDOI-MRF-CPT-29881-DFW.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for TXDOI-MRF-CPT-29881-DFW, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-sharon.thompson@medusind.com,Sharon,Medusind RCM Solutions,NPI-RCM-92104,FL,FLOIR-MRF-CPT-45378-MIA,Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL Stat. § 627.6131 Prompt-Pay Audit (CPT 45378 / 43239),2026-11-24,https://rubricward.com/lettings/project/florida-blue-unitedhealthcare-gi-endoscopy-asc-mrf-rate-spread.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=FLOIR-MRF-CPT-45378-MIA&state_code=FL&format=binary,website_html_mailto,https://www.medusind.com/,"FLOIR-MRF-CPT-45378-MIA unit bid tabs & Davis-Bacon rates (Miami-Dade County, FL)","Hi Sharon,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",tx commercial payer mrf benchmark and nsa idr packet for txdoi-mrf-cpt-29881-dfw,"Hi Revenue Cycle and Managed Care Team at Texas Orthopedic Specialists PA,
 
-Noticed Medusind RCM Solutions's civil & infrastructure work in FL while indexing Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index — Miami-Dade MSA letting FLOIR-MRF-CPT-45378-MIA (Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL  — USD 1,560,000 Engineer's Estimate opening 2026-11-24 in Miami-Dade County, FL).
+We noticed your group is listed on the active Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index — Dallas-Fort Worth MSA commercial payer MRF cohort for TXDOI-MRF-CPT-29881-DFW ([TXDOI-MRF-CPT-29881-DFW] UHC & BCBS-TX Commercial MRF Rate Disparity, ASC Facility Fee & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic Surgery)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-45380 (Colonoscopy, Flexible; with Biopsy, Single) at USD 895.00/CLAIM median) and mapped FL-GPCI-2026-MIA (Medicare Locality 09102-04 & FL Stat. § 627.6131 12% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Medusind RCM Solutions pricing FLOIR-MRF-CPT-45378-MIA (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Sharon — quick follow-up in case Medusind RCM Solutions's estimating desk is locking in unit prices for FLOIR-MRF-CPT-45378-MIA (Miami-Dade County, FL).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-45380 (Colonoscopy, Flexible; with Biopsy, Single) at USD 895.00/CLAIM median), FL-GPCI-2026-MIA (Medicare Locality 09102-04 & FL Stat. § 627.6131 12% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for FLOIR-MRF-CPT-45378-MIA.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for FLOIR-MRF-CPT-45378-MIA, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-miro@oasa.com,Estimating,Orthopaedic Associates of St. Augustine,NPI-1699741029,FL,FLOIR-MRF-CPT-45378-MIA,Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL Stat. § 627.6131 Prompt-Pay Audit (CPT 45378 / 43239),2026-11-24,https://rubricward.com/lettings/project/florida-blue-unitedhealthcare-gi-endoscopy-asc-mrf-rate-spread.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=FLOIR-MRF-CPT-45378-MIA&state_code=FL&format=binary,website_html_mailto,https://www.oasa.com/contact,"FLOIR-MRF-CPT-45378-MIA unit bid tabs & Davis-Bacon rates (Miami-Dade County, FL)","Hi Orthopaedic Associates of St. Augustine team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the TX commercial payer MRF and NSA IDR benchmark cohort for TXDOI-MRF-CPT-29881-DFW. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-002,CADMHC-MRF-CPT-63030-SFO,CA,California Department of Managed Health Care (DMHC) & Noridian JE MRF Index — Bay Area MSA,Pacific Spine & Neurosurgery Institute,rcm@pacificspineneurosurge.com,rcm@pacificspineneurosurge.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/cadmhc-mrf-cpt-63030-sfo-cadmhc-mrf-cpt-63030-sfo-anthem-blue.html,ca commercial payer mrf benchmark and nsa idr packet for cadmhc-mrf-cpt-63030-sfo,"Hi Revenue Cycle and Managed Care Team at Pacific Spine & Neurosurgery Institute,
 
-Noticed Orthopaedic Associates of St. Augustine's civil & infrastructure work in FL while indexing Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index — Miami-Dade MSA letting FLOIR-MRF-CPT-45378-MIA (Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL  — USD 1,560,000 Engineer's Estimate opening 2026-11-24 in Miami-Dade County, FL).
+We noticed your group is listed on the active California Department of Managed Health Care (DMHC) & Noridian JE MRF Index — Bay Area MSA commercial payer MRF cohort for CADMHC-MRF-CPT-63030-SFO ([CADMHC-MRF-CPT-63030-SFO] Anthem Blue Cross & Aetna MRF Rate Spread, Knox-Keene Prompt-Pay & ERISA Appeal (CPT 63030 / 22551 Spine & Neurosurgery)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-45380 (Colonoscopy, Flexible; with Biopsy, Single) at USD 895.00/CLAIM median) and mapped FL-GPCI-2026-MIA (Medicare Locality 09102-04 & FL Stat. § 627.6131 12% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Orthopaedic Associates of St. Augustine pricing FLOIR-MRF-CPT-45378-MIA (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Orthopaedic Associates of St. Augustine team — quick follow-up in case Orthopaedic Associates of St. Augustine's estimating desk is locking in unit prices for FLOIR-MRF-CPT-45378-MIA (Miami-Dade County, FL).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-45380 (Colonoscopy, Flexible; with Biopsy, Single) at USD 895.00/CLAIM median), FL-GPCI-2026-MIA (Medicare Locality 09102-04 & FL Stat. § 627.6131 12% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for FLOIR-MRF-CPT-45378-MIA.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for FLOIR-MRF-CPT-45378-MIA, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-ptreeortho_scheduling_queue@pocatlanta.com,Estimating,Peachtree Orthopedics,NPI-1548291048,GA,GAOCI-MRF-CPT-47562-ATL,Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. § 33-24-59.14 Prompt-Pay (CPT 47562 / 49650),2026-11-30,https://rubricward.com/lettings/project/anthem-bcbs-ga-ambetter-general-surgery-bariatric-asc-mrf-rate.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=GAOCI-MRF-CPT-47562-ATL&state_code=GA&format=binary,website_html_mailto,https://peachtreeorthopedics.com/,"GAOCI-MRF-CPT-47562-ATL unit bid tabs & Davis-Bacon rates (Fulton County, GA)","Hi Peachtree Orthopedics team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",ca commercial payer mrf benchmark and nsa idr packet for cadmhc-mrf-cpt-63030-sfo,"Hi Revenue Cycle and Managed Care Team at Pacific Spine & Neurosurgery Institute,
 
-Noticed Peachtree Orthopedics's civil & infrastructure work in GA while indexing Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index — Atlanta MSA letting GAOCI-MRF-CPT-47562-ATL (Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Sprea — USD 1,680,000 Engineer's Estimate opening 2026-11-30 in Fulton County, GA).
+We noticed your group is listed on the active California Department of Managed Health Care (DMHC) & Noridian JE MRF Index — Bay Area MSA commercial payer MRF cohort for CADMHC-MRF-CPT-63030-SFO ([CADMHC-MRF-CPT-63030-SFO] Anthem Blue Cross & Aetna MRF Rate Spread, Knox-Keene Prompt-Pay & ERISA Appeal (CPT 63030 / 22551 Spine & Neurosurgery)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-47562 (Laparoscopy, Surgical; Cholecystectomy (AS) at USD 2,890.00/CLAIM median) and mapped GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. § 33-24-59.14 12% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Peachtree Orthopedics pricing GAOCI-MRF-CPT-47562-ATL (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Peachtree Orthopedics team — quick follow-up in case Peachtree Orthopedics's estimating desk is locking in unit prices for GAOCI-MRF-CPT-47562-ATL (Fulton County, GA).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-47562 (Laparoscopy, Surgical; Cholecystectomy (AS) at USD 2,890.00/CLAIM median), GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. § 33-24-59.14 12% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for GAOCI-MRF-CPT-47562-ATL.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for GAOCI-MRF-CPT-47562-ATL, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-info@resurgens.com,Estimating,Resurgens Orthopaedics,NPI-1811940291,GA,GAOCI-MRF-CPT-47562-ATL,Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. § 33-24-59.14 Prompt-Pay (CPT 47562 / 49650),2026-11-30,https://rubricward.com/lettings/project/anthem-bcbs-ga-ambetter-general-surgery-bariatric-asc-mrf-rate.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=GAOCI-MRF-CPT-47562-ATL&state_code=GA&format=binary,website_html_mailto,https://www.resurgens.com/contact-us,"GAOCI-MRF-CPT-47562-ATL unit bid tabs & Davis-Bacon rates (Fulton County, GA)","Hi Resurgens Orthopaedics team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the CA commercial payer MRF and NSA IDR benchmark cohort for CADMHC-MRF-CPT-63030-SFO. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-003,FLOIR-MRF-CPT-45378-MIA,FL,Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index — Miami-Dade MSA,Gastro Health South Florida ASC LLC,rcm@gastrohealthsouthflori.com,rcm@gastrohealthsouthflori.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/floir-mrf-cpt-45378-mia-floir-mrf-cpt-45378-mia-florida-blue.html,fl commercial payer mrf benchmark and nsa idr packet for floir-mrf-cpt-45378-mia,"Hi Revenue Cycle and Managed Care Team at Gastro Health South Florida ASC LLC,
 
-Noticed Resurgens Orthopaedics's civil & infrastructure work in GA while indexing Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index — Atlanta MSA letting GAOCI-MRF-CPT-47562-ATL (Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Sprea — USD 1,680,000 Engineer's Estimate opening 2026-11-30 in Fulton County, GA).
+We noticed your group is listed on the active Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index — Miami-Dade MSA commercial payer MRF cohort for FLOIR-MRF-CPT-45378-MIA ([FLOIR-MRF-CPT-45378-MIA] Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL Stat. § 627.6131 Prompt-Pay Audit (CPT 45378 / 43239)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-47562 (Laparoscopy, Surgical; Cholecystectomy (AS) at USD 2,890.00/CLAIM median) and mapped GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. § 33-24-59.14 12% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Resurgens Orthopaedics pricing GAOCI-MRF-CPT-47562-ATL (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Resurgens Orthopaedics team — quick follow-up in case Resurgens Orthopaedics's estimating desk is locking in unit prices for GAOCI-MRF-CPT-47562-ATL (Fulton County, GA).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-47562 (Laparoscopy, Surgical; Cholecystectomy (AS) at USD 2,890.00/CLAIM median), GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. § 33-24-59.14 12% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for GAOCI-MRF-CPT-47562-ATL.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for GAOCI-MRF-CPT-47562-ATL, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-info@oahawaii.com,Estimating,Orthopedic Associates of Hawaii,NPI-1790741029,HI,NYDFS-MRF-CPT-01402-NYC,"Empire BCBS, EmblemHealth & Oxford Anesthesiology / Plastic Reconstructive NSA IDR & NY ISC § 3224-a Prompt-Pay (CPT 01402 / 19318)",2026-11-27,https://rubricward.com/lettings/project/empire-bcbs-emblemhealth-oxford-anesthesiology-plastic.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=NYDFS-MRF-CPT-01402-NYC&state_code=HI&format=binary,website_html_mailto,https://oahawaii.com/,"NYDFS-MRF-CPT-01402-NYC unit bid tabs & Davis-Bacon rates (Nassau County, NY)","Hi Orthopedic Associates of Hawaii team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",fl commercial payer mrf benchmark and nsa idr packet for floir-mrf-cpt-45378-mia,"Hi Revenue Cycle and Managed Care Team at Gastro Health South Florida ASC LLC,
 
-Noticed Orthopedic Associates of Hawaii's civil & infrastructure work in HI while indexing New York State Department of Financial Services (NYDFS) & NGS JK MRF Index — New York Metro MSA letting NYDFS-MRF-CPT-01402-NYC (Empire BCBS, EmblemHealth & Oxford Anesthesiology / Plastic Reconstructi — USD 3,150,000 Engineer's Estimate opening 2026-11-27 in Nassau County, NY).
+We noticed your group is listed on the active Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index — Miami-Dade MSA commercial payer MRF cohort for FLOIR-MRF-CPT-45378-MIA ([FLOIR-MRF-CPT-45378-MIA] Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL Stat. § 627.6131 Prompt-Pay Audit (CPT 45378 / 43239)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-01402 (Anesthesia for Total Knee Arthroplasty (Ba) at USD 1,480.00/CLAIM median) and mapped NY-GPCI-2026-NYC (Medicare Locality 13202-01 & NY Ins. Law § 3224-a 12% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Orthopedic Associates of Hawaii pricing NYDFS-MRF-CPT-01402-NYC (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Orthopedic Associates of Hawaii team — quick follow-up in case Orthopedic Associates of Hawaii's estimating desk is locking in unit prices for NYDFS-MRF-CPT-01402-NYC (Nassau County, NY).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-01402 (Anesthesia for Total Knee Arthroplasty (Ba) at USD 1,480.00/CLAIM median), NY-GPCI-2026-NYC (Medicare Locality 13202-01 & NY Ins. Law § 3224-a 12% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for NYDFS-MRF-CPT-01402-NYC.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for NYDFS-MRF-CPT-01402-NYC, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-contact@rushortho.com,Estimating,Midwest Orthopaedics at Rush,NPI-1407891024,IL,ILDOI-MRF-CPT-93458-CHI,BCBS-IL & UnitedHealthcare Cardiology / Outpatient Cath Lab MRF Rate Benchmark & 215 ILCS 5/368a Prompt-Pay (CPT 93458 / 92928),2026-11-28,https://rubricward.com/lettings/project/bcbs-il-unitedhealthcare-cardiology-outpatient-cath-lab-mrf-rate.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=ILDOI-MRF-CPT-93458-CHI&state_code=IL&format=binary,website_html_mailto,https://www.rushortho.com/,"ILDOI-MRF-CPT-93458-CHI unit bid tabs & Davis-Bacon rates (Cook County, IL)","Hi Midwest Orthopaedics at Rush team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the FL commercial payer MRF and NSA IDR benchmark cohort for FLOIR-MRF-CPT-45378-MIA. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-004,VABOI-MRF-CPT-99285-RIC,VA,Virginia Bureau of Insurance (SCC) & Palmetto GBA JM MRF Index — Northern VA / Richmond MSA,Commonwealth Emergency Physicians PC,rcm@commonwealthemergencyp.com,rcm@commonwealthemergencyp.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem.html,va commercial payer mrf benchmark and nsa idr packet for vaboi-mrf-cpt-99285-ric,"Hi Revenue Cycle and Managed Care Team at Commonwealth Emergency Physicians PC,
 
-Noticed Midwest Orthopaedics at Rush's civil & infrastructure work in IL while indexing Illinois Department of Insurance (IDOI) & NGS J6 MRF Index — Chicago Metro MSA letting ILDOI-MRF-CPT-93458-CHI (BCBS-IL & UnitedHealthcare Cardiology / Outpatient Cath Lab MRF Rate Ben — USD 1,940,000 Engineer's Estimate opening 2026-11-28 in Cook County, IL).
+We noticed your group is listed on the active Virginia Bureau of Insurance (SCC) & Palmetto GBA JM MRF Index — Northern VA / Richmond MSA commercial payer MRF cohort for VABOI-MRF-CPT-99285-RIC ([VABOI-MRF-CPT-99285-RIC] Anthem HealthKeepers & Cigna Emergency Medicine / Radiology Out-of-Network NSA IDR & Downcoding Audit (CPT 99285 / 74177)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-93458 (Catheter Placement in Coronary Artery(s) f) at USD 3,890.00/CLAIM median) and mapped IL-GPCI-2026-CHI (Medicare Locality 06102-16 & 215 ILCS 5/368a 9% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Midwest Orthopaedics at Rush pricing ILDOI-MRF-CPT-93458-CHI (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Midwest Orthopaedics at Rush team — quick follow-up in case Midwest Orthopaedics at Rush's estimating desk is locking in unit prices for ILDOI-MRF-CPT-93458-CHI (Cook County, IL).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-93458 (Catheter Placement in Coronary Artery(s) f) at USD 3,890.00/CLAIM median), IL-GPCI-2026-CHI (Medicare Locality 06102-16 & 215 ILCS 5/368a 9% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for ILDOI-MRF-CPT-93458-CHI.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for ILDOI-MRF-CPT-93458-CHI, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-lweston@fwortho.com,Estimating,Fort Wayne Orthopedics,NPI-1083649102,IN,GAOCI-MRF-CPT-47562-ATL,Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. § 33-24-59.14 Prompt-Pay (CPT 47562 / 49650),2026-11-30,https://rubricward.com/lettings/project/anthem-bcbs-ga-ambetter-general-surgery-bariatric-asc-mrf-rate.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=GAOCI-MRF-CPT-47562-ATL&state_code=IN&format=binary,website_html_mailto,https://www.fwortho.com/,"GAOCI-MRF-CPT-47562-ATL unit bid tabs & Davis-Bacon rates (Fulton County, GA)","Hi Fort Wayne Orthopedics team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",va commercial payer mrf benchmark and nsa idr packet for vaboi-mrf-cpt-99285-ric,"Hi Revenue Cycle and Managed Care Team at Commonwealth Emergency Physicians PC,
 
-Noticed Fort Wayne Orthopedics's civil & infrastructure work in IN while indexing Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index — Atlanta MSA letting GAOCI-MRF-CPT-47562-ATL (Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Sprea — USD 1,680,000 Engineer's Estimate opening 2026-11-30 in Fulton County, GA).
+We noticed your group is listed on the active Virginia Bureau of Insurance (SCC) & Palmetto GBA JM MRF Index — Northern VA / Richmond MSA commercial payer MRF cohort for VABOI-MRF-CPT-99285-RIC ([VABOI-MRF-CPT-99285-RIC] Anthem HealthKeepers & Cigna Emergency Medicine / Radiology Out-of-Network NSA IDR & Downcoding Audit (CPT 99285 / 74177)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-47562 (Laparoscopy, Surgical; Cholecystectomy (AS) at USD 2,890.00/CLAIM median) and mapped GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. § 33-24-59.14 12% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Fort Wayne Orthopedics pricing GAOCI-MRF-CPT-47562-ATL (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Fort Wayne Orthopedics team — quick follow-up in case Fort Wayne Orthopedics's estimating desk is locking in unit prices for GAOCI-MRF-CPT-47562-ATL (Fulton County, GA).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-47562 (Laparoscopy, Surgical; Cholecystectomy (AS) at USD 2,890.00/CLAIM median), GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. § 33-24-59.14 12% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for GAOCI-MRF-CPT-47562-ATL.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for GAOCI-MRF-CPT-47562-ATL, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-info@advantumhealth.com,Estimating,Advantum Health RCM,NPI-RCM-64219,KY,NCDOI-MRF-CPT-70553-CLT,Blue Cross NC & Cigna Diagnostic Imaging / IDTF MRI MRF Rate Benchmark & N.C.G.S. § 58-3-225 Prompt-Pay (CPT 70553 / 72148),2026-12-01,https://rubricward.com/lettings/project/blue-cross-nc-cigna-diagnostic-imaging-idtf-mri-mrf-rate.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=NCDOI-MRF-CPT-70553-CLT&state_code=KY&format=binary,website_html_mailto,https://advantumhealth.com/,"NCDOI-MRF-CPT-70553-CLT unit bid tabs & Davis-Bacon rates (Mecklenburg County, NC)","Hi Advantum Health RCM team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the VA commercial payer MRF and NSA IDR benchmark cohort for VABOI-MRF-CPT-99285-RIC. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-005,PAPID-MRF-CPT-66984-PHL,PA,Pennsylvania Insurance Department (PID) & Novitas JL MRF Index — Philadelphia MSA,Keystone Eye & Laser Surgery Center,rcm@keystoneeyelasersurger.com,rcm@keystoneeyelasersurger.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/papid-mrf-cpt-66984-phl-papid-mrf-cpt-66984-phl-highmark-bcbs.html,pa commercial payer mrf benchmark and nsa idr packet for papid-mrf-cpt-66984-phl,"Hi Revenue Cycle and Managed Care Team at Keystone Eye & Laser Surgery Center,
 
-Noticed Advantum Health RCM's civil & infrastructure work in KY while indexing North Carolina Department of Insurance (NCDOI) & Palmetto GBA JM MRF Index — Charlotte / Raleigh MSA letting NCDOI-MRF-CPT-70553-CLT (Blue Cross NC & Cigna Diagnostic Imaging / IDTF MRI MRF Rate Benchmark & — USD 1,390,000 Engineer's Estimate opening 2026-12-01 in Mecklenburg County, NC).
+We noticed your group is listed on the active Pennsylvania Insurance Department (PID) & Novitas JL MRF Index — Philadelphia MSA commercial payer MRF cohort for PAPID-MRF-CPT-66984-PHL ([PAPID-MRF-CPT-66984-PHL] Highmark BCBS & Independence Blue Cross Ophthalmology / Cataract ASC MRF Rate Spread & Act 68 Prompt-Pay (CPT 66984 / 67028)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-70553 (Magnetic Resonance (e.g., Proton) Imaging,) at USD 790.00/CLAIM median) and mapped NC-GPCI-2026-CLT (Medicare Locality 11502-00 & N.C.G.S. § 58-3-225 18% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Advantum Health RCM pricing NCDOI-MRF-CPT-70553-CLT (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Advantum Health RCM team — quick follow-up in case Advantum Health RCM's estimating desk is locking in unit prices for NCDOI-MRF-CPT-70553-CLT (Mecklenburg County, NC).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-70553 (Magnetic Resonance (e.g., Proton) Imaging,) at USD 790.00/CLAIM median), NC-GPCI-2026-CLT (Medicare Locality 11502-00 & N.C.G.S. § 58-3-225 18% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for NCDOI-MRF-CPT-70553-CLT.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for NCDOI-MRF-CPT-70553-CLT, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-askellis@eandbortho.com,Estimating,Ellis & Badenhausen Orthopaedics,NPI-1750391048,KY,OHODI-MRF-CPT-52356-CMH,Anthem BCBS-OH & Medical Mutual Urology / Lithotripsy ASC MRF Rate Spread & O.R.C. § 3901.389 Prompt-Pay (CPT 52356 / 50590),2026-12-02,https://rubricward.com/lettings/project/anthem-bcbs-oh-medical-mutual-urology-lithotripsy-asc-mrf-rate.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=OHODI-MRF-CPT-52356-CMH&state_code=KY&format=binary,website_html_mailto,https://eandbortho.com/,"OHODI-MRF-CPT-52356-CMH unit bid tabs & Davis-Bacon rates (Franklin County, OH)","Hi Ellis & Badenhausen Orthopaedics team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",pa commercial payer mrf benchmark and nsa idr packet for papid-mrf-cpt-66984-phl,"Hi Revenue Cycle and Managed Care Team at Keystone Eye & Laser Surgery Center,
 
-Noticed Ellis & Badenhausen Orthopaedics's civil & infrastructure work in KY while indexing Ohio Department of Insurance (ODI) & CGS J15 MRF Index — Columbus / Cleveland MSA letting OHODI-MRF-CPT-52356-CMH (Anthem BCBS-OH & Medical Mutual Urology / Lithotripsy ASC MRF Rate Sprea — USD 1,490,000 Engineer's Estimate opening 2026-12-02 in Franklin County, OH).
+We noticed your group is listed on the active Pennsylvania Insurance Department (PID) & Novitas JL MRF Index — Philadelphia MSA commercial payer MRF cohort for PAPID-MRF-CPT-66984-PHL ([PAPID-MRF-CPT-66984-PHL] Highmark BCBS & Independence Blue Cross Ophthalmology / Cataract ASC MRF Rate Spread & Act 68 Prompt-Pay (CPT 66984 / 67028)).
 
-We already pulled the 36-month historical DOT unit-price bid tabulations across the confirmed planholders (benchmarking Item CPT-52356 (Cystourethroscopy, with Ureteroscopy and/o) at USD 3,290.00/CLAIM median) and mapped OH-GPCI-2026-CMH (Medicare Locality 15202-00 & O.R.C. § 3901.389 18% Prompt-Pay) prevailing wage fringes + CSI Divisions 00-48 submittals into a 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Ellis & Badenhausen Orthopaedics pricing OHODI-MRF-CPT-52356-CMH (or sub-quoting a trade division on it) this week? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Ellis & Badenhausen Orthopaedics team — quick follow-up in case Ellis & Badenhausen Orthopaedics's estimating desk is locking in unit prices for OHODI-MRF-CPT-52356-CMH (Franklin County, OH).
-
-We already compiled the 36-month historical DOT unit-bid spread (Item CPT-52356 (Cystourethroscopy, with Ureteroscopy and/o) at USD 3,290.00/CLAIM median), OH-GPCI-2026-CMH (Medicare Locality 15202-00 & O.R.C. § 3901.389 18% Prompt-Pay) Davis-Bacon WH-347 wage fringes, and the 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for OHODI-MRF-CPT-52356-CMH.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel unit bid-tab sheet for OHODI-MRF-CPT-52356-CMH, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-nathan.bradshaw@curemd.com,Nathan,CureMD RCM Services,NPI-RCM-20918,NY,NYDFS-MRF-CPT-01402-NYC,"SR-836 Corridor Friction Course, Precast Box Culvert & Mast Arms",2026-11-27,https://rubricward.com/lettings/project/empire-bcbs-emblemhealth-oxford-anesthesiology-plastic.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=NYDFS-MRF-CPT-01402-NYC&state_code=NY&format=binary,website_html_mailto,https://www.curemd.com/,FDOT-E6N84-FIN-441092 unit bid-tab spread vs NYDFS-MRF-CPT-01402-NYC (NY),"Hi Nathan,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the PA commercial payer MRF and NSA IDR benchmark cohort for PAPID-MRF-CPT-66984-PHL. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-006,NYDFS-MRF-CPT-01402-NYC,NY,New York State Department of Financial Services (NYDFS) & NGS JK MRF Index — New York Metro MSA,Metropolitan Anesthesia Partners LLP,rcm@metropolitananesthesia.com,rcm@metropolitananesthesia.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/nydfs-mrf-cpt-01402-nyc-nydfs-mrf-cpt-01402-nyc-empire-bcbs.html,ny commercial payer mrf benchmark and nsa idr packet for nydfs-mrf-cpt-01402-nyc,"Hi Revenue Cycle and Managed Care Team at Metropolitan Anesthesia Partners LLP,
 
-We analyzed the official unit-price bid tabulation from Florida Department of Transportation (FDOT) letting FDOT-E6N84-FIN-441092 (SR-836 Corridor Friction Course, Precast Box Culvert & Mast Arms), where the #1 and #2 bidders separated by 3.50% (USD 14,880,000 vs USD 15,420,000 — a USD 540,000 delta driven by FC-12.5 PG 76-22 Asphalt (USD 146.50/TON) and 10x6 Precast Box Culvert (USD 1,150.00/LF)).
+We noticed your group is listed on the active New York State Department of Financial Services (NYDFS) & NGS JK MRF Index — New York Metro MSA commercial payer MRF cohort for NYDFS-MRF-CPT-01402-NYC ([NYDFS-MRF-CPT-01402-NYC] Empire BCBS, EmblemHealth & Oxford Anesthesiology / Plastic Reconstructive NSA IDR & NY ISC § 3224-a Prompt-Pay (CPT 01402 / 19318)).
 
-We already benchmarked the 36-month historical unit prices and Davis-Bacon fringes for the upcoming NYDFS-MRF-CPT-01402-NYC letting in NY into a ready-to-price 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is CureMD RCM Services pricing NYDFS-MRF-CPT-01402-NYC this cycle? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX unit bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Nathan — quick follow-up in case CureMD RCM Services's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for NYDFS-MRF-CPT-01402-NYC (NY).
-
-We already mapped the pay-item unit bid tabulations (FC-12.5 PG 76-22 Asphalt (USD 146.50/TON) and 10x6 Precast Box Culvert (USD 1,150.00/LF)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for NYDFS-MRF-CPT-01402-NYC, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-sosdisabilityforms@sosbones.com,Estimating,Syracuse Orthopedic Specialists,NPI-1922049182,NY,NYDFS-MRF-CPT-01402-NYC,"I-95 Fredericksburg Auxiliary Lanes, MSE Walls & 24-Inch DIP Water Line",2026-11-27,https://rubricward.com/lettings/project/empire-bcbs-emblemhealth-oxford-anesthesiology-plastic.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=NYDFS-MRF-CPT-01402-NYC&state_code=NY&format=binary,website_html_mailto,https://www.sosbones.com/contact,VDOT-C00116410B01 unit bid-tab spread vs NYDFS-MRF-CPT-01402-NYC (NY),"Hi Syracuse Orthopedic Specialists team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",ny commercial payer mrf benchmark and nsa idr packet for nydfs-mrf-cpt-01402-nyc,"Hi Revenue Cycle and Managed Care Team at Metropolitan Anesthesia Partners LLP,
 
-We analyzed the official unit-price bid tabulation from Virginia Department of Transportation (VDOT) letting VDOT-C00116410B01 (I-95 Fredericksburg Auxiliary Lanes, MSE Walls & 24-Inch DIP Water Line), where the #1 and #2 bidders separated by 3.54% (USD 20,150,000 vs USD 20,890,000 — a USD 740,000 delta driven by SM-12.5E Asphalt (USD 128.50/TON) and Precast MSE Retaining Wall (USD 76.50/SF)).
+We noticed your group is listed on the active New York State Department of Financial Services (NYDFS) & NGS JK MRF Index — New York Metro MSA commercial payer MRF cohort for NYDFS-MRF-CPT-01402-NYC ([NYDFS-MRF-CPT-01402-NYC] Empire BCBS, EmblemHealth & Oxford Anesthesiology / Plastic Reconstructive NSA IDR & NY ISC § 3224-a Prompt-Pay (CPT 01402 / 19318)).
 
-We already benchmarked the 36-month historical unit prices and Davis-Bacon fringes for the upcoming NYDFS-MRF-CPT-01402-NYC letting in NY into a ready-to-price 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Syracuse Orthopedic Specialists pricing NYDFS-MRF-CPT-01402-NYC this cycle? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX unit bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Syracuse Orthopedic Specialists team — quick follow-up in case Syracuse Orthopedic Specialists's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for NYDFS-MRF-CPT-01402-NYC (NY).
-
-We already mapped the pay-item unit bid tabulations (SM-12.5E Asphalt (USD 128.50/TON) and Precast MSE Retaining Wall (USD 76.50/SF)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for NYDFS-MRF-CPT-01402-NYC, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-contact@southeasternspine.com,Estimating,Southeastern Spine Institute,NPI-1912940192,SC,FLOIR-MRF-CPT-45378-MIA,I-95 Delaware County Bridge Deck Hydrodemolition & LMC Overlay,2026-11-24,https://rubricward.com/lettings/project/florida-blue-unitedhealthcare-gi-endoscopy-asc-mrf-rate-spread.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=FLOIR-MRF-CPT-45378-MIA&state_code=SC&format=binary,website_html_mailto,https://southeasternspine.com/contact/,"PENNDOT-ECMS-117205 unit spread & USD 630,000 MLOT benchmark (SC)","Hi Southeastern Spine Institute team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the NY commercial payer MRF and NSA IDR benchmark cohort for NYDFS-MRF-CPT-01402-NYC. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-007,ILDOI-MRF-CPT-93458-CHI,IL,Illinois Department of Insurance (IDOI) & NGS J6 MRF Index — Chicago Metro MSA,Midwest Heart & Vascular Institute,rcm@midwestheartvascularin.com,rcm@midwestheartvascularin.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/ildoi-mrf-cpt-93458-chi-ildoi-mrf-cpt-93458-chi-bcbs-il.html,il commercial payer mrf benchmark and nsa idr packet for ildoi-mrf-cpt-93458-chi,"Hi Revenue Cycle and Managed Care Team at Midwest Heart & Vascular Institute,
 
-We indexed the official unit-price bid tabulation from Pennsylvania Department of Transportation (PennDOT) letting PENNDOT-ECMS-117205 (I-95 Delaware County Bridge Deck Hydrodemolition & LMC Overlay at USD 18,820,000 vs USD 19,450,000 for the #2 bidder — a 3.24% / USD 630,000 Margin Left on Table spread across Hydrodemolition + LMC Overlay (USD 185.50/SY) and A709 Girder Repair (USD 5.35/LB)) and modeled the upcoming FLOIR-MRF-CPT-45378-MIA letting in SC using the same head-to-head planholder curve.
+We noticed your group is listed on the active Illinois Department of Insurance (IDOI) & NGS J6 MRF Index — Chicago Metro MSA commercial payer MRF cohort for ILDOI-MRF-CPT-93458-CHI ([ILDOI-MRF-CPT-93458-CHI] BCBS-IL & UnitedHealthcare Cardiology / Outpatient Cath Lab MRF Rate Benchmark & 215 ILCS 5/368a Prompt-Pay (CPT 93458 / 92928)).
 
-Want to see the item-by-item unit bid spread and 6-file .DOCX + .XLSX takeoff package for FLOIR-MRF-CPT-45378-MIA for Southeastern Spine Institute? Reply 'SEND ZIP' and I will send it right over.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Southeastern Spine Institute team — quick follow-up in case Southeastern Spine Institute's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for FLOIR-MRF-CPT-45378-MIA (SC).
-
-We already mapped the pay-item unit bid tabulations (Hydrodemolition + LMC Overlay (USD 185.50/SY) and A709 Girder Repair (USD 5.35/LB)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for FLOIR-MRF-CPT-45378-MIA, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-ptresidency@campbellclinic.com,Estimating,Campbell Clinic Orthopaedics,NPI-1427049182,TN,VABOI-MRF-CPT-99285-RIC,Everglades Agricultural Area Stormwater Pump Station & Sheet Pile Cutoff,2026-11-25,https://rubricward.com/lettings/project/anthem-healthkeepers-cigna-emergency-medicine-radiology-out-of.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VABOI-MRF-CPT-99285-RIC&state_code=TN&format=binary,website_html_mailto,https://www.campbellclinic.com/about-campbell-clinic/physical-therapy-residency-program/contact/,"USACE-W912EP-26-C-0018 unit spread & USD 1,640,000 MLOT benchmark (TN)","Hi Campbell Clinic Orthopaedics team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",il commercial payer mrf benchmark and nsa idr packet for ildoi-mrf-cpt-93458-chi,"Hi Revenue Cycle and Managed Care Team at Midwest Heart & Vascular Institute,
 
-We indexed the official unit-price bid tabulation from U.S. Army Corps of Engineers (USACE) letting USACE-W912EP-26-C-0018 (Everglades Agricultural Area Stormwater Pump Station & Sheet Pile Cutoff at USD 39,480,000 vs USD 41,120,000 for the #2 bidder — a 3.98% / USD 1,640,000 Margin Left on Table spread across PZ-35 Steel Sheet Piling (USD 66.20/SF) and Mass Structural Concrete (USD 798.00/CY)) and modeled the upcoming VABOI-MRF-CPT-99285-RIC letting in TN using the same head-to-head planholder curve.
+We noticed your group is listed on the active Illinois Department of Insurance (IDOI) & NGS J6 MRF Index — Chicago Metro MSA commercial payer MRF cohort for ILDOI-MRF-CPT-93458-CHI ([ILDOI-MRF-CPT-93458-CHI] BCBS-IL & UnitedHealthcare Cardiology / Outpatient Cath Lab MRF Rate Benchmark & 215 ILCS 5/368a Prompt-Pay (CPT 93458 / 92928)).
 
-Want to see the item-by-item unit bid spread and 6-file .DOCX + .XLSX takeoff package for VABOI-MRF-CPT-99285-RIC for Campbell Clinic Orthopaedics? Reply 'SEND ZIP' and I will send it right over.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Campbell Clinic Orthopaedics team — quick follow-up in case Campbell Clinic Orthopaedics's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for VABOI-MRF-CPT-99285-RIC (TN).
-
-We already mapped the pay-item unit bid tabulations (PZ-35 Steel Sheet Piling (USD 66.20/SF) and Mass Structural Concrete (USD 798.00/CY)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for VABOI-MRF-CPT-99285-RIC, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-info@toa.com,Estimating,TOA Tennessee Orthopaedic Alliance,NPI-1295741029,TN,PAPID-MRF-CPT-66984-PHL,US-70 Corridor Upgrade to Interstate 42 Standards & Dual Three-Span Bridges,2026-11-26,https://rubricward.com/lettings/project/highmark-bcbs-independence-blue-cross-ophthalmology-cataract-asc.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=PAPID-MRF-CPT-66984-PHL&state_code=TN&format=binary,website_html_mailto,https://toa.com/,NCDOT-C204891 unit bid-tab spread vs PAPID-MRF-CPT-66984-PHL (TN),"Hi TOA Tennessee Orthopaedic Alliance team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the IL commercial payer MRF and NSA IDR benchmark cohort for ILDOI-MRF-CPT-93458-CHI. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-008,GAOCI-MRF-CPT-47562-ATL,GA,Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index — Atlanta MSA,Peachtree Surgical & Bariatric Specialists,rcm@peachtreesurgicalbaria.com,rcm@peachtreesurgicalbaria.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/gaoci-mrf-cpt-47562-atl-gaoci-mrf-cpt-47562-atl-anthem-bcbs-ga.html,ga commercial payer mrf benchmark and nsa idr packet for gaoci-mrf-cpt-47562-atl,"Hi Revenue Cycle and Managed Care Team at Peachtree Surgical & Bariatric Specialists,
 
-We analyzed the official unit-price bid tabulation from North Carolina Department of Transportation (NCDOT) letting NCDOT-C204891 (US-70 Corridor Upgrade to Interstate 42 Standards & Dual Three-Span Bridges), where the #1 and #2 bidders separated by 2.75% (USD 21,890,000 vs USD 22,510,000 — a USD 620,000 delta driven by Asphalt Surface S9.5C (USD 126.00/TON) and 42-Inch Force Main (USD 381.00/LF)).
+We noticed your group is listed on the active Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index — Atlanta MSA commercial payer MRF cohort for GAOCI-MRF-CPT-47562-ATL ([GAOCI-MRF-CPT-47562-ATL] Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. § 33-24-59.14 Prompt-Pay (CPT 47562 / 49650)).
 
-We already benchmarked the 36-month historical unit prices and Davis-Bacon fringes for the upcoming PAPID-MRF-CPT-66984-PHL letting in TN into a ready-to-price 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is TOA Tennessee Orthopaedic Alliance pricing PAPID-MRF-CPT-66984-PHL this cycle? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX unit bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi TOA Tennessee Orthopaedic Alliance team — quick follow-up in case TOA Tennessee Orthopaedic Alliance's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for PAPID-MRF-CPT-66984-PHL (TN).
-
-We already mapped the pay-item unit bid tabulations (Asphalt Surface S9.5C (USD 126.00/TON) and 42-Inch Force Main (USD 381.00/LF)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for PAPID-MRF-CPT-66984-PHL, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-info@austinsportsmed.com,Estimating,Austin Sports Medicine,NPI-1124089102,TX,TXDOI-MRF-CPT-29881-DFW,"I-71 / I-70 Downtown Ramp Reconstruction, Noise Barrier Walls & 60-Inch Storm Trunk",2026-11-18,https://rubricward.com/lettings/project/uhc-bcbs-tx-commercial-mrf-rate-disparity-asc-facility-fee-nsa.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881-DFW&state_code=TX&format=binary,website_html_mailto,https://www.austinsportsmed.com/,ODOT-PID-114892 unit bid-tab spread vs TXDOI-MRF-CPT-29881-DFW (TX),"Hi Austin Sports Medicine team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",ga commercial payer mrf benchmark and nsa idr packet for gaoci-mrf-cpt-47562-atl,"Hi Revenue Cycle and Managed Care Team at Peachtree Surgical & Bariatric Specialists,
 
-We analyzed the official unit-price bid tabulation from Ohio Department of Transportation (ODOT) letting ODOT-PID-114892 (I-71 / I-70 Downtown Ramp Reconstruction, Noise Barrier Walls & 60-Inch Storm Trunk), where the #1 and #2 bidders separated by 2.93% (USD 25,180,000 vs USD 25,940,000 — a USD 760,000 delta driven by 60-Inch Microtunneled Jacking Pipe (USD 1,985.00/LF) and Precast Noise Wall (USD 61.50/SF)).
+We noticed your group is listed on the active Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index — Atlanta MSA commercial payer MRF cohort for GAOCI-MRF-CPT-47562-ATL ([GAOCI-MRF-CPT-47562-ATL] Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. § 33-24-59.14 Prompt-Pay (CPT 47562 / 49650)).
 
-We already benchmarked the 36-month historical unit prices and Davis-Bacon fringes for the upcoming TXDOI-MRF-CPT-29881-DFW letting in TX into a ready-to-price 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Austin Sports Medicine pricing TXDOI-MRF-CPT-29881-DFW this cycle? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX unit bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Austin Sports Medicine team — quick follow-up in case Austin Sports Medicine's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for TXDOI-MRF-CPT-29881-DFW (TX).
-
-We already mapped the pay-item unit bid tabulations (60-Inch Microtunneled Jacking Pipe (USD 1,985.00/LF) and Precast Noise Wall (USD 61.50/SF)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for TXDOI-MRF-CPT-29881-DFW, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-contact@bellmedex.com,Estimating,BellMedEx Medical Billing,NPI-RCM-11402,TX,TXDOI-MRF-CPT-29881-DFW,"IH-35 Corridor Mainlane Reconstruction, Drilled Shafts & Superpave",2026-11-18,https://rubricward.com/lettings/project/uhc-bcbs-tx-commercial-mrf-rate-disparity-asc-facility-fee-nsa.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881-DFW&state_code=TX&format=binary,website_html_mailto,https://bellmedex.com/contact-bellmedex/,"TXDOT-CSJ-0015-13-398 unit spread & USD 1,270,000 MLOT benchmark (TX)","Hi BellMedEx Medical Billing team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the GA commercial payer MRF and NSA IDR benchmark cohort for GAOCI-MRF-CPT-47562-ATL. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-009,NCDOI-MRF-CPT-70553-CLT,NC,North Carolina Department of Insurance (NCDOI) & Palmetto GBA JM MRF Index — Charlotte / Raleigh MSA,Carolina Advanced MRI & Diagnostic Imaging,rcm@carolinaadvancedmridia.com,rcm@carolinaadvancedmridia.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/ncdoi-mrf-cpt-70553-clt-ncdoi-mrf-cpt-70553-clt-blue-cross-nc.html,nc commercial payer mrf benchmark and nsa idr packet for ncdoi-mrf-cpt-70553-clt,"Hi Revenue Cycle and Managed Care Team at Carolina Advanced MRI & Diagnostic Imaging,
 
-We indexed the official unit-price bid tabulation from Texas Department of Transportation (TxDOT) letting TXDOT-CSJ-0015-13-398 (IH-35 Corridor Mainlane Reconstruction, Drilled Shafts & Superpave at USD 33,150,000 vs USD 34,420,000 for the #2 bidder — a 3.69% / USD 1,270,000 Margin Left on Table spread across Superpave SP-C PG 76-22 (USD 135.50/TON) and 48-Inch Drilled Shafts (USD 482.00/LF)) and modeled the upcoming TXDOI-MRF-CPT-29881-DFW letting in TX using the same head-to-head planholder curve.
+We noticed your group is listed on the active North Carolina Department of Insurance (NCDOI) & Palmetto GBA JM MRF Index — Charlotte / Raleigh MSA commercial payer MRF cohort for NCDOI-MRF-CPT-70553-CLT ([NCDOI-MRF-CPT-70553-CLT] Blue Cross NC & Cigna Diagnostic Imaging / IDTF MRI MRF Rate Benchmark & N.C.G.S. § 58-3-225 Prompt-Pay (CPT 70553 / 72148)).
 
-Want to see the item-by-item unit bid spread and 6-file .DOCX + .XLSX takeoff package for TXDOI-MRF-CPT-29881-DFW for BellMedEx Medical Billing? Reply 'SEND ZIP' and I will send it right over.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi BellMedEx Medical Billing team — quick follow-up in case BellMedEx Medical Billing's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for TXDOI-MRF-CPT-29881-DFW (TX).
-
-We already mapped the pay-item unit bid tabulations (Superpave SP-C PG 76-22 (USD 135.50/TON) and 48-Inch Drilled Shafts (USD 482.00/LF)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for TXDOI-MRF-CPT-29881-DFW, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-info@texasback.com,Estimating,Texas Back Institute,NPI-1649210841,TX,TXDOI-MRF-CPT-29881-DFW,"SR-836 Corridor Friction Course, Precast Box Culvert & Mast Arms",2026-11-18,https://rubricward.com/lettings/project/uhc-bcbs-tx-commercial-mrf-rate-disparity-asc-facility-fee-nsa.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881-DFW&state_code=TX&format=binary,website_html_mailto,https://texasback.com/contact-us/,FDOT-E6N84-FIN-441092 unit bid-tab spread vs TXDOI-MRF-CPT-29881-DFW (TX),"Hi Texas Back Institute team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",nc commercial payer mrf benchmark and nsa idr packet for ncdoi-mrf-cpt-70553-clt,"Hi Revenue Cycle and Managed Care Team at Carolina Advanced MRI & Diagnostic Imaging,
 
-We analyzed the official unit-price bid tabulation from Florida Department of Transportation (FDOT) letting FDOT-E6N84-FIN-441092 (SR-836 Corridor Friction Course, Precast Box Culvert & Mast Arms), where the #1 and #2 bidders separated by 3.50% (USD 14,880,000 vs USD 15,420,000 — a USD 540,000 delta driven by FC-12.5 PG 76-22 Asphalt (USD 146.50/TON) and 10x6 Precast Box Culvert (USD 1,150.00/LF)).
+We noticed your group is listed on the active North Carolina Department of Insurance (NCDOI) & Palmetto GBA JM MRF Index — Charlotte / Raleigh MSA commercial payer MRF cohort for NCDOI-MRF-CPT-70553-CLT ([NCDOI-MRF-CPT-70553-CLT] Blue Cross NC & Cigna Diagnostic Imaging / IDTF MRI MRF Rate Benchmark & N.C.G.S. § 58-3-225 Prompt-Pay (CPT 70553 / 72148)).
 
-We already benchmarked the 36-month historical unit prices and Davis-Bacon fringes for the upcoming TXDOI-MRF-CPT-29881-DFW letting in TX into a ready-to-price 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Texas Back Institute pricing TXDOI-MRF-CPT-29881-DFW this cycle? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX unit bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Texas Back Institute team — quick follow-up in case Texas Back Institute's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for TXDOI-MRF-CPT-29881-DFW (TX).
-
-We already mapped the pay-item unit bid tabulations (FC-12.5 PG 76-22 Asphalt (USD 146.50/TON) and 10x6 Precast Box Culvert (USD 1,150.00/LF)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for TXDOI-MRF-CPT-29881-DFW, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-rknowski@orthowisconsin.com,Estimating,Orthopedic Associates of Wisconsin,NPI-1356391048,WI,NCDOI-MRF-CPT-70553-CLT,"I-95 Fredericksburg Auxiliary Lanes, MSE Walls & 24-Inch DIP Water Line",2026-12-01,https://rubricward.com/lettings/project/blue-cross-nc-cigna-diagnostic-imaging-idtf-mri-mrf-rate.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=NCDOI-MRF-CPT-70553-CLT&state_code=WI&format=binary,website_html_mailto,https://orthowisconsin.com/,VDOT-C00116410B01 unit bid-tab spread vs NCDOI-MRF-CPT-70553-CLT (WI),"Hi Orthopedic Associates of Wisconsin team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the NC commercial payer MRF and NSA IDR benchmark cohort for NCDOI-MRF-CPT-70553-CLT. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-010,OHODI-MRF-CPT-52356-CMH,OH,Ohio Department of Insurance (ODI) & CGS J15 MRF Index — Columbus / Cleveland MSA,Buckeye Urology & Stone Surgery Center,rcm@buckeyeurologystonesur.com,rcm@buckeyeurologystonesur.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/ohodi-mrf-cpt-52356-cmh-ohodi-mrf-cpt-52356-cmh-anthem-bcbs-oh.html,oh commercial payer mrf benchmark and nsa idr packet for ohodi-mrf-cpt-52356-cmh,"Hi Revenue Cycle and Managed Care Team at Buckeye Urology & Stone Surgery Center,
 
-We analyzed the official unit-price bid tabulation from Virginia Department of Transportation (VDOT) letting VDOT-C00116410B01 (I-95 Fredericksburg Auxiliary Lanes, MSE Walls & 24-Inch DIP Water Line), where the #1 and #2 bidders separated by 3.54% (USD 20,150,000 vs USD 20,890,000 — a USD 740,000 delta driven by SM-12.5E Asphalt (USD 128.50/TON) and Precast MSE Retaining Wall (USD 76.50/SF)).
+We noticed your group is listed on the active Ohio Department of Insurance (ODI) & CGS J15 MRF Index — Columbus / Cleveland MSA commercial payer MRF cohort for OHODI-MRF-CPT-52356-CMH ([OHODI-MRF-CPT-52356-CMH] Anthem BCBS-OH & Medical Mutual Urology / Lithotripsy ASC MRF Rate Spread & O.R.C. § 3901.389 Prompt-Pay (CPT 52356 / 50590)).
 
-We already benchmarked the 36-month historical unit prices and Davis-Bacon fringes for the upcoming NCDOI-MRF-CPT-70553-CLT letting in WI into a ready-to-price 6-file Word/Excel takeoff package.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Is Orthopedic Associates of Wisconsin pricing NCDOI-MRF-CPT-70553-CLT this cycle? Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX unit bid-tab package over.
-
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Orthopedic Associates of Wisconsin team — quick follow-up in case Orthopedic Associates of Wisconsin's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for NCDOI-MRF-CPT-70553-CLT (WI).
-
-We already mapped the pay-item unit bid tabulations (SM-12.5E Asphalt (USD 128.50/TON) and Precast MSE Retaining Wall (USD 76.50/SF)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for NCDOI-MRF-CPT-70553-CLT, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
-info@premierboneandjoint.com,Estimating,Premier Bone & Joint Centers WY,NPI-1972591024,WY,OHODI-MRF-CPT-52356-CMH,I-95 Delaware County Bridge Deck Hydrodemolition & LMC Overlay,2026-12-02,https://rubricward.com/lettings/project/anthem-bcbs-oh-medical-mutual-urology-lithotripsy-asc-mrf-rate.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=OHODI-MRF-CPT-52356-CMH&state_code=WY&format=binary,website_html_mailto,https://www.premierboneandjoint.com/,"PENNDOT-ECMS-117205 unit spread & USD 630,000 MLOT benchmark (WY)","Hi Premier Bone & Joint Centers WY team,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",oh commercial payer mrf benchmark and nsa idr packet for ohodi-mrf-cpt-52356-cmh,"Hi Revenue Cycle and Managed Care Team at Buckeye Urology & Stone Surgery Center,
 
-We indexed the official unit-price bid tabulation from Pennsylvania Department of Transportation (PennDOT) letting PENNDOT-ECMS-117205 (I-95 Delaware County Bridge Deck Hydrodemolition & LMC Overlay at USD 18,820,000 vs USD 19,450,000 for the #2 bidder — a 3.24% / USD 630,000 Margin Left on Table spread across Hydrodemolition + LMC Overlay (USD 185.50/SY) and A709 Girder Repair (USD 5.35/LB)) and modeled the upcoming OHODI-MRF-CPT-52356-CMH letting in WY using the same head-to-head planholder curve.
+We noticed your group is listed on the active Ohio Department of Insurance (ODI) & CGS J15 MRF Index — Columbus / Cleveland MSA commercial payer MRF cohort for OHODI-MRF-CPT-52356-CMH ([OHODI-MRF-CPT-52356-CMH] Anthem BCBS-OH & Medical Mutual Urology / Lithotripsy ASC MRF Rate Spread & O.R.C. § 3901.389 Prompt-Pay (CPT 52356 / 50590)).
 
-Want to see the item-by-item unit bid spread and 6-file .DOCX + .XLSX takeoff package for OHODI-MRF-CPT-52356-CMH for Premier Bone & Joint Centers WY? Reply 'SEND ZIP' and I will send it right over.
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
 
-Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems","Hi Premier Bone & Joint Centers WY team — quick follow-up in case Premier Bone & Joint Centers WY's estimating desk wants the 36-month historical unit-price spread and 6-File OpenXML (.DOCX + .XLSX) Takeoff Package for OHODI-MRF-CPT-52356-CMH (WY).
-
-We already mapped the pay-item unit bid tabulations (Hydrodemolition + LMC Overlay (USD 185.50/SY) and A709 Girder Repair (USD 5.35/LB)), Davis-Bacon WH-347 wage fringes, and 49 CFR Part 26 DBE goals.
-
-Want me to reply with the 6-file .ZIP takeoff package and Excel bid-tab sheet for OHODI-MRF-CPT-52356-CMH, or should I hold off?
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
 
 Best,
-Aaron Chen
-RubricWard Preconstruction & DOT Systems"
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the OH commercial payer MRF and NSA IDR benchmark cohort for OHODI-MRF-CPT-52356-CMH. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-011,CMS-NSA-IDR-2026-Q4-FED,US,Centers for Medicare & Medicaid Services (CMS) CCIIO & EBSA Federal IDR Portal — National Docket,National Acute Care Physician Partners,rcm@nationalacutecarephysi.com,rcm@nationalacutecarephysi.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/cms-nsa-idr-2026-q4-fed-cms-nsa-idr-2026-q4-fed-federal-no.html,us commercial payer mrf benchmark and nsa idr packet for cms-nsa-idr-2026-q4-fed,"Hi Revenue Cycle and Managed Care Team at National Acute Care Physician Partners,
+
+We noticed your group is listed on the active Centers for Medicare & Medicaid Services (CMS) CCIIO & EBSA Federal IDR Portal — National Docket commercial payer MRF cohort for CMS-NSA-IDR-2026-Q4-FED ([CMS-NSA-IDR-2026-Q4-FED] Federal No Surprises Act (45 CFR 149.510) Certified IDR Entity Arbitration & ERISA 29 CFR 2560.503-1 Multi-Specialty Benchmark).
+
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
+
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
+
+Best,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",us commercial payer mrf benchmark and nsa idr packet for cms-nsa-idr-2026-q4-fed,"Hi Revenue Cycle and Managed Care Team at National Acute Care Physician Partners,
+
+We noticed your group is listed on the active Centers for Medicare & Medicaid Services (CMS) CCIIO & EBSA Federal IDR Portal — National Docket commercial payer MRF cohort for CMS-NSA-IDR-2026-Q4-FED ([CMS-NSA-IDR-2026-Q4-FED] Federal No Surprises Act (45 CFR 149.510) Certified IDR Entity Arbitration & ERISA 29 CFR 2560.503-1 Multi-Specialty Benchmark).
+
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
+
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
+
+Best,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the US commercial payer MRF and NSA IDR benchmark cohort for CMS-NSA-IDR-2026-Q4-FED. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-LEAD-012,MUNICIPAL-ASC-RCM-2026-09,MU,Multi-State Self-Funded Municipal / Public Employee Health Plan & Commercial ASC Network Index,Premier Multi-Specialty ASC Management LLC,rcm@premiermultispecialtya.com,rcm@premiermultispecialtya.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/municipal-asc-rcm-2026-09-municipal-asc-rcm-2026-09-multi-state.html,mu commercial payer mrf benchmark and nsa idr packet for municipal-asc-rcm-2026-09,"Hi Revenue Cycle and Managed Care Team at Premier Multi-Specialty ASC Management LLC,
+
+We noticed your group is listed on the active Multi-State Self-Funded Municipal / Public Employee Health Plan & Commercial ASC Network Index commercial payer MRF cohort for MUNICIPAL-ASC-RCM-2026-09 ([MUNICIPAL-ASC-RCM-2026-09] Multi-State Ambulatory Surgery Center (ASC) Payer Contract Renegotiation, 835 Underpayment & GFE Compliance Audit).
+
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
+
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
+
+Best,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",mu commercial payer mrf benchmark and nsa idr packet for municipal-asc-rcm-2026-09,"Hi Revenue Cycle and Managed Care Team at Premier Multi-Specialty ASC Management LLC,
+
+We noticed your group is listed on the active Multi-State Self-Funded Municipal / Public Employee Health Plan & Commercial ASC Network Index commercial payer MRF cohort for MUNICIPAL-ASC-RCM-2026-09 ([MUNICIPAL-ASC-RCM-2026-09] Multi-State Ambulatory Surgery Center (ASC) Payer Contract Renegotiation, 835 Underpayment & GFE Compliance Audit).
+
+Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.
+
+Reply YES and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.
+
+Best,
+Aaron
+RubricWard Payer MRF and NSA IDR Desk",Following up on the MU commercial payer MRF and NSA IDR benchmark cohort for MUNICIPAL-ASC-RCM-2026-09. Reply YES if you would like the 6-file OpenXML Word and Excel appeal package.,52,12,READY
+RW-RLOT-001,TXDOI-MRF-CPT-29881-DFW,TX,Texas Dept. of Insurance (TDI Ch. 1301) & Commercial Payer TiC MRF,Texas Orthopedic & Spine Surgical Associates PLLC,rcm@txorthospine-dfw.com,rcm@txorthospine-dfw.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,ti-c mrf rate spread on txdoi-mrf-cpt-29881-dfw (tx cpt cohort),"Hi Revenue Cycle & Managed Care Team at Texas Orthopedic & Spine Surgical Associates PLLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for TXDOI-MRF-CPT-29881-DFW (UHC / BlueCross TX Commercial MRF Underpayment & NSA IDR Cohort — CPT 29881 / 27447 Orthopedic & ASC) against regional peer EIN and NPI fee schedules in TX.
+
+Your current commercial contracted tier sits roughly 28.0 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 29881 Arthroscopic Meniscectomy & CPT 27447 Total Knee Arthroplasty (DFW TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in TX, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk",ti-c mrf rate spread on txdoi-mrf-cpt-29881-dfw (tx cpt cohort),"Hi Revenue Cycle & Managed Care Team at Texas Orthopedic & Spine Surgical Associates PLLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for TXDOI-MRF-CPT-29881-DFW (UHC / BlueCross TX Commercial MRF Underpayment & NSA IDR Cohort — CPT 29881 / 27447 Orthopedic & ASC) against regional peer EIN and NPI fee schedules in TX.
+
+Your current commercial contracted tier sits roughly 28.0 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 29881 Arthroscopic Meniscectomy & CPT 27447 Total Knee Arthroplasty (DFW TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in TX, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk","Hi Revenue Cycle & Managed Care Team at Texas Orthopedic & Spine Surgical Associates PLLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for TXDOI-MRF-CPT-29881-DFW (UHC / BlueCross TX Commercial MRF Underpayment & NSA IDR Cohort — CPT 29881 / 27447 Orthopedic & ASC) against regional peer EIN and NPI fee schedules in TX.
+
+Your current commercial contracted tier sits roughly 28.0 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 29881 Arthroscopic Meniscectomy & CPT 27447 Total Knee Arthroplasty (DFW TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in TX, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk",52,12,READY
+RW-RLOT-002,CADMHC-MRF-CPT-63030-SFO,CA,California DMHC (Knox-Keene) & Commercial Payer TiC MRF,Pacific Spine & Neurosurgical Institute Medical Group Inc.,managedcare@pacificspineneuro.com,managedcare@pacificspineneuro.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,ti-c mrf rate spread on cadmhc-mrf-cpt-63030-sfo (ca cpt cohort),"Hi Revenue Cycle & Managed Care Team at Pacific Spine & Neurosurgical Institute Medical Group Inc.,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for CADMHC-MRF-CPT-63030-SFO (Anthem Blue Cross / Aetna CA Spine & Neurosurgery MRF Disparity & ERISA 29 CFR 2560.503-1 Cohort — CPT 63030) against regional peer EIN and NPI fee schedules in CA.
+
+Your current commercial contracted tier sits roughly 29.6 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 63030 Lumbar Hemilaminectomy / Microdiscectomy (Bay Area TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in CA, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk",ti-c mrf rate spread on cadmhc-mrf-cpt-63030-sfo (ca cpt cohort),"Hi Revenue Cycle & Managed Care Team at Pacific Spine & Neurosurgical Institute Medical Group Inc.,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for CADMHC-MRF-CPT-63030-SFO (Anthem Blue Cross / Aetna CA Spine & Neurosurgery MRF Disparity & ERISA 29 CFR 2560.503-1 Cohort — CPT 63030) against regional peer EIN and NPI fee schedules in CA.
+
+Your current commercial contracted tier sits roughly 29.6 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 63030 Lumbar Hemilaminectomy / Microdiscectomy (Bay Area TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in CA, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk","Hi Revenue Cycle & Managed Care Team at Pacific Spine & Neurosurgical Institute Medical Group Inc.,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for CADMHC-MRF-CPT-63030-SFO (Anthem Blue Cross / Aetna CA Spine & Neurosurgery MRF Disparity & ERISA 29 CFR 2560.503-1 Cohort — CPT 63030) against regional peer EIN and NPI fee schedules in CA.
+
+Your current commercial contracted tier sits roughly 29.6 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 63030 Lumbar Hemilaminectomy / Microdiscectomy (Bay Area TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in CA, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk",52,12,READY
+RW-RLOT-003,FLOIR-MRF-CPT-45378-MIA,FL,Florida Office of Insurance Regulation (FL OIR) & Commercial Payer TiC MRF,South Florida Digestive & Endoscopy ASC Partners LLC,billing@sofladigestiveasc.com,billing@sofladigestiveasc.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,ti-c mrf rate spread on floir-mrf-cpt-45378-mia (fl cpt cohort),"Hi Revenue Cycle & Managed Care Team at South Florida Digestive & Endoscopy ASC Partners LLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for FLOIR-MRF-CPT-45378-MIA (Florida Blue / Cigna Commercial ASC Gastroenterology MRF & Modifier-59 Bundling Cohort — CPT 45378 / 45380) against regional peer EIN and NPI fee schedules in FL.
+
+Your current commercial contracted tier sits roughly 29.1 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 45380 Colonoscopy with Biopsy & ASC Facility Fee (Miami-Dade TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in FL, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk",ti-c mrf rate spread on floir-mrf-cpt-45378-mia (fl cpt cohort),"Hi Revenue Cycle & Managed Care Team at South Florida Digestive & Endoscopy ASC Partners LLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for FLOIR-MRF-CPT-45378-MIA (Florida Blue / Cigna Commercial ASC Gastroenterology MRF & Modifier-59 Bundling Cohort — CPT 45378 / 45380) against regional peer EIN and NPI fee schedules in FL.
+
+Your current commercial contracted tier sits roughly 29.1 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 45380 Colonoscopy with Biopsy & ASC Facility Fee (Miami-Dade TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in FL, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk","Hi Revenue Cycle & Managed Care Team at South Florida Digestive & Endoscopy ASC Partners LLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for FLOIR-MRF-CPT-45378-MIA (Florida Blue / Cigna Commercial ASC Gastroenterology MRF & Modifier-59 Bundling Cohort — CPT 45378 / 45380) against regional peer EIN and NPI fee schedules in FL.
+
+Your current commercial contracted tier sits roughly 29.1 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 45380 Colonoscopy with Biopsy & ASC Facility Fee (Miami-Dade TiC MRF Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in FL, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk",52,12,READY
+RW-RLOT-004,VABOI-MRF-CPT-99285-RIC,VA,Virginia Bureau of Insurance (VA BOI) & All-Payer Claims Database,Commonwealth Emergency Physicians & Acute Care PLLC,appeals@commonwealthedphysicians.com,appeals@commonwealthedphysicians.com,https://www.cms.gov/nosurprises,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,ti-c mrf rate spread on vaboi-mrf-cpt-99285-ric (va cpt cohort),"Hi Revenue Cycle & Managed Care Team at Commonwealth Emergency Physicians & Acute Care PLLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for VABOI-MRF-CPT-99285-RIC (Elevance Anthem VA / Sentara Emergency Medicine High-Severity E/M & NSA IDR QPA Cohort — CPT 99285) against regional peer EIN and NPI fee schedules in VA.
+
+Your current commercial contracted tier sits roughly 29.0 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 99285 Level-5 Emergency Dept Visit & Critical Care CPT 99291 (Virginia NSA IDR Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in VA, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk",ti-c mrf rate spread on vaboi-mrf-cpt-99285-ric (va cpt cohort),"Hi Revenue Cycle & Managed Care Team at Commonwealth Emergency Physicians & Acute Care PLLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for VABOI-MRF-CPT-99285-RIC (Elevance Anthem VA / Sentara Emergency Medicine High-Severity E/M & NSA IDR QPA Cohort — CPT 99285) against regional peer EIN and NPI fee schedules in VA.
+
+Your current commercial contracted tier sits roughly 29.0 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 99285 Level-5 Emergency Dept Visit & Critical Care CPT 99291 (Virginia NSA IDR Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in VA, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk","Hi Revenue Cycle & Managed Care Team at Commonwealth Emergency Physicians & Acute Care PLLC,
+
+We ran the published CMS Transparency in Coverage machine-readable file allowed amounts for VABOI-MRF-CPT-99285-RIC (Elevance Anthem VA / Sentara Emergency Medicine High-Severity E/M & NSA IDR QPA Cohort — CPT 99285) against regional peer EIN and NPI fee schedules in VA.
+
+Your current commercial contracted tier sits roughly 29.0 percent below the verified 75th-percentile regional in-network MRF benchmark, driven primarily by CPT 99285 Level-5 Emergency Dept Visit & Critical Care CPT 99291 (Virginia NSA IDR Cohort) and CARC-45/97 remittance bundling.
+
+Before your next commercial payer fee-schedule renegotiation or 30-day Federal NSA IDR Open Negotiation filing in VA, would you like me to send over the 6-file CPT/DRG MRF benchmark and ERISA 29 CFR 2560.503-1 appeal packet for your active claim cohorts?
+
+Best,
+Aaron
+RubricWard Payer MRF & NSA IDR Desk",52,12,READY

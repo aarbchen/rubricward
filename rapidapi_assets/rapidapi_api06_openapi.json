@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "DOT DBE 49 CFR Part 26 Subcontractor & Good Faith Effort Generator API",
+    "title": "Federal No Surprises Act NSA 45 CFR 149.510 Open Negotiation & IDR API",
     "version": "1.0.0",
-    "description": "Calculate certified DBE/MBE/WBE participation credit (100% subcontractor vs. 60% regular dealer) and generate audit-proof 49 CFR Part 26 Good Faith Effort logs."
+    "description": "Generate statutory 30-business-day Open Negotiation Notices, verify QPA deflation anomalies, and compile Federal No Surprises Act (45 CFR 149.510) IDR arbitration briefs."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/generate/dbe-good-faith-effort": {
       "post": {
-        "summary": "Generate DOT DBE Participation & Good Faith Effort Log",
-        "description": "Calculate certified DBE/MBE/WBE participation credit (100% subcontractor vs. 60% regular dealer) and generate audit-proof 49 CFR Part 26 Good Faith Effort logs.",
-        "operationId": "generateDbeGoodFaithEffort",
+        "summary": "Generate Federal NSA 45 CFR 149.510 IDR Arbitration Brief",
+        "description": "Generate statutory 30-business-day Open Negotiation Notices, verify QPA deflation anomalies, and compile Federal No Surprises Act (45 CFR 149.510) IDR arbitration briefs.",
+        "operationId": "generateNsaIdrArbitrationBrief",
         "requestBody": {
           "required": true,
           "content": {
@@ -23,63 +23,39 @@
               "schema": {
                 "type": "object",
                 "required": [
-                  "project_name",
-                  "total_base_bid_usd",
-                  "dbe_goal_percent",
-                  "proposed_dbe_commitments"
+                  "project_id",
+                  "total_bid_amount_usd",
+                  "dbe_goal_pct"
                 ],
                 "properties": {
-                  "project_name": {
+                  "project_id": {
                     "type": "string",
-                    "description": "DOT or municipal project name.",
-                    "default": "FDOT SR-826 Reconstruction"
+                    "description": "NSA IDR Dispute Case ID.",
+                    "default": "CMS-NSA-IDR-CPT-63047-NAT"
                   },
-                  "total_base_bid_usd": {
+                  "total_bid_amount_usd": {
                     "type": "number",
-                    "description": "Total prime contractor base bid in USD.",
-                    "default": 14850000
+                    "description": "Total target 75th-percentile commercial MRF arbitration offer across disputed claim cohort (USD).",
+                    "default": 1420000
                   },
-                  "dbe_goal_percent": {
+                  "dbe_goal_pct": {
                     "type": "number",
-                    "description": "Mandatory DBE goal percentage (e.g., 11.5).",
-                    "default": 11.5
-                  },
-                  "proposed_dbe_commitments": {
-                    "type": "array",
-                    "description": "List of DBE firms, role (Subcontractor/Regular Dealer), and quote_amount_usd.",
-                    "items": {
-                      "type": "object"
-                    }
+                    "description": "Target commercial reimbursement as a percentage of CMS Medicare fee schedule (e.g., 215.0).",
+                    "default": 215.0
                   }
                 }
               },
               "example": {
-                "project_name": "FDOT SR-826 Palmetto Expressway Interchange Reconstruction",
-                "total_base_bid_usd": 14850000,
-                "dbe_goal_percent": 11.5,
-                "proposed_dbe_commitments": [
-                  {
-                    "firm_name": "Sunshine Barricade & MOT LLC",
-                    "certification": "FDOT DBE",
-                    "role": "Subcontractor",
-                    "work_scope": "Maintenance of Traffic & Pavement Markings",
-                    "quote_amount_usd": 1180000
-                  },
-                  {
-                    "firm_name": "Gulfstream Aggregate Supply Inc.",
-                    "certification": "FDOT DBE",
-                    "role": "Regular Dealer",
-                    "work_scope": "Limestone Base & Pipe Bedding",
-                    "quote_amount_usd": 920000
-                  }
-                ]
+                "project_id": "CMS-NSA-IDR-CPT-63047-NAT",
+                "total_bid_amount_usd": 1420000,
+                "dbe_goal_pct": 215.0
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

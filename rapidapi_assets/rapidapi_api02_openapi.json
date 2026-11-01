@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "50-State DOT Historical Item Bid Tabulation & Spread Modeler API",
+    "title": "50-State Commercial Payer TiC MRF Allowed-Amount & QPA Rate Modeler API",
     "version": "1.0.0",
-    "description": "Model 50-State DOT historical unit-price bid tabulations ($/Ton, $/LF, $/CY), low/median/high bidder spreads, and recommended unit bid prices."
+    "description": "Model 50-State CMS Transparency in Coverage (TiC 45 CFR 147.212) machine-readable file 25th, 50th (Median QPA), and 75th-percentile commercial allowed amounts by CPT/DRG."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/model/dot-unit-bid-tabs": {
       "post": {
-        "summary": "Model DOT Historical Unit Bid Tabulations",
-        "description": "Model 50-State DOT historical unit-price bid tabulations ($/Ton, $/LF, $/CY), low/median/high bidder spreads, and recommended unit bid prices.",
-        "operationId": "modelDotUnitBidTabs",
+        "summary": "Model 50-State Commercial Payer TiC MRF Allowed Amounts",
+        "description": "Model 50-State CMS Transparency in Coverage (TiC 45 CFR 147.212) machine-readable file 25th, 50th (Median QPA), and 75th-percentile commercial allowed amounts by CPT/DRG.",
+        "operationId": "modelCommercialPayerTicMrf",
         "requestBody": {
           "required": true,
           "content": {
@@ -24,58 +24,45 @@
                 "type": "object",
                 "required": [
                   "state_code",
-                  "pay_items"
+                  "pay_item_description",
+                  "unit",
+                  "quantity"
                 ],
                 "properties": {
                   "state_code": {
                     "type": "string",
-                    "description": "Two-letter U.S. state postal code (e.g., TX, CA, FL, PA).",
+                    "description": "Two-letter U.S. state postal code (e.g., TX, CA, FL, PA, NY).",
                     "default": "TX"
                   },
-                  "dot_agency": {
+                  "pay_item_description": {
                     "type": "string",
-                    "description": "State DOT agency identifier (e.g., TxDOT, Caltrans, FDOT, PennDOT).",
-                    "default": "TxDOT"
+                    "description": "CPT, HCPCS, APC, or MS-DRG procedure code and clinical description.",
+                    "default": "CPT 29881 \u2014 Knee Arthroscopy & Meniscectomy"
                   },
-                  "letting_quarter": {
+                  "unit": {
                     "type": "string",
-                    "description": "Target letting quarter for inflation adjustment.",
-                    "default": "2026-Q4"
+                    "description": "Billing unit of measure (CLAIM, CASE, UNIT, RVU, DRG).",
+                    "default": "CLAIM"
                   },
-                  "pay_items": {
-                    "type": "array",
-                    "description": "Array of DOT pay items with item_code, description, unit, and quantity.",
-                    "items": {
-                      "type": "object"
-                    }
+                  "quantity": {
+                    "type": "number",
+                    "description": "Annual or disputed cohort claim volume for the procedure.",
+                    "default": 420
                   }
                 }
               },
               "example": {
                 "state_code": "TX",
-                "dot_agency": "TxDOT",
-                "letting_quarter": "2026-Q4",
-                "pay_items": [
-                  {
-                    "item_code": "3076-6001",
-                    "description": "Dense-Graded Hot-Mix Asphalt (Superpave)",
-                    "unit": "TON",
-                    "quantity": 18500
-                  },
-                  {
-                    "item_code": "0464-6008",
-                    "description": "Reinforced Concrete Pipe (Class III 36-Inch)",
-                    "unit": "LF",
-                    "quantity": 2400
-                  }
-                ]
+                "pay_item_description": "CPT 29881 \u2014 Arthroscopy, Knee, Surgical; with Meniscectomy (Medial OR Lateral)",
+                "unit": "CLAIM",
+                "quantity": 420
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {

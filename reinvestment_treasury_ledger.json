@@ -40,9 +40,9 @@
       "domain": "tryrubricward.com",
       "first_name": "Aaron",
       "last_name": "Chen | RubricWard",
-      "avatar_logo_path": "d:\\RubricWard\\rubricward_mailbox_avatar_500.png",
+      "avatar_logo_path": "D:\\RubricWard\\rubricward_mailbox_avatar_500.png",
       "bimi_svg_url": "https://rubricward.com/bimi-logo.svg",
-      "avatar_applied": true,
+      "avatar_applied": false,
       "created_in_workspace": true,
       "queued_in_instantly": true,
       "warmup_enabled": true
@@ -64,15 +64,26 @@
       "domain": "tryrubricward.com",
       "first_name": "Aaron Chen",
       "last_name": "RubricWard Precon Desk",
-      "avatar_logo_path": "d:\\RubricWard\\rubricward_mailbox_avatar_500.png",
+      "avatar_logo_path": "D:\\RubricWard\\rubricward_mailbox_avatar_500.png",
       "bimi_svg_url": "https://rubricward.com/bimi-logo.svg",
-      "avatar_applied": true,
+      "avatar_applied": false,
       "created_in_workspace": true,
       "queued_in_instantly": true,
       "warmup_enabled": true
+    },
+    {
+      "email": "rates@tryrubricward.com",
+      "domain": "tryrubricward.com",
+      "first_name": "Aaron",
+      "last_name": "RubricWard Rates",
+      "created_in_workspace": true,
+      "queued_in_instantly": true,
+      "warmup_enabled": true,
+      "avatar_applied": false,
+      "avatar_logo_path": "D:\\RubricWard\\rubricward_mailbox_avatar_500.png"
     }
   ],
   "staged_provisioning_queue": [],
-  "updated_at": "2026-11-01T16:04:59Z",
+  "updated_at": "2026-11-01T17:48:16Z",
   "reinvestment_stage": "Stage 1: Ignition (80% Reinvestment \u2014 3 to 36 Mailboxes)"
 }

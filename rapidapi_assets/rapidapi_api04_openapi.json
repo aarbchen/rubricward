@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.3",
   "info": {
-    "title": "52-Portal Live State DOT Lettings, USACE & Public Works Feed API",
+    "title": "52-Portal Live Commercial Payer MRF Rate Disparities & NSA IDR Feed API",
     "version": "1.0.0",
-    "description": "Stream AI-vetted heavy-civil, highway, bridge, water/sewer, and commercial construction lettings across all 50 State DOTs, USACE, and Municipal portals."
+    "description": "Stream pre-vetted commercial payer TiC MRF rate-disparity cohorts, ERISA claim underpayments, and Federal No Surprises Act (NSA) IDR arbitration cases across 52 portals."
   },
   "servers": [
     {
@@ -13,9 +13,9 @@
   "paths": {
     "/v1/lettings/live": {
       "get": {
-        "summary": "Get Live 50-State DOT & Public Works Lettings",
-        "description": "Stream AI-vetted heavy-civil, highway, bridge, water/sewer, and commercial construction lettings across all 50 State DOTs, USACE, and Municipal portals.",
-        "operationId": "getLiveDotLettings",
+        "summary": "Get Live 52-Portal Commercial Payer MRF & NSA IDR Cohorts",
+        "description": "Stream pre-vetted commercial payer TiC MRF rate-disparity cohorts, ERISA claim underpayments, and Federal No Surprises Act (NSA) IDR arbitration cases across 52 portals.",
+        "operationId": "getLiveCommercialPayerMrfCohorts",
         "parameters": [
           {
             "name": "state",
@@ -31,7 +31,7 @@
             "name": "limit",
             "in": "query",
             "required": false,
-            "description": "Maximum number of lettings to return (1-50).",
+            "description": "Maximum number of payer MRF & IDR cohorts to return (1-50).",
             "schema": {
               "type": "integer",
               "default": 10
@@ -40,7 +40,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Successful structured preconstruction JSON response",
+            "description": "Successful structured healthcare payer MRF & IDR JSON response",
             "content": {
               "application/json": {
                 "schema": {
