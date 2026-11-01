@@ -618,10 +618,24 @@ def check_product_output_quality_controls() -> List[str]:
             "GA": "Georgia Prompt-Pay Act O.C.G.A. § 33-24-59.14",
             "NC": "North Carolina Gen. Stat. § 58-3-225",
             "OH": "Ohio Revised Code § 3901.389",
+            "WA": "Washington RCW 48.49",
+            "MA": "Massachusetts M.G.L. c. 176G § 6",
+            "CO": "Colorado Revised Statutes § 10-16-106.5",
+            "AZ": "Arizona Revised Statutes § 20-3102",
+            "MN": "Minnesota Statutes § 62Q.75",
+            "AK": "Alaska Statutes AS 21.36.495",
+            "HI": "Hawaii Revised Statutes § 431:13-108",
+            "WY": "Wyoming Statutes § 26-15-124",
             "US": "Federal No Surprises Act 42 U.S.C. § 300gg-111",
             "MU": "Multi-Payer ERISA 29 CFR § 2560.503-1",
         }
         forbidden_fake_names = ("Apex Civil", "Granite State Paving", "Acme Corp", "Sample LLC")
+
+        samples_dir = os.path.join(BASE_DIR, "samples")
+        for st_code in [c for c in FIFTY_TWO_PORTAL_CODES if len(c) == 2]:
+            st_zip = os.path.join(samples_dir, f"RubricWard_{st_code}_6File_Bid_Package.zip")
+            if not os.path.exists(st_zip) or os.path.getsize(st_zip) < 1000:
+                errors.append(f"Missing or empty pre-compiled state .ZIP package on disk: {st_zip}")
 
         for state_code, expected_statute in expected_statutes.items():
             custom_pid = f"{state_code}-DOT-2026-TEST"
