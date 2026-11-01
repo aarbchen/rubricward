@@ -18,12 +18,12 @@ Executes a closed-loop, self-funding outbound scaling flywheel for RubricWard:
        • Root `@` & `www` proxied `A` records + Cloudflare Single Redirect Ruleset (`301 -> https://rubricward.com`)
   3. 3 Mailboxes per Domain + RubricWard Avatar Photo Branding:
      - Uses `D:\RubricWard\apple-touch-icon.png` (500x500 PNG Compass Quadrant Lock logo).
-     - Creates 3 mailboxes per shard domain (`aaron@<domain>`, `estimating@<domain>`, `desk@<domain>`) via
+     - Creates 3 mailboxes per shard domain (`aaron@<domain>`, `rates@<domain>`, `desk@<domain>`) via
        Google Workspace Admin SDK Directory API (`POST /admin/directory/v1/users`) or stages them.
   4. Instantly.ai V2 Auto-Queue, Warmup Enable & Campaign Expansion:
      - Registers each new RubricWard mailbox (`*rubricward*`) in Instantly (`POST /api/v2/accounts`),
        enables automated warmup (`POST /api/v2/accounts/warmup/enable`), and attaches active RubricWard
-       mailboxes to Campaign `e69941d4-b5c0-45a7-ac67-ae8947761d4b` while scaling `daily_limit`
+       mailboxes to Campaign `672de7d4-7ff6-42ec-be56-9b6ce8519e8c` while scaling `daily_limit`
        (`30 * active_rubricward_mailboxes`).
 """
 
@@ -51,7 +51,7 @@ BIMI_SVG_URL = "https://rubricward.com/bimi-logo.svg"
 DISCORD_WEBHOOK_URL = (os.getenv("RUBRICWARD_DISCORD_WEBHOOK_URL") or "").strip()
 INSTANTLY_API_KEY = (os.getenv("INSTANTLY_API_KEY") or "").strip()
 RUBRICWARD_INSTANTLY_CAMPAIGN_ID = (
-    os.getenv("RUBRICWARD_INSTANTLY_CAMPAIGN_ID") or "e69941d4-b5c0-45a7-ac67-ae8947761d4b"
+    os.getenv("RUBRICWARD_INSTANTLY_CAMPAIGN_ID") or "672de7d4-7ff6-42ec-be56-9b6ce8519e8c"
 ).strip()
 
 CLOUDFLARE_API_TOKEN = (os.getenv("CLOUDFLARE_API_TOKEN") or "").strip()
@@ -62,9 +62,11 @@ PORKBUN_SECRET_KEY = (os.getenv("PORKBUN_SECRET_KEY") or "").strip()
 GOOGLE_WORKSPACE_ADMIN_TOKEN = (os.getenv("GOOGLE_WORKSPACE_ADMIN_TOKEN") or "").strip()
 
 REINVESTMENT_RATIO = float(os.getenv("REINVESTMENT_RATIO") or "0.80")
-COST_PER_SENDING_POD_USD = float(os.getenv("COST_PER_SENDING_POD_USD") or "21.00")
+COST_PER_SENDING_POD_USD = float(os.getenv("COST_PER_SENDING_POD_USD") or "30.00")  # Instantly DFY: $15/yr .com domain + 3 x $5/mo Google Workspace mailboxes = $30.00 zero-touch order
 MAILBOXES_PER_DOMAIN = 3
 SENDS_PER_MAILBOX_PER_DAY = 30
+PRIMARY_FORWARDING_DOMAIN = "rubricward.com"
+STRIPE_ACCOUNT_ID = (os.getenv("STRIPE_ACCOUNT_ID") or "acct_1TGr7p2L55s667bb").strip()
 
 
 def compute_dynamic_reinvestment_ratio(active_mailbox_count: int = 3) -> Tuple[float, str]:
@@ -96,15 +98,15 @@ SHARD_DOMAIN_CANDIDATES = [
     "tryrubricward.com",
     "getrubricward.com",
     "rubricwardwire.com",
-    "rubricwardbids.com",
+    "rubricwardrates.com",
     "userubricward.com",
     "gorubricward.com",
     "withrubricward.com",
     "meetrubricward.com",
-    "rubricwarddot.com",
-    "rubricwardestimating.com",
-    "rubricwardcivil.com",
-    "rubricwardtakeoff.com",
+    "rubricwardmrf.com",
+    "rubricwardrates.com",
+    "rubricwardidr.com",
+    "rubricwardclaims.com",
     "rubricwardhq.com",
     "rubricwardalerts.com",
     "rubricwardpro.com",
@@ -121,8 +123,8 @@ SHARD_DOMAIN_CANDIDATES = [
 
 MAILBOX_PERSONAS = [
     {"local_part": "aaron", "first_name": "Aaron", "last_name": "Chen | RubricWard"},
-    {"local_part": "estimating", "first_name": "Aaron", "last_name": "RubricWard Estimating"},
-    {"local_part": "desk", "first_name": "Aaron Chen", "last_name": "RubricWard Precon Desk"},
+    {"local_part": "rates", "first_name": "Aaron", "last_name": "RubricWard Rates"},
+    {"local_part": "desk", "first_name": "Aaron Chen", "last_name": "RubricWard MRF Desk"},
 ]
 
 
@@ -209,14 +211,137 @@ def check_domain_availability_rdap(domain: str) -> bool:
         return False
 
 
+def check_instantly_dfy_domain_availability(domains: List[str]) -> Dict[str, bool]:
+    clean_list = [d.strip().lower() for d in domains if d and d.strip().lower().endswith(".com")]
+    if not clean_list or not INSTANTLY_API_KEY:
+        return {}
+    try:
+        resp = requests.post(
+            "https://api.instantly.ai/api/v2/dfy-email-account-orders/domains/check",
+            headers={
+                "Authorization": f"Bearer {INSTANTLY_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json={"domains": clean_list},
+            timeout=15,
+        )
+        if resp.status_code == 200:
+            results = (resp.json() or {}).get("results") or []
+            return {
+                str(r.get("domain") or "").strip().lower(): bool(r.get("available"))
+                for r in results
+                if isinstance(r, dict) and r.get("domain")
+            }
+    except Exception:
+        pass
+    return {}
+
+
+def order_instantly_dfy_sending_pod(
+    domain: str,
+    personas: List[Dict[str, str]],
+    forwarding_domain: str = PRIMARY_FORWARDING_DOMAIN,
+    simulation: bool = True,
+) -> Dict[str, Any]:
+    """
+    Zero-Touch Autonomous Domain & 3-Mailbox Provisioning via Instantly.ai V2 DFY API
+    (`POST https://api.instantly.ai/api/v2/dfy-email-account-orders`).
+    Automatically purchases the `.com` shard domain ($15/yr), provisions 3 Google Workspace
+    mailboxes (`email_provider: 1`, $5/mo x 3 = $15/mo, total $30.00), configures MX/SPF/DKIM/DMARC
+    and 301 forwarding to `forwarding_domain`, connects all 3 accounts into Instantly, and
+    enables automated warmup — with zero human clicks or SMS prompts.
+    """
+    clean_dom = domain.strip().lower()
+    result: Dict[str, Any] = {
+        "domain": clean_dom,
+        "forwarding_domain": forwarding_domain,
+        "email_provider": "google_workspace_dfy",
+        "simulation": simulation,
+        "order_is_valid": False,
+        "order_placed": False,
+        "total_price_usd": COST_PER_SENDING_POD_USD,
+        "mailboxes_ordered": [f"{p['local_part']}@{clean_dom}" for p in personas],
+        "status": "skipped_missing_instantly_key",
+    }
+    if not INSTANTLY_API_KEY:
+        return result
+    if not is_valid_rubricward_shard_domain(clean_dom):
+        result["status"] = "rejected_non_rubricward_domain"
+        return result
+
+    dfy_accounts = []
+    for p in personas:
+        first_clean = str(p.get("first_name") or "Aaron").split()[0].strip()
+        dfy_accounts.append(
+            {
+                "first_name": first_clean or "Aaron",
+                "last_name": "Chen",
+                "email_address_prefix": str(p.get("local_part") or "aaron").strip().lower(),
+            }
+        )
+
+    payload = {
+        "items": [
+            {
+                "domain": clean_dom,
+                "email_provider": 1,
+                "forwarding_domain": forwarding_domain,
+                "accounts": dfy_accounts,
+            }
+        ],
+        "order_type": "dfy",
+        "simulation": bool(simulation),
+    }
+    try:
+        resp = requests.post(
+            "https://api.instantly.ai/api/v2/dfy-email-account-orders",
+            headers={
+                "Authorization": f"Bearer {INSTANTLY_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+            timeout=25,
+        )
+        data = resp.json() if resp.content else {}
+        if resp.status_code in (200, 201) and isinstance(data, dict):
+            result["order_is_valid"] = bool(data.get("order_is_valid"))
+            result["order_placed"] = bool(data.get("order_placed"))
+            result["total_price_usd"] = float(data.get("total_price") or COST_PER_SENDING_POD_USD)
+            result["payment_method_last_4"] = str(data.get("payment_method_last_4_digits") or "")
+            result["raw_response"] = data
+            if result["order_placed"]:
+                result["status"] = "dfy_order_placed_live"
+            elif result["order_is_valid"] and simulation:
+                result["status"] = "dfy_simulation_valid"
+            else:
+                result["status"] = "dfy_order_validation_failed"
+        else:
+            result["status"] = f"dfy_http_{resp.status_code}"
+            result["error"] = str(data)[:300]
+    except Exception as exc:
+        result["status"] = "dfy_request_exception"
+        result["error"] = str(exc)
+        report_error("autonomous_mailbox_scaler.py", f"Instantly DFY order warning for {clean_dom}: {exc}", severity="WARNING")
+    return result
+
+
 def discover_available_shard_domains(existing_domains: set[str], count_needed: int = 5) -> List[str]:
     available: List[str] = []
+    rdap_candidates: List[str] = []
     for cand in SHARD_DOMAIN_CANDIDATES:
         cand_clean = cand.strip().lower()
         if cand_clean in existing_domains or not is_valid_rubricward_shard_domain(cand_clean):
             continue
         if check_domain_availability_rdap(cand_clean):
-            available.append(cand_clean)
+            rdap_candidates.append(cand_clean)
+            if len(rdap_candidates) >= count_needed * 2:
+                break
+    if not rdap_candidates:
+        return []
+    dfy_map = check_instantly_dfy_domain_availability(rdap_candidates)
+    for dom in rdap_candidates:
+        if dfy_map.get(dom, True):
+            available.append(dom)
             if len(available) >= count_needed:
                 break
     return available
@@ -627,7 +752,7 @@ def sync_live_rubricward_stripe_conversions(ledger: Dict[str, Any]) -> int:
     to detect paid RubricWard subscriptions (`client_reference_id` starting with `rubricward`,
     `metadata.brand == 'RubricWard'`, or `success_url` containing `rubricward.com`), credit
     `reinvestment_treasury_ledger.json` using the 3-Stage `80% -> 50% -> 5%` curve, and dispatch
-    an instant `cd_live_...` API key + welcome onboarding email to the buyer.
+    an instant `rw_live_...` API key + welcome onboarding email to the buyer.
     """
     stripe_key = (os.getenv("STRIPE_SECRET_KEY") or os.getenv("STRIPE_API_KEY") or "").strip()
     if not stripe_key:
@@ -636,10 +761,17 @@ def sync_live_rubricward_stripe_conversions(ledger: Dict[str, Any]) -> int:
     credited = set(ledger.get("credited_conversion_keys") or [])
     new_conversions = 0
     try:
+        stripe_headers = {
+            "Authorization": f"Bearer {stripe_key}",
+            "Stripe-Livemode": "true",
+            "Stripe-Version": "2025-06-30.basil",
+        }
+        if STRIPE_ACCOUNT_ID:
+            stripe_headers["Stripe-Account"] = STRIPE_ACCOUNT_ID
         resp = requests.get(
             "https://api.stripe.com/v1/checkout/sessions",
             params={"limit": 50},
-            auth=(stripe_key, ""),
+            headers=stripe_headers,
             timeout=12,
         )
         if resp.status_code != 200:
@@ -698,14 +830,14 @@ def sync_live_rubricward_stripe_conversions(ledger: Dict[str, Any]) -> int:
                 try:
                     import hashlib
                     import outbound_mailer
-                    derived_key = "cd_live_" + hashlib.sha256(f"rubricward_sub_{cust_email}".encode("utf-8")).hexdigest()[:24]
+                    derived_key = "rw_live_" + hashlib.sha256(f"rubricward_sub_{cust_email}".encode("utf-8")).hexdigest()[:24]
                     tier_str = str(meta.get("tier") or client_ref or "tier_2")
-                    subj = "Welcome to RubricWard — Your 50-State DOT Letting & 6-File .ZIP API Key"
+                    subj = "Welcome to RubricWard — Your 50-State Payer MRF & NSA IDR Packet API Key"
                     body = (
                         f"Hi team,\n\n"
                         f"Your RubricWard subscription ({tier_str} — ${amount_usd:,.2f}) is now active.\n\n"
                         f"• Portal & Account Workbench: https://rubricward.com/#account\n"
-                        f"• Live 50-State DOT Lettings: https://rubricward.com/#lettings\n"
+                        f"• Live 50-State Payer MRF & IDR Packets: https://rubricward.com/#packets\n"
                         f"• Production API & MCP Key: {derived_key}\n"
                         f"• Remote MCP Server Endpoint: https://rubricward.com/mcp\n\n"
                         f"Best,\nAaron Chen\nRubricWard Systems\nhttps://rubricward.com"
@@ -760,8 +892,9 @@ def run_autonomous_mailbox_scaler(
 ) -> Dict[str, Any]:
     ensure_rubricward_avatar_png()
     ledger = _load_local_ledger()
+    newly_synced = 0
     if not dry_run:
-        sync_live_rubricward_stripe_conversions(ledger)
+        newly_synced = sync_live_rubricward_stripe_conversions(ledger)
     active_mb_count = len(ledger.get("provisioned_mailboxes") or []) or 3
     active_ratio, stage_label = compute_dynamic_reinvestment_ratio(active_mb_count)
     ledger["reinvestment_ratio"] = active_ratio
@@ -780,8 +913,12 @@ def run_autonomous_mailbox_scaler(
         for d in (ledger.get("provisioned_domains") or [])
         if isinstance(d, dict) and d.get("domain")
     }
+    _, warmed_list, warming_list = fetch_live_rubricward_instantly_accounts()
+    for em in warmed_list + warming_list:
+        if "@" in em:
+            existing_domains.add(em.split("@", 1)[1].strip().lower())
 
-    # Check if any RubricWard shard domains (like tryrubricward.com) already exist in Cloudflare
+    cf_existing_shard_domains: set[str] = set()
     if CLOUDFLARE_API_TOKEN:
         try:
             r_cf = requests.get(
@@ -793,7 +930,7 @@ def run_autonomous_mailbox_scaler(
                 for z in (r_cf.json() or {}).get("result") or []:
                     zname = str(z.get("name") or "").strip().lower()
                     if is_valid_rubricward_shard_domain(zname):
-                        provision_domain = provision_domain or zname
+                        cf_existing_shard_domains.add(zname)
         except Exception:
             pass
 
@@ -802,14 +939,31 @@ def run_autonomous_mailbox_scaler(
 
     if provision_domain and is_valid_rubricward_shard_domain(provision_domain):
         target_domains.append(provision_domain.strip().lower())
-    elif pods_affordable > 0:
-        target_domains = discover_available_shard_domains(existing_domains, count_needed=min(pods_affordable, 5))
+    for cf_dom in sorted(cf_existing_shard_domains):
+        if cf_dom not in existing_domains and cf_dom not in target_domains:
+            target_domains.append(cf_dom)
+    if pods_affordable > 0:
+        discovered = discover_available_shard_domains(
+            existing_domains | cf_existing_shard_domains | set(target_domains),
+            count_needed=min(pods_affordable, 5 if dry_run else 1),
+        )
+        for d_cand in discovered:
+            if d_cand not in target_domains:
+                target_domains.append(d_cand)
 
     for dom in target_domains:
+        is_new_unregistered = dom not in cf_existing_shard_domains and dom not in existing_domains
         if dry_run:
+            dfy_sim = order_instantly_dfy_sending_pod(
+                domain=dom,
+                personas=MAILBOX_PERSONAS,
+                forwarding_domain=PRIMARY_FORWARDING_DOMAIN,
+                simulation=True,
+            ) if is_new_unregistered else {"status": "already_in_cloudflare", "order_is_valid": True}
             new_pods_created.append({
                 "domain": dom,
                 "rdap_available": check_domain_availability_rdap(dom),
+                "instantly_dfy_simulation": dfy_sim,
                 "mailboxes": [f"{p['local_part']}@{dom}" for p in MAILBOX_PERSONAS],
                 "bimi_logo": BIMI_SVG_URL,
                 "pod_cost_usd": COST_PER_SENDING_POD_USD,
@@ -818,10 +972,26 @@ def run_autonomous_mailbox_scaler(
             })
             continue
 
+        dfy_live: Dict[str, Any] = {}
+        if is_new_unregistered and pods_affordable > 0:
+            dfy_live = order_instantly_dfy_sending_pod(
+                domain=dom,
+                personas=MAILBOX_PERSONAS,
+                forwarding_domain=PRIMARY_FORWARDING_DOMAIN,
+                simulation=False,
+            )
+
         cf_res = provision_cloudflare_domain_and_dns(dom)
         mb_res = provision_mailboxes_and_apply_logo(dom)
+        if dfy_live.get("order_placed"):
+            for mb_item in mb_res:
+                mb_item["created_in_workspace"] = True
+                mb_item["queued_in_instantly"] = True
+                mb_item["warmup_enabled"] = True
+
         pod_record = {
             "domain": dom,
+            "instantly_dfy_order": dfy_live,
             "cloudflare": cf_res,
             "mailboxes": mb_res,
             "pod_cost_usd": COST_PER_SENDING_POD_USD,
@@ -830,10 +1000,21 @@ def run_autonomous_mailbox_scaler(
         }
         new_pods_created.append(pod_record)
 
-        if cf_res.get("registered") and cf_res.get("zone_id"):
+        if dfy_live.get("order_placed") or (cf_res.get("registered") and cf_res.get("zone_id")):
             if dom not in existing_domains:
-                ledger.setdefault("provisioned_domains", []).append(cf_res)
+                ledger.setdefault("provisioned_domains", []).append(
+                    dfy_live if dfy_live.get("order_placed") else cf_res
+                )
                 ledger.setdefault("provisioned_mailboxes", []).extend(mb_res)
+                if dfy_live.get("order_placed"):
+                    actual_cost = float(dfy_live.get("total_price_usd") or COST_PER_SENDING_POD_USD)
+                    ledger["total_reinvestment_spent_usd"] = round(
+                        float(ledger.get("total_reinvestment_spent_usd") or 0.0) + actual_cost, 2
+                    )
+                    ledger["available_reinvestment_balance_usd"] = round(
+                        max(0.0, float(ledger.get("total_reinvestment_allocated_usd") or 0.0) - ledger["total_reinvestment_spent_usd"]),
+                        2,
+                    )
             else:
                 ledger["provisioned_domains"] = [cf_res if d.get("domain") == dom else d for d in (ledger.get("provisioned_domains") or [])]
 
@@ -855,6 +1036,7 @@ def run_autonomous_mailbox_scaler(
 
     summary = {
         "brand": "RubricWard",
+        "newly_synced_stripe_events": newly_synced,
         "reinvestment_ratio": f"{int(active_ratio * 100)}%",
         "reinvestment_stage": stage_label,
         "cost_per_3_mailbox_pod_usd": COST_PER_SENDING_POD_USD,
@@ -863,6 +1045,7 @@ def run_autonomous_mailbox_scaler(
         "available_reinvestment_balance_usd": avail_usd,
         "pods_affordable_now": pods_affordable,
         "bimi_svg_url": BIMI_SVG_URL,
+        "instantly_dfy_auto_provisioning_ready": bool(INSTANTLY_API_KEY),
         "cloudflare_api_configured": bool(CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID),
         "instantly_fleet": instantly_fleet,
         "pods_processed": new_pods_created,
@@ -876,9 +1059,19 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run", action="store_true", help="Simulate pod discovery and RDAP availability")
     parser.add_argument("--simulate-revenue", type=float, default=0.0, help="Simulate a Stripe conversion of $X USD (e.g., 499.00)")
     parser.add_argument("--provision-domain", type=str, default="", help="Provision DNS/BIMI/301 for a specific RubricWard shard domain")
+    parser.add_argument("--order-live-dfy-pod", type=str, default="", help="Place a live $30 Instantly DFY domain + 3 Google Workspace mailbox order for the specified shard domain")
     args = parser.parse_args()
-    run_autonomous_mailbox_scaler(
-        dry_run=args.dry_run,
-        simulate_revenue_usd=args.simulate_revenue,
-        provision_domain=args.provision_domain,
-    )
+    if args.order_live_dfy_pod:
+        res = order_instantly_dfy_sending_pod(
+            domain=args.order_live_dfy_pod,
+            personas=MAILBOX_PERSONAS,
+            forwarding_domain=PRIMARY_FORWARDING_DOMAIN,
+            simulation=False,
+        )
+        print(json.dumps(res, indent=2), flush=True)
+    else:
+        run_autonomous_mailbox_scaler(
+            dry_run=args.dry_run,
+            simulate_revenue_usd=args.simulate_revenue,
+            provision_domain=args.provision_domain,
+        )
