@@ -197,3 +197,4 @@ if __name__ == "__main__":
     step1_ensure_cname_and_git_push()
     step2_configure_cloudflare_dns_and_worker()
     step3_ping_indexnow_and_google_favicon()
+
