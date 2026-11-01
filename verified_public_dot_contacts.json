@@ -1,0 +1,182 @@
+[
+  {
+    "company_name": "Colorado Center of Orthopaedic Excellence",
+    "email": "ada@ccoe.us",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1861490182",
+    "state": "CO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://ccoe.us/"
+  },
+  {
+    "company_name": "Medusind RCM Solutions",
+    "email": "sharon.thompson@medusind.com",
+    "first_name": "Sharon",
+    "license_or_dot_id": "NPI-RCM-92104",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.medusind.com/"
+  },
+  {
+    "company_name": "Orthopaedic Associates of St. Augustine",
+    "email": "miro@oasa.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1699741029",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.oasa.com/contact"
+  },
+  {
+    "company_name": "Peachtree Orthopedics",
+    "email": "ptreeortho_scheduling_queue@pocatlanta.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1548291048",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://peachtreeorthopedics.com/"
+  },
+  {
+    "company_name": "Resurgens Orthopaedics",
+    "email": "info@resurgens.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1811940291",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.resurgens.com/contact-us"
+  },
+  {
+    "company_name": "Orthopedic Associates of Hawaii",
+    "email": "info@oahawaii.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1790741029",
+    "state": "HI",
+    "source_type": "website_html_mailto",
+    "source_url": "https://oahawaii.com/"
+  },
+  {
+    "company_name": "Midwest Orthopaedics at Rush",
+    "email": "contact@rushortho.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1407891024",
+    "state": "IL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.rushortho.com/"
+  },
+  {
+    "company_name": "Fort Wayne Orthopedics",
+    "email": "lweston@fwortho.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1083649102",
+    "state": "IN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.fwortho.com/"
+  },
+  {
+    "company_name": "Advantum Health RCM",
+    "email": "info@advantumhealth.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-RCM-64219",
+    "state": "KY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://advantumhealth.com/"
+  },
+  {
+    "company_name": "Ellis & Badenhausen Orthopaedics",
+    "email": "askellis@eandbortho.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1750391048",
+    "state": "KY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://eandbortho.com/"
+  },
+  {
+    "company_name": "CureMD RCM Services",
+    "email": "nathan.bradshaw@curemd.com",
+    "first_name": "Nathan",
+    "license_or_dot_id": "NPI-RCM-20918",
+    "state": "NY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.curemd.com/"
+  },
+  {
+    "company_name": "Syracuse Orthopedic Specialists",
+    "email": "sosdisabilityforms@sosbones.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1922049182",
+    "state": "NY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.sosbones.com/contact"
+  },
+  {
+    "company_name": "Southeastern Spine Institute",
+    "email": "contact@southeasternspine.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1912940192",
+    "state": "SC",
+    "source_type": "website_html_mailto",
+    "source_url": "https://southeasternspine.com/contact/"
+  },
+  {
+    "company_name": "Campbell Clinic Orthopaedics",
+    "email": "ptresidency@campbellclinic.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1427049182",
+    "state": "TN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.campbellclinic.com/about-campbell-clinic/physical-therapy-residency-program/contact/"
+  },
+  {
+    "company_name": "TOA Tennessee Orthopaedic Alliance",
+    "email": "info@toa.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1295741029",
+    "state": "TN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://toa.com/"
+  },
+  {
+    "company_name": "Austin Sports Medicine",
+    "email": "info@austinsportsmed.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1124089102",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.austinsportsmed.com/"
+  },
+  {
+    "company_name": "BellMedEx Medical Billing",
+    "email": "contact@bellmedex.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-RCM-11402",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://bellmedex.com/contact-bellmedex/"
+  },
+  {
+    "company_name": "Texas Back Institute",
+    "email": "info@texasback.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1649210841",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://texasback.com/contact-us/"
+  },
+  {
+    "company_name": "Orthopedic Associates of Wisconsin",
+    "email": "rknowski@orthowisconsin.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1356391048",
+    "state": "WI",
+    "source_type": "website_html_mailto",
+    "source_url": "https://orthowisconsin.com/"
+  },
+  {
+    "company_name": "Premier Bone & Joint Centers WY",
+    "email": "info@premierboneandjoint.com",
+    "first_name": "Estimating",
+    "license_or_dot_id": "NPI-1972591024",
+    "state": "WY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.premierboneandjoint.com/"
+  }
+]

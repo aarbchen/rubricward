@@ -1,0 +1,110 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "DOT Planholder List Competitor Bid Behavior & MLOT Analyzer API",
+    "version": "1.0.0",
+    "description": "Analyze official DOT planholder lists against historical head-to-head letting results to predict aggressive bidders, Margin Left on Table (MLOT), and optimal markup."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/analyze/planholder-competitor-spread": {
+      "post": {
+        "summary": "Analyze DOT Planholder List & Competitor Bid Spread",
+        "description": "Analyze official DOT planholder lists against historical head-to-head letting results to predict aggressive bidders, Margin Left on Table (MLOT), and optimal markup.",
+        "operationId": "analyzePlanholderCompetitorSpread",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "letting_id",
+                  "engineers_estimate_usd",
+                  "our_direct_cost_usd",
+                  "planholders"
+                ],
+                "properties": {
+                  "letting_id": {
+                    "type": "string",
+                    "description": "Official DOT letting or contract ID.",
+                    "default": "GDOT-PI-0017482"
+                  },
+                  "engineers_estimate_usd": {
+                    "type": "number",
+                    "description": "Published DOT Engineer's Estimate in USD.",
+                    "default": 9400000
+                  },
+                  "our_direct_cost_usd": {
+                    "type": "number",
+                    "description": "Estimator's unburdened direct cost in USD.",
+                    "default": 8150000
+                  },
+                  "planholders": {
+                    "type": "array",
+                    "description": "Confirmed planholders and their historical bid behavior.",
+                    "items": {
+                      "type": "object"
+                    }
+                  }
+                }
+              },
+              "example": {
+                "letting_id": "GDOT-PI-0017482",
+                "engineers_estimate_usd": 9400000,
+                "our_direct_cost_usd": 8150000,
+                "planholders": [
+                  {
+                    "contractor_name": "C.W. Matthews Contracting Co.",
+                    "historical_avg_vs_engineer_pct": -4.2,
+                    "recent_win_rate_pct": 34.0
+                  },
+                  {
+                    "contractor_name": "E.R. Snell Contractor Inc.",
+                    "historical_avg_vs_engineer_pct": -2.8,
+                    "recent_win_rate_pct": 28.5
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

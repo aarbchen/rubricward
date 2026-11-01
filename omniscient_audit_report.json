@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-11-01T16:05:42.557676+00:00",
+  "mode": "full",
+  "elapsed_seconds": 51.0,
+  "status": "healthy",
+  "total_learned_rules": 42,
+  "pillars": {
+    "pillar_1_products": {
+      "ok": true,
+      "issues": [],
+      "auto_healed": []
+    },
+    "pillar_2_acquisition": {
+      "ok": true,
+      "issues": [],
+      "auto_healed": []
+    },
+    "pillar_3_website_and_edge": {
+      "ok": true,
+      "issues": [],
+      "auto_healed": []
+    }
+  }
+}

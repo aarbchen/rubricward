@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Trade Subcontractor Invitation to Bid ITB Scope Gap & AIA A401 API",
+    "version": "1.0.0",
+    "description": "Generate CSI-aligned Subcontractor Scope Sheets, Scope-Gap Inclusions/Exclusions Checklists, and AIA A401 Subcontract flow-down clauses."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/generate/subcontractor-scope-itb": {
+      "post": {
+        "summary": "Generate Subcontractor ITB Scope Sheet & AIA A401 Flow-Downs",
+        "description": "Generate CSI-aligned Subcontractor Scope Sheets, Scope-Gap Inclusions/Exclusions Checklists, and AIA A401 Subcontract flow-down clauses.",
+        "operationId": "generateSubcontractorScopeItb",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "project_name",
+                  "trade_division",
+                  "scope_highlights"
+                ],
+                "properties": {
+                  "project_name": {
+                    "type": "string",
+                    "description": "Project title.",
+                    "default": "VAMC Seismic & MEP Modernization"
+                  },
+                  "trade_division": {
+                    "type": "string",
+                    "description": "Target CSI MasterFormat division and trade.",
+                    "default": "Division 26 - Electrical"
+                  },
+                  "prime_contract_liquidated_damages_per_day_usd": {
+                    "type": "number",
+                    "description": "Prime contract daily liquidated damages flow-down in USD.",
+                    "default": 3500
+                  },
+                  "scope_highlights": {
+                    "type": "array",
+                    "description": "Key scope inclusions to verify in subcontractor buyout.",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "example": {
+                "project_name": "VA Medical Center Seismic Structural & MEP Modernization",
+                "trade_division": "Division 26 - Electrical & Medium-Voltage Switchgear",
+                "prime_contract_liquidated_damages_per_day_usd": 3500,
+                "scope_highlights": [
+                  "Furnish and install two 2,500 kVA 15kV pad-mounted transformers and emergency generator paralleling switchgear",
+                  "Include all trenching, concrete duct banks, arc-flash study, and NETA acceptance testing"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

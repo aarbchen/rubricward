@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "52-Portal Live State DOT Lettings, USACE & Public Works Feed API",
+    "version": "1.0.0",
+    "description": "Stream AI-vetted heavy-civil, highway, bridge, water/sewer, and commercial construction lettings across all 50 State DOTs, USACE, and Municipal portals."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/lettings/live": {
+      "get": {
+        "summary": "Get Live 50-State DOT & Public Works Lettings",
+        "description": "Stream AI-vetted heavy-civil, highway, bridge, water/sewer, and commercial construction lettings across all 50 State DOTs, USACE, and Municipal portals.",
+        "operationId": "getLiveDotLettings",
+        "parameters": [
+          {
+            "name": "state",
+            "in": "query",
+            "required": false,
+            "description": "Filter by two-letter state postal code (e.g., TX, CA, FL) or ALL.",
+            "schema": {
+              "type": "string",
+              "default": "ALL"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of lettings to return (1-50).",
+            "schema": {
+              "type": "integer",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

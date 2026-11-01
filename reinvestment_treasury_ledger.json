@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "brand": "RubricWard",
+  "reinvestment_ratio": 0.8,
+  "cost_per_sending_pod_usd": 21.0,
+  "total_gross_revenue_usd": 0.0,
+  "total_reinvestment_allocated_usd": 0.0,
+  "total_reinvestment_spent_usd": 0.0,
+  "available_reinvestment_balance_usd": 0.0,
+  "credited_conversion_keys": [],
+  "provisioned_domains": [
+    {
+      "domain": "tryrubricward.com",
+      "registered": true,
+      "zone_id": "8b92ac14d76d2e64a9a6c205ba0e7206",
+      "nameservers": [
+        "frank.ns.cloudflare.com",
+        "heidi.ns.cloudflare.com"
+      ],
+      "dns_records_created": [
+        "MX:@",
+        "MX:@",
+        "MX:@",
+        "MX:@",
+        "MX:@",
+        "TXT:@",
+        "TXT:_dmarc",
+        "TXT:default._bimi",
+        "A:@",
+        "A:www"
+      ],
+      "bimi_logo_configured": true,
+      "redirect_301_configured": true,
+      "status": "cloudflare_zone_and_bimi_active"
+    }
+  ],
+  "provisioned_mailboxes": [
+    {
+      "email": "aaron@tryrubricward.com",
+      "domain": "tryrubricward.com",
+      "first_name": "Aaron",
+      "last_name": "Chen | RubricWard",
+      "avatar_logo_path": "d:\\RubricWard\\rubricward_mailbox_avatar_500.png",
+      "bimi_svg_url": "https://rubricward.com/bimi-logo.svg",
+      "avatar_applied": true,
+      "created_in_workspace": true,
+      "queued_in_instantly": true,
+      "warmup_enabled": true
+    },
+    {
+      "email": "estimating@tryrubricward.com",
+      "domain": "tryrubricward.com",
+      "first_name": "Aaron",
+      "last_name": "RubricWard Estimating",
+      "avatar_logo_path": "d:\\RubricWard\\rubricward_mailbox_avatar_500.png",
+      "bimi_svg_url": "https://rubricward.com/bimi-logo.svg",
+      "avatar_applied": true,
+      "created_in_workspace": true,
+      "queued_in_instantly": true,
+      "warmup_enabled": true
+    },
+    {
+      "email": "desk@tryrubricward.com",
+      "domain": "tryrubricward.com",
+      "first_name": "Aaron Chen",
+      "last_name": "RubricWard Precon Desk",
+      "avatar_logo_path": "d:\\RubricWard\\rubricward_mailbox_avatar_500.png",
+      "bimi_svg_url": "https://rubricward.com/bimi-logo.svg",
+      "avatar_applied": true,
+      "created_in_workspace": true,
+      "queued_in_instantly": true,
+      "warmup_enabled": true
+    }
+  ],
+  "staged_provisioning_queue": [],
+  "updated_at": "2026-11-01T16:04:59Z",
+  "reinvestment_stage": "Stage 1: Ignition (80% Reinvestment \u2014 3 to 36 Mailboxes)"
+}

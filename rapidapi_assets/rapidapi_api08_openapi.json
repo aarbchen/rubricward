@@ -1,0 +1,110 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Miller Act 40 USC 3131 & Surety Bond Capacity Underwriter API",
+    "version": "1.0.0",
+    "description": "Underwrite contractor working capital, net worth, and WIP backlog to calculate Single/Aggregate Surety Bond limits and sliding-scale bond premiums."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/audit/surety-miller-act-bond": {
+      "post": {
+        "summary": "Underwrite Miller Act Surety Bond Capacity & Premium",
+        "description": "Underwrite contractor working capital, net worth, and WIP backlog to calculate Single/Aggregate Surety Bond limits and sliding-scale bond premiums.",
+        "operationId": "auditSuretyMillerActBond",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "contractor_name",
+                  "current_assets_usd",
+                  "current_liabilities_usd",
+                  "tangible_net_worth_usd",
+                  "target_project_bid_usd"
+                ],
+                "properties": {
+                  "contractor_name": {
+                    "type": "string",
+                    "description": "Legal name of construction contractor.",
+                    "default": "Lone Star Heavy Civil Constructors Inc."
+                  },
+                  "current_assets_usd": {
+                    "type": "number",
+                    "description": "CPA-reviewed current assets in USD.",
+                    "default": 6400000
+                  },
+                  "current_liabilities_usd": {
+                    "type": "number",
+                    "description": "Current liabilities in USD.",
+                    "default": 2950000
+                  },
+                  "tangible_net_worth_usd": {
+                    "type": "number",
+                    "description": "Tangible net worth (equity) in USD.",
+                    "default": 5100000
+                  },
+                  "uncompleted_wip_backlog_usd": {
+                    "type": "number",
+                    "description": "Current uncompleted Work-in-Progress (WIP) backlog in USD.",
+                    "default": 19500000
+                  },
+                  "target_project_bid_usd": {
+                    "type": "number",
+                    "description": "New project contract value requiring 100% Performance & Payment Bonds.",
+                    "default": 11200000
+                  }
+                }
+              },
+              "example": {
+                "contractor_name": "Lone Star Heavy Civil Constructors Inc.",
+                "current_assets_usd": 6400000,
+                "current_liabilities_usd": 2950000,
+                "tangible_net_worth_usd": 5100000,
+                "uncompleted_wip_backlog_usd": 19500000,
+                "target_project_bid_usd": 11200000
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

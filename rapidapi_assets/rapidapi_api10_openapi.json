@@ -1,0 +1,100 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "OSHA 29 CFR 1926 USACE EM 385-1-1 AHA & Insurance EMR Auditor API",
+    "version": "1.0.0",
+    "description": "Generate trade-specific Activity Hazard Analyses (AHA), Site-Specific Safety Plans, Trenching/Fall-Protection checklists, and Experience Modification Rate (EMR) audits."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/audit/osha-emr-site-safety": {
+      "post": {
+        "summary": "Generate OSHA 1926 & USACE EM 385-1-1 Safety AHA",
+        "description": "Generate trade-specific Activity Hazard Analyses (AHA), Site-Specific Safety Plans, Trenching/Fall-Protection checklists, and Experience Modification Rate (EMR) audits.",
+        "operationId": "auditOshaEmrSiteSafety",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "project_name",
+                  "high_hazard_activities"
+                ],
+                "properties": {
+                  "project_name": {
+                    "type": "string",
+                    "description": "Project title.",
+                    "default": "Caltrans Deep Box Culvert Excavation"
+                  },
+                  "contractor_emr": {
+                    "type": "number",
+                    "description": "Contractor NCCI Experience Modification Rate (EMR).",
+                    "default": 0.84
+                  },
+                  "max_allowed_emr": {
+                    "type": "number",
+                    "description": "Owner/Specification maximum allowed EMR threshold.",
+                    "default": 1.0
+                  },
+                  "high_hazard_activities": {
+                    "type": "array",
+                    "description": "List of high-hazard construction scopes requiring AHA generation.",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "example": {
+                "project_name": "Caltrans District 7 Deep Storm Drain Box Culvert Excavation",
+                "contractor_emr": 0.84,
+                "max_allowed_emr": 1.0,
+                "high_hazard_activities": [
+                  "Trenching & Shoring below 18 FT in Type C Soil (29 CFR 1926 Subpart P)",
+                  "Crawler Crane 110-Ton Precast Box Culvert Picks near energized 34.5kV overhead lines"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

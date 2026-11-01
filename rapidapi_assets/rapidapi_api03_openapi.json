@@ -1,0 +1,107 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Davis-Bacon 29 CFR 5 & State Prevailing Wage Fringe Calculator API",
+    "version": "1.0.0",
+    "description": "Calculate federal Davis-Bacon (29 CFR Part 5) and State Little Davis-Bacon prevailing wage base rates, fringe burdens, and WH-347 payroll costs."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/calculate/davis-bacon-prevailing-wage": {
+      "post": {
+        "summary": "Calculate Davis-Bacon Prevailing Wage & Fringe Burden",
+        "description": "Calculate federal Davis-Bacon (29 CFR Part 5) and State Little Davis-Bacon prevailing wage base rates, fringe burdens, and WH-347 payroll costs.",
+        "operationId": "calculateDavisBaconPrevailingWage",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "state_code",
+                  "county_name",
+                  "crew_classifications"
+                ],
+                "properties": {
+                  "state_code": {
+                    "type": "string",
+                    "description": "Two-letter U.S. state code.",
+                    "default": "TX"
+                  },
+                  "county_name": {
+                    "type": "string",
+                    "description": "Project county name for wage determination lookup.",
+                    "default": "Harris County"
+                  },
+                  "construction_type": {
+                    "type": "string",
+                    "description": "Davis-Bacon construction category (Highway, Heavy, Building, Residential).",
+                    "default": "Highway"
+                  },
+                  "crew_classifications": {
+                    "type": "array",
+                    "description": "List of labor trade classifications and estimated hours.",
+                    "items": {
+                      "type": "object"
+                    }
+                  }
+                }
+              },
+              "example": {
+                "state_code": "TX",
+                "county_name": "Harris County",
+                "construction_type": "Highway",
+                "crew_classifications": [
+                  {
+                    "trade": "Power Equipment Operator (Asphalt Paver / Roller)",
+                    "estimated_hours": 1450
+                  },
+                  {
+                    "trade": "Cement Mason / Concrete Finisher",
+                    "estimated_hours": 980
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

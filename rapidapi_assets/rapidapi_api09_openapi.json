@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Construction RFI Differing Site Conditions & AIA G701 Change Order API",
+    "version": "1.0.0",
+    "description": "Analyze plan discrepancies or Differing Site Conditions (FAR 52.236-2), calculate Critical Path Time-Impact float consumption, and draft AIA G701 Change Orders."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/generate/rfi-change-order-claim": {
+      "post": {
+        "summary": "Generate Construction RFI & AIA G701 Change Order Claim",
+        "description": "Analyze plan discrepancies or Differing Site Conditions (FAR 52.236-2), calculate Critical Path Time-Impact float consumption, and draft AIA G701 Change Orders.",
+        "operationId": "generateRfiChangeOrderClaim",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "project_name",
+                  "field_condition_description"
+                ],
+                "properties": {
+                  "project_name": {
+                    "type": "string",
+                    "description": "Active project contract name.",
+                    "default": "USACE Floodwall Monolith"
+                  },
+                  "contract_clause_reference": {
+                    "type": "string",
+                    "description": "Applicable notice/change clause (e.g., FAR 52.236-2, AIA A201 4.3.4).",
+                    "default": "FAR 52.236-2 Differing Site Conditions"
+                  },
+                  "field_condition_description": {
+                    "type": "string",
+                    "description": "Detailed narrative of plan discrepancy or subsurface condition.",
+                    "minLength": 20
+                  },
+                  "direct_cost_impact_usd": {
+                    "type": "number",
+                    "description": "Estimated direct labor, equipment, and material cost impact in USD.",
+                    "default": 184500
+                  },
+                  "critical_path_delay_days": {
+                    "type": "integer",
+                    "description": "Estimated CPM schedule delay in calendar days.",
+                    "default": 14
+                  }
+                }
+              },
+              "example": {
+                "project_name": "USACE Norfolk District Floodwall Sector Gate Monolith",
+                "contract_clause_reference": "FAR 52.236-2 Differing Site Conditions (Type I)",
+                "field_condition_description": "Geotechnical boring log B-14 indicated stiff clay at El. -18.0 FT, but sheet-pile driving encountered uncharted submerged timber wharf pilings and granite riprap from El. -11.5 FT to -19.0 FT.",
+                "direct_cost_impact_usd": 184500,
+                "critical_path_delay_days": 14
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

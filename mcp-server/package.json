@@ -1,0 +1,24 @@
+{
+  "name": "@rubricward/mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for RubricWard — 50-State Commercial Payer MRF Rate Benchmarks, ERISA Medical Necessity Appeals, Federal NSA IDR Arbitration Briefs, and EDI 835 / CMS NCCI / Medicare RVU-GPCI Compliance APIs.",
+  "main": "index.js",
+  "bin": {
+    "rubricward-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "mcp",
+    "healthcare",
+    "payer-mrf",
+    "transparency-in-coverage",
+    "no-surprises-act",
+    "erisa-appeal",
+    "edi-835",
+    "rvu-gpci",
+    "revenue-cycle"
+  ],
+  "license": "MIT"
+}

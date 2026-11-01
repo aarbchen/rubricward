@@ -1,0 +1,94 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "CSI MasterFormat Divisions 00-48 Spec & Submittal Shredder API",
+    "version": "1.0.0",
+    "description": "Shred raw Construction Project Manuals into CSI MasterFormat Divisions 00-48 tables, submittal logs, liquidated damages, and retainage rules."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/shred/csi-masterformat": {
+      "post": {
+        "summary": "Shred CSI MasterFormat Specification",
+        "description": "Shred raw Construction Project Manuals into CSI MasterFormat Divisions 00-48 tables, submittal logs, liquidated damages, and retainage rules.",
+        "operationId": "shredCsiMasterformatSpec",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "specification_text"
+                ],
+                "properties": {
+                  "project_name": {
+                    "type": "string",
+                    "description": "Project title or letting name.",
+                    "default": "TxDOT IH-45 Mill & Overlay"
+                  },
+                  "solicitation_number": {
+                    "type": "string",
+                    "description": "Official DOT CSJ, USACE, or Municipal solicitation ID.",
+                    "default": "CSJ-0912-72-614"
+                  },
+                  "state_code": {
+                    "type": "string",
+                    "description": "Two-letter U.S. state postal code.",
+                    "default": "TX"
+                  },
+                  "specification_text": {
+                    "type": "string",
+                    "description": "Unstructured Project Manual or CSI specification text to shred.",
+                    "minLength": 20
+                  }
+                }
+              },
+              "example": {
+                "project_name": "TxDOT IH-45 Corridor Mill & Superpave Overlay",
+                "solicitation_number": "CSJ-0912-72-614",
+                "state_code": "TX",
+                "specification_text": "SECTION 01 11 00 SUMMARY OF WORK: Liquidated damages of $2,500/calendar day apply beyond 240 calendar days. Retainage 5%. SECTION 03 30 00 CAST-IN-PLACE CONCRETE: Submit mix design and mill certs. SECTION 32 12 16 ASPHALT PAVING: TxDOT Item 3076 Superpave D-GR-B 18,500 Tons."
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

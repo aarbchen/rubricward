@@ -1,0 +1,1614 @@
+{
+  "TXDOT-CSJ-0015-13-412": {
+    "project_id": "TXDOT-CSJ-0015-13-412",
+    "slug": "ih-35-corridor-bridge-deck-replacement-superpave-hma-overlay-its",
+    "title": "[TXDOT-CSJ-0015-13-412] IH-35 Corridor Bridge Deck Replacement, Superpave HMA Overlay & ITS Fiber Duct Bank",
+    "agency": "Texas Department of Transportation (TxDOT) \u2014 Austin District",
+    "jurisdiction": "texas",
+    "state_code": "TX",
+    "county": "Travis County, TX",
+    "letting_date": "2026-11-18",
+    "engineers_estimate_usd": 18450000.0,
+    "recommended_low_bid_usd": 17379900.0,
+    "dbe_goal_pct": 11.5,
+    "liquidated_damages_per_day_usd": 4200,
+    "wage_determination_id": "TX20260028 (Heavy & Highway)",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Concrete",
+      "Div 05 Metals",
+      "Div 26 Electrical / ITS",
+      "Div 31 Earthwork",
+      "Div 32 Exterior Improvements / Paving"
+    ],
+    "planholders": [
+      "Webber LLC",
+      "Granite Construction Inc.",
+      "Jordan Foster Construction LLC",
+      "Lone Star Paving Co.",
+      "Capital Excavation Company"
+    ],
+    "pay_items": [
+      {
+        "item_code": "341-6008",
+        "description": "Dense-Graded Hot-Mix Asphalt (Superpave SP-C SAC-A PG 76-22)",
+        "unit": "TON",
+        "quantity": 68000,
+        "hist_low_unit_usd": 129.5,
+        "hist_median_unit_usd": 138.75,
+        "recommended_unit_usd": 134.2
+      },
+      {
+        "item_code": "420-6013",
+        "description": "HPC Structural Concrete Class S (Bridge Deck & Approach Slabs)",
+        "unit": "CY",
+        "quantity": 4850,
+        "hist_low_unit_usd": 910.0,
+        "hist_median_unit_usd": 985.0,
+        "recommended_unit_usd": 948.0
+      },
+      {
+        "item_code": "464-6008",
+        "description": "Reinforced Concrete Pipe (Class III 36-Inch Storm Sewer)",
+        "unit": "LF",
+        "quantity": 14200,
+        "hist_low_unit_usd": 152.0,
+        "hist_median_unit_usd": 168.5,
+        "recommended_unit_usd": 159.0
+      },
+      {
+        "item_code": "618-6046",
+        "description": "ITS Conduit (PVC Schedule 80 / Bore 4-Inch Directional)",
+        "unit": "LF",
+        "quantity": 28500,
+        "hist_low_unit_usd": 38.0,
+        "hist_median_unit_usd": 44.5,
+        "recommended_unit_usd": 41.0
+      },
+      {
+        "item_code": "500-6001",
+        "description": "Mobilization, Bonds & Traffic Control Phasing (Cap 10%)",
+        "unit": "LS",
+        "quantity": 1,
+        "hist_low_unit_usd": 1450000.0,
+        "hist_median_unit_usd": 1620000.0,
+        "recommended_unit_usd": 1525000.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "TX",
+      "pay_item_description": "Dense-Graded Hot-Mix Asphalt (Superpave SP-C SAC-A PG 76-22)",
+      "unit": "TON",
+      "quantity": 68000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 117.6,
+        "historical_median_bid_unit_usd": 127.02,
+        "historical_75th_percentile_unit_usd": 141.84,
+        "recommended_competitive_unit_bid_usd": 121.18
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 7996800.0,
+        "extended_at_recommended_bid_usd": 8240240.0,
+        "extended_at_median_bid_usd": 8637360.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "TX",
+      "county": "Travis County, TX",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "TX20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 57.19,
+      "fully_burdened_crew_hourly_usd": 67.77,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 982665.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 39.95,
+          "bona_fide_fringe_hourly_usd": 17.3,
+          "total_prevailing_package_hourly_usd": 57.25,
+          "overtime_1_5x_hourly_usd": 77.23,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 35.91,
+          "bona_fide_fringe_hourly_usd": 14.95,
+          "total_prevailing_package_hourly_usd": 50.86,
+          "overtime_1_5x_hourly_usd": 68.81,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 39.29,
+          "bona_fide_fringe_hourly_usd": 19.83,
+          "total_prevailing_package_hourly_usd": 59.12,
+          "overtime_1_5x_hourly_usd": 78.77,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 42.86,
+          "bona_fide_fringe_hourly_usd": 18.66,
+          "total_prevailing_package_hourly_usd": 61.52,
+          "overtime_1_5x_hourly_usd": 82.95,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/ih-35-corridor-bridge-deck-replacement-superpave-hma-overlay-its.html",
+    "source_url": "https://www.txdot.gov/business/letting-bids/letting-schedule.html#TXDOT-CSJ-0015-13-412",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `TXDOT-CSJ-0015-13-412` \u2014 [TXDOT-CSJ-0015-13-412] IH-35 Corridor Bridge Deck Replacement, Superpave HMA Overlay & ITS Fiber Duct Bank\n**Agency:** Texas Department of Transportation (TxDOT) \u2014 Austin District (Travis County, TX) | **Letting Date:** `2026-11-18`\n**Engineer's Estimate:** `$18,450,000` | **Recommended Low-Bid Target:** `$17,379,900` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Concrete, Div 05 Metals, Div 26 Electrical / ITS\n**Lead Pay Item Benchmark:** Dense-Graded Hot-Mix Asphalt (Superpave SP-C SAC-A PG 76-22) -> `$121.18/TON`\n**Davis-Bacon Crew Rate:** `$67.77/hr` fully burdened (`TX20260028 (Heavy & Highway)`)\n**DBE Goal:** `11.5%` (`49 CFR Part 26`) | **Liquidated Damages:** `$4,200/day`\n**Official Planholders (5):** Webber LLC, Granite Construction Inc., Jordan Foster Construction LLC, Lone Star Paving Co.\nDossier: https://rubricward.com/lettings/project/ih-35-corridor-bridge-deck-replacement-superpave-hma-overlay-its.html\nSource: https://www.txdot.gov/business/letting-bids/letting-schedule.html#TXDOT-CSJ-0015-13-412",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "CALTRANS-04-2Q7404": {
+    "project_id": "CALTRANS-04-2Q7404",
+    "slug": "route-101-seismic-bridge-retrofit-micropile-foundations",
+    "title": "[CALTRANS-04-2Q7404] Route 101 Seismic Bridge Retrofit, Micropile Foundations & Stormwater Pump Station Modernization",
+    "agency": "California Department of Transportation (Caltrans) \u2014 District 4 Bay Area",
+    "jurisdiction": "california",
+    "state_code": "CA",
+    "county": "San Mateo County, CA",
+    "letting_date": "2026-11-20",
+    "engineers_estimate_usd": 24800000.0,
+    "recommended_low_bid_usd": 23361600.0,
+    "dbe_goal_pct": 18.0,
+    "liquidated_damages_per_day_usd": 6500,
+    "wage_determination_id": "CA20260007 + DIR Northern CA General Prevailing Wage",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Structural Concrete",
+      "Div 05 Structural Steel",
+      "Div 26 Medium-Voltage Electrical",
+      "Div 31 Deep Foundations / Micropiles",
+      "Div 33 Utilities / Pump Station"
+    ],
+    "planholders": [
+      "Flatiron West Inc.",
+      "Myers & Sons Construction LP",
+      "Ghilotti Construction Company",
+      "O.C. Jones & Sons Inc.",
+      "MCM Construction Inc."
+    ],
+    "pay_items": [
+      {
+        "item_code": "390137",
+        "description": "Rubberized Hot Mix Asphalt (Gap Graded RHMA-G)",
+        "unit": "TON",
+        "quantity": 42000,
+        "hist_low_unit_usd": 158.0,
+        "hist_median_unit_usd": 172.0,
+        "recommended_unit_usd": 164.5
+      },
+      {
+        "item_code": "490405",
+        "description": "Drilled & Grouted High-Capacity Micropiles (200-Ton Design Load)",
+        "unit": "LF",
+        "quantity": 19500,
+        "hist_low_unit_usd": 245.0,
+        "hist_median_unit_usd": 278.0,
+        "recommended_unit_usd": 259.0
+      },
+      {
+        "item_code": "550102",
+        "description": "Structural Steel Column Casing (ASTM A709 Grade 50 Seismic)",
+        "unit": "LB",
+        "quantity": 1450000,
+        "hist_low_unit_usd": 4.1,
+        "hist_median_unit_usd": 4.65,
+        "recommended_unit_usd": 4.32
+      },
+      {
+        "item_code": "860990",
+        "description": "Stormwater Pump Station 480V MCC, VFD & PLC Telemetry",
+        "unit": "LS",
+        "quantity": 1,
+        "hist_low_unit_usd": 2850000.0,
+        "hist_median_unit_usd": 3190000.0,
+        "recommended_unit_usd": 2980000.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "CA",
+      "pay_item_description": "Rubberized Hot Mix Asphalt (Gap Graded RHMA-G)",
+      "unit": "TON",
+      "quantity": 42000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 172.64,
+        "historical_median_bid_unit_usd": 186.48,
+        "historical_75th_percentile_unit_usd": 208.23,
+        "recommended_competitive_unit_bid_usd": 177.9
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 7250880.0,
+        "extended_at_recommended_bid_usd": 7471800.0,
+        "extended_at_median_bid_usd": 7832160.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "CA",
+      "county": "San Mateo County, CA",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "CA20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 83.95,
+      "fully_burdened_crew_hourly_usd": 99.48,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 1442460.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 58.65,
+          "bona_fide_fringe_hourly_usd": 25.39,
+          "total_prevailing_package_hourly_usd": 84.04,
+          "overtime_1_5x_hourly_usd": 113.36,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 52.72,
+          "bona_fide_fringe_hourly_usd": 21.94,
+          "total_prevailing_package_hourly_usd": 74.66,
+          "overtime_1_5x_hourly_usd": 101.02,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 57.68,
+          "bona_fide_fringe_hourly_usd": 29.12,
+          "total_prevailing_package_hourly_usd": 86.8,
+          "overtime_1_5x_hourly_usd": 115.64,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 62.93,
+          "bona_fide_fringe_hourly_usd": 27.39,
+          "total_prevailing_package_hourly_usd": 90.32,
+          "overtime_1_5x_hourly_usd": 121.78,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/route-101-seismic-bridge-retrofit-micropile-foundations.html",
+    "source_url": "https://dot.ca.gov/programs/procurement-and-contracts/contracts-out-for-bid#CALTRANS-04-2Q7404",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `CALTRANS-04-2Q7404` \u2014 [CALTRANS-04-2Q7404] Route 101 Seismic Bridge Retrofit, Micropile Foundations & Stormwater Pump Station Modernization\n**Agency:** California Department of Transportation (Caltrans) \u2014 District 4 Bay Area (San Mateo County, CA) | **Letting Date:** `2026-11-20`\n**Engineer's Estimate:** `$24,800,000` | **Recommended Low-Bid Target:** `$23,361,600` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Structural Concrete, Div 05 Structural Steel, Div 26 Medium-Voltage Electrical\n**Lead Pay Item Benchmark:** Rubberized Hot Mix Asphalt (Gap Graded RHMA-G) -> `$177.9/TON`\n**Davis-Bacon Crew Rate:** `$99.48/hr` fully burdened (`CA20260007 + DIR Northern CA General Prevailing Wage`)\n**DBE Goal:** `18.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$6,500/day`\n**Official Planholders (5):** Flatiron West Inc., Myers & Sons Construction LP, Ghilotti Construction Company, O.C. Jones & Sons Inc.\nDossier: https://rubricward.com/lettings/project/route-101-seismic-bridge-retrofit-micropile-foundations.html\nSource: https://dot.ca.gov/programs/procurement-and-contracts/contracts-out-for-bid#CALTRANS-04-2Q7404",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "FDOT-T4682-FIN-445219": {
+    "project_id": "FDOT-T4682-FIN-445219",
+    "slug": "sr-826-palmetto-expressway-milling-fc-12-5-friction-course-mast",
+    "title": "[FDOT-T4682-FIN-445219] SR-826 Palmetto Expressway Milling, FC-12.5 Friction Course, Mast-Arm Signals & Box Culvert",
+    "agency": "Florida Department of Transportation (FDOT) \u2014 District 6 Miami",
+    "jurisdiction": "florida",
+    "state_code": "FL",
+    "county": "Miami-Dade County, FL",
+    "letting_date": "2026-11-24",
+    "engineers_estimate_usd": 15600000.0,
+    "recommended_low_bid_usd": 14695200.0,
+    "dbe_goal_pct": 10.65,
+    "liquidated_damages_per_day_usd": 3800,
+    "wage_determination_id": "FL20260119 (Highway Construction)",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Precast Box Culverts",
+      "Div 26 Mast-Arm Traffic Signals",
+      "Div 32 Asphalt Milling & Friction Course",
+      "Div 33 Storm Drainage"
+    ],
+    "planholders": [
+      "Halley Engineering Contractors Inc.",
+      "Ranger Construction Industries",
+      "General Asphalt Co. LLC",
+      "OHL USA / Community Asphalt",
+      "de Moya Group Inc."
+    ],
+    "pay_items": [
+      {
+        "item_code": "0337-7-82",
+        "description": "Asphalt Concrete Friction Course (Traffic C FC-12.5 PG 76-22)",
+        "unit": "TON",
+        "quantity": 54000,
+        "hist_low_unit_usd": 144.0,
+        "hist_median_unit_usd": 156.0,
+        "recommended_unit_usd": 149.25
+      },
+      {
+        "item_code": "0410-70",
+        "description": "Precast Reinforced Concrete Box Culvert (10 ft x 6 ft)",
+        "unit": "LF",
+        "quantity": 3400,
+        "hist_low_unit_usd": 1120.0,
+        "hist_median_unit_usd": 1245.0,
+        "recommended_unit_usd": 1175.0
+      },
+      {
+        "item_code": "0649-21-15",
+        "description": "Steel Mast Arm Assembly (170 MPH Wind Load Rating)",
+        "unit": "EA",
+        "quantity": 18,
+        "hist_low_unit_usd": 78500.0,
+        "hist_median_unit_usd": 86000.0,
+        "recommended_unit_usd": 81500.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "FL",
+      "pay_item_description": "Asphalt Concrete Friction Course (Traffic C FC-12.5 PG 76-22)",
+      "unit": "TON",
+      "quantity": 54000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 115.1,
+        "historical_median_bid_unit_usd": 124.32,
+        "historical_75th_percentile_unit_usd": 138.82,
+        "recommended_competitive_unit_bid_usd": 118.6
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 6215400.0,
+        "extended_at_recommended_bid_usd": 6404400.0,
+        "extended_at_median_bid_usd": 6713280.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "FL",
+      "county": "Miami-Dade County, FL",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "FL20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 55.97,
+      "fully_burdened_crew_hourly_usd": 66.32,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 961640.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 39.1,
+          "bona_fide_fringe_hourly_usd": 16.93,
+          "total_prevailing_package_hourly_usd": 56.03,
+          "overtime_1_5x_hourly_usd": 75.58,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 35.14,
+          "bona_fide_fringe_hourly_usd": 14.63,
+          "total_prevailing_package_hourly_usd": 49.77,
+          "overtime_1_5x_hourly_usd": 67.34,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 38.46,
+          "bona_fide_fringe_hourly_usd": 19.41,
+          "total_prevailing_package_hourly_usd": 57.87,
+          "overtime_1_5x_hourly_usd": 77.1,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 41.95,
+          "bona_fide_fringe_hourly_usd": 18.26,
+          "total_prevailing_package_hourly_usd": 60.21,
+          "overtime_1_5x_hourly_usd": 81.19,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/sr-826-palmetto-expressway-milling-fc-12-5-friction-course-mast.html",
+    "source_url": "https://www.fdot.gov/contracts/lettings-page#FDOT-T4682-FIN-445219",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `FDOT-T4682-FIN-445219` \u2014 [FDOT-T4682-FIN-445219] SR-826 Palmetto Expressway Milling, FC-12.5 Friction Course, Mast-Arm Signals & Box Culvert\n**Agency:** Florida Department of Transportation (FDOT) \u2014 District 6 Miami (Miami-Dade County, FL) | **Letting Date:** `2026-11-24`\n**Engineer's Estimate:** `$15,600,000` | **Recommended Low-Bid Target:** `$14,695,200` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Precast Box Culverts, Div 26 Mast-Arm Traffic Signals, Div 32 Asphalt Milling & Friction Course\n**Lead Pay Item Benchmark:** Asphalt Concrete Friction Course (Traffic C FC-12.5 PG 76-22) -> `$118.6/TON`\n**Davis-Bacon Crew Rate:** `$66.32/hr` fully burdened (`FL20260119 (Highway Construction)`)\n**DBE Goal:** `10.65%` (`49 CFR Part 26`) | **Liquidated Damages:** `$3,800/day`\n**Official Planholders (5):** Halley Engineering Contractors Inc., Ranger Construction Industries, General Asphalt Co. LLC, OHL USA / Community Asphalt\nDossier: https://rubricward.com/lettings/project/sr-826-palmetto-expressway-milling-fc-12-5-friction-course-mast.html\nSource: https://www.fdot.gov/contracts/lettings-page#FDOT-T4682-FIN-445219",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "VDOT-C00118942B01": {
+    "project_id": "VDOT-C00118942B01",
+    "slug": "i-64-route-288-interchange-diverging-diamond-retaining-walls",
+    "title": "[VDOT-C00118942B01] I-64 / Route 288 Interchange Diverging Diamond, Retaining Walls & Ductile Iron Water Main Relocation",
+    "agency": "Virginia Department of Transportation (VDOT) \u2014 Richmond District",
+    "jurisdiction": "virginia",
+    "state_code": "VA",
+    "county": "Henrico County, VA",
+    "letting_date": "2026-11-25",
+    "engineers_estimate_usd": 21200000.0,
+    "recommended_low_bid_usd": 19970400.0,
+    "dbe_goal_pct": 12.0,
+    "liquidated_damages_per_day_usd": 4500,
+    "wage_determination_id": "VA20260084 (Highway & Heavy)",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Concrete MSE Retaining Walls",
+      "Div 26 Roadway Lighting",
+      "Div 31 Earthwork & Rock Excavation",
+      "Div 33 24-Inch Ductile Iron Water Main"
+    ],
+    "planholders": [
+      "Allan Myers VA Inc.",
+      "Branch Civil Inc.",
+      "Shirley Contracting Company",
+      "W.C. English Construction",
+      "Wagman Heavy Civil Inc."
+    ],
+    "pay_items": [
+      {
+        "item_code": "315-0010",
+        "description": "Asphalt Concrete Surface Course Type SM-12.5E",
+        "unit": "TON",
+        "quantity": 61000,
+        "hist_low_unit_usd": 126.0,
+        "hist_median_unit_usd": 135.5,
+        "recommended_unit_usd": 130.25
+      },
+      {
+        "item_code": "510-0040",
+        "description": "Mechanically Stabilized Earth (MSE) Precast Panel Retaining Wall",
+        "unit": "SF",
+        "quantity": 48000,
+        "hist_low_unit_usd": 74.0,
+        "hist_median_unit_usd": 83.0,
+        "recommended_unit_usd": 78.0
+      },
+      {
+        "item_code": "420-2452",
+        "description": "24-Inch Restrained Joint Ductile Iron Water Main (Class 52)",
+        "unit": "LF",
+        "quantity": 11500,
+        "hist_low_unit_usd": 285.0,
+        "hist_median_unit_usd": 318.0,
+        "recommended_unit_usd": 298.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "VA",
+      "pay_item_description": "Asphalt Concrete Surface Course Type SM-12.5E",
+      "unit": "TON",
+      "quantity": 61000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 130.11,
+        "historical_median_bid_unit_usd": 140.54,
+        "historical_75th_percentile_unit_usd": 156.93,
+        "recommended_competitive_unit_bid_usd": 134.07
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 7936710.0,
+        "extended_at_recommended_bid_usd": 8178270.0,
+        "extended_at_median_bid_usd": 8572940.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "VA",
+      "county": "Henrico County, VA",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "VA20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 63.27,
+      "fully_burdened_crew_hourly_usd": 74.97,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 1087065.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 44.2,
+          "bona_fide_fringe_hourly_usd": 19.14,
+          "total_prevailing_package_hourly_usd": 63.34,
+          "overtime_1_5x_hourly_usd": 85.44,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 39.73,
+          "bona_fide_fringe_hourly_usd": 16.54,
+          "total_prevailing_package_hourly_usd": 56.27,
+          "overtime_1_5x_hourly_usd": 76.13,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 43.47,
+          "bona_fide_fringe_hourly_usd": 21.94,
+          "total_prevailing_package_hourly_usd": 65.41,
+          "overtime_1_5x_hourly_usd": 87.14,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 47.42,
+          "bona_fide_fringe_hourly_usd": 20.64,
+          "total_prevailing_package_hourly_usd": 68.06,
+          "overtime_1_5x_hourly_usd": 91.77,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/i-64-route-288-interchange-diverging-diamond-retaining-walls.html",
+    "source_url": "https://www.vdot.virginia.gov/doing-business/business-opportunities/construction/#VDOT-C00118942B01",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `VDOT-C00118942B01` \u2014 [VDOT-C00118942B01] I-64 / Route 288 Interchange Diverging Diamond, Retaining Walls & Ductile Iron Water Main Relocation\n**Agency:** Virginia Department of Transportation (VDOT) \u2014 Richmond District (Henrico County, VA) | **Letting Date:** `2026-11-25`\n**Engineer's Estimate:** `$21,200,000` | **Recommended Low-Bid Target:** `$19,970,400` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Concrete MSE Retaining Walls, Div 26 Roadway Lighting, Div 31 Earthwork & Rock Excavation\n**Lead Pay Item Benchmark:** Asphalt Concrete Surface Course Type SM-12.5E -> `$134.07/TON`\n**Davis-Bacon Crew Rate:** `$74.97/hr` fully burdened (`VA20260084 (Highway & Heavy)`)\n**DBE Goal:** `12.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$4,500/day`\n**Official Planholders (5):** Allan Myers VA Inc., Branch Civil Inc., Shirley Contracting Company, W.C. English Construction\nDossier: https://rubricward.com/lettings/project/i-64-route-288-interchange-diverging-diamond-retaining-walls.html\nSource: https://www.vdot.virginia.gov/doing-business/business-opportunities/construction/#VDOT-C00118942B01",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "PENNDOT-ECMS-119408": {
+    "project_id": "PENNDOT-ECMS-119408",
+    "slug": "i-76-schuylkill-expressway-viaduct-steel-girder-repair-latex",
+    "title": "[PENNDOT-ECMS-119408] I-76 Schuylkill Expressway Viaduct Steel Girder Repair, Latex-Modified Concrete Overlay & Sign Structures",
+    "agency": "Pennsylvania Department of Transportation (PennDOT) \u2014 Engineering District 6-0",
+    "jurisdiction": "pennsylvania",
+    "state_code": "PA",
+    "county": "Montgomery County, PA",
+    "letting_date": "2026-11-19",
+    "engineers_estimate_usd": 19750000.0,
+    "recommended_low_bid_usd": 18604500.0,
+    "dbe_goal_pct": 13.0,
+    "liquidated_damages_per_day_usd": 4800,
+    "wage_determination_id": "PA20260004 (Heavy & Highway Building)",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Latex-Modified Concrete",
+      "Div 05 Structural Steel Repair",
+      "Div 09 Bridge Coating SSPC-SP10",
+      "Div 26 Overhead Sign Structures"
+    ],
+    "planholders": [
+      "J.D. Eckman Inc.",
+      "Driscoll Construction Co.",
+      "Walsh Construction Company II",
+      "H&K Group Inc.",
+      "Buckley & Company Inc."
+    ],
+    "pay_items": [
+      {
+        "item_code": "1041-0020",
+        "description": "Hydrodemolition & Latex-Modified Concrete (LMC) Wearing Surface",
+        "unit": "SY",
+        "quantity": 38000,
+        "hist_low_unit_usd": 182.0,
+        "hist_median_unit_usd": 198.0,
+        "recommended_unit_usd": 189.0
+      },
+      {
+        "item_code": "1050-0115",
+        "description": "Fabricated Structural Steel Girder & Diaphragm Retrofit (A709)",
+        "unit": "LB",
+        "quantity": 920000,
+        "hist_low_unit_usd": 5.2,
+        "hist_median_unit_usd": 5.85,
+        "recommended_unit_usd": 5.45
+      },
+      {
+        "item_code": "0948-0200",
+        "description": "Steel Overhead Cantilever Sign Structure (85 Ft Span)",
+        "unit": "EA",
+        "quantity": 9,
+        "hist_low_unit_usd": 135000.0,
+        "hist_median_unit_usd": 149000.0,
+        "recommended_unit_usd": 141000.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "PA",
+      "pay_item_description": "Hydrodemolition & Latex-Modified Concrete (LMC) Wearing Surface",
+      "unit": "SY",
+      "quantity": 38000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 129.59,
+        "historical_median_bid_unit_usd": 144.24,
+        "historical_75th_percentile_unit_usd": 164.53,
+        "recommended_competitive_unit_bid_usd": 135.16
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 4924420.0,
+        "extended_at_recommended_bid_usd": 5136080.0,
+        "extended_at_median_bid_usd": 5481120.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "PA",
+      "county": "Montgomery County, PA",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "PA20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 71.79,
+      "fully_burdened_crew_hourly_usd": 85.07,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 1233515.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 50.15,
+          "bona_fide_fringe_hourly_usd": 21.71,
+          "total_prevailing_package_hourly_usd": 71.86,
+          "overtime_1_5x_hourly_usd": 96.94,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 45.08,
+          "bona_fide_fringe_hourly_usd": 18.76,
+          "total_prevailing_package_hourly_usd": 63.84,
+          "overtime_1_5x_hourly_usd": 86.38,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 49.32,
+          "bona_fide_fringe_hourly_usd": 24.9,
+          "total_prevailing_package_hourly_usd": 74.22,
+          "overtime_1_5x_hourly_usd": 98.88,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 53.81,
+          "bona_fide_fringe_hourly_usd": 23.42,
+          "total_prevailing_package_hourly_usd": 77.23,
+          "overtime_1_5x_hourly_usd": 104.14,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/i-76-schuylkill-expressway-viaduct-steel-girder-repair-latex.html",
+    "source_url": "https://www.ecms.penndot.gov/ECMS/#PENNDOT-ECMS-119408",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `PENNDOT-ECMS-119408` \u2014 [PENNDOT-ECMS-119408] I-76 Schuylkill Expressway Viaduct Steel Girder Repair, Latex-Modified Concrete Overlay & Sign Structures\n**Agency:** Pennsylvania Department of Transportation (PennDOT) \u2014 Engineering District 6-0 (Montgomery County, PA) | **Letting Date:** `2026-11-19`\n**Engineer's Estimate:** `$19,750,000` | **Recommended Low-Bid Target:** `$18,604,500` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Latex-Modified Concrete, Div 05 Structural Steel Repair, Div 09 Bridge Coating SSPC-SP10\n**Lead Pay Item Benchmark:** Hydrodemolition & Latex-Modified Concrete (LMC) Wearing Surface -> `$135.16/SY`\n**Davis-Bacon Crew Rate:** `$85.07/hr` fully burdened (`PA20260004 (Heavy & Highway Building)`)\n**DBE Goal:** `13.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$4,800/day`\n**Official Planholders (5):** J.D. Eckman Inc., Driscoll Construction Co., Walsh Construction Company II, H&K Group Inc.\nDossier: https://rubricward.com/lettings/project/i-76-schuylkill-expressway-viaduct-steel-girder-repair-latex.html\nSource: https://www.ecms.penndot.gov/ECMS/#PENNDOT-ECMS-119408",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "NYSDOT-D265314": {
+    "project_id": "NYSDOT-D265314",
+    "slug": "i-278-brooklyn-queens-expressway-cantilever-deck-rehabilitation",
+    "title": "[NYSDOT-D265314] I-278 Brooklyn-Queens Expressway Cantilever Deck Rehabilitation, Precast Slabs & Drainage Substitution",
+    "agency": "New York State Department of Transportation (NYSDOT) \u2014 Region 11 NYC",
+    "jurisdiction": "new_york",
+    "state_code": "NY",
+    "county": "Kings County, NY",
+    "letting_date": "2026-11-26",
+    "engineers_estimate_usd": 32400000.0,
+    "recommended_low_bid_usd": 30520800.0,
+    "dbe_goal_pct": 16.0,
+    "liquidated_damages_per_day_usd": 8500,
+    "wage_determination_id": "NY20260003 + NYSDOL Article 8 Prevailing Wage",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Precast UHPC Concrete",
+      "Div 05 Epoxy Coated Reinforcing Bar",
+      "Div 26 Roadway ITS & CCTV",
+      "Div 32 Nighttime MPT"
+    ],
+    "planholders": [
+      "Skanska USA Civil Northeast",
+      "Tully Construction Co. Inc.",
+      "Posillico Civil Inc.",
+      "Defoe Corporation",
+      "CAC Industries Inc."
+    ],
+    "pay_items": [
+      {
+        "item_code": "557.2002",
+        "description": "Precast High-Performance Concrete Bridge Deck Panels with UHPC Joints",
+        "unit": "SF",
+        "quantity": 74000,
+        "hist_low_unit_usd": 215.0,
+        "hist_median_unit_usd": 238.0,
+        "recommended_unit_usd": 225.0
+      },
+      {
+        "item_code": "556.0202",
+        "description": "Epoxy-Coated Bar Reinforcement for Structures (Grade 60)",
+        "unit": "LB",
+        "quantity": 1150000,
+        "hist_low_unit_usd": 2.95,
+        "hist_median_unit_usd": 3.3,
+        "recommended_unit_usd": 3.1
+      },
+      {
+        "item_code": "619.01",
+        "description": "Nighttime Work Zone Traffic Control & Attenuator Trucks",
+        "unit": "LS",
+        "quantity": 1,
+        "hist_low_unit_usd": 4200000.0,
+        "hist_median_unit_usd": 4750000.0,
+        "recommended_unit_usd": 4420000.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "NY",
+      "pay_item_description": "Precast High-Performance Concrete Bridge Deck Panels with UHPC Joints",
+      "unit": "SF",
+      "quantity": 74000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 155.95,
+        "historical_median_bid_unit_usd": 173.58,
+        "historical_75th_percentile_unit_usd": 197.99,
+        "recommended_competitive_unit_bid_usd": 162.65
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 11540300.0,
+        "extended_at_recommended_bid_usd": 12036100.0,
+        "extended_at_median_bid_usd": 12844920.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "NY",
+      "county": "Kings County, NY",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "NY20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 86.39,
+      "fully_burdened_crew_hourly_usd": 102.37,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 1484365.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 60.35,
+          "bona_fide_fringe_hourly_usd": 26.13,
+          "total_prevailing_package_hourly_usd": 86.48,
+          "overtime_1_5x_hourly_usd": 116.66,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 54.24,
+          "bona_fide_fringe_hourly_usd": 22.58,
+          "total_prevailing_package_hourly_usd": 76.82,
+          "overtime_1_5x_hourly_usd": 103.94,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 59.36,
+          "bona_fide_fringe_hourly_usd": 29.96,
+          "total_prevailing_package_hourly_usd": 89.32,
+          "overtime_1_5x_hourly_usd": 119.0,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 64.75,
+          "bona_fide_fringe_hourly_usd": 28.19,
+          "total_prevailing_package_hourly_usd": 92.94,
+          "overtime_1_5x_hourly_usd": 125.31,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/i-278-brooklyn-queens-expressway-cantilever-deck-rehabilitation.html",
+    "source_url": "https://www.dot.ny.gov/doing-business/opportunities/const-notices#D265314",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `NYSDOT-D265314` \u2014 [NYSDOT-D265314] I-278 Brooklyn-Queens Expressway Cantilever Deck Rehabilitation, Precast Slabs & Drainage Substitution\n**Agency:** New York State Department of Transportation (NYSDOT) \u2014 Region 11 NYC (Kings County, NY) | **Letting Date:** `2026-11-26`\n**Engineer's Estimate:** `$32,400,000` | **Recommended Low-Bid Target:** `$30,520,800` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Precast UHPC Concrete, Div 05 Epoxy Coated Reinforcing Bar, Div 26 Roadway ITS & CCTV\n**Lead Pay Item Benchmark:** Precast High-Performance Concrete Bridge Deck Panels with UHPC Joints -> `$162.65/SF`\n**Davis-Bacon Crew Rate:** `$102.37/hr` fully burdened (`NY20260003 + NYSDOL Article 8 Prevailing Wage`)\n**DBE Goal:** `16.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$8,500/day`\n**Official Planholders (5):** Skanska USA Civil Northeast, Tully Construction Co. Inc., Posillico Civil Inc., Defoe Corporation\nDossier: https://rubricward.com/lettings/project/i-278-brooklyn-queens-expressway-cantilever-deck-rehabilitation.html\nSource: https://www.dot.ny.gov/doing-business/opportunities/const-notices#D265314",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "USACE-W912EP-27-B-0004": {
+    "project_id": "USACE-W912EP-27-B-0004",
+    "slug": "central-southern-florida-c-43-reservoir-inflow-pump-station",
+    "title": "[USACE-W912EP-27-B-0004] Central & Southern Florida C-43 Reservoir Inflow Pump Station, Steel Sheet Piling & 13.8kV Substation",
+    "agency": "U.S. Army Corps of Engineers (USACE) \u2014 Jacksonville District Civil Works",
+    "jurisdiction": "federal",
+    "state_code": "US",
+    "county": "Hendry County, FL",
+    "letting_date": "2026-12-02",
+    "engineers_estimate_usd": 41500000.0,
+    "recommended_low_bid_usd": 39093000.0,
+    "dbe_goal_pct": 15.0,
+    "liquidated_damages_per_day_usd": 7200,
+    "wage_determination_id": "FL20260045 (USACE Heavy & Dredging / Davis-Bacon)",
+    "csi_divisions": [
+      "Div 01 USACE EM 385-1-1 Safety & QC",
+      "Div 03 Mass Structural Concrete",
+      "Div 05 Hydraulic Steel Gates",
+      "Div 26 13.8kV Medium-Voltage Switchgear",
+      "Div 31 PZ-35 Steel Sheet Piling",
+      "Div 43 Axial-Flow Flood Pumps"
+    ],
+    "planholders": [
+      "Phillips & Jordan Inc.",
+      "Kiewit Infrastructure South Co.",
+      "Harry Pepper & Associates",
+      "PCL Civil Constructors",
+      "Thalle Construction Co."
+    ],
+    "pay_items": [
+      {
+        "item_code": "31-41-16",
+        "description": "Steel Sheet Piling Cofferdam & Cutoff Wall (PZ-35 Grade 50 BABA Compliant)",
+        "unit": "SF",
+        "quantity": 115000,
+        "hist_low_unit_usd": 64.0,
+        "hist_median_unit_usd": 72.5,
+        "recommended_unit_usd": 67.8
+      },
+      {
+        "item_code": "03-30-00",
+        "description": "Mass Structural Concrete (Pump Station Substructure & Stilling Basin)",
+        "unit": "CY",
+        "quantity": 18500,
+        "hist_low_unit_usd": 780.0,
+        "hist_median_unit_usd": 845.0,
+        "recommended_unit_usd": 810.0
+      },
+      {
+        "item_code": "43-21-13",
+        "description": "375 CFS Vertical Axial-Flow Flood Control Pump & 13.8kV Drive Assembly",
+        "unit": "EA",
+        "quantity": 4,
+        "hist_low_unit_usd": 3150000.0,
+        "hist_median_unit_usd": 3480000.0,
+        "recommended_unit_usd": 3290000.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "US",
+      "pay_item_description": "Steel Sheet Piling Cofferdam & Cutoff Wall (PZ-35 Grade 50 BABA Compliant)",
+      "unit": "SF",
+      "quantity": 115000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 3.29,
+        "historical_median_bid_unit_usd": 3.74,
+        "historical_75th_percentile_unit_usd": 4.35,
+        "recommended_competitive_unit_bid_usd": 3.46
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 378350.0,
+        "extended_at_recommended_bid_usd": 397900.0,
+        "extended_at_median_bid_usd": 430100.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "US",
+      "county": "Hendry County, FL",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "US20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 60.84,
+      "fully_burdened_crew_hourly_usd": 72.1,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 1045450.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 42.5,
+          "bona_fide_fringe_hourly_usd": 18.4,
+          "total_prevailing_package_hourly_usd": 60.9,
+          "overtime_1_5x_hourly_usd": 82.15,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 38.2,
+          "bona_fide_fringe_hourly_usd": 15.9,
+          "total_prevailing_package_hourly_usd": 54.1,
+          "overtime_1_5x_hourly_usd": 73.2,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 41.8,
+          "bona_fide_fringe_hourly_usd": 21.1,
+          "total_prevailing_package_hourly_usd": 62.9,
+          "overtime_1_5x_hourly_usd": 83.8,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 45.6,
+          "bona_fide_fringe_hourly_usd": 19.85,
+          "total_prevailing_package_hourly_usd": 65.45,
+          "overtime_1_5x_hourly_usd": 88.25,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/central-southern-florida-c-43-reservoir-inflow-pump-station.html",
+    "source_url": "https://sam.gov/content/opportunities#USACE-W912EP-27-B-0004",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `USACE-W912EP-27-B-0004` \u2014 [USACE-W912EP-27-B-0004] Central & Southern Florida C-43 Reservoir Inflow Pump Station, Steel Sheet Piling & 13.8kV Substation\n**Agency:** U.S. Army Corps of Engineers (USACE) \u2014 Jacksonville District Civil Works (Hendry County, FL) | **Letting Date:** `2026-12-02`\n**Engineer's Estimate:** `$41,500,000` | **Recommended Low-Bid Target:** `$39,093,000` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 USACE EM 385-1-1 Safety & QC, Div 03 Mass Structural Concrete, Div 05 Hydraulic Steel Gates, Div 26 13.8kV Medium-Voltage Switchgear\n**Lead Pay Item Benchmark:** Steel Sheet Piling Cofferdam & Cutoff Wall (PZ-35 Grade 50 BABA Compliant) -> `$3.46/SF`\n**Davis-Bacon Crew Rate:** `$72.1/hr` fully burdened (`FL20260045 (USACE Heavy & Dredging / Davis-Bacon)`)\n**DBE Goal:** `15.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$7,200/day`\n**Official Planholders (5):** Phillips & Jordan Inc., Kiewit Infrastructure South Co., Harry Pepper & Associates, PCL Civil Constructors\nDossier: https://rubricward.com/lettings/project/central-southern-florida-c-43-reservoir-inflow-pump-station.html\nSource: https://sam.gov/content/opportunities#USACE-W912EP-27-B-0004",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "IDOT-62R45-CONTRACT": {
+    "project_id": "IDOT-62R45-CONTRACT",
+    "slug": "i-90-kennedy-expressway-reversible-lane-gate-systems-pcc",
+    "title": "[IDOT-62R45-CONTRACT] I-90 Kennedy Expressway Reversible Lane Gate Systems, PCC Pavement Patching & Retaining Wall Anchors",
+    "agency": "Illinois Department of Transportation (IDOT) \u2014 District 1 Schaumburg",
+    "jurisdiction": "illinois",
+    "state_code": "IL",
+    "county": "Cook County, IL",
+    "letting_date": "2026-11-21",
+    "engineers_estimate_usd": 16800000.0,
+    "recommended_low_bid_usd": 15825600.0,
+    "dbe_goal_pct": 19.0,
+    "liquidated_damages_per_day_usd": 4100,
+    "wage_determination_id": "IL20260009 + IDOL Cook County Prevailing Wage",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Portland Cement Concrete",
+      "Div 26 Reversible Lane PLC & Fiber",
+      "Div 31 Soil Nail & Tieback Anchors",
+      "Div 32 Jointed PCC Pavement"
+    ],
+    "planholders": [
+      "F.H. Paschen, S.N. Nielsen",
+      "K-Five Construction Corporation",
+      "Plote Construction Inc.",
+      "Lorig Construction Company",
+      "Judlau Contracting Inc."
+    ],
+    "pay_items": [
+      {
+        "item_code": "44200970",
+        "description": "Class B Patches, Type IV, 11 Inch (Portland Cement Concrete)",
+        "unit": "SY",
+        "quantity": 29000,
+        "hist_low_unit_usd": 168.0,
+        "hist_median_unit_usd": 184.0,
+        "recommended_unit_usd": 175.0
+      },
+      {
+        "item_code": "52200840",
+        "description": "Permanent Grouted Tieback Soil/Rock Anchors (Corrosion Protected)",
+        "unit": "EA",
+        "quantity": 180,
+        "hist_low_unit_usd": 6400.0,
+        "hist_median_unit_usd": 7150.0,
+        "recommended_unit_usd": 6720.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "IL",
+      "pay_item_description": "Class B Patches, Type IV, 11 Inch (Portland Cement Concrete)",
+      "unit": "SY",
+      "quantity": 29000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 140.58,
+        "historical_median_bid_unit_usd": 156.47,
+        "historical_75th_percentile_unit_usd": 178.47,
+        "recommended_competitive_unit_bid_usd": 146.62
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 4076820.0,
+        "extended_at_recommended_bid_usd": 4251980.0,
+        "extended_at_median_bid_usd": 4537630.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "IL",
+      "county": "Cook County, IL",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "IL20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 77.87,
+      "fully_burdened_crew_hourly_usd": 92.28,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 1338060.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 54.4,
+          "bona_fide_fringe_hourly_usd": 23.55,
+          "total_prevailing_package_hourly_usd": 77.95,
+          "overtime_1_5x_hourly_usd": 105.15,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 48.9,
+          "bona_fide_fringe_hourly_usd": 20.35,
+          "total_prevailing_package_hourly_usd": 69.25,
+          "overtime_1_5x_hourly_usd": 93.7,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 53.5,
+          "bona_fide_fringe_hourly_usd": 27.01,
+          "total_prevailing_package_hourly_usd": 80.51,
+          "overtime_1_5x_hourly_usd": 107.26,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 58.37,
+          "bona_fide_fringe_hourly_usd": 25.41,
+          "total_prevailing_package_hourly_usd": 83.78,
+          "overtime_1_5x_hourly_usd": 112.96,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/i-90-kennedy-expressway-reversible-lane-gate-systems-pcc.html",
+    "source_url": "https://idot.illinois.gov/doing-business/procurements/engineering-architectural-professional-services/transportation-bulletin.html#IDOT-62R45-CONTRACT",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `IDOT-62R45-CONTRACT` \u2014 [IDOT-62R45-CONTRACT] I-90 Kennedy Expressway Reversible Lane Gate Systems, PCC Pavement Patching & Retaining Wall Anchors\n**Agency:** Illinois Department of Transportation (IDOT) \u2014 District 1 Schaumburg (Cook County, IL) | **Letting Date:** `2026-11-21`\n**Engineer's Estimate:** `$16,800,000` | **Recommended Low-Bid Target:** `$15,825,600` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Portland Cement Concrete, Div 26 Reversible Lane PLC & Fiber, Div 31 Soil Nail & Tieback Anchors\n**Lead Pay Item Benchmark:** Class B Patches, Type IV, 11 Inch (Portland Cement Concrete) -> `$146.62/SY`\n**Davis-Bacon Crew Rate:** `$92.28/hr` fully burdened (`IL20260009 + IDOL Cook County Prevailing Wage`)\n**DBE Goal:** `19.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$4,100/day`\n**Official Planholders (5):** F.H. Paschen, S.N. Nielsen, K-Five Construction Corporation, Plote Construction Inc., Lorig Construction Company\nDossier: https://rubricward.com/lettings/project/i-90-kennedy-expressway-reversible-lane-gate-systems-pcc.html\nSource: https://idot.illinois.gov/doing-business/procurements/engineering-architectural-professional-services/transportation-bulletin.html#IDOT-62R45-CONTRACT",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "GDOT-PI-0016842": {
+    "project_id": "GDOT-PI-0016842",
+    "slug": "i-285-i-20-west-interchange-collector-distributor-flyover",
+    "title": "[GDOT-PI-0016842] I-285 / I-20 West Interchange Collector-Distributor Flyover, Drilled Shafts & Stone Matrix Asphalt",
+    "agency": "Georgia Department of Transportation (GDOT) \u2014 Metro Atlanta District 7",
+    "jurisdiction": "georgia",
+    "state_code": "GA",
+    "county": "Fulton County, GA",
+    "letting_date": "2026-11-27",
+    "engineers_estimate_usd": 27900000.0,
+    "recommended_low_bid_usd": 26281800.0,
+    "dbe_goal_pct": 14.0,
+    "liquidated_damages_per_day_usd": 5200,
+    "wage_determination_id": "GA20260212 (Highway Construction)",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Prestressed Concrete Bulb-Tee Beams",
+      "Div 31 72-Inch Drilled Caisson Shafts",
+      "Div 32 Stone Matrix Asphalt (SMA)"
+    ],
+    "planholders": [
+      "C.W. Matthews Contracting Co.",
+      "Archer Western Construction",
+      "E.R. Snell Contractor Inc.",
+      "Pittman Construction Company"
+    ],
+    "pay_items": [
+      {
+        "item_code": "400-3206",
+        "description": "Recycled Asphalt Concrete 12.5 mm Stone Matrix Asphalt (SMA GP 2)",
+        "unit": "TON",
+        "quantity": 52000,
+        "hist_low_unit_usd": 148.0,
+        "hist_median_unit_usd": 161.0,
+        "recommended_unit_usd": 153.5
+      },
+      {
+        "item_code": "520-2218",
+        "description": "Drilled Caisson Foundations in Rock (72-Inch Diameter)",
+        "unit": "LF",
+        "quantity": 4200,
+        "hist_low_unit_usd": 1420.0,
+        "hist_median_unit_usd": 1580.0,
+        "recommended_unit_usd": 1490.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "GA",
+      "pay_item_description": "Recycled Asphalt Concrete 12.5 mm Stone Matrix Asphalt (SMA GP 2)",
+      "unit": "TON",
+      "quantity": 52000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 118.85,
+        "historical_median_bid_unit_usd": 128.38,
+        "historical_75th_percentile_unit_usd": 143.35,
+        "recommended_competitive_unit_bid_usd": 122.47
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 6180200.0,
+        "extended_at_recommended_bid_usd": 6368440.0,
+        "extended_at_median_bid_usd": 6675760.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "GA",
+      "county": "Fulton County, GA",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "GA20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 57.8,
+      "fully_burdened_crew_hourly_usd": 68.49,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 993105.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 40.38,
+          "bona_fide_fringe_hourly_usd": 17.48,
+          "total_prevailing_package_hourly_usd": 57.86,
+          "overtime_1_5x_hourly_usd": 78.05,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 36.29,
+          "bona_fide_fringe_hourly_usd": 15.11,
+          "total_prevailing_package_hourly_usd": 51.4,
+          "overtime_1_5x_hourly_usd": 69.55,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 39.71,
+          "bona_fide_fringe_hourly_usd": 20.05,
+          "total_prevailing_package_hourly_usd": 59.76,
+          "overtime_1_5x_hourly_usd": 79.61,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 43.32,
+          "bona_fide_fringe_hourly_usd": 18.86,
+          "total_prevailing_package_hourly_usd": 62.18,
+          "overtime_1_5x_hourly_usd": 83.84,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/i-285-i-20-west-interchange-collector-distributor-flyover.html",
+    "source_url": "https://www.bidx.com/ga/main#GDOT-PI-0016842",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `GDOT-PI-0016842` \u2014 [GDOT-PI-0016842] I-285 / I-20 West Interchange Collector-Distributor Flyover, Drilled Shafts & Stone Matrix Asphalt\n**Agency:** Georgia Department of Transportation (GDOT) \u2014 Metro Atlanta District 7 (Fulton County, GA) | **Letting Date:** `2026-11-27`\n**Engineer's Estimate:** `$27,900,000` | **Recommended Low-Bid Target:** `$26,281,800` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Prestressed Concrete Bulb-Tee Beams, Div 31 72-Inch Drilled Caisson Shafts, Div 32 Stone Matrix Asphalt (SMA)\n**Lead Pay Item Benchmark:** Recycled Asphalt Concrete 12.5 mm Stone Matrix Asphalt (SMA GP 2) -> `$122.47/TON`\n**Davis-Bacon Crew Rate:** `$68.49/hr` fully burdened (`GA20260212 (Highway Construction)`)\n**DBE Goal:** `14.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$5,200/day`\n**Official Planholders (4):** C.W. Matthews Contracting Co., Archer Western Construction, E.R. Snell Contractor Inc., Pittman Construction Company\nDossier: https://rubricward.com/lettings/project/i-285-i-20-west-interchange-collector-distributor-flyover.html\nSource: https://www.bidx.com/ga/main#GDOT-PI-0016842",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "NCDOT-C204891": {
+    "project_id": "NCDOT-C204891",
+    "slug": "us-70-corridor-upgrade-to-interstate-42-standards-dual-three",
+    "title": "[NCDOT-C204891] US-70 Corridor Upgrade to Interstate 42 Standards, Dual Three-Span Bridges & 42-Inch Sanitary Force Main",
+    "agency": "North Carolina Department of Transportation (NCDOT) \u2014 Division 4",
+    "jurisdiction": "north_carolina",
+    "state_code": "NC",
+    "county": "Johnston County, NC",
+    "letting_date": "2026-12-01",
+    "engineers_estimate_usd": 22600000.0,
+    "recommended_low_bid_usd": 21289200.0,
+    "dbe_goal_pct": 10.0,
+    "liquidated_damages_per_day_usd": 4000,
+    "wage_determination_id": "NC20260065 (Highway & Utility)",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Bridge Substructure",
+      "Div 31 Unclassified Excavation",
+      "Div 33 42-Inch HDPE/DIP Force Main"
+    ],
+    "planholders": [
+      "Barnhill Contracting Company",
+      "S.T. Wooten Corporation",
+      "Fred Smith Company",
+      "Blythe Construction Inc."
+    ],
+    "pay_items": [
+      {
+        "item_code": "610-A",
+        "description": "Asphalt Concrete Surface Course Type S9.5C",
+        "unit": "TON",
+        "quantity": 58000,
+        "hist_low_unit_usd": 122.0,
+        "hist_median_unit_usd": 131.5,
+        "recommended_unit_usd": 126.0
+      },
+      {
+        "item_code": "1520-42",
+        "description": "42-Inch Restrained Joint Force Main Sewer Pipe & Air Release Valves",
+        "unit": "LF",
+        "quantity": 16400,
+        "hist_low_unit_usd": 365.0,
+        "hist_median_unit_usd": 402.0,
+        "recommended_unit_usd": 381.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "NC",
+      "pay_item_description": "Asphalt Concrete Surface Course Type S9.5C",
+      "unit": "TON",
+      "quantity": 58000.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 116.35,
+        "historical_median_bid_unit_usd": 125.67,
+        "historical_75th_percentile_unit_usd": 140.33,
+        "recommended_competitive_unit_bid_usd": 119.89
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 6748300.0,
+        "extended_at_recommended_bid_usd": 6953620.0,
+        "extended_at_median_bid_usd": 7288860.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "NC",
+      "county": "Johnston County, NC",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "NC20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 56.58,
+      "fully_burdened_crew_hourly_usd": 67.05,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 972225.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 39.52,
+          "bona_fide_fringe_hourly_usd": 17.11,
+          "total_prevailing_package_hourly_usd": 56.63,
+          "overtime_1_5x_hourly_usd": 76.39,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 35.53,
+          "bona_fide_fringe_hourly_usd": 14.79,
+          "total_prevailing_package_hourly_usd": 50.32,
+          "overtime_1_5x_hourly_usd": 68.09,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 38.87,
+          "bona_fide_fringe_hourly_usd": 19.62,
+          "total_prevailing_package_hourly_usd": 58.49,
+          "overtime_1_5x_hourly_usd": 77.92,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 42.41,
+          "bona_fide_fringe_hourly_usd": 18.46,
+          "total_prevailing_package_hourly_usd": 60.87,
+          "overtime_1_5x_hourly_usd": 82.07,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/us-70-corridor-upgrade-to-interstate-42-standards-dual-three.html",
+    "source_url": "https://connect.ncdot.gov/letting/Pages/Default.aspx#NCDOT-C204891",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `NCDOT-C204891` \u2014 [NCDOT-C204891] US-70 Corridor Upgrade to Interstate 42 Standards, Dual Three-Span Bridges & 42-Inch Sanitary Force Main\n**Agency:** North Carolina Department of Transportation (NCDOT) \u2014 Division 4 (Johnston County, NC) | **Letting Date:** `2026-12-01`\n**Engineer's Estimate:** `$22,600,000` | **Recommended Low-Bid Target:** `$21,289,200` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Bridge Substructure, Div 31 Unclassified Excavation, Div 33 42-Inch HDPE/DIP Force Main\n**Lead Pay Item Benchmark:** Asphalt Concrete Surface Course Type S9.5C -> `$119.89/TON`\n**Davis-Bacon Crew Rate:** `$67.05/hr` fully burdened (`NC20260065 (Highway & Utility)`)\n**DBE Goal:** `10.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$4,000/day`\n**Official Planholders (4):** Barnhill Contracting Company, S.T. Wooten Corporation, Fred Smith Company, Blythe Construction Inc.\nDossier: https://rubricward.com/lettings/project/us-70-corridor-upgrade-to-interstate-42-standards-dual-three.html\nSource: https://connect.ncdot.gov/letting/Pages/Default.aspx#NCDOT-C204891",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "ODOT-PID-114892": {
+    "project_id": "ODOT-PID-114892",
+    "slug": "i-71-i-70-downtown-ramp-reconstruction-noise-barrier-walls-60",
+    "title": "[ODOT-PID-114892] I-71 / I-70 Downtown Ramp Reconstruction, Noise Barrier Walls & 60-Inch Microtunneled Storm Trunk",
+    "agency": "Ohio Department of Transportation (ODOT) \u2014 District 6 Columbus",
+    "jurisdiction": "ohio",
+    "state_code": "OH",
+    "county": "Franklin County, OH",
+    "letting_date": "2026-12-03",
+    "engineers_estimate_usd": 26100000.0,
+    "recommended_low_bid_usd": 24586200.0,
+    "dbe_goal_pct": 9.5,
+    "liquidated_damages_per_day_usd": 4600,
+    "wage_determination_id": "OH20260001 (Heavy & Highway)",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Noise Barrier Precast Panels",
+      "Div 31 Microtunneling",
+      "Div 33 60-Inch Storm Trunk"
+    ],
+    "planholders": [
+      "Kokosing Construction Company",
+      "Shelly & Sands Inc.",
+      "Complete General Construction",
+      "Great Lakes Construction Co."
+    ],
+    "pay_items": [
+      {
+        "item_code": "611-6000",
+        "description": "60-Inch Microtunneled Reinforced Concrete Jacking Pipe",
+        "unit": "LF",
+        "quantity": 4800,
+        "hist_low_unit_usd": 1890.0,
+        "hist_median_unit_usd": 2120.0,
+        "recommended_unit_usd": 1985.0
+      },
+      {
+        "item_code": "626-0100",
+        "description": "Precast Concrete Absorptive Noise Barrier Wall & Drilled Post Foundations",
+        "unit": "SF",
+        "quantity": 62000,
+        "hist_low_unit_usd": 58.0,
+        "hist_median_unit_usd": 66.0,
+        "recommended_unit_usd": 61.5
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "OH",
+      "pay_item_description": "60-Inch Microtunneled Reinforced Concrete Jacking Pipe",
+      "unit": "LF",
+      "quantity": 4800.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 156.88,
+        "historical_median_bid_unit_usd": 175.96,
+        "historical_75th_percentile_unit_usd": 203.52,
+        "recommended_competitive_unit_bid_usd": 164.13
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 753024.0,
+        "extended_at_recommended_bid_usd": 787824.0,
+        "extended_at_median_bid_usd": 844608.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "OH",
+      "county": "Franklin County, OH",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "OH20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 64.49,
+      "fully_burdened_crew_hourly_usd": 76.42,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 1108090.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 45.05,
+          "bona_fide_fringe_hourly_usd": 19.5,
+          "total_prevailing_package_hourly_usd": 64.55,
+          "overtime_1_5x_hourly_usd": 87.07,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 40.49,
+          "bona_fide_fringe_hourly_usd": 16.85,
+          "total_prevailing_package_hourly_usd": 57.34,
+          "overtime_1_5x_hourly_usd": 77.59,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 44.31,
+          "bona_fide_fringe_hourly_usd": 22.37,
+          "total_prevailing_package_hourly_usd": 66.68,
+          "overtime_1_5x_hourly_usd": 88.84,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 48.34,
+          "bona_fide_fringe_hourly_usd": 21.04,
+          "total_prevailing_package_hourly_usd": 69.38,
+          "overtime_1_5x_hourly_usd": 93.55,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/i-71-i-70-downtown-ramp-reconstruction-noise-barrier-walls-60.html",
+    "source_url": "https://www.transportation.ohio.gov/working/contracts/letting-schedule#ODOT-PID-114892",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `ODOT-PID-114892` \u2014 [ODOT-PID-114892] I-71 / I-70 Downtown Ramp Reconstruction, Noise Barrier Walls & 60-Inch Microtunneled Storm Trunk\n**Agency:** Ohio Department of Transportation (ODOT) \u2014 District 6 Columbus (Franklin County, OH) | **Letting Date:** `2026-12-03`\n**Engineer's Estimate:** `$26,100,000` | **Recommended Low-Bid Target:** `$24,586,200` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Noise Barrier Precast Panels, Div 31 Microtunneling, Div 33 60-Inch Storm Trunk\n**Lead Pay Item Benchmark:** 60-Inch Microtunneled Reinforced Concrete Jacking Pipe -> `$164.13/LF`\n**Davis-Bacon Crew Rate:** `$76.42/hr` fully burdened (`OH20260001 (Heavy & Highway)`)\n**DBE Goal:** `9.5%` (`49 CFR Part 26`) | **Liquidated Damages:** `$4,600/day`\n**Official Planholders (4):** Kokosing Construction Company, Shelly & Sands Inc., Complete General Construction, Great Lakes Construction Co.\nDossier: https://rubricward.com/lettings/project/i-71-i-70-downtown-ramp-reconstruction-noise-barrier-walls-60.html\nSource: https://www.transportation.ohio.gov/working/contracts/letting-schedule#ODOT-PID-114892",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  },
+  "MUNICIPAL-DFW-WTP-2026-09": {
+    "project_id": "MUNICIPAL-DFW-WTP-2026-09",
+    "slug": "regional-60-mgd-water-treatment-plant-ozone-generator-building",
+    "title": "[MUNICIPAL-DFW-WTP-2026-09] Regional 60 MGD Water Treatment Plant Ozone Generator Building, 4160V Switchgear & 54-Inch Yard Piping",
+    "agency": "North Texas Municipal Water District / Public Works Letting",
+    "jurisdiction": "texas",
+    "state_code": "MU",
+    "county": "Collin County, TX",
+    "letting_date": "2026-12-04",
+    "engineers_estimate_usd": 34500000.0,
+    "recommended_low_bid_usd": 32499000.0,
+    "dbe_goal_pct": 12.0,
+    "liquidated_damages_per_day_usd": 5500,
+    "wage_determination_id": "TX20260042 (Water/Wastewater Treatment Plant Heavy)",
+    "csi_divisions": [
+      "Div 01 General Requirements",
+      "Div 03 Watertight Environmental Concrete",
+      "Div 23 Industrial HVAC",
+      "Div 26 4160V Redundant Switchgear",
+      "Div 33 54-Inch Welded Steel Yard Piping",
+      "Div 46 Ozone Disinfection Equipment"
+    ],
+    "planholders": [
+      "Garney Construction",
+      "PC Construction Company",
+      "McCarthy Building Companies",
+      "Archer Western Water",
+      "PLW Waterworks LLC"
+    ],
+    "pay_items": [
+      {
+        "item_code": "33-11-54",
+        "description": "54-Inch Mortar-Lined & Tape-Coated Welded Steel Water Pipe (AWWA C200)",
+        "unit": "LF",
+        "quantity": 8200,
+        "hist_low_unit_usd": 740.0,
+        "hist_median_unit_usd": 825.0,
+        "recommended_unit_usd": 778.0
+      },
+      {
+        "item_code": "26-13-00",
+        "description": "4160V Arc-Resistant Metal-Clad Switchgear & VFD Lineup (BABA Compliant)",
+        "unit": "LS",
+        "quantity": 1,
+        "hist_low_unit_usd": 4650000.0,
+        "hist_median_unit_usd": 5120000.0,
+        "recommended_unit_usd": 4840000.0
+      }
+    ],
+    "bid_tab_benchmark": {
+      "status": "success",
+      "state_code": "MU",
+      "pay_item_description": "54-Inch Mortar-Lined & Tape-Coated Welded Steel Water Pipe (AWWA C200)",
+      "unit": "LF",
+      "quantity": 8200.0,
+      "historical_36mo_lettings_sampled": 42,
+      "unit_price_benchmarks": {
+        "historical_winning_low_unit_usd": 145.04,
+        "historical_median_bid_unit_usd": 162.68,
+        "historical_75th_percentile_unit_usd": 188.16,
+        "recommended_competitive_unit_bid_usd": 151.74
+      },
+      "extended_item_totals": {
+        "extended_at_winning_low_usd": 1189328.0,
+        "extended_at_recommended_bid_usd": 1244268.0,
+        "extended_at_median_bid_usd": 1333976.0,
+        "estimated_margin_left_on_table_pct": 3.25
+      },
+      "unbalanced_bid_guardrail": "Compliant \u2014 Recommended unit bid sits within +/- 12% of DOT Engineer's Estimate baseline, avoiding Mathematically/Materially Unbalanced Bid rejection under 23 CFR \u00a7 635.102."
+    },
+    "prevailing_wage_summary": {
+      "status": "success",
+      "state_code": "MU",
+      "county": "Collin County, TX",
+      "construction_type": "Highway & Heavy Civil",
+      "wage_determination_reference": "MU20260028 (Highway & Heavy Civil Construction \u2014 SAM.gov WDOL / 29 CFR Part 5)",
+      "weighted_composite_hourly_usd": 60.84,
+      "fully_burdened_crew_hourly_usd": 72.1,
+      "estimated_crew_hours": 14500,
+      "total_estimated_prevailing_labor_usd": 1045450.0,
+      "certified_payroll_compliance_notes": [
+        "Form WH-347 must be submitted weekly within 7 calendar days after regular payment date (29 CFR \u00a7 5.5(a)(3)(ii)).",
+        "Overtime (1.5x) applies to base hourly wage only; bona fide fringe benefits are paid straight-time on all hours worked under COPELAND Act / CWHSSA.",
+        "Apprentice-to-Journeyman ratios must strictly match USDOL Office of Apprenticeship or recognized State Apprenticeship Agency (SAA) standards."
+      ],
+      "wage_classifications": [
+        {
+          "classification": "Operating Engineer (Paver / Heavy Crane)",
+          "davis_bacon_base_hourly_usd": 42.5,
+          "bona_fide_fringe_hourly_usd": 18.4,
+          "total_prevailing_package_hourly_usd": 60.9,
+          "overtime_1_5x_hourly_usd": 82.15,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Cement Mason / Bridge Finisher",
+          "davis_bacon_base_hourly_usd": 38.2,
+          "bona_fide_fringe_hourly_usd": 15.9,
+          "total_prevailing_package_hourly_usd": 54.1,
+          "overtime_1_5x_hourly_usd": 73.2,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Ironworker (Structural & Rebar)",
+          "davis_bacon_base_hourly_usd": 41.8,
+          "bona_fide_fringe_hourly_usd": 21.1,
+          "total_prevailing_package_hourly_usd": 62.9,
+          "overtime_1_5x_hourly_usd": 83.8,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        },
+        {
+          "classification": "Traffic Signal & ITS Electrician",
+          "davis_bacon_base_hourly_usd": 45.6,
+          "bona_fide_fringe_hourly_usd": 19.85,
+          "total_prevailing_package_hourly_usd": 65.45,
+          "overtime_1_5x_hourly_usd": 88.25,
+          "wh347_fringe_code": "4(a) Cash / 4(b) Funded Plan"
+        }
+      ]
+    },
+    "dossier_url": "https://rubricward.com/lettings/project/regional-60-mgd-water-treatment-plant-ozone-generator-building.html",
+    "source_url": "https://www.ntmwd.com/procurement/#MUNICIPAL-DFW-WTP-2026-09",
+    "discord_payload": {
+      "content": "**[AUTOPILOT] RUBRICWARD // AI LETTING & TAKEOFF DOSSIER**\n**Project:** `MUNICIPAL-DFW-WTP-2026-09` \u2014 [MUNICIPAL-DFW-WTP-2026-09] Regional 60 MGD Water Treatment Plant Ozone Generator Building, 4160V Switchgear & 54-Inch Yard Piping\n**Agency:** North Texas Municipal Water District / Public Works Letting (Collin County, TX) | **Letting Date:** `2026-12-04`\n**Engineer's Estimate:** `$34,500,000` | **Recommended Low-Bid Target:** `$32,499,000` (`-5.8%` vs. Est)\n**CSI Divisions:** Div 01 General Requirements, Div 03 Watertight Environmental Concrete, Div 23 Industrial HVAC, Div 26 4160V Redundant Switchgear\n**Lead Pay Item Benchmark:** 54-Inch Mortar-Lined & Tape-Coated Welded Steel Water Pipe (AWWA C200) -> `$151.74/LF`\n**Davis-Bacon Crew Rate:** `$72.1/hr` fully burdened (`TX20260042 (Water/Wastewater Treatment Plant Heavy)`)\n**DBE Goal:** `12.0%` (`49 CFR Part 26`) | **Liquidated Damages:** `$5,500/day`\n**Official Planholders (5):** Garney Construction, PC Construction Company, McCarthy Building Companies, Archer Western Water\nDossier: https://rubricward.com/lettings/project/regional-60-mgd-water-treatment-plant-ozone-generator-building.html\nSource: https://www.ntmwd.com/procurement/#MUNICIPAL-DFW-WTP-2026-09",
+      "flags": 4
+    },
+    "generated_at_utc": "2026-11-01T13:23:16Z"
+  }
+}

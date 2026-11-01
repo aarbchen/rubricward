@@ -1,0 +1,389 @@
+{
+  "updated_at": "2026-11-01T16:04:50.090122+00:00",
+  "total_rules": 42,
+  "policy": "Silent detection -> Autonomous diagnosis & repair -> Rule codification -> Resolved-only Discord notification",
+  "rules": [
+    {
+      "rule_id": "RULE-001-SILENT-DETECTION-RESOLVED-ONLY",
+      "pillar": "System Telemetry",
+      "root_cause": "Raw error alerts in Discord create alert fatigue before autonomous healers can fix transient or repairable issues.",
+      "fix_applied": "Enforced silent `report_error()` logging to `error_log.txt` and `/v1/telemetry/report-error`; only `send_discord_resolution()` posts `[RESOLVED]` notices.",
+      "rule_statement": "Never post raw/open error alerts to Discord; log silently via `report_error()` and notify Discord only via `send_discord_resolution()` after repair and verification.",
+      "invariant_check": "check_silent_discord_alert_policy",
+      "created_at": "2026-11-01T14:50:43.385645+00:00"
+    },
+    {
+      "rule_id": "RULE-002-FRONTIER-CLAUDE-SONNET-5-5",
+      "pillar": "Pillar 1: Products & LLM Engine",
+      "root_cause": "Legacy or lower-tier LLM model strings degrade CSI MasterFormat shredding and DOT bid-tab extraction accuracy.",
+      "fix_applied": "Standardized all scrapers, `rubricward_autopilot.py`, `outbound_reply_responder.py`, and `llm_extractor.py` on `claude-sonnet-5-5`.",
+      "rule_statement": "Always use `claude-sonnet-5-5` across all RubricWard scrapers, autopilot engines, and LLM extractors; never use retired `claude-3-*` or `haiku` models.",
+      "invariant_check": "check_frontier_model_strings",
+      "created_at": "2026-11-01T14:50:43.385704+00:00"
+    },
+    {
+      "rule_id": "RULE-003-GLAMA-5-OF-5-TDQS-MCP",
+      "pillar": "Pillar 1: MCP Servers",
+      "root_cause": "MCP registries penalize tools with catalog number prefixes, missing annotations, or undocumented inputSchema properties.",
+      "fix_applied": "Enforced 5/5 Glama TDQS across all 12 tools in `api_gateway/routers/mcp.py`, `mcp-server/index.js`, and `build_cloudflare_edge_worker.py`.",
+      "rule_statement": "Every MCP tool must have zero `API #XX:` prefixes, explicit `title`, `annotations`, `outputSchema`, 100% documented `inputSchema.properties`, and 3-part sibling disambiguation.",
+      "invariant_check": "check_mcp_glama_tdqs",
+      "created_at": "2026-11-01T14:50:43.385721+00:00"
+    },
+    {
+      "rule_id": "RULE-004-TIER3-OPENXML-LIVE-FORMULAS",
+      "pillar": "Pillar 1: 6-File .ZIP Compiler",
+      "root_cause": "Static text tables in spreadsheets force estimators to manually re-enter sum and extension formulas.",
+      "fix_applied": "Embedded live OpenXML `<f>D6*G6</f>` and `<f>SUM(...)</f>` formulas inside Volume II and Volume III `.XLSX` workbooks.",
+      "rule_statement": "The Tier 3 6-File `.ZIP` Bid Package Compiler must always output valid OpenXML `.docx`/`.xlsx` archives containing live Excel `<f>` formulas.",
+      "invariant_check": "check_tier3_openxml_zip_integrity",
+      "created_at": "2026-11-01T14:50:43.385733+00:00"
+    },
+    {
+      "rule_id": "RULE-005-52-PORTAL-12-API-PARITY",
+      "pillar": "Pillar 3: Website & Catalog",
+      "root_cause": "Mismatched portal or endpoint counts between `index.html`, `apis.html`, and `pseo_generator.py` erode buyer trust.",
+      "fix_applied": "Synchronized all 52 Active Portals (50 State DOTs + USACE + Municipal) and all 12 Preconstruction APIs across every surface.",
+      "rule_statement": "Maintain 100% count, card, and schema parity across `index.html`, `apis.html`, `pseo_generator.py`, and `cloudflare_worker.js` (52 Portals, 50 State DOTs, 12 APIs).",
+      "invariant_check": "check_portal_and_catalog_parity",
+      "created_at": "2026-11-01T14:50:43.385747+00:00"
+    },
+    {
+      "rule_id": "RULE-006-HIGH-CONTRAST-WARM-VELLUM-THEME",
+      "pillar": "Pillar 3: Visual & Brand Standards",
+      "root_cause": "Washed-out grey text classes (`text-slate-400`, `text-slate-500`, `#64748B`) reduce readability on Warm Vellum (`#FAF8F5`) backgrounds.",
+      "fix_applied": "Banned all low-contrast grey tokens (`FORBIDDEN_GREY_PATTERNS`) and emojis across all HTML surfaces.",
+      "rule_statement": "Enforce Editorial Theme 1 (`#FAF8F5` Warm Vellum & `#0A0D14` Obsidian Ink + `#1E3A8A` Blueprint Navy) with zero emojis and zero washed-out grey classes.",
+      "invariant_check": "check_high_contrast_and_zero_emoji",
+      "created_at": "2026-11-01T14:50:43.385975+00:00"
+    },
+    {
+      "rule_id": "RULE-007-OUTREACH-LIVE-DOSSIER-URLS",
+      "pillar": "Pillar 2: Customer Acquisition",
+      "root_cause": "Cold outreach emails linking to non-existent `/lettings/project/<slug>.html` pages cause 404 bounces.",
+      "fix_applied": "Verified every `dossier_url` in `campaign_leads.csv` and `outbox_ready_queue.json` maps 1:1 to a generated file on disk.",
+      "rule_statement": "Every `dossier_url` in `campaign_leads.csv`, `outbox_ready_queue.json`, and Discord feeds must resolve to an existing `/rates/cpt/<slug>.html` file.",
+      "invariant_check": "check_outreach_dossier_urls",
+      "created_at": "2026-11-01T14:50:43.385996+00:00"
+    },
+    {
+      "rule_id": "RULE-TIER3-OPENXML-INTEGRITY",
+      "pillar": "System Integrity",
+      "root_cause": "[auto_error_healer] Local telemetry resolved: [2026-10-31 15:21:12 UTC] [ERROR] [omniscient_auditor.py] [Pillar 1B] Tier 3 6-File .ZIP Compiler failed audit: cannot import name 'build_six_file_bid_package_zip' from 'api_gatewa",
+      "fix_applied": "Verified AST contracts, Python compilation, and 12-API + 52-Portal gateway integrity.",
+      "rule_statement": "Tier 3 Bid Package `.ZIP` archives must always contain 6 valid OpenXML (`.docx`/`.xlsx`) and `.json` files with well-formed XML and live Excel `=SUM()` and `=D6*G6` formulas.",
+      "invariant_check": "check_tier3_openxml_zip_integrity",
+      "created_at": "2026-11-01T14:50:43.386011+00:00"
+    },
+    {
+      "rule_id": "RULE-PORTAL-CATALOG-PARITY",
+      "pillar": "System Integrity",
+      "root_cause": "[auto_error_healer] Local telemetry resolved: [2026-10-31 15:21:12 UTC] [ERROR] [omniscient_auditor.py] [Pillar 1C/1D] API Catalog / MCP audit failed: cannot import name 'TOOL_ROUTE_MAP' from 'api_gateway.routers.mcp' (D:\\Camb",
+      "fix_applied": "Verified AST contracts, Python compilation, and 12-API + 52-Portal gateway integrity.",
+      "rule_statement": "Maintain 100% count and card parity across `index.html`, `apis.html`, `pseo_generator.py`, MCP servers, and Cloudflare Edge Worker (`52 Portals / 50 State DOTs` and `12 APIs`).",
+      "invariant_check": "check_portal_and_catalog_parity",
+      "created_at": "2026-11-01T14:50:43.386023+00:00"
+    },
+    {
+      "rule_id": "RULE-008-ZERO-SIBLING_BRAND-OVERLAP",
+      "pillar": "Cross-Brand Isolation",
+      "root_cause": "Shared prospect lists, Instantly campaigns, Discord webhooks, or Supabase credentials between RubricWard and SignalTender could cause cross-brand contact or notification collisions.",
+      "fix_applied": "Enforced `load_signaltender_exclusion_sets()`, stripped SignalTender tokens from `.env`, blocked SignalTender webhook/campaign IDs, and removed `api.nsf.gov` queries from `harvest_verified_dot_contacts.py`.",
+      "rule_statement": "Maintain 100% zero overlap with SignalTender across prospect emails, corporate domains, Instantly.ai campaigns/mailboxes, Discord webhooks, and Supabase credentials.",
+      "invariant_check": "check_zero_signaltender_overlap",
+      "created_at": "2026-11-01T14:50:43.386037+00:00"
+    },
+    {
+      "rule_id": "RULE-021-QUOTED-THREAD-AND-WARMUP-GUARD",
+      "pillar": "Pillar 2: Outbound Deliverability",
+      "root_cause": "Quoted email history containing our own 'reply stop or unsubscribe' footer can trigger false-positive unsubscribes on positive replies, and allowing warmup `score == 0` can send from cold mailboxes.",
+      "fix_applied": "Added `_strip_quoted_thread()` in `outbound_reply_responder.py` before opt-out/reply classification and enforced strict `score >= min_score` in `outbound_mailer.py`.",
+      "rule_statement": "Strip quoted email history (`_strip_quoted_thread()`) before opt-out/reply classification in `outbound_reply_responder.py`, and strictly require `score >= min_score` (never `score == 0`) in `outbound_mailer.py`.",
+      "invariant_check": "check_conversion_and_distribution_surfaces",
+      "created_at": "2026-11-01T14:50:43.386049+00:00"
+    },
+    {
+      "rule_id": "RULE-022-IN-FLIGHT-SEQUENCE-PROTECTION",
+      "pillar": "Pillar 2: Campaign Sync",
+      "root_cause": "Deleting existing leads during `sync_instantly_campaign.py` resets in-flight sequence progression (`status in (1, 2)` or `email_open_count > 0`).",
+      "fix_applied": "Protected in-flight Instantly leads from deletion during campaign sync unless they violate cross-brand isolation or contain forbidden `$`/`http`.",
+      "rule_statement": "Never delete active in-flight Instantly leads (`status in (1, 2)` or `email_open_count > 0`) during `sync_instantly_campaign.py` runs unless they violate cross-brand isolation or contain `$`/`http`.",
+      "invariant_check": "check_conversion_and_distribution_surfaces",
+      "created_at": "2026-11-01T14:50:43.386062+00:00"
+    },
+    {
+      "rule_id": "RULE-023-MULTI-STATE-ZIP-ANTI-HALLUCINATION",
+      "pillar": "Pillar 1: 6-File .ZIP Compiler",
+      "root_cause": "Hardcoding Texas Government Code Chapter 552 or overwriting custom `project_id` values in `compile_full_bid_package` causes cross-state statutory mismatches.",
+      "fix_applied": "Added `STATE_OPEN_RECORDS_AUTHORITIES` across all jurisdictions in `camber_autopilot.py`, preserved custom `req.project_id`, and pre-compiled all 12 project `.ZIP` archives in `build_cloudflare_edge_worker.py`.",
+      "rule_statement": "Preserve custom `project_id` and dynamically populate jurisdiction-matched Open Records statutes (`STATE_OPEN_RECORDS_AUTHORITIES`), DOT pay items, Davis-Bacon wages, and real planholders across all states with zero fake contractor names (`Apex Civil`, `Granite State Paving`).",
+      "invariant_check": "check_product_output_quality_controls",
+      "created_at": "2026-11-01T14:50:43.386075+00:00"
+    },
+    {
+      "rule_id": "RULE-024-ROOT-DOMAIN-EDGE-AND-50-STATE-WORKBENCH",
+      "pillar": "Pillar 3: Website & Edge Gateway",
+      "root_cause": "Pointing browser fetches or `.ZIP` links to unresolvable `api.rubricward.com` or limiting workbench state dropdowns to 10 states breaks live evaluation.",
+      "fix_applied": "Standardized all API, MCP, `.ZIP`, and telemetry URLs on `https://rubricward.com` and populated all 50 U.S. State DOT options in `#lead-magnet-state`, `#wb-vault-state`, and `#wb-dbe-state`.",
+      "rule_statement": "Route all API, MCP, `.ZIP`, and telemetry endpoints through `https://rubricward.com` (never `api.rubricward.com`), and populate all 50 U.S. State DOT options in `#lead-magnet-state`, `#wb-vault-state`, and `#wb-dbe-state`.",
+      "invariant_check": "check_portal_parity_and_telemetry",
+      "created_at": "2026-11-01T14:50:43.386097+00:00"
+    },
+    {
+      "rule_id": "RULE-025-CUSTOMER-FACING-COPY-DISCIPLINE",
+      "pillar": "Pillar 3: Visual & Brand Standards",
+      "root_cause": "Internal backend framework names (`FastAPI`, `Supabase`, `Render`) or unescaped JS quotes inside f-strings degrade enterprise buyer trust and cause syntax errors.",
+      "fix_applied": "Replaced `FastAPI` in visible copy with `Preconstruction` / `Pydantic V2` and escaped `\\\"` and `\\\\b` inside `common_js` in `build_rubricward_site.py`.",
+      "rule_statement": "Never leak internal backend framework names (`FastAPI`, `Supabase`, `Render`) or raw JS escape artefacts into customer-facing HTML text.",
+      "invariant_check": "check_html_file",
+      "created_at": "2026-11-01T14:50:43.386109+00:00"
+    },
+    {
+      "rule_id": "RULE-FRONTIER-MODEL-ONLY",
+      "pillar": "System Integrity",
+      "root_cause": "[auto_error_healer] Auto-upgraded Anthropic model(s) -> 'claude-sonnet-5-5' / 'claude-haiku-5-5' in mainscraper.py",
+      "fix_applied": "Auto-upgraded to frontier model claude-sonnet-5-5 and verified all AST contracts.",
+      "rule_statement": "Always use the frontier Anthropic model (`claude-sonnet-5-5`) across all scrapers, `rubricward_autopilot.py`, `outbound_reply_responder.py`, and `llm_extractor.py`; never use retired models.",
+      "invariant_check": "check_frontier_model_strings",
+      "created_at": "2026-11-01T14:50:43.386122+00:00"
+    },
+    {
+      "rule_id": "RULE-009-ZERO-UNNECESSARY-AI-TOKEN-WASTE",
+      "pillar": "Cost Discipline & LLM Efficiency",
+      "root_cause": "Repeatedly calling Anthropic LLMs on already-scraped database URLs, static health/telemetry probes, deterministic test fixtures, or 15-minute un-gated overnight audit loops wastes API credits.",
+      "fix_applied": "Enforced pre-database URL deduplication and deterministic `[Fast-Pass]` filtering before any LLM call, SHA-256 deterministic response caching for repeat telemetry probes, `use_llm_synthesis=False` in integrity test suites, and a strict once-per-calendar-night guard (`_LAST_OMNISCIENT_AUDIT_DATE`) on `omniscient_auditor.py`.",
+      "rule_statement": "Never spend Anthropic LLM tokens on already-stored database records, deterministic test suites (`use_llm_synthesis=False`), repeat RapidAPI telemetry probes (use SHA-256 response cache), or >1x/night background auditor runs.",
+      "invariant_check": "check_zero_ai_token_waste",
+      "created_at": "2026-11-01T14:50:43.386134+00:00"
+    },
+    {
+      "rule_id": "RULE-INLINE-JS-SYNTAX",
+      "pillar": "System Integrity",
+      "root_cause": "[auto_error_healer] Local telemetry resolved: [2026-11-01 06:53:24 UTC] [ERROR] [omniscient_auditor.py] [Pillar 1A] `auto_error_healer.run_healer()` reported unresolved syntax, AST, or route parity errors",
+      "fix_applied": "Verified AST contracts, Python compilation, and 12-API + 52-Portal gateway integrity.",
+      "rule_statement": "Every inline `<script>` block and `on*` event attribute in `index.html`, `apis.html`, and generated `/lettings/**/*.html` must pass Node.js `vm.Script` compilation with zero unescaped quotes.",
+      "invariant_check": "check_html_inline_js_vm",
+      "created_at": "2026-11-01T14:50:43.386146+00:00"
+    },
+    {
+      "rule_id": "RULE-002-PORTAL-STATE-API-COUNT-PARITY",
+      "pillar": "Website, Products & Acquisition Parity",
+      "root_cause": "Adding a new scraper or API without updating all surface strings and regenerating static pSEO / outbound queues.",
+      "fix_applied": "Added automatic count-drift healer across index.html, apis.html, pseo_generator.py, and outbound conversion surfaces.",
+      "rule_statement": "Automatically synchronize n_portals, n_states, n_apis, and n_tier2_apis across all website, pSEO, MCP, and outbound surfaces before every verification pass.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386175+00:00"
+    },
+    {
+      "rule_id": "RULE-003-OUTBOUND-DOSSIER-URL-INTEGRITY",
+      "pillar": "Acquisition Channels",
+      "root_cause": "Contract directory or slug updates occurring without re-running pseo_generator.py and outreach_generator.py.",
+      "fix_applied": "Added 1:1 URL-to-disk verification for campaign_leads.csv, outbox_ready_queue.json, and sitemap.xml with automatic regeneration.",
+      "rule_statement": "Every Top Contract Dossier URL in campaign_leads.csv, outbox_ready_queue.json, x_ready_posts.json, and sitemap.xml must resolve to an existing static HTML file in contracts/rfp/.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386193+00:00"
+    },
+    {
+      "rule_id": "RULE-004-SCRAPER-DETERMINISM-AND-RLS",
+      "pillar": "Products & Scrapers",
+      "root_cause": "Non-deterministic fallback dates/IDs causing synthetic SF-30 duplicates or .upsert() triggering RLS 42501.",
+      "fix_applied": "Enforced AST & regex checks banning timedelta(), abs(hash(), .upsert(), and legacy Claude 3/4 models across all scrapers.",
+      "rule_statement": "All scrapers must export async def run_scraper(push_to_db: bool = True), use deterministic anchored dates and SHA-256 IDs, use SELECT + .insert(), and use claude-sonnet-5-5.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386207+00:00"
+    },
+    {
+      "rule_id": "RULE-005-DUAL-MCP-AND-VERSION-SYNC",
+      "pillar": "Products & MCP Ecosystem",
+      "root_cause": "Updating one MCP server or manifest version without syncing the counterpart.",
+      "fix_applied": "Added automatic version and tool-schema parity sync across mcp.py, mcp-server/index.js, server.json, and mcp-server/package.json.",
+      "rule_statement": "Keep tool count, 5/5 Glama TDQS annotations, and manifest versions 100% synchronized across mcp.py, mcp-server/index.js, server.json, and mcp-server/package.json.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386219+00:00"
+    },
+    {
+      "rule_id": "RULE-API-CATALOG-MCP-PARITY",
+      "pillar": "Products & API Catalog",
+      "root_cause": "verify_site_integrity.py: verify_site_integrity.py FAIL: API_META['product-live-solicitations'].kw in index.html does not match apis.html! | verify_site_integrity.py: verify_site_integrity.py FAIL: api/routers/mcp.py: TOOL_ROUTE_MAP has 0 tools, expected 34 | verify_site_integrity.py: verify_site_integrity.py FAIL: Slug mismatch across Daas modules: pseo=disa-cybersecurity-service-provider-cssp-j3",
+      "fix_applied": "Auto-healed & verified by auto_error_healer.py (52/52 scrapers & pipeline contracts healthy; cleared 1 local + 1 remote alert(s))",
+      "rule_statement": "Enforce 1:1 parity across index.html, apis.html, CATALOG, API_META, mcp.py, mcp-server/index.js, and seed_rapidapi_telemetry.py on every API update.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386232+00:00"
+    },
+    {
+      "rule_id": "RULE-006-NIGHTTIME-AWAY-EXECUTION-ONLY",
+      "pillar": "Scheduler & Operator UX",
+      "root_cause": "Background watcher and audit invocations lacked a nighttime + Windows user-idle (GetLastInputInfo) gate.",
+      "fix_applied": "Enforced is_nighttime_and_user_away() (11:00 PM \u2013 6:00 AM local time AND >= 30 minutes of keyboard/mouse idle time) across omniscient_auditor.py, silent_autopilot_watcher.py, and windows_autopilot_guard.py.",
+      "rule_statement": "Autonomous full-system audits and self-healing runs must only execute at night (11:00 PM \u2013 6:00 AM local time) when the user is away (>= 30m idle via GetLastInputInfo), unless explicitly invoked with --force-now.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386247+00:00"
+    },
+    {
+      "rule_id": "RULE-PORTAL-PARITY-SYNC",
+      "pillar": "Website & Portal Parity",
+      "root_cause": "campaign_leads.csv contains stale portal count '8' (expected 28)",
+      "fix_applied": "Auto-healed & verified by auto_error_healer.py (52/52 scrapers & pipeline contracts healthy; cleared 3 local + 2 remote alert(s))",
+      "rule_statement": "Enforce 100% portal/state count and abbreviation roll-call parity across index.html, apis.html, pseo_generator.py, and all outbound/conversion surfaces before any commit.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386266+00:00"
+    },
+    {
+      "rule_id": "RULE-007-WARMED-MAILBOX-CONTINUITY",
+      "pillar": "Outbound Email & Mailbox Deliverability",
+      "root_cause": "Defaulting min_days=14 in is_instantly_account_warmed() detached active mailboxes on already-warmed domains, cutting daily send capacity and stalling Step 2/Step 3 thread replies.",
+      "fix_applied": "Set min_days=0 default in is_instantly_account_warmed() so all active mailboxes with stat_warmup_score >= 85 remain attached to the campaign with continuous warmup enabled.",
+      "rule_statement": "Never detach or impose a 14-day wait on active mailboxes with stat_warmup_score >= 85, and never call accounts/warmup/disable on active campaign mailboxes.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386284+00:00"
+    },
+    {
+      "rule_id": "RULE-PSEO-SITEMAP-PARITY",
+      "pillar": "Acquisition & Programmatic SEO",
+      "root_cause": "verify_site_integrity.py: verify_site_integrity.py FAIL: Slug mismatch across Daas modules: pseo=disa-cybersecurity-service-provider-cssp-j34-external-vulnerability-s | [2026-10-29 20:53:09 UTC] [LOCAL] [verify_site_integrity.py] verify_site_integrity.py FAIL: Slug mismatch across Daas modules: pseo=disa-cyb | [2026-10-29 20:59:17 UTC] [LOCAL] [verify_site_integrity.py] verify_site_integrity.py FA",
+      "fix_applied": "Auto-healed & verified by auto_error_healer.py (52/52 scrapers & pipeline contracts healthy; cleared 3 local + 2 remote alert(s))",
+      "rule_statement": "Enforce 1:1 parity between window.SIGNALTENDER_CONTRACTS, /rates/cpt/*.html static files, and sitemap.xml with valid JSON-LD and cache-busted OpenGraph tags.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386298+00:00"
+    },
+    {
+      "rule_id": "RULE-008-PRODUCT-OUTPUT-QUALITY-GATE",
+      "pillar": "Product Deliverable Quality & Jurisdiction Isolation",
+      "root_cause": "Broad agency keyword fallback in Supabase contracts lookup, default state_hint='federal' in _build_statutory_foia_demand_text(), synthetic SLED-* rows in usaspending_verified_vault.json, and '/' delimiter in LCAT regex.",
+      "fix_applied": "Enforced strict 50-state _infer_target_jurisdiction() matching, CPRA/PIA/FOIL statutory citation alignment across Volume V header & body, pure corporate USAspending teaming partners, _lookup_offeror_verified_profile() auto-enrichment, and runtime _enforce_proposal_package_quality_gate().",
+      "rule_statement": "Every compiled 6-file Shipley Proposal .ZIP package and API deliverable must pass _enforce_proposal_package_quality_gate() and check_product_output_quality_controls() with 100% jurisdiction isolation, corporate teaming partner verification, and intact LCAT parsing.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386311+00:00"
+    },
+    {
+      "rule_id": "RULE-SCRAPER-DETERMINISM-RLS",
+      "pillar": "Products & Scrapers",
+      "root_cause": "verify_site_integrity.py: verify_site_integrity.py FAIL: proposal_compiler.py: Non-corporate or mangled entity token 'Pool' found in Volume III/IV teaming partners! | verify_site_integrity.py: verify_site_integrity.py FAIL: proposal_compiler.py: Texas DIR package failed to cite Texas PIA (`Tex. Gov't Code \u00a7 552.001`)! | verify_site_integrity.py: verify_site_integrity.py FAIL: proposal_compiler.py:",
+      "fix_applied": "Auto-healed & verified by auto_error_healer.py (52/52 scrapers & pipeline contracts healthy; cleared 0 local + 1 remote alert(s))",
+      "rule_statement": "Enforce async def run_scraper(push_to_db=True), deterministic SHA-256 IDs, anchored dates, RLS-safe SELECT + .insert(), and silent telemetry across all scraper modules.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386325+00:00"
+    },
+    {
+      "rule_id": "RULE-009-SEMANTIC-DATABASE-AND-STATIC-PAYLOAD-HYGIENE",
+      "pillar": "Database Hygiene & Static Dossier Payload Integrity",
+      "root_cause": "Broad portal HTML scraping or post-award synthesis inserting non-RFP rows into Supabase contracts, and static RFP dossier templates passing c['masked_agency'] instead of c['agency'] into window.compileShipleyProposalZip().",
+      "fix_applied": "Added automatic nightly Supabase contracts semantic hygiene & UTF-8 auto-healer in omniscient_auditor.py, removed Tier-4 State PoP Modernization & SLED-*-COOP synthesis, and bound static/SPA RFP dossier action buttons to real issuing agency and solicitation slug.",
+      "rule_statement": "Nightly omniscient_auditor.py runs must actively purge non-RFP/nav-link/synthetic rows and \\ufffd characters from Supabase contracts and usaspending_verified_vault.json, and verify static/SPA dossier button payloads pass real agency and solicitation IDs.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386339+00:00"
+    },
+    {
+      "rule_id": "RULE-010-ZERO-CALL-ENTERPRISE-PROOF-AND-CFO-QUOTE-WORKBENCH",
+      "pillar": "Self-Serve Enterprise Conversion & Zero-Call Proof Workbench",
+      "root_cause": "Adding new SLED state scrapers or modifying #page-checkout without syncing <select id='checkout-foia-state'> and verifying the 3-mode self-serve Proof Workbench (Custom RFP .ZIP Compiler, Live FOIA Rate Vault Preview, and CFO / FAR 31.205-18 Quote Generator).",
+      "fix_applied": "Added automatic <select id='checkout-foia-state'> state-option healer in omniscient_auditor.py and headless VM execution of openCheckoutLiveProofModal(), switchCheckoutProofTab(), and generateCfoProcurementQuote() in verify_site_integrity.py.",
+      "rule_statement": "Every omniscient_auditor.py and verify_site_integrity.py run must auto-sync all active SLED states into <select id='checkout-foia-state'> and verify all 3 Zero-Call Enterprise Proof Workbench tabs and JS handlers on #page-checkout.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386352+00:00"
+    },
+    {
+      "rule_id": "RULE-VIEWPORT-NO-OVERFLOW",
+      "pillar": "Website Mobile & Desktop UX",
+      "root_cause": "verify_site_integrity.py: verify_site_integrity.py FAIL: Mobile 375px viewport overflow on index.html#checkout@1024px: ['div [PAST_SCREEN left=531 right=1537 vw=1024] | [2026-10-30 02:29:30 UTC] [LOCAL] [verify_site_integrity.py] verify_site_integrity.py FAIL: Mobile 375px viewport overflow on index.html#che",
+      "fix_applied": "Auto-healed & verified by auto_error_healer.py (28/28 scrapers & pipeline contracts healthy; cleared 1 local + 1 remote alert(s))",
+      "rule_statement": "Enforce zero horizontal overflow or text clipping at 375px mobile and 1024px/1280px desktop viewports using min-w-0, flex-wrap, and bounded badge containers.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386364+00:00"
+    },
+    {
+      "rule_id": "RULE-011-ZERO-PERMISSION-AUTONOMOUS-BUG-AND-BLINDSPOT-HEALING",
+      "pillar": "Autonomous Bug Remediation & 360\u00b0 Blindspot Coverage",
+      "root_cause": "Asking for confirmation before fixing bugs and assuming single-schema JSON structures or single-repo git pushes.",
+      "fix_applied": "Patched all 8 blindspots in omniscient_auditor.py and auto_error_healer.py, and codified the standing rule to immediately fix any detected bug without asking for user permission.",
+      "rule_statement": "Never ask the user for permission before fixing a bug or blindspot; always remediate bugs immediately, verify end-to-end across both d:\\Daas and d:\\Data API Ecosystem, and codify the anti-regression rule.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386377+00:00"
+    },
+    {
+      "rule_id": "RULE-012-CUSTOMER-FACING-COPY-NEVER-ECHO-INTERNAL-PROMPTS",
+      "pillar": "Customer-Facing Copy Discipline",
+      "root_cause": "Writing website headlines or subcopy that directly echoes the operator's conversational prompt instead of writing strictly from the GovCon buyer's perspective.",
+      "fix_applied": "Replaced all prompt-echoing phrases with customer-facing Interactive Evaluation & Corporate Procurement Workbench copy and added a permanent regex ban in verify_site_integrity.py.",
+      "rule_statement": "Never echo the operator's prompt, internal strategy terms ('no sales calls', 'zero-call', 'zero-risk bridge'), or internal framework names in customer-facing HTML, emails, or AI Concierge responses.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386395+00:00"
+    },
+    {
+      "rule_id": "RULE-013-50-STATE-FEATURE-COPY-SIMPLIFICATION",
+      "pillar": "Customer-Facing Copy & 50-State Coverage Discipline",
+      "root_cause": "Appending every new state abbreviation into inline feature copy as scrapers expanded from 7 states to all 50 U.S. states.",
+      "fix_applied": "Simplified all inline feature copy to clean 50-State SLED phrasing while preserving and completing full descriptions of all 50 states covered in dedicated coverage sections (#coverage 52 portal cards, top status ticker, #contract-directory filter pills, #page-contracts state hub directory, Checkout FAQ, System Status grid, and AI Support Concierge).",
+      "rule_statement": "Never dump 50 state postal codes or 50 state portal names inline inside feature copy, headlines, meta tags, ROI cards, pricing bullets, or CTA banners; always keep full descriptions of all 50 states in dedicated coverage surfaces.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386407+00:00"
+    },
+    {
+      "rule_id": "RULE-014-PROPORTIONAL-STATE-VOLUME-AND-BOUNDARY-CLASSIFICATION",
+      "pillar": "State Jurisdiction Classification & Proportional SLED Lead Distribution",
+      "root_cause": "1) Bare substring matching (nd.gov in url) in classify_jurisdiction() collided with longer state domains (maryland.gov, iowa.gov, maine.gov, arkansas.gov). 2) State scrapers #15-#52 used a flat 6-lead fallback regardless of state GDP/IT procurement spend while Texas and California only had 3-6 active rows.",
+      "fix_applied": "Replaced classify_jurisdiction() across all 4 modules with regex hostname/word-boundary matching (_has_domain()), scaled Mega-States (VA, TX, CA, MA, NY, FL, NC, PA, IL, OH, MD, GA) to 10-16 active solicitations, and scaled small-population states (ND, SD, WY, VT, AK, DE, MT, RI -> 3; ME, NH, HI, ID, WV, NE, NM, MS, AR -> 4; IA, KS, OK, KY, LA, AL, UT, NV -> 5).",
+      "rule_statement": "Always use boundary-anchored _has_domain() in classify_jurisdiction() (never bare substring in url for short 2-letter .gov domains) and enforce proportional SLED state lead volumes in verify_site_integrity.py (Mega-States >= 10 leads and >= 2.5x smallest-population states, with every state >= 3 leads).",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386420+00:00"
+    },
+    {
+      "rule_id": "RULE-015-ZERO-DEAD-LINKS-AND-392-CONTRACT-JURISDICTION-ACCURACY",
+      "pillar": "Proposal Compiler Jurisdiction Isolation, Outbound URL Integrity & Filter Pill Precision",
+      "root_cause": "Running state_agency_kw_map substring checks before [XX-] prefix and full state name checks in _infer_target_jurisdiction(), using txt.indexOf(mainRfpPortal) without excluding compound state names in filterMainRfpTable(), and using pre-50-state row limits (.limit(35/200/250)).",
+      "fix_applied": "Unified _infer_target_jurisdiction() with boundary-safe domain, [XX-] prefix, DemandStar county signature, and word-boundary matching (0/392 mismatches even with url=''), delegated outreach_generator.detect_contract_region() to pseo_generator.classify_jurisdiction(), excluded compound state collisions in filterMainRfpTable(), and raised Supabase contract query limits to 1000 across all pipeline modules.",
+      "rule_statement": "Verify on every build that proposal_compiler._infer_target_jurisdiction() achieves 100% accuracy (0 mismatches) across all active contracts in window.SIGNALTENDER_CONTRACTS even when url='', that every /rates/cpt/*.html link in index.html, campaign_leads.csv, and outbox_ready_queue.json exists on disk, and that filterMainRfpTable() has zero virginia/west_virginia or kansas/arkansas collisions.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386435+00:00"
+    },
+    {
+      "rule_id": "RULE-ACQUISITION-OUTBOUND-SYNC",
+      "pillar": "Acquisition Channels",
+      "root_cause": "Instantly campaign c7727dff-92cc-4621-9e96-c960938d5a47 had only 1 uncontacted Step 1 lead(s) remaining (< 30 buffer)",
+      "fix_applied": "Executed `outreach_generator.py` to harvest new DNS/MX-verified IT/Cyber executives and sync them into Instantly V2.",
+      "rule_statement": "Verify every outbound lead row in campaign_leads.csv and outbox_ready_queue.json has live /rates/cpt/<slug>.html URLs, current portal/API counts, and zero DNC addresses.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386447+00:00"
+    },
+    {
+      "rule_id": "RULE-016-ZERO-CAMBERDESK-OVERLAP",
+      "pillar": "Cross-Brand Isolation (SignalTender <-> CamberDesk)",
+      "root_cause": "Running both autonomous platforms on the same machine and Instantly.ai workspace without explicit cross-repo exclusion fences and brand filters.",
+      "fix_applied": "Added mutual email/domain exclusion fences (_load_camberdesk_excluded_emails_and_domains() and is_excluded_by_rubricward()), enforced skip_if_in_workspace: True, filtered Instantly mailboxes/Unibox replies strictly by *rubricward* vs *camberdesk*, added _is_camberdesk_stripe_event() guard in stripe_webhook.py, separated CAMBERDESK_DISCORD_WEBHOOK_URL, and added check_zero_camberdesk_overlap() in verify_site_integrity.py.",
+      "rule_statement": "Maintain 100% zero overlap between RubricWard and CamberDesk across prospect emails, corporate domains, Instantly.ai campaigns/mailboxes (*rubricward* vs *camberdesk*), Unibox reply responders, Stripe checkout webhooks (_is_camberdesk_stripe_event()), and Discord webhooks.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386464+00:00"
+    },
+    {
+      "rule_id": "RULE-017-ZERO-UNNECESSARY-AI-TOKEN-WASTE",
+      "pillar": "Cost Discipline & LLM Token Efficiency",
+      "root_cause": "Missing pre-Supabase URL deduplication before client.messages.create(), uncached identical telemetry payloads in llm_parser.py, missing max_cached_id watermark in capturedesk_autopilot.py, and missing _LAST_OMNISCIENT_AUDIT_DATE once-per-night guard in watchers.",
+      "fix_applied": "Added SHA-256 _ANTHROPIC_MESSAGE_CACHE in llm_parser.py, pre-Supabase _pre_existing_urls filtering and [Fast-Pass] short-circuits across all scrapers, max_cached_id watermark in capturedesk_autopilot.py, use_llm_synthesis=False in verify_site_integrity.py, and once-per-calendar-night _LAST_OMNISCIENT_AUDIT_DATE guard across both RubricWard and CamberDesk watchers.",
+      "rule_statement": "Never spend Anthropic LLM tokens on URLs already in Supabase, deterministic [XX-...] notices, repeat RapidAPI telemetry probes (serve from _ANTHROPIC_MESSAGE_CACHE), historical CaptureDesk rows (id <= max_cached_id), integrity checks (use_llm_synthesis=False), or >1x/night background auditor runs.",
+      "invariant_check": "verify_rubricward_integrity",
+      "created_at": "2026-11-01T14:50:43.386478+00:00"
+    },
+    {
+      "rule_id": "RULE-008-ZERO-SIGNALTENDER-OVERLAP",
+      "pillar": "Cross-Brand Isolation",
+      "root_cause": "Shared prospect lists, Instantly campaigns, Discord webhooks, or Supabase credentials between RubricWard and SignalTender could cause cross-brand contact or notification collisions.",
+      "fix_applied": "Enforced `load_signaltender_exclusion_sets()`, stripped SignalTender tokens from `.env`, blocked SignalTender webhook/campaign IDs, and removed `api.nsf.gov` queries from `harvest_verified_dot_contacts.py`.",
+      "rule_statement": "Maintain 100% zero overlap with SignalTender across prospect emails, corporate domains, Instantly.ai campaigns/mailboxes, Discord webhooks, and Supabase credentials.",
+      "invariant_check": "check_zero_signaltender_overlap",
+      "created_at": "2026-11-01T15:59:55.138597+00:00",
+      "last_enforced_at": "2026-11-01T15:59:55.138597+00:00",
+      "times_triggered": 1
+    },
+    {
+      "rule_id": "RULE-DELIVERABILITY-DNS-AUTH",
+      "pillar": "System Integrity",
+      "root_cause": "[auto_error_healer] Local telemetry resolved: [2026-11-01 16:00:34 UTC] [ERROR] [omniscient_auditor.py] [Pillar 2C] Missing BIMI SVG file: `lettings\\bimi-logo.svg`",
+      "fix_applied": "Verified AST contracts, Python compilation, and 12-API + 52-Portal gateway integrity.",
+      "rule_statement": "Outbound email infrastructure must maintain valid SPF, DMARC (`p=quarantine`/`reject`), BIMI SVG logo, MX records on all prospect domains, and zero duplicate follow-ups.",
+      "invariant_check": "check_email_deliverability_dns",
+      "created_at": "2026-11-01T16:04:50.090122+00:00",
+      "last_enforced_at": "2026-11-01T16:04:50.090122+00:00",
+      "times_triggered": 1
+    }
+  ]
+}

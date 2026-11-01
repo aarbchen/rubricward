@@ -1,0 +1,741 @@
+{
+  "lettings": [
+    {
+      "project_id": "TXDOI-MRF-CPT-29881-DFW",
+      "title": "[TXDOI-MRF-CPT-29881-DFW] UHC & BCBS-TX Commercial MRF Rate Disparity, ASC Facility Fee & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic Surgery)",
+      "agency": "Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index \u2014 Dallas-Fort Worth MSA",
+      "jurisdiction": "texas",
+      "state_code": "TX",
+      "county": "Travis County, TX",
+      "letting_date": "2026-11-18",
+      "engineers_estimate_usd": 1845000.0,
+      "dbe_goal_pct": 14.5,
+      "liquidated_damages_per_day_usd": 420,
+      "wage_determination_id": "TX-GPCI-2026-DFW (Medicare Locality 04412-11 & TX Ins. Code \u00a7 1301.103 18% Prompt-Pay)",
+      "naics_code": "621493",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 TX Ins. Code \u00a7 1301.103 Prompt-Pay Penalty"
+      ],
+      "url": "https://www.tdi.texas.gov/health/payor-mrf-benchmarks.html#TXDOI-MRF-CPT-29881-DFW",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for Orthopedic & ASC surgical procedures (CPT 29881 Knee Arthroscopy Meniscectomy, CPT 27447 Total Knee Arthroplasty, CPT 29827 Rotator Cuff Repair, and CPT 64483 Transforaminal Epidural Steroid Injection) across UnitedHealthcare, BCBS-TX, Aetna, and Cigna in Texas.",
+      "planholders": [
+        "Texas Orthopedic Specialists PA",
+        "Baylor Scott & White Surgicare",
+        "Lonestar Ambulatory Surgery Center LLC",
+        "Austin Spine & Neurosurgery Associates",
+        "Methodist Orthopedic Surgical Group"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (Medial OR Lateral, ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1485.0,
+          "recommended_unit_usd": 1890.0
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Arthroplasty, Knee, Condyle and Plateau; Medial AND Lateral Compartments (Total Knee)",
+          "unit": "CLAIM",
+          "quantity": 115,
+          "hist_low_unit_usd": 4850.0,
+          "hist_median_unit_usd": 9420.0,
+          "recommended_unit_usd": 11850.0
+        },
+        {
+          "item_code": "CPT-29827",
+          "description": "Shoulder Arthroscopy, Surgical, with Rotator Cuff Repair (Modifier 59 / XU Audit)",
+          "unit": "CLAIM",
+          "quantity": 210,
+          "hist_low_unit_usd": 1120.0,
+          "hist_median_unit_usd": 2340.0,
+          "recommended_unit_usd": 2890.0
+        },
+        {
+          "item_code": "CPT-64483",
+          "description": "Transforaminal Epidural Injection, Lumbar or Sacral, Single Level (Fluoroscopic Guidance)",
+          "unit": "CLAIM",
+          "quantity": 680,
+          "hist_low_unit_usd": 285.0,
+          "hist_median_unit_usd": 615.0,
+          "recommended_unit_usd": 780.0
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Office/Outpatient E/M with Significant Separately Identifiable Mod 25",
+          "unit": "CLAIM",
+          "quantity": 1450,
+          "hist_low_unit_usd": 118.0,
+          "hist_median_unit_usd": 176.0,
+          "recommended_unit_usd": 208.0
+        }
+      ]
+    },
+    {
+      "project_id": "CADMHC-MRF-CPT-63030-SFO",
+      "title": "[CADMHC-MRF-CPT-63030-SFO] Anthem Blue Cross & Aetna MRF Rate Spread, Knox-Keene Prompt-Pay & ERISA Appeal (CPT 63030 / 22551 Spine & Neurosurgery)",
+      "agency": "California Department of Managed Health Care (DMHC) & Noridian JE MRF Index \u2014 Bay Area MSA",
+      "jurisdiction": "california",
+      "state_code": "CA",
+      "county": "San Mateo County, CA",
+      "letting_date": "2026-11-20",
+      "engineers_estimate_usd": 2480000.0,
+      "dbe_goal_pct": 18.0,
+      "liquidated_damages_per_day_usd": 650,
+      "wage_determination_id": "CA-GPCI-2026-SFO (Medicare Locality 01112-07 & CA Health & Safety \u00a7 1371 15% Prompt-Pay)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA & Noridian LCD L34220 Appeal",
+        "Div 05 Federal NSA IDR QPA Rebuttal",
+        "Div 26 NCCI Spine Arthrodesis Edit Audit",
+        "Div 31 Bay Area GPCI Locality RVU Schedule",
+        "Div 33 CA Health & Safety Code \u00a7 1371 Interest"
+      ],
+      "url": "https://www.dmhc.ca.gov/DataResearch/FinancialSummaryData.aspx#CADMHC-MRF-CPT-63030-SFO",
+      "scope_summary": "Commercial payer MRF negotiated rate benchmark, Noridian Medicare MAC LCD L34220 medical necessity appeal, and Knox-Keene Act (CA Health & Safety Code \u00a7 1371) 15% per annum statutory interest demand for Spine & Neurosurgery procedures (CPT 63030 Lumbar Laminotomy/Discectomy, CPT 22551 Anterior Cervical Discectomy & Fusion ACDF, and CPT 22612 Lumbar Posterolateral Arthrodesis).",
+      "planholders": [
+        "Pacific Spine & Neurosurgery Institute",
+        "Silicon Valley Ambulatory Surgery Center",
+        "Golden State Orthopedic & Spine Medical Group",
+        "Bay Area Minimally Invasive Surgery Center",
+        "Peninsula Neurosurgical Associates Inc."
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Laminotomy (Hemilaminectomy) with Decompression of Nerve Root(s), 1 Interspace, Lumbar",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1450.0,
+          "hist_median_unit_usd": 3420.0,
+          "recommended_unit_usd": 4280.0
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Arthrodesis, Anterior Interbody, Including Disc Space Prep & Decompression, Cervical Below C2 (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 2890.0,
+          "hist_median_unit_usd": 6450.0,
+          "recommended_unit_usd": 8190.0
+        },
+        {
+          "item_code": "CPT-22612",
+          "description": "Arthrodesis, Posterior or Posterolateral Technique, Single Interspace, Lumbar",
+          "unit": "CLAIM",
+          "quantity": 95,
+          "hist_low_unit_usd": 2650.0,
+          "hist_median_unit_usd": 5890.0,
+          "recommended_unit_usd": 7450.0
+        },
+        {
+          "item_code": "CPT-20931",
+          "description": "Allograft, Structural, for Spine Surgery Only (List Separately Add-On Code)",
+          "unit": "CLAIM",
+          "quantity": 235,
+          "hist_low_unit_usd": 310.0,
+          "hist_median_unit_usd": 740.0,
+          "recommended_unit_usd": 920.0
+        }
+      ]
+    },
+    {
+      "project_id": "FLOIR-MRF-CPT-45378-MIA",
+      "title": "[FLOIR-MRF-CPT-45378-MIA] Florida Blue & UnitedHealthcare GI Endoscopy / ASC MRF Rate Spread & FL Stat. \u00a7 627.6131 Prompt-Pay Audit (CPT 45378 / 43239)",
+      "agency": "Florida Office of Insurance Regulation (OIR) & First Coast JN MRF Index \u2014 Miami-Dade MSA",
+      "jurisdiction": "florida",
+      "state_code": "FL",
+      "county": "Miami-Dade County, FL",
+      "letting_date": "2026-11-24",
+      "engineers_estimate_usd": 1560000.0,
+      "dbe_goal_pct": 12.65,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "FL-GPCI-2026-MIA (Medicare Locality 09102-04 & FL Stat. \u00a7 627.6131 12% Prompt-Pay)",
+      "naics_code": "621493",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 First Coast MAC LCD GI Appeal",
+        "Div 26 Anesthesia 00812 / 00731 NSA IDR",
+        "Div 32 ASC Facility Grouping G0105 / G0121",
+        "Div 33 FL Stat. \u00a7 627.6131 12% Late Interest"
+      ],
+      "url": "https://floir.com/sections/pandc/productreview/mrf-index.aspx#FLOIR-MRF-CPT-45378-MIA",
+      "scope_summary": "Commercial payer MRF negotiated rate audit and Florida Statute \u00a7 627.6131 prompt-pay enforcement package for Gastroenterology & Endoscopy ASCs (CPT 45378 Diagnostic Colonoscopy, CPT 45380 Colonoscopy with Biopsy, CPT 45385 Colonoscopy with Lesion Removal by Snare, CPT 43239 Upper GI Endoscopy EGD with Biopsy, and CPT 00812 Monitored Anesthesia Care).",
+      "planholders": [
+        "Gastro Health South Florida ASC LLC",
+        "Biscayne Endoscopy & Surgical Center",
+        "Coral Gables Digestive Health Specialists",
+        "Sunshine State Anesthesia Partners PA",
+        "Palm Beach Gastroenterology Consultants"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45380",
+          "description": "Colonoscopy, Flexible; with Biopsy, Single or Multiple (ASC Facility + Professional)",
+          "unit": "CLAIM",
+          "quantity": 920,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 895.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-45385",
+          "description": "Colonoscopy, Flexible; with Removal of Tumor(s), Polyp(s), or Lesion(s) by Snare Technique",
+          "unit": "CLAIM",
+          "quantity": 640,
+          "hist_low_unit_usd": 485.0,
+          "hist_median_unit_usd": 1060.0,
+          "recommended_unit_usd": 1345.0
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Esophagogastroduodenoscopy (EGD), Flexible, Transoral; with Biopsy, Single or Multiple",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 365.0,
+          "hist_median_unit_usd": 780.0,
+          "recommended_unit_usd": 985.0
+        }
+      ]
+    },
+    {
+      "project_id": "VABOI-MRF-CPT-99285-RIC",
+      "title": "[VABOI-MRF-CPT-99285-RIC] Anthem HealthKeepers & Cigna Emergency Medicine / Radiology Out-of-Network NSA IDR & Downcoding Audit (CPT 99285 / 74177)",
+      "agency": "Virginia Bureau of Insurance (SCC) & Palmetto GBA JM MRF Index \u2014 Northern VA / Richmond MSA",
+      "jurisdiction": "virginia",
+      "state_code": "VA",
+      "county": "Henrico County, VA",
+      "letting_date": "2026-11-25",
+      "engineers_estimate_usd": 2120000.0,
+      "dbe_goal_pct": 12.0,
+      "liquidated_damages_per_day_usd": 450,
+      "wage_determination_id": "VA-GPCI-2026-NOVA (Medicare Locality 00904-01 & VA Code \u00a7 38.2-3407.15 Prompt-Pay)",
+      "naics_code": "621498",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 Prudent Layperson 42 CFR 438.114 Appeal",
+        "Div 26 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 31 EDI 835 CARC CO-4 / CO-150 Downcode Audit",
+        "Div 33 VA Code \u00a7 38.2-3407.15 Ethics & Prompt-Pay"
+      ],
+      "url": "https://scc.virginia.gov/pages/Bureau-of-Insurance#VABOI-MRF-CPT-99285-RIC",
+      "scope_summary": "Automated EDI 835 remittance advice downcoding audit (reversing unilateral commercial payer downcoding of Level 5 Emergency Department E/M CPT 99285 to CPT 99283/99284 in violation of the federal Prudent Layperson Standard) and Federal No Surprises Act (45 CFR 149.510) IDR arbitration brief for Emergency Medicine & Diagnostic Radiology groups in Virginia.",
+      "planholders": [
+        "Commonwealth Emergency Physicians PC",
+        "Dominion Diagnostic Imaging Associates",
+        "Tidewater Acute Care Specialists",
+        "Shenandoah Valley Radiology Group",
+        "Northern Virginia Urgent & Emergency Care"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Department Visit, High Severity & High Medical Decision Making (Prudent Layperson Defense)",
+          "unit": "CLAIM",
+          "quantity": 1850,
+          "hist_low_unit_usd": 215.0,
+          "hist_median_unit_usd": 585.0,
+          "recommended_unit_usd": 745.0
+        },
+        {
+          "item_code": "CPT-99291",
+          "description": "Critical Care, Evaluation and Management of the Critically Ill or Critically Injured Patient; First 30-74 Min",
+          "unit": "CLAIM",
+          "quantity": 410,
+          "hist_low_unit_usd": 310.0,
+          "hist_median_unit_usd": 790.0,
+          "recommended_unit_usd": 985.0
+        },
+        {
+          "item_code": "CPT-74177",
+          "description": "CT Abdomen and Pelvis with Contrast Material(s) (26 Professional Component + TC)",
+          "unit": "CLAIM",
+          "quantity": 960,
+          "hist_low_unit_usd": 195.0,
+          "hist_median_unit_usd": 460.0,
+          "recommended_unit_usd": 595.0
+        }
+      ]
+    },
+    {
+      "project_id": "PAPID-MRF-CPT-66984-PHL",
+      "title": "[PAPID-MRF-CPT-66984-PHL] Highmark BCBS & Independence Blue Cross Ophthalmology / Cataract ASC MRF Rate Spread & Act 68 Prompt-Pay (CPT 66984 / 67028)",
+      "agency": "Pennsylvania Insurance Department (PID) & Novitas JL MRF Index \u2014 Philadelphia MSA",
+      "jurisdiction": "pennsylvania",
+      "state_code": "PA",
+      "county": "Montgomery County, PA",
+      "letting_date": "2026-11-26",
+      "engineers_estimate_usd": 1420000.0,
+      "dbe_goal_pct": 11.0,
+      "liquidated_damages_per_day_usd": 350,
+      "wage_determination_id": "PA-GPCI-2026-PHL (Medicare Locality 12502-01 & 40 P.S. \u00a7 991.2166 10% Prompt-Pay)",
+      "naics_code": "621493",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 Novitas MAC LCD L35091 Cataract Appeal",
+        "Div 26 Bilateral & J-Code Anti-VEGF Buy-and-Bill",
+        "Div 31 Philadelphia GPCI Locality RVU Schedule",
+        "Div 33 PA Act 68 (40 P.S. \u00a7 991.2166) Interest"
+      ],
+      "url": "https://www.insurance.pa.gov/Companies/ProductAndRateRequire/Pages/default.aspx#PAPID-MRF-CPT-66984-PHL",
+      "scope_summary": "Commercial payer MRF negotiated rate benchmark and ERISA medical necessity appeal dossier for Ophthalmology & Retina Surgery Centers (CPT 66984 Extracapsular Cataract Removal with IOL Insertion, CPT 66821 YAG Laser Capsulotomy, and CPT 67028 Intravitreal Injection of Pharmacologic Agent with J0178 / J2778 Buy-and-Bill drug reimbursement).",
+      "planholders": [
+        "Keystone Eye & Laser Surgery Center",
+        "Delaware Valley Retina Associates PC",
+        "Main Line Ophthalmic Surgical Institute",
+        "Allegheny Ophthalmic & Cataract Center",
+        "Penn-Jersey Vision Surgery Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-66984",
+          "description": "Extracapsular Cataract Removal with Insertion of Intraocular Lens Prosthesis (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 780,
+          "hist_low_unit_usd": 820.0,
+          "hist_median_unit_usd": 1740.0,
+          "recommended_unit_usd": 2190.0
+        },
+        {
+          "item_code": "CPT-67028",
+          "description": "Intravitreal Injection of a Pharmacologic Agent (Separate Procedure + J-Code Audit)",
+          "unit": "CLAIM",
+          "quantity": 1620,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 245.0,
+          "recommended_unit_usd": 310.0
+        },
+        {
+          "item_code": "CPT-66821",
+          "description": "Discission of Secondary Membranous Cataract (Posterior Capsulotomy), Laser Surgery",
+          "unit": "CLAIM",
+          "quantity": 410,
+          "hist_low_unit_usd": 260.0,
+          "hist_median_unit_usd": 530.0,
+          "recommended_unit_usd": 670.0
+        }
+      ]
+    },
+    {
+      "project_id": "NYDFS-MRF-CPT-01402-NYC",
+      "title": "[NYDFS-MRF-CPT-01402-NYC] Empire BCBS, EmblemHealth & Oxford Anesthesiology / Plastic Reconstructive NSA IDR & NY ISC \u00a7 3224-a Prompt-Pay (CPT 01402 / 19318)",
+      "agency": "New York State Department of Financial Services (NYDFS) & NGS JK MRF Index \u2014 New York Metro MSA",
+      "jurisdiction": "new_york",
+      "state_code": "NY",
+      "county": "Nassau County, NY",
+      "letting_date": "2026-11-27",
+      "engineers_estimate_usd": 3150000.0,
+      "dbe_goal_pct": 16.5,
+      "liquidated_damages_per_day_usd": 720,
+      "wage_determination_id": "NY-GPCI-2026-NYC (Medicare Locality 13202-01 & NY Ins. Law \u00a7 3224-a 12% Prompt-Pay)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 Federal NSA & NY Financial Services Law Art. 6 IDR",
+        "Div 26 Anesthesia Base + Time Unit Conversion Audit",
+        "Div 31 NYC Manhattan/Queens/LI GPCI RVU Schedule",
+        "Div 33 NY Insurance Law \u00a7 3224-a 12% Statutory Interest"
+      ],
+      "url": "https://www.dfs.ny.gov/consumers/health_insurance/surprise_medical_bills#NYDFS-MRF-CPT-01402-NYC",
+      "scope_summary": "Federal No Surprises Act (45 CFR 149.510) and New York Financial Services Law Article 6 IDR arbitration position statement, commercial MRF conversion factor audit ($88\u2013$142/anesthesia unit), and NY Insurance Law \u00a7 3224-a 12% statutory interest demand for Anesthesiology and Reconstructive Surgery groups in Downstate New York.",
+      "planholders": [
+        "Metropolitan Anesthesia Partners LLP",
+        "Long Island Reconstructive & Microsurgery PC",
+        "Tri-State Perioperative Medical Associates",
+        "Westchester Surgical & Anesthesia Group",
+        "Hudson Valley Specialty Surgery Center"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-01402",
+          "description": "Anesthesia for Total Knee Arthroplasty (Base Units + Time Units Conversion Factor Benchmark)",
+          "unit": "CLAIM",
+          "quantity": 620,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 1480.0,
+          "recommended_unit_usd": 1920.0
+        },
+        {
+          "item_code": "CPT-19318",
+          "description": "Breast Reduction / Reconstructive Mammaplasty (Bilateral Mod 50 & ERISA Medical Necessity)",
+          "unit": "CLAIM",
+          "quantity": 180,
+          "hist_low_unit_usd": 2450.0,
+          "hist_median_unit_usd": 6850.0,
+          "recommended_unit_usd": 8900.0
+        },
+        {
+          "item_code": "CPT-19380",
+          "description": "Revision of Reconstructed Breast (WHCRA 29 U.S.C. \u00a7 1185b Federal Mandate Appeal)",
+          "unit": "CLAIM",
+          "quantity": 145,
+          "hist_low_unit_usd": 2100.0,
+          "hist_median_unit_usd": 5920.0,
+          "recommended_unit_usd": 7650.0
+        }
+      ]
+    },
+    {
+      "project_id": "ILDOI-MRF-CPT-93458-CHI",
+      "title": "[ILDOI-MRF-CPT-93458-CHI] BCBS-IL & UnitedHealthcare Cardiology / Outpatient Cath Lab MRF Rate Benchmark & 215 ILCS 5/368a Prompt-Pay (CPT 93458 / 92928)",
+      "agency": "Illinois Department of Insurance (IDOI) & NGS J6 MRF Index \u2014 Chicago Metro MSA",
+      "jurisdiction": "illinois",
+      "state_code": "IL",
+      "county": "Cook County, IL",
+      "letting_date": "2026-11-28",
+      "engineers_estimate_usd": 1940000.0,
+      "dbe_goal_pct": 13.0,
+      "liquidated_damages_per_day_usd": 480,
+      "wage_determination_id": "IL-GPCI-2026-CHI (Medicare Locality 06102-16 & 215 ILCS 5/368a 9% Prompt-Pay)",
+      "naics_code": "621493",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 NGS MAC LCD L33612 Cardiology Appeal",
+        "Div 26 NCCI Cath + PCI Bundling Audit",
+        "Div 31 Chicago Metro GPCI Locality RVU Schedule",
+        "Div 33 215 ILCS 5/368a 9% Monthly Late Interest"
+      ],
+      "url": "https://idoi.illinois.gov/consumers/consumerinsurance/health.html#ILDOI-MRF-CPT-93458-CHI",
+      "scope_summary": "Commercial payer MRF negotiated rate benchmark, Prior Authorization (CMS-0057-F) clinical justification packet, and Illinois Insurance Code (215 ILCS 5/368a) statutory 9% interest demand for Outpatient Cardiovascular & Interventional Cath Lab ASCs (CPT 93458 Left Heart Catheterization, CPT 92928 Coronary Stent Placement, and CPT 93306 Complete Transthoracic Echocardiography).",
+      "planholders": [
+        "Midwest Heart & Vascular Institute",
+        "Chicagoland Outpatient Cath & Endovascular ASC",
+        "Prairie State Cardiology Associates SC",
+        "North Shore Interventional Vascular Group",
+        "DuPage Cardiovascular & Rhythm Specialists"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Catheter Placement in Coronary Artery(s) for Coronary Angiography with Left Heart Cath",
+          "unit": "CLAIM",
+          "quantity": 310,
+          "hist_low_unit_usd": 1650.0,
+          "hist_median_unit_usd": 3890.0,
+          "recommended_unit_usd": 4850.0
+        },
+        {
+          "item_code": "CPT-92928",
+          "description": "Percutaneous Transcatheter Placement of Intracoronary Stent(s), Single Major Coronary Artery",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 3950.0,
+          "hist_median_unit_usd": 8450.0,
+          "recommended_unit_usd": 10600.0
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Echocardiography, Transthoracic, Real-Time with 2D, Spectral & Color Flow Doppler Complete",
+          "unit": "CLAIM",
+          "quantity": 1420,
+          "hist_low_unit_usd": 185.0,
+          "hist_median_unit_usd": 420.0,
+          "recommended_unit_usd": 535.0
+        }
+      ]
+    },
+    {
+      "project_id": "GAOCI-MRF-CPT-47562-ATL",
+      "title": "[GAOCI-MRF-CPT-47562-ATL] Anthem BCBS-GA & Ambetter General Surgery / Bariatric ASC MRF Rate Spread & O.C.G.A. \u00a7 33-24-59.14 Prompt-Pay (CPT 47562 / 49650)",
+      "agency": "Georgia Office of Commissioner of Insurance (OCI) & Palmetto GBA JJ MRF Index \u2014 Atlanta MSA",
+      "jurisdiction": "georgia",
+      "state_code": "GA",
+      "county": "Fulton County, GA",
+      "letting_date": "2026-11-30",
+      "engineers_estimate_usd": 1680000.0,
+      "dbe_goal_pct": 12.5,
+      "liquidated_damages_per_day_usd": 410,
+      "wage_determination_id": "GA-GPCI-2026-ATL (Medicare Locality 10212-01 & O.C.G.A. \u00a7 33-24-59.14 12% Prompt-Pay)",
+      "naics_code": "621493",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA Medical Necessity & Prior-Auth Appeal",
+        "Div 26 GA Surprise Billing Consumer Protection Act IDR",
+        "Div 31 Atlanta GPCI Locality RVU Schedule",
+        "Div 33 O.C.G.A. \u00a7 33-24-59.14 12% Statutory Interest"
+      ],
+      "url": "https://oci.georgia.gov/insurance-resources/health#GAOCI-MRF-CPT-47562-ATL",
+      "scope_summary": "Commercial payer MRF negotiated rate audit, Georgia Surprise Billing Consumer Protection Act (O.C.G.A. \u00a7 33-20E) arbitration brief, and O.C.G.A. \u00a7 33-24-59.14 12% statutory prompt-pay interest demand for General & Minimally Invasive Surgery Centers (CPT 47562 Laparoscopic Cholecystectomy, CPT 49650 Laparoscopic Inguinal Hernia Repair, and CPT 43775 Laparoscopic Sleeve Gastrectomy).",
+      "planholders": [
+        "Peachtree Surgical & Bariatric Specialists",
+        "Atlanta Minimally Invasive Surgery Center",
+        "Piedmont Perimeter General Surgery Group",
+        "Southern Regional Endosurgery Associates",
+        "Buckhead Ambulatory Surgical Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-47562",
+          "description": "Laparoscopy, Surgical; Cholecystectomy (ASC Facility + Professional Fee Benchmark)",
+          "unit": "CLAIM",
+          "quantity": 390,
+          "hist_low_unit_usd": 1280.0,
+          "hist_median_unit_usd": 2890.0,
+          "recommended_unit_usd": 3650.0
+        },
+        {
+          "item_code": "CPT-49650",
+          "description": "Laparoscopy, Surgical; Repair Initial Inguinal Hernia (Mesh Prosthesis Included)",
+          "unit": "CLAIM",
+          "quantity": 440,
+          "hist_low_unit_usd": 1190.0,
+          "hist_median_unit_usd": 2640.0,
+          "recommended_unit_usd": 3340.0
+        },
+        {
+          "item_code": "CPT-43775",
+          "description": "Laparoscopy, Surgical, Gastric Restrictive Procedure; Longitudinal Gastrectomy (Sleeve)",
+          "unit": "CLAIM",
+          "quantity": 150,
+          "hist_low_unit_usd": 2950.0,
+          "hist_median_unit_usd": 6420.0,
+          "recommended_unit_usd": 8150.0
+        }
+      ]
+    },
+    {
+      "project_id": "NCDOI-MRF-CPT-70553-CLT",
+      "title": "[NCDOI-MRF-CPT-70553-CLT] Blue Cross NC & Cigna Diagnostic Imaging / IDTF MRI MRF Rate Benchmark & N.C.G.S. \u00a7 58-3-225 Prompt-Pay (CPT 70553 / 72148)",
+      "agency": "North Carolina Department of Insurance (NCDOI) & Palmetto GBA JM MRF Index \u2014 Charlotte / Raleigh MSA",
+      "jurisdiction": "north_carolina",
+      "state_code": "NC",
+      "county": "Mecklenburg County, NC",
+      "letting_date": "2026-12-01",
+      "engineers_estimate_usd": 1390000.0,
+      "dbe_goal_pct": 11.5,
+      "liquidated_damages_per_day_usd": 360,
+      "wage_determination_id": "NC-GPCI-2026-CLT (Medicare Locality 11502-00 & N.C.G.S. \u00a7 58-3-225 18% Prompt-Pay)",
+      "naics_code": "621512",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 RBM (EviCore / Carelon) Prior-Auth Rebuttal",
+        "Div 26 MPPR Diagnostic Imaging 25% Reduction Audit",
+        "Div 31 North Carolina GPCI Locality RVU Schedule",
+        "Div 33 N.C.G.S. \u00a7 58-3-225 18% Annual Late Interest"
+      ],
+      "url": "https://www.ncdoi.gov/consumers/health-insurance#NCDOI-MRF-CPT-70553-CLT",
+      "scope_summary": "Commercial payer MRF negotiated rate benchmark, Radiology Benefit Manager (EviCore / Carelon) clinical medical necessity appeal, and N.C.G.S. \u00a7 58-3-225 18% per annum statutory interest demand for Diagnostic Imaging Centers & IDTFs (CPT 70553 MRI Brain w/ & w/o Contrast, CPT 72148 MRI Lumbar Spine w/o Contrast, and CPT 73721 MRI Lower Extremity Joint).",
+      "planholders": [
+        "Carolina Advanced MRI & Diagnostic Imaging",
+        "Piedmont Triad Radiology Associates PA",
+        "Queen City Open Upright MRI Center",
+        "Research Triangle Musculoskeletal Imaging",
+        "Blue Ridge Outpatient Diagnostic Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-70553",
+          "description": "Magnetic Resonance (e.g., Proton) Imaging, Brain (Including Brain Stem); w/o & w/ Contrast",
+          "unit": "CLAIM",
+          "quantity": 820,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 790.0,
+          "recommended_unit_usd": 985.0
+        },
+        {
+          "item_code": "CPT-72148",
+          "description": "Magnetic Resonance Imaging, Spinal Canal and Contents, Lumbar; without Contrast Material",
+          "unit": "CLAIM",
+          "quantity": 1350,
+          "hist_low_unit_usd": 245.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 715.0
+        },
+        {
+          "item_code": "CPT-73721",
+          "description": "Magnetic Resonance Imaging, Any Joint of Lower Extremity; without Contrast Material",
+          "unit": "CLAIM",
+          "quantity": 980,
+          "hist_low_unit_usd": 235.0,
+          "hist_median_unit_usd": 540.0,
+          "recommended_unit_usd": 685.0
+        }
+      ]
+    },
+    {
+      "project_id": "OHODI-MRF-CPT-52356-CMH",
+      "title": "[OHODI-MRF-CPT-52356-CMH] Anthem BCBS-OH & Medical Mutual Urology / Lithotripsy ASC MRF Rate Spread & O.R.C. \u00a7 3901.389 Prompt-Pay (CPT 52356 / 50590)",
+      "agency": "Ohio Department of Insurance (ODI) & CGS J15 MRF Index \u2014 Columbus / Cleveland MSA",
+      "jurisdiction": "ohio",
+      "state_code": "OH",
+      "county": "Franklin County, OH",
+      "letting_date": "2026-12-02",
+      "engineers_estimate_usd": 1490000.0,
+      "dbe_goal_pct": 11.0,
+      "liquidated_damages_per_day_usd": 370,
+      "wage_determination_id": "OH-GPCI-2026-CMH (Medicare Locality 15202-00 & O.R.C. \u00a7 3901.389 18% Prompt-Pay)",
+      "naics_code": "621493",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 CGS MAC LCD Urology Appeal",
+        "Div 26 NCCI Cystourethroscopy & Stent Edit Audit",
+        "Div 31 Ohio GPCI Locality RVU Schedule",
+        "Div 33 Ohio Rev. Code \u00a7 3901.389 18% Interest"
+      ],
+      "url": "https://insurance.ohio.gov/consumers/health#OHODI-MRF-CPT-52356-CMH",
+      "scope_summary": "Commercial payer MRF negotiated rate benchmark, NCCI Procedure-to-Procedure (PTP) modifier defense, and Ohio Revised Code \u00a7 3901.389 18% statutory late-payment interest demand for Urology & Lithotripsy Surgery Centers (CPT 52356 Cystourethroscopy with Ureteroscopy, Laser Lithotripsy & Indwelling Stent Insertion, CPT 50590 Extracorporeal Shock Wave Lithotripsy ESWL, and CPT 55866 Robotic Radical Prostatectomy).",
+      "planholders": [
+        "Buckeye Urology & Stone Surgery Center",
+        "Ohio Valley Lithotripsy & Endourology",
+        "Great Lakes Urologic Surgical Associates",
+        "Central Ohio Continence & Prostate Institute",
+        "Cuyahoga Ambulatory Urology Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-52356",
+          "description": "Cystourethroscopy, with Ureteroscopy and/or Pyeloscopy; with Lithotripsy & Indwelling Stent",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 3290.0,
+          "recommended_unit_usd": 4120.0
+        },
+        {
+          "item_code": "CPT-50590",
+          "description": "Lithotripsy, Extracorporeal Shock Wave (ESWL) (ASC Facility + Professional Fee)",
+          "unit": "CLAIM",
+          "quantity": 320,
+          "hist_low_unit_usd": 1350.0,
+          "hist_median_unit_usd": 2980.0,
+          "recommended_unit_usd": 3740.0
+        },
+        {
+          "item_code": "CPT-52000-59",
+          "description": "Diagnostic Cystourethroscopy (Modifier 59 / XU Distinct Procedural Service Defense)",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 195.0,
+          "hist_median_unit_usd": 410.0,
+          "recommended_unit_usd": 515.0
+        }
+      ]
+    },
+    {
+      "project_id": "CMS-NSA-IDR-2026-Q4-FED",
+      "title": "[CMS-NSA-IDR-2026-Q4-FED] Federal No Surprises Act (45 CFR 149.510) Certified IDR Entity Arbitration & ERISA 29 CFR 2560.503-1 Multi-Specialty Benchmark",
+      "agency": "Centers for Medicare & Medicaid Services (CMS) CCIIO & EBSA Federal IDR Portal \u2014 National Docket",
+      "jurisdiction": "federal",
+      "state_code": "US",
+      "county": "National Federal Jurisdiction, US",
+      "letting_date": "2026-12-03",
+      "engineers_estimate_usd": 3850000.0,
+      "dbe_goal_pct": 15.0,
+      "liquidated_damages_per_day_usd": 850,
+      "wage_determination_id": "CMS-MPFS-2026-NAT (National Conversion Factor $33.29 & 45 CFR \u00a7 149.510 IDR Precedent)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC National Payer MRF Percentiles",
+        "Div 03 ERISA 29 U.S.C. \u00a7 1024(b)(4) Plan Doc Demand",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Position Brief",
+        "Div 26 TMA III / IV QPA Calculation Challenge",
+        "Div 31 Medicare National RVU & OPPS/ASC Crosswalk"
+      ],
+      "url": "https://www.cms.gov/nosurprises/help-resolve-payment-disputes/payment-disputes-between-providers-and-health-plans#CMS-NSA-IDR-2026-Q4-FED",
+      "scope_summary": "National Federal No Surprises Act (45 CFR \u00a7 149.510) Independent Dispute Resolution (IDR) arbitration brief and ERISA (29 CFR \u00a7 2560.503-1 / 29 U.S.C. \u00a7 1024(b)(4)) administrative record demand challenging artificially deflated commercial Qualifying Payment Amounts (QPAs) under the Texas Medical Association (TMA III & IV) federal court rulings across Air Ambulance, Emergency Medicine, Anesthesiology, Radiology, and Out-of-Network Surgical Claims.",
+      "planholders": [
+        "National Acute Care Physician Partners",
+        "American Out-of-Network Surgical Recovery Group",
+        "Apex Healthcare Revenue Cycle & IDR Advisors",
+        "Summit Multi-Specialty Arbitration Collective",
+        "Vanguard Perioperative & Trauma Medical Group"
+      ],
+      "pay_items": [
+        {
+          "item_code": "IDR-SURG-01",
+          "description": "Complex Out-of-Network Inpatient/ASC Surgical Claim Batch (45 CFR 149.510 Batching Eligible)",
+          "unit": "BATCH",
+          "quantity": 180,
+          "hist_low_unit_usd": 3200.0,
+          "hist_median_unit_usd": 9450.0,
+          "recommended_unit_usd": 12400.0
+        },
+        {
+          "item_code": "IDR-EMER-02",
+          "description": "High-Acuity Emergency Medicine & Trauma Critical Care IDR Batch (CPT 99285 / 99291)",
+          "unit": "BATCH",
+          "quantity": 420,
+          "hist_low_unit_usd": 1150.0,
+          "hist_median_unit_usd": 3180.0,
+          "recommended_unit_usd": 4150.0
+        },
+        {
+          "item_code": "IDR-ANES-03",
+          "description": "Out-of-Network Surgical Anesthesiology Base + Time Unit IDR Batch (2.8x\u20133.4x QPA Precedent)",
+          "unit": "BATCH",
+          "quantity": 310,
+          "hist_low_unit_usd": 1420.0,
+          "hist_median_unit_usd": 3890.0,
+          "recommended_unit_usd": 4950.0
+        }
+      ]
+    },
+    {
+      "project_id": "MUNICIPAL-ASC-RCM-2026-09",
+      "title": "[MUNICIPAL-ASC-RCM-2026-09] Multi-State Ambulatory Surgery Center (ASC) Payer Contract Renegotiation, 835 Underpayment & GFE Compliance Audit",
+      "agency": "Multi-State Self-Funded Municipal / Public Employee Health Plan & Commercial ASC Network Index",
+      "jurisdiction": "municipal",
+      "state_code": "MU",
+      "county": "Multi-State Regional MSA",
+      "letting_date": "2026-12-04",
+      "engineers_estimate_usd": 2250000.0,
+      "dbe_goal_pct": 14.0,
+      "liquidated_damages_per_day_usd": 520,
+      "wage_determination_id": "CMS-ASC-2026-REG (Medicare ASC Wage Index & 45 CFR \u00a7 149.610 Good Faith Estimate)",
+      "naics_code": "621493",
+      "csi_divisions": [
+        "Div 01 Commercial Payer Fee-Schedule Renegotiation",
+        "Div 03 EDI 835 Silent Underpayment & MPPR Audit",
+        "Div 26 Implant Carve-Out (HCPCS C1713 / L8699) Recovery",
+        "Div 31 Hospital Outpatient (HOPD) vs. ASC Site-of-Service Lift",
+        "Div 33 45 CFR 149.610 Co-Provider Good Faith Estimate (GFE)"
+      ],
+      "url": "https://www.cms.gov/medicare/payment/prospective-payment-systems/ambulatory-surgical-center-asc#MUNICIPAL-ASC-RCM-2026-09",
+      "scope_summary": "Commercial payer fee-schedule renegotiation leverage dossier quantifying the 58% site-of-service cost savings of shifting orthopedic, spine, pain management, and GI surgical volume from Hospital Outpatient Departments (HOPDs) to independent Ambulatory Surgery Centers (ASCs), paired with implant carve-out (HCPCS C1713) recovery and EDI 835 remittance underpayment auditing.",
+      "planholders": [
+        "Premier Multi-Specialty ASC Management LLC",
+        "Tri-County Outpatient Surgical Center",
+        "Meridian Orthopedic & Pain Surgery Center",
+        "Integrity Medical Billing & RCM Solutions",
+        "Horizon Surgical Partners Holdings"
+      ],
+      "pay_items": [
+        {
+          "item_code": "ASC-ORTHO-1",
+          "description": "Outpatient Total Joint & Arthroscopy ASC Facility Fee Carve-Out Schedule (185% of Medicare ASC)",
+          "unit": "CASE",
+          "quantity": 280,
+          "hist_low_unit_usd": 2850.0,
+          "hist_median_unit_usd": 5420.0,
+          "recommended_unit_usd": 6850.0
+        },
+        {
+          "item_code": "ASC-IMPL-C1713",
+          "description": "Surgical Anchor/Screw/Plate Implant Pass-Through Reimbursement (HCPCS C1713 Invoice + 15%)",
+          "unit": "CASE",
+          "quantity": 390,
+          "hist_low_unit_usd": 950.0,
+          "hist_median_unit_usd": 2150.0,
+          "recommended_unit_usd": 2680.0
+        },
+        {
+          "item_code": "ASC-PAIN-63650",
+          "description": "Percutaneous Implantation of Neurostimulator Electrode Array, Epidural (Spinal Cord Stimulator Trial)",
+          "unit": "CASE",
+          "quantity": 95,
+          "hist_low_unit_usd": 3400.0,
+          "hist_median_unit_usd": 7250.0,
+          "recommended_unit_usd": 8950.0
+        }
+      ]
+    }
+  ]
+}

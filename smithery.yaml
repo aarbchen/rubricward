@@ -1,0 +1,15 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: []
+    properties:
+      rapidApiKey:
+        type: string
+        description: Optional RapidAPI key for routing through RapidAPI Hub; defaults to direct https://api.rubricward.com stateless execution.
+  commandFunction: |-
+    (config) => ({
+      command: 'node',
+      args: ['mcp-server/index.js'],
+      env: config.rapidApiKey ? { RAPIDAPI_KEY: config.rapidApiKey } : {}
+    })

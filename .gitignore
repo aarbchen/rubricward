@@ -1,0 +1,13 @@
+# Secrets & Sessions
+.env
+rapidapi_session.json
+rapidapi_published_catalog.json
+.rubricward_watcher_heartbeat.json
+processed_outbound_replies.json
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+node_modules/
+error_log.txt
+

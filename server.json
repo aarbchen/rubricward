@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.aarbchen/rubricward-mcp",
+  "title": "RubricWard Healthcare Payer MRF, ERISA & NSA IDR MCP Server",
+  "description": "50-State commercial payer MRF negotiated rates, ERISA medical necessity appeals & Federal NSA IDR MCP server.",
+  "websiteUrl": "https://rubricward.com/apis.html",
+  "repository": {
+    "url": "https://github.com/aarbchen/rubricward",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://rubricward.com/mcp"
+    }
+  ]
+}

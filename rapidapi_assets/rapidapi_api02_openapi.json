@@ -1,0 +1,110 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "50-State DOT Historical Item Bid Tabulation & Spread Modeler API",
+    "version": "1.0.0",
+    "description": "Model 50-State DOT historical unit-price bid tabulations ($/Ton, $/LF, $/CY), low/median/high bidder spreads, and recommended unit bid prices."
+  },
+  "servers": [
+    {
+      "url": "https://rubricward.com"
+    }
+  ],
+  "paths": {
+    "/v1/model/dot-unit-bid-tabs": {
+      "post": {
+        "summary": "Model DOT Historical Unit Bid Tabulations",
+        "description": "Model 50-State DOT historical unit-price bid tabulations ($/Ton, $/LF, $/CY), low/median/high bidder spreads, and recommended unit bid prices.",
+        "operationId": "modelDotUnitBidTabs",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "state_code",
+                  "pay_items"
+                ],
+                "properties": {
+                  "state_code": {
+                    "type": "string",
+                    "description": "Two-letter U.S. state postal code (e.g., TX, CA, FL, PA).",
+                    "default": "TX"
+                  },
+                  "dot_agency": {
+                    "type": "string",
+                    "description": "State DOT agency identifier (e.g., TxDOT, Caltrans, FDOT, PennDOT).",
+                    "default": "TxDOT"
+                  },
+                  "letting_quarter": {
+                    "type": "string",
+                    "description": "Target letting quarter for inflation adjustment.",
+                    "default": "2026-Q4"
+                  },
+                  "pay_items": {
+                    "type": "array",
+                    "description": "Array of DOT pay items with item_code, description, unit, and quantity.",
+                    "items": {
+                      "type": "object"
+                    }
+                  }
+                }
+              },
+              "example": {
+                "state_code": "TX",
+                "dot_agency": "TxDOT",
+                "letting_quarter": "2026-Q4",
+                "pay_items": [
+                  {
+                    "item_code": "3076-6001",
+                    "description": "Dense-Graded Hot-Mix Asphalt (Superpave)",
+                    "unit": "TON",
+                    "quantity": 18500
+                  },
+                  {
+                    "item_code": "0464-6008",
+                    "description": "Reinforced Concrete Pipe (Class III 36-Inch)",
+                    "unit": "LF",
+                    "quantity": 2400
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful structured preconstruction JSON response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/health": {
+      "get": {
+        "summary": "Verify API Gateway Health Status",
+        "description": "Unprotected SLA and health-check endpoint returning HTTP 200 OK.",
+        "operationId": "getHealthCheckStatus",
+        "responses": {
+          "200": {
+            "description": "Service healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
