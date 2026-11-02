@@ -160,7 +160,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
             "steps": [
                 {
                     "type": "email",
-                    "delay": 3,
+                    "delay": 2,
                     "delay_unit": "days",
                     "pre_delay_unit": "days",
                     "variants": [
@@ -172,7 +172,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 },
                 {
                     "type": "email",
-                    "delay": 4,
+                    "delay": 2,
                     "delay_unit": "days",
                     "pre_delay_unit": "days",
                     "variants": [
@@ -184,7 +184,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 },
                 {
                     "type": "email",
-                    "delay": 4,
+                    "delay": 2,
                     "delay_unit": "days",
                     "pre_delay_unit": "days",
                     "variants": [

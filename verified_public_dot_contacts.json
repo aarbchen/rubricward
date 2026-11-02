@@ -468,6 +468,15 @@
     "source_url": "https://bellmedex.com/contact-bellmedex/"
   },
   {
+    "company_name": "Dallas Neurosurgical & Spine",
+    "email": "info@dallasneurosurgical.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-90107",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.dallasneurosurgical.com/"
+  },
+  {
     "company_name": "Digestive Health Associates TX",
     "email": "info@dhantx.com",
     "first_name": "Revenue Cycle",

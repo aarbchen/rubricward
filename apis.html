@@ -1752,11 +1752,30 @@
         const params = new URLSearchParams((window.location && window.location.search) || '');
         const co = (params.get('co') || params.get('company') || '').trim();
         const st = (params.get('state') || params.get('dot') || '').trim();
+        const em = (params.get('email') || params.get('prefilled_email') || '').trim();
         const banner = document.getElementById('main-outbound-prospect-banner');
         const textEl = document.getElementById('prospect-banner-text');
         if (co && banner && textEl) {
           textEl.textContent = 'Custom Commercial Payer MRF & NSA IDR Workspace Prepared for ' + co + (st ? ' (' + st.toUpperCase() + ' Payer MRF & IDR)' : '') + ' — 6-File OpenXML (.DOCX + .XLSX) Sample Ready.';
           banner.classList.remove('hidden');
+        }
+        if (co) {
+          ['checkout-modal-company', 'vault-company-name', 'wb-cfo-company'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.value = co;
+          });
+        }
+        if (st) {
+          ['checkout-modal-states', 'vault-state-dots'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.value = st.toUpperCase() + ' - State DOI/APCD MRF + CMS Federal NSA IDR';
+          });
+        }
+        if (em && em.includes('@')) {
+          ['checkout-modal-email', 'lead-magnet-email', 'account-lookup-input'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.value = em;
+          });
         }
       } catch (e) {}
     }
