@@ -112,7 +112,7 @@ def build_worker_bundle() -> Path:
         if _pw
     ))
 
-    worker_js = rf"""// RubricWard Full-Stack Edge Worker (https://rubricward.com & https://api.rubricward.com)
+    worker_js = f"""// RubricWard Full-Stack Edge Worker (https://rubricward.com & https://api.rubricward.com)
 // Serves:
 //  - Static HTML/SVG/XML/PNG/ICO pages (/, /apis, /lettings, /lettings/project/*, /sitemap.xml, /robots.txt, /site.webmanifest, /favicon.svg, /bimi-logo.svg, /favicon.ico, /favicon*.png, /apple-touch-icon.png, /og-image.png)
 //  - All 12 Stateless Commercial Payer MRF, Medicare RVU/GPCI, ERISA Appeal & Federal NSA IDR APIs (/v1/*)

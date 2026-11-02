@@ -1090,7 +1090,7 @@ def build_site_files() -> None:
 
     api_catalog_block = _build_api_catalog_section()
 
-    common_js = rf"""
+    common_js = f"""
     const LETTINGS_DATA = {json.dumps(lettings)};
     const __CAMBER_ADMIN_SALT = {json.dumps(_admin_salt)};
     const __CAMBER_ADMIN_DIGESTS = {json.dumps(_admin_digests)};
