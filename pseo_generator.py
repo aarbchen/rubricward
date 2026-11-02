@@ -95,6 +95,7 @@ def _header_html(root_rel: str = "../", dir_href: str = "index.html") -> str:
       <a href="{root_rel}index.html#overview" class="hover:text-[#065F46]">Overview</a>
       <a href="{dir_href}" class="text-[#065F46] font-extrabold">Live Payer MRF &amp; IDR Directory</a>
       <a href="{root_rel}apis.html" class="hover:text-[#065F46]">API Catalog</a>
+      <a href="{root_rel}index.html#contact" class="hover:text-[#065F46]">Contact &amp; Support</a>
       <a href="{root_rel}index.html#checkout" class="px-3.5 py-1.5 bg-[#071C21] text-white rounded hover:bg-[#065F46] transition">Pricing &amp; Access</a>
     </nav>
     <a href="{root_rel}index.html#checkout" class="md:hidden shrink-0 px-3 py-1.5 rounded-lg bg-[#071C21] text-white text-xs font-mono font-bold">PRICING</a>
