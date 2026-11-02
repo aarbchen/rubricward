@@ -24,11 +24,12 @@
       "url": "https://www.tdi.texas.gov/health/payor-mrf-benchmarks.html#TXDOI-MRF-CPT-29881-DFW",
       "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for Orthopedic & ASC surgical procedures (CPT 29881 Knee Arthroscopy Meniscectomy, CPT 27447 Total Knee Arthroplasty, CPT 29827 Rotator Cuff Repair, and CPT 64483 Transforaminal Epidural Steroid Injection) across UnitedHealthcare, BCBS-TX, Aetna, and Cigna in Texas.",
       "planholders": [
+        "Abc Plastic Surgery Center Pa (NPI 1700073566)",
+        "A S Surgical Affiliates, Pa (NPI 1447382445)",
         "Texas Orthopedic Specialists PA",
         "Baylor Scott & White Surgicare",
         "Lonestar Ambulatory Surgery Center LLC",
-        "Austin Spine & Neurosurgery Associates",
-        "Methodist Orthopedic Surgical Group"
+        "Austin Spine & Neurosurgery Associates"
       ],
       "pay_items": [
         {
@@ -102,11 +103,12 @@
       "url": "https://www.dmhc.ca.gov/DataResearch/FinancialSummaryData.aspx#CADMHC-MRF-CPT-63030-SFO",
       "scope_summary": "Commercial payer MRF negotiated rate benchmark, Noridian Medicare MAC LCD L34220 medical necessity appeal, and Knox-Keene Act (CA Health & Safety Code \u00a7 1371) 15% per annum statutory interest demand for Spine & Neurosurgery procedures (CPT 63030 Lumbar Laminotomy/Discectomy, CPT 22551 Anterior Cervical Discectomy & Fusion ACDF, and CPT 22612 Lumbar Posterolateral Arthrodesis).",
       "planholders": [
+        "120 Spalding Surgery Center, Llc (NPI 1689113037)",
+        "120 Spalding Partners, Llc (NPI 1326498155)",
         "Pacific Spine & Neurosurgery Institute",
         "Silicon Valley Ambulatory Surgery Center",
         "Golden State Orthopedic & Spine Medical Group",
-        "Bay Area Minimally Invasive Surgery Center",
-        "Peninsula Neurosurgical Associates Inc."
+        "Bay Area Minimally Invasive Surgery Center"
       ],
       "pay_items": [
         {
@@ -170,11 +172,12 @@
       "url": "https://floir.com/sections/pandc/productreview/mrf-index.aspx#FLOIR-MRF-CPT-45378-MIA",
       "scope_summary": "Commercial payer MRF negotiated rate audit and Florida Statute \u00a7 627.6131 prompt-pay enforcement package for Gastroenterology & Endoscopy ASCs (CPT 45378 Diagnostic Colonoscopy, CPT 45380 Colonoscopy with Biopsy, CPT 45385 Colonoscopy with Lesion Removal by Snare, CPT 43239 Upper GI Endoscopy EGD with Biopsy, and CPT 00812 Monitored Anesthesia Care).",
       "planholders": [
+        "2047 Palm Beach Lakes Partners Llc (NPI 1992740674)",
+        "1-4 Surgical Services, Llc (NPI 1215115373)",
         "Gastro Health South Florida ASC LLC",
         "Biscayne Endoscopy & Surgical Center",
         "Coral Gables Digestive Health Specialists",
-        "Sunshine State Anesthesia Partners PA",
-        "Palm Beach Gastroenterology Consultants"
+        "Sunshine State Anesthesia Partners PA"
       ],
       "pay_items": [
         {
@@ -229,11 +232,12 @@
       "url": "https://scc.virginia.gov/pages/Bureau-of-Insurance#VABOI-MRF-CPT-99285-RIC",
       "scope_summary": "Automated EDI 835 remittance advice downcoding audit (reversing unilateral commercial payer downcoding of Level 5 Emergency Department E/M CPT 99285 to CPT 99283/99284 in violation of the federal Prudent Layperson Standard) and Federal No Surprises Act (45 CFR 149.510) IDR arbitration brief for Emergency Medicine & Diagnostic Radiology groups in Virginia.",
       "planholders": [
+        "Advanced Sedation Dentistry - Hampton (NPI 1336585702)",
+        "Advanced Health Care And Wellness Llc (NPI 1356186787)",
         "Commonwealth Emergency Physicians PC",
         "Dominion Diagnostic Imaging Associates",
         "Tidewater Acute Care Specialists",
-        "Shenandoah Valley Radiology Group",
-        "Northern Virginia Urgent & Emergency Care"
+        "Shenandoah Valley Radiology Group"
       ],
       "pay_items": [
         {
@@ -288,11 +292,12 @@
       "url": "https://www.insurance.pa.gov/Companies/ProductAndRateRequire/Pages/default.aspx#PAPID-MRF-CPT-66984-PHL",
       "scope_summary": "Commercial payer MRF negotiated rate benchmark and ERISA medical necessity appeal dossier for Ophthalmology & Retina Surgery Centers (CPT 66984 Extracapsular Cataract Removal with IOL Insertion, CPT 66821 YAG Laser Capsulotomy, and CPT 67028 Intravitreal Injection of Pharmacologic Agent with J0178 / J2778 Buy-and-Bill drug reimbursement).",
       "planholders": [
+        "325 Asc, Llc (NPI 1952785438)",
+        "20-20 Surgery Center Llc (NPI 1194718940)",
         "Keystone Eye & Laser Surgery Center",
         "Delaware Valley Retina Associates PC",
         "Main Line Ophthalmic Surgical Institute",
-        "Allegheny Ophthalmic & Cataract Center",
-        "Penn-Jersey Vision Surgery Partners"
+        "Allegheny Ophthalmic & Cataract Center"
       ],
       "pay_items": [
         {
@@ -347,11 +352,12 @@
       "url": "https://www.dfs.ny.gov/consumers/health_insurance/surprise_medical_bills#NYDFS-MRF-CPT-01402-NYC",
       "scope_summary": "Federal No Surprises Act (45 CFR 149.510) and New York Financial Services Law Article 6 IDR arbitration position statement, commercial MRF conversion factor audit ($88\u2013$142/anesthesia unit), and NY Insurance Law \u00a7 3224-a 12% statutory interest demand for Anesthesiology and Reconstructive Surgery groups in Downstate New York.",
       "planholders": [
+        "154 Northern Medical Practice (NPI 1710311691)",
+        "128 Plastic Surgery Associates Pllc (NPI 1720381569)",
         "Metropolitan Anesthesia Partners LLP",
         "Long Island Reconstructive & Microsurgery PC",
         "Tri-State Perioperative Medical Associates",
-        "Westchester Surgical & Anesthesia Group",
-        "Hudson Valley Specialty Surgery Center"
+        "Westchester Surgical & Anesthesia Group"
       ],
       "pay_items": [
         {
@@ -734,6 +740,3606 @@
           "hist_low_unit_usd": 3400.0,
           "hist_median_unit_usd": 7250.0,
           "recommended_unit_usd": 8950.0
+        }
+      ]
+    },
+    {
+      "project_id": "WADOI-MRF-CPT-29881-310",
+      "letting_id": "WADOI-MRF-CPT-29881-310",
+      "title": "[WADOI-MRF-CPT-29881-310] Washington UHC, Anthem & BCBS-WA Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy)",
+      "agency": "Washington Office of the Insurance Commissioner (WA OIC) & CMS TiC Payer MRF Index",
+      "jurisdiction": "wa",
+      "state_code": "WA",
+      "county": "King County, WA",
+      "letting_date": "2026-11-18",
+      "engineers_estimate_usd": 1420000.0,
+      "dbe_goal_pct": 195.0,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "WA-GPCI-2026 (RCW 48.49 & WAC 284-170-431)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 RCW 48.49 & WAC 284-170-431"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#WADOI-MRF-CPT-29881-310",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#WADOI-MRF-CPT-29881-310",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy in Washington (RCW 48.49 & WAC 284-170-431).",
+      "planholders": [
+        "Washington Specialty Surgical Associates",
+        "Washington Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Washington",
+        "Washington Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 582.4,
+          "hist_median_unit_usd": 1355.9,
+          "recommended_unit_usd": 1710.8
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 844.48,
+          "hist_median_unit_usd": 1966.06,
+          "recommended_unit_usd": 2480.66
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 582.4,
+          "hist_median_unit_usd": 1355.9,
+          "recommended_unit_usd": 1710.8
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 844.48,
+          "hist_median_unit_usd": 1966.06,
+          "recommended_unit_usd": 2480.66
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "MIDOI-MRF-CPT-63030-311",
+      "letting_id": "MIDOI-MRF-CPT-63030-311",
+      "title": "[MIDOI-MRF-CPT-63030-311] Michigan UHC, Anthem & BCBS-MI Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 63030 / 22551 Spine & Neurosurgery Laminotomy)",
+      "agency": "Michigan Department of Insurance and Financial Services (DIFS) & CMS TiC Payer MRF Index",
+      "jurisdiction": "mi",
+      "state_code": "MI",
+      "county": "Oakland County, MI",
+      "letting_date": "2026-11-19",
+      "engineers_estimate_usd": 1605000.0,
+      "dbe_goal_pct": 203.5,
+      "liquidated_damages_per_day_usd": 425,
+      "wage_determination_id": "MI-GPCI-2026 (MCL 500.2006 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 MCL 500.2006 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MIDOI-MRF-CPT-63030-311",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MIDOI-MRF-CPT-63030-311",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 63030 / 22551 Spine & Neurosurgery Laminotomy in Michigan (MCL 500.2006 (12% Prompt-Pay)).",
+      "planholders": [
+        "Michigan Specialty Surgical Associates",
+        "Michigan Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Michigan",
+        "Michigan Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 1710.8,
+          "hist_median_unit_usd": 4032.6,
+          "recommended_unit_usd": 5094.8
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2480.66,
+          "hist_median_unit_usd": 5847.27,
+          "recommended_unit_usd": 7387.46
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 1710.8,
+          "hist_median_unit_usd": 4032.6,
+          "recommended_unit_usd": 5094.8
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2480.66,
+          "hist_median_unit_usd": 5847.27,
+          "recommended_unit_usd": 7387.46
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "NJDOI-MRF-CPT-45378-312",
+      "letting_id": "NJDOI-MRF-CPT-45378-312",
+      "title": "[NJDOI-MRF-CPT-45378-312] New Jersey UHC, Anthem & BCBS-NJ Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC)",
+      "agency": "New Jersey Department of Banking and Insurance (NJDOBI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "nj",
+      "state_code": "NJ",
+      "county": "Middlesex County, NJ",
+      "letting_date": "2026-11-20",
+      "engineers_estimate_usd": 1790000.0,
+      "dbe_goal_pct": 212.0,
+      "liquidated_damages_per_day_usd": 470,
+      "wage_determination_id": "NJ-GPCI-2026 (N.J.S.A. 17B:30-26 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 N.J.S.A. 17B:30-26 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NJDOI-MRF-CPT-45378-312",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NJDOI-MRF-CPT-45378-312",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC in New Jersey (N.J.S.A. 17B:30-26 (12% Prompt-Pay)).",
+      "planholders": [
+        "New Jersey Specialty Surgical Associates",
+        "New Jersey Ambulatory Surgery Center LLC",
+        "Regional Medical Group of New Jersey",
+        "New Jersey Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 397.7,
+          "hist_median_unit_usd": 936.05,
+          "recommended_unit_usd": 1178.55
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 576.66,
+          "hist_median_unit_usd": 1357.27,
+          "recommended_unit_usd": 1708.9
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 397.7,
+          "hist_median_unit_usd": 936.05,
+          "recommended_unit_usd": 1178.55
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 576.66,
+          "hist_median_unit_usd": 1357.27,
+          "recommended_unit_usd": 1708.9
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "MADOI-MRF-CPT-99285-313",
+      "letting_id": "MADOI-MRF-CPT-99285-313",
+      "title": "[MADOI-MRF-CPT-99285-313] Massachusetts UHC, Anthem & BCBS-MA Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 99285 / 00100 Emergency & Anesthesia NSA IDR)",
+      "agency": "Massachusetts Division of Insurance (MA DOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ma",
+      "state_code": "MA",
+      "county": "Middlesex County, MA",
+      "letting_date": "2026-11-21",
+      "engineers_estimate_usd": 1975000.0,
+      "dbe_goal_pct": 220.5,
+      "liquidated_damages_per_day_usd": 515,
+      "wage_determination_id": "MA-GPCI-2026 (M.G.L. c. 176G \u00a7 6 & c. 175 \u00a7 110)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 M.G.L. c. 176G \u00a7 6 & c. 175 \u00a7 110"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MADOI-MRF-CPT-99285-313",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MADOI-MRF-CPT-99285-313",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 99285 / 00100 Emergency & Anesthesia NSA IDR in Massachusetts (M.G.L. c. 176G \u00a7 6 & c. 175 \u00a7 110).",
+      "planholders": [
+        "Massachusetts Specialty Surgical Associates",
+        "Massachusetts Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Massachusetts",
+        "Massachusetts Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 345.0,
+          "hist_median_unit_usd": 845.0,
+          "recommended_unit_usd": 1090.0
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 500.25,
+          "hist_median_unit_usd": 1225.25,
+          "recommended_unit_usd": 1580.5
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 345.0,
+          "hist_median_unit_usd": 845.0,
+          "recommended_unit_usd": 1090.0
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 500.25,
+          "hist_median_unit_usd": 1225.25,
+          "recommended_unit_usd": 1580.5
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "CODOI-MRF-CPT-93458-314",
+      "letting_id": "CODOI-MRF-CPT-93458-314",
+      "title": "[CODOI-MRF-CPT-93458-314] Colorado UHC, Anthem & BCBS-CO Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 93458 / 93306 Cardiology Left Heart Catheterization)",
+      "agency": "Colorado Division of Insurance (DORA DOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "co",
+      "state_code": "CO",
+      "county": "Denver County, CO",
+      "letting_date": "2026-11-22",
+      "engineers_estimate_usd": 2160000.0,
+      "dbe_goal_pct": 229.0,
+      "liquidated_damages_per_day_usd": 560,
+      "wage_determination_id": "CO-GPCI-2026 (C.R.S. \u00a7 10-16-106.5 (20% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 C.R.S. \u00a7 10-16-106.5 (20% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#CODOI-MRF-CPT-93458-314",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#CODOI-MRF-CPT-93458-314",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 93458 / 93306 Cardiology Left Heart Catheterization in Colorado (C.R.S. \u00a7 10-16-106.5 (20% Prompt-Pay)).",
+      "planholders": [
+        "Colorado Specialty Surgical Associates",
+        "Colorado Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Colorado",
+        "Colorado Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 1215.4,
+          "hist_median_unit_usd": 2822.2,
+          "recommended_unit_usd": 3522.6
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1762.33,
+          "hist_median_unit_usd": 4092.19,
+          "recommended_unit_usd": 5107.77
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 1215.4,
+          "hist_median_unit_usd": 2822.2,
+          "recommended_unit_usd": 3522.6
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1762.33,
+          "hist_median_unit_usd": 4092.19,
+          "recommended_unit_usd": 5107.77
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "AZDOI-MRF-CPT-29881-315",
+      "letting_id": "AZDOI-MRF-CPT-29881-315",
+      "title": "[AZDOI-MRF-CPT-29881-315] Arizona UHC, Anthem & BCBS-AZ Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy)",
+      "agency": "Arizona Department of Insurance and Financial Institutions (DIFI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "az",
+      "state_code": "AZ",
+      "county": "Maricopa County, AZ",
+      "letting_date": "2026-11-23",
+      "engineers_estimate_usd": 2345000.0,
+      "dbe_goal_pct": 237.5,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "AZ-GPCI-2026 (A.R.S. \u00a7 20-3102 Prompt-Pay)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 A.R.S. \u00a7 20-3102 Prompt-Pay"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#AZDOI-MRF-CPT-29881-315",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#AZDOI-MRF-CPT-29881-315",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy in Arizona (A.R.S. \u00a7 20-3102 Prompt-Pay).",
+      "planholders": [
+        "Arizona Specialty Surgical Associates",
+        "Arizona Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Arizona",
+        "Arizona Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 678.4,
+          "hist_median_unit_usd": 1579.4,
+          "recommended_unit_usd": 1992.8
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 983.68,
+          "hist_median_unit_usd": 2290.13,
+          "recommended_unit_usd": 2889.56
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 678.4,
+          "hist_median_unit_usd": 1579.4,
+          "recommended_unit_usd": 1992.8
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 983.68,
+          "hist_median_unit_usd": 2290.13,
+          "recommended_unit_usd": 2889.56
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "MNDOI-MRF-CPT-63030-316",
+      "letting_id": "MNDOI-MRF-CPT-63030-316",
+      "title": "[MNDOI-MRF-CPT-63030-316] Minnesota UHC, Anthem & BCBS-MN Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 63030 / 22551 Spine & Neurosurgery Laminotomy)",
+      "agency": "Minnesota Department of Commerce \u2014 Insurance Division & CMS TiC Payer MRF Index",
+      "jurisdiction": "mn",
+      "state_code": "MN",
+      "county": "Hennepin County, MN",
+      "letting_date": "2026-11-24",
+      "engineers_estimate_usd": 2530000.0,
+      "dbe_goal_pct": 246.0,
+      "liquidated_damages_per_day_usd": 425,
+      "wage_determination_id": "MN-GPCI-2026 (Minn. Stat. \u00a7 62Q.75 (18% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Minn. Stat. \u00a7 62Q.75 (18% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MNDOI-MRF-CPT-63030-316",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MNDOI-MRF-CPT-63030-316",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 63030 / 22551 Spine & Neurosurgery Laminotomy in Minnesota (Minn. Stat. \u00a7 62Q.75 (18% Prompt-Pay)).",
+      "planholders": [
+        "Minnesota Specialty Surgical Associates",
+        "Minnesota Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Minnesota",
+        "Minnesota Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 1983.8,
+          "hist_median_unit_usd": 4676.1,
+          "recommended_unit_usd": 5907.8
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2876.51,
+          "hist_median_unit_usd": 6780.35,
+          "recommended_unit_usd": 8566.31
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 1983.8,
+          "hist_median_unit_usd": 4676.1,
+          "recommended_unit_usd": 5907.8
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2876.51,
+          "hist_median_unit_usd": 6780.35,
+          "recommended_unit_usd": 8566.31
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "TNDOI-MRF-CPT-45378-317",
+      "letting_id": "TNDOI-MRF-CPT-45378-317",
+      "title": "[TNDOI-MRF-CPT-45378-317] Tennessee UHC, Anthem & BCBS-TN Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC)",
+      "agency": "Tennessee Department of Commerce and Insurance (TDCI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "tn",
+      "state_code": "TN",
+      "county": "Davidson County, TN",
+      "letting_date": "2026-11-25",
+      "engineers_estimate_usd": 2715000.0,
+      "dbe_goal_pct": 254.5,
+      "liquidated_damages_per_day_usd": 470,
+      "wage_determination_id": "TN-GPCI-2026 (Tenn. Code Ann. \u00a7 56-7-109 (21% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Tenn. Code Ann. \u00a7 56-7-109 (21% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#TNDOI-MRF-CPT-45378-317",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#TNDOI-MRF-CPT-45378-317",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC in Tennessee (Tenn. Code Ann. \u00a7 56-7-109 (21% Prompt-Pay)).",
+      "planholders": [
+        "Tennessee Specialty Surgical Associates",
+        "Tennessee Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Tennessee",
+        "Tennessee Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 373.1,
+          "hist_median_unit_usd": 878.15,
+          "recommended_unit_usd": 1105.65
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 541.0,
+          "hist_median_unit_usd": 1273.32,
+          "recommended_unit_usd": 1603.19
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 373.1,
+          "hist_median_unit_usd": 878.15,
+          "recommended_unit_usd": 1105.65
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 541.0,
+          "hist_median_unit_usd": 1273.32,
+          "recommended_unit_usd": 1603.19
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "INDOI-MRF-CPT-99285-318",
+      "letting_id": "INDOI-MRF-CPT-99285-318",
+      "title": "[INDOI-MRF-CPT-99285-318] Indiana UHC, Anthem & BCBS-IN Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 99285 / 00100 Emergency & Anesthesia NSA IDR)",
+      "agency": "Indiana Department of Insurance (IDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "in",
+      "state_code": "IN",
+      "county": "Marion County, IN",
+      "letting_date": "2026-11-26",
+      "engineers_estimate_usd": 1420000.0,
+      "dbe_goal_pct": 263.0,
+      "liquidated_damages_per_day_usd": 515,
+      "wage_determination_id": "IN-GPCI-2026 (IC 27-8-5.7-6 Prompt-Pay)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 IC 27-8-5.7-6 Prompt-Pay"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#INDOI-MRF-CPT-99285-318",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#INDOI-MRF-CPT-99285-318",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 99285 / 00100 Emergency & Anesthesia NSA IDR in Indiana (IC 27-8-5.7-6 Prompt-Pay).",
+      "planholders": [
+        "Indiana Specialty Surgical Associates",
+        "Indiana Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Indiana",
+        "Indiana Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 324.3,
+          "hist_median_unit_usd": 794.3,
+          "recommended_unit_usd": 1024.6
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 470.24,
+          "hist_median_unit_usd": 1151.73,
+          "recommended_unit_usd": 1485.67
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 324.3,
+          "hist_median_unit_usd": 794.3,
+          "recommended_unit_usd": 1024.6
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 470.24,
+          "hist_median_unit_usd": 1151.73,
+          "recommended_unit_usd": 1485.67
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "MODOI-MRF-CPT-93458-319",
+      "letting_id": "MODOI-MRF-CPT-93458-319",
+      "title": "[MODOI-MRF-CPT-93458-319] Missouri UHC, Anthem & BCBS-MO Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 93458 / 93306 Cardiology Left Heart Catheterization)",
+      "agency": "Missouri Department of Commerce and Insurance (DCI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "mo",
+      "state_code": "MO",
+      "county": "St. Louis County, MO",
+      "letting_date": "2026-11-27",
+      "engineers_estimate_usd": 1605000.0,
+      "dbe_goal_pct": 195.0,
+      "liquidated_damages_per_day_usd": 560,
+      "wage_determination_id": "MO-GPCI-2026 (RSMo \u00a7 376.383 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 RSMo \u00a7 376.383 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MODOI-MRF-CPT-93458-319",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MODOI-MRF-CPT-93458-319",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 93458 / 93306 Cardiology Left Heart Catheterization in Missouri (RSMo \u00a7 376.383 (12% Prompt-Pay)).",
+      "planholders": [
+        "Missouri Specialty Surgical Associates",
+        "Missouri Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Missouri",
+        "Missouri Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 1144.6,
+          "hist_median_unit_usd": 2657.8,
+          "recommended_unit_usd": 3317.4
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1659.67,
+          "hist_median_unit_usd": 3853.81,
+          "recommended_unit_usd": 4810.23
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 1144.6,
+          "hist_median_unit_usd": 2657.8,
+          "recommended_unit_usd": 3317.4
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1659.67,
+          "hist_median_unit_usd": 3853.81,
+          "recommended_unit_usd": 4810.23
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "WIDOI-MRF-CPT-29881-320",
+      "letting_id": "WIDOI-MRF-CPT-29881-320",
+      "title": "[WIDOI-MRF-CPT-29881-320] Wisconsin UHC, Anthem & BCBS-WI Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy)",
+      "agency": "Wisconsin Office of the Commissioner of Insurance (OCI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "wi",
+      "state_code": "WI",
+      "county": "Milwaukee County, WI",
+      "letting_date": "2026-11-18",
+      "engineers_estimate_usd": 1790000.0,
+      "dbe_goal_pct": 203.5,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "WI-GPCI-2026 (Wis. Stat. \u00a7 628.46 (7.5% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Wis. Stat. \u00a7 628.46 (7.5% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#WIDOI-MRF-CPT-29881-320",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#WIDOI-MRF-CPT-29881-320",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy in Wisconsin (Wis. Stat. \u00a7 628.46 (7.5% Prompt-Pay)).",
+      "planholders": [
+        "Wisconsin Specialty Surgical Associates",
+        "Wisconsin Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Wisconsin",
+        "Wisconsin Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1490.0,
+          "recommended_unit_usd": 1880.0
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 928.0,
+          "hist_median_unit_usd": 2160.5,
+          "recommended_unit_usd": 2726.0
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1490.0,
+          "recommended_unit_usd": 1880.0
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 928.0,
+          "hist_median_unit_usd": 2160.5,
+          "recommended_unit_usd": 2726.0
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "SCDOI-MRF-CPT-63030-321",
+      "letting_id": "SCDOI-MRF-CPT-63030-321",
+      "title": "[SCDOI-MRF-CPT-63030-321] South Carolina UHC, Anthem & BCBS-SC Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 63030 / 22551 Spine & Neurosurgery Laminotomy)",
+      "agency": "South Carolina Department of Insurance (SCDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "sc",
+      "state_code": "SC",
+      "county": "Charleston County, SC",
+      "letting_date": "2026-11-19",
+      "engineers_estimate_usd": 1975000.0,
+      "dbe_goal_pct": 212.0,
+      "liquidated_damages_per_day_usd": 425,
+      "wage_determination_id": "SC-GPCI-2026 (S.C. Code Ann. \u00a7 38-59-230)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 S.C. Code Ann. \u00a7 38-59-230"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#SCDOI-MRF-CPT-63030-321",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#SCDOI-MRF-CPT-63030-321",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 63030 / 22551 Spine & Neurosurgery Laminotomy in South Carolina (S.C. Code Ann. \u00a7 38-59-230).",
+      "planholders": [
+        "South Carolina Specialty Surgical Associates",
+        "South Carolina Ambulatory Surgery Center LLC",
+        "Regional Medical Group of South Carolina",
+        "South Carolina Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 1874.6,
+          "hist_median_unit_usd": 4418.7,
+          "recommended_unit_usd": 5582.6
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2718.17,
+          "hist_median_unit_usd": 6407.11,
+          "recommended_unit_usd": 8094.77
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 1874.6,
+          "hist_median_unit_usd": 4418.7,
+          "recommended_unit_usd": 5582.6
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2718.17,
+          "hist_median_unit_usd": 6407.11,
+          "recommended_unit_usd": 8094.77
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "ORDOI-MRF-CPT-45378-322",
+      "letting_id": "ORDOI-MRF-CPT-45378-322",
+      "title": "[ORDOI-MRF-CPT-45378-322] Oregon UHC, Anthem & BCBS-OR Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC)",
+      "agency": "Oregon Division of Financial Regulation (DFR) & CMS TiC Payer MRF Index",
+      "jurisdiction": "or",
+      "state_code": "OR",
+      "county": "Multnomah County, OR",
+      "letting_date": "2026-11-20",
+      "engineers_estimate_usd": 2160000.0,
+      "dbe_goal_pct": 220.5,
+      "liquidated_damages_per_day_usd": 470,
+      "wage_determination_id": "OR-GPCI-2026 (ORS 743B.450 (9% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 ORS 743B.450 (9% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#ORDOI-MRF-CPT-45378-322",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#ORDOI-MRF-CPT-45378-322",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC in Oregon (ORS 743B.450 (9% Prompt-Pay)).",
+      "planholders": [
+        "Oregon Specialty Surgical Associates",
+        "Oregon Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Oregon",
+        "Oregon Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 434.6,
+          "hist_median_unit_usd": 1022.9,
+          "recommended_unit_usd": 1287.9
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 630.17,
+          "hist_median_unit_usd": 1483.2,
+          "recommended_unit_usd": 1867.46
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 434.6,
+          "hist_median_unit_usd": 1022.9,
+          "recommended_unit_usd": 1287.9
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 630.17,
+          "hist_median_unit_usd": 1483.2,
+          "recommended_unit_usd": 1867.46
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "CTDOI-MRF-CPT-99285-323",
+      "letting_id": "CTDOI-MRF-CPT-99285-323",
+      "title": "[CTDOI-MRF-CPT-99285-323] Connecticut UHC, Anthem & BCBS-CT Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 99285 / 00100 Emergency & Anesthesia NSA IDR)",
+      "agency": "Connecticut Insurance Department (CID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ct",
+      "state_code": "CT",
+      "county": "Hartford County, CT",
+      "letting_date": "2026-11-21",
+      "engineers_estimate_usd": 2345000.0,
+      "dbe_goal_pct": 229.0,
+      "liquidated_damages_per_day_usd": 515,
+      "wage_determination_id": "CT-GPCI-2026 (Conn. Gen. Stat. \u00a7 38a-816(15) (15% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Conn. Gen. Stat. \u00a7 38a-816(15) (15% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#CTDOI-MRF-CPT-99285-323",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#CTDOI-MRF-CPT-99285-323",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 99285 / 00100 Emergency & Anesthesia NSA IDR in Connecticut (Conn. Gen. Stat. \u00a7 38a-816(15) (15% Prompt-Pay)).",
+      "planholders": [
+        "Connecticut Specialty Surgical Associates",
+        "Connecticut Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Connecticut",
+        "Connecticut Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 376.05,
+          "hist_median_unit_usd": 921.05,
+          "recommended_unit_usd": 1188.1
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 545.27,
+          "hist_median_unit_usd": 1335.52,
+          "recommended_unit_usd": 1722.74
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 376.05,
+          "hist_median_unit_usd": 921.05,
+          "recommended_unit_usd": 1188.1
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 545.27,
+          "hist_median_unit_usd": 1335.52,
+          "recommended_unit_usd": 1722.74
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "UTDOI-MRF-CPT-93458-324",
+      "letting_id": "UTDOI-MRF-CPT-93458-324",
+      "title": "[UTDOI-MRF-CPT-93458-324] Utah UHC, Anthem & BCBS-UT Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 93458 / 93306 Cardiology Left Heart Catheterization)",
+      "agency": "Utah Insurance Department (UID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ut",
+      "state_code": "UT",
+      "county": "Salt Lake County, UT",
+      "letting_date": "2026-11-22",
+      "engineers_estimate_usd": 2530000.0,
+      "dbe_goal_pct": 237.5,
+      "liquidated_damages_per_day_usd": 560,
+      "wage_determination_id": "UT-GPCI-2026 (Utah Code \u00a7 31A-26-301.6)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Utah Code \u00a7 31A-26-301.6"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#UTDOI-MRF-CPT-93458-324",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#UTDOI-MRF-CPT-93458-324",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 93458 / 93306 Cardiology Left Heart Catheterization in Utah (Utah Code \u00a7 31A-26-301.6).",
+      "planholders": [
+        "Utah Specialty Surgical Associates",
+        "Utah Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Utah",
+        "Utah Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 1073.8,
+          "hist_median_unit_usd": 2493.4,
+          "recommended_unit_usd": 3112.2
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1557.01,
+          "hist_median_unit_usd": 3615.43,
+          "recommended_unit_usd": 4512.69
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 1073.8,
+          "hist_median_unit_usd": 2493.4,
+          "recommended_unit_usd": 3112.2
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1557.01,
+          "hist_median_unit_usd": 3615.43,
+          "recommended_unit_usd": 4512.69
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "NVDOI-MRF-CPT-29881-325",
+      "letting_id": "NVDOI-MRF-CPT-29881-325",
+      "title": "[NVDOI-MRF-CPT-29881-325] Nevada UHC, Anthem & BCBS-NV Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy)",
+      "agency": "Nevada Division of Insurance (NDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "nv",
+      "state_code": "NV",
+      "county": "Clark County, NV",
+      "letting_date": "2026-11-23",
+      "engineers_estimate_usd": 2715000.0,
+      "dbe_goal_pct": 246.0,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "NV-GPCI-2026 (NRS 689A.410 Prompt-Pay)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 NRS 689A.410 Prompt-Pay"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NVDOI-MRF-CPT-29881-325",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NVDOI-MRF-CPT-29881-325",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy in Nevada (NRS 689A.410 Prompt-Pay).",
+      "planholders": [
+        "Nevada Specialty Surgical Associates",
+        "Nevada Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Nevada",
+        "Nevada Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 601.6,
+          "hist_median_unit_usd": 1400.6,
+          "recommended_unit_usd": 1767.2
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 872.32,
+          "hist_median_unit_usd": 2030.87,
+          "recommended_unit_usd": 2562.44
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 601.6,
+          "hist_median_unit_usd": 1400.6,
+          "recommended_unit_usd": 1767.2
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 872.32,
+          "hist_median_unit_usd": 2030.87,
+          "recommended_unit_usd": 2562.44
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "ALDOI-MRF-CPT-63030-326",
+      "letting_id": "ALDOI-MRF-CPT-63030-326",
+      "title": "[ALDOI-MRF-CPT-63030-326] Alabama UHC, Anthem & BCBS-AL Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 63030 / 22551 Spine & Neurosurgery Laminotomy)",
+      "agency": "Alabama Department of Insurance (ALDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "al",
+      "state_code": "AL",
+      "county": "Jefferson County, AL",
+      "letting_date": "2026-11-24",
+      "engineers_estimate_usd": 1420000.0,
+      "dbe_goal_pct": 254.5,
+      "liquidated_damages_per_day_usd": 425,
+      "wage_determination_id": "AL-GPCI-2026 (Ala. Code \u00a7 27-1-19 (18% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Ala. Code \u00a7 27-1-19 (18% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#ALDOI-MRF-CPT-63030-326",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#ALDOI-MRF-CPT-63030-326",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 63030 / 22551 Spine & Neurosurgery Laminotomy in Alabama (Ala. Code \u00a7 27-1-19 (18% Prompt-Pay)).",
+      "planholders": [
+        "Alabama Specialty Surgical Associates",
+        "Alabama Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Alabama",
+        "Alabama Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 1765.4,
+          "hist_median_unit_usd": 4161.3,
+          "recommended_unit_usd": 5257.4
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2559.83,
+          "hist_median_unit_usd": 6033.89,
+          "recommended_unit_usd": 7623.23
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 1765.4,
+          "hist_median_unit_usd": 4161.3,
+          "recommended_unit_usd": 5257.4
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2559.83,
+          "hist_median_unit_usd": 6033.89,
+          "recommended_unit_usd": 7623.23
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "LADOI-MRF-CPT-45378-327",
+      "letting_id": "LADOI-MRF-CPT-45378-327",
+      "title": "[LADOI-MRF-CPT-45378-327] Louisiana UHC, Anthem & BCBS-LA Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC)",
+      "agency": "Louisiana Department of Insurance (LDI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "la",
+      "state_code": "LA",
+      "county": "East Baton Rouge Parish, LA",
+      "letting_date": "2026-11-25",
+      "engineers_estimate_usd": 1605000.0,
+      "dbe_goal_pct": 263.0,
+      "liquidated_damages_per_day_usd": 470,
+      "wage_determination_id": "LA-GPCI-2026 (La. R.S. 22:1832 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 La. R.S. 22:1832 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#LADOI-MRF-CPT-45378-327",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#LADOI-MRF-CPT-45378-327",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC in Louisiana (La. R.S. 22:1832 (12% Prompt-Pay)).",
+      "planholders": [
+        "Louisiana Specialty Surgical Associates",
+        "Louisiana Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Louisiana",
+        "Louisiana Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 965.0,
+          "recommended_unit_usd": 1215.0
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 594.5,
+          "hist_median_unit_usd": 1399.25,
+          "recommended_unit_usd": 1761.75
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 965.0,
+          "recommended_unit_usd": 1215.0
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 594.5,
+          "hist_median_unit_usd": 1399.25,
+          "recommended_unit_usd": 1761.75
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "KYDOI-MRF-CPT-99285-328",
+      "letting_id": "KYDOI-MRF-CPT-99285-328",
+      "title": "[KYDOI-MRF-CPT-99285-328] Kentucky UHC, Anthem & BCBS-KY Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 99285 / 00100 Emergency & Anesthesia NSA IDR)",
+      "agency": "Kentucky Department of Insurance (KDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ky",
+      "state_code": "KY",
+      "county": "Jefferson County, KY",
+      "letting_date": "2026-11-26",
+      "engineers_estimate_usd": 1790000.0,
+      "dbe_goal_pct": 195.0,
+      "liquidated_damages_per_day_usd": 515,
+      "wage_determination_id": "KY-GPCI-2026 (KRS 304.17A-702 (12%\u201321% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 KRS 304.17A-702 (12%\u201321% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#KYDOI-MRF-CPT-99285-328",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#KYDOI-MRF-CPT-99285-328",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 99285 / 00100 Emergency & Anesthesia NSA IDR in Kentucky (KRS 304.17A-702 (12%\u201321% Prompt-Pay)).",
+      "planholders": [
+        "Kentucky Specialty Surgical Associates",
+        "Kentucky Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Kentucky",
+        "Kentucky Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 355.35,
+          "hist_median_unit_usd": 870.35,
+          "recommended_unit_usd": 1122.7
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 515.26,
+          "hist_median_unit_usd": 1262.01,
+          "recommended_unit_usd": 1627.91
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 355.35,
+          "hist_median_unit_usd": 870.35,
+          "recommended_unit_usd": 1122.7
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 515.26,
+          "hist_median_unit_usd": 1262.01,
+          "recommended_unit_usd": 1627.91
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "OKDOI-MRF-CPT-93458-329",
+      "letting_id": "OKDOI-MRF-CPT-93458-329",
+      "title": "[OKDOI-MRF-CPT-93458-329] Oklahoma UHC, Anthem & BCBS-OK Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 93458 / 93306 Cardiology Left Heart Catheterization)",
+      "agency": "Oklahoma Insurance Department (OID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ok",
+      "state_code": "OK",
+      "county": "Oklahoma County, OK",
+      "letting_date": "2026-11-27",
+      "engineers_estimate_usd": 1975000.0,
+      "dbe_goal_pct": 203.5,
+      "liquidated_damages_per_day_usd": 560,
+      "wage_determination_id": "OK-GPCI-2026 (36 O.S. \u00a7 1219 (10% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 36 O.S. \u00a7 1219 (10% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#OKDOI-MRF-CPT-93458-329",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#OKDOI-MRF-CPT-93458-329",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 93458 / 93306 Cardiology Left Heart Catheterization in Oklahoma (36 O.S. \u00a7 1219 (10% Prompt-Pay)).",
+      "planholders": [
+        "Oklahoma Specialty Surgical Associates",
+        "Oklahoma Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Oklahoma",
+        "Oklahoma Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 1250.8,
+          "hist_median_unit_usd": 2904.4,
+          "recommended_unit_usd": 3625.2
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1813.66,
+          "hist_median_unit_usd": 4211.38,
+          "recommended_unit_usd": 5256.54
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 1250.8,
+          "hist_median_unit_usd": 2904.4,
+          "recommended_unit_usd": 3625.2
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1813.66,
+          "hist_median_unit_usd": 4211.38,
+          "recommended_unit_usd": 5256.54
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "IADOI-MRF-CPT-29881-330",
+      "letting_id": "IADOI-MRF-CPT-29881-330",
+      "title": "[IADOI-MRF-CPT-29881-330] Iowa UHC, Anthem & BCBS-IA Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy)",
+      "agency": "Iowa Insurance Division (IID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ia",
+      "state_code": "IA",
+      "county": "Polk County, IA",
+      "letting_date": "2026-11-18",
+      "engineers_estimate_usd": 2160000.0,
+      "dbe_goal_pct": 212.0,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "IA-GPCI-2026 (Iowa Code \u00a7 507B.4A (10% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Iowa Code \u00a7 507B.4A (10% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#IADOI-MRF-CPT-29881-330",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#IADOI-MRF-CPT-29881-330",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy in Iowa (Iowa Code \u00a7 507B.4A (10% Prompt-Pay)).",
+      "planholders": [
+        "Iowa Specialty Surgical Associates",
+        "Iowa Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Iowa",
+        "Iowa Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 697.6,
+          "hist_median_unit_usd": 1624.1,
+          "recommended_unit_usd": 2049.2
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 1011.52,
+          "hist_median_unit_usd": 2354.94,
+          "recommended_unit_usd": 2971.34
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 697.6,
+          "hist_median_unit_usd": 1624.1,
+          "recommended_unit_usd": 2049.2
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 1011.52,
+          "hist_median_unit_usd": 2354.94,
+          "recommended_unit_usd": 2971.34
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "KSDOI-MRF-CPT-63030-331",
+      "letting_id": "KSDOI-MRF-CPT-63030-331",
+      "title": "[KSDOI-MRF-CPT-63030-331] Kansas UHC, Anthem & BCBS-KS Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 63030 / 22551 Spine & Neurosurgery Laminotomy)",
+      "agency": "Kansas Insurance Department (KID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ks",
+      "state_code": "KS",
+      "county": "Johnson County, KS",
+      "letting_date": "2026-11-19",
+      "engineers_estimate_usd": 2345000.0,
+      "dbe_goal_pct": 220.5,
+      "liquidated_damages_per_day_usd": 425,
+      "wage_determination_id": "KS-GPCI-2026 (K.S.A. 40-2442 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 K.S.A. 40-2442 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#KSDOI-MRF-CPT-63030-331",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#KSDOI-MRF-CPT-63030-331",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 63030 / 22551 Spine & Neurosurgery Laminotomy in Kansas (K.S.A. 40-2442 (12% Prompt-Pay)).",
+      "planholders": [
+        "Kansas Specialty Surgical Associates",
+        "Kansas Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Kansas",
+        "Kansas Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 1656.2,
+          "hist_median_unit_usd": 3903.9,
+          "recommended_unit_usd": 4932.2
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2401.49,
+          "hist_median_unit_usd": 5660.65,
+          "recommended_unit_usd": 7151.69
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 1656.2,
+          "hist_median_unit_usd": 3903.9,
+          "recommended_unit_usd": 4932.2
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2401.49,
+          "hist_median_unit_usd": 5660.65,
+          "recommended_unit_usd": 7151.69
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "ARDOI-MRF-CPT-45378-332",
+      "letting_id": "ARDOI-MRF-CPT-45378-332",
+      "title": "[ARDOI-MRF-CPT-45378-332] Arkansas UHC, Anthem & BCBS-AR Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC)",
+      "agency": "Arkansas Insurance Department (AID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ar",
+      "state_code": "AR",
+      "county": "Pulaski County, AR",
+      "letting_date": "2026-11-20",
+      "engineers_estimate_usd": 2530000.0,
+      "dbe_goal_pct": 229.0,
+      "liquidated_damages_per_day_usd": 470,
+      "wage_determination_id": "AR-GPCI-2026 (Ark. Code Ann. \u00a7 23-79-112 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Ark. Code Ann. \u00a7 23-79-112 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#ARDOI-MRF-CPT-45378-332",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#ARDOI-MRF-CPT-45378-332",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC in Arkansas (Ark. Code Ann. \u00a7 23-79-112 (12% Prompt-Pay)).",
+      "planholders": [
+        "Arkansas Specialty Surgical Associates",
+        "Arkansas Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Arkansas",
+        "Arkansas Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 385.4,
+          "hist_median_unit_usd": 907.1,
+          "recommended_unit_usd": 1142.1
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 558.83,
+          "hist_median_unit_usd": 1315.3,
+          "recommended_unit_usd": 1656.04
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 385.4,
+          "hist_median_unit_usd": 907.1,
+          "recommended_unit_usd": 1142.1
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 558.83,
+          "hist_median_unit_usd": 1315.3,
+          "recommended_unit_usd": 1656.04
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "MSDOI-MRF-CPT-99285-333",
+      "letting_id": "MSDOI-MRF-CPT-99285-333",
+      "title": "[MSDOI-MRF-CPT-99285-333] Mississippi UHC, Anthem & BCBS-MS Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 99285 / 00100 Emergency & Anesthesia NSA IDR)",
+      "agency": "Mississippi Insurance Department (MID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ms",
+      "state_code": "MS",
+      "county": "Hinds County, MS",
+      "letting_date": "2026-11-21",
+      "engineers_estimate_usd": 2715000.0,
+      "dbe_goal_pct": 237.5,
+      "liquidated_damages_per_day_usd": 515,
+      "wage_determination_id": "MS-GPCI-2026 (Miss. Code Ann. \u00a7 83-9-5 (18% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Miss. Code Ann. \u00a7 83-9-5 (18% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MSDOI-MRF-CPT-99285-333",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MSDOI-MRF-CPT-99285-333",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 99285 / 00100 Emergency & Anesthesia NSA IDR in Mississippi (Miss. Code Ann. \u00a7 83-9-5 (18% Prompt-Pay)).",
+      "planholders": [
+        "Mississippi Specialty Surgical Associates",
+        "Mississippi Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Mississippi",
+        "Mississippi Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 334.65,
+          "hist_median_unit_usd": 819.65,
+          "recommended_unit_usd": 1057.3
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 485.24,
+          "hist_median_unit_usd": 1188.49,
+          "recommended_unit_usd": 1533.08
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 334.65,
+          "hist_median_unit_usd": 819.65,
+          "recommended_unit_usd": 1057.3
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 485.24,
+          "hist_median_unit_usd": 1188.49,
+          "recommended_unit_usd": 1533.08
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "NMDOI-MRF-CPT-93458-334",
+      "letting_id": "NMDOI-MRF-CPT-93458-334",
+      "title": "[NMDOI-MRF-CPT-93458-334] New Mexico UHC, Anthem & BCBS-NM Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 93458 / 93306 Cardiology Left Heart Catheterization)",
+      "agency": "New Mexico Office of Superintendent of Insurance (OSI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "nm",
+      "state_code": "NM",
+      "county": "Bernalillo County, NM",
+      "letting_date": "2026-11-22",
+      "engineers_estimate_usd": 1420000.0,
+      "dbe_goal_pct": 246.0,
+      "liquidated_damages_per_day_usd": 560,
+      "wage_determination_id": "NM-GPCI-2026 (NMSA 1978 \u00a7 59A-16-21.1)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 NMSA 1978 \u00a7 59A-16-21.1"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NMDOI-MRF-CPT-93458-334",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NMDOI-MRF-CPT-93458-334",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 93458 / 93306 Cardiology Left Heart Catheterization in New Mexico (NMSA 1978 \u00a7 59A-16-21.1).",
+      "planholders": [
+        "New Mexico Specialty Surgical Associates",
+        "New Mexico Ambulatory Surgery Center LLC",
+        "Regional Medical Group of New Mexico",
+        "New Mexico Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 1180.0,
+          "hist_median_unit_usd": 2740.0,
+          "recommended_unit_usd": 3420.0
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1711.0,
+          "hist_median_unit_usd": 3973.0,
+          "recommended_unit_usd": 4959.0
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 1180.0,
+          "hist_median_unit_usd": 2740.0,
+          "recommended_unit_usd": 3420.0
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1711.0,
+          "hist_median_unit_usd": 3973.0,
+          "recommended_unit_usd": 4959.0
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "NEDOI-MRF-CPT-29881-335",
+      "letting_id": "NEDOI-MRF-CPT-29881-335",
+      "title": "[NEDOI-MRF-CPT-29881-335] Nebraska UHC, Anthem & BCBS-NE Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy)",
+      "agency": "Nebraska Department of Insurance (NDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "ne",
+      "state_code": "NE",
+      "county": "Douglas County, NE",
+      "letting_date": "2026-11-23",
+      "engineers_estimate_usd": 1605000.0,
+      "dbe_goal_pct": 254.5,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "NE-GPCI-2026 (Neb. Rev. Stat. \u00a7 44-8004 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Neb. Rev. Stat. \u00a7 44-8004 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NEDOI-MRF-CPT-29881-335",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NEDOI-MRF-CPT-29881-335",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy in Nebraska (Neb. Rev. Stat. \u00a7 44-8004 (12% Prompt-Pay)).",
+      "planholders": [
+        "Nebraska Specialty Surgical Associates",
+        "Nebraska Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Nebraska",
+        "Nebraska Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 659.2,
+          "hist_median_unit_usd": 1534.7,
+          "recommended_unit_usd": 1936.4
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 955.84,
+          "hist_median_unit_usd": 2225.32,
+          "recommended_unit_usd": 2807.78
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 659.2,
+          "hist_median_unit_usd": 1534.7,
+          "recommended_unit_usd": 1936.4
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 955.84,
+          "hist_median_unit_usd": 2225.32,
+          "recommended_unit_usd": 2807.78
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "IDDOI-MRF-CPT-63030-336",
+      "letting_id": "IDDOI-MRF-CPT-63030-336",
+      "title": "[IDDOI-MRF-CPT-63030-336] Idaho UHC, Anthem & BCBS-ID Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 63030 / 22551 Spine & Neurosurgery Laminotomy)",
+      "agency": "Idaho Department of Insurance (IDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "id",
+      "state_code": "ID",
+      "county": "Ada County, ID",
+      "letting_date": "2026-11-24",
+      "engineers_estimate_usd": 1790000.0,
+      "dbe_goal_pct": 263.0,
+      "liquidated_damages_per_day_usd": 425,
+      "wage_determination_id": "ID-GPCI-2026 (Idaho Code \u00a7 28-22-104)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Idaho Code \u00a7 28-22-104"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#IDDOI-MRF-CPT-63030-336",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#IDDOI-MRF-CPT-63030-336",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 63030 / 22551 Spine & Neurosurgery Laminotomy in Idaho (Idaho Code \u00a7 28-22-104).",
+      "planholders": [
+        "Idaho Specialty Surgical Associates",
+        "Idaho Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Idaho",
+        "Idaho Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 1929.2,
+          "hist_median_unit_usd": 4547.4,
+          "recommended_unit_usd": 5745.2
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2797.34,
+          "hist_median_unit_usd": 6593.73,
+          "recommended_unit_usd": 8330.54
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 1929.2,
+          "hist_median_unit_usd": 4547.4,
+          "recommended_unit_usd": 5745.2
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2797.34,
+          "hist_median_unit_usd": 6593.73,
+          "recommended_unit_usd": 8330.54
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "HIDOI-MRF-CPT-45378-337",
+      "letting_id": "HIDOI-MRF-CPT-45378-337",
+      "title": "[HIDOI-MRF-CPT-45378-337] Hawaii UHC, Anthem & BCBS-HI Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC)",
+      "agency": "Hawaii Insurance Division (DCCA) & CMS TiC Payer MRF Index",
+      "jurisdiction": "hi",
+      "state_code": "HI",
+      "county": "Honolulu County, HI",
+      "letting_date": "2026-11-25",
+      "engineers_estimate_usd": 1975000.0,
+      "dbe_goal_pct": 195.0,
+      "liquidated_damages_per_day_usd": 470,
+      "wage_determination_id": "HI-GPCI-2026 (HRS \u00a7 431:13-108 (15% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 HRS \u00a7 431:13-108 (15% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#HIDOI-MRF-CPT-45378-337",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#HIDOI-MRF-CPT-45378-337",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC in Hawaii (HRS \u00a7 431:13-108 (15% Prompt-Pay)).",
+      "planholders": [
+        "Hawaii Specialty Surgical Associates",
+        "Hawaii Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Hawaii",
+        "Hawaii Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 446.9,
+          "hist_median_unit_usd": 1051.85,
+          "recommended_unit_usd": 1324.35
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 648.0,
+          "hist_median_unit_usd": 1525.18,
+          "recommended_unit_usd": 1920.31
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 446.9,
+          "hist_median_unit_usd": 1051.85,
+          "recommended_unit_usd": 1324.35
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 648.0,
+          "hist_median_unit_usd": 1525.18,
+          "recommended_unit_usd": 1920.31
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "NHDOI-MRF-CPT-99285-338",
+      "letting_id": "NHDOI-MRF-CPT-99285-338",
+      "title": "[NHDOI-MRF-CPT-99285-338] New Hampshire UHC, Anthem & BCBS-NH Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 99285 / 00100 Emergency & Anesthesia NSA IDR)",
+      "agency": "New Hampshire Insurance Department (NHID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "nh",
+      "state_code": "NH",
+      "county": "Hillsborough County, NH",
+      "letting_date": "2026-11-26",
+      "engineers_estimate_usd": 2160000.0,
+      "dbe_goal_pct": 203.5,
+      "liquidated_damages_per_day_usd": 515,
+      "wage_determination_id": "NH-GPCI-2026 (RSA 420-J:8-a (18% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 RSA 420-J:8-a (18% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NHDOI-MRF-CPT-99285-338",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NHDOI-MRF-CPT-99285-338",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 99285 / 00100 Emergency & Anesthesia NSA IDR in New Hampshire (RSA 420-J:8-a (18% Prompt-Pay)).",
+      "planholders": [
+        "New Hampshire Specialty Surgical Associates",
+        "New Hampshire Ambulatory Surgery Center LLC",
+        "Regional Medical Group of New Hampshire",
+        "New Hampshire Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 313.95,
+          "hist_median_unit_usd": 768.95,
+          "recommended_unit_usd": 991.9
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 455.23,
+          "hist_median_unit_usd": 1114.98,
+          "recommended_unit_usd": 1438.25
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 313.95,
+          "hist_median_unit_usd": 768.95,
+          "recommended_unit_usd": 991.9
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 455.23,
+          "hist_median_unit_usd": 1114.98,
+          "recommended_unit_usd": 1438.25
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "MEDOI-MRF-CPT-93458-339",
+      "letting_id": "MEDOI-MRF-CPT-93458-339",
+      "title": "[MEDOI-MRF-CPT-93458-339] Maine UHC, Anthem & BCBS-ME Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 93458 / 93306 Cardiology Left Heart Catheterization)",
+      "agency": "Maine Bureau of Insurance (BOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "me",
+      "state_code": "ME",
+      "county": "Cumberland County, ME",
+      "letting_date": "2026-11-27",
+      "engineers_estimate_usd": 2345000.0,
+      "dbe_goal_pct": 212.0,
+      "liquidated_damages_per_day_usd": 560,
+      "wage_determination_id": "ME-GPCI-2026 (24-A M.R.S. \u00a7 2436 (18% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 24-A M.R.S. \u00a7 2436 (18% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MEDOI-MRF-CPT-93458-339",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MEDOI-MRF-CPT-93458-339",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 93458 / 93306 Cardiology Left Heart Catheterization in Maine (24-A M.R.S. \u00a7 2436 (18% Prompt-Pay)).",
+      "planholders": [
+        "Maine Specialty Surgical Associates",
+        "Maine Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Maine",
+        "Maine Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 1109.2,
+          "hist_median_unit_usd": 2575.6,
+          "recommended_unit_usd": 3214.8
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1608.34,
+          "hist_median_unit_usd": 3734.62,
+          "recommended_unit_usd": 4661.46
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 1109.2,
+          "hist_median_unit_usd": 2575.6,
+          "recommended_unit_usd": 3214.8
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1608.34,
+          "hist_median_unit_usd": 3734.62,
+          "recommended_unit_usd": 4661.46
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "RIDOI-MRF-CPT-29881-340",
+      "letting_id": "RIDOI-MRF-CPT-29881-340",
+      "title": "[RIDOI-MRF-CPT-29881-340] Rhode Island UHC, Anthem & BCBS-RI Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy)",
+      "agency": "Rhode Island Department of Business Regulation \u2014 Insurance & CMS TiC Payer MRF Index",
+      "jurisdiction": "ri",
+      "state_code": "RI",
+      "county": "Providence County, RI",
+      "letting_date": "2026-11-18",
+      "engineers_estimate_usd": 2530000.0,
+      "dbe_goal_pct": 220.5,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "RI-GPCI-2026 (R.I. Gen. Laws \u00a7 27-18-61 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 R.I. Gen. Laws \u00a7 27-18-61 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#RIDOI-MRF-CPT-29881-340",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#RIDOI-MRF-CPT-29881-340",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy in Rhode Island (R.I. Gen. Laws \u00a7 27-18-61 (12% Prompt-Pay)).",
+      "planholders": [
+        "Rhode Island Specialty Surgical Associates",
+        "Rhode Island Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Rhode Island",
+        "Rhode Island Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 620.8,
+          "hist_median_unit_usd": 1445.3,
+          "recommended_unit_usd": 1823.6
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 900.16,
+          "hist_median_unit_usd": 2095.68,
+          "recommended_unit_usd": 2644.22
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 620.8,
+          "hist_median_unit_usd": 1445.3,
+          "recommended_unit_usd": 1823.6
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 900.16,
+          "hist_median_unit_usd": 2095.68,
+          "recommended_unit_usd": 2644.22
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "MTDOI-MRF-CPT-63030-341",
+      "letting_id": "MTDOI-MRF-CPT-63030-341",
+      "title": "[MTDOI-MRF-CPT-63030-341] Montana UHC, Anthem & BCBS-MT Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 63030 / 22551 Spine & Neurosurgery Laminotomy)",
+      "agency": "Montana Commissioner of Securities and Insurance (CSI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "mt",
+      "state_code": "MT",
+      "county": "Yellowstone County, MT",
+      "letting_date": "2026-11-19",
+      "engineers_estimate_usd": 2715000.0,
+      "dbe_goal_pct": 229.0,
+      "liquidated_damages_per_day_usd": 425,
+      "wage_determination_id": "MT-GPCI-2026 (MCA \u00a7 33-18-232 (10% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 MCA \u00a7 33-18-232 (10% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MTDOI-MRF-CPT-63030-341",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MTDOI-MRF-CPT-63030-341",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 63030 / 22551 Spine & Neurosurgery Laminotomy in Montana (MCA \u00a7 33-18-232 (10% Prompt-Pay)).",
+      "planholders": [
+        "Montana Specialty Surgical Associates",
+        "Montana Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Montana",
+        "Montana Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 1820.0,
+          "hist_median_unit_usd": 4290.0,
+          "recommended_unit_usd": 5420.0
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2639.0,
+          "hist_median_unit_usd": 6220.5,
+          "recommended_unit_usd": 7859.0
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 1820.0,
+          "hist_median_unit_usd": 4290.0,
+          "recommended_unit_usd": 5420.0
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2639.0,
+          "hist_median_unit_usd": 6220.5,
+          "recommended_unit_usd": 7859.0
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "DEDOI-MRF-CPT-45378-342",
+      "letting_id": "DEDOI-MRF-CPT-45378-342",
+      "title": "[DEDOI-MRF-CPT-45378-342] Delaware UHC, Anthem & BCBS-DE Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC)",
+      "agency": "Delaware Department of Insurance (DDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "de",
+      "state_code": "DE",
+      "county": "New Castle County, DE",
+      "letting_date": "2026-11-20",
+      "engineers_estimate_usd": 1420000.0,
+      "dbe_goal_pct": 237.5,
+      "liquidated_damages_per_day_usd": 470,
+      "wage_determination_id": "DE-GPCI-2026 (18 Del. C. \u00a7 2304(16) (18% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 18 Del. C. \u00a7 2304(16) (18% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#DEDOI-MRF-CPT-45378-342",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#DEDOI-MRF-CPT-45378-342",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC in Delaware (18 Del. C. \u00a7 2304(16) (18% Prompt-Pay)).",
+      "planholders": [
+        "Delaware Specialty Surgical Associates",
+        "Delaware Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Delaware",
+        "Delaware Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 422.3,
+          "hist_median_unit_usd": 993.95,
+          "recommended_unit_usd": 1251.45
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 612.34,
+          "hist_median_unit_usd": 1441.23,
+          "recommended_unit_usd": 1814.6
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 422.3,
+          "hist_median_unit_usd": 993.95,
+          "recommended_unit_usd": 1251.45
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 612.34,
+          "hist_median_unit_usd": 1441.23,
+          "recommended_unit_usd": 1814.6
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "SDDOI-MRF-CPT-99285-343",
+      "letting_id": "SDDOI-MRF-CPT-99285-343",
+      "title": "[SDDOI-MRF-CPT-99285-343] South Dakota UHC, Anthem & BCBS-SD Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 99285 / 00100 Emergency & Anesthesia NSA IDR)",
+      "agency": "South Dakota Division of Insurance (SD DOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "sd",
+      "state_code": "SD",
+      "county": "Minnehaha County, SD",
+      "letting_date": "2026-11-21",
+      "engineers_estimate_usd": 1605000.0,
+      "dbe_goal_pct": 246.0,
+      "liquidated_damages_per_day_usd": 515,
+      "wage_determination_id": "SD-GPCI-2026 (SDCL \u00a7 58-12-20)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 SDCL \u00a7 58-12-20"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#SDDOI-MRF-CPT-99285-343",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#SDDOI-MRF-CPT-99285-343",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 99285 / 00100 Emergency & Anesthesia NSA IDR in South Dakota (SDCL \u00a7 58-12-20).",
+      "planholders": [
+        "South Dakota Specialty Surgical Associates",
+        "South Dakota Ambulatory Surgery Center LLC",
+        "Regional Medical Group of South Dakota",
+        "South Dakota Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 365.7,
+          "hist_median_unit_usd": 895.7,
+          "recommended_unit_usd": 1155.4
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 530.26,
+          "hist_median_unit_usd": 1298.77,
+          "recommended_unit_usd": 1675.33
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 365.7,
+          "hist_median_unit_usd": 895.7,
+          "recommended_unit_usd": 1155.4
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 530.26,
+          "hist_median_unit_usd": 1298.77,
+          "recommended_unit_usd": 1675.33
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "NDDOI-MRF-CPT-93458-344",
+      "letting_id": "NDDOI-MRF-CPT-93458-344",
+      "title": "[NDDOI-MRF-CPT-93458-344] North Dakota UHC, Anthem & BCBS-ND Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 93458 / 93306 Cardiology Left Heart Catheterization)",
+      "agency": "North Dakota Insurance Department (NDID) & CMS TiC Payer MRF Index",
+      "jurisdiction": "nd",
+      "state_code": "ND",
+      "county": "Cass County, ND",
+      "letting_date": "2026-11-22",
+      "engineers_estimate_usd": 1790000.0,
+      "dbe_goal_pct": 254.5,
+      "liquidated_damages_per_day_usd": 560,
+      "wage_determination_id": "ND-GPCI-2026 (N.D.C.C. \u00a7 26.1-36-37.2)",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 N.D.C.C. \u00a7 26.1-36-37.2"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NDDOI-MRF-CPT-93458-344",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#NDDOI-MRF-CPT-93458-344",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 93458 / 93306 Cardiology Left Heart Catheterization in North Dakota (N.D.C.C. \u00a7 26.1-36-37.2).",
+      "planholders": [
+        "North Dakota Specialty Surgical Associates",
+        "North Dakota Ambulatory Surgery Center LLC",
+        "Regional Medical Group of North Dakota",
+        "North Dakota Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 1286.2,
+          "hist_median_unit_usd": 2986.6,
+          "recommended_unit_usd": 3727.8
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1864.99,
+          "hist_median_unit_usd": 4330.57,
+          "recommended_unit_usd": 5405.31
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 1286.2,
+          "hist_median_unit_usd": 2986.6,
+          "recommended_unit_usd": 3727.8
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1864.99,
+          "hist_median_unit_usd": 4330.57,
+          "recommended_unit_usd": 5405.31
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "AKDOI-MRF-CPT-29881-345",
+      "letting_id": "AKDOI-MRF-CPT-29881-345",
+      "title": "[AKDOI-MRF-CPT-29881-345] Alaska UHC, Anthem & BCBS-AK Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy)",
+      "agency": "Alaska Division of Insurance & CMS TiC Payer MRF Index",
+      "jurisdiction": "ak",
+      "state_code": "AK",
+      "county": "Municipality of Anchorage, AK",
+      "letting_date": "2026-11-23",
+      "engineers_estimate_usd": 1975000.0,
+      "dbe_goal_pct": 263.0,
+      "liquidated_damages_per_day_usd": 380,
+      "wage_determination_id": "AK-GPCI-2026 (AS 21.36.495 (15% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 AS 21.36.495 (15% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#AKDOI-MRF-CPT-29881-345",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#AKDOI-MRF-CPT-29881-345",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 29881 / 27447 Orthopedic & ASC Knee Arthroscopy in Alaska (AS 21.36.495 (15% Prompt-Pay)).",
+      "planholders": [
+        "Alaska Specialty Surgical Associates",
+        "Alaska Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Alaska",
+        "Alaska Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 582.4,
+          "hist_median_unit_usd": 1355.9,
+          "recommended_unit_usd": 1710.8
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 844.48,
+          "hist_median_unit_usd": 1966.06,
+          "recommended_unit_usd": 2480.66
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-29881",
+          "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)",
+          "unit": "CLAIM",
+          "quantity": 580,
+          "hist_low_unit_usd": 582.4,
+          "hist_median_unit_usd": 1355.9,
+          "recommended_unit_usd": 1710.8
+        },
+        {
+          "item_code": "CPT-27447",
+          "description": "Total Knee Arthroplasty (Condyle and Plateau)",
+          "unit": "CLAIM",
+          "quantity": 140,
+          "hist_low_unit_usd": 844.48,
+          "hist_median_unit_usd": 1966.06,
+          "recommended_unit_usd": 2480.66
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "VTDOI-MRF-CPT-63030-346",
+      "letting_id": "VTDOI-MRF-CPT-63030-346",
+      "title": "[VTDOI-MRF-CPT-63030-346] Vermont UHC, Anthem & BCBS-VT Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 63030 / 22551 Spine & Neurosurgery Laminotomy)",
+      "agency": "Vermont Department of Financial Regulation (DFR) & CMS TiC Payer MRF Index",
+      "jurisdiction": "vt",
+      "state_code": "VT",
+      "county": "Chittenden County, VT",
+      "letting_date": "2026-11-24",
+      "engineers_estimate_usd": 2160000.0,
+      "dbe_goal_pct": 195.0,
+      "liquidated_damages_per_day_usd": 425,
+      "wage_determination_id": "VT-GPCI-2026 (18 V.S.A. \u00a7 9418 (12% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 18 V.S.A. \u00a7 9418 (12% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#VTDOI-MRF-CPT-63030-346",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#VTDOI-MRF-CPT-63030-346",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 63030 / 22551 Spine & Neurosurgery Laminotomy in Vermont (18 V.S.A. \u00a7 9418 (12% Prompt-Pay)).",
+      "planholders": [
+        "Vermont Specialty Surgical Associates",
+        "Vermont Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Vermont",
+        "Vermont Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 1710.8,
+          "hist_median_unit_usd": 4032.6,
+          "recommended_unit_usd": 5094.8
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2480.66,
+          "hist_median_unit_usd": 5847.27,
+          "recommended_unit_usd": 7387.46
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-63030",
+          "description": "Lumbar Laminotomy (Hemilaminectomy) with Decompression",
+          "unit": "CLAIM",
+          "quantity": 380,
+          "hist_low_unit_usd": 1710.8,
+          "hist_median_unit_usd": 4032.6,
+          "recommended_unit_usd": 5094.8
+        },
+        {
+          "item_code": "CPT-22551",
+          "description": "Anterior Cervical Discectomy & Interbody Fusion (ACDF)",
+          "unit": "CLAIM",
+          "quantity": 165,
+          "hist_low_unit_usd": 2480.66,
+          "hist_median_unit_usd": 5847.27,
+          "recommended_unit_usd": 7387.46
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "WVDOI-MRF-CPT-45378-347",
+      "letting_id": "WVDOI-MRF-CPT-45378-347",
+      "title": "[WVDOI-MRF-CPT-45378-347] West Virginia UHC, Anthem & BCBS-WV Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC)",
+      "agency": "West Virginia Offices of the Insurance Commissioner (WVOIC) & CMS TiC Payer MRF Index",
+      "jurisdiction": "wv",
+      "state_code": "WV",
+      "county": "Kanawha County, WV",
+      "letting_date": "2026-11-25",
+      "engineers_estimate_usd": 2345000.0,
+      "dbe_goal_pct": 203.5,
+      "liquidated_damages_per_day_usd": 470,
+      "wage_determination_id": "WV-GPCI-2026 (W. Va. Code \u00a7 33-45-2 (10% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 W. Va. Code \u00a7 33-45-2 (10% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#WVDOI-MRF-CPT-45378-347",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#WVDOI-MRF-CPT-45378-347",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 45378 / 45380 GI Endoscopy & Colonoscopy ASC in West Virginia (W. Va. Code \u00a7 33-45-2 (10% Prompt-Pay)).",
+      "planholders": [
+        "West Virginia Specialty Surgical Associates",
+        "West Virginia Ambulatory Surgery Center LLC",
+        "Regional Medical Group of West Virginia",
+        "West Virginia Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 397.7,
+          "hist_median_unit_usd": 936.05,
+          "recommended_unit_usd": 1178.55
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 576.66,
+          "hist_median_unit_usd": 1357.27,
+          "recommended_unit_usd": 1708.9
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-45378",
+          "description": "Diagnostic Colonoscopy with Biopsy (ASC Facility + Pro)",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 397.7,
+          "hist_median_unit_usd": 936.05,
+          "recommended_unit_usd": 1178.55
+        },
+        {
+          "item_code": "CPT-43239",
+          "description": "Upper GI Endoscopy (EGD) with Biopsy",
+          "unit": "CLAIM",
+          "quantity": 190,
+          "hist_low_unit_usd": 576.66,
+          "hist_median_unit_usd": 1357.27,
+          "recommended_unit_usd": 1708.9
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "WYDOI-MRF-CPT-99285-348",
+      "letting_id": "WYDOI-MRF-CPT-99285-348",
+      "title": "[WYDOI-MRF-CPT-99285-348] Wyoming UHC, Anthem & BCBS-WY Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 99285 / 00100 Emergency & Anesthesia NSA IDR)",
+      "agency": "Wyoming Department of Insurance (WDOI) & CMS TiC Payer MRF Index",
+      "jurisdiction": "wy",
+      "state_code": "WY",
+      "county": "Laramie County, WY",
+      "letting_date": "2026-11-26",
+      "engineers_estimate_usd": 2530000.0,
+      "dbe_goal_pct": 212.0,
+      "liquidated_damages_per_day_usd": 515,
+      "wage_determination_id": "WY-GPCI-2026 (Wyo. Stat. \u00a7 26-15-124 (10% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Wyo. Stat. \u00a7 26-15-124 (10% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#WYDOI-MRF-CPT-99285-348",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#WYDOI-MRF-CPT-99285-348",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 99285 / 00100 Emergency & Anesthesia NSA IDR in Wyoming (Wyo. Stat. \u00a7 26-15-124 (10% Prompt-Pay)).",
+      "planholders": [
+        "Wyoming Specialty Surgical Associates",
+        "Wyoming Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Wyoming",
+        "Wyoming Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 345.0,
+          "hist_median_unit_usd": 845.0,
+          "recommended_unit_usd": 1090.0
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 500.25,
+          "hist_median_unit_usd": 1225.25,
+          "recommended_unit_usd": 1580.5
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-99285",
+          "description": "Level 5 Emergency Department Visit (High Complexity)",
+          "unit": "CLAIM",
+          "quantity": 460,
+          "hist_low_unit_usd": 345.0,
+          "hist_median_unit_usd": 845.0,
+          "recommended_unit_usd": 1090.0
+        },
+        {
+          "item_code": "CPT-00100",
+          "description": "Anesthesia for Salivary Gland / Complex Surgical Base + Time",
+          "unit": "CLAIM",
+          "quantity": 215,
+          "hist_low_unit_usd": 500.25,
+          "hist_median_unit_usd": 1225.25,
+          "recommended_unit_usd": 1580.5
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ]
+    },
+    {
+      "project_id": "MDDOI-MRF-CPT-93458-349",
+      "letting_id": "MDDOI-MRF-CPT-93458-349",
+      "title": "[MDDOI-MRF-CPT-93458-349] Maryland UHC, Anthem & BCBS-MD Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 93458 / 93306 Cardiology Left Heart Catheterization)",
+      "agency": "Maryland Insurance Administration (MIA) & CMS TiC Payer MRF Index",
+      "jurisdiction": "md",
+      "state_code": "MD",
+      "county": "Baltimore County, MD",
+      "letting_date": "2026-11-27",
+      "engineers_estimate_usd": 2715000.0,
+      "dbe_goal_pct": 220.5,
+      "liquidated_damages_per_day_usd": 560,
+      "wage_determination_id": "MD-GPCI-2026 (Md. Code Ins. \u00a7 15-1005 (18%\u201330% Prompt-Pay))",
+      "naics_code": "621111",
+      "csi_divisions": [
+        "Div 01 CMS TiC MRF Rate Percentiles",
+        "Div 03 ERISA 29 CFR 2560.503-1 Clinical Appeal",
+        "Div 05 Federal NSA 45 CFR 149.510 IDR Brief",
+        "Div 26 CMS NCCI PTP & Modifier 25/59 Audit",
+        "Div 31 Medicare MPFS / ASC RVU-GPCI Schedule",
+        "Div 32 Md. Code Ins. \u00a7 15-1005 (18%\u201330% Prompt-Pay)"
+      ],
+      "url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MDDOI-MRF-CPT-93458-349",
+      "source_url": "https://www.cms.gov/nosurprises/policies-and-resources/overview-of-rules-fact-sheets#MDDOI-MRF-CPT-93458-349",
+      "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for CPT 93458 / 93306 Cardiology Left Heart Catheterization in Maryland (Md. Code Ins. \u00a7 15-1005 (18%\u201330% Prompt-Pay)).",
+      "planholders": [
+        "Maryland Specialty Surgical Associates",
+        "Maryland Ambulatory Surgery Center LLC",
+        "Regional Medical Group of Maryland",
+        "Maryland Physician Billing & RCM Partners"
+      ],
+      "pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 1215.4,
+          "hist_median_unit_usd": 2822.2,
+          "recommended_unit_usd": 3522.6
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1762.33,
+          "hist_median_unit_usd": 4092.19,
+          "recommended_unit_usd": 5107.77
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
+        }
+      ],
+      "key_pay_items": [
+        {
+          "item_code": "CPT-93458",
+          "description": "Left Heart Catheterization with Coronary Angiography",
+          "unit": "CLAIM",
+          "quantity": 500,
+          "hist_low_unit_usd": 1215.4,
+          "hist_median_unit_usd": 2822.2,
+          "recommended_unit_usd": 3522.6
+        },
+        {
+          "item_code": "CPT-93306",
+          "description": "Transthoracic Echocardiography Complete with Doppler",
+          "unit": "CLAIM",
+          "quantity": 240,
+          "hist_low_unit_usd": 1762.33,
+          "hist_median_unit_usd": 4092.19,
+          "recommended_unit_usd": 5107.77
+        },
+        {
+          "item_code": "CPT-99214-25",
+          "description": "Level 4 Established Patient Outpatient E/M with Separately Identifiable Modifier 25",
+          "unit": "CLAIM",
+          "quantity": 1200,
+          "hist_low_unit_usd": 115.0,
+          "hist_median_unit_usd": 172.0,
+          "recommended_unit_usd": 204.0
         }
       ]
     }

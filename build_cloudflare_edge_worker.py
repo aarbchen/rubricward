@@ -397,7 +397,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/shred/csi-masterformat") {{
+  if (path === "/v1/shred/csi-masterformat" || path === "/v1/generate/erisa-medical-necessity-appeal") {{
     const project = body.project_name || "UHC Choice Plus ASC Lumbar Microdiscectomy Claim Audit";
     const sol = body.solicitation_number || "CLM-2026-UHC-88412";
     const state = (body.state_code || "TX").toUpperCase();
@@ -461,7 +461,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/model/dot-unit-bid-tabs") {{
+  if (path === "/v1/model/dot-unit-bid-tabs" || path === "/v1/benchmark/payer-mrf-rates") {{
     const state = (body.state_code || "TX").toUpperCase();
     const agency = body.dot_agency || `${{state}} Commercial Payer MRF Cohort (UHC / BCBS / Aetna / Cigna)`;
     const items = Array.isArray(body.pay_items) && body.pay_items.length > 0 ? body.pay_items : [
@@ -510,7 +510,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/calculate/davis-bacon-prevailing-wage") {{
+  if (path === "/v1/calculate/davis-bacon-prevailing-wage" || path === "/v1/calculate/rvu-gpci-fee-schedule") {{
     const state = (body.state_code || "TX").toUpperCase();
     const county = body.county_name || "Houston-The Woodlands-Sugar Land (Locality 04412-18)";
     const ctype = body.construction_type || "Non-Facility / ASC";
@@ -560,7 +560,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/lettings/live") {{
+  if (path === "/v1/lettings/live" || path === "/v1/rates/live-disparities") {{
     const stateParam = (url.searchParams.get("state") || body.state || "ALL").toUpperCase();
     const limitParam = Math.min(Math.max(Number(url.searchParams.get("limit") || body.limit || 10), 1), 50);
     const baseList = Array.isArray(LETTINGS_SEED) ? LETTINGS_SEED : (LETTINGS_SEED.lettings || LETTINGS_SEED.active_lettings || []);
@@ -579,7 +579,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/audit/baba-buy-america") {{
+  if (path === "/v1/audit/baba-buy-america" || path === "/v1/audit/ncci-modifier-unbundling") {{
     const items = Array.isArray(body.bom_items) && body.bom_items.length > 0 ? body.bom_items : [
       {{ material_name: "CPT 63030 + CPT 63035 (2-Level Lumbar Microdiscectomy with Modifier 59)", category: "Spine Surgery / NCCI PTP", country_of_melt_and_pour: "MOD-59-VALID", domestic_cost_pct: 100.0, extended_cost_usd: 6840 }},
     ];
@@ -606,7 +606,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/generate/dbe-good-faith-effort") {{
+  if (path === "/v1/generate/dbe-good-faith-effort" || path === "/v1/generate/nsa-idr-arbitration-brief") {{
     const baseBid = Number(body.total_base_bid_usd || 18450);
     const goalPct = Number(body.dbe_goal_percent || 100.0);
     const subs = Array.isArray(body.proposed_dbe_commitments) && body.proposed_dbe_commitments.length > 0 ? body.proposed_dbe_commitments : [
@@ -643,7 +643,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/generate/aia-g702-g703-pay-app") {{
+  if (path === "/v1/generate/aia-g702-g703-pay-app" || path === "/v1/audit/835-era-underpayment") {{
     const retPct = Number(body.retainage_pct ?? 12.0);
     const lines = Array.isArray(body.sov_lines) && body.sov_lines.length > 0 ? body.sov_lines : [
       {{ item_no: "63030", description: "Lumbar Laminotomy / Microdiscectomy (CMS TiC MRF Median vs Paid QPA)", scheduled_value_usd: 6840, prev_completed_usd: 1920, this_period_usd: 4920, stored_materials_usd: 0 }},
@@ -691,7 +691,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/audit/surety-miller-act-bond") {{
+  if (path === "/v1/audit/surety-miller-act-bond" || path === "/v1/audit/oig-upcoding-compliance-risk") {{
     const ca = Number(body.current_assets_usd || 6840);
     const cl = Number(body.current_liabilities_usd || 1920);
     const tnw = Number(body.tangible_net_worth_usd || 4210);
@@ -715,7 +715,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/generate/rfi-change-order-claim") {{
+  if (path === "/v1/generate/rfi-change-order-claim" || path === "/v1/generate/prompt-pay-interest-demand") {{
     const direct = Number(body.direct_cost_impact_usd || 4920);
     const days = Number(body.critical_path_delay_days || 48);
     const ohp = Number((direct * 0.18 * (days / 365)).toFixed(2));
@@ -737,7 +737,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/audit/osha-emr-site-safety") {{
+  if (path === "/v1/audit/osha-emr-site-safety" || path === "/v1/generate/prior-auth-clinical-packet") {{
     const emr = Number(body.contractor_emr ?? 0.92);
     const maxEmr = Number(body.max_allowed_emr ?? 1.00);
     const hazards = Array.isArray(body.high_hazard_activities) && body.high_hazard_activities.length > 0 ? body.high_hazard_activities : [
@@ -763,7 +763,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/analyze/planholder-competitor-spread") {{
+  if (path === "/v1/analyze/planholder-competitor-spread" || path === "/v1/analyze/payer-contract-renegotiation") {{
     const engEst = Number(body.engineers_estimate_usd || 6840);
     const directCost = Number(body.our_direct_cost_usd || 4210);
     const optBid = Number((engEst * 0.95).toFixed(2));
@@ -784,7 +784,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/generate/subcontractor-scope-itb") {{
+  if (path === "/v1/generate/subcontractor-scope-itb" || path === "/v1/generate/good-faith-estimate-gfe") {{
     return {{
       status: "success",
       project_name: body.project_name || "45 CFR 149.420 Good-Faith Estimate (GFE) & Out-of-Network Financial Clearance Packet",
@@ -801,11 +801,11 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }};
 
-  if (path === "/v1/camber-autopilot/dot-bid-tab-vault") {{
+  if (path === "/v1/camber-autopilot/dot-bid-tab-vault" || path === "/v1/claim-autopilot/mrf-rate-vault") {{
     return VAULT_DATA;
   }}
 
-  if (path === "/v1/camber-autopilot/dbe-sub-clearinghouse") {{
+  if (path === "/v1/camber-autopilot/dbe-sub-clearinghouse" || path === "/v1/claim-autopilot/idr-rcm-clearinghouse") {{
     return DBE_DEFAULT;
   }}
 
@@ -1152,7 +1152,8 @@ export default {{
           headers: {{ "Content-Type": "text/plain; charset=utf-8", ...CORS_HEADERS }},
         }});
       }}
-      const htmlKey = path === "/index.html" ? "/" : (path === "/apis.html" ? "/apis" : ((path === "/lettings/" || path === "/lettings/index.html") ? "/lettings" : (path.startsWith("/lettings/project/") && !path.endsWith(".html") ? path + ".html" : path)));
+      const normPath = path.replace(/^\/rates\/cpt\//, "/lettings/project/").replace(/^\/rates(\/index\.html|\/)?$/, "/lettings");
+      const htmlKey = normPath === "/index.html" ? "/" : (normPath === "/apis.html" ? "/apis" : ((normPath === "/lettings/" || normPath === "/lettings/index.html") ? "/lettings" : (normPath.startsWith("/lettings/project/") && !normPath.endsWith(".html") ? normPath + ".html" : normPath)));
       if (STATIC_HTML[htmlKey]) {{
         return new Response(STATIC_HTML[htmlKey], {{
           status: 200,
@@ -1162,7 +1163,7 @@ export default {{
     }}
 
     // 2. 6-File OpenXML .ZIP Compiler Endpoint
-    if (path === "/v1/camber-autopilot/compile-bid-package") {{
+    if (path === "/v1/camber-autopilot/compile-bid-package" || path === "/v1/claim-autopilot/compile-appeal-package") {{
       const fmt = (url.searchParams.get("format") || "binary").toLowerCase();
       const body = request.method === "POST" ? await parseBody(request) : {{}};
       const reqPid = String(url.searchParams.get("project_id") || body.project_id || "").trim();

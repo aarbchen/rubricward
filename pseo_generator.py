@@ -1,3 +1,4 @@
+import shutil
 """
 RubricWard — Programmatic SEO (pSEO) Static Lettings & Payer MRF/IDR Dossier Generator (`pseo_generator.py`).
 Generates:
@@ -24,6 +25,8 @@ ROOT_DIR = Path(__file__).resolve().parent
 SEED_PATH = ROOT_DIR / "dot_lettings_seed.json"
 LETTINGS_DIR = ROOT_DIR / "lettings"
 PROJECTS_DIR = LETTINGS_DIR / "project"
+RATES_DIR = ROOT_DIR / "rates"
+CPT_DIR = RATES_DIR / "cpt"
 from build_rubricward_site import build_social_and_favicon_head
 
 LOGO_SVG = """<svg viewBox="0 0 64 64" class="w-[22px] h-[22px] shrink-0 -translate-y-[1px]" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -359,6 +362,33 @@ def generate_pseo_pages() -> int:
         urls.append(f"https://rubricward.com/lettings/project/{slug}.html")
 
     (LETTINGS_DIR / "index.html").write_text(build_directory_index_html(lettings), encoding="utf-8")
+
+    # Also generate native Healthcare /rates/index.html & /rates/cpt/<slug>.html per Section 10 of rubricward_1m_business_plan.md
+    CPT_DIR.mkdir(parents=True, exist_ok=True)
+    for stale_cpt in CPT_DIR.glob("*.html"):
+        try:
+            stale_cpt.unlink()
+        except Exception:
+            pass
+    for icon_file in LETTINGS_DIR.glob("*"):
+        if icon_file.is_file() and icon_file.name != "index.html":
+            shutil.copy2(icon_file, RATES_DIR / icon_file.name)
+    (ROOT_DIR / "mrf_cases_seed.json").write_text(json.dumps(raw, indent=2), encoding="utf-8")
+    urls.append("https://rubricward.com/rates/index.html")
+    for item in lettings:
+        lid_raw = item.get("letting_id") or item.get("project_id") or ""
+        slug = slugify(f"{lid_raw}-{item.get('title', '')}")
+        cpt_html = build_project_dossier_html(item, slug).replace(
+            f"https://rubricward.com/lettings/project/{slug}.html",
+            f"https://rubricward.com/rates/cpt/{slug}.html",
+        )
+        (CPT_DIR / f"{slug}.html").write_text(cpt_html, encoding="utf-8")
+        urls.append(f"https://rubricward.com/rates/cpt/{slug}.html")
+    rates_idx_html = build_directory_index_html(lettings).replace(
+        "https://rubricward.com/lettings/index.html",
+        "https://rubricward.com/rates/index.html",
+    ).replace('href="project/', 'href="cpt/')
+    (RATES_DIR / "index.html").write_text(rates_idx_html, encoding="utf-8")
 
     sitemap_items = "\n".join(f"  <url><loc>{u}</loc></url>" for u in urls)
     sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>

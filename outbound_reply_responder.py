@@ -176,9 +176,9 @@ def classify_rcm_reply(reply_text: str, subject: str = "", from_email: str = "")
     )
     if not negated_unsub and any(u in txt for u in ("unsubscribe", "remove me", "stop emailing", "not interested", "take me off", "no thanks", "off your list")):
         return "UNSUBSCRIBE"
-    if "?" in stripped and not any(p in txt for p in ("send zip", "send it", "send over")):
+    if "?" in stripped and not any(p in txt for p in ("send zip", "send mrf", "mrf", "send it", "send over")):
         return "QUESTION"
-    if any(p in txt for p in ("send zip", "send it", "yes", "sure", "send over", "interested", "mrf", "appeal", "spreadsheet")):
+    if any(p in txt for p in ("send zip", "send mrf", "mrf", "send it", "yes", "sure", "send over", "interested", "mrf", "appeal", "spreadsheet")):
         return "POSITIVE_INTEREST"
 
     if ANTHROPIC_API_KEY and txt:

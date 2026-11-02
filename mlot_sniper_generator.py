@@ -233,7 +233,7 @@ def load_verified_dot_contacts() -> List[Dict[str, str]]:
                         existing_valid.append(r)
         except Exception:
             pass
-    if len(existing_valid) >= target_leads or os.getenv("OUTREACH_SKIP_HARVESTER") == "1":
+    if len(existing_valid) >= min(200, target_leads) or os.getenv("OUTREACH_SKIP_HARVESTER") == "1":
         return existing_valid
     return harvest_and_save_verified_dot_contacts(target_count=target_leads)
 
@@ -261,12 +261,14 @@ def generate_mlot_sniper_note(row: Dict[str, Any], recipient_email: str = "", co
     else:
         greeting_line = f"Hi {clean_fname},"
 
-    subject = _sanitize_zero_dollar_zero_link(f"{state} commercial payer MRF & {cpt_short} rate spread ({firm})")
+    npi_raw = str(row.get("npi_number") or row.get("license_or_dot_id") or "").replace("NPI-", "").strip()
+    npi_label = f"NPI {npi_raw}" if npi_raw.isdigit() and len(npi_raw) == 10 else f"{state} MRF Registry"
+    subject = _sanitize_zero_dollar_zero_link(f"{state} commercial payer MRF & {cpt_short} rate spread ({firm} — {npi_label})")
     body = _sanitize_zero_dollar_zero_link(
         f"{greeting_line}\n\n"
-        f"We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in {state} for {pay_item}.\n\n"
+        f"We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in {state} for {pay_item} ({npi_label}).\n\n"
         f"Contracted tiers in this {state} cohort sit {pct:.1f}% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\n"
-        f"Before {firm}'s next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND ZIP' and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\n"
+        f"Before {firm}'s next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\n"
         f"Best,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk"
     )
     return {
@@ -314,6 +316,7 @@ def build_mlot_and_runner_up_leads(verified_contacts: List[Dict[str, str]] | Non
                 "first_name": clean_fname,
                 "mlot_pct": cohort["mlot_pct"],
                 "key_pay_item": cohort["key_pay_item"],
+                "npi_number": contact.get("npi_number") or contact.get("license_or_dot_id") or "",
             },
             recipient_email=em,
             company_name=company,

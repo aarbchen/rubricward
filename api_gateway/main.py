@@ -15,6 +15,8 @@ from fastapi.staticfiles import StaticFiles
 
 from api_gateway.core.config import settings
 from api_gateway.routers.precon_endpoints import router as precon_router
+from api_gateway.routers.claim_apis import router as claim_apis_router
+from api_gateway.routers.autopilot_moats import router as autopilot_moats_router
 from api_gateway.routers.camber_autopilot import router as camber_autopilot_router
 from api_gateway.routers.billing_webhook import router as billing_router
 from api_gateway.routers.mcp import router as mcp_router
@@ -52,12 +54,16 @@ app.add_middleware(
 )
 
 app.include_router(precon_router, prefix=settings.API_V1_STR)
+app.include_router(claim_apis_router, prefix=settings.API_V1_STR)
+app.include_router(autopilot_moats_router, prefix=settings.API_V1_STR)
 app.include_router(camber_autopilot_router, prefix=settings.API_V1_STR)
 app.include_router(billing_router, prefix=settings.API_V1_STR)
 app.include_router(mcp_router)
 
 if (ROOT_DIR / "lettings").exists():
     app.mount("/lettings", StaticFiles(directory=str(ROOT_DIR / "lettings"), html=True), name="lettings")
+if (ROOT_DIR / "rates").exists():
+    app.mount("/rates", StaticFiles(directory=str(ROOT_DIR / "rates"), html=True), name="rates")
 
 
 @app.get("/", include_in_schema=False)

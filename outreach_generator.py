@@ -119,15 +119,17 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
         else:
             greeting_line = f"Hi {clean_fname},"
 
+        npi_raw = str(contact.get("npi_number") or contact.get("license_or_dot_id") or f"NPI-{st}").replace("NPI-", "").strip()
+        npi_label = f"NPI {npi_raw}" if npi_raw.isdigit() and len(npi_raw) == 10 else f"{st} MRF Registry"
         subject = _sanitize_zero_dollar_zero_link(
-            f"{st} commercial payer MRF & {cpt_short} benchmark ({primary_firm})"
+            f"{st} commercial payer MRF & {cpt_short} benchmark ({primary_firm} — {npi_label})"
         )
         body = _sanitize_zero_dollar_zero_link(
             f"{greeting_line}\n\n"
-            f"Noticed {primary_firm}'s clinical footprint in {st} while indexing the {st} commercial payer MRF cohort for {pay_item}.\n\n"
+            f"Noticed {primary_firm}'s clinical footprint ({npi_label}) in {st} while indexing the {st} commercial payer MRF cohort for {pay_item}.\n\n"
             f"We already compiled the {st} CMS Transparency in Coverage MRF allowed-amount percentiles, locality Medicare MPFS RVU/GPCI rates, "
             f"and ERISA / Federal NSA IDR appeal templates into a 6-file Word/Excel bundle.\n\n"
-            f"Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX claim recovery and IDR bundle over.\n\n"
+            f"Reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file .DOCX + .XLSX claim recovery and IDR bundle over.\n\n"
             f"Best,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk"
         )
         step2_body = _sanitize_zero_dollar_zero_link(

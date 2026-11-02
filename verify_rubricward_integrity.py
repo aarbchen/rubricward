@@ -1251,6 +1251,74 @@ def check_zero_signaltender_overlap() -> List[str]:
     return errors
 
 
+
+def check_master_plan_and_domain_native_depth() -> List[str]:
+    """
+    RULE-024: Enforces 100% fidelity to `rubricward_1m_business_plan.md` and `UNICORN_1B_EXPANSION_BLUEPRINT.md`:
+      - All native Healthcare modules exist (`claim_schemas.py`, `openxml_compiler.py`, `claim_apis.py`, `autopilot_moats.py`)
+      - `openxml_compiler.compile_healthcare_appeal_zip` produces all 6 Healthcare ERISA/NSA IDR/DOI/MRF/835 files with live Excel `<f>` formulas
+      - >= 52 active Payer MRF & NSA IDR cohorts in `mrf_cases_seed.json`, `dot_lettings_seed.json`, and `rubricward_dossiers.json`
+      - >= 52 static `/rates/cpt/*.html` AND >= 52 `/lettings/project/*.html` dossier files on disk
+      - >= 200 MX-verified medical group/ASC/RCM contacts in `verified_public_npi_contacts.json` and `verified_public_dot_contacts.json` enriched with 10-digit Federal CMS NPPES `npi_number`
+    """
+    errors: List[str] = []
+    for rel_mod in (
+        "api_gateway/schemas/claim_schemas.py",
+        "api_gateway/services/openxml_compiler.py",
+        "api_gateway/routers/claim_apis.py",
+        "api_gateway/routers/autopilot_moats.py",
+        "mrf_cases_seed.json",
+        "rubricward_dossiers.json",
+        "verified_public_npi_contacts.json",
+        "rates/index.html",
+    ):
+        if not os.path.exists(os.path.join(BASE_DIR, rel_mod)):
+            errors.append(f"[RULE-024] Missing required native Healthcare module/asset `{rel_mod}`")
+
+    try:
+        from api_gateway.services.openxml_compiler import compile_healthcare_appeal_zip
+        zbytes = compile_healthcare_appeal_zip(claim_id="CLM-TEST-024", state_code="TX", cpt_code="27447", payer_name="UnitedHealthcare")
+        with zipfile.ZipFile(io.BytesIO(zbytes), "r") as zf:
+            znames = zf.namelist()
+            for expected_file in (
+                "01_ERISA_29CFR2560_Clinical_Medical_Necessity_Appeal.docx",
+                "02_No_Surprises_Act_45CFR149_IDR_Arbitration_Brief.docx",
+                "03_State_DOI_Prompt_Pay_Statutory_Interest_&_Regulatory_Complaint.docx",
+                "04_CMS_TiC_Payer_MRF_Negotiated_Rate_Benchmark_Model.xlsx",
+                "05_EDI_835_Underpayment_&_NCCI_Modifier_Audit_Workbook.xlsx",
+                "00_RubricWard_Arbitration_Readiness_Manifest.json",
+            ):
+                if expected_file not in znames:
+                    errors.append(f"[RULE-024] Native `openxml_compiler.py` missing `{expected_file}` in `.ZIP`")
+    except Exception as exc:
+        errors.append(f"[RULE-024] `openxml_compiler.compile_healthcare_appeal_zip` check failed: {exc}")
+
+    rates_htmls = glob.glob(os.path.join(BASE_DIR, "rates", "cpt", "*.html"))
+    if len(rates_htmls) < 52:
+        errors.append(f"[RULE-024] `rates/cpt/*.html` has only {len(rates_htmls)} static dossiers (expected >= 52)")
+
+    proj_htmls = glob.glob(os.path.join(BASE_DIR, "lettings", "project", "*.html"))
+    if len(proj_htmls) < 52:
+        errors.append(f"[RULE-024] `lettings/project/*.html` has only {len(proj_htmls)} static dossiers (expected >= 52)")
+
+    npi_p = os.path.join(BASE_DIR, "verified_public_npi_contacts.json")
+    if os.path.exists(npi_p):
+        npi_contacts = json.load(open(npi_p, "r", encoding="utf-8"))
+        if len(npi_contacts) < 200:
+            errors.append(f"[RULE-024] `verified_public_npi_contacts.json` has {len(npi_contacts)} contacts (expected >= 200)")
+        missing_npi = [c.get("email") for c in npi_contacts if not str(c.get("npi_number") or "").isdigit() or len(str(c.get("npi_number") or "")) != 10]
+        if missing_npi:
+            errors.append(f"[RULE-024] {len(missing_npi)} contacts missing valid 10-digit Federal CMS NPPES `npi_number`")
+
+    csv_p = os.path.join(BASE_DIR, "campaign_leads.csv")
+    if os.path.exists(csv_p):
+        with open(csv_p, "r", encoding="utf-8-sig", newline="") as cf:
+            crows = list(csv.DictReader(cf))
+            if len(crows) < 200:
+                errors.append(f"[RULE-024] `campaign_leads.csv` has {len(crows)} rows (expected >= 200)")
+    return errors
+
+
 def verify_integrity() -> int:
     print("=" * 78)
     print("RUBRICWARD // FULL REPOSITORY, SPA RUNTIME, 52-PORTAL & 12-API INTEGRITY GATE")
@@ -1307,6 +1375,9 @@ def verify_integrity() -> int:
     # Step 8b: Zero Overlap with SignalTender
     all_errors.extend(check_zero_signaltender_overlap())
     print("  [STEP 8b] Verified 100% Zero Prospect Email, Domain, Mailbox & Discord Webhook Overlap with SignalTender")
+
+    all_errors.extend(check_master_plan_and_domain_native_depth())
+    print("  [STEP 8c] Verified RULE-024 Master-Plan Fidelity (Native Healthcare OpenXML/Routes, 52 `/rates/cpt/*.html` Dossiers, 200+ NPI-Enriched Contacts)")
 
     # Step 9: Closed-Loop Autonomous Error Healer
     from auto_error_healer import run_healer

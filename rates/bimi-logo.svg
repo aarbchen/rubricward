@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>RubricWard</title>
+  <rect width="64" height="64" fill="#0A0D14"/>
+  <path fill="#F8FAFC" d="M12 10H32V54C19 48 12 37 12 22V10Z"/>
+  <rect x="37" y="10" width="15" height="28" rx="2" fill="#10B981"/>
+</svg>
