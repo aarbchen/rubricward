@@ -1041,6 +1041,22 @@ def run_autonomous_mailbox_scaler(
 
     if not dry_run:
         _save_local_ledger(ledger)
+        try:
+            csv_p = os.path.join(BASE_DIR, "campaign_leads.csv")
+            cur_leads = 0
+            if os.path.exists(csv_p):
+                with open(csv_p, "r", encoding="utf-8") as cf:
+                    cur_leads = max(0, sum(1 for _ in cf) - 1)
+            target_buf = max(180, len(active_senders_set) * 60)
+            if newly_synced > 0 or len(new_pods_created) > 0 or cur_leads < target_buf:
+                import harvest_verified_dot_contacts
+                import outreach_generator
+                import sync_instantly_campaign
+                harvest_verified_dot_contacts.harvest_and_save_verified_dot_contacts(target_count=target_buf)
+                outreach_generator.generate_outreach_queue()
+                sync_instantly_campaign.sync_leads_to_instantly()
+        except Exception:
+            pass
 
     summary = {
         "brand": "RubricWard",

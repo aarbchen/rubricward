@@ -1,5 +1,23 @@
 [
   {
+    "company_name": "TruBridge RCM",
+    "email": "contact@trubridge.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-50121",
+    "state": "AL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://trubridge.com/contact/"
+  },
+  {
+    "company_name": "SimonMed Imaging",
+    "email": "billing@simonmed.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RAD-70146",
+    "state": "AZ",
+    "source_type": "website_html_mailto",
+    "source_url": "https://simonmed.com"
+  },
+  {
     "company_name": "Bikham Healthcare RCM",
     "email": "info@bikham.com",
     "first_name": "Revenue Cycle",
@@ -7,6 +25,24 @@
     "state": "CA",
     "source_type": "website_html_mailto",
     "source_url": "https://www.bikham.com"
+  },
+  {
+    "company_name": "Bristol Healthcare Services RCM",
+    "email": "info@bristolhcs.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95203",
+    "state": "CA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.bristolhcs.com/"
+  },
+  {
+    "company_name": "Kareo / Meditab Billing Services",
+    "email": "info@meditab.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95201",
+    "state": "CA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.meditab.com/company/contact-us"
   },
   {
     "company_name": "Medcare MSO Revenue Cycle Management",
@@ -27,6 +63,24 @@
     "source_url": "https://primeauconsultinggroup.com"
   },
   {
+    "company_name": "Synergy Orthopedic Specialists SD",
+    "email": "billing@synergysmg.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-90140",
+    "state": "CA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://synergysmg.com"
+  },
+  {
+    "company_name": "Vituity Physician Partnership",
+    "email": "publicrelations@vituity.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ANES-70167",
+    "state": "CA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.vituity.com/contact-us/"
+  },
+  {
     "company_name": "Pinnacle III ASC Management",
     "email": "info@pinnacleiii.com",
     "first_name": "Revenue Cycle",
@@ -36,11 +90,30 @@
     "source_url": "https://www.pinnacleiii.com"
   },
   {
+    "company_name": "Rocky Mountain Gastroenterology",
+    "email": "obchod@rmgastro.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-60115",
+    "state": "CO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.rmgastro.com"
+  },
+  {
+    "company_name": "Summit Billing Services RCM",
+    "email": "info@summitrcm.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95207",
+    "state": "CO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://summitrcm.com"
+  },
+  {
     "company": "Connecticut Orthopaedics \u2014 Surgical Revenue Cycle & Payer Contracting",
     "email": "info@ct-ortho.com",
     "state": "CT",
     "source_url": "https://www.ct-ortho.com",
-    "verified_mx": true
+    "verified_mx": true,
+    "company_name": "Connecticut Orthopaedics \u2014 Surgical Revenue Cycle & Payer Contracting"
   },
   {
     "company_name": "24/7 Medical Billing Services",
@@ -50,6 +123,42 @@
     "state": "DE",
     "source_type": "website_html_mailto",
     "source_url": "https://www.247medicalbillingservices.com"
+  },
+  {
+    "company_name": "Aspect Billing Solutions",
+    "email": "info@aspectbillingsolutions.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-90195",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.aspectbillingsolutions.com"
+  },
+  {
+    "company_name": "Avalon Healthcare Solutions Lab Management",
+    "email": "avalon-info@avalonhcs.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95316",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.avalonhcs.com"
+  },
+  {
+    "company_name": "ClinicMind RCM",
+    "email": "info@clinicmind.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-80119",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.clinicmind.com/rcm-in-house-billing"
+  },
+  {
+    "company_name": "Digestive & Liver Center of Florida",
+    "email": "insurance@dlcfl.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-95010",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.dlcfl.com"
   },
   {
     "company_name": "Gastro Florida",
@@ -79,6 +188,87 @@
     "source_url": "https://www.oasa.com/contact"
   },
   {
+    "company_name": "Prime Medical Billing Services",
+    "email": "contact@primemedicalbilling.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95228",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://primemedicalbilling.com/"
+  },
+  {
+    "company_name": "Quest National Services Medical Billing",
+    "email": "info@questns.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-70108",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://questns.com"
+  },
+  {
+    "company_name": "Valet Health Physician Growth & RCM",
+    "email": "support@valethealth.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-90198",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://valethealth.com/contact/"
+  },
+  {
+    "company_name": "Academy Orthopedics Llc",
+    "email": "info@academyorthopedics.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1962887596",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.academyorthopedics.com/about-us/"
+  },
+  {
+    "company_name": "Aica Orthopedics P.C.",
+    "email": "info@aica.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1033001417",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://aica.com/"
+  },
+  {
+    "company_name": "Apex Osn Sc Llc",
+    "email": "info@apexosn.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1881324481",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.apexosn.com/contact/"
+  },
+  {
+    "company_name": "ApolloMD Emergency & Hospitalist",
+    "email": "physicianverification@apollomd.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ANES-70163",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://apollomd.com/contact-us/"
+  },
+  {
+    "company_name": "Athens Orthopedic Clinic GA",
+    "email": "verisma@athensorthopedicclinic.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-90162",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://athensorthopedicclinic.com/contact/"
+  },
+  {
+    "company_name": "Atl Orthopedics Medical Group Llc",
+    "email": "info@atlorthopedics.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1124784368",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://atlorthopedics.com/"
+  },
+  {
     "company_name": "Coker Group Healthcare Advisory & Contracting",
     "email": "info@cokergroup.com",
     "first_name": "Revenue Cycle",
@@ -86,6 +276,15 @@
     "state": "GA",
     "source_type": "website_html_mailto",
     "source_url": "https://www.cokergroup.com/privacy-policy"
+  },
+  {
+    "company_name": "Optim Orthopedics Savannah GA",
+    "email": "billing@optimorthopedics.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-90161",
+    "state": "GA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.optimorthopedics.com/contactus/"
   },
   {
     "company_name": "Practolytics Healthcare RCM",
@@ -115,6 +314,23 @@
     "source_url": "https://oahawaii.com/"
   },
   {
+    "company_name": "ORA Orthopedics Quad Cities IA",
+    "email": "business_office@qcora.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-90182",
+    "state": "IA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.qcora.com"
+  },
+  {
+    "company": "Illinois Bone & Joint Institute \u2014 Orthopedic & ASC Revenue Cycle Management",
+    "email": "info@ibji.com",
+    "state": "IL",
+    "source_url": "https://www.ibji.com",
+    "verified_mx": true,
+    "company_name": "Illinois Bone & Joint Institute \u2014 Orthopedic & ASC Revenue Cycle Management"
+  },
+  {
     "company_name": "Midwest Orthopaedics at Rush",
     "email": "contact@rushortho.com",
     "first_name": "Revenue Cycle",
@@ -124,20 +340,13 @@
     "source_url": "https://www.rushortho.com/"
   },
   {
-    "company_name": "Roji Health Intelligence",
-    "email": "info@rojihealthintel.com",
+    "company_name": "Neolytix Healthcare RCM",
+    "email": "sales@neolytix.com",
     "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-80250",
+    "license_or_dot_id": "NPI-RCM-80111",
     "state": "IL",
     "source_type": "website_html_mailto",
-    "source_url": "https://rojihealthintel.com"
-  },
-  {
-    "company": "Illinois Bone & Joint Institute \u2014 Orthopedic & ASC Revenue Cycle Management",
-    "email": "info@ibji.com",
-    "state": "IL",
-    "source_url": "https://www.ibji.com",
-    "verified_mx": true
+    "source_url": "https://neolytix.com"
   },
   {
     "company_name": "Fort Wayne Orthopedics",
@@ -158,6 +367,15 @@
     "source_url": "https://www.revelemd.com/contact-us"
   },
   {
+    "company_name": "Zotec Partners Radiology & ER RCM",
+    "email": "slaw@zotecpartners.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-80178",
+    "state": "IN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://zotecpartners.com/leadership/"
+  },
+  {
     "company_name": "Advantum Health RCM",
     "email": "info@advantumhealth.com",
     "first_name": "Revenue Cycle",
@@ -176,6 +394,51 @@
     "source_url": "https://eandbortho.com/"
   },
   {
+    "company_name": "Capitol Imaging Services",
+    "email": "cis-support@capitolimagingservices.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RAD-70150",
+    "state": "LA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://capitolimagingservices.com/"
+  },
+  {
+    "company_name": "boston vision asc",
+    "email": "help@bostonvision.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-70143",
+    "state": "MA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.bostonvision.com"
+  },
+  {
+    "company_name": "Aledade Primary Care Network",
+    "email": "info@aledade.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-80148",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://aledade.com/"
+  },
+  {
+    "company_name": "CollectRx Out-of-Network & NSA IDR",
+    "email": "mail@revcosolutions.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-80164",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://info.revcosolutions.com/crxis-login"
+  },
+  {
+    "company_name": "InterMed Multi-Specialty Portland ME",
+    "email": "%7c02%7ckatherine.hilscher@intermed.com",
+    "first_name": "%7c02%7ckatherine",
+    "license_or_dot_id": "NPI-ASC-95081",
+    "state": "ME",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.intermed.com/additional-billing-information"
+  },
+  {
     "company_name": "Billing Advantage RCM",
     "email": "info@billingadvantage.com",
     "first_name": "Revenue Cycle",
@@ -185,11 +448,30 @@
     "source_url": "https://www.billingadvantage.com"
   },
   {
+    "company_name": "Pinnacle GI Partners",
+    "email": "contact@pinnaclegipartners.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-60103",
+    "state": "MI",
+    "source_type": "website_html_mailto",
+    "source_url": "https://pgip.com/"
+  },
+  {
     "company": "Twin Cities Orthopedics \u2014 Multi-Specialty Surgical & ASC Revenue Cycle",
     "email": "info@tcomn.com",
     "state": "MN",
     "source_url": "https://tcomn.com",
-    "verified_mx": true
+    "verified_mx": true,
+    "company_name": "Twin Cities Orthopedics \u2014 Multi-Specialty Surgical & ASC Revenue Cycle"
+  },
+  {
+    "company_name": "Columbia Orthopaedic Group MO",
+    "email": "info@columbiaorthogroup.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-90184",
+    "state": "MO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.columbiaorthogroup.com"
   },
   {
     "company_name": "Orthopedic & Sports Medicine Center MO",
@@ -201,6 +483,24 @@
     "source_url": "https://osmc.net"
   },
   {
+    "company_name": "Signature Medical Group",
+    "email": "info@signaturehealth.net",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1740291840",
+    "state": "MO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.signaturemedicalgroup.com"
+  },
+  {
+    "company_name": "Charlotte Eye Ear Nose & Throat (CEENTA)",
+    "email": "trdavis@ceenta.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-95145",
+    "state": "NC",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.ceenta.com/locations/southpark"
+  },
+  {
     "company_name": "Pinehurst Surgical Clinic",
     "email": "info@pinehurstsurgical.com",
     "first_name": "Revenue Cycle",
@@ -210,13 +510,58 @@
     "source_url": "https://pinehurstsurgical.com"
   },
   {
-    "company_name": "CureMD RCM Services",
-    "email": "nathan.bradshaw@curemd.com",
-    "first_name": "Nathan",
-    "license_or_dot_id": "NPI-RCM-20918",
-    "state": "NY",
+    "company_name": "Raleigh Radiology NC",
+    "email": "info@raleighrad.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RAD-95280",
+    "state": "NC",
     "source_type": "website_html_mailto",
-    "source_url": "https://www.curemd.com/"
+    "source_url": "https://www.raleighrad.com"
+  },
+  {
+    "company_name": "Telcor Laboratory RCM",
+    "email": "rcm.service@telcor.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-80184",
+    "state": "NE",
+    "source_type": "website_html_mailto",
+    "source_url": "https://telcor.com/contact-telcor-support-talk-to-lab-billing-poc-experts"
+  },
+  {
+    "company_name": "CBS Medical Billing & Consulting",
+    "email": "info@cbsmedicalbilling.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95198",
+    "state": "NH",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.cbsmedicalbilling.com"
+  },
+  {
+    "company_name": "New Hampshire NeuroSpine Institute",
+    "email": "info@nhneurospine.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-95083",
+    "state": "NH",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.nhneurospine.com"
+  },
+  {
+    "company_name": "Flatworld Solutions Healthcare RCM",
+    "email": "general.info@flatworldsolutions.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-80108",
+    "state": "NJ",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.flatworldsolutions.com/financial-services/"
+  },
+  {
+    "company_name": "Garden State Orthopaedic Associates",
+    "email": "wcdept@gardenstateortho.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-90166",
+    "state": "NJ",
+    "source_type": "website_html_mailto",
+    "source_url": "https://gardenstateortho.com/contact-us/"
   },
   {
     "company_name": "Medical Billing Star",
@@ -226,6 +571,15 @@
     "state": "NY",
     "source_type": "website_html_mailto",
     "source_url": "https://www.medicalbillingstar.com"
+  },
+  {
+    "company_name": "Medical Billing Wholesalers RCM",
+    "email": "info@mbwrcm.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95200",
+    "state": "NY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.mbwrcm.com"
   },
   {
     "company_name": "MedsIT Nexus Medical Billing",
@@ -246,6 +600,33 @@
     "source_url": "https://www.premiermedicalhv.com/contact-us/"
   },
   {
+    "company_name": "RCM Matter Physician Billing",
+    "email": "info@rcmmatter.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95184",
+    "state": "NY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://rcmmatter.com"
+  },
+  {
+    "company_name": "Synergy Medical Billing Solutions",
+    "email": "info@synergyb.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95232",
+    "state": "NY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.synergyb.com/"
+  },
+  {
+    "company_name": "UBMD Orthopaedics & Sports Medicine NY",
+    "email": "contact@ubortho.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-95109",
+    "state": "NY",
+    "source_type": "website_html_mailto",
+    "source_url": "https://ubortho.com"
+  },
+  {
     "company_name": "Cincinnati Eye Institute",
     "email": "info@cei.com",
     "first_name": "Revenue Cycle",
@@ -253,6 +634,51 @@
     "state": "OH",
     "source_type": "website_html_mailto",
     "source_url": "https://www.cei.com/contact"
+  },
+  {
+    "company_name": "CompuNet Clinical Laboratories OH",
+    "email": "cclbillingweb@compunetlab.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95323",
+    "state": "OH",
+    "source_type": "website_html_mailto",
+    "source_url": "https://compunetlab.com/patients/billing/"
+  },
+  {
+    "company_name": "Ensemble Health Partners",
+    "email": "solutions@ensemblehp.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-50117",
+    "state": "OH",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.ensemblehp.com/end-to-end-rcm-partnership/"
+  },
+  {
+    "company_name": "eClaimStatus Medical Billing",
+    "email": "sales@eclaimstatus.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95205",
+    "state": "OH",
+    "source_type": "website_html_mailto",
+    "source_url": "https://eclaimstatus.com"
+  },
+  {
+    "company_name": "HNL Lab Medicine Pennsylvania",
+    "email": "customercaredepartment@hnl.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95322",
+    "state": "PA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.hnl.com/patients/billing-and-insurance"
+  },
+  {
+    "company_name": "Keystone Medical Billing PA",
+    "email": "info@keystonemedicalbilling.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95221",
+    "state": "PA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.keystonemedicalbilling.com"
   },
   {
     "company_name": "Medical Billers and Coders (MBC)",
@@ -273,13 +699,22 @@
     "source_url": "https://southeasternspine.com/contact/"
   },
   {
-    "company_name": "HST Pathways ASC Software & RCM",
-    "email": "info@hstpathways.com",
+    "company_name": "Galen Medical Group",
+    "email": "allergyasthma@galenmedical.com",
     "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-80174",
+    "license_or_dot_id": "NPI-ASC-60141",
     "state": "TN",
     "source_type": "website_html_mailto",
-    "source_url": "https://www.hstpathways.com"
+    "source_url": "https://galenmedical.com/locations/"
+  },
+  {
+    "company_name": "Midsouth Imaging & Therapeutics TN",
+    "email": "eastmemphisimaging@msit.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RAD-95283",
+    "state": "TN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.msit.com"
   },
   {
     "company_name": "Semmes Murphey Clinic",
@@ -291,6 +726,15 @@
     "source_url": "https://www.semmes-murphey.com"
   },
   {
+    "company_name": "Stern Cardiovascular Foundation",
+    "email": "sharon.goldstein@sterncardio.com",
+    "first_name": "Sharon",
+    "license_or_dot_id": "NPI-CARD-70172",
+    "state": "TN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.sterncardio.com/contact"
+  },
+  {
     "company_name": "TOA Tennessee Orthopaedic Alliance",
     "email": "info@toa.com",
     "first_name": "Revenue Cycle",
@@ -298,6 +742,15 @@
     "state": "TN",
     "source_type": "website_html_mailto",
     "source_url": "https://toa.com/"
+  },
+  {
+    "company_name": "TeamHealth Acute & Anesthesia",
+    "email": "heather_vines@teamhealth.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ANES-70158",
+    "state": "TN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.teamhealth.com/feed/"
   },
   {
     "company_name": "Access Healthcare RCM",
@@ -336,6 +789,15 @@
     "source_url": "https://bellmedex.com/contact-bellmedex/"
   },
   {
+    "company_name": "Brain and Spine Institute San Antonio",
+    "email": "info@bsisa.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-95368",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.bsisa.com"
+  },
+  {
     "company_name": "Dallas Neurosurgical & Spine",
     "email": "info@dallasneurosurgical.com",
     "first_name": "Revenue Cycle",
@@ -354,6 +816,24 @@
     "source_url": "https://dhantx.com"
   },
   {
+    "company_name": "Direct Orthopedic Care",
+    "email": "billing@directorthocare.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1538491028",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.directorthocare.com/billing-inquiries/"
+  },
+  {
+    "company_name": "ENVISION / Solis Mammography & Imaging",
+    "email": "insuranceinfo@solismammo.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RAD-95265",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.solismammo.com"
+  },
+  {
     "company_name": "HaloMD NSA IDR Arbitration",
     "email": "cindy.williams@halomd.com",
     "first_name": "Cindy",
@@ -361,6 +841,15 @@
     "state": "TX",
     "source_type": "website_html_mailto",
     "source_url": "https://halomd.com"
+  },
+  {
+    "company_name": "Integrative Emergency Services (IES)",
+    "email": "info@ies.healthcare",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ANES-70166",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.ies.healthcare"
   },
   {
     "company_name": "Key-Whitman Eye Center",
@@ -390,6 +879,15 @@
     "source_url": "https://www.plutushealthinc.com"
   },
   {
+    "company_name": "Precision Medical Billing (PMB) TX",
+    "email": "info@precisionmedicalbilling.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95206",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://precisionmedicalbilling.com"
+  },
+  {
     "company_name": "Texas Back Institute",
     "email": "info@texasback.com",
     "first_name": "Revenue Cycle",
@@ -397,6 +895,24 @@
     "state": "TX",
     "source_type": "website_html_mailto",
     "source_url": "https://texasback.com/contact-us/"
+  },
+  {
+    "company_name": "Urology Austin",
+    "email": "billing@urologyaustin.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-60123",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://urologyaustin.com/locations/"
+  },
+  {
+    "company_name": "Ventra Health Anesthesia & ER RCM",
+    "email": "billing@ventrahealth.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-80180",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://ventrahealth.com/contact-us/"
   },
   {
     "company_name": "Emergency Physicians Integrated Care (EPIC)",
@@ -408,6 +924,15 @@
     "source_url": "https://www.epicllc.net"
   },
   {
+    "company_name": "Hoopes Vision Surgical Center UT",
+    "email": "info@hoopesvision.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-ASC-95155",
+    "state": "UT",
+    "source_type": "website_html_mailto",
+    "source_url": "https://hoopesvision.com/contact/"
+  },
+  {
     "company_name": "I-Med Claims Medical Billing",
     "email": "info@imedclaims.com",
     "first_name": "Revenue Cycle",
@@ -415,6 +940,33 @@
     "state": "UT",
     "source_type": "website_html_mailto",
     "source_url": "https://imedclaims.com"
+  },
+  {
+    "company_name": "Privia Health Medical Group",
+    "email": "connecticutdoctors@priviahealth.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-80146",
+    "state": "VA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.priviahealth.com/where-we-are/northeast/connecticut"
+  },
+  {
+    "company_name": "Quality Medical Billing RCM",
+    "email": "info@qualitymedicalbilling.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95229",
+    "state": "VA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.qualitymedicalbilling.com/contact_us.html"
+  },
+  {
+    "company_name": "CellNetix Pathology & Laboratories WA",
+    "email": "billing@cellnetix.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-RCM-95320",
+    "state": "WA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://cellnetix.com/billing/"
   },
   {
     "company_name": "Orthopedic Associates of Wisconsin",

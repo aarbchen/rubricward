@@ -244,7 +244,6 @@ HEAVY_CIVIL_SEED_DOMAINS: List[Tuple[str, str, str, str]] = [
     ('Infinx Healthcare RCM', 'infinx.com', 'CA', 'NPI-RCM-51908'),
     ('Medusind RCM Solutions', 'medusind.com', 'FL', 'NPI-RCM-92104'),
     ('BellMedEx Medical Billing', 'bellmedex.com', 'TX', 'NPI-RCM-11402'),
-    ('CureMD RCM Services', 'curemd.com', 'NY', 'NPI-RCM-20918'),
     ('Physicians Revenue Group', 'prgrcm.com', 'IL', 'NPI-RCM-40912'),
     ('Omega Healthcare RCM', 'omegahms.com', 'FL', 'NPI-RCM-50112'),
     ('GeBBS Healthcare Solutions', 'gebbs.com', 'CA', 'NPI-RCM-50113'),
@@ -252,26 +251,12 @@ HEAVY_CIVIL_SEED_DOMAINS: List[Tuple[str, str, str, str]] = [
     ('AGS Health RCM', 'agshealth.com', 'DC', 'NPI-RCM-50115'),
     ('Savista RCM', 'savistarcm.com', 'GA', 'NPI-RCM-50116'),
     (' Ensemble Health Partners', 'ensemblehp.com', 'OH', 'NPI-RCM-50117'),
-    ('Finvi Healthcare RCM', 'finvi.com', 'MA', 'NPI-RCM-50118'),
-    ('Waystar RCM', 'waystar.com', 'KY', 'NPI-RCM-50119'),
     ('Aspire Revenue Cycle', 'aspirercm.com', 'TX', 'NPI-RCM-50120'),
     (' TruBridge RCM', 'trubridge.com', 'AL', 'NPI-RCM-50121'),
     (' Tegria Healthcare RCM', 'tegria.com', 'WA', 'NPI-RCM-50122'),
-    (' Medicus IT Healthcare', 'medicusit.com', 'GA', 'NPI-RCM-50123'),
     ('PracticeMax RCM', 'practicemax.com', 'AZ', 'NPI-RCM-50124'),
     (' PGM Billing', 'pgmbilling.com', 'NY', 'NPI-RCM-50125'),
     (' Medical Billing Professionals', 'mbpros.com', 'PA', 'NPI-RCM-50126'),
-    (' CollaborateMD', 'collaboratemd.com', 'FL', 'NPI-RCM-50127'),
-    (' ClaimMD', 'claim.md', 'UT', 'NPI-RCM-50128'),
-    (' Kareo / Tebra Billing', 'tebra.com', 'CA', 'NPI-RCM-50129'),
-    (' AdvancedMD RCM', 'advancedmd.com', 'UT', 'NPI-RCM-50130'),
-    (' Azalea Health RCM', 'azaleahealth.com', 'GA', 'NPI-RCM-50131'),
-    (' RXNT Medical Billing', 'rxnt.com', 'MD', 'NPI-RCM-50132'),
-    (' DrChrono / EverHealth', 'drchrono.com', 'CA', 'NPI-RCM-50133'),
-    (' Greenway Health RCM', 'greenwayhealth.com', 'FL', 'NPI-RCM-50134'),
-    (' NextGen Healthcare RCM', 'nextgen.com', 'GA', 'NPI-RCM-50135'),
-    (' Veradigm Practice RCM', 'veradigm.com', 'IL', 'NPI-RCM-50136'),
-    (' Modernizing Medicine (ModMed)', 'modmed.com', 'FL', 'NPI-RCM-50137'),
     (' SightMD Eye & ASC Group', 'sightmd.com', 'NY', 'NPI-ASC-60101'),
     (' Forefront Dermatology', 'forefrontdermatology.com', 'WI', 'NPI-ASC-60102'),
     (' Pinnacle GI Partners', 'pinnaclegipartners.com', 'MI', 'NPI-ASC-60103'),
@@ -454,58 +439,17 @@ HEAVY_CIVIL_SEED_DOMAINS: List[Tuple[str, str, str, str]] = [
     (' Practolytics Healthcare RCM', 'practolytics.com', 'GA', 'NPI-RCM-80109'),
     (' Sybrid MD Medical Billing', 'sybridmd.com', 'IL', 'NPI-RCM-80110'),
     (' Neolytix Healthcare RCM', 'neolytix.com', 'IL', 'NPI-RCM-80111'),
-    (' WebPT Outpatient Billing', 'webpt.com', 'AZ', 'NPI-RCM-80112'),
-    (' Empower EMR & Billing', 'empoweremr.com', 'IL', 'NPI-RCM-80113'),
-    (' Prognocis Medical Billing', 'prognocis.com', 'CA', 'NPI-RCM-80114'),
-    (' PracticeSuite RCM', 'practicesuite.com', 'CA', 'NPI-RCM-80115'),
-    (' AllegianceMD Billing', 'allegiancemd.com', 'CA', 'NPI-RCM-80116'),
-    (' MicroMD Practice RCM', 'micromd.com', 'OH', 'NPI-RCM-80117'),
-    (' EZClaim Medical Billing', 'ezclaim.com', 'MI', 'NPI-RCM-80118'),
     (' ClinicMind RCM', 'clinicmind.com', 'FL', 'NPI-RCM-80119'),
-    (' Claimgenix Billing', 'claimgenix.com', 'NY', 'NPI-RCM-80120'),
-    (' Medisoft / MediTouch RCM', 'medouch.com', 'TX', 'NPI-RCM-80121'),
-    (' MedEvolve Revenue Cycle', 'medevolve.com', 'AR', 'NPI-RCM-80122'),
-    (' RevSpring Healthcare Financial', 'revspringinc.com', 'TN', 'NPI-RCM-80123'),
     (' VisitPay / R1 RCM', 'r1rcm.com', 'IL', 'NPI-RCM-80124'),
     (' Conifer Health Solutions', 'coniferhealth.com', 'TX', 'NPI-RCM-80125'),
-    (' Optum360 / Change Healthcare RCM', 'optum.com', 'MN', 'NPI-RCM-80126'),
-    (' Guidehouse Healthcare RCM', 'guidehouse.com', 'VA', 'NPI-RCM-80127'),
     (' Parallon Revenue Cycle', 'parallon.com', 'TN', 'NPI-RCM-80128'),
-    (' Guideway Care', 'guidewaycare.com', 'AL', 'NPI-RCM-80129'),
     (' Kodiak Solutions Healthcare RCM', 'kodiaksolutions.com', 'IN', 'NPI-RCM-80130'),
     (' EnableComp Specialty RCM', 'enablecomp.com', 'TN', 'NPI-RCM-80131'),
     (' Reventics / Omega RCM', 'reventics.com', 'CO', 'NPI-RCM-80132'),
-    (' Vendormate / GHX Healthcare', 'ghx.com', 'CO', 'NPI-RCM-80133'),
-    (' Craneware Healthcare Revenue Integrity', 'craneware.com', 'FL', 'NPI-RCM-80134'),
-    ('Vitalware / Health Catalyst', 'healthcatalyst.com', 'UT', 'NPI-RCM-80135'),
-    (' MDaudit Revenue Integrity', 'mdaudit.com', 'MA', 'NPI-RCM-80136'),
-    (' Panacea Healthcare Pricing & MRF', 'panaceainc.com', 'MN', 'NPI-RCM-80137'),
-    (' Turquoise Health MRF Platform', 'turquoise.health', 'CA', 'NPI-RCM-80138'),
-    (' Serif Health Payer MRF', 'serifhealth.com', 'CA', 'NPI-RCM-80139'),
-    (' PayerPrice MRF Analytics', 'payerprice.com', 'TX', 'NPI-RCM-80140'),
-    (' Clarify Health Analytics', 'clarifyhealth.com', 'CA', 'NPI-RCM-80141'),
-    (' Cedar Gate Technologies', 'cedargate.com', 'CT', 'NPI-RCM-80142'),
-    (' Arcadia Healthcare Analytics', 'arcadia.io', 'MA', 'NPI-RCM-80143'),
-    (' Innovaccer Healthcare Cloud', 'innovaccer.com', 'CA', 'NPI-RCM-80144'),
-    (' Lumeris Value-Based Care', 'lumeris.com', 'MO', 'NPI-RCM-80145'),
     (' Privia Health Medical Group', 'priviahealth.com', 'VA', 'NPI-RCM-80146'),
     (' Agilon Health Physician Network', 'agilonhealth.com', 'TX', 'NPI-RCM-80147'),
     ('Aledade Primary Care Network', 'aledade.com', 'MD', 'NPI-RCM-80148'),
     (' Evolent Health Specialty Care', 'evolent.com', 'VA', 'NPI-RCM-80149'),
-    (' Cohere Health Prior Auth', 'coherehealth.com', 'MA', 'NPI-RCM-80150'),
-    (' Rhyme Prior Auth & RCM', 'rhyme.com', 'WI', 'NPI-RCM-80151'),
-    (' Infinitus Systems Healthcare RCM', 'infinitus.ai', 'CA', 'NPI-RCM-80152'),
-    (' AKASA Healthcare RCM Automation', 'akasa.com', 'CA', 'NPI-RCM-80153'),
-    (' Olive / Waystar RCM', 'oliveai.com', 'OH', 'NPI-RCM-80154'),
-    (' Thoughtful AI RCM', 'thoughtful.ai', 'CA', 'NPI-RCM-80155'),
-    (' Candid Health Autonomous RCM', 'joincandidhealth.com', 'CA', 'NPI-RCM-80156'),
-    (' Athelas / Commure RCM', 'athelas.com', 'CA', 'NPI-RCM-80157'),
-    (' Commure Healthcare RCM', 'commure.com', 'CA', 'NPI-RCM-80158'),
-    (' Notable Health RCM Automation', 'notablehealth.com', 'CA', 'NPI-RCM-80159'),
-    (' Connecticut Orthopaedics Patient Billing', 'inboxhealth.com', 'CT', 'NPI-RCM-80160'),
-    (' Cedar Healthcare Financial', 'cedar.com', 'NY', 'NPI-RCM-80161'),
-    (' Flywire Healthcare Payments', 'flywire.com', 'MA', 'NPI-RCM-80162'),
-    (' Patientco / Waystar', 'patientco.com', 'GA', 'NPI-RCM-80163'),
     (' CollectRx Out-of-Network & NSA IDR', 'collectrx.com', 'MD', 'NPI-RCM-80164'),
     (' HaloMD NSA IDR Arbitration', 'halomd.com', 'TX', 'NPI-RCM-80165'),
     (' Callagy Recovery NSA IDR', 'callagyrecovery.com', 'NJ', 'NPI-RCM-80166'),
@@ -514,8 +458,6 @@ HEAVY_CIVIL_SEED_DOMAINS: List[Tuple[str, str, str, str]] = [
     (' Managed Care Advisory Group (MCAG)', 'mcaginc.com', 'OH', 'NPI-RCM-80169'),
     (' National Medical Billing Services', 'nationalmedicalbilling.com', 'MO', 'NPI-RCM-80170'),
     (' Surgical Notes ASC Billing', 'surgicalnotes.com', 'TX', 'NPI-RCM-80171'),
-    (' SIS Surgical Information Systems', 'sisfirst.com', 'GA', 'NPI-RCM-80173'),
-    (' HST Pathways ASC Software & RCM', 'hstpathways.com', 'TN', 'NPI-RCM-80174'),
     (' nimble solutions asc rcm', 'nimblesolutions.com', 'MO', 'NPI-RCM-80175'),
     (' Anesthesia Business Consultants (ABC)', 'anesthesiallc.com', 'MI', 'NPI-RCM-80176'),
     (' Zotec Partners Radiology & ER RCM', 'zotecpartners.com', 'IN', 'NPI-RCM-80178'),
@@ -525,57 +467,11 @@ HEAVY_CIVIL_SEED_DOMAINS: List[Tuple[str, str, str, str]] = [
     (' XiFin Laboratory & Diagnostic RCM', 'xifin.com', 'CA', 'NPI-RCM-80182'),
     (' Quadax Laboratory & Hospital RCM', 'quadax.com', 'OH', 'NPI-RCM-80183'),
     (' Telcor Laboratory RCM', 'telcor.com', 'NE', 'NPI-RCM-80184'),
-    (' Change Healthcare / Emdeon', 'changehealthcare.com', 'TN', 'NPI-RCM-80185'),
-    (' Availity Clearinghouse & RCM', 'availity.com', 'FL', 'NPI-RCM-80186'),
-    (' Office Ally Clearinghouse & EHR', 'officeally.com', 'WA', 'NPI-RCM-80187'),
-    (' TriZetto Provider Solutions', 'trizettoprovider.com', 'MO', 'NPI-RCM-80188'),
-    (' Jopari Solutions Workers Comp & Auto RCM', 'jopari.com', 'CA', 'NPI-RCM-80189'),
-    (' Experience Care Long-Term Care RCM', 'experience.care', 'TX', 'NPI-RCM-80190'),
-    (' MatrixCare RCM', 'matrixcare.com', 'MN', 'NPI-RCM-80191'),
-    (' PointClickCare RCM', 'pointclickcare.com', 'CA', 'NPI-RCM-80192'),
-    (' NetSmart Behavioral Health RCM', 'ntst.com', 'KS', 'NPI-RCM-80193'),
-    (' Qualifacts Behavioral Health RCM', 'qualifacts.com', 'TN', 'NPI-RCM-80194'),
-    (' Cantata Health Solutions RCM', 'cantatahealth.com', 'NJ', 'NPI-RCM-80195'),
-    (' CentralReach Autism & IDD RCM', 'centralreach.com', 'FL', 'NPI-RCM-80196'),
-    (' RethinkBH Behavioral RCM', 'rethinkbh.com', 'NY', 'NPI-RCM-80197'),
-    (' Ensora Health / TherapyBrands RCM', 'therapybrands.com', 'AL', 'NPI-RCM-80198'),
-    (' SimplePractice / Valant RCM', 'valant.io', 'WA', 'NPI-RCM-80199'),
-    (' Raintree Systems Rehab & Specialty RCM', 'raintreeinc.com', 'CA', 'NPI-RCM-80200'),
-    (' Prompt Health Physical Therapy RCM', 'promptemr.com', 'NJ', 'NPI-RCM-80201'),
-    (' Clinicient / WebPT RCM', 'clinicient.com', 'OR', 'NPI-RCM-80202'),
     (' BMS Practice Solutions Rehab RCM', 'bmspracticesolutions.com', 'FL', 'NPI-RCM-80203'),
-    (' StrataPT Physical Therapy Billing', 'stratapt.com', 'FL', 'NPI-RCM-80204'),
     (' Nierman Practice Management Medical Billing', 'niermanpm.com', 'FL', 'NPI-RCM-80205'),
-    (' Devdent Medical Cross-Coding', 'devdent.com', 'WA', 'NPI-RCM-80206'),
-    (' Apex EDI Clearinghouse', 'apexedi.com', 'UT', 'NPI-RCM-80207'),
-    (' DentalXChange / Medical Claims', 'dentalxchange.com', 'CA', 'NPI-RCM-80208'),
-    (' Vyne Medical Claim Attachment & RCM', 'vynemedical.com', 'GA', 'NPI-RCM-80209'),
-    (' HealthPay24 Patient & Payer RCM', 'healthpay24.com', 'PA', 'NPI-RCM-80210'),
-    (' AccuReg Front-End RCM', 'accuregsoftware.com', 'AL', 'NPI-RCM-80211'),
-    (' Experian Health RCM', 'experian.com', 'CA', 'NPI-RCM-80212'),
-    (' FinThrive Healthcare RCM', 'finthrive.com', 'TX', 'NPI-RCM-80213'),
-    (' SSI Group Healthcare Clearinghouse', 'thessigroup.com', 'AL', 'NPI-RCM-80214'),
-    (' Sandata Medicaid & EVV Billing', 'sandata.com', 'NY', 'NPI-RCM-80215'),
-    (' HHAeXchange Homecare & Medicaid RCM', 'hhaexchange.com', 'NY', 'NPI-RCM-80216'),
-    ('WellSky Home Health & Hospice RCM', 'wellsky.com', 'KS', 'NPI-RCM-80217'),
-    (' Axxess Home Health Billing', 'axxess.com', 'TX', 'NPI-RCM-80218'),
-    (' KanTime Healthcare RCM', 'kantime.com', 'CA', 'NPI-RCM-80219'),
-    (' Alora Healthcare Billing', 'alorahealth.com', 'GA', 'NPI-RCM-80220'),
-    (' Brightree DME & HME Billing', 'brightree.com', 'GA', 'NPI-RCM-80221'),
-    (' Bonafide DME Medical Billing', 'bonafide.com', 'CA', 'NPI-RCM-80222'),
-    (' Computers Unlimited TIMS Medical Billing', 'cu.net', 'MT', 'NPI-RCM-80223'),
-    (' NikoHealth DME & Infusion RCM', 'nikohealth.com', 'NJ', 'NPI-RCM-80224'),
-    (' CPR+ / WellSky Specialty Pharmacy RCM', 'cprplus.com', 'OH', 'NPI-RCM-80225'),
-    (' CareTend Infusion & Specialty RCM', 'caretend.com', 'KS', 'NPI-RCM-80226'),
-    (' Twin Cities Orthopedics EMS & Hospital Billing', 'imagetrend.com', 'MN', 'NPI-RCM-80227'),
-    (' ESO EMS & Fire Billing', 'eso.com', 'TX', 'NPI-RCM-80228'),
-    (' Zoll Data Systems EMS Billing', 'zolldata.com', 'CO', 'NPI-RCM-80229'),
-    (' Digitech EMS Medical Billing', 'digitechcomputer.com', 'NY', 'NPI-RCM-80230'),
     (' Quick Med Claims EMS & Air Ambulance NSA IDR', 'quickmedclaims.com', 'PA', 'NPI-RCM-80231'),
     (' Cornerstone Adminisystems EMS Billing', 'casbilling.com', 'PA', 'NPI-RCM-80232'),
     (' Ambpro Ambulance Medical Billing', 'ambpro.com', 'IL', 'NPI-RCM-80233'),
-    (' Colleton Software EMS Billing', 'colletonsoftware.com', 'SC', 'NPI-RCM-80234'),
-    (' Emergency Networking EMS RCM', 'emergencynetworking.com', 'MI', 'NPI-RCM-80235'),
     (' MedStar Billing Services', 'medstarbilling.com', 'TX', 'NPI-RCM-80236'),
     (' Primeau Consulting Group Coding & CDI', 'primeauconsultinggroup.com', 'CA', 'NPI-RCM-80237'),
     (' Healthcare Administrative Partners (HAP)', 'hapusa.com', 'PA', 'NPI-RCM-80238'),
@@ -583,14 +479,7 @@ HEAVY_CIVIL_SEED_DOMAINS: List[Tuple[str, str, str, str]] = [
     (' Medical Management Associates (MMA)', 'mmacorp.com', 'GA', 'NPI-RCM-80240'),
     (' Coker Group Healthcare Advisory & Contracting', 'cokergroup.com', 'GA', 'NPI-RCM-80241'),
     (' ECG Management Consultants', 'ecgmc.com', 'WA', 'NPI-RCM-80242'),
-    (' Illinois Bone & Joint Institute Physician Compensation & RVU', 'sullivancotter.com', 'IL', 'NPI-RCM-80243'),
     (' Stroudwater Associates Rural Hospital RCM', 'stroudwater.com', 'ME', 'NPI-RCM-80244'),
-    (' Winters Healthcare / OCHIN Billing', 'ochin.org', 'OR', 'NPI-RCM-80245'),
-    (' Azara Healthcare Quality & VBC', 'azarahealthcare.com', 'MA', 'NPI-RCM-80246'),
-    (' Healthmonix MIPS & RVU Analytics', 'healthmonix.com', 'PA', 'NPI-RCM-80247'),
-    (' Mingle Health MIPS & Medicare Reporting', 'minglehealth.com', 'UT', 'NPI-RCM-80248'),
-    (' Able Health / Health Catalyst', 'ablehealth.com', 'CA', 'NPI-RCM-80249'),
-    (' Roji Health Intelligence', 'rojihealthintel.com', 'IL', 'NPI-RCM-80250'),
     ('OrthoTexas Physicians & Surgeons', 'orthotexas.com', 'TX', 'NPI-ASC-90101'),
     ('Texas Spine and Scoliosis Austin', 'texasspineandscoliosis.com', 'TX', 'NPI-ASC-90102'),
     ('Houston Methodist Orthopedics / Fondren', 'houstonorthopedic.com', 'TX', 'NPI-ASC-90103'),
@@ -691,156 +580,571 @@ HEAVY_CIVIL_SEED_DOMAINS: List[Tuple[str, str, str, str]] = [
     ('Valet Health Physician Growth & RCM', 'valethealth.com', 'FL', 'NPI-RCM-90198'),
     ('MedCycle Solutions RCM', 'medcyclesolutions.com', 'TX', 'NPI-RCM-90199'),
     ('Pinnacle Healthcare Consulting', 'askphc.com', 'CO', 'NPI-RCM-90200'),
+    ('Texas Orthopedic Hospital Physicians', 'texasorthopedic.com', 'TX', 'NPI-ASC-95002'),
+    ('Orthopedic Associates of Flower Mound', 'orthopedicassociates.org', 'TX', 'NPI-ASC-95004'),
+    ('Arlington Orthopedic Associates TX', 'arlingtonortho.com', 'TX', 'NPI-ASC-95005'),
+    ('South Texas Spinal Clinic San Antonio', 'spinaldoc.com', 'TX', 'NPI-ASC-95006'),
+    ('Texas Spine Consultants Dallas', 'texasspineconsultants.com', 'TX', 'NPI-ASC-95007'),
+    ('Spine Team Texas Southlake', 'spineteamtexas.com', 'TX', 'NPI-ASC-95008'),
+    ('Neurosurgery & Spine Consultants SA', 'neurosa.com', 'TX', 'NPI-ASC-95009'),
+    ('Digestive & Liver Center of Florida', 'dlcfl.com', 'FL', 'NPI-ASC-95010'),
+    ('Gastroenterology Associates of Central FL', 'gacfl.com', 'FL', 'NPI-ASC-95011'),
+    ('Digestive Disease Associates FL', 'ddafl.com', 'FL', 'NPI-ASC-95012'),
+    ('Center for Digestive Health Orlando', 'cfdh.com', 'FL', 'NPI-ASC-95013'),
+    ('Southwest Florida Neurosurgical & Spine', 'swfna.com', 'FL', 'NPI-ASC-95015'),
+    ('Orthopaedic Associates of West Florida', 'orthowestfl.com', 'FL', 'NPI-ASC-95016'),
+    ('Alexander Orthopaedics Associates FL', 'alexanderorthopaedics.com', 'FL', 'NPI-ASC-95017'),
+    ('South Florida Surgery Center ASC', 'sfsurgerycenter.com', 'FL', 'NPI-ASC-95018'),
+    ('Miami Institute for Joint Reconstruction', 'miamiorthodoctor.com', 'FL', 'NPI-ASC-95019'),
+    ('Boca Raton Orthopaedic Group', 'bocaortho.com', 'FL', 'NPI-ASC-95020'),
+    ('Central Florida Bone & Joint Institute', 'cfbj.com', 'FL', 'NPI-ASC-95021'),
+    ('Orthopaedic Institute of Central Florida', 'oicfl.com', 'FL', 'NPI-ASC-95022'),
+    ('Oakland Bone & Joint Specialists CA', 'oaklandboneandjoint.com', 'CA', 'NPI-ASC-95023'),
+    ('Peninsula Orthopedic Associates CA', 'poasurgeon.com', 'CA', 'NPI-ASC-95024'),
+    ('Silicon Valley Orthopaedics CA', 'siliconvalleyortho.com', 'CA', 'NPI-ASC-95025'),
+    ('desert orthopedic center rancho mirage', 'desertorthopedic.com', 'CA', 'NPI-ASC-95026'),
+    ('Orthopaedic Medical Group of Tampa Bay', 'omgtb.com', 'FL', 'NPI-ASC-95027'),
+    ('California Pacific Orthopaedics SF', 'calpacortho.com', 'CA', 'NPI-ASC-95028'),
+    ('Rising Medical / Sacramento Knee & Sports', 'sacortho.com', 'CA', 'NPI-ASC-95029'),
+    ('Hope Orthopedics of Oregon', 'hopeorthopedics.com', 'OR', 'NPI-ASC-95030'),
+    ('The Center Orthopedic & Neurosurgical OR', 'thecenteroregon.com', 'OR', 'NPI-ASC-95031'),
+    ('Northwest Orthopedic Specialists WA', 'nwortho.com', 'WA', 'NPI-ASC-95032'),
+    ('Bellingham Bay Orthopedic & Spine WA', 'peacehealth.org', 'WA', 'NPI-ASC-95033'),
+    ('Spokane Digestive Disease Center', 'spokanedigestive.com', 'WA', 'NPI-ASC-95034'),
+    ('Gastroenterology Associates Olympia WA', 'olygi.com', 'WA', 'NPI-ASC-95035'),
+    ('The Urology Group Cincinnati OH', 'urologygroup.com', 'OH', 'NPI-ASC-95036'),
+    ('Central Ohio Urology Group', 'centralohiourology.com', 'OH', 'NPI-ASC-95037'),
+    ('Arkansas Urology Little Rock', 'arkansasurology.com', 'AR', 'NPI-ASC-95038'),
+    ('Urology Associates of Nashville TN', 'urologynashville.com', 'TN', 'NPI-ASC-95039'),
+    ('Urology Centers of Alabama', 'urologycentersalabama.com', 'AL', 'NPI-ASC-95040'),
+    ('Urology Specialists of the Carolinas', 'urologyspecialistsnc.com', 'NC', 'NPI-ASC-95041'),
+    ('Kansas City Urology Care', 'kcurology.com', 'KS', 'NPI-ASC-95042'),
+    ('The Iowa Clinic Urology & Surgery', 'iowaclinic.com', 'IA', 'NPI-ASC-95043'),
+    ('Adult & Pediatric Urology Omaha NE', 'adultpediatricurology.com', 'NE', 'NPI-ASC-95044'),
+    ('Arizona Urology Specialists', 'arizonaurologyspecialists.com', 'AZ', 'NPI-ASC-95045'),
+    ('Western Reserve Hospital Physicians OH', 'westernreservehospital.org', 'OH', 'NPI-ASC-95046'),
+    ('NomS Healthcare Multi-Specialty OH', 'nomshealthcare.com', 'OH', 'NPI-ASC-95048'),
+    ('Premier Physician Network Dayton OH', 'premierhealth.com', 'OH', 'NPI-ASC-95049'),
+    ('Mercy Clinic Orthopedics MO', 'mercy.net', 'MO', 'NPI-ASC-95050'),
+    ('Woods Mill Orthopedics St. Louis', 'woodsmillortho.com', 'MO', 'NPI-ASC-95051'),
+    ('Axes Physical & Hand Surgical MO', 'axespt.com', 'MO', 'NPI-ASC-95052'),
+    ('Bone & Joint Institute of South Georgia', 'bjisg.com', 'GA', 'NPI-ASC-95053'),
+    ('Chatham Orthopaedic Associates Savannah', 'chathamorthopaedics.com', 'GA', 'NPI-ASC-95054'),
+    ('OrthoGeorgia Macon GA', 'orthoga.org', 'GA', 'NPI-ASC-95055'),
+    ('Northeastern Georgia Orthopedic Clinic', 'negaclinic.com', 'GA', 'NPI-ASC-95056'),
+    ('Lowcountry Orthopaedics Charleston SC', 'lowcountryortho.com', 'SC', 'NPI-ASC-95057'),
+    ('Southeastern Orthopedic Center GA', 'seorthocenter.com', 'GA', 'NPI-ASC-95058'),
+    ('Cary Orthopaedics Spine & Sports NC', 'caryortho.com', 'NC', 'NPI-ASC-95060'),
+    ('Triangle Orthopaedics Durham NC', 'triangleortho.com', 'NC', 'NPI-ASC-95061'),
+    ('Guilford Orthopaedic and Sports Medicine', 'guilfordortho.com', 'NC', 'NPI-ASC-95062'),
+    ('Carolina Hand and Sports Medicine NC', 'carolinahand.com', 'NC', 'NPI-ASC-95063'),
+    ('Virginia Orthopaedic & Spine Specialists', 'vosshealthcare.com', 'VA', 'NPI-ASC-95064'),
+    ('Shenandoah Valley Orthodontics & Ortho VA', 'svoa.com', 'VA', 'NPI-ASC-95065'),
+    ('Centra Medical Group Orthopedics VA', 'centrahealth.com', 'VA', 'NPI-ASC-95066'),
+    ('Chesapeake Orthopaedic & Sports Medicine MD', 'chesapeakeortho.com', 'MD', 'NPI-ASC-95067'),
+    ('Anchor Orthopaedics & Spine MD', 'anchorortho.com', 'MD', 'NPI-ASC-95068'),
+    ('Anne Arundel Orthopaedic Surgeons MD', 'aaosmd.com', 'MD', 'NPI-ASC-95069'),
+    ('Towson Orthopaedic Associates MD', 'towsonortho.com', 'MD', 'NPI-ASC-95070'),
+    ('Parkway Neuroscience and Spine MD', 'pnsi.org', 'MD', 'NPI-ASC-95071'),
+    ('Bucks County Orthopedic Specialists PA', 'bucksortho.com', 'PA', 'NPI-ASC-95072'),
+    ('Lehigh Valley Orthopedic Institute PA', 'lvhn.org', 'PA', 'NPI-ASC-95073'),
+    ("St. Luke's Orthopedic Care PA", 'sluhn.org', 'PA', 'NPI-ASC-95074'),
+    ('Lancaster Orthopedic Group PA', 'lancasterortho.com', 'PA', 'NPI-ASC-95075'),
+    ('West Penn / Allegheny Orthopaedic Associates', 'ahn.org', 'PA', 'NPI-ASC-95076'),
+    ('Greater Pittsburgh Orthopaedic Associates', 'gpoa.com', 'PA', 'NPI-ASC-95077'),
+    ('Burke & Bradley Orthodontics / Ortho PA', 'burkeandbradley.com', 'PA', 'NPI-ASC-95078'),
+    ('Orthopaedic & Spine Institute of PA', 'osipa.com', 'PA', 'NPI-ASC-95079'),
+    ("Martin's Point Health Care ME", 'martinspoint.org', 'ME', 'NPI-ASC-95080'),
+    ('InterMed Multi-Specialty Portland ME', 'intermed.com', 'ME', 'NPI-ASC-95081'),
+    ('Atlantic Orthopaedics & Sports Medicine NH', 'atlanticorthopaedics.org', 'NH', 'NPI-ASC-95082'),
+    ('New Hampshire NeuroSpine Institute', 'nhneurospine.com', 'NH', 'NPI-ASC-95083'),
+    ('Core Physicians Exeter NH', 'corephysicians.org', 'NH', 'NPI-ASC-95084'),
+    ('Boston Orthopaedic and Spine MA', 'bostonorthospine.com', 'MA', 'NPI-ASC-95085'),
+    ('New England Orthopedic Surgeons MA', 'neorthosurgeons.com', 'MA', 'NPI-ASC-95086'),
+    ('Orthopedics New England MA', 'orthonewengland.com', 'MA', 'NPI-ASC-95087'),
+    ('South Shore Orthopedics Hingham MA', 'southshoreorthopedics.com', 'MA', 'NPI-ASC-95088'),
+    ('Hand Surgery Associates Boston MA', 'handsurgeryassociates.com', 'MA', 'NPI-ASC-95089'),
+    ('Connecticut Orthopaedics Hamden CT', 'ct-ortho.com', 'CT', 'NPI-ASC-95090'),
+    ('OrthoConnecticut Danbury CT', 'myorthoct.com', 'CT', 'NPI-ASC-95091'),
+    ('Comprehensive Orthopaedics Meriden CT', 'comporthoct.com', 'CT', 'NPI-ASC-95092'),
+    ('Orthopaedic Specialty Group Fairfield CT', 'osgpc.com', 'CT', 'NPI-ASC-95093'),
+    ('Hospital for Special Care / Gaylord CT', 'hfsc.org', 'CT', 'NPI-ASC-95094'),
+    ('OrthoNJ / Princeton Orthopaedic Associates', 'princetonorthopaedic.com', 'NJ', 'NPI-ASC-95095'),
+    ('University Orthopaedic Associates NJ', 'uognj.com', 'NJ', 'NPI-ASC-95096'),
+    ('Tri-County Orthopedics Morristown NJ', 'tricountyortho.com', 'NJ', 'NPI-ASC-95097'),
+    ('premiere orthopaedics & sports medicine nj', 'premiereortho.com', 'NJ', 'NPI-ASC-95098'),
+    ('Coastal Spine Cherry Hill NJ', 'coastalspine.com', 'NJ', 'NPI-ASC-95099'),
+    ('Hudson Pro Orthopaedics Hoboken NJ', 'hudsonproorthopaedics.com', 'NJ', 'NPI-ASC-95100'),
+    ('New York Bone & Joint Specialists', 'nyboneandjoint.com', 'NY', 'NPI-ASC-95101'),
+    ('Manhattan Orthopedic Care NY', 'manhattanorthopedic.com', 'NY', 'NPI-ASC-95102'),
+    ('Brooklyn Premier Orthopedics NY', 'brooklynpremierorthopedics.com', 'NY', 'NPI-ASC-95103'),
+    ('Central Orthopedic Group Long Island NY', 'centralorthopedicgroup.com', 'NY', 'NPI-ASC-95104'),
+    ('Total Orthopedics & Sports Medicine NY', 'totalorthosportsmed.com', 'NY', 'NPI-ASC-95105'),
+    ('Orthopedic Associates of Dutchess County NY', 'orthoadc.com', 'NY', 'NPI-ASC-95106'),
+    ('The Bone & Joint Center Albany NY', 'theboneandjointcenter.com', 'NY', 'NPI-ASC-95107'),
+    ('Finger Lakes Bone and Joint NY', 'flbj.com', 'NY', 'NPI-ASC-95108'),
+    ('UBMD Orthopaedics & Sports Medicine NY', 'ubortho.com', 'NY', 'NPI-ASC-95109'),
+    ('Cornerstone Eye Associates Rochester NY', 'cornerstoneeye.com', 'NY', 'NPI-ASC-95110'),
+    ('Retina Associates of Western NY', 'retinaassociatesofwny.com', 'NY', 'NPI-ASC-95111'),
+    ('Vitreoretinal Consultants NY', 'vrcny.com', 'NY', 'NPI-ASC-95112'),
+    ('Long Island Vitreoretinal Consultants', 'livrc.com', 'NY', 'NPI-ASC-95113'),
+    ('Associated Retinal Consultants MI', 'associatedretinalconsultants.com', 'MI', 'NPI-ASC-95114'),
+    ('Grand Rapids Ophthalmology MI', 'seeitclear.com', 'MI', 'NPI-ASC-95115'),
+    ('Michigan Eye Institute Flint MI', 'mieye.com', 'MI', 'NPI-ASC-95116'),
+    ('Lansing Ophthalmology MI', 'loeye.com', 'MI', 'NPI-ASC-95117'),
+    ('Midwest Eye Center Chicago IL', 'midwesteyecenter.com', 'IL', 'NPI-ASC-95118'),
+    ('Wheaton Eye Clinic IL', 'wheatoneye.com', 'IL', 'NPI-ASC-95119'),
+    ('Illinois Retina Associates', 'illinoisretina.com', 'IL', 'NPI-ASC-95120'),
+    ('Gailey Eye Clinic Bloomington IL', 'gaileyeyeclinic.com', 'IL', 'NPI-ASC-95121'),
+    ('Hauser-Ross Eye Institute IL', 'hauser-ross.com', 'IL', 'NPI-ASC-95122'),
+    ('Eye Surgeons Associates Quad Cities', 'esaeyecare.com', 'IA', 'NPI-ASC-95123'),
+    ('Wolfe Eye Clinic Iowa', 'wolfeeyeclinic.com', 'IA', 'NPI-ASC-95124'),
+    ('Pepose Vision Institute St. Louis MO', 'peposevision.com', 'MO', 'NPI-ASC-95125'),
+    ('Discover Vision Centers Kansas City', 'discovervision.com', 'MO', 'NPI-ASC-95126'),
+    ('Sabates Eye Centers Kansas City', 'sabateseye.com', 'MO', 'NPI-ASC-95127'),
+    ('Grene Vision Group Wichita KS', 'grenevisiongroup.com', 'KS', 'NPI-ASC-95128'),
+    ('McGee Eye Surgery Center OKC', 'mcgeeeyecenter.com', 'OK', 'NPI-ASC-95129'),
+    ('Triad Eye Institute Tulsa OK', 'triadeye.com', 'OK', 'NPI-ASC-95130'),
+    ('McFarland Eye Care Little Rock AR', 'mcfarlandeye.com', 'AR', 'NPI-ASC-95131'),
+    ('Boop-Boone / Arkansas Eye Surgery', 'arkansaseye.com', 'AR', 'NPI-ASC-95132'),
+    ('Williamson Eye Center Baton Rouge LA', 'williamsoneye.com', 'LA', 'NPI-ASC-95133'),
+    ('Willis-Knighton Eye Institute LA', 'wkeye.com', 'LA', 'NPI-ASC-95134'),
+    ('SouthEast Eye Specialists TN', 'southeasteye.com', 'TN', 'NPI-ASC-95135'),
+    ('Loden Vision Centers Nashville TN', 'lodenvision.com', 'TN', 'NPI-ASC-95136'),
+    ('Toyos Clinic Ophthalmology TN', 'toyosclinic.com', 'TN', 'NPI-ASC-95137'),
+    ('Eye Center South Dothan AL', 'eyecentersouth.net', 'AL', 'NPI-ASC-95138'),
+    ('Callahan Eye Hospital Clinic AL', 'uabmedicine.org', 'AL', 'NPI-ASC-95139'),
+    ('Mississippi Retina Associates', 'msretina.com', 'MS', 'NPI-ASC-95140'),
+    ('Southeastern Retina Associates TN', 'seretina.com', 'TN', 'NPI-ASC-95141'),
+    ('Retina Specialists of Alabama', 'retinaspecialistsofalabama.com', 'AL', 'NPI-ASC-95142'),
+    ('Palmetto Retina Center SC', 'palmettoretina.com', 'SC', 'NPI-ASC-95143'),
+    ('Carolina Eye Associates Pinehurst NC', 'carolinaeye.com', 'NC', 'NPI-ASC-95144'),
+    ('Charlotte Eye Ear Nose & Throat (CEENTA)', 'ceenta.com', 'NC', 'NPI-ASC-95145'),
+    ('Piedmont Eye Center Lynchburg VA', 'piedmonteye.com', 'VA', 'NPI-ASC-95146'),
+    ('Virginia Eye Institute Richmond VA', 'vaeye.com', 'VA', 'NPI-ASC-95147'),
+    ('Virginia Retina Center Warrenton VA', 'virginiaretina.com', 'VA', 'NPI-ASC-95148'),
+    ('Retina Group of Washington (RGW)', 'rgw.com', 'VA', 'NPI-ASC-95149'),
+    ('Chesapeake Eye Care & Laser Center MD', 'chesapeakeeyecare.com', 'MD', 'NPI-ASC-95150'),
+    ('Cataract & Primary Eye Care MD', 'cataracteye.com', 'MD', 'NPI-ASC-95151'),
+    ('Colorado Retina Associates Denver', 'retinacolorado.com', 'CO', 'NPI-ASC-95152'),
+    ('Icon Eyecare Surgical Centers CO', 'iconeyecare.com', 'CO', 'NPI-ASC-95153'),
+    ('Spivack Vision Center CO', 'spivack.com', 'CO', 'NPI-ASC-95154'),
+    ('Hoopes Vision Surgical Center UT', 'hoopesvision.com', 'UT', 'NPI-ASC-95155'),
+    ('Utah Retina Associates Salt Lake', 'utahretina.com', 'UT', 'NPI-ASC-95156'),
+    ('Shepherd Eye Center Las Vegas NV', 'shepherdeye.com', 'NV', 'NPI-ASC-95157'),
+    ('Nevada Eye Physicians Las Vegas', 'nevadaeyephysicians.com', 'NV', 'NPI-ASC-95158'),
+    ('Retina Consultants of Nevada', 'retinanevada.com', 'NV', 'NPI-ASC-95159'),
+    ('Southwestern Eye Center AZ', 'sweye.com', 'AZ', 'NPI-ASC-95160'),
+    ('Retina Associates Southwest Tucson AZ', 'retinatucson.com', 'AZ', 'NPI-ASC-95161'),
+    ('Horizon Eye Specialists AZ', 'horizoneyespecialists.com', 'AZ', 'NPI-ASC-95162'),
+    ('Eye Associates of New Mexico', 'eyenm.com', 'NM', 'NPI-ASC-95163'),
+    ('Pacific Northwest Retina Seattle WA', 'pnwretina.com', 'WA', 'NPI-ASC-95164'),
+    ('Spokane Eye Clinic WA', 'spokaneeye.com', 'WA', 'NPI-ASC-95165'),
+    ('Cascade Eye & Skin Centers WA', 'cascadeeyeskin.com', 'WA', 'NPI-ASC-95166'),
+    ('Oregon Eye Specialists Portland OR', 'oregoneyes.net', 'OR', 'NPI-ASC-95167'),
+    ('Retina Northwest Portland OR', 'retinanorthwest.com', 'OR', 'NPI-ASC-95168'),
+    ('RevCycle Partners Eyecare & Specialty RCM', 'revcyclepartners.com', 'MN', 'NPI-RCM-95170'),
+    ('EyeCarePro / Fast Pay Health RCM', 'fastpayhealth.com', 'TX', 'NPI-RCM-95171'),
+    ('Symed Corporation Medical Billing', 'symed.com', 'MO', 'NPI-RCM-95173'),
+    ('Physicians Billing Service VA', 'pbsbilling.com', 'VA', 'NPI-RCM-95174'),
+    ('Practice First Medical Management & Billing', 'pracfirst.com', 'NY', 'NPI-RCM-95175'),
+    ('Mednet Medical Billing NJ', 'mednetbilling.com', 'NJ', 'NPI-RCM-95176'),
+    ('Advanced Reimbursement Solutions RCM', 'advancedreimbursement.com', 'AZ', 'NPI-RCM-95177'),
+    ('Consolidated Medical Practices & Billing', 'cmpg.org', 'TN', 'NPI-RCM-95179'),
+    ('Emerald Health Services RCM', 'emeraldhealth.com', 'CA', 'NPI-RCM-95180'),
+    ('RoundTable Medical Consultants RCM', 'roundtablemedical.com', 'TX', 'NPI-RCM-95181'),
+    ('Medisys Data Solutions Medical Billing', 'medisysdata.com', 'DE', 'NPI-RCM-95182'),
+    ('CureMB Medical Billing Services', 'curemb.com', 'IL', 'NPI-RCM-95183'),
+    ('RCM Matter Physician Billing', 'rcmmatter.com', 'NY', 'NPI-RCM-95184'),
+    ('p3 healthcare solutions rcm', 'p3hcs.com', 'CA', 'NPI-RCM-95185'),
+    ('Eminence Healthcare Services RCM', 'eminencehealthcare.com', 'TX', 'NPI-RCM-95186'),
+    ('Vee Healthtek (Vee Technologies) RCM', 'veehealthtek.com', 'NY', 'NPI-RCM-95187'),
+    ('Visionary RCM Infotech', 'visionaryrcm.com', 'FL', 'NPI-RCM-95188'),
+    ('Miramed Global Services RCM', 'miramedgs.com', 'MI', 'NPI-RCM-95189'),
+    ('Maxim Health Information Services RCM', 'maximhealthcare.com', 'MD', 'NPI-RCM-95192'),
+    ('MedData / EnableComp Specialty RCM', 'meddata.com', 'OH', 'NPI-RCM-95193'),
+    ('ClaimRemedi / Vyne Medical Billing', 'claimremedi.com', 'CA', 'NPI-RCM-95195'),
+    ('MedAssist Revenue Cycle Solutions', 'medassist.biz', 'KY', 'NPI-RCM-95196'),
+    ('Professional Medical Billing (PMB)', 'pmb-inc.com', 'IN', 'NPI-RCM-95197'),
+    ('CBS Medical Billing & Consulting', 'cbsmedicalbilling.com', 'NH', 'NPI-RCM-95198'),
+    ('MBMS Radiology Billing & RCM', 'mbms.com', 'DE', 'NPI-RCM-95199'),
+    ('Medical Billing Wholesalers RCM', 'mbwrcm.com', 'NY', 'NPI-RCM-95200'),
+    ('Kareo / Meditab Billing Services', 'meditab.com', 'CA', 'NPI-RCM-95201'),
+    ('Bristol Healthcare Services RCM', 'bristolhcs.com', 'CA', 'NPI-RCM-95203'),
+    ('AnnexMed Healthcare RCM', 'annexmed.com', 'MD', 'NPI-RCM-95204'),
+    ('eClaimStatus Medical Billing', 'eclaimstatus.com', 'OH', 'NPI-RCM-95205'),
+    ('Precision Medical Billing (PMB) TX', 'precisionmedicalbilling.com', 'TX', 'NPI-RCM-95206'),
+    ('Summit Billing Services RCM', 'summitrcm.com', 'CO', 'NPI-RCM-95207'),
+    ('Atlantic Medical Billing NJ', 'atlanticmedicalbilling.com', 'NJ', 'NPI-RCM-95208'),
+    ('Pacific Medical Billing CA', 'pacificmedicalbilling.com', 'CA', 'NPI-RCM-95209'),
+    ('Reliant Medical Billing Services', 'reliantmedicalbilling.com', 'FL', 'NPI-RCM-95210'),
+    ('Premier Medical Billing Services', 'premiermedicalbilling.com', 'OH', 'NPI-RCM-95211'),
+    ('Accurate Medical Billing RCM', 'accuratemedicalbilling.com', 'MA', 'NPI-RCM-95212'),
+    ('Elite Medical Billing Solutions', 'elitemedicalbillingsolutions.com', 'NC', 'NPI-RCM-95213'),
+    ('Total Medical Billing Services', 'totalmedicalbilling.com', 'IL', 'NPI-RCM-95214'),
+    ('Choice Medical Billing RCM', 'choicemedicalbilling.com', 'TX', 'NPI-RCM-95215'),
+    ('Signature Medical Billing Services', 'signaturemedicalbilling.com', 'PA', 'NPI-RCM-95216'),
+    ('Pinnacle Medical Billing RCM', 'pinnaclemedicalbilling.com', 'WA', 'NPI-RCM-95217'),
+    ('Capstone Medical Billing Services', 'capstonemedicalbilling.com', 'GA', 'NPI-RCM-95218'),
+    ('Cornerstone Medical Billing RCM', 'cornerstonemedicalbilling.com', 'NJ', 'NPI-RCM-95219'),
+    ('Integrity Medical Billing Services', 'integritymedicalbilling.com', 'AZ', 'NPI-RCM-95220'),
+    ('Keystone Medical Billing PA', 'keystonemedicalbilling.com', 'PA', 'NPI-RCM-95221'),
+    ('First Choice Medical Billing', 'firstchoicemedicalbilling.com', 'FL', 'NPI-RCM-95222'),
+    ('Liberty Medical Billing RCM', 'libertymedicalbilling.com', 'NY', 'NPI-RCM-95223'),
+    ('Metro Medical Billing Services', 'metromedicalbilling.com', 'MI', 'NPI-RCM-95224'),
+    ('National Healthcare Billing RCM', 'nhcbilling.com', 'TX', 'NPI-RCM-95225'),
+    ('Optimal Medical Billing Solutions', 'optimalmedicalbilling.com', 'CA', 'NPI-RCM-95226'),
+    ('Paragon Medical Billing RCM', 'paragonmedicalbilling.com', 'OH', 'NPI-RCM-95227'),
+    ('Prime Medical Billing Services', 'primemedicalbilling.com', 'FL', 'NPI-RCM-95228'),
+    ('Quality Medical Billing RCM', 'qualitymedicalbilling.com', 'VA', 'NPI-RCM-95229'),
+    ('Spectrum Medical Billing Services', 'spectrummedicalbilling.com', 'TX', 'NPI-RCM-95230'),
+    ('Superior Medical Billing RCM', 'superiormedicalbilling.com', 'CA', 'NPI-RCM-95231'),
+    ('Synergy Medical Billing Solutions', 'synergymedicalbilling.com', 'NY', 'NPI-RCM-95232'),
+    ('Tri-State Medical Billing RCM', 'tristatemedicalbilling.com', 'NJ', 'NPI-RCM-95233'),
+    ('United Medical Billing Services', 'unitedmedicalbilling.com', 'FL', 'NPI-RCM-95234'),
+    ('Vanguard Medical Billing RCM', 'vanguardmedicalbilling.com', 'TX', 'NPI-RCM-95235'),
+    ('Preferred Podiatry & Surgical Group', 'preferredpodiatry.com', 'IL', 'NPI-ASC-95236'),
+    ('Foot & Ankle Specialists of the Mid-Atlantic', 'footandankle-usa.com', 'MD', 'NPI-ASC-95237'),
+    ('Upperline Health Foot & Vascular Specialty', 'upperlinehealth.com', 'TN', 'NPI-ASC-95238'),
+    ('Balance Foot & Ankle Orthopaedics', 'balancehealth.com', 'CA', 'NPI-ASC-95239'),
+    ('Advanced ENT & Allergy Surgical Group', 'advancedentandallergy.com', 'KY', 'NPI-ASC-95240'),
+    ('ENT and Allergy Associates NY/NJ', 'entandallergy.com', 'NY', 'NPI-ASC-95241'),
+    ('South Florida ENT Associates', 'sfenta.com', 'FL', 'NPI-ASC-95242'),
+    ('Texas ENT Specialists Houston', 'texasent.com', 'TX', 'NPI-ASC-95243'),
+    ('Atlanta Institute for ENT ASC', 'ai4ent.com', 'GA', 'NPI-ASC-95244'),
+    ('Northwest ENT and Allergy Center GA', 'nw-ent.com', 'GA', 'NPI-ASC-95245'),
+    ('Ohio ENT & Allergy Physicians', 'ohioentandallergy.com', 'OH', 'NPI-ASC-95246'),
+    ('Michigan Ear Nose & Throat Associates', 'michiganentallergy.com', 'MI', 'NPI-ASC-95247'),
+    ('Pinnacle ENT Associates PA', 'pentadocs.com', 'PA', 'NPI-ASC-95248'),
+    ('Berger Henry ENT Specialty Group PA', 'bergerhenryent.com', 'PA', 'NPI-ASC-95249'),
+    ('Massachusetts Eye and Ear Surgical', 'masseyeandear.org', 'MA', 'NPI-ASC-95250'),
+    ('Capital Otolaryngology Austin TX', 'capitaloto.com', 'TX', 'NPI-ASC-95251'),
+    ('Ear Nose & Throat Associates of NY', 'entany.com', 'NY', 'NPI-ASC-95252'),
+    ('Midwest ENT Centre St. Peters MO', 'midwestentcentre.com', 'MO', 'NPI-ASC-95253'),
+    ('Colorado ENT & Allergy Colorado Springs', 'coloradoent.com', 'CO', 'NPI-ASC-95254'),
+    ('Peak ENT and Voice Center CO', 'peakentandvoice.com', 'CO', 'NPI-ASC-95255'),
+    ('Oregon Ear Nose & Throat Medford', 'oregonent.com', 'OR', 'NPI-ASC-95256'),
+    ('Spokane Ear Nose & Throat Clinic WA', 'spokaneent.com', 'WA', 'NPI-ASC-95257'),
+    ('Desert Valley ENT Phoenix AZ', 'dvent.com', 'AZ', 'NPI-ASC-95258'),
+    ('Biltmore ENT Phoenix AZ', 'biltmoreent.com', 'AZ', 'NPI-ASC-95259'),
+    ('Valley ENT Surgical Associates AZ', 'valleyent.com', 'AZ', 'NPI-ASC-95260'),
+    ('Nevada Ear + Sinus Institute Las Vegas', 'nevadaear.com', 'NV', 'NPI-ASC-95261'),
+    ('Radiology Ltd. Tucson AZ', 'radltd.com', 'AZ', 'NPI-RAD-95263'),
+    ('Southwest Diagnostic Imaging Center TX', 'swdic.com', 'TX', 'NPI-RAD-95264'),
+    ('ENVISION / Solis Mammography & Imaging', 'solismammo.com', 'TX', 'NPI-RAD-95265'),
+    ('Progressive Radiology MD/VA', 'progressiveradiology.com', 'MD', 'NPI-RAD-95266'),
+    ('Community Radiology Associates MD', 'communityradiology.com', 'MD', 'NPI-RAD-95267'),
+    ('University Radiology Group NJ', 'univrad.com', 'NJ', 'NPI-RAD-95268'),
+    ('New Jersey Imaging Network (NJIN)', 'njimagingnetwork.com', 'NJ', 'NPI-RAD-95269'),
+    ('Hudson Valley Radiologists NY', 'hvrad.com', 'NY', 'NPI-RAD-95270'),
+    ('Windber / Main Line Health Imaging PA', 'mainlinehealth.org', 'PA', 'NPI-RAD-95272'),
+    ('Diversified Radiology of Colorado', 'divrad.com', 'CO', 'NPI-RAD-95273'),
+    ('Inland Imaging Spokane & Seattle WA', 'inlandimaging.com', 'WA', 'NPI-RAD-95274'),
+    ('TRA Medical Imaging Tacoma WA', 'tramedicalimaging.com', 'WA', 'NPI-RAD-95275'),
+    ('Radiology Imaging Associates (RIA) CO', 'riaco.com', 'CO', 'NPI-RAD-95276'),
+    ('Advanced Radiology Services Grand Rapids MI', 'advancedrad.com', 'MI', 'NPI-RAD-95277'),
+    ('Columbus Radiology OH', 'columbusradiology.com', 'OH', 'NPI-RAD-95278'),
+    ('Delaney Radiologists Wilmington NC', 'delaneyrad.com', 'NC', 'NPI-RAD-95279'),
+    ('Raleigh Radiology NC', 'raleighrad.com', 'NC', 'NPI-RAD-95280'),
+    ('Greensboro Radiology NC', 'greensbororadiology.com', 'NC', 'NPI-RAD-95281'),
+    ('Quantum Radiology Marietta GA', 'quantumradiology.com', 'GA', 'NPI-RAD-95282'),
+    ('Midsouth Imaging & Therapeutics TN', 'msit.com', 'TN', 'NPI-RAD-95283'),
+    ('Vista Radiology Knoxville TN', 'vistaradiology.com', 'TN', 'NPI-RAD-95284'),
+    ('Premier Radiology Services FL', 'premierradiology.com', 'FL', 'NPI-RAD-95285'),
+    ('Tower Radiology Tampa FL', 'towerradiologycenters.com', 'FL', 'NPI-RAD-95286'),
+    ('Rolling Oaks Radiology CA', 'rollingoaksradiology.com', 'CA', 'NPI-RAD-95287'),
+    ('Renaissance Imaging Medical Associates CA', 'rimarad.com', 'CA', 'NPI-RAD-95288'),
+    ('Steinberg Diagnostic Medical Imaging NV', 'sdmi-lv.com', 'NV', 'NPI-RAD-95289'),
+    (' Desert Radiology Las Vegas NV', 'desertrad.com', 'NV', 'NPI-RAD-95290'),
+    ('CureMD Medical Billing Services', 'curemd.com', 'NY', 'NPI-RCM-95202'),
+    ('radsource mri & orthopedic teleradiology', 'radsource.us', 'TN', 'NPI-RAD-95291'),
+    ('Direct Radiology / Philips Teleradiology', 'directradiology.com', 'WA', 'NPI-RAD-95292'),
+    (' ONRAD Teleradiology & Subspecialty', 'onradinc.com', 'CA', 'NPI-RAD-95293'),
+    ('Real Radiology Teleradiology', 'realradiology.com', 'NE', 'NPI-RAD-95294'),
+    ('StatRad Teleradiology Services', 'statrad.com', 'CA', 'NPI-RAD-95295'),
+    ('Argus Radiology Emergency & Hospital', 'argusrad.com', 'KS', 'NPI-RAD-95296'),
+    ('Vesta Teleradiology Services', 'vestarad.com', 'FL', 'NPI-RAD-95297'),
+    ('Flatirons Practice Management & RCM', 'flatirons.com', 'CO', 'NPI-RCM-95298'),
+    ('MedCycle Management RCM', 'medcycle.com', 'OH', 'NPI-RCM-95299'),
+    ('RevenueXL Medical Billing Services', 'revenuexl.com', 'CA', 'NPI-RCM-95300'),
+    ('MBX Medical Billing Experts', 'mbxmedical.com', 'TX', 'NPI-RCM-95301'),
+    ('aps medical billing', 'apsmedbill.com', 'OH', 'NPI-RCM-95302'),
+    (' Mick Radio-Nuclear / Eckert & Ziegler', 'ezag.com', 'NY', 'NPI-RCM-95304'),
+    ('Pathology Service Associates RCM', 'psabilling.com', 'SC', 'NPI-RCM-95305'),
+    (' Hospital Pathology Associates PA', 'hpamn.com', 'MN', 'NPI-RCM-95306'),
+    ('Twin Cities Pathology / Celligent', 'celligentdiagnostics.com', 'NC', 'NPI-RCM-95307'),
+    ('Sonic Healthcare USA Laboratory', 'sonichealthcareusa.com', 'TX', 'NPI-RCM-95308'),
+    ('Clinical Pathology Laboratories (CPL)', 'cpllabs.com', 'TX', 'NPI-RCM-95309'),
+    ('American Esoteric Laboratories (AEL)', 'ael.com', 'TN', 'NPI-RCM-95310'),
+    ('Sunrise Medical Laboratories NY', 'sunriselab.com', 'NY', 'NPI-RCM-95311'),
+    ('BioReference Health Diagnostics', 'bioreference.com', 'NJ', 'NPI-RCM-95312'),
+    ('Accumen Laboratory & Imaging RCM', 'accumen.com', 'CA', 'NPI-RCM-95313'),
+    (' dark daily / dark intelligence lab rcm', 'darkdaily.com', 'TX', 'NPI-RCM-95314'),
+    ('Lighthouse Lab Services RCM', 'lighthouselabservices.com', 'NC', 'NPI-RCM-95315'),
+    ('Avalon Healthcare Solutions Lab Management', 'avalonhcs.com', 'FL', 'NPI-RCM-95316'),
+    (' CareEvolve / Orchart Laboratory', 'orchardsoft.com', 'IN', 'NPI-RCM-95317'),
+    ('ProPath Pathology Services Dallas', 'propath.com', 'TX', 'NPI-RCM-95318'),
+    ('Incyte Diagnostics Pathology WA', 'incytediagnostics.com', 'WA', 'NPI-RCM-95319'),
+    ('CellNetix Pathology & Laboratories WA', 'cellnetix.com', 'WA', 'NPI-RCM-95320'),
+    ('WestPac Labs California', 'westpaclabs.com', 'CA', 'NPI-RCM-95321'),
+    ('HNL Lab Medicine Pennsylvania', 'hnl.com', 'PA', 'NPI-RCM-95322'),
+    ('CompuNet Clinical Laboratories OH', 'compunetlab.com', 'OH', 'NPI-RCM-95323'),
+    ('TriCore Reference Laboratories NM', 'tricore.org', 'NM', 'NPI-RCM-95324'),
+    ('Sonora Quest Laboratories AZ', 'sonoraquest.com', 'AZ', 'NPI-RCM-95325'),
+    ('PathGroup Labs & Diagnostics TN', 'pathgroup.com', 'TN', 'NPI-RCM-95326'),
+    ('Labtech Diagnostics Carolinas', 'labtechdiagnostics.com', 'SC', 'NPI-RCM-95327'),
+    (' Regional Medical Laboratory (RML) OK', 'rmlonline.com', 'OK', 'NPI-RCM-95328'),
+    (' Alverno Laboratories IN/IL', 'alvernolabs.com', 'IN', 'NPI-RCM-95329'),
+    ('Northwell Health Labs NY', 'northwell.edu', 'NY', 'NPI-RCM-95330'),
+    ('Orthopaedic Institute of Ohio Lima', 'orthoohio.com', 'OH', 'NPI-ASC-95332'),
+    ('Orthopaedic Associates of SW Ohio', 'oaswo.com', 'OH', 'NPI-ASC-95333'),
+    ('Far Oaks Orthopaedics Dayton OH', 'faroaksorthopedists.com', 'OH', 'NPI-ASC-95334'),
+    ('Cleveland Shoulder Institute OH', 'clevelandshoulder.com', 'OH', 'NPI-ASC-95335'),
+    ('Indiana Hand to Shoulder Center', 'indianahandtoshoulder.com', 'IN', 'NPI-ASC-95336'),
+    ('Methodist Sports Medicine Indiana', 'methodistsports.com', 'IN', 'NPI-ASC-95337'),
+    ('Orthopaedic Associates Evansville IN', 'oaevansville.com', 'IN', 'NPI-ASC-95338'),
+    ('South Central Orthopaedics IN', 'scoi-ortho.com', 'IN', 'NPI-ASC-95339'),
+    ('Lakeshore Bone & Joint Institute IN', 'lbji.com', 'IN', 'NPI-ASC-95340'),
+    ('Louisville Orthopaedic Clinic KY', 'louortho.com', 'KY', 'NPI-ASC-95341'),
+    ('Bluegrass Orthopaedics Lexington KY', 'bluegrassortho.com', 'KY', 'NPI-ASC-95342'),
+    ('Orthopaedic Institute of Western KY', 'orthowky.com', 'KY', 'NPI-ASC-95343'),
+    ('Bone and Joint Clinic Baton Rouge LA', 'bjcbr.com', 'LA', 'NPI-ASC-95344'),
+    ('Orthopedic Center of Palm Beach County', 'ocpbc.com', 'FL', 'NPI-ASC-95345'),
+    ('South Florida International Orthopaedics', 'sfio.net', 'FL', 'NPI-ASC-95346'),
+    ('Orthopaedic Associates of South Broward', 'oasb.net', 'FL', 'NPI-ASC-95347'),
+    ('Holy Cross Orthopedic Institute FL', 'holy-cross.com', 'FL', 'NPI-ASC-95348'),
+    ('Florida Bone and Joint Specialists', 'flboneandjoint.com', 'FL', 'NPI-ASC-95349'),
+    ('Melbourne Orthopedic Clinic FL', 'melbourneorthopedic.com', 'FL', 'NPI-ASC-95350'),
+    ('Daytona Beach Orthopedic Surgery', 'orthotoc.com', 'FL', 'NPI-ASC-95351'),
+    ('Jacksonville Orthopaedic Institute (JOI)', 'joi.net', 'FL', 'NPI-ASC-95352'),
+    ('Andrews Institute Orthopaedics FL', 'andrewsinstitute.com', 'FL', 'NPI-ASC-95353'),
+    ('North Florida Bone & Joint Specialists', 'nfbjs.com', 'FL', 'NPI-ASC-95354'),
+    ('Tallahassee Neurological Clinic', 'tnc-neuro.com', 'FL', 'NPI-ASC-95355'),
+    ('First Coast Neurosurgery Jacksonville', 'firstcoastneurosurgery.com', 'FL', 'NPI-ASC-95356'),
+    ('Carolina Spine & Neurosurgery Center', 'carolinaspinecenter.com', 'NC', 'NPI-ASC-95357'),
+    ('Raleigh Neurosurgical Clinic NC', 'raleighneurosurgical.com', 'NC', 'NPI-ASC-95358'),
+    ('brain and spine specialists charleston', 'brainandspinespecialists.com', 'SC', 'NPI-ASC-95359'),
+    ('Augusta Back NeuroSpine GA', 'augustaback.com', 'GA', 'NPI-ASC-95360'),
+    ('Georgia Neurosurgical Institute Macon', 'ganeuroandspine.com', 'GA', 'NPI-ASC-95361'),
+    ('Polaris Spine & Neurosurgery Atlanta', 'polarisspine.com', 'GA', 'NPI-ASC-95362'),
+    ('Peachtree Neurosurgery Atlanta GA', 'peachtreeneurosurgery.com', 'GA', 'NPI-ASC-95363'),
+    ('Lanier Gartland / North Georgia Neuro', 'ngneurosurgery.com', 'GA', 'NPI-ASC-95364'),
+    ('Legacy Brain & Spine Little Rock AR', 'legacybrainandspine.com', 'AR', 'NPI-ASC-95365'),
+    ('Oklahoma Spine Hospital Physicians', 'oklahomaspine.com', 'OK', 'NPI-ASC-95366'),
+    ('Neuroscience Specialists Oklahoma City', 'neurosurg.org', 'OK', 'NPI-ASC-95367'),
+    ('Brain and Spine Institute San Antonio', 'bsisa.com', 'TX', 'NPI-ASC-95368'),
+    ('NeuroTexas Brain & Spine Austin', 'neurotexas.com', 'TX', 'NPI-ASC-95369'),
+    ('Texas Neurosurgery LLP Dallas', 'texasneurosurgery.com', 'TX', 'NPI-ASC-95370'),
+    ('Lone Star Neurosurgeons DFW TX', 'lonestarneurosurgery.com', 'TX', 'NPI-ASC-95371'),
+    ('Methodist Moody Brain & Spine Dallas', 'moodybrainandspine.com', 'TX', 'NPI-ASC-95372'),
+    ('Mischer Neuroscience Associates Houston', 'memorialhermann.org', 'TX', 'NPI-ASC-95373'),
+    ('Barrow Brain and Spine Phoenix AZ', 'barrowbrainandspine.com', 'AZ', 'NPI-ASC-95374'),
+    ('Western Neuro Tucson AZ', 'westernneuro.com', 'AZ', 'NPI-ASC-95375'),
+    ('Neurosurgical Associates of LV NV', 'neurosurgerylv.com', 'NV', 'NPI-ASC-95376'),
+    ('The Spine & Brain Institute Las Vegas', 'sbilv.com', 'NV', 'NPI-ASC-95377'),
+    ('Sierra Neurosurgery Group Reno NV', 'sierraneurosurgery.com', 'NV', 'NPI-ASC-95378'),
+    ('Golden State Neurosurgery San Jose CA', 'gsneuro.com', 'CA', 'NPI-ASC-95379'),
+    ('Pacific Brain & Spine Medical Group CA', 'pacificbrainandspine.com', 'CA', 'NPI-ASC-95380'),
 ]
 
+IS_RUBRICWARD_HARVESTER = True
+RUBRICWARD_BLOCKED_VENDOR_DOMAINS = ['ablehealth.com', 'accuregsoftware.com', 'advancedmd.com', 'akasa.com', 'allegiancemd.com', 'alorahealth.com', 'apexedi.com', 'arcadia.io', 'athelas.com', 'availity.com', 'axxess.com', 'azaleahealth.com', 'azarahealthcare.com', 'bonafide.com', 'brightree.com', 'cantatahealth.com', 'caretend.com', 'cedar.com', 'cedargate.com', 'centralreach.com', 'changehealthcare.com', 'claim.md', 'claimgenix.com', 'clarifyhealth.com', 'clinicient.com', 'coherehealth.com', 'collaboratemd.com', 'colletonsoftware.com', 'commure.com', 'cprplus.com', 'craneware.com', 'cu.net', 'curemd.com', 'dentalxchange.com', 'devdent.com', 'digitechcomputer.com', 'drchrono.com', 'emergencynetworking.com', 'empoweremr.com', 'eso.com', 'experian.com', 'experience.care', 'ezclaim.com', 'finthrive.com', 'finvi.com', 'flywire.com', 'ghx.com', 'greenwayhealth.com', 'guidehouse.com', 'guidewaycare.com', 'healthcatalyst.com', 'healthmonix.com', 'healthpay24.com', 'hhaexchange.com', 'hstpathways.com', 'imagetrend.com', 'inboxhealth.com', 'infinitus.ai', 'innovaccer.com', 'joincandidhealth.com', 'jopari.com', 'kantime.com', 'lumeris.com', 'matrixcare.com', 'mdaudit.com', 'medevolve.com', 'medicusit.com', 'medouch.com', 'micromd.com', 'minglehealth.com', 'modmed.com', 'nextgen.com', 'nikohealth.com', 'notablehealth.com', 'ntst.com', 'ochin.org', 'officeally.com', 'oliveai.com', 'optum.com', 'panaceainc.com', 'patientco.com', 'payerprice.com', 'pointclickcare.com', 'practicesuite.com', 'prognocis.com', 'promptemr.com', 'qualifacts.com', 'raintreeinc.com', 'rethinkbh.com', 'revspringinc.com', 'rhyme.com', 'rojihealthintel.com', 'rxnt.com', 'sandata.com', 'serifhealth.com', 'sisfirst.com', 'stratapt.com', 'sullivancotter.com', 'tebra.com', 'therapybrands.com', 'thessigroup.com', 'thoughtful.ai', 'trizettoprovider.com', 'turquoise.health', 'valant.io', 'veradigm.com', 'vynemedical.com', 'waystar.com', 'webpt.com', 'wellsky.com', 'zolldata.com']
 
-def _score_scraped_email(em: str, dom: str) -> int:
+GENERIC_IGNORED_EMAIL_DOMAINS = {
+    "gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "aol.com", "icloud.com",
+    "comcast.net", "verizon.net", "att.net", "msn.com", "live.com", "me.com",
+    "sentry.io", "sentry.wixpress.com", "sentry-next.wixpress.com", "wix.com",
+    "wixpress.com", "squarespace.com", "wordpress.com", "wordpress.org", "wpengine.com",
+    "godaddy.com", "cloudflare.com", "example.com", "domain.com", "email.com",
+    "yoursite.com", "company.com", "test.com", "google.com", "googleapis.com",
+    "facebook.com", "instagram.com", "linkedin.com", "twitter.com", "x.com",
+    "hubspot.com", "mailchimp.com", "constantcontact.com", "typeform.com",
+    "gravatar.com", "fontawesome.com", "bootstrap.com", "jquery.com", "w3.org",
+}
+
+
+def compute_dynamic_target_leads() -> int:
+    """
+    Automatically scales target verified lead pool in lockstep with live warmed + warming
+    mailbox fleet size (`max(180, total_mailboxes * 60)`).
+    """
+    mb_count = 3
+    try:
+        ledger_p = os.path.join(BASE_DIR, "reinvestment_treasury_ledger.json")
+        if os.path.exists(ledger_p):
+            with open(ledger_p, "r", encoding="utf-8") as lf:
+                l_data = json.load(lf) or {}
+                prov_mbs = l_data.get("provisioned_mailboxes") or []
+                if isinstance(prov_mbs, list) and len(prov_mbs) > mb_count:
+                    mb_count = len(prov_mbs)
+    except Exception:
+        pass
+    try:
+        import outbound_mailer
+        for fn_name in ("_detect_live_camberdesk_mailbox_count", "_detect_live_rubricward_mailbox_count"):
+            fn = getattr(outbound_mailer, fn_name, None)
+            if callable(fn):
+                live_c = int(fn() or 3)
+                if live_c > mb_count:
+                    mb_count = live_c
+    except Exception:
+        pass
+    return max(180, mb_count * 60)
+
+
+def _score_scraped_email(em: str, dom: str, final_host_dom: str = "") -> int:
     if "@" not in em:
         return -999
-    local, d = em.lower().split("@", 1)
-    if d != dom and not d.endswith("." + dom):
+    local, d = em.lower().strip().split("@", 1)
+    if not local or not d or "." not in d:
         return -999
-    if local in BAD_LOCALS:
+    if d in GENERIC_IGNORED_EMAIL_DOMAINS or any(d.endswith(ext) for ext in NON_CORP_DOMAINS):
+        return -999
+    if any(ext in d for ext in (".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".css", ".js")):
+        return -999
+    allowed_doms = {dom.lower().strip()}
+    if final_host_dom:
+        allowed_doms.add(final_host_dom.lower().strip())
+    dom_matched = any(d == ad or d.endswith("." + ad) or ad.endswith("." + d) for ad in allowed_doms if ad)
+    if not dom_matched:
+        # Also allow corporate brand alias domains published on the company's own contact page
+        # if they share a >=4 char prefix with dom
+        base_prefix = dom.split(".")[0][:5]
+        if len(base_prefix) < 4 or base_prefix not in d:
+            return -999
+    if local in BAD_LOCALS or len(local) < 2 or len(local) > 42:
         return -999
     if any(b in local for b in (
         "hr", "job", "career", "recruit", "tempcontact", "privacy", "media", "press",
         "png", "jpg", "svg", "sentry", "wix", "example", "abuse", "webmaster",
-        "schedul", "appoint", "patient", "ptinquiry", "ptresidency", "residency", "fellowship",
-        "disability", "forms", "records", "refill", "triage", "ada", "marketing", "news",
-        "donate", "foundation", "volunteer", "equation", "help", "support", "customer.service",
-        "comments"
+        "schedul", "appoint", "ptinquiry", "ptresidency", "residency", "fellowship",
+        "disability", "records", "refill", "triage", "marketing", "news",
+        "donate", "foundation", "volunteer", "equation", "customer.service",
+        "comments", "noreply", "no-reply", "donotreply", "legal", "ethics",
+        "payroll", "benefits", "unsubscribe", "optout"
     )):
         return -999
-    score = 10
-    for idx, kw in enumerate(("rcm", "billing", "managedcare", "contract", "appeal", "credential", "coding", "refer", "clinic", "asc", "info", "contact", "office", "admin", "sales")):
+    if "patient" in local and not any(k in local for k in ("bill", "account", "financ", "claim", "insur", "rcm")):
+        return -999
+    score = 15 if dom_matched else 8
+    for idx, kw in enumerate((
+        "estimat", "bid", "quote", "precon", "civil", "rcm", "billing", "businessoffice",
+        "managedcare", "contract", "appeal", "credential", "coding", "claim", "insur",
+        "reimburs", "refer", "clinic", "asc", "project", "eng", "info", "contact",
+        "office", "admin", "sales", "inquir", "hello"
+    )):
         if kw in local:
-            score += (35 - idx * 2)
+            score += max(4, 38 - idx * 2)
             break
     if "." in local:
-        score += 20
+        score += 18
     return score
 
 
-def _crawl_single_contractor_html(item: Tuple[str, str, str, str]) -> Optional[Dict[str, str]]:
-    comp, dom, state, dot_id = item
-    if is_excluded_by_signaltender(dom):
-        return None
-    try:
-        socket.getaddrinfo(dom, None)
-    except Exception:
-        return None
-
-    email_re = re.compile(r"[a-zA-Z0-9._%+-]+@" + re.escape(dom), re.I)
-    mailto_re = re.compile(r"mailto:([a-zA-Z0-9._%+-]+@" + re.escape(dom) + r")", re.I)
-
-    found: Dict[str, str] = {}
-    base_url = None
-    for root_u in (f"https://www.{dom}", f"https://{dom}"):
-        try:
-            r0 = requests.get(root_u, headers=HEADERS, timeout=(1.5, 2.0), verify=False, allow_redirects=True)
-            if r0.status_code == 200 and r0.text and len(r0.text) > 400:
-                base_url = root_u
-                dec = r0.text.replace("&#64;", "@").replace("&#x40;", "@").replace("%40", "@").replace("&#46;", ".")
-                for m in list(mailto_re.findall(dec)) + list(email_re.findall(dec)):
-                    clean = re.sub(r"^[0-9-]+", "", m.strip().lower().rstrip("."))
-                    if _score_scraped_email(clean, dom) > 0:
-                        found.setdefault(clean, r0.url)
-                break
-        except Exception:
-            continue
-
-    if not base_url:
-        return None
-
-    if not found:
-        for path in ("/contact", "/contact-us", "/billing"):
-            try:
-                r = requests.get(f"{base_url}{path}", headers=HEADERS, timeout=(1.5, 2.0), verify=False, allow_redirects=True)
-                if r.status_code == 200 and r.text and len(r.text) > 400:
-                    dec = r.text.replace("&#64;", "@").replace("&#x40;", "@").replace("%40", "@").replace("&#46;", ".")
-                    for m in list(mailto_re.findall(dec)) + list(email_re.findall(dec)):
-                        clean = re.sub(r"^[0-9-]+", "", m.strip().lower().rstrip("."))
-                        if _score_scraped_email(clean, dom) > 0:
-                            found.setdefault(clean, r.url)
-                    if found:
-                        break
-            except Exception:
-                continue
-
-    if not found:
-        return None
-
-    best_em = sorted(found.keys(), key=lambda x: _score_scraped_email(x, dom), reverse=True)[0]
-    if is_excluded_by_signaltender(best_em):
-        return None
-
-    local_part = best_em.split("@")[0]
-    if "." in local_part and not any(k in local_part for k in ("estimat", "bid", "info", "contact", "office", "sales")):
-        first_name = local_part.split(".")[0].capitalize()
-    else:
-        first_name = "Revenue Cycle"
-
-    return {
-        "company_name": comp,
-        "email": best_em,
-        "first_name": first_name,
-        "license_or_dot_id": dot_id,
-        "state": state,
-        "source_type": "website_html_mailto",
-        "source_url": found[best_em],
-    }
-
-
-def _extract_all_emails_from_html(html_text: str, dom: str) -> List[str]:
+def _extract_all_emails_from_html(html_text: str, dom: str, final_host_dom: str = "") -> List[str]:
+    import html as _html
+    raw_slice = html_text[:350000]
     dec = (
-        html_text[:300000]
+        _html.unescape(raw_slice)
         .replace("&#64;", "@")
         .replace("&#x40;", "@")
         .replace("%40", "@")
         .replace("&#46;", ".")
         .replace(" [at] ", "@")
         .replace(" (at) ", "@")
+        .replace("[at]", "@")
+        .replace(" [dot] ", ".")
     )
     out: List[str] = []
     # 1. Decode Cloudflare data-cfemail and /cdn-cgi/l/email-protection#
-    for cf_hex in re.findall(r"(?:data-cfemail=[\"']|email-protection#)([0-9a-fA-F]{10,120})", dec):
+    for cf_hex in re.findall(r"""(?:data-cfemail=["']|email-protection#)([0-9a-fA-F]{10,120})""", raw_slice):
         try:
             key = int(cf_hex[:2], 16)
             decoded_cf = "".join(chr(int(cf_hex[i:i+2], 16) ^ key) for i in range(2, len(cf_hex), 2))
             if "@" in decoded_cf:
-                out.append(decoded_cf.strip().lower())
+                out.append(decoded_cf.strip().lower().split("?")[0])
         except Exception:
             pass
-    # 2. Extract mailto: links and @domain matches
-    for m in re.findall(r"mailto:([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10})", dec, re.I):
+    # 2. Extract mailto: links
+    for m in re.findall(r"mailto:\s*([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10})", dec, re.I):
         out.append(m.strip().lower())
-    for m in re.findall(r"[a-zA-Z0-9._%+-]+@" + re.escape(dom), dec, re.I):
-        out.append(m.strip().lower())
+    # 3. Extract @domain and @final_host_dom matches in page text
+    target_doms = {dom.lower().strip()}
+    if final_host_dom:
+        target_doms.add(final_host_dom.lower().strip())
+    for td in target_doms:
+        if td:
+            for m in re.findall(r"[a-zA-Z0-9._%+-]+@" + re.escape(td), dec, re.I):
+                out.append(m.strip().lower())
     return out
 
 
-async def _async_crawl_one(client: "httpx.AsyncClient", sem: "asyncio.Semaphore", item: Tuple[str, str, str, str], default_fname: str) -> Optional[Dict[str, str]]:
+def _discover_internal_contact_urls(html_text: str, base_url: str, dom: str, final_host_dom: str = "") -> List[str]:
+    from urllib.parse import urljoin, urlparse
+    candidates: List[str] = []
+    seen: set[str] = set()
+    allowed_hosts = {dom.lower(), f"www.{dom.lower()}"}
+    if final_host_dom:
+        allowed_hosts.add(final_host_dom.lower())
+        allowed_hosts.add(f"www.{final_host_dom.lower()}")
+    for href in re.findall(r"""href=["']([^"'#<>\s]{2,180})["']""", html_text[:250000], re.I):
+        h_low = href.lower()
+        if h_low.startswith(("mailto:", "tel:", "javascript:", "data:")):
+            continue
+        if any(ext in h_low for ext in (".pdf", ".jpg", ".png", ".gif", ".svg", ".zip", ".mp4", ".css", ".js", ".xml")):
+            continue
+        if not any(k in h_low for k in (
+            "contact", "about", "estimat", "bid", "quote", "precon", "subcontract",
+            "billing", "insurance", "financial", "rcm", "office", "location",
+            "connect", "touch", "inquir", "team", "leader", "directory", "staff"
+        )):
+            continue
+        full_u = urljoin(base_url + "/", href.strip())
+        parsed = urlparse(full_u)
+        if parsed.scheme in ("http", "https") and (parsed.hostname or "").lower() in allowed_hosts:
+            clean_u = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+            if clean_u.rstrip("/") != base_url.rstrip("/") and clean_u not in seen:
+                seen.add(clean_u)
+                candidates.append(clean_u)
+                if len(candidates) >= 5:
+                    break
+    return candidates
+
+
+async def _async_crawl_one(
+    client: "httpx.AsyncClient",
+    sem: "asyncio.Semaphore",
+    item: Tuple[str, str, str, str],
+    default_fname: str,
+) -> Optional[Dict[str, str]]:
     import asyncio
     comp, dom, state, dot_id = item
     dom = dom.strip().lower()
     if is_excluded_by_signaltender(dom):
         return None
-    email_re = re.compile(r"[a-zA-Z0-9._%+-]+@" + re.escape(dom), re.I)
-    mailto_re = re.compile(r"mailto:([a-zA-Z0-9._%+-]+@" + re.escape(dom) + r")", re.I)
+    if IS_RUBRICWARD_HARVESTER and dom in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
+        return None
+
     found: Dict[str, str] = {}
+    final_host_dom = dom
 
     async with sem:
-
-
         base_url = None
+        home_html = ""
         for root_u in (f"https://www.{dom}", f"https://{dom}"):
             try:
-                r0 = await asyncio.wait_for(client.get(root_u), timeout=2.5)
-                if r0.status_code == 200 and r0.text and len(r0.text) > 300:
+                r0 = await asyncio.wait_for(client.get(root_u), timeout=2.8)
+                if r0.status_code == 200 and r0.text and len(r0.text) > 250:
                     base_url = f"{r0.url.scheme}://{r0.url.host}"
-                    for raw_m in _extract_all_emails_from_html(r0.text, dom):
+                    final_host_dom = (r0.url.host or dom).lower().removeprefix("www.")
+                    if is_excluded_by_signaltender(final_host_dom):
+                        return None
+                    if IS_RUBRICWARD_HARVESTER and final_host_dom in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
+                        return None
+                    home_html = r0.text
+                    for raw_m in _extract_all_emails_from_html(r0.text, dom, final_host_dom):
                         clean = re.sub(r"^[0-9-]+", "", raw_m.strip().lower().rstrip("."))
-                        if _score_scraped_email(clean, dom) > 0:
+                        if _score_scraped_email(clean, dom, final_host_dom) > 0:
                             found.setdefault(clean, str(r0.url))
                     break
             except Exception:
@@ -850,13 +1154,24 @@ async def _async_crawl_one(client: "httpx.AsyncClient", sem: "asyncio.Semaphore"
             return None
 
         if not found:
-            for path in ("/contact", "/contact-us", "/about", "/about-us", "/billing", "/locations", "/privacy-policy", "/privacy", "/terms"):
+            discovered_urls = _discover_internal_contact_urls(home_html, base_url, dom, final_host_dom)
+            fallback_paths = (
+                ("/contact", "/contact-us", "/billing")
+                if IS_RUBRICWARD_HARVESTER
+                else ("/contact", "/contact-us", "/estimating")
+            )
+            for fp in fallback_paths:
+                cand_u = f"{base_url}{fp}"
+                if cand_u not in discovered_urls:
+                    discovered_urls.append(cand_u)
+
+            for sub_url in discovered_urls[:3]:
                 try:
-                    r = await asyncio.wait_for(client.get(f"{base_url}{path}"), timeout=2.2)
-                    if r.status_code == 200 and r.text and len(r.text) > 300:
-                        for raw_m in _extract_all_emails_from_html(r.text, dom):
+                    r = await asyncio.wait_for(client.get(sub_url), timeout=2.2)
+                    if r.status_code == 200 and r.text and len(r.text) > 250:
+                        for raw_m in _extract_all_emails_from_html(r.text, dom, final_host_dom):
                             clean = re.sub(r"^[0-9-]+", "", raw_m.strip().lower().rstrip("."))
-                            if _score_scraped_email(clean, dom) > 0:
+                            if _score_scraped_email(clean, dom, final_host_dom) > 0:
                                 found.setdefault(clean, str(r.url))
                         if found:
                             break
@@ -866,8 +1181,10 @@ async def _async_crawl_one(client: "httpx.AsyncClient", sem: "asyncio.Semaphore"
     if not found:
         return None
 
-    best_em = sorted(found.keys(), key=lambda x: _score_scraped_email(x, dom), reverse=True)[0]
+    best_em = sorted(found.keys(), key=lambda x: _score_scraped_email(x, dom, final_host_dom), reverse=True)[0]
     if is_excluded_by_signaltender(best_em):
+        return None
+    if IS_RUBRICWARD_HARVESTER and best_em.split("@", 1)[-1] in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
         return None
 
     local_part = best_em.split("@")[0]
@@ -887,11 +1204,132 @@ async def _async_crawl_one(client: "httpx.AsyncClient", sem: "asyncio.Semaphore"
     }
 
 
-def harvest_and_save_verified_dot_contacts() -> List[Dict[str, str]]:
+def discover_live_targets_from_public_apis(seen_domains: set[str], max_new: int = 45) -> List[Tuple[str, str, str, str]]:
+    """
+    Continuously discovers new target organizations on every harvester cycle using:
+      - CamberDesk: USAspending.gov Heavy-Civil / Highway / Bridge / Utility NAICS (237310, 237110, 237990, 238910)
+      - RubricWard: CMS NPPES NPI-2 Organizational Registry API + USAspending Healthcare Provider NAICS (621111, 621493, 621511)
+    Stores rotating page/state cursor in `.harvester_cursor.json` so every 6h cycle explores fresh organizations.
+    """
+    cursor_path = os.path.join(BASE_DIR, ".harvester_cursor.json")
+    cursor = {"usaspending_page": 1, "nppes_state_idx": 0, "nppes_tax_idx": 0}
+    if os.path.exists(cursor_path):
+        try:
+            with open(cursor_path, "r", encoding="utf-8") as cf:
+                cursor.update(json.load(cf) or {})
+        except Exception:
+            pass
+
+    discovered: List[Tuple[str, str, str, str]] = []
+    stop_words = {
+        "inc", "llc", "corp", "corporation", "company", "co", "ltd", "lp", "llp", "pllc", "pc", "pa",
+        "the", "and", "of", "for", "group", "associates", "partners", "services", "solutions",
+    }
+
+    def _name_to_candidate_domains(org_name: str) -> List[str]:
+        clean = re.sub(r"[^a-zA-Z0-9\s]", " ", org_name.lower())
+        tokens = [t for t in clean.split() if t not in stop_words and len(t) >= 2]
+        if not tokens:
+            return []
+        cands = []
+        if len(tokens) >= 2:
+            cands.append(f"{tokens[0]}{tokens[1]}.com")
+        if len(tokens) >= 3:
+            cands.append(f"{tokens[0]}{tokens[1]}{tokens[2]}.com")
+        if len(tokens[0]) >= 5:
+            cands.append(f"{tokens[0]}.com")
+        return cands[:2]
+
+    try:
+        page = int(cursor.get("usaspending_page") or 1)
+        naics_list = ["621111", "621493", "621511"] if IS_RUBRICWARD_HARVESTER else ["237310", "237110", "237990", "238910"]
+        resp = requests.post(
+            "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+            json={
+                "fields": ["Award ID", "Recipient Name", "Place of Performance State Code"],
+                "filters": {
+                    "time_period": [{"start_date": "2024-01-01", "end_date": "2026-12-31"}],
+                    "award_type_codes": ["A", "B", "C", "D"],
+                    "naics_codes": {"require": naics_list},
+                },
+                "limit": 50,
+                "page": page,
+                "sort": "Award Amount",
+                "order": "desc",
+            },
+            timeout=6.0,
+        )
+        if resp.status_code == 200:
+            rows = (resp.json() or {}).get("results") or []
+            for r in rows:
+                rname = str(r.get("Recipient Name") or "").strip()
+                st = str(r.get("Place of Performance State Code") or "TX").strip() or "TX"
+                awd_id = str(r.get("Award ID") or "USASPEND-VERIFIED").strip()
+                for cdom in _name_to_candidate_domains(rname):
+                    if cdom not in seen_domains and not is_excluded_by_signaltender(cdom):
+                        if IS_RUBRICWARD_HARVESTER and cdom in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
+                            continue
+                        seen_domains.add(cdom)
+                        discovered.append((rname.title(), cdom, st, f"USASPEND-{awd_id[:14]}"))
+                        if len(discovered) >= max_new:
+                            break
+                if len(discovered) >= max_new:
+                    break
+        cursor["usaspending_page"] = (page % 25) + 1
+    except Exception:
+        pass
+
+    if IS_RUBRICWARD_HARVESTER and len(discovered) < max_new:
+        states_50 = ["TX", "FL", "CA", "NY", "PA", "IL", "OH", "GA", "NC", "VA", "MD", "NJ", "MI", "WA", "AZ", "MA", "TN", "IN", "MO", "MN", "CO", "WI", "SC", "AL", "LA", "KY", "OR", "OK", "CT", "UT", "IA", "NV", "AR", "MS", "KS"]
+        taxonomies = ["Orthopaedic", "Gastroenterology", "Ambulatory Surgical", "Urology", "Ophthalmology", "Radiology", "Anesthesiology"]
+        st_idx = int(cursor.get("nppes_state_idx") or 0) % len(states_50)
+        tx_idx = int(cursor.get("nppes_tax_idx") or 0) % len(taxonomies)
+        try:
+            npi_r = requests.get(
+                "https://npiregistry.cms.hhs.gov/api/",
+                params={
+                    "version": "2.1",
+                    "enumeration_type": "NPI-2",
+                    "taxonomy_description": taxonomies[tx_idx],
+                    "state": states_50[st_idx],
+                    "limit": 60,
+                },
+                timeout=6.0,
+            )
+            if npi_r.status_code == 200:
+                for res in (npi_r.json() or {}).get("results") or []:
+                    basic = res.get("basic") or {}
+                    oname = str(basic.get("organization_name") or "").strip()
+                    npi_num = str(res.get("number") or "").strip()
+                    if not oname or not npi_num:
+                        continue
+                    for cdom in _name_to_candidate_domains(oname):
+                        if cdom not in seen_domains and cdom not in RUBRICWARD_BLOCKED_VENDOR_DOMAINS and not is_excluded_by_signaltender(cdom):
+                            seen_domains.add(cdom)
+                            discovered.append((oname.title(), cdom, states_50[st_idx], f"NPI-{npi_num}"))
+                            break
+                    if len(discovered) >= max_new:
+                        break
+            cursor["nppes_state_idx"] = (st_idx + 1) % len(states_50)
+            if cursor["nppes_state_idx"] == 0:
+                cursor["nppes_tax_idx"] = (tx_idx + 1) % len(taxonomies)
+        except Exception:
+            pass
+
+    try:
+        with open(cursor_path, "w", encoding="utf-8") as cf:
+            json.dump(cursor, cf, indent=2)
+    except Exception:
+        pass
+    return discovered
+
+
+def harvest_and_save_verified_dot_contacts(target_count: Optional[int] = None) -> List[Dict[str, str]]:
     import asyncio
     import httpx
 
     _load_signaltender_excluded_emails_and_domains()
+    effective_target = target_count or compute_dynamic_target_leads()
     by_email: Dict[str, Dict[str, str]] = {}
     existing_domains: set[str] = set()
     if os.path.exists(VERIFIED_DOT_CONTACTS_PATH):
@@ -900,32 +1338,88 @@ def harvest_and_save_verified_dot_contacts() -> List[Dict[str, str]]:
                 for erow in (json.load(ef) or []):
                     if isinstance(erow, dict) and erow.get("email") and erow.get("source_url"):
                         eem = str(erow["email"]).strip().lower()
+                        edom = eem.split("@", 1)[-1]
+                        if IS_RUBRICWARD_HARVESTER and edom in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
+                            continue
                         if not is_excluded_by_signaltender(eem):
+                            erow["company_name"] = str(erow.get("company_name") or erow.get("company") or "Practice").strip()
+                            erow["state"] = str(erow.get("state") or "TX").strip()
                             by_email[eem] = erow
-                            existing_domains.add(eem.split("@", 1)[-1])
+                            existing_domains.add(edom)
         except Exception:
             pass
 
-    seeds_to_crawl = [item for item in HEAVY_CIVIL_SEED_DOMAINS if len(item) == 4 and item[1].strip().lower() not in existing_domains]
-    scraped_html: List[Dict[str, str]] = []
-
-    async def _run_all() -> None:
-        asyncio.get_running_loop().set_default_executor(ThreadPoolExecutor(max_workers=128))
-        sem = asyncio.Semaphore(80)
-        limits = httpx.Limits(max_keepalive_connections=40, max_connections=120)
-        client = httpx.AsyncClient(headers=HEADERS, timeout=2.5, follow_redirects=True, verify=False, limits=limits)
+    cursor_path = os.path.join(BASE_DIR, ".harvester_cursor.json")
+    cursor_data: Dict[str, Any] = {}
+    if os.path.exists(cursor_path):
         try:
-            tasks = [asyncio.create_task(_async_crawl_one(client, sem, item, "Revenue Cycle")) for item in seeds_to_crawl]
-            done, pending = await asyncio.wait(tasks, timeout=85.0)
-            for p_task in pending:
-                p_task.cancel()
-            for d_task in done:
-                try:
-                    r = d_task.result()
-                    if isinstance(r, dict):
-                        scraped_html.append(r)
-                except Exception:
-                    pass
+            with open(cursor_path, "r", encoding="utf-8") as cf:
+                cursor_data = json.load(cf) or {}
+        except Exception:
+            cursor_data = {}
+    prev_crawled_doms: set[str] = set(cursor_data.get("crawled_domains") or [])
+
+    all_candidate_seeds: List[Tuple[str, str, str, str]] = []
+    deferred_seeds: List[Tuple[str, str, str, str]] = []
+    seen_seed_doms: set[str] = set(existing_domains)
+    for item in HEAVY_CIVIL_SEED_DOMAINS:
+        if len(item) == 4:
+            sdom = item[1].strip().lower()
+            if IS_RUBRICWARD_HARVESTER and sdom in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
+                continue
+            if sdom and sdom not in seen_seed_doms and not is_excluded_by_signaltender(sdom):
+                seen_seed_doms.add(sdom)
+                if sdom not in prev_crawled_doms:
+                    all_candidate_seeds.append(item)
+                else:
+                    deferred_seeds.append(item)
+
+    if len(by_email) < effective_target:
+        all_candidate_seeds.extend(discover_live_targets_from_public_apis(seen_seed_doms, max_new=45))
+
+    if not all_candidate_seeds and deferred_seeds:
+        prev_crawled_doms.clear()
+        all_candidate_seeds = deferred_seeds[:165]
+    else:
+        all_candidate_seeds = all_candidate_seeds[:220]
+
+    for item in all_candidate_seeds:
+        prev_crawled_doms.add(item[1].strip().lower())
+    try:
+        if os.path.exists(cursor_path):
+            with open(cursor_path, "r", encoding="utf-8") as cf:
+                cursor_data = json.load(cf) or {}
+        cursor_data["crawled_domains"] = sorted(prev_crawled_doms)[-1500:]
+        with open(cursor_path, "w", encoding="utf-8") as cf:
+            json.dump(cursor_data, cf, indent=2)
+    except Exception:
+        pass
+
+    scraped_html: List[Dict[str, str]] = []
+    default_fn = "Revenue Cycle" if IS_RUBRICWARD_HARVESTER else "Estimating"
+
+    async def _run_batches() -> None:
+        asyncio.get_running_loop().set_default_executor(ThreadPoolExecutor(max_workers=96))
+        sem = asyncio.Semaphore(55)
+        limits = httpx.Limits(max_keepalive_connections=45, max_connections=95)
+        client = httpx.AsyncClient(headers=HEADERS, timeout=3.2, follow_redirects=True, verify=False, limits=limits)
+        try:
+            batch_size = 55
+            for i in range(0, len(all_candidate_seeds), batch_size):
+                if len(by_email) + len(scraped_html) >= effective_target + 40:
+                    break
+                batch = all_candidate_seeds[i : i + batch_size]
+                tasks = [asyncio.create_task(_async_crawl_one(client, sem, item, default_fn)) for item in batch]
+                done, pending = await asyncio.wait(tasks, timeout=9.5)
+                for p_task in pending:
+                    p_task.cancel()
+                for d_task in done:
+                    try:
+                        r = d_task.result()
+                        if isinstance(r, dict):
+                            scraped_html.append(r)
+                    except Exception:
+                        pass
         except Exception:
             pass
         finally:
@@ -934,23 +1428,51 @@ def harvest_and_save_verified_dot_contacts() -> List[Dict[str, str]]:
             except Exception:
                 pass
 
-    try:
-        asyncio.run(_run_all())
-    except Exception:
-        pass
+    if all_candidate_seeds and len(by_email) < effective_target:
+        try:
+            asyncio.run(_run_batches())
+        except Exception:
+            pass
 
+    # Parallel DNS MX verification on unique candidate domains
+    cand_rows = []
+    unique_cand_doms = set()
     for row in scraped_html:
         em = row["email"].strip().lower()
-        if em not in by_email and not is_excluded_by_signaltender(em) and verify_email_domain_mx(em):
+        edom = em.split("@", 1)[-1]
+        if IS_RUBRICWARD_HARVESTER and edom in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
+            continue
+        if em not in by_email and not is_excluded_by_signaltender(em):
+            cand_rows.append(row)
+            unique_cand_doms.add(edom)
+
+    valid_mx_doms: Dict[str, bool] = {}
+    if unique_cand_doms:
+        with ThreadPoolExecutor(max_workers=16) as mx_pool:
+            future_to_dom = {mx_pool.submit(verify_email_domain_mx, f"probe@{d}"): d for d in unique_cand_doms}
+            for fut in as_completed(future_to_dom):
+                d_key = future_to_dom[fut]
+                try:
+                    valid_mx_doms[d_key] = bool(fut.result())
+                except Exception:
+                    valid_mx_doms[d_key] = False
+
+    new_verified = 0
+    for row in cand_rows:
+        em = row["email"].strip().lower()
+        edom = em.split("@", 1)[-1]
+        if em not in by_email and valid_mx_doms.get(edom, False):
             by_email[em] = row
+            new_verified += 1
 
     final_list = sorted(by_email.values(), key=lambda x: (x["state"], x["company_name"]))
     with open(VERIFIED_DOT_CONTACTS_PATH, "w", encoding="utf-8") as fh:
         json.dump(final_list, fh, indent=2)
 
+    brand_tag = "RUBRICWARD" if IS_RUBRICWARD_HARVESTER else "CAMBERDESK"
     print(
-        f"[RUBRICWARD HARVESTER] Saved {len(final_list)} 100% live website HTML-scraped contacts "
-        f"(+{len(scraped_html)} new raw, 0 overlap) -> {VERIFIED_DOT_CONTACTS_PATH}",
+        f"[{brand_tag} HARVESTER] Saved {len(final_list)} 100% live website HTML-scraped contacts "
+        f"(+{new_verified} new MX-verified, target={effective_target}, 0 overlap) -> {VERIFIED_DOT_CONTACTS_PATH}",
         flush=True,
     )
     return final_list

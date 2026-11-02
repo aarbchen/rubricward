@@ -129,13 +129,17 @@ def main() -> int:
                 import mainscraper
                 import rubricward_autopilot
                 import pseo_generator
+                import harvest_verified_dot_contacts
                 import outreach_generator
                 import sync_instantly_campaign
+                import outbound_mailer
                 asyncio.run(mainscraper.run_scraper(push_to_db=True))
                 rubricward_autopilot.build_dossiers()
                 pseo_generator.generate_pseo_pages()
+                harvest_verified_dot_contacts.harvest_and_save_verified_dot_contacts()
                 outreach_generator.generate_outreach_queue()
                 sync_instantly_campaign.sync_leads_to_instantly()
+                outbound_mailer.run_outbound_mailer()
             except Exception:
                 pass
 

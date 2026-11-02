@@ -97,13 +97,19 @@ def _sanitize_zero_dollar_zero_link(text: str) -> str:
 
 
 def load_verified_dot_contacts() -> List[Dict[str, str]]:
-    from harvest_verified_dot_contacts import harvest_and_save_verified_dot_contacts, is_excluded_by_signaltender
+    from harvest_verified_dot_contacts import (
+        compute_dynamic_target_leads,
+        harvest_and_save_verified_dot_contacts,
+        is_excluded_by_signaltender,
+    )
+    target_leads = compute_dynamic_target_leads()
+    existing_valid: List[Dict[str, str]] = []
     if os.path.exists(VERIFIED_DOT_CONTACTS_PATH):
         try:
             with open(VERIFIED_DOT_CONTACTS_PATH, "r", encoding="utf-8") as fh:
                 data = json.load(fh)
                 if isinstance(data, list) and data:
-                    return [
+                    existing_valid = [
                         r for r in data
                         if isinstance(r, dict)
                         and r.get("email")
@@ -112,7 +118,9 @@ def load_verified_dot_contacts() -> List[Dict[str, str]]:
                     ]
         except Exception:
             pass
-    return harvest_and_save_verified_dot_contacts()
+    if len(existing_valid) >= target_leads or os.getenv("OUTREACH_SKIP_HARVESTER") == "1":
+        return existing_valid
+    return harvest_and_save_verified_dot_contacts(target_count=target_leads)
 
 
 def generate_mlot_sniper_note(row: Dict[str, Any], recipient_email: str = "", company_name: str = "") -> Dict[str, str]:
