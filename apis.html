@@ -146,7 +146,7 @@
             <textarea id="sandbox-req-box" rows="7" class="w-full p-3.5 rounded-lg bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed">{
   "project_id": "TXDOI-MRF-CPT-29881-DFW",
   "specification_text": "Commercial Payer Clinical Policy Bulletin CPB-0592: CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty require 6 weeks documented conservative physical therapy, Kellgren-Lawrence Grade >= 3 imaging, and prior authorization. Timely filing: 90 days.",
-  "state_dot": "TX"
+  "state_payer_market": "TX"
 }</textarea>
           </div>
           <div class="min-w-0">
@@ -184,8 +184,8 @@
       "deadline": "180 Calendar Days from EOB/ERA"
     }
   ],
-  "liquidated_damages_usd_per_day": 180.0,
-  "retainage_pct": 14.5
+  "timely_filing_window_days": 180,
+  "underpayment_recovery_gap_pct": 14.5
 }</pre>
           </div>
         </div>
@@ -406,7 +406,7 @@
                 <pre class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed overflow-x-auto max-w-full">{
   "project_id": "TXDOI-MRF-CPT-29881-DFW",
   "specification_text": "Commercial Payer Clinical Policy Bulletin CPB-0592: CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty require 6 weeks documented conservative physical therapy, Kellgren-Lawrence Grade >= 3 imaging, and prior authorization. Timely filing: 90 days.",
-  "state_dot": "TX"
+  "state_payer_market": "TX"
 }</pre>
                 <div class="flex items-center justify-between text-[11px] font-mono font-bold">
                   <span id="card-status-product-csi-masterformat" class="text-[#065F46]">HTTP 200 OK &bull; Stateless Pydantic V2</span>
@@ -437,8 +437,8 @@
       "deadline": "180 Calendar Days from EOB/ERA"
     }
   ],
-  "liquidated_damages_usd_per_day": 180.0,
-  "retainage_pct": 14.5
+  "timely_filing_window_days": 180,
+  "underpayment_recovery_gap_pct": 14.5
 }</pre>
               </div>
             </article><article id="product-dot-unit-bid-tabs" data-api-card="product-dot-unit-bid-tabs" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-6 min-w-0">
@@ -473,7 +473,7 @@
                   </div>
                 </div>
                 <pre class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed overflow-x-auto max-w-full">{
-  "state_dot": "TX",
+  "state_payer_market": "TX",
   "district": "Dallas-Fort Worth MSA (Locality 04412-11)",
   "pay_items": [
     {
@@ -496,7 +496,7 @@
                 </div>
                 <pre id="card-res-product-dot-unit-bid-tabs" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#064E3B] leading-relaxed overflow-x-auto max-w-full">{
   "status": "success",
-  "state_dot": "TX",
+  "state_payer_market": "TX",
   "historical_lettings_sampled": 384,
   "unit_price_benchmarks": [
     {
@@ -573,7 +573,7 @@
   "status": "success",
   "wage_decision_id": "CMS-MPFS-2026B-TX-04412",
   "county": "Dallas County, TX",
-  "wh347_certified_payroll_ready": true,
+  "mpfs_rvu_gpci_locality_verified": true,
   "craft_rates": [
     {
       "craft": "CPT 29881 \u2014 Facility ASC Payment Rate (Wage-Adjusted)",
@@ -639,7 +639,7 @@
   "status": "success",
   "portals_monitored": 52,
   "states_covered": 50,
-  "active_lettings_count": 12,
+  "active_mrf_cohorts_count": 52,
   "sample_letting": {
     "project_id": "TXDOI-MRF-CPT-29881-DFW",
     "agency": "Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index",
@@ -704,8 +704,8 @@
                 </div>
                 <pre id="card-res-product-baba-buy-america" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#064E3B] leading-relaxed overflow-x-auto max-w-full">{
   "status": "success",
-  "baba_compliant": true,
-  "iron_steel_100pct_us_melted": true,
+  "ncci_ptp_override_supported": true,
+  "modifier_25_59_clinical_defense_ready": true,
   "manufactured_products_domestic_pct": 98.4,
   "de_minimis_waiver_eligible": true,
   "required_certifications": [
@@ -746,7 +746,7 @@
                   </div>
                 </div>
                 <pre class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed overflow-x-auto max-w-full">{
-  "state_dot": "TX",
+  "state_payer_market": "TX",
   "contract_total_usd": 1845000.0,
   "dbe_goal_pct": 14.5,
   "subcontractor_quotes": [
@@ -810,7 +810,7 @@
                 </div>
                 <pre class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed overflow-x-auto max-w-full">{
   "contract_sum_usd": 1845000.0,
-  "retainage_pct": 14.5,
+  "underpayment_recovery_gap_pct": 14.5,
   "line_items": [
     {
       "line_no": "CPT-29881",
@@ -969,8 +969,8 @@
                   </div>
                 </div>
                 <pre class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed overflow-x-auto max-w-full">{
-  "contractor_emr": 0.98,
-  "trir": 1.1,
+  "provider_billing_compliance_index": 0.98,
+  "oig_audit_variance_index": 1.1,
   "scopes": [
     "Orthopedic_Surgery_ASC",
     "Interventional_Pain_Management",
@@ -1024,7 +1024,7 @@
                   </div>
                 </div>
                 <pre class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] text-xs font-mono font-medium text-[#0F172A] leading-relaxed overflow-x-auto max-w-full">{
-  "state_dot": "TX",
+  "state_payer_market": "TX",
   "engineers_estimate_usd": 1845000.0,
   "planholders": [
     "Texas Orthopedic Specialists PA",
@@ -1217,8 +1217,8 @@
       </div>
     </div>
     <script>
-      window.CATALOG = {"product-csi-masterformat": {"status": "success", "project_id": "TXDOI-MRF-CPT-29881-DFW", "divisions_detected": ["CPB-0592 Surgical Coverage Criteria", "CMS LCD L35094 Orthopedic Criteria", "ERISA 29 CFR 2560.503-1 Appeal Timeline"], "submittal_register": [{"spec_section": "CPB-0592-PA", "item": "6-Week Conservative Physical Therapy & NSAID Trial Notes", "deadline": "Prior to Surgical Scheduling"}, {"spec_section": "LCD-L35094", "item": "Weight-Bearing Radiograph / MRI Report (KL Grade >= 3)", "deadline": "Attach to 837P / 278 Prior Auth"}, {"spec_section": "ERISA-503-1", "item": "Peer-to-Peer Clinical Review & Level-I Appeal Window", "deadline": "180 Calendar Days from EOB/ERA"}], "liquidated_damages_usd_per_day": 180.0, "retainage_pct": 14.5}, "product-dot-unit-bid-tabs": {"status": "success", "state_dot": "TX", "historical_lettings_sampled": 384, "unit_price_benchmarks": [{"item_code": "CPT-29881", "unit": "CLAIM", "low_25th_usd": 640.0, "median_50th_usd": 1485.0, "recommended_unit_usd": 1890.0, "extended_total_usd": 793800.0}, {"item_code": "CPT-27447", "unit": "CLAIM", "low_25th_usd": 4850.0, "median_50th_usd": 9420.0, "recommended_unit_usd": 11850.0, "extended_total_usd": 1362750.0}], "estimated_total_bid_usd": 2156550.0}, "product-davis-bacon-wage": {"status": "success", "wage_decision_id": "CMS-MPFS-2026B-TX-04412", "county": "Dallas County, TX", "wh347_certified_payroll_ready": true, "craft_rates": [{"craft": "CPT 29881 \u2014 Facility ASC Payment Rate (Wage-Adjusted)", "base_hourly_usd": 1124.5, "fringe_hourly_usd": 360.5, "loaded_hourly_usd": 1485.0}, {"craft": "CPT 29881 \u2014 Physician Professional Fee (215% Medicare Target)", "base_hourly_usd": 582.4, "fringe_hourly_usd": 670.1, "loaded_hourly_usd": 1252.5}]}, "product-live-lettings": {"status": "success", "portals_monitored": 52, "states_covered": 50, "active_lettings_count": 12, "sample_letting": {"project_id": "TXDOI-MRF-CPT-29881-DFW", "agency": "Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index", "title": "UHC & BCBS-TX Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447)", "engineers_estimate_usd": 1845000.0, "dbe_goal_pct": 14.5}}, "product-baba-buy-america": {"status": "success", "baba_compliant": true, "iron_steel_100pct_us_melted": true, "manufactured_products_domestic_pct": 98.4, "de_minimis_waiver_eligible": true, "required_certifications": ["Operative Note Documenting Separate Compartment / Distinct Procedural Service (Modifier 59 / XS)", "Separately Identifiable E/M HPI & MDM Documentation Supporting Modifier 25 Override"]}, "product-dbe-good-faith": {"status": "success", "dbe_goal_pct": 14.5, "achieved_dbe_pct": 15.82, "goal_met": true, "regular_dealer_60pct_adjustment_applied": true, "good_faith_effort_status": "VERIFIED \u2014 ERISA 29 CFR 2560.503-1 Statutory Appeal & IRO Demand Ready"}, "product-aia-g702-g703": {"status": "success", "form": "HIPAA X12 835 ERA Underpayment & CARC/RARC Recovery Ledger", "mobilization_cap_compliant": true, "front_loading_risk": "LOW", "net_current_payment_due_usd": 1434495.0}, "product-surety-miller-act": {"status": "success", "statute": "Federal No Surprises Act (42 U.S.C. 300gg-111 / 45 CFR 149.510)", "performance_bond_pct": 100, "payment_bond_pct": 100, "estimated_bond_premium_usd": 12450.0, "capacity_verdict": "PASS \u2014 75th-Percentile TiC MRF Offer Supported by Acuity & Case-Mix Evidence"}, "product-rfi-change-order": {"status": "success", "entitlement_basis": "TX Ins. Code \u00a7 1301.103 (18% APR Penalty) & ERISA 29 CFR 2560.503-1 Adverse Benefit Protections", "recommended_claim_amount_usd": 173745.0, "critical_path_extension_days": 62}, "product-osha-emr-safety": {"status": "success", "emr_qualified": true, "max_emr_threshold": 1.0, "required_aha_modules": ["NPPES Type 1 & Type 2 NPI Taxonomy 207X00000X Crosswalk Verified", "CMS PECOS & CAQH ProView 120-Day Re-Attestation Active", "CMS 42 CFR 422.116 Specialty Network Adequacy Leverage Confirmed"]}, "product-planholder-spread": {"status": "success", "expected_bidder_count": 3, "predicted_winning_discount_vs_estimate_pct": -4.2, "recommended_optimal_bid_usd": 1767510.0, "expected_money_left_on_table_pct": 1.8}, "product-subcontractor-itb": {"status": "success", "itb_packages_generated": 3, "flow_down_audit": "PASS \u2014 215% Medicare MPFS Floor, Cost+15% Implant Carve-Out & 30-Day Prompt-Pay Rider Verified"}};
-      window.API_META = {"product-csi-masterformat": {"num": "01", "title": "Payer Clinical Policy Bulletin (CPB), LCD/NCD & Prior-Auth Shredder", "method": "POST", "route": "/v1/shred/csi-masterformat", "mcp_tool": "shred_csi_masterformat_specs", "defaultPayload": {"project_id": "TXDOI-MRF-CPT-29881-DFW", "specification_text": "Commercial Payer Clinical Policy Bulletin CPB-0592: CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty require 6 weeks documented conservative physical therapy, Kellgren-Lawrence Grade >= 3 imaging, and prior authorization. Timely filing: 90 days.", "state_dot": "TX"}}, "product-dot-unit-bid-tabs": {"num": "02", "title": "Commercial Payer TiC MRF Allowed-Amount & QPA Benchmark Modeler", "method": "POST", "route": "/v1/model/dot-unit-bid-tabs", "mcp_tool": "model_dot_unit_price_bid_tabs", "defaultPayload": {"state_dot": "TX", "district": "Dallas-Fort Worth MSA (Locality 04412-11)", "pay_items": [{"item_code": "CPT-29881", "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)", "unit": "CLAIM", "quantity": 420}, {"item_code": "CPT-27447", "description": "Total Knee Arthroplasty (Condyle and Plateau; Medial & Lateral)", "unit": "CLAIM", "quantity": 115}]}}, "product-davis-bacon-wage": {"num": "03", "title": "CMS Medicare MPFS RVU, Geographic GPCI & ASC Facility Calculator", "method": "POST", "route": "/v1/calculate/davis-bacon-prevailing-wage", "mcp_tool": "calculate_davis_bacon_prevailing_wage", "defaultPayload": {"state": "TX", "county": "Dallas County", "construction_type": "Outpatient_ASC_and_Physician", "crew_classifications": [{"craft": "CPT 29881 \u2014 Facility ASC Payment Rate (Wage-Adjusted)", "weekly_hours": 40}, {"craft": "CPT 29881 \u2014 Physician Professional Fee (215% Medicare Target)", "weekly_hours": 40}]}}, "product-live-lettings": {"num": "04", "title": "52-Portal Commercial Payer MRF, ERISA & NSA IDR Dispute Feed", "method": "GET", "route": "/v1/lettings/live", "mcp_tool": "fetch_live_dot_Construction_lettings", "defaultPayload": {"state": "ALL_50_STATES", "portal_count": 52, "naics_filter": ["621111", "621493", "622110"], "limit": 25}}, "product-baba-buy-america": {"num": "05", "title": "CMS NCCI PTP Edits, MUE Limits & Modifier 25/59/XU Bundling Auditor", "method": "POST", "route": "/v1/audit/baba-buy-america", "mcp_tool": "audit_baba_buy_america_compliance", "defaultPayload": {"project_id": "TXDOI-MRF-CPT-29881-DFW", "funding_agency": "Commercial_ERISA_and_CMS_NCCI", "bill_of_materials": [{"material": "CPT 29881 + CPT 29877 (Ipsilateral Knee Chondroplasty NCCI Column 2)", "category": "ncci_ptp_pair", "origin_country": "US", "cost_usd": 189000}, {"material": "CPT 99214-25 + CPT 20610 (E/M with Major Joint Injection Mod 25)", "category": "modifier_25_override", "origin_country": "US", "cost_usd": 142000}]}}, "product-dbe-good-faith": {"num": "06", "title": "ERISA 29 CFR 2560.503-1 Medical Necessity & Level-II Appeal Generator", "method": "POST", "route": "/v1/generate/dbe-good-faith-effort", "mcp_tool": "generate_dbe_good_faith_effort", "defaultPayload": {"state_dot": "TX", "contract_total_usd": 1845000.0, "dbe_goal_pct": 14.5, "subcontractor_quotes": [{"firm": "ERISA 29 CFR 2560.503-1 Full & Fair Review Clinical Dossier", "naics": "621111", "role": "subcontractor", "quote_usd": 1240000.0}, {"firm": "AAOS / NASS Peer-Reviewed Clinical Guidelines & CPB Evidentiary Matrix", "naics": "621493", "role": "regular_dealer_supply", "quote_usd": 820000.0}]}}, "product-aia-g702-g703": {"num": "07", "title": "HIPAA 835 ERA Remittance, CARC/RARC Denial & Underpayment Modeler", "method": "POST", "route": "/v1/generate/aia-g702-g703-pay-app", "mcp_tool": "generate_aia_g702_g703_schedule_of_values", "defaultPayload": {"contract_sum_usd": 1845000.0, "retainage_pct": 14.5, "line_items": [{"line_no": "CPT-29881", "description": "Knee Arthroscopy Meniscectomy (CARC CO-45 Underpayment Recovery)", "scheduled_value_usd": 793800.0, "completed_pct": 100.0}, {"line_no": "CPT-27447", "description": "Total Knee Arthroplasty (CARC CO-50 Medical Necessity Appeal)", "scheduled_value_usd": 1051200.0, "completed_pct": 85.0}]}}, "product-surety-miller-act": {"num": "08", "title": "Federal No Surprises Act (NSA 45 CFR 149.510) IDR Brief & QPA Auditor", "method": "POST", "route": "/v1/audit/surety-miller-act-bond", "mcp_tool": "audit_surety_miller_act_bond_capacity", "defaultPayload": {"jurisdiction": "Federal_CMS_NSA_IDR_45CFR149", "contract_amount_usd": 1845000.0, "contractor_single_limit_usd": 15000000.0, "contractor_aggregate_wip_usd": 42000000.0}}, "product-rfi-change-order": {"num": "09", "title": "Payer Post-Payment Recoupment, RAC/ZPIC Audit & Prompt-Pay Demand Drafter", "method": "POST", "route": "/v1/generate/rfi-change-order-claim", "mcp_tool": "generate_rfi_and_change_order_claim", "defaultPayload": {"project_id": "TXDOI-MRF-CPT-29881-DFW", "clause_type": "State_Prompt_Pay_and_ERISA_Anti_Clawback", "field_condition": "Payer withheld clean claims > 45 days and issued retroactive DRG/CPT downcode recoupment notice without peer-to-peer review.", "direct_cost_impact_usd": 148500.0, "schedule_delay_days": 62}}, "product-osha-emr-safety": {"num": "10", "title": "CAQH / PECOS Provider Roster, NPPES NPI & Payer Network Adequacy Auditor", "method": "POST", "route": "/v1/audit/osha-emr-site-safety", "mcp_tool": "audit_osha_emr_and_safety_plan", "defaultPayload": {"contractor_emr": 0.98, "trir": 1.1, "scopes": ["Orthopedic_Surgery_ASC", "Interventional_Pain_Management", "Diagnostic_Imaging_MRI"]}}, "product-planholder-spread": {"num": "11", "title": "Regional Specialty Group EIN/NPI Payer MRF Contract Spread Predictor", "method": "POST", "route": "/v1/analyze/planholder-competitor-spread", "mcp_tool": "analyze_planholder_competitor_spread", "defaultPayload": {"state_dot": "TX", "engineers_estimate_usd": 1845000.0, "planholders": ["Texas Orthopedic Specialists PA", "Baylor Scott & White Surgicare", "Lonestar ASC LLC"]}}, "product-subcontractor-itb": {"num": "12", "title": "Value-Based Care, ASC Carve-Out & Commercial Payer Rate Term-Sheet Generator", "method": "POST", "route": "/v1/generate/subcontractor-scope-itb", "mcp_tool": "generate_subcontractor_itb_scope_packages", "defaultPayload": {"project_title": "DFW Multi-Specialty ASC Commercial Payer Rate Renegotiation", "state": "TX", "trades_needed": ["Orthopedic_Implant_Carve_Out", "ASC_Facility_Grouper_Floor", "Anti_Retaliatory_Downcoding_Rider"]}}};
+      window.CATALOG = {"product-csi-masterformat": {"status": "success", "project_id": "TXDOI-MRF-CPT-29881-DFW", "divisions_detected": ["CPB-0592 Surgical Coverage Criteria", "CMS LCD L35094 Orthopedic Criteria", "ERISA 29 CFR 2560.503-1 Appeal Timeline"], "submittal_register": [{"spec_section": "CPB-0592-PA", "item": "6-Week Conservative Physical Therapy & NSAID Trial Notes", "deadline": "Prior to Surgical Scheduling"}, {"spec_section": "LCD-L35094", "item": "Weight-Bearing Radiograph / MRI Report (KL Grade >= 3)", "deadline": "Attach to 837P / 278 Prior Auth"}, {"spec_section": "ERISA-503-1", "item": "Peer-to-Peer Clinical Review & Level-I Appeal Window", "deadline": "180 Calendar Days from EOB/ERA"}], "timely_filing_window_days": 180, "underpayment_recovery_gap_pct": 14.5}, "product-dot-unit-bid-tabs": {"status": "success", "state_payer_market": "TX", "historical_lettings_sampled": 384, "unit_price_benchmarks": [{"item_code": "CPT-29881", "unit": "CLAIM", "low_25th_usd": 640.0, "median_50th_usd": 1485.0, "recommended_unit_usd": 1890.0, "extended_total_usd": 793800.0}, {"item_code": "CPT-27447", "unit": "CLAIM", "low_25th_usd": 4850.0, "median_50th_usd": 9420.0, "recommended_unit_usd": 11850.0, "extended_total_usd": 1362750.0}], "estimated_total_bid_usd": 2156550.0}, "product-davis-bacon-wage": {"status": "success", "wage_decision_id": "CMS-MPFS-2026B-TX-04412", "county": "Dallas County, TX", "mpfs_rvu_gpci_locality_verified": true, "craft_rates": [{"craft": "CPT 29881 \u2014 Facility ASC Payment Rate (Wage-Adjusted)", "base_hourly_usd": 1124.5, "fringe_hourly_usd": 360.5, "loaded_hourly_usd": 1485.0}, {"craft": "CPT 29881 \u2014 Physician Professional Fee (215% Medicare Target)", "base_hourly_usd": 582.4, "fringe_hourly_usd": 670.1, "loaded_hourly_usd": 1252.5}]}, "product-live-lettings": {"status": "success", "portals_monitored": 52, "states_covered": 50, "active_mrf_cohorts_count": 52, "sample_letting": {"project_id": "TXDOI-MRF-CPT-29881-DFW", "agency": "Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index", "title": "UHC & BCBS-TX Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447)", "engineers_estimate_usd": 1845000.0, "dbe_goal_pct": 14.5}}, "product-baba-buy-america": {"status": "success", "ncci_ptp_override_supported": true, "modifier_25_59_clinical_defense_ready": true, "manufactured_products_domestic_pct": 98.4, "de_minimis_waiver_eligible": true, "required_certifications": ["Operative Note Documenting Separate Compartment / Distinct Procedural Service (Modifier 59 / XS)", "Separately Identifiable E/M HPI & MDM Documentation Supporting Modifier 25 Override"]}, "product-dbe-good-faith": {"status": "success", "dbe_goal_pct": 14.5, "achieved_dbe_pct": 15.82, "goal_met": true, "regular_dealer_60pct_adjustment_applied": true, "good_faith_effort_status": "VERIFIED \u2014 ERISA 29 CFR 2560.503-1 Statutory Appeal & IRO Demand Ready"}, "product-aia-g702-g703": {"status": "success", "form": "HIPAA X12 835 ERA Underpayment & CARC/RARC Recovery Ledger", "mobilization_cap_compliant": true, "front_loading_risk": "LOW", "net_current_payment_due_usd": 1434495.0}, "product-surety-miller-act": {"status": "success", "statute": "Federal No Surprises Act (42 U.S.C. 300gg-111 / 45 CFR 149.510)", "performance_bond_pct": 100, "payment_bond_pct": 100, "estimated_bond_premium_usd": 12450.0, "capacity_verdict": "PASS \u2014 75th-Percentile TiC MRF Offer Supported by Acuity & Case-Mix Evidence"}, "product-rfi-change-order": {"status": "success", "entitlement_basis": "TX Ins. Code \u00a7 1301.103 (18% APR Penalty) & ERISA 29 CFR 2560.503-1 Adverse Benefit Protections", "recommended_claim_amount_usd": 173745.0, "critical_path_extension_days": 62}, "product-osha-emr-safety": {"status": "success", "emr_qualified": true, "max_emr_threshold": 1.0, "required_aha_modules": ["NPPES Type 1 & Type 2 NPI Taxonomy 207X00000X Crosswalk Verified", "CMS PECOS & CAQH ProView 120-Day Re-Attestation Active", "CMS 42 CFR 422.116 Specialty Network Adequacy Leverage Confirmed"]}, "product-planholder-spread": {"status": "success", "expected_bidder_count": 3, "predicted_winning_discount_vs_estimate_pct": -4.2, "recommended_optimal_bid_usd": 1767510.0, "expected_money_left_on_table_pct": 1.8}, "product-subcontractor-itb": {"status": "success", "itb_packages_generated": 3, "flow_down_audit": "PASS \u2014 215% Medicare MPFS Floor, Cost+15% Implant Carve-Out & 30-Day Prompt-Pay Rider Verified"}};
+      window.API_META = {"product-csi-masterformat": {"num": "01", "title": "Payer Clinical Policy Bulletin (CPB), LCD/NCD & Prior-Auth Shredder", "method": "POST", "route": "/v1/shred/csi-masterformat", "mcp_tool": "shred_csi_masterformat_specs", "defaultPayload": {"project_id": "TXDOI-MRF-CPT-29881-DFW", "specification_text": "Commercial Payer Clinical Policy Bulletin CPB-0592: CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty require 6 weeks documented conservative physical therapy, Kellgren-Lawrence Grade >= 3 imaging, and prior authorization. Timely filing: 90 days.", "state_payer_market": "TX"}}, "product-dot-unit-bid-tabs": {"num": "02", "title": "Commercial Payer TiC MRF Allowed-Amount & QPA Benchmark Modeler", "method": "POST", "route": "/v1/model/dot-unit-bid-tabs", "mcp_tool": "model_dot_unit_price_bid_tabs", "defaultPayload": {"state_payer_market": "TX", "district": "Dallas-Fort Worth MSA (Locality 04412-11)", "pay_items": [{"item_code": "CPT-29881", "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)", "unit": "CLAIM", "quantity": 420}, {"item_code": "CPT-27447", "description": "Total Knee Arthroplasty (Condyle and Plateau; Medial & Lateral)", "unit": "CLAIM", "quantity": 115}]}}, "product-davis-bacon-wage": {"num": "03", "title": "CMS Medicare MPFS RVU, Geographic GPCI & ASC Facility Calculator", "method": "POST", "route": "/v1/calculate/davis-bacon-prevailing-wage", "mcp_tool": "calculate_davis_bacon_prevailing_wage", "defaultPayload": {"state": "TX", "county": "Dallas County", "construction_type": "Outpatient_ASC_and_Physician", "crew_classifications": [{"craft": "CPT 29881 \u2014 Facility ASC Payment Rate (Wage-Adjusted)", "weekly_hours": 40}, {"craft": "CPT 29881 \u2014 Physician Professional Fee (215% Medicare Target)", "weekly_hours": 40}]}}, "product-live-lettings": {"num": "04", "title": "52-Portal Commercial Payer MRF, ERISA & NSA IDR Dispute Feed", "method": "GET", "route": "/v1/lettings/live", "mcp_tool": "fetch_live_dot_Construction_lettings", "defaultPayload": {"state": "ALL_50_STATES", "portal_count": 52, "naics_filter": ["621111", "621493", "622110"], "limit": 25}}, "product-baba-buy-america": {"num": "05", "title": "CMS NCCI PTP Edits, MUE Limits & Modifier 25/59/XU Bundling Auditor", "method": "POST", "route": "/v1/audit/baba-buy-america", "mcp_tool": "audit_baba_buy_america_compliance", "defaultPayload": {"project_id": "TXDOI-MRF-CPT-29881-DFW", "funding_agency": "Commercial_ERISA_and_CMS_NCCI", "bill_of_materials": [{"material": "CPT 29881 + CPT 29877 (Ipsilateral Knee Chondroplasty NCCI Column 2)", "category": "ncci_ptp_pair", "origin_country": "US", "cost_usd": 189000}, {"material": "CPT 99214-25 + CPT 20610 (E/M with Major Joint Injection Mod 25)", "category": "modifier_25_override", "origin_country": "US", "cost_usd": 142000}]}}, "product-dbe-good-faith": {"num": "06", "title": "ERISA 29 CFR 2560.503-1 Medical Necessity & Level-II Appeal Generator", "method": "POST", "route": "/v1/generate/dbe-good-faith-effort", "mcp_tool": "generate_dbe_good_faith_effort", "defaultPayload": {"state_payer_market": "TX", "contract_total_usd": 1845000.0, "dbe_goal_pct": 14.5, "subcontractor_quotes": [{"firm": "ERISA 29 CFR 2560.503-1 Full & Fair Review Clinical Dossier", "naics": "621111", "role": "subcontractor", "quote_usd": 1240000.0}, {"firm": "AAOS / NASS Peer-Reviewed Clinical Guidelines & CPB Evidentiary Matrix", "naics": "621493", "role": "regular_dealer_supply", "quote_usd": 820000.0}]}}, "product-aia-g702-g703": {"num": "07", "title": "HIPAA 835 ERA Remittance, CARC/RARC Denial & Underpayment Modeler", "method": "POST", "route": "/v1/generate/aia-g702-g703-pay-app", "mcp_tool": "generate_aia_g702_g703_schedule_of_values", "defaultPayload": {"contract_sum_usd": 1845000.0, "underpayment_recovery_gap_pct": 14.5, "line_items": [{"line_no": "CPT-29881", "description": "Knee Arthroscopy Meniscectomy (CARC CO-45 Underpayment Recovery)", "scheduled_value_usd": 793800.0, "completed_pct": 100.0}, {"line_no": "CPT-27447", "description": "Total Knee Arthroplasty (CARC CO-50 Medical Necessity Appeal)", "scheduled_value_usd": 1051200.0, "completed_pct": 85.0}]}}, "product-surety-miller-act": {"num": "08", "title": "Federal No Surprises Act (NSA 45 CFR 149.510) IDR Brief & QPA Auditor", "method": "POST", "route": "/v1/audit/surety-miller-act-bond", "mcp_tool": "audit_surety_miller_act_bond_capacity", "defaultPayload": {"jurisdiction": "Federal_CMS_NSA_IDR_45CFR149", "contract_amount_usd": 1845000.0, "contractor_single_limit_usd": 15000000.0, "contractor_aggregate_wip_usd": 42000000.0}}, "product-rfi-change-order": {"num": "09", "title": "Payer Post-Payment Recoupment, RAC/ZPIC Audit & Prompt-Pay Demand Drafter", "method": "POST", "route": "/v1/generate/rfi-change-order-claim", "mcp_tool": "generate_rfi_and_change_order_claim", "defaultPayload": {"project_id": "TXDOI-MRF-CPT-29881-DFW", "clause_type": "State_Prompt_Pay_and_ERISA_Anti_Clawback", "field_condition": "Payer withheld clean claims > 45 days and issued retroactive DRG/CPT downcode recoupment notice without peer-to-peer review.", "direct_cost_impact_usd": 148500.0, "schedule_delay_days": 62}}, "product-osha-emr-safety": {"num": "10", "title": "CAQH / PECOS Provider Roster, NPPES NPI & Payer Network Adequacy Auditor", "method": "POST", "route": "/v1/audit/osha-emr-site-safety", "mcp_tool": "audit_osha_emr_and_safety_plan", "defaultPayload": {"provider_billing_compliance_index": 0.98, "oig_audit_variance_index": 1.1, "scopes": ["Orthopedic_Surgery_ASC", "Interventional_Pain_Management", "Diagnostic_Imaging_MRI"]}}, "product-planholder-spread": {"num": "11", "title": "Regional Specialty Group EIN/NPI Payer MRF Contract Spread Predictor", "method": "POST", "route": "/v1/analyze/planholder-competitor-spread", "mcp_tool": "analyze_planholder_competitor_spread", "defaultPayload": {"state_payer_market": "TX", "engineers_estimate_usd": 1845000.0, "planholders": ["Texas Orthopedic Specialists PA", "Baylor Scott & White Surgicare", "Lonestar ASC LLC"]}}, "product-subcontractor-itb": {"num": "12", "title": "Value-Based Care, ASC Carve-Out & Commercial Payer Rate Term-Sheet Generator", "method": "POST", "route": "/v1/generate/subcontractor-scope-itb", "mcp_tool": "generate_subcontractor_itb_scope_packages", "defaultPayload": {"project_title": "DFW Multi-Specialty ASC Commercial Payer Rate Renegotiation", "state": "TX", "trades_needed": ["Orthopedic_Implant_Carve_Out", "ASC_Facility_Grouper_Floor", "Anti_Retaliatory_Downcoding_Rider"]}}};
     </script>
     
   </main>
@@ -1256,7 +1256,7 @@
           <div class="text-xs font-mono font-bold text-[#0F766E]">SELECTED RUBRICWARD PLAN</div>
           <p id="checkout-modal-plan-desc" class="text-xs font-medium text-[#071C21] mt-0.5">Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals &amp; all 12 APIs.</p>
         </div>
-        <div id="checkout-modal-plan-price" class="text-2xl font-extrabold font-mono text-[#071C21]">$499 / month</div>
+        <div id="checkout-modal-plan-price" class="text-2xl font-extrabold font-mono text-[#071C21]">$599 / month</div>
       </div>
       <form onsubmit="submitCamberSelfServeCheckout(event)" class="space-y-3 text-xs">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -1327,10 +1327,10 @@
             <button type="button" onclick="logoutClientAccount()" class="shrink-0 whitespace-nowrap px-2.5 py-1 rounded bg-white hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-[11px] transition">Sign Out</button>
           </div>
           <div class="flex flex-wrap gap-1.5">
-            <button type="button" id="admin-tier-btn-tier_4" onclick="switchAdminPortalPreview('tier_4')" class="px-2.5 py-1 rounded bg-[#0F766E] text-white font-mono text-[11px] font-bold transition">Tier 4 OEM ($2,499/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_4" onclick="switchAdminPortalPreview('tier_4')" class="px-2.5 py-1 rounded bg-[#0F766E] text-white font-mono text-[11px] font-bold transition">Tier 4 OEM ($2,999/mo)</button>
             <button type="button" id="admin-tier-btn-tier_3" onclick="switchAdminPortalPreview('tier_3')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 3 .ZIP Compiler ($1,499/mo)</button>
-            <button type="button" id="admin-tier-btn-tier_2" onclick="switchAdminPortalPreview('tier_2')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 2 Autopilot ($499/mo)</button>
-            <button type="button" id="admin-tier-btn-tier_1" onclick="switchAdminPortalPreview('tier_1')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 1 Wire ($199/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_2" onclick="switchAdminPortalPreview('tier_2')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 2 Autopilot ($599/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_1" onclick="switchAdminPortalPreview('tier_1')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 1 Wire ($249/mo)</button>
           </div>
         </div>
 
@@ -1641,7 +1641,7 @@
           <div class="space-y-1.5">
             <div class="text-[11px] font-mono font-bold text-[#071C21]">CLICK A COMMON QUESTION OR TYPE YOUR OWN BELOW:</div>
             <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
-              <button type="button" onclick="prefillContactConcierge('plans_and_pricing', 'What is the difference between Tier 1 ($199), Tier 2 Autopilot ($499), Tier 3 6-File .ZIP Compiler ($1,499), and Tier 4 OEM ($2,499)?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Compare All 4 Tiers?</button>
+              <button type="button" onclick="prefillContactConcierge('plans_and_pricing', 'What is the difference between Tier 1 ($249), Tier 2 Autopilot ($599), Tier 3 6-File .ZIP Compiler ($1,499), and Tier 4 OEM ($2,999)?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Compare All 4 Tiers?</button>
               <button type="button" onclick="prefillContactConcierge('billing_and_cancellation', 'How do I pause Payer MRF email alerts, download a corporate receipt, or cancel in 1 click?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Receipts &amp; 1-Click Cancel?</button>
               <button type="button" onclick="prefillContactConcierge('zip_compiler', 'What is inside the 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">6-File .ZIP Contents?</button>
               <button type="button" onclick="prefillContactConcierge('portal_coverage', 'Which 50 State Payer MRF and Federal CMS NSA IDR portals are monitored?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">50-State Payer MRF Coverage?</button>
@@ -1653,7 +1653,7 @@
             <div>
               <label for="contact-modal-topic" class="block text-[11px] font-bold text-[#071C21] mb-1">INQUIRY TOPIC</label>
               <select id="contact-modal-topic" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-bold text-[#071C21]">
-                <option value="plans_and_pricing">Plans &amp; Pricing ($199 / $499 / $1,499 / $2,499)</option>
+                <option value="plans_and_pricing">Plans &amp; Pricing ($249 / $599 / $1,499 / $2,999)</option>
                 <option value="billing_and_cancellation">Billing, Receipts &amp; 1-Click Cancel</option>
                 <option value="zip_compiler">6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package</option>
                 <option value="portal_coverage">52 Portals &amp; 50-State Payer MRF Coverage</option>
@@ -1692,7 +1692,7 @@
         <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
       <div class="space-y-3 font-medium text-[#111827] leading-relaxed">
-        <p><strong class="text-[#071C21] font-bold">1. Self-Serve Subscriptions &amp; Zero Lock-In:</strong> RubricWard Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), and Tier 3 6-File .ZIP Compiler ($1,499/mo) plans bill monthly or annually via Stripe and may be upgraded, downgraded, or cancelled at any time in 1 click via the <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E] font-bold underline">Client Portal</a>.</p>
+        <p><strong class="text-[#071C21] font-bold">1. Self-Serve Subscriptions &amp; Zero Lock-In:</strong> RubricWard Tier 1 ($249/mo), Tier 2 Autopilot ($599/mo), and Tier 3 6-File .ZIP Compiler ($1,499/mo) plans bill monthly or annually via Stripe and may be upgraded, downgraded, or cancelled at any time in 1 click via the <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E] font-bold underline">Client Portal</a>.</p>
         <p><strong class="text-[#071C21] font-bold">2. Full Ownership of Compiled Claim &amp; IDR Packages:</strong> You retain 100% ownership and unrestricted commercial rights to all 6-File OpenXML (<code class="font-bold">.DOCX</code> and <code class="font-bold">.XLSX</code>) Commercial TiC MRF rate workbooks, Medicare MPFS RVU schedules, ERISA 29 CFR 2560.503-1 appeal briefs, NSA 45 CFR 149.510 IDR briefs, and JSON manifests compiled through RubricWard.</p>
         <p><strong class="text-[#071C21] font-bold">3. Independent Clinical &amp; Revenue Cycle Verification:</strong> RubricWard automates payer Clinical Policy Bulletin shredding, Commercial TiC MRF allowed-amount benchmarking, and Medicare MPFS RVU/GPCI lookups from public federal and state regulatory filings. Final coding, claim submission, and arbitration filings remain the responsibility of the healthcare provider's revenue cycle and compliance team.</p>
       </div>
@@ -2247,7 +2247,7 @@
       const tierEl = document.getElementById('wb-cfo-tier');
       const outEl = document.getElementById('wb-cfo-output');
       const company = coEl && coEl.value.trim() ? coEl.value.trim() : 'Lone Star Orthopedic & Spine Surgery Center LLC';
-      const tier = tierEl ? tierEl.value : 'Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr)';
+      const tier = tierEl ? tierEl.value : 'Tier 2 — RubricWard Autopilot ($599/mo or $5,390/yr)';
       const isTier3 = tier.includes('Tier 3');
       const isTier4 = tier.includes('Tier 4');
       const savedHrs = isTier4 ? 220 : (isTier3 ? 145 : 95);
@@ -2344,10 +2344,10 @@
       const sl2 = document.getElementById('stripe-link-tier2');
       const sl3 = document.getElementById('stripe-link-tier3');
       const sl4 = document.getElementById('stripe-link-tier4');
-      if (t1) t1.textContent = isAnnual ? '$1,990 / yr' : '$199 / mo';
-      if (t2) t2.textContent = isAnnual ? '$4,490 / yr' : '$499 / mo';
-      if (t3) t3.textContent = isAnnual ? '$14,900 / yr' : '$1,499 / mo';
-      if (t4) t4.textContent = isAnnual ? '$24,900 / yr' : '$2,499 / mo';
+      if (t1) t1.textContent = isAnnual ? '$2,240 / yr' : '$249 / mo';
+      if (t2) t2.textContent = isAnnual ? '$5,390 / yr' : '$599 / mo';
+      if (t3) t3.textContent = isAnnual ? '$13,490 / yr' : '$1,499 / mo';
+      if (t4) t4.textContent = isAnnual ? '$26,990 / yr' : '$2,999 / mo';
       const k1 = isAnnual ? 'tier1_annual' : 'tier1_monthly';
       const k2 = isAnnual ? 'tier2_annual' : 'tier2_monthly';
       const k3 = isAnnual ? 'tier3_annual' : 'tier3_monthly';
@@ -2379,14 +2379,14 @@
       closeTrustModals();
       window.ACTIVE_CHECKOUT_TIER = tierKey || 'tier2_monthly';
       const catalog = {
-        tier1_monthly: { name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$199 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
-        tier1_annual: { name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$1,990 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
-        tier2_monthly: { name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$499 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
-        tier2_annual: { name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$4,490 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier1_monthly: { name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$249 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier1_annual: { name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$2,240 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier2_monthly: { name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$599 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier2_annual: { name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$5,390 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
         tier3_monthly: { name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Monthly)', price: '$1,499 / month', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
-        tier3_annual: { name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$14,900 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
-        tier4_monthly: { name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,499 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
-        tier4_annual: { name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$24,900 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }
+        tier3_annual: { name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$13,490 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier4_monthly: { name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,999 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier4_annual: { name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$26,990 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }
       };
       const info = catalog[window.ACTIVE_CHECKOUT_TIER] || catalog.tier2_monthly;
       const modal = document.getElementById('rubricward-checkout-modal');
@@ -2709,7 +2709,7 @@
       const savedHrs = Math.round(bids * hrs * 0.85);
       const monthlySavedUsd = Math.round(savedHrs * rate);
       const annualSavedUsd = monthlySavedUsd * 12;
-      const roiMult = (monthlySavedUsd / 499).toFixed(1);
+      const roiMult = (monthlySavedUsd / 599).toFixed(1);
       const oHrs = document.getElementById('roi-out-hours');
       const oMo = document.getElementById('roi-out-monthly');
       const oYr = document.getElementById('roi-out-annual');
@@ -2717,7 +2717,7 @@
       if (oHrs) oHrs.textContent = savedHrs + ' hrs / mo';
       if (oMo) oMo.textContent = '$' + monthlySavedUsd.toLocaleString() + ' / mo';
       if (oYr) oYr.textContent = '$' + annualSavedUsd.toLocaleString() + ' / yr';
-      if (oMult) oMult.textContent = roiMult + 'x ROI vs. $499/mo Tier 2';
+      if (oMult) oMult.textContent = roiMult + 'x ROI vs. $599/mo Tier 2';
     }
 
     function filterApiCatalog(query) {
@@ -3370,7 +3370,7 @@
       // 1a. Conversational Greetings
       if (/^(hi|hello|hey|howdy|greetings|good\s+(morning|afternoon|evening)|yo|sup|start)[!.?\s]*$/i.test(ql)) {
         return {
-          text: "Hello! Welcome to the RubricWard AI Payer MRF, NSA IDR & Support Concierge. How can I help your revenue cycle or managed care team today?\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\n• Benchmark Commercial Payer TiC MRF allowed amounts (25th / Median QPA / 75th percentiles) and peer EIN/NPI contract spreads across all 52 portals\n• Compare ClaimWire Pro ($199/mo), RubricWard Autopilot ($499/mo), 6-File .ZIP Compiler ($1,499/mo), and Enterprise OEM ($2,499/mo)\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our Payer MRF APIs & MCP server",
+          text: "Hello! Welcome to the RubricWard AI Payer MRF, NSA IDR & Support Concierge. How can I help your revenue cycle or managed care team today?\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\n• Benchmark Commercial Payer TiC MRF allowed amounts (25th / Median QPA / 75th percentiles) and peer EIN/NPI contract spreads across all 52 portals\n• Compare ClaimWire Pro ($249/mo), RubricWard Autopilot ($599/mo), 6-File .ZIP Compiler ($1,499/mo), and Enterprise OEM ($2,999/mo)\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our Payer MRF APIs & MCP server",
           ctaLabel: 'Compare Pricing Plans',
           ctaFn: function() { closeTrustModals(); switchSpaView('checkout'); },
           actions: [
@@ -3615,7 +3615,7 @@
       // 13. Plans, Pricing & REST/MCP API Keys
       if (/price|pricing|cost|how\s+much|tier\s*[1234]|plan|subscription|monthly|annual|mcp|api\s+key|rw_live|cd_live|rest\s+api/i.test(ql)) {
         return {
-          text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\n• Tier 1 — ClaimWire Pro ($199/mo or $1,990/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\n• Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\n• Tier 4 — Health System & RCM OEM ($2,499/mo or $24,900/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
+          text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\n• Tier 1 — ClaimWire Pro ($249/mo or $1,990/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\n• Tier 2 — RubricWard Autopilot ($599/mo or $5,390/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $13,490/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\n• Tier 4 — Health System & RCM OEM ($2,999/mo or $26,990/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
           ctaLabel: 'Compare Pricing Plans',
           ctaFn: function() { closeTrustModals(); switchSpaView('checkout'); },
           actions: [
@@ -3628,7 +3628,7 @@
 
       // 14. Clean Default Fallback
       return {
-        text: "I am RubricWard's Autonomous AI Payer MRF, NSA IDR & Support Concierge. Here is what I can help you with right now:\n• 50-State Commercial Payer TiC MRF & NSA IDR Benchmarks: Ask about any State DOI/APCD portal or benchmark 25th, 50th (Median QPA), and 75th percentile negotiated rates for CPT, APC, and MS-DRG codes.\n• 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Packages: Inspect or download a live sample .ZIP containing native Word & Excel workbooks with live =ROUND(D6*G6,2) and =SUM() formulas, Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, and Federal NSA 45 CFR 149.510 IDR briefs.\n• Self-Serve Account, API & Billing: Compare Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), Tier 3 .ZIP Compiler ($1,499/mo), and Tier 4 OEM ($2,499/mo), retrieve your rw_live_... API/MCP key, download B2B tax receipts, or cancel in 1 click.",
+        text: "I am RubricWard's Autonomous AI Payer MRF, NSA IDR & Support Concierge. Here is what I can help you with right now:\n• 50-State Commercial Payer TiC MRF & NSA IDR Benchmarks: Ask about any State DOI/APCD portal or benchmark 25th, 50th (Median QPA), and 75th percentile negotiated rates for CPT, APC, and MS-DRG codes.\n• 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Packages: Inspect or download a live sample .ZIP containing native Word & Excel workbooks with live =ROUND(D6*G6,2) and =SUM() formulas, Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, and Federal NSA 45 CFR 149.510 IDR briefs.\n• Self-Serve Account, API & Billing: Compare Tier 1 ($249/mo), Tier 2 Autopilot ($599/mo), Tier 3 .ZIP Compiler ($1,499/mo), and Tier 4 OEM ($2,999/mo), retrieve your rw_live_... API/MCP key, download B2B tax receipts, or cancel in 1 click.",
         ctaLabel: 'Compare Plans & Workbench',
         ctaFn: function() { closeTrustModals(); switchSpaView('checkout'); },
         actions: [
@@ -3924,7 +3924,7 @@
         closeTrustModals();
         switchSpaView('lettings');
         renderLettingsRoute('#' + rawHash);
-      } else if (['zip-package-inspector', 'roi-calculator', 'sample-lead-magnet', 'capture-moat', 'before-after-comparison', 'interactive-state-shredder', 'contract-directory', 'coverage', 'persona-quickstart-bar', 'product-5stage-stepper', 'hero-metrics-strip'].includes(rawHash)) {
+      } else if (['zip-package-inspector', 'roi-calculator', 'sample-lead-magnet', 'capture-moat', 'master-plan-roadmap', 'before-after-comparison', 'interactive-state-shredder', 'contract-directory', 'coverage', 'persona-quickstart-bar', 'product-5stage-stepper', 'hero-metrics-strip'].includes(rawHash)) {
         closeTrustModals();
         navigateToOverviewSection(rawHash);
       } else if (['integrations', 'contractor-profile-vault', 'api-studio-playground', 'mcp-integration-hub'].includes(rawHash)) {

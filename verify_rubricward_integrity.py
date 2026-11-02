@@ -449,10 +449,10 @@ def check_tier_value_prop_and_capture_moat_parity() -> List[str]:
         'id="checkout-card-tier2"',
         'id="checkout-card-tier3"',
         'id="checkout-card-tier4"',
-        "$199 / mo",
-        "$499 / mo",
+        "$249 / mo",
+        "$599 / mo",
         "$1,499 / mo",
-        "$2,499 / mo",
+        "$2,999 / mo",
         "All 12 individual RubricWard microservices",
         "https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
         "https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
@@ -797,11 +797,11 @@ try {
     throw new Error('openApiSandbox / executeSandboxCall failed to populate response preview');
   }
   sandbox.setCheckoutBilling('annual');
-  if (elements['price-tier2'].textContent !== '$4,490 / yr') {
+  if (elements['price-tier2'].textContent !== '$5,390 / yr') {
     throw new Error('setCheckoutBilling(annual) failed: ' + elements['price-tier2'].textContent);
   }
   sandbox.setCheckoutBilling('monthly');
-  if (elements['price-tier2'].textContent !== '$499 / mo') {
+  if (elements['price-tier2'].textContent !== '$599 / mo') {
     throw new Error('setCheckoutBilling(monthly) failed: ' + elements['price-tier2'].textContent);
   }
   sandbox.selectInteractiveDossier('CA');
@@ -1316,6 +1316,38 @@ def check_master_plan_and_domain_native_depth() -> List[str]:
             crows = list(csv.DictReader(cf))
             if len(crows) < 200:
                 errors.append(f"[RULE-024] `campaign_leads.csv` has {len(crows)} rows (expected >= 200)")
+
+    # RULE-025: Website Differentiation, 52-Portal Full Seed Table, Zero Construction JSON Leakage & Master-Plan Roadmap
+    for html_name in ("index.html", "apis.html"):
+        hp = os.path.join(BASE_DIR, html_name)
+        if os.path.exists(hp):
+            htxt = open(hp, "r", encoding="utf-8").read()
+            for forbidden_const_key in (
+                '"liquidated_damages_usd_per_day"',
+                '"retainage_pct"',
+                '"wh347_certified_payroll_ready"',
+                '"baba_compliant"',
+                '"iron_steel_100pct_us_melted"',
+                '"contractor_emr"',
+                '"winning_low_avg_usd"',
+                '"recommended_target_bid_usd"',
+                '"contract_dbe_goal_pct"',
+                '"active_lettings_count": 12',
+                '"count": 12',
+            ):
+                if forbidden_const_key in htxt:
+                    errors.append(f"[RULE-025] `{html_name}` contains leftover construction/partial-seed JSON token `{forbidden_const_key}`")
+            if html_name == "index.html":
+                if 'id="master-plan-roadmap"' not in htxt:
+                    errors.append("[RULE-025] `index.html` missing `<section id=\"master-plan-roadmap\">` Master Plan Phase & Unicorn Roadmap section")
+                if "52 PREVIEW MRF COHORTS SHOWN" not in htxt:
+                    errors.append("[RULE-025] `index.html` `#contract-directory` does not display `52 PREVIEW MRF COHORTS SHOWN` (partial 12-row seed is prohibited)")
+                row_count = htxt.count("data-letting-row")
+                if row_count < 52:
+                    errors.append(f"[RULE-025] `index.html` `#contract-directory` renders only {row_count} rows (expected >= 52)")
+                for req_price in ("$249 / mo", "$599 / mo", "$1,499 / mo", "$2,999 / mo"):
+                    if req_price not in htxt:
+                        errors.append(f"[RULE-025] `index.html` missing master-plan pricing `{req_price}`")
     return errors
 
 

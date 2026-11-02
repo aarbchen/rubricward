@@ -25,7 +25,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "req_sample": {
             "project_id": "TXDOI-MRF-CPT-29881-DFW",
             "specification_text": "Commercial Payer Clinical Policy Bulletin CPB-0592: CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty require 6 weeks documented conservative physical therapy, Kellgren-Lawrence Grade >= 3 imaging, and prior authorization. Timely filing: 90 days.",
-            "state_dot": "TX",
+            "state_payer_market": "TX",
         },
         "res_sample": {
             "status": "success",
@@ -36,8 +36,8 @@ APIS_CATALOG: List[Dict[str, Any]] = [
                 {"spec_section": "LCD-L35094", "item": "Weight-Bearing Radiograph / MRI Report (KL Grade >= 3)", "deadline": "Attach to 837P / 278 Prior Auth"},
                 {"spec_section": "ERISA-503-1", "item": "Peer-to-Peer Clinical Review & Level-I Appeal Window", "deadline": "180 Calendar Days from EOB/ERA"},
             ],
-            "liquidated_damages_usd_per_day": 180.0,
-            "retainage_pct": 14.5,
+            "timely_filing_window_days": 180,
+            "underpayment_recovery_gap_pct": 14.5,
         },
     },
     {
@@ -51,7 +51,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "connect_to_tier2": True,
         "summary": "Benchmarks CPT, HCPCS, APC, and MS-DRG codes against CMS Transparency in Coverage (45 CFR 147.212) commercial payer Machine-Readable Files (MRFs) to compute 25th, 50th (Median QPA), and 75th percentile negotiated rates.",
         "req_sample": {
-            "state_dot": "TX",
+            "state_payer_market": "TX",
             "district": "Dallas-Fort Worth MSA (Locality 04412-11)",
             "pay_items": [
                 {"item_code": "CPT-29881", "description": "Knee Arthroscopy, Surgical, with Meniscectomy (ASC + Pro)", "unit": "CLAIM", "quantity": 420},
@@ -60,7 +60,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         },
         "res_sample": {
             "status": "success",
-            "state_dot": "TX",
+            "state_payer_market": "TX",
             "historical_lettings_sampled": 384,
             "unit_price_benchmarks": [
                 {"item_code": "CPT-29881", "unit": "CLAIM", "low_25th_usd": 640.00, "median_50th_usd": 1485.00, "recommended_unit_usd": 1890.00, "extended_total_usd": 793800.00},
@@ -92,7 +92,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
             "status": "success",
             "wage_decision_id": "CMS-MPFS-2026B-TX-04412",
             "county": "Dallas County, TX",
-            "wh347_certified_payroll_ready": True,
+            "mpfs_rvu_gpci_locality_verified": True,
             "craft_rates": [
                 {"craft": "CPT 29881 — Facility ASC Payment Rate (Wage-Adjusted)", "base_hourly_usd": 1124.50, "fringe_hourly_usd": 360.50, "loaded_hourly_usd": 1485.00},
                 {"craft": "CPT 29881 — Physician Professional Fee (215% Medicare Target)", "base_hourly_usd": 582.40, "fringe_hourly_usd": 670.10, "loaded_hourly_usd": 1252.50},
@@ -119,7 +119,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
             "status": "success",
             "portals_monitored": 52,
             "states_covered": 50,
-            "active_lettings_count": 12,
+            "active_mrf_cohorts_count": 52,
             "sample_letting": {
                 "project_id": "TXDOI-MRF-CPT-29881-DFW",
                 "agency": "Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index",
@@ -149,8 +149,8 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         },
         "res_sample": {
             "status": "success",
-            "baba_compliant": True,
-            "iron_steel_100pct_us_melted": True,
+            "ncci_ptp_override_supported": True,
+            "modifier_25_59_clinical_defense_ready": True,
             "manufactured_products_domestic_pct": 98.4,
             "de_minimis_waiver_eligible": True,
             "required_certifications": [
@@ -170,7 +170,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "connect_to_tier2": True,
         "summary": "Generates statutory ERISA 29 CFR 2560.503-1 Medical Necessity appeals, external IRO review demands, and peer-reviewed clinical evidence matrices to overturn CO-50, CO-96, and CO-197 prior-authorization denials.",
         "req_sample": {
-            "state_dot": "TX",
+            "state_payer_market": "TX",
             "contract_total_usd": 1845000.0,
             "dbe_goal_pct": 14.5,
             "subcontractor_quotes": [
@@ -199,7 +199,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "summary": "Parses HIPAA X12 835 Electronic Remittance Advice (ERA) files, CARC/RARC adjustment codes (CO-45, CO-50, CO-97, OA-23), and payer fee-schedule variances into a line-item underpayment recovery ledger.",
         "req_sample": {
             "contract_sum_usd": 1845000.0,
-            "retainage_pct": 14.5,
+            "underpayment_recovery_gap_pct": 14.5,
             "line_items": [
                 {"line_no": "CPT-29881", "description": "Knee Arthroscopy Meniscectomy (CARC CO-45 Underpayment Recovery)", "scheduled_value_usd": 793800.0, "completed_pct": 100.0},
                 {"line_no": "CPT-27447", "description": "Total Knee Arthroplasty (CARC CO-50 Medical Necessity Appeal)", "scheduled_value_usd": 1051200.0, "completed_pct": 85.0},
@@ -273,8 +273,8 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "connect_to_tier2": False,
         "summary": "Audits medical group NPPES Type 1/Type 2 NPIs, CMS PECOS enrollment, CAQH ProView attestation currency, and CMS 42 CFR 422.116 time-and-distance specialty network adequacy.",
         "req_sample": {
-            "contractor_emr": 0.98,
-            "trir": 1.1,
+            "provider_billing_compliance_index": 0.98,
+            "oig_audit_variance_index": 1.1,
             "scopes": ["Orthopedic_Surgery_ASC", "Interventional_Pain_Management", "Diagnostic_Imaging_MRI"],
         },
         "res_sample": {
@@ -299,7 +299,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "connect_to_tier2": True,
         "summary": "Analyzes competing regional health systems, ASCs, and specialty medical groups by EIN/NPI inside commercial payer TiC MRF files to quantify your exact contracted rate gap (Money-Left-On-Table %).",
         "req_sample": {
-            "state_dot": "TX",
+            "state_payer_market": "TX",
             "engineers_estimate_usd": 1845000.0,
             "planholders": ["Texas Orthopedic Specialists PA", "Baylor Scott & White Surgicare", "Lonestar ASC LLC"],
         },
@@ -1472,8 +1472,8 @@ def build_site_files() -> None:
         }}
       }}
       const kbInfo = (typeof __STATE_DOT_KB !== 'undefined' ? __STATE_DOT_KB : []).find(x => x.code === detectedState);
-      const gapMatch = rfp_text.match(/(\d+(?:\.\d+)?)\s*%/);
-      const daysMatch = rfp_text.match(/(\d+)\s*(?:\/day|days)/i);
+      const gapMatch = rfp_text.match(/(\\d+(?:\\.\\d+)?)\\s*%/);
+      const daysMatch = rfp_text.match(/(\\d+)\\s*(?:\\/day|days)/i);
       const gapPct = gapMatch ? Number(gapMatch[1]) : 14.5;
       const appealDays = daysMatch ? Number(daysMatch[1]) : 180;
       const zipUrl = 'https://rubricward.com/v1/camber-autopilot/compile-bid-package?state_code=' + encodeURIComponent(detectedState) + '&format=binary';
@@ -1546,7 +1546,7 @@ def build_site_files() -> None:
       const tierEl = document.getElementById('wb-cfo-tier');
       const outEl = document.getElementById('wb-cfo-output');
       const company = coEl && coEl.value.trim() ? coEl.value.trim() : 'Lone Star Orthopedic & Spine Surgery Center LLC';
-      const tier = tierEl ? tierEl.value : 'Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr)';
+      const tier = tierEl ? tierEl.value : 'Tier 2 — RubricWard Autopilot ($599/mo or $5,390/yr)';
       const isTier3 = tier.includes('Tier 3');
       const isTier4 = tier.includes('Tier 4');
       const savedHrs = isTier4 ? 220 : (isTier3 ? 145 : 95);
@@ -1643,10 +1643,10 @@ def build_site_files() -> None:
       const sl2 = document.getElementById('stripe-link-tier2');
       const sl3 = document.getElementById('stripe-link-tier3');
       const sl4 = document.getElementById('stripe-link-tier4');
-      if (t1) t1.textContent = isAnnual ? '$1,990 / yr' : '$199 / mo';
-      if (t2) t2.textContent = isAnnual ? '$4,490 / yr' : '$499 / mo';
-      if (t3) t3.textContent = isAnnual ? '$14,900 / yr' : '$1,499 / mo';
-      if (t4) t4.textContent = isAnnual ? '$24,900 / yr' : '$2,499 / mo';
+      if (t1) t1.textContent = isAnnual ? '$2,240 / yr' : '$249 / mo';
+      if (t2) t2.textContent = isAnnual ? '$5,390 / yr' : '$599 / mo';
+      if (t3) t3.textContent = isAnnual ? '$13,490 / yr' : '$1,499 / mo';
+      if (t4) t4.textContent = isAnnual ? '$26,990 / yr' : '$2,999 / mo';
       const k1 = isAnnual ? 'tier1_annual' : 'tier1_monthly';
       const k2 = isAnnual ? 'tier2_annual' : 'tier2_monthly';
       const k3 = isAnnual ? 'tier3_annual' : 'tier3_monthly';
@@ -1678,14 +1678,14 @@ def build_site_files() -> None:
       closeTrustModals();
       window.ACTIVE_CHECKOUT_TIER = tierKey || 'tier2_monthly';
       const catalog = {{
-        tier1_monthly: {{ name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$199 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier1_annual: {{ name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$1,990 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier2_monthly: {{ name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$499 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier2_annual: {{ name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$4,490 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier1_monthly: {{ name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$249 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier1_annual: {{ name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$2,240 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier2_monthly: {{ name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$599 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier2_annual: {{ name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$5,390 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
         tier3_monthly: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Monthly)', price: '$1,499 / month', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier3_annual: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$14,900 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier4_monthly: {{ name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,499 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier4_annual: {{ name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$24,900 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }}
+        tier3_annual: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$13,490 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier4_monthly: {{ name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,999 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
+        tier4_annual: {{ name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$26,990 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }}
       }};
       const info = catalog[window.ACTIVE_CHECKOUT_TIER] || catalog.tier2_monthly;
       const modal = document.getElementById('rubricward-checkout-modal');
@@ -1784,7 +1784,7 @@ def build_site_files() -> None:
       const webhookUrl = urlInp ? urlInp.value.trim() : '';
       const platform = platSel ? platSel.value : 'slack';
       const email = (__activeClientAccount && __activeClientAccount.email) || (document.getElementById('account-lookup-input') && document.getElementById('account-lookup-input').value.trim()) || 'rcm@medicalgroup.com';
-      if (!webhookUrl || !/^https?:\/\//i.test(webhookUrl)) {{
+      if (!webhookUrl || !/^https?:\\/\\//i.test(webhookUrl)) {{
         if (stEl) {{
           stEl.className = 'font-mono font-bold text-[#991B1B]';
           stEl.textContent = 'Enter a valid HTTPS webhook URL (Slack, Microsoft Teams, Epic, Athena, Waystar, or Discord).';
@@ -2008,7 +2008,7 @@ def build_site_files() -> None:
       const savedHrs = Math.round(bids * hrs * 0.85);
       const monthlySavedUsd = Math.round(savedHrs * rate);
       const annualSavedUsd = monthlySavedUsd * 12;
-      const roiMult = (monthlySavedUsd / 499).toFixed(1);
+      const roiMult = (monthlySavedUsd / 599).toFixed(1);
       const oHrs = document.getElementById('roi-out-hours');
       const oMo = document.getElementById('roi-out-monthly');
       const oYr = document.getElementById('roi-out-annual');
@@ -2016,7 +2016,7 @@ def build_site_files() -> None:
       if (oHrs) oHrs.textContent = savedHrs + ' hrs / mo';
       if (oMo) oMo.textContent = '$' + monthlySavedUsd.toLocaleString() + ' / mo';
       if (oYr) oYr.textContent = '$' + annualSavedUsd.toLocaleString() + ' / yr';
-      if (oMult) oMult.textContent = roiMult + 'x ROI vs. $499/mo Tier 2';
+      if (oMult) oMult.textContent = roiMult + 'x ROI vs. $599/mo Tier 2';
     }}
 
     function filterApiCatalog(query) {{
@@ -2666,7 +2666,7 @@ def build_site_files() -> None:
       // 1a. Conversational Greetings
       if (/^(hi|hello|hey|howdy|greetings|good\\s+(morning|afternoon|evening)|yo|sup|start)[!.?\\s]*$/i.test(ql)) {{
         return {{
-          text: "Hello! Welcome to the RubricWard AI Payer MRF, NSA IDR & Support Concierge. How can I help your revenue cycle or managed care team today?\\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\\n• Benchmark Commercial Payer TiC MRF allowed amounts (25th / Median QPA / 75th percentiles) and peer EIN/NPI contract spreads across all 52 portals\\n• Compare ClaimWire Pro ($199/mo), RubricWard Autopilot ($499/mo), 6-File .ZIP Compiler ($1,499/mo), and Enterprise OEM ($2,499/mo)\\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our Payer MRF APIs & MCP server",
+          text: "Hello! Welcome to the RubricWard AI Payer MRF, NSA IDR & Support Concierge. How can I help your revenue cycle or managed care team today?\\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\\n• Benchmark Commercial Payer TiC MRF allowed amounts (25th / Median QPA / 75th percentiles) and peer EIN/NPI contract spreads across all 52 portals\\n• Compare ClaimWire Pro ($249/mo), RubricWard Autopilot ($599/mo), 6-File .ZIP Compiler ($1,499/mo), and Enterprise OEM ($2,999/mo)\\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our Payer MRF APIs & MCP server",
           ctaLabel: 'Compare Pricing Plans',
           ctaFn: function() {{ closeTrustModals(); switchSpaView('checkout'); }},
           actions: [
@@ -2911,7 +2911,7 @@ def build_site_files() -> None:
       // 13. Plans, Pricing & REST/MCP API Keys
       if (/price|pricing|cost|how\\s+much|tier\\s*[1234]|plan|subscription|monthly|annual|mcp|api\\s+key|rw_live|cd_live|rest\\s+api/i.test(ql)) {{
         return {{
-          text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\\n• Tier 1 — ClaimWire Pro ($199/mo or $1,990/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\\n• Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\\n• Tier 4 — Health System & RCM OEM ($2,499/mo or $24,900/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
+          text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\\n• Tier 1 — ClaimWire Pro ($249/mo or $1,990/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\\n• Tier 2 — RubricWard Autopilot ($599/mo or $5,390/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $13,490/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\\n• Tier 4 — Health System & RCM OEM ($2,999/mo or $26,990/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
           ctaLabel: 'Compare Pricing Plans',
           ctaFn: function() {{ closeTrustModals(); switchSpaView('checkout'); }},
           actions: [
@@ -2924,7 +2924,7 @@ def build_site_files() -> None:
 
       // 14. Clean Default Fallback
       return {{
-        text: "I am RubricWard's Autonomous AI Payer MRF, NSA IDR & Support Concierge. Here is what I can help you with right now:\\n• 50-State Commercial Payer TiC MRF & NSA IDR Benchmarks: Ask about any State DOI/APCD portal or benchmark 25th, 50th (Median QPA), and 75th percentile negotiated rates for CPT, APC, and MS-DRG codes.\\n• 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Packages: Inspect or download a live sample .ZIP containing native Word & Excel workbooks with live =ROUND(D6*G6,2) and =SUM() formulas, Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, and Federal NSA 45 CFR 149.510 IDR briefs.\\n• Self-Serve Account, API & Billing: Compare Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), Tier 3 .ZIP Compiler ($1,499/mo), and Tier 4 OEM ($2,499/mo), retrieve your rw_live_... API/MCP key, download B2B tax receipts, or cancel in 1 click.",
+        text: "I am RubricWard's Autonomous AI Payer MRF, NSA IDR & Support Concierge. Here is what I can help you with right now:\\n• 50-State Commercial Payer TiC MRF & NSA IDR Benchmarks: Ask about any State DOI/APCD portal or benchmark 25th, 50th (Median QPA), and 75th percentile negotiated rates for CPT, APC, and MS-DRG codes.\\n• 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Packages: Inspect or download a live sample .ZIP containing native Word & Excel workbooks with live =ROUND(D6*G6,2) and =SUM() formulas, Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, and Federal NSA 45 CFR 149.510 IDR briefs.\\n• Self-Serve Account, API & Billing: Compare Tier 1 ($249/mo), Tier 2 Autopilot ($599/mo), Tier 3 .ZIP Compiler ($1,499/mo), and Tier 4 OEM ($2,999/mo), retrieve your rw_live_... API/MCP key, download B2B tax receipts, or cancel in 1 click.",
         ctaLabel: 'Compare Plans & Workbench',
         ctaFn: function() {{ closeTrustModals(); switchSpaView('checkout'); }},
         actions: [
@@ -3220,7 +3220,7 @@ def build_site_files() -> None:
         closeTrustModals();
         switchSpaView('lettings');
         renderLettingsRoute('#' + rawHash);
-      }} else if (['zip-package-inspector', 'roi-calculator', 'sample-lead-magnet', 'capture-moat', 'before-after-comparison', 'interactive-state-shredder', 'contract-directory', 'coverage', 'persona-quickstart-bar', 'product-5stage-stepper', 'hero-metrics-strip'].includes(rawHash)) {{
+      }} else if (['zip-package-inspector', 'roi-calculator', 'sample-lead-magnet', 'capture-moat', 'master-plan-roadmap', 'before-after-comparison', 'interactive-state-shredder', 'contract-directory', 'coverage', 'persona-quickstart-bar', 'product-5stage-stepper', 'hero-metrics-strip'].includes(rawHash)) {{
         closeTrustModals();
         navigateToOverviewSection(rawHash);
       }} else if (['integrations', 'contractor-profile-vault', 'api-studio-playground', 'mcp-integration-hub'].includes(rawHash)) {{
@@ -3327,7 +3327,7 @@ def build_site_files() -> None:
           <div class="text-xs font-mono font-bold text-[#0F766E]">SELECTED RUBRICWARD PLAN</div>
           <p id="checkout-modal-plan-desc" class="text-xs font-medium text-[#071C21] mt-0.5">Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals &amp; all 12 APIs.</p>
         </div>
-        <div id="checkout-modal-plan-price" class="text-2xl font-extrabold font-mono text-[#071C21]">$499 / month</div>
+        <div id="checkout-modal-plan-price" class="text-2xl font-extrabold font-mono text-[#071C21]">$599 / month</div>
       </div>
       <form onsubmit="submitCamberSelfServeCheckout(event)" class="space-y-3 text-xs">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -3398,10 +3398,10 @@ def build_site_files() -> None:
             <button type="button" onclick="logoutClientAccount()" class="shrink-0 whitespace-nowrap px-2.5 py-1 rounded bg-white hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-[11px] transition">Sign Out</button>
           </div>
           <div class="flex flex-wrap gap-1.5">
-            <button type="button" id="admin-tier-btn-tier_4" onclick="switchAdminPortalPreview('tier_4')" class="px-2.5 py-1 rounded bg-[#0F766E] text-white font-mono text-[11px] font-bold transition">Tier 4 OEM ($2,499/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_4" onclick="switchAdminPortalPreview('tier_4')" class="px-2.5 py-1 rounded bg-[#0F766E] text-white font-mono text-[11px] font-bold transition">Tier 4 OEM ($2,999/mo)</button>
             <button type="button" id="admin-tier-btn-tier_3" onclick="switchAdminPortalPreview('tier_3')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 3 .ZIP Compiler ($1,499/mo)</button>
-            <button type="button" id="admin-tier-btn-tier_2" onclick="switchAdminPortalPreview('tier_2')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 2 Autopilot ($499/mo)</button>
-            <button type="button" id="admin-tier-btn-tier_1" onclick="switchAdminPortalPreview('tier_1')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 1 Wire ($199/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_2" onclick="switchAdminPortalPreview('tier_2')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 2 Autopilot ($599/mo)</button>
+            <button type="button" id="admin-tier-btn-tier_1" onclick="switchAdminPortalPreview('tier_1')" class="px-2.5 py-1 rounded bg-white hover:bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Tier 1 Wire ($249/mo)</button>
           </div>
         </div>
 
@@ -3661,7 +3661,7 @@ def build_site_files() -> None:
           <div class="space-y-1.5">
             <div class="text-[11px] font-mono font-bold text-[#071C21]">CLICK A COMMON QUESTION OR TYPE YOUR OWN BELOW:</div>
             <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
-              <button type="button" onclick="prefillContactConcierge('plans_and_pricing', 'What is the difference between Tier 1 ($199), Tier 2 Autopilot ($499), Tier 3 6-File .ZIP Compiler ($1,499), and Tier 4 OEM ($2,499)?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Compare All 4 Tiers?</button>
+              <button type="button" onclick="prefillContactConcierge('plans_and_pricing', 'What is the difference between Tier 1 ($249), Tier 2 Autopilot ($599), Tier 3 6-File .ZIP Compiler ($1,499), and Tier 4 OEM ($2,999)?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Compare All 4 Tiers?</button>
               <button type="button" onclick="prefillContactConcierge('billing_and_cancellation', 'How do I pause Payer MRF email alerts, download a corporate receipt, or cancel in 1 click?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">Receipts &amp; 1-Click Cancel?</button>
               <button type="button" onclick="prefillContactConcierge('zip_compiler', 'What is inside the 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">6-File .ZIP Contents?</button>
               <button type="button" onclick="prefillContactConcierge('portal_coverage', 'Which 50 State Payer MRF and Federal CMS NSA IDR portals are monitored?')" class="px-2.5 py-1 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-bold transition">50-State Payer MRF Coverage?</button>
@@ -3673,7 +3673,7 @@ def build_site_files() -> None:
             <div>
               <label for="contact-modal-topic" class="block text-[11px] font-bold text-[#071C21] mb-1">INQUIRY TOPIC</label>
               <select id="contact-modal-topic" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-bold text-[#071C21]">
-                <option value="plans_and_pricing">Plans &amp; Pricing ($199 / $499 / $1,499 / $2,499)</option>
+                <option value="plans_and_pricing">Plans &amp; Pricing ($249 / $599 / $1,499 / $2,999)</option>
                 <option value="billing_and_cancellation">Billing, Receipts &amp; 1-Click Cancel</option>
                 <option value="zip_compiler">6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package</option>
                 <option value="portal_coverage">52 Portals &amp; 50-State Payer MRF Coverage</option>
@@ -3712,7 +3712,7 @@ def build_site_files() -> None:
         <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
       <div class="space-y-3 font-medium text-[#111827] leading-relaxed">
-        <p><strong class="text-[#071C21] font-bold">1. Self-Serve Subscriptions &amp; Zero Lock-In:</strong> RubricWard Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), and Tier 3 6-File .ZIP Compiler ($1,499/mo) plans bill monthly or annually via Stripe and may be upgraded, downgraded, or cancelled at any time in 1 click via the <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E] font-bold underline">Client Portal</a>.</p>
+        <p><strong class="text-[#071C21] font-bold">1. Self-Serve Subscriptions &amp; Zero Lock-In:</strong> RubricWard Tier 1 ($249/mo), Tier 2 Autopilot ($599/mo), and Tier 3 6-File .ZIP Compiler ($1,499/mo) plans bill monthly or annually via Stripe and may be upgraded, downgraded, or cancelled at any time in 1 click via the <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E] font-bold underline">Client Portal</a>.</p>
         <p><strong class="text-[#071C21] font-bold">2. Full Ownership of Compiled Claim &amp; IDR Packages:</strong> You retain 100% ownership and unrestricted commercial rights to all 6-File OpenXML (<code class="font-bold">.DOCX</code> and <code class="font-bold">.XLSX</code>) Commercial TiC MRF rate workbooks, Medicare MPFS RVU schedules, ERISA 29 CFR 2560.503-1 appeal briefs, NSA 45 CFR 149.510 IDR briefs, and JSON manifests compiled through RubricWard.</p>
         <p><strong class="text-[#071C21] font-bold">3. Independent Clinical &amp; Revenue Cycle Verification:</strong> RubricWard automates payer Clinical Policy Bulletin shredding, Commercial TiC MRF allowed-amount benchmarking, and Medicare MPFS RVU/GPCI lookups from public federal and state regulatory filings. Final coding, claim submission, and arbitration filings remain the responsibility of the healthcare provider's revenue cycle and compliance team.</p>
       </div>
@@ -3882,7 +3882,7 @@ def build_site_files() -> None:
           <strong class="text-[#071C21] font-bold">RubricWard</strong> unifies all 50 U.S. State DOI/APCD and CMS Transparency in Coverage (TiC) Machine-Readable Files, shreds payer Clinical Policy Bulletins (CPBs), models 25th/50th/75th-percentile CPT/DRG negotiated rates (<code class="text-[#0F766E] font-bold">% of Medicare</code>, <code class="text-[#0F766E] font-bold">QPA Median</code>, <code class="text-[#0F766E] font-bold">RVU/GPCI</code>), and compiles an audit-ready <strong class="text-[#0F766E] font-bold">6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package</strong> in 1 click.
         </p>
         <div class="flex flex-wrap gap-4 pt-2">
-          <a href="#checkout" onclick="switchSpaView('checkout')" class="px-6 py-3 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-sm transition">Activate RubricWard Autopilot ($499/mo)</a>
+          <a href="#checkout" onclick="switchSpaView('checkout')" class="px-6 py-3 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-sm transition">Activate RubricWard Autopilot ($599/mo)</a>
           <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary" class="px-6 py-3 rounded-xl bg-[#E6F4F1] hover:bg-[#CCFBF1] text-[#0F766E] border-2 border-[#0F766E] font-bold text-sm transition">Download Live 6-File .ZIP Sample</a>
           <a href="#apis" onclick="switchSpaView('apis')" class="px-6 py-3 rounded-xl bg-white hover:bg-[#DDF0EC] text-[#071C21] border-2 border-[#071C21] font-bold text-sm transition">Explore 12 Payer MRF APIs &amp; MCP</a>
         </div>
@@ -4027,9 +4027,64 @@ def build_site_files() -> None:
             <tr class="border-b border-[#B4D6D0]"><td class="py-2.5 px-3 font-bold text-[#071C21]">CMS Medicare MPFS RVU &amp; GPCI Baselines</td><td class="py-2.5 px-3">Manual CMS RVU lookup &amp; locality GPCI spreadsheet math</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Locality-matched Work/PE/MP RVU + GPCI + ASC grouper rate (API #03)</td></tr>
             <tr class="border-b border-[#B4D6D0]"><td class="py-2.5 px-3 font-bold text-[#071C21]">CMS NCCI Edits &amp; ERISA 29 CFR 2560.503-1 Appeals</td><td class="py-2.5 px-3">Generic template letters; high CO-45 / CO-50 / CO-97 denial write-offs</td><td class="py-2.5 px-3 font-bold text-[#065F46]">Automated NCCI Modifier 25/59 audit &amp; statutory ERISA appeal brief (API #05/#06)</td></tr>
             <tr class="border-b border-[#B4D6D0]"><td class="py-2.5 px-3 font-bold text-[#071C21]">RCM &amp; IDR Deliverable Format</td><td class="py-2.5 px-3">Unstructured PDF files</td><td class="py-2.5 px-3 font-bold text-[#0F766E]">1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas)</td></tr>
-            <tr><td class="py-2.5 px-3 font-bold text-[#071C21]">Pricing &amp; Contract Terms</td><td class="py-2.5 px-3">$12,000–$18,000/yr mandatory annual seat lock-in</td><td class="py-2.5 px-3 font-bold text-[#071C21]">$199–$499/mo self-serve, REST + MCP API included, cancel anytime</td></tr>
+            <tr><td class="py-2.5 px-3 font-bold text-[#071C21]">Pricing &amp; Contract Terms</td><td class="py-2.5 px-3">$12,000–$18,000/yr mandatory annual seat lock-in</td><td class="py-2.5 px-3 font-bold text-[#071C21]">$249–$599/mo self-serve, REST + MCP API included, cancel anytime</td></tr>
           </tbody>
         </table>
+      </div>
+    </section>
+
+    <!-- Section: Master Plan Execution Phase & 4-Phase Unicorn Stage-Gate Architecture (#master-plan-roadmap) -->
+    <section id="master-plan-roadmap" class="p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-sm space-y-6">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-[#B4D6D0] pb-4">
+        <div>
+          <div class="text-xs font-mono font-bold text-[#065F46]">// RUBRICWARD MASTER PLAN ARCHITECTURE &bull; PHASE 1 LIVE SEED ENGINE ACTIVE</div>
+          <h2 class="text-2xl font-extrabold text-[#071C21] mt-0.5">From 50-State Commercial Payer MRF &amp; NSA IDR Autopilot to the Autonomous Healthcare Underpayment Clearinghouse</h2>
+        </div>
+        <span class="px-3 py-1.5 rounded-lg bg-[#ECFDF5] border border-[#065F46] text-xs font-mono font-extrabold text-[#065F46]">CURRENT POSTURE: PHASE 1 LIVE (52 PORTALS &bull; 12 APIS)</span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center font-mono">
+        <div class="p-3.5 rounded-xl bg-[#EAF5F3] border border-[#B4D6D0]">
+          <div class="text-[11px] font-bold text-[#0F766E]">PAYER MRF &amp; IDR PORTALS</div>
+          <div class="text-xl font-extrabold text-[#071C21] mt-1">52 Portals Live</div>
+          <div class="text-[11px] font-semibold text-[#065F46] mt-0.5">50 State DOI/APCD + CMS + NSA</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#EAF5F3] border border-[#B4D6D0]">
+          <div class="text-[11px] font-bold text-[#0F766E]">CPT / DRG MRF DOSSIERS</div>
+          <div class="text-xl font-extrabold text-[#071C21] mt-1">52 Live Cohorts</div>
+          <div class="text-[11px] font-semibold text-[#065F46] mt-0.5">25th / Median QPA / 75th-Pct</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#EAF5F3] border border-[#B4D6D0]">
+          <div class="text-[11px] font-bold text-[#0F766E]">OPENXML APPEAL COMPILER</div>
+          <div class="text-xl font-extrabold text-[#071C21] mt-1">6-File .ZIP Suite</div>
+          <div class="text-[11px] font-semibold text-[#065F46] mt-0.5">ERISA 29 CFR 2560 &amp; NSA 45 CFR</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#EAF5F3] border border-[#B4D6D0]">
+          <div class="text-[11px] font-bold text-[#0F766E]">HEALTHCARE RCM APIS</div>
+          <div class="text-xl font-extrabold text-[#071C21] mt-1">12 REST &amp; MCP APIs</div>
+          <div class="text-[11px] font-semibold text-[#065F46] mt-0.5">TiC MRF, MPFS RVU, NCCI &amp; 835</div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-[#ECFDF5] border-2 border-[#065F46] space-y-2">
+          <div class="flex items-center justify-between font-mono font-extrabold text-[#065F46]"><span>PHASE 01 // SEED ENGINE</span><span class="px-2 py-0.5 rounded bg-[#065F46] text-white text-[10px]">LIVE NOW</span></div>
+          <h3 class="text-sm font-extrabold text-[#071C21]">52-Portal Payer MRF Benchmark &amp; 6-File ERISA/NSA Compiler</h3>
+          <p class="text-[#111827] font-medium leading-relaxed">Automated commercial payer TiC MRF rate benchmarking (UHC, Anthem, BCBS, Aetna, Cigna), CMS Medicare MPFS RVU/GPCI locality math, and 1-click 6-File OpenXML (.DOCX + .XLSX) ERISA &amp; No Surprises Act IDR packages.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[#EAF5F3] border border-[#B4D6D0] space-y-2">
+          <div class="flex items-center justify-between font-mono font-bold text-[#0F766E]"><span>PHASE 02 // SCALE ENGINE</span><span class="px-2 py-0.5 rounded bg-[#DDF0EC] text-[#071C21] text-[10px]">STAGE-GATE 2</span></div>
+          <h3 class="text-sm font-extrabold text-[#071C21]">Terabyte Payer TiC MRF Lakehouse &amp; Automated EDI 835 SFTP</h3>
+          <p class="text-[#111827] font-medium leading-relaxed">Indexed DuckDB/Parquet lakehouse across multi-terabyte monthly Payer TiC MRF Table-of-Contents streams paired with automated nightly HIPAA X12 835 ERA remittance ingestion from Waystar, Availity, and Change Healthcare.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[#EAF5F3] border border-[#B4D6D0] space-y-2">
+          <div class="flex items-center justify-between font-mono font-bold text-[#0F766E]"><span>PHASE 03 // NETWORK MOAT</span><span class="px-2 py-0.5 rounded bg-[#DDF0EC] text-[#071C21] text-[10px]">STAGE-GATE 3</span></div>
+          <h3 class="text-sm font-extrabold text-[#071C21]">Direct Federal CMS NSA IDR Auto-Docketing &amp; Recovery Loop</h3>
+          <p class="text-[#111827] font-medium leading-relaxed">Automated 30-business-day Open Negotiation tracking, 4-business-day Certified IDRE Notice of IDR Initiation submission on the Federal NSA portal, and optional 8%–12% contingency recovery share on overturned denials.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-[#EAF5F3] border border-[#B4D6D0] space-y-2">
+          <div class="flex items-center justify-between font-mono font-bold text-[#0F766E]"><span>PHASE 04 // FINTECH UNICORN</span><span class="px-2 py-0.5 rounded bg-[#DDF0EC] text-[#071C21] text-[10px]">STAGE-GATE 4</span></div>
+          <h3 class="text-sm font-extrabold text-[#071C21]">Actuarial Medical Underpayment &amp; NSA IDR Award Factoring</h3>
+          <p class="text-[#111827] font-medium leading-relaxed">Instant non-recourse liquidity advances on high-probability ERISA Level-I/II appeals, State Prompt-Pay statutory interest claims, and binding Federal NSA IDR arbitration awards for ASCs and surgical groups.</p>
+        </div>
       </div>
     </section>
 
@@ -4130,7 +4185,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           <div class="p-3 rounded-lg bg-white border border-[#B4D6D0]"><div class="text-[11px] font-bold text-[#071C21]">RCM ANALYST HRS SAVED</div><div id="roi-out-hours" class="text-lg font-extrabold text-[#0F766E] mt-1">95 hrs / mo</div></div>
           <div class="p-3 rounded-lg bg-white border border-[#B4D6D0]"><div class="text-[11px] font-bold text-[#071C21]">MONTHLY PAYROLL SAVED</div><div id="roi-out-monthly" class="text-lg font-extrabold text-[#065F46] mt-1">$10,925 / mo</div></div>
           <div class="p-3 rounded-lg bg-white border border-[#B4D6D0]"><div class="text-[11px] font-bold text-[#071C21]">ANNUAL PAYROLL SAVED</div><div id="roi-out-annual" class="text-lg font-extrabold text-[#071C21] mt-1">$131,100 / yr</div></div>
-          <div class="p-3 rounded-lg bg-[#ECFDF5] border border-[#6EE7B7]"><div class="text-[11px] font-bold text-[#065F46]">NET RETURN MULTIPLE</div><div id="roi-out-multiple" class="text-lg font-extrabold text-[#065F46] mt-1">21.9x ROI vs. $499/mo Tier 2</div></div>
+          <div class="p-3 rounded-lg bg-[#ECFDF5] border border-[#6EE7B7]"><div class="text-[11px] font-bold text-[#065F46]">NET RETURN MULTIPLE</div><div id="roi-out-multiple" class="text-lg font-extrabold text-[#065F46] mt-1">18.2x ROI vs. $599/mo Tier 2</div></div>
         </div>
       </div>
     </section>
@@ -4222,7 +4277,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       <div id="checkout-card-tier1" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="text-xs font-mono font-bold text-[#071C21]">TIER 1 // CLAIMWIRE PRO</div>
-          <div id="price-tier1" class="text-3xl font-extrabold text-[#071C21]">$199 / mo</div>
+          <div id="price-tier1" class="text-3xl font-extrabold text-[#071C21]">$249 / mo</div>
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Real-time 50-State Commercial Payer TiC MRF rate alerts, CMS NSA IDR updates &amp; peer EIN/NPI tracking.</p>
         </div>
         <div class="space-y-2">
@@ -4234,7 +4289,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       <div id="checkout-card-tier2" class="p-6 rounded-2xl bg-white border-2 border-[#071C21] shadow-md flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="text-xs font-mono font-bold text-[#0F766E]">TIER 2 // RUBRICWARD AUTOPILOT (RECOMMENDED)</div>
-          <div id="price-tier2" class="text-3xl font-extrabold text-[#071C21]">$499 / mo</div>
+          <div id="price-tier2" class="text-3xl font-extrabold text-[#071C21]">$599 / mo</div>
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and API key for all 12 microservices.</p>
         </div>
         <div class="space-y-2">
@@ -4258,7 +4313,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       <div id="checkout-card-tier4" class="p-6 rounded-2xl bg-white border border-[#B4D6D0] shadow-sm flex flex-col justify-between space-y-4">
         <div class="space-y-3">
           <div class="text-xs font-mono font-bold text-[#071C21]">TIER 4 // HEALTH SYSTEM &amp; RCM OEM</div>
-          <div id="price-tier4" class="text-3xl font-extrabold text-[#071C21]">$2,499 / mo</div>
+          <div id="price-tier4" class="text-3xl font-extrabold text-[#071C21]">$2,999 / mo</div>
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Multi-TIN health system &amp; MSO rate intelligence, Epic/Athena/Waystar webhook pipes, custom SLA &amp; unlimited RCM seats.</p>
         </div>
         <div class="space-y-2">
@@ -4323,9 +4378,10 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         </div>
         <pre id="wb-vault-output" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] font-mono font-medium text-[#064E3B] overflow-x-auto leading-relaxed">{{
   "state_payer_portal": "TX — TX DOI & APCD MRF",
-  "pay_item": "CPT 29881 — Knee Arthroscopy &amp; Meniscectomy (ASC + Pro)",
-  "winning_low_avg_usd": 109.8,
-  "recommended_target_bid_usd": 113.4
+  "cpt_drg_code": "CPT 29881 — Knee Arthroscopy &amp; Meniscectomy (ASC + Pro)",
+  "mrf_25th_percentile_usd": 920.70,
+  "mrf_50th_median_qpa_usd": 1485.00,
+  "recommended_75th_pct_target_usd": 1885.95
 }}</pre>
       </div>
 
@@ -4341,7 +4397,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         </div>
         <pre id="wb-dbe-output" class="p-3.5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] font-mono font-medium text-[#064E3B] overflow-x-auto leading-relaxed">{{
   "state_payer_directory": "TX — TX DOI & APCD MRF Directory",
-  "contract_dbe_goal_pct": 9.5,
+  "target_underpayment_recovery_pct": 14.8,
   "statutory_appeal_authority": "VERIFIED — ERISA 29 CFR 2560.503-1, CMS TiC 45 CFR 147.212 & Federal NSA 45 CFR 149.510",
   "idr_arbitration_readiness_status": "PASS — Exceeds Target Recovery Floor (+4.8% MRF Evidence Buffer)"
 }}</pre>
@@ -4353,9 +4409,9 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           <label class="block font-mono font-bold text-[#071C21]">GENERATE EXECUTIVE ROI &amp; PO JUSTIFICATION MEMO</label>
           <input id="wb-cfo-company" type="text" placeholder="Lone Star Orthopedic &amp; Spine Surgery Center LLC" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21] placeholder-[#1E293B]" />
           <select id="wb-cfo-tier" class="w-full px-3 py-2 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] font-bold text-[#071C21]">
-            <option value="Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr)">Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr)</option>
-            <option value="Tier 3 — 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr)">Tier 3 — 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr)</option>
-            <option value="Tier 4 — Health System & RCM OEM ($2,499/mo or $24,900/yr)">Tier 4 — Health System &amp; RCM OEM ($2,499/mo or $24,900/yr)</option>
+            <option value="Tier 2 — RubricWard Autopilot ($599/mo or $5,390/yr)">Tier 2 — RubricWard Autopilot ($599/mo or $5,390/yr)</option>
+            <option value="Tier 3 — 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $13,490/yr)">Tier 3 — 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $13,490/yr)</option>
+            <option value="Tier 4 — Health System & RCM OEM ($2,999/mo or $26,990/yr)">Tier 4 — Health System &amp; RCM OEM ($2,999/mo or $26,990/yr)</option>
           </select>
           <button type="button" onclick="generateCfoProcurementQuote()" class="px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono font-bold">Generate CFO Approval Memo</button>
         </div>

@@ -5,7 +5,7 @@ Polls for unread RCM/Medical Group replies (via Instantly.ai V2 `/api/v2/emails`
 classifies each reply with `claude-sonnet-5-5` (after stripping quoted email history via `_strip_quoted_thread()`),
 automatically answers specific Managed Care / RCM questions or `"SEND ZIP"` requests with the group's live Payer MRF & NSA IDR dossier,
 the 1-Click 6-File OpenXML (.DOCX + .XLSX) Payer MRF & NSA IDR `.ZIP` download link, and pre-filled `?co=&state=&email=`
-self-serve Stripe Checkout deep-links (`Tier 1 $199/mo`, `Tier 2 $499/mo`, `Tier 3 $1,499/mo`),
+self-serve Stripe Checkout deep-links (`Tier 1 $249/mo`, `Tier 2 $599/mo`, `Tier 3 $1,499/mo`),
 dispatches automated 48h and 96h post-`.ZIP` follow-up nudges via `warm_zip_followup_ledger.json`,
 and permanently purges/archives any `UNSUBSCRIBE` requests.
 Strictly enforces 3-way sender mailbox isolation (`*rubricward*` only; never responds to `*signaltender*` or `*camberdesk*`).
@@ -247,7 +247,7 @@ def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str 
                         "Directly answer the revenue cycle director's question in 2-3 concise plain-text sentences (no markdown asterisks or hashtags). "
                         "Facts: RubricWard indexes all 50 U.S. State Commercial Payer TiC Machine-Readable Files (UHC, Anthem/Elevance, Aetna, Cigna, BCBS) + CMS CY2026 MPFS/OPPS/ASC RVU & GPCI locality schedules + Federal No Surprises Act (45 CFR 149.510) IDR arbitration benchmarks (52 portals total), "
                         "and compiles 6-File OpenXML (.DOCX ERISA 29 CFR 2560.503-1 / NSA IDR briefs + .XLSX MRF QPA & RVU parity models with live =ROUND(D6*G6,2) and =SUM() formulas) compatible with Epic Resolute, Athenahealth, Waystar, and Excel. "
-                        "Plans: Tier 1 MRF & RVU Wire ($199/mo), Tier 2 Payer MRF & NSA IDR Autopilot ($499/mo), Tier 3 Unlimited 6-File .ZIP Appeal & IDR Compiler ($1,499/mo)."
+                        "Plans: Tier 1 MRF & RVU Wire ($249/mo), Tier 2 Payer MRF & NSA IDR Autopilot ($599/mo), Tier 3 Unlimited 6-File .ZIP Appeal & IDR Compiler ($1,499/mo)."
                     ),
                     "messages": [{"role": "user", "content": f"Revenue Cycle Director question: {cleaned_inbound[:500]}"}],
                 },
@@ -273,7 +273,7 @@ def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str 
             f"across our 52 monitored State DOI/APCD MRF & Federal IDR portals and 12 Healthcare Revenue Cycle APIs:\n\n"
             f"- 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package (.ZIP): {ctx['compiler_url']}\n"
             f"- Live Payer MRF & NSA IDR Dossier (Pre-Configured for {ctx['company_name']}): {ctx['dossier_url']}\n"
-            f"- Tier 2 Payer MRF & NSA IDR Autopilot Desk ($499/mo): {t2_url}\n"
+            f"- Tier 2 Payer MRF & NSA IDR Autopilot Desk ($599/mo): {t2_url}\n"
             f"- Tier 3 Unlimited 6-File .ZIP Appeal & IDR Compiler ($1,499/mo): {t3_url}\n\n"
             f"Best,\n"
             f"Aaron Chen\n"

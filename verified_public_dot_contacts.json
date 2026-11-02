@@ -65,19 +65,6 @@
     "authorized_official_title": "Chief Executive Officer"
   },
   {
-    "company_name": "TruBridge",
-    "email": "contact@trubridge.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1285958421",
-    "state": "AL",
-    "source_type": "website_html_mailto",
-    "source_url": "https://trubridge.com/contact/",
-    "npi_number": "1285958421",
-    "taxonomy_desc": "Orthopaedic Surgery",
-    "authorized_official_name": "Russell Hudgens",
-    "authorized_official_title": "President"
-  },
-  {
     "company_name": "Radiology Ltd. Tucson",
     "email": "inquiries@radltd.com",
     "first_name": "Revenue Cycle",
