@@ -139,20 +139,8 @@ def compute_dynamic_daily_limit(now_utc: Optional[datetime] = None) -> Tuple[int
     except Exception:
         launch_d = date(2026, 11, 2)
 
-    days_since_launch = (today_d - launch_d).days
-    if days_since_launch <= 2:
-        d_cap = max(15, mailbox_count * 5)
-        c_cap = max(1, math.ceil(d_cap / 4))
-        return d_cap, c_cap, f"Ramp Phase 1 ({d_cap}/day | {c_cap}/cron across {mailbox_count} mailboxes)"
-    if days_since_launch <= 6:
-        d_cap = max(30, mailbox_count * 10)
-        c_cap = max(1, math.ceil(d_cap / 4))
-        return d_cap, c_cap, f"Ramp Phase 2 ({d_cap}/day | {c_cap}/cron across {mailbox_count} mailboxes)"
-    if days_since_launch <= 13:
-        d_cap = max(60, mailbox_count * 20)
-        c_cap = max(1, math.ceil(d_cap / 4))
-        return d_cap, c_cap, f"Ramp Phase 3 ({d_cap}/day | {c_cap}/cron across {mailbox_count} mailboxes)"
-    d_cap = max(90, mailbox_count * 30)
+    # Warmup in Instantly takes < 2 days (already gated by stat_warmup_score >= 85 in _detect_live_*_mailbox_count)
+    d_cap = max(30, mailbox_count * 30)
     c_cap = max(1, math.ceil(d_cap / 4))
     return d_cap, c_cap, f"Full Warmed Cadence ({d_cap}/day | {c_cap}/cron across {mailbox_count} mailboxes)"
 
