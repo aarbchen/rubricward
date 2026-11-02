@@ -352,50 +352,41 @@ FIFTY_TWO_PORTALS = [
 ]
 
 FAVICON_SVG_XML = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect x="2" y="2" width="60" height="60" rx="14" fill="#FAF8F5" stroke="#0A0D14" stroke-width="3"/>
-  <path fill="#0A0D14" d="M12 10H32V54C19 48 12 37 12 22V10Z"/>
-  <rect x="37" y="10" width="15" height="28" rx="2" fill="#059669"/>
+  <circle cx="32" cy="32" r="32" fill="#FAF8F5"/>
+  <path fill="#0A0D14" d="M15 14H31V50C20.5 45 15 36 15 24V14Z"/>
+  <rect x="36" y="14" width="13" height="24" rx="2.5" fill="#059669"/>
 </svg>
 """
 
 
 def _sample_logo_pixel(nx: float, ny: float) -> tuple[int, int, int, int]:
-    """Samples the RubricWard Symbol #07 (Compass Quadrant Lock) in normalized 64x64 RGBA coordinates with rounded-square badge."""
+    """Samples the RubricWard Option M7 (Left Half-Shield + Right Emerald Rubric Ledger) in normalized 64x64 RGBA coordinates with a borderless circular disc."""
     import math
 
     vellum = (250, 248, 245, 255)
     obsidian = (10, 13, 20, 255)
-    navy = (30, 58, 138, 255)
-    transparent = (0, 0, 0, 0)
+    emerald = (5, 150, 105, 255)
+    transparent = (250, 248, 245, 0)
 
-    # Outer rounded square (0..64, corner radius 13)
-    r_outer = 13.0
-    qx = max(abs(nx - 32.0) - (32.0 - r_outer), 0.0)
-    qy = max(abs(ny - 32.0) - (32.0 - r_outer), 0.0)
-    if math.hypot(qx, qy) > r_outer:
+    dist = math.hypot(nx - 32.0, ny - 32.0)
+
+    # Borderless circular disc (radius 32.0, transparent outside, zero outer border)
+    if dist > 32.0:
         return transparent
 
-    # Inner rounded square (3.5..60.5, corner radius 9.5)
-    r_inner = 9.5
-    ix = max(abs(nx - 32.0) - (28.5 - r_inner), 0.0)
-    iy = max(abs(ny - 32.0) - (28.5 - r_inner), 0.0)
-    if math.hypot(ix, iy) > r_inner:
-        return obsidian
-
-    emerald = (5, 150, 105, 255)
-    # Option M7 Right Vertical Rubric Ledger block (x in 37..52, y in 10..38, rx=2.0)
-    if 37.0 <= nx <= 52.0 and 10.0 <= ny <= 38.0:
-        bx = max(abs(nx - 44.5) - 5.5, 0.0)
-        by = max(abs(ny - 24.0) - 12.0, 0.0)
-        if math.hypot(bx, by) <= 2.0:
+    # Option M7 Right Vertical Rubric Ledger block (x in 36..49, y in 14..38, rx=2.5)
+    if 36.0 <= nx <= 49.0 and 14.0 <= ny <= 38.0:
+        bx = max(abs(nx - 42.5) - 4.0, 0.0)
+        by = max(abs(ny - 26.0) - 9.5, 0.0)
+        if math.hypot(bx, by) <= 2.5:
             return emerald
 
-    # Option M7 Left Half-Shield (Ward: x in 12..32, y in 10..54)
-    if 12.0 <= nx <= 32.0 and 10.0 <= ny <= 54.0:
-        if ny <= 22.0:
+    # Option M7 Left Half-Shield (Ward: x in 15..31, y in 14..50)
+    if 15.0 <= nx <= 31.0 and 14.0 <= ny <= 50.0:
+        if ny <= 24.0:
             return obsidian
-        norm_y = (ny - 22.0) / 32.0
-        min_x = 12.0 + 20.0 * (norm_y ** 1.85)
+        norm_y = (ny - 24.0) / 26.0
+        min_x = 15.0 + 16.0 * (norm_y ** 1.85)
         if nx >= min_x:
             return obsidian
     return vellum
@@ -544,12 +535,12 @@ WEB_MANIFEST_JSON = json.dumps(
         "background_color": "#F2F9F8",
         "theme_color": "#071C21",
         "icons": [
-            {"src": "https://rubricward.com/favicon-48x48.png?v=7", "sizes": "48x48", "type": "image/png"},
-            {"src": "https://rubricward.com/favicon-96x96.png?v=7", "sizes": "96x96", "type": "image/png"},
-            {"src": "https://rubricward.com/favicon-144x144.png?v=7", "sizes": "144x144", "type": "image/png"},
-            {"src": "https://rubricward.com/apple-touch-icon.png?v=7", "sizes": "180x180", "type": "image/png"},
-            {"src": "https://rubricward.com/favicon-192x192.png?v=7", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
-            {"src": "https://rubricward.com/favicon-512x512.png?v=7", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
+            {"src": "https://rubricward.com/favicon-48x48.png?v=8", "sizes": "48x48", "type": "image/png"},
+            {"src": "https://rubricward.com/favicon-96x96.png?v=8", "sizes": "96x96", "type": "image/png"},
+            {"src": "https://rubricward.com/favicon-144x144.png?v=8", "sizes": "144x144", "type": "image/png"},
+            {"src": "https://rubricward.com/apple-touch-icon.png?v=8", "sizes": "180x180", "type": "image/png"},
+            {"src": "https://rubricward.com/favicon-192x192.png?v=8", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+            {"src": "https://rubricward.com/favicon-512x512.png?v=8", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
         ],
     },
     indent=2,
@@ -617,11 +608,11 @@ def build_social_and_favicon_head(
                     "url": "https://rubricward.com/",
                     "logo": {
                         "@type": "ImageObject",
-                        "url": "https://rubricward.com/favicon-512x512.png?v=7",
+                        "url": "https://rubricward.com/favicon-512x512.png?v=8",
                         "width": 512,
                         "height": 512,
                     },
-                    "image": "https://rubricward.com/og-image.png?v=7",
+                    "image": "https://rubricward.com/og-image.png?v=8",
                     "description": page_desc,
                 },
                 {
@@ -646,27 +637,27 @@ def build_social_and_favicon_head(
         }
     )
     return f"""  <meta name="theme-color" content="#F2F9F8" />
-  <link rel="icon" type="image/png" sizes="96x96" href="https://rubricward.com/favicon-96x96.png?v=7" />
-  <link rel="icon" type="image/png" sizes="512x512" href="https://rubricward.com/favicon-512x512.png?v=7" />
-  <link rel="icon" type="image/png" sizes="192x192" href="https://rubricward.com/favicon-192x192.png?v=7" />
-  <link rel="icon" type="image/png" sizes="144x144" href="https://rubricward.com/favicon-144x144.png?v=7" />
-  <link rel="icon" type="image/svg+xml" href="https://rubricward.com/favicon.svg?v=7" />
-  <link rel="icon" type="image/png" sizes="48x48" href="https://rubricward.com/favicon-48x48.png?v=7" />
-  <link rel="icon" type="image/png" sizes="32x32" href="https://rubricward.com/favicon-32x32.png?v=7" />
-  <link rel="icon" type="image/x-icon" sizes="48x48" href="https://rubricward.com/favicon.ico?v=7" />
-  <link rel="shortcut icon" href="https://rubricward.com/favicon.ico?v=7" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://rubricward.com/apple-touch-icon.png?v=7" />
-  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://rubricward.com/apple-touch-icon.png?v=7" />
-  <link rel="manifest" href="https://rubricward.com/site.webmanifest?v=7" />
+  <link rel="icon" type="image/png" sizes="96x96" href="https://rubricward.com/favicon-96x96.png?v=8" />
+  <link rel="icon" type="image/png" sizes="512x512" href="https://rubricward.com/favicon-512x512.png?v=8" />
+  <link rel="icon" type="image/png" sizes="192x192" href="https://rubricward.com/favicon-192x192.png?v=8" />
+  <link rel="icon" type="image/png" sizes="144x144" href="https://rubricward.com/favicon-144x144.png?v=8" />
+  <link rel="icon" type="image/svg+xml" href="https://rubricward.com/favicon.svg?v=8" />
+  <link rel="icon" type="image/png" sizes="48x48" href="https://rubricward.com/favicon-48x48.png?v=8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://rubricward.com/favicon-32x32.png?v=8" />
+  <link rel="icon" type="image/x-icon" sizes="48x48" href="https://rubricward.com/favicon.ico?v=8" />
+  <link rel="shortcut icon" href="https://rubricward.com/favicon.ico?v=8" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://rubricward.com/apple-touch-icon.png?v=8" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://rubricward.com/apple-touch-icon.png?v=8" />
+  <link rel="manifest" href="https://rubricward.com/site.webmanifest?v=8" />
   <link rel="canonical" href="{canonical_url}" />
   <meta property="og:site_name" content="RubricWard" />
   <meta property="og:title" content="{page_title}" />
   <meta property="og:description" content="{page_desc}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{canonical_url}" />
-  <meta property="og:logo" content="https://rubricward.com/favicon-512x512.png?v=7" />
-  <meta property="og:image" content="https://rubricward.com/og-image.png?v=7" />
-  <meta property="og:image:secure_url" content="https://rubricward.com/og-image.png?v=7" />
+  <meta property="og:logo" content="https://rubricward.com/favicon-512x512.png?v=8" />
+  <meta property="og:image" content="https://rubricward.com/og-image.png?v=8" />
+  <meta property="og:image:secure_url" content="https://rubricward.com/og-image.png?v=8" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -674,7 +665,7 @@ def build_social_and_favicon_head(
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{page_title}" />
   <meta name="twitter:description" content="{page_desc}" />
-  <meta name="twitter:image" content="https://rubricward.com/og-image.png?v=7" />
+  <meta name="twitter:image" content="https://rubricward.com/og-image.png?v=8" />
   <meta name="twitter:image:alt" content="RubricWard — 50-State Commercial Payer TiC MRF, Medicare MPFS &amp; NSA IDR Intelligence" />
   <script type="application/ld+json">{schema_ld}</script>"""
 

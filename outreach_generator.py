@@ -23,10 +23,16 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List
 
-from harvest_verified_dot_contacts import load_signaltender_exclusion_sets
+from harvest_verified_dot_contacts import (
+    clean_company_display_name,
+    clean_person_first_name,
+    is_receptionist_or_generic_inbox,
+    load_signaltender_exclusion_sets,
+)
 from mlot_sniper_generator import (
     _sanitize_zero_dollar_zero_link,
     build_mlot_and_runner_up_leads,
+    classify_medical_specialty_cohort,
     load_verified_dot_contacts,
 )
 from outbound_mailer import verify_email_domain_mx
@@ -36,6 +42,18 @@ ROOT_DIR = Path(__file__).resolve().parent
 SEED_PATH = ROOT_DIR / "dot_lettings_seed.json"
 CSV_OUT_PATH = ROOT_DIR / "campaign_leads.csv"
 QUEUE_OUT_PATH = ROOT_DIR / "outbox_ready_queue.json"
+BLACKLIST_PATH = ROOT_DIR / "bounced_leads_blacklist.json"
+
+
+def _lead_inbox_priority(lead: Dict[str, Any]) -> tuple[int, str]:
+    em = str(lead.get("email") or "").strip().lower()
+    local = em.split("@", 1)[0] if "@" in em else ""
+    fn = str(lead.get("first_name") or "").strip().lower()
+    if fn not in ("revenue cycle", "estimating", "capture", "info", "contact", "office", "sales", "billing", ""):
+        return (0, em)
+    if any(k in local for k in ("billing", "rcm", "managedcare", "insur", "claim", "business", "appeal", "coding")):
+        return (1, em)
+    return (2, em)
 
 
 def build_outreach_queue() -> List[Dict[str, Any]]:
@@ -43,6 +61,15 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
     lettings = raw.get("lettings", [])
     verified_contacts = load_verified_dot_contacts()
     excluded_emails, excluded_domains = load_signaltender_exclusion_sets()
+
+    bl_ems, bl_doms = set(), set()
+    if BLACKLIST_PATH.exists():
+        try:
+            bld = json.loads(BLACKLIST_PATH.read_text(encoding="utf-8")) or {}
+            bl_ems = set(bld.get("bounced_emails") or [])
+            bl_doms = set(bld.get("bounced_domains") or [])
+        except Exception:
+            pass
 
     seen_emails = set()
     queue: List[Dict[str, Any]] = []
@@ -54,41 +81,60 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
         src_url = str(contact.get("source_url") or "").strip()
         if not clean_em or not src_url or clean_em in seen_emails:
             continue
-        if clean_em in excluded_emails or dom in excluded_domains:
+        if clean_em in excluded_emails or dom in excluded_domains or clean_em in bl_ems or dom in bl_doms:
             continue
         if not verify_email_domain_mx(clean_em):
             continue
         seen_emails.add(clean_em)
 
-        st = str(contact.get("state") or "TX").strip()
-        item = next(
+        st = str(contact.get("state") or "TX").strip().upper()
+        primary_firm = clean_company_display_name(str(contact.get("company_name") or "Specialty Medical Group").strip(), clean_em)
+        clean_fname = clean_person_first_name(str(contact.get("first_name") or "Revenue Cycle").strip(), clean_em, "Revenue Cycle")
+
+        # Resolve static dossier file from dot_lettings_seed.json so dossier_url always exists on disk
+        seed_item = next(
             (l for l in lettings if l.get("state_code") == st),
             lettings[idx % len(lettings)] if lettings else {},
         )
-        lid = str(item.get("letting_id") or item.get("project_id") or f"{st}DOI-MRF-CPT-29881")
-        title = str(item.get("title") or "Commercial Payer TiC MRF & NSA IDR Cohort")
-        agency = str(item.get("agency") or f"{st} Department of Insurance & Commercial Payer TiC MRF")
-        slug = slugify(f"{lid}-{title}")
+        seed_lid = str(seed_item.get("letting_id") or seed_item.get("project_id") or f"{st}DOI-MRF-CPT-29881")
+        seed_title = str(seed_item.get("title") or "Commercial Payer TiC MRF & NSA IDR Cohort")
+        slug = slugify(f"{seed_lid}-{seed_title}")
         dossier_url = f"https://rubricward.com/lettings/project/{slug}.html"
+
+        cohort = classify_medical_specialty_cohort(primary_firm, clean_em, st)
+        lid = cohort["letting_id"]
+        title = cohort["project_title"]
+        cpt_short = cohort["cpt_short"]
+        pay_item = cohort["key_pay_item"]
+        agency = f"{st} Department of Insurance & Commercial Payer TiC MRF"
         compiler_url = f"https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id={lid}&state_code={st}&format=binary"
-        primary_firm = str(contact.get("company_name") or "Specialty Medical Group").strip()
+
+        is_generic_person = clean_fname.lower() in ("revenue cycle", "estimating", "capture", "info", "contact", "office", "sales", "billing")
+        if is_generic_person:
+            greeting_line = (
+                f"Hi {primary_firm} team (Attn: Billing / Managed Care),"
+                if is_receptionist_or_generic_inbox(clean_em)
+                else f"Hi {primary_firm} Revenue Cycle team,"
+            )
+        else:
+            greeting_line = f"Hi {clean_fname},"
 
         subject = _sanitize_zero_dollar_zero_link(
-            f"{st.lower()} commercial payer mrf benchmark and nsa idr packet for {lid.lower()}"
+            f"{st} commercial payer MRF & {cpt_short} benchmark ({primary_firm})"
         )
         body = _sanitize_zero_dollar_zero_link(
-            f"Hi Revenue Cycle and Managed Care Team at {primary_firm},\n\n"
-            f"We noticed {primary_firm}'s specialty clinical footprint in {st} while indexing the active {agency} commercial payer MRF cohort for {lid} ({title}).\n\n"
-            f"Our RubricWard engine already compiled the 50-state CMS Transparency in Coverage MRF allowed-amount percentiles, "
-            f"the locality-adjusted Medicare MPFS RVU and GPCI schedule, and the ERISA 29 CFR 2560.503-1 and Federal NSA IDR arbitration brief for this exact CPT cohort.\n\n"
-            f"Reply 'SEND ZIP' and I will send the 6-file Word and Excel claim recovery and IDR arbitration bundle straight over.\n\n"
-            f"Best,\n"
-            f"Aaron Chen\n"
-            f"RubricWard Payer MRF and NSA IDR Desk"
+            f"{greeting_line}\n\n"
+            f"Noticed {primary_firm}'s clinical footprint in {st} while indexing the {st} commercial payer MRF cohort for {pay_item}.\n\n"
+            f"We already compiled the {st} CMS Transparency in Coverage MRF allowed-amount percentiles, locality Medicare MPFS RVU/GPCI rates, "
+            f"and ERISA / Federal NSA IDR appeal templates into a 6-file Word/Excel bundle.\n\n"
+            f"Reply 'SEND ZIP' and I will send the 6-file .DOCX + .XLSX claim recovery and IDR bundle over.\n\n"
+            f"Best,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk"
         )
         step2_body = _sanitize_zero_dollar_zero_link(
-            f"Hi {primary_firm} team — following up on the {st} commercial payer MRF and NSA IDR benchmark cohort for {lid}. "
-            f"Reply 'SEND ZIP' if you would like the 6-file OpenXML Word and Excel appeal package."
+            f"{greeting_line}\n\n"
+            f"Quick follow-up on the {st} commercial payer MRF & NSA IDR benchmark cohort ({cpt_short}) for {primary_firm}.\n\n"
+            f"Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package, or let me know if I should hold off.\n\n"
+            f"Best,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk"
         )
 
         queue.append(
@@ -100,7 +146,7 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
                 "state": st,
                 "agency": agency,
                 "company_name": primary_firm,
-                "first_name": str(contact.get("first_name") or "Revenue Cycle").strip(),
+                "first_name": clean_fname,
                 "license_or_dot_id": str(contact.get("license_or_dot_id") or f"NPI-{st}-VERIFIED"),
                 "email": clean_em,
                 "recipient_email": clean_em,
@@ -122,11 +168,13 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
     for rlot_lead in build_mlot_and_runner_up_leads(verified_contacts=verified_contacts):
         em = str(rlot_lead.get("email") or "").strip().lower()
         dom = em.split("@", 1)[1] if "@" in em else ""
-        if not em or em in seen_emails or em in excluded_emails or dom in excluded_domains:
+        if not em or em in seen_emails or em in excluded_emails or dom in excluded_domains or em in bl_ems or dom in bl_doms:
             continue
         if rlot_lead.get("source_url") and verify_email_domain_mx(em):
             seen_emails.add(em)
             queue.append(rlot_lead)
+
+    queue.sort(key=_lead_inbox_priority)
 
     fieldnames = [
         "lead_id",

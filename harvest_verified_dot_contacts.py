@@ -963,6 +963,163 @@ GENERIC_IGNORED_EMAIL_DOMAINS = {
 }
 
 
+
+KNOWN_FIRST_NAMES = {
+    "aaron", "adam", "adriana", "alan", "albert", "alex", "alexander", "alexandra", "alice", "alicia",
+    "allison", "alyssa", "amanda", "amber", "amy", "andrea", "andrew", "andy", "angela", "ann", "anna",
+    "anne", "anthony", "april", "arthur", "ashley", "austin", "barbara", "ben", "benjamin", "beth",
+    "betty", "beverly", "bill", "billy", "blake", "bob", "bobby", "bonnie", "brad", "bradley", "brandon",
+    "brenda", "brent", "brett", "brian", "brianna", "brittany", "brooke", "bruce", "bryan", "caleb",
+    "cameron", "carl", "carla", "carlos", "carmen", "carol", "carolyn", "carrie", "casey", "cassandra",
+    "catherine", "cathy", "chad", "charles", "charlie", "charlotte", "chase", "chelsea", "cheryl",
+    "chris", "christian", "christina", "christine", "christopher", "cindy", "claire", "clay", "clint",
+    "cody", "colin", "colleen", "connie", "corey", "cory", "courtney", "craig", "crystal", "curtis",
+    "cynthia", "dale", "dan", "dana", "daniel", "danielle", "danny", "darrell", "darren", "dave",
+    "david", "dawn", "dean", "debbie", "deborah", "debra", "denise", "dennis", "derek", "derrick",
+    "devin", "diana", "diane", "don", "donald", "donna", "dorothy", "doug", "douglas", "drew", "dustin",
+    "dylan", "earl", "ed", "eddie", "edward", "edwin", "eileen", "elaine", "elizabeth", "ellen", "emily",
+    "emma", "eric", "erica", "erik", "erin", "ethan", "eugene", "eva", "evan", "evelyn", "francis",
+    "frank", "fred", "gabriel", "gail", "garrett", "gary", "gavin", "gene", "george", "gerald", "gina",
+    "gloria", "gordon", "grace", "grant", "greg", "gregory", "haley", "hannah", "harold", "harry",
+    "heather", "heidi", "helen", "henry", "holly", "howard", "hunter", "ian", "isaac", "jack", "jacqueline",
+    "jade", "jake", "jacob", "james", "jamie", "jan", "jane", "janet", "janice", "jared", "jason", "jay",
+    "jean", "jeff", "jeffery", "jeffrey", "jen", "jenna", "jennifer", "jenny", "jeremiah", "jeremy",
+    "jerry", "jesse", "jessica", "jill", "jim", "jimmy", "joan", "joann", "joanne", "joe", "joel", "john",
+    "johnny", "jon", "jonathan", "jordan", "jorge", "jose", "joseph", "josh", "joshua", "joy", "joyce",
+    "juan", "judith", "judy", "julia", "julie", "justin", "kara", "karen", "karl", "kate", "katelyn",
+    "katherine", "kathleen", "kathryn", "kathy", "katie", "katrina", "kayla", "keith", "kelly", "kelsey",
+    "ken", "kendall", "kenneth", "kent", "kevin", "kim", "kimberly", "kirk", "kristen", "kristi",
+    "kristin", "kristina", "kurt", "kyle", "lance", "larry", "laura", "lauren", "laurie", "lawrence",
+    "leah", "lee", "leon", "leonard", "leslie", "linda", "lindsay", "lindsey", "lisa", "lloyd", "logan",
+    "lois", "lori", "louis", "lucas", "luis", "luke", "lynn", "madison", "marc", "marcus", "margaret",
+    "maria", "marie", "marilyn", "marissa", "mark", "martha", "martin", "marvin", "mary", "mason",
+    "matt", "matthew", "maureen", "max", "megan", "melanie", "melinda", "melissa", "michael", "michele",
+    "michelle", "mike", "miriam", "miro", "misty", "mitchell", "molly", "monica", "morgan", "nancy",
+    "natalie", "nathan", "nathaniel", "neil", "nicholas", "nick", "nicole", "noah", "norma",
+    "norman", "olivia", "paige", "pam", "pamela", "pat", "patricia", "patrick", "paul", "paula", "peggy",
+    "penny", "peter", "phil", "philip", "phillip", "phyllis", "rachel", "ralph", "randall", "randy",
+    "ray", "raymond", "rebecca", "regina", "renee", "rex", "richard", "rick", "ricky", "rita", "rob",
+    "robert", "roberta", "robin", "rodney", "roger", "ron", "ronald", "rose", "ross", "roy", "ruben",
+    "russell", "ruth", "ryan", "sabrina", "sally", "sam", "samantha", "samuel", "sandra", "sara",
+    "sarah", "scott", "sean", "seth", "shane", "shannon", "sharon", "shaun", "shawn", "sheila", "shelby",
+    "shelley", "sherri", "sherry", "shirley", "sidney", "spencer", "stacey", "stacy", "stanley",
+    "stephanie", "stephen", "steve", "steven", "stuart", "sue", "susan", "suzanne", "sylvia", "tamara",
+    "tammy", "tanya", "tara", "taylor", "ted", "teresa", "terri", "terry", "theresa", "thomas",
+    "tiffany", "tim", "timothy", "tina", "todd", "tom", "tommy", "toni", "tony", "tonya", "tracey",
+    "traci", "tracy", "travis", "trevor", "troy", "tyler", "valerie", "vanessa", "vernon", "veronica",
+    "vicki", "vickie", "victoria", "vincent", "virginia", "vivian", "walter", "wanda", "warren",
+    "wayne", "wendy", "wesley", "whitney", "will", "william", "willie", "wyatt", "zach", "zachary",
+}
+
+US_STATE_POSTAL_CODES = {
+    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
+    "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+    "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT",
+    "VA", "WA", "WV", "WI", "WY", "DC",
+}
+
+
+def clean_company_display_name(raw_company: str, email: str = "") -> str:
+    """
+    Cleans seed/scraper tags, slash aliases, and casing issues from company names so every outbound
+    email reads naturally (e.g. 'Columbia Orthopaedic Group MO' -> 'Columbia Orthopaedic Group',
+    'Kodiak Construction / Ranger Pipelines' -> 'Ranger Pipelines', 'bolander civil construction' -> 'Bolander Civil Construction').
+    """
+    s = str(raw_company or "").strip()
+    if not s:
+        return "your team"
+    s = re.split(r"\s*[—–]\s*", s)[0].strip()
+    if " / " in s:
+        parts = [p.strip() for p in s.split(" / ") if p.strip()]
+        dom_prefix = email.strip().lower().split("@")[-1].split(".")[0] if "@" in email else ""
+        matched_part = None
+        if dom_prefix:
+            for p in parts:
+                p_tokens = [t for t in re.sub(r"[^a-z0-9\s]", "", p.lower()).split() if len(t) >= 3]
+                if any(t in dom_prefix or dom_prefix in t for t in p_tokens):
+                    matched_part = p
+                    break
+        s = matched_part or parts[-1]
+    s = re.sub(r"\s*\([^)]*\)\s*(?:[A-Z]{2})?$", "", s).strip()
+    s = re.sub(
+        r"\b(Inc\.?|LLC|L\.L\.C\.?|Corp\.?|Corporation|Co\.?|Company|LP|L\.P\.?)\s+"
+        r"(?:Heavy\s+Civil|Highway.*|Bridge.*|Earthwork.*|Grading.*|Paving.*|Asphalt.*|Civil.*|Underground.*|"
+        r"Excavation.*|Excavating.*|Concrete.*|Utility.*|Site.*|Marine.*|Roadway.*|Boise|Miami|Redding|"
+        r"Urbana|Mattoon|Sandusky|West\s+Chester|Florida|Ohio|GA|PA|NY|CA|TX|FL|VA|IL|WI|MN|MI|MO|NC|RCM.*)$",
+        r"\1",
+        s,
+        flags=re.I,
+    ).strip()
+    s = re.sub(
+        r"\s+(?:Heavy\s+Civil|Bridge\s*&\s*Civil|Bridge\s*&\s*Hwy|Bridge\s*&\s*Road|Bridge\s*Rehab|"
+        r"Bridge\s*Painting|Bridge\s*&\s*Marine|Bridge\s*&\s*Highway|Highway\s*Paving|Highway|"
+        r"Grading\s*&\s*Paving|Paving\s*Redding|Underground\s*&\s*Civil|Dredging\s*&\s*Marine|"
+        r"Marine\s*&\s*Dredging|Concrete\s*Hwy|Concrete\s*Breaking|Site\s*&\s*Civil|"
+        r"Electrical\s*Utility|Midwest\s*Contracting|RCM\s*Solutions|Billing\s*Services\s*RCM|"
+        r"ASC\s*Management|Coding\s*&\s*CDI|Acute\s*&\s*Anesthesia|Anesthesia\s*&\s*ER\s*RCM|"
+        r"Radiology\s*&\s*ER\s*RCM|Multi-Specialty\s*Portland.*|Savannah\s*GA|Quad\s*Cities\s*IA|"
+        r"Surgical\s*Center\s*UT|Pathology\s*&\s*Laboratories\s*WA|RCM|Heavy\s+Highway\s+PA|"
+        r"Central\s+NY|South\s+FL|Hudson\s+Valley|Pennsylvania|Florida|Ohio|Boise|Miami)$",
+        "",
+        s,
+        flags=re.I,
+    ).strip()
+    if s.endswith(" Solutions Healthcare"):
+        s = s.replace(" Solutions Healthcare", " Solutions")
+    tokens = s.split()
+    if len(tokens) >= 3 and tokens[-1].upper() in US_STATE_POSTAL_CODES and tokens[-1].upper() not in ("CO", "PC"):
+        if tokens[-1] in ("MO", "SD", "NY", "TX", "FL", "CA", "GA", "OH", "VA", "NC", "TN", "WA", "WY", "UT", "PA", "IA", "ME", "MD", "WI", "MN", "MI", "IL", "IN", "AZ", "CO"):
+            s = " ".join(tokens[:-1]).strip()
+    if s.startswith("TOA Tennessee"):
+        s = s.replace("TOA ", "", 1)
+    # Strip trailing legal entity suffixes unless it would leave a single bare surname (e.g. 'Griffith Company')
+    stripped_legal = re.sub(
+        r",?\s*\b(L\.?L\.?C\.?|Inc\.?|Incorporated|Corporation|Corp\.?|Company|Co\.?|L\.?P\.?|P\.?A\.?|P\.?L\.?L\.?C\.?)\b[\s,.]*$",
+        "",
+        s,
+        flags=re.I,
+    ).strip(" ,.-")
+    if len(stripped_legal.split()) >= 2 or not s.lower().endswith((" company", " co.", " co")):
+        s = stripped_legal
+    if s.islower() or s.isupper() or " Llc" in s:
+        acronyms = {"lb": "LB", "cw": "C.W.", "tb": "T.B.", "t.b.": "T.B.", "rcm": "RCM", "asc": "ASC", "usa": "USA", "llc": "LLC", "hnl": "HNL", "ubmd": "UBMD", "ora": "ORA"}
+        s = " ".join(acronyms.get(w.lower(), w.capitalize()) for w in s.split())
+    return s or "your team"
+
+
+def clean_person_first_name(raw_fname: str, email: str = "", default_role: str = "Estimating") -> str:
+    """
+    Returns a verified human first name (e.g. 'Katherine', 'Heather', 'Miriam', 'Justin')
+    or `default_role` when the email local-part is a generic inbox (`info@`, `estimating@`)
+    or a dotless `first_initial + last_name` handle (`tbuzan@`, `jcheng@`, `rknowski@`).
+    """
+    local = str(email or "").strip().lower().split("@")[0] if "@" in str(email or "") else ""
+    local_clean = re.sub(r"^[0-9|\-_+.]+", "", local)
+    fn_cand = str(raw_fname or "").strip()
+    if fn_cand.lower() in ("none", "null", "", "estimating", "revenue cycle", "capture", "there", "team", "info", "contact", "sales", "billing", "office"):
+        fn_cand = ""
+    if "." in local_clean or "_" in local_clean:
+        sep = "." if "." in local_clean else "_"
+        first_tok = local_clean.split(sep)[0].strip()
+        if first_tok in KNOWN_FIRST_NAMES:
+            return first_tok.capitalize()
+    if local_clean in KNOWN_FIRST_NAMES:
+        return local_clean.capitalize()
+    if fn_cand:
+        first_word = fn_cand.split()[0].split(".")[0].strip().lower()
+        if first_word in KNOWN_FIRST_NAMES:
+            return first_word.capitalize()
+    return default_role
+
+
+def is_receptionist_or_generic_inbox(email: str) -> bool:
+    local = str(email or "").strip().lower().split("@")[0]
+    return any(
+        local == k or local.startswith(k)
+        for k in ("info", "contact", "office", "general", "hello", "admin", "inquir", "mail", "support", "service", "customercare", "communications", "publicrelations")
+    )
+
+
 def compute_dynamic_target_leads() -> int:
     """
     Automatically scales target verified lead pool in lockstep with live warmed + warming
@@ -1065,8 +1222,10 @@ def _extract_all_emails_from_html(html_text: str, dom: str, final_host_dom: str 
                 out.append(decoded_cf.strip().lower().split("?")[0])
         except Exception:
             pass
-    # 2. Extract mailto: links
-    for m in re.findall(r"mailto:\s*([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10})", dec, re.I):
+    from urllib.parse import unquote as _unquote
+    dec = _unquote(dec)
+    # 2. Extract mailto: links (never match % or pipe encodings)
+    for m in re.findall(r"mailto:\s*([a-zA-Z][a-zA-Z0-9._+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10})", dec, re.I):
         out.append(m.strip().lower())
     # 3. Extract @domain and @final_host_dom matches in page text
     target_doms = {dom.lower().strip()}
@@ -1074,7 +1233,7 @@ def _extract_all_emails_from_html(html_text: str, dom: str, final_host_dom: str 
         target_doms.add(final_host_dom.lower().strip())
     for td in target_doms:
         if td:
-            for m in re.findall(r"[a-zA-Z0-9._%+-]+@" + re.escape(td), dec, re.I):
+            for m in re.findall(r"[a-zA-Z][a-zA-Z0-9._+-]*@" + re.escape(td), dec, re.I):
                 out.append(m.strip().lower())
     return out
 
@@ -1187,14 +1346,10 @@ async def _async_crawl_one(
     if IS_RUBRICWARD_HARVESTER and best_em.split("@", 1)[-1] in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
         return None
 
-    local_part = best_em.split("@")[0]
-    if "." in local_part and not any(k in local_part for k in ("estimat", "bid", "info", "contact", "office", "sales", "billing", "rcm")):
-        first_name = local_part.split(".")[0].capitalize()
-    else:
-        first_name = default_fname
+    first_name = clean_person_first_name("", best_em, default_fname)
 
     return {
-        "company_name": comp.strip(),
+        "company_name": clean_company_display_name(comp.strip(), best_em),
         "email": best_em,
         "first_name": first_name,
         "license_or_dot_id": dot_id,
@@ -1341,8 +1496,18 @@ def harvest_and_save_verified_dot_contacts(target_count: Optional[int] = None) -
                         edom = eem.split("@", 1)[-1]
                         if IS_RUBRICWARD_HARVESTER and edom in RUBRICWARD_BLOCKED_VENDOR_DOMAINS:
                             continue
-                        if not is_excluded_by_signaltender(eem):
-                            erow["company_name"] = str(erow.get("company_name") or erow.get("company") or "Practice").strip()
+                        bl_p = os.path.join(BASE_DIR, "bounced_leads_blacklist.json")
+                        bl_ems, bl_doms = set(), set()
+                        if os.path.exists(bl_p):
+                            try:
+                                bld = json.load(open(bl_p, "r", encoding="utf-8")) or {}
+                                bl_ems = set(bld.get("bounced_emails") or [])
+                                bl_doms = set(bld.get("bounced_domains") or [])
+                            except Exception:
+                                pass
+                        if eem not in bl_ems and edom not in bl_doms and not is_excluded_by_signaltender(eem):
+                            erow["company_name"] = clean_company_display_name(str(erow.get("company_name") or erow.get("company") or "Practice").strip(), eem)
+                            erow["first_name"] = clean_person_first_name(str(erow.get("first_name") or ""), eem, "Revenue Cycle" if IS_RUBRICWARD_HARVESTER else "Estimating")
                             erow["state"] = str(erow.get("state") or "TX").strip()
                             by_email[eem] = erow
                             existing_domains.add(edom)
