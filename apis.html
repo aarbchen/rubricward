@@ -1559,11 +1559,11 @@
             </div>
             <textarea id="escalate-message" rows="4" maxlength="2000" required placeholder="Enter your message..." class="w-full p-3 rounded-lg bg-white border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#475569] leading-relaxed"></textarea>
           </div>
-          <button type="submit" id="btn-submit-human-escalation" class="w-full py-2.5 px-4 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition shadow-sm">
+          <button type="submit" id="btn-escalate-submit" class="w-full py-2.5 px-4 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition shadow-sm">
             Send Message &rarr;
           </button>
         </form>
-        <div id="human-escalation-status-box" class="hidden"></div>
+        <div id="escalate-confirmation-box" class="hidden"></div>
       </div>
     </div>
   </div>
@@ -3317,7 +3317,7 @@
       // 0c. Direct Human / Founder Support Escalation Request
       if (/\b(human|real\s+person|talk\s+to\s+a\s+person|speak\s+to\s+someone|agent|representative|support\s+ticket|escalat|contact\s+support|customer\s+service|help\s+desk|not\s+helpful|still\s+need\s+help)\b/i.test(ql)) {
         return {
-          text: "Need to speak with a real person? You can send a direct, priority message to our Founder & Engineering Support desk right here in the Support & Contact panel:\n• Tracked Priority Ticket (< 2 Business Hours SLA): Click 'Message Founder & Engineering Support' below to submit your question, work email, and urgency level — our system immediately alerts our founder and engineering team and assigns a tracked #RW-SUP-... ticket ID.\n• Direct Founder Support Email: You can also copy our direct founder support email in the Support & Contact panel.",
+          text: "To send a message, click 'Contact' below to open the Contact form.",
           ctaLabel: 'Contact',
           ctaFn: function() { openHumanEscalationForm(q); },
           actions: [

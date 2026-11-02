@@ -2662,7 +2662,7 @@ def build_site_files() -> None:
       // 0c. Direct Human / Founder Support Escalation Request
       if (/\\b(human|real\\s+person|talk\\s+to\\s+a\\s+person|speak\\s+to\\s+someone|agent|representative|support\\s+ticket|escalat|contact\\s+support|customer\\s+service|help\\s+desk|not\\s+helpful|still\\s+need\\s+help)\\b/i.test(ql)) {{
         return {{
-          text: "Need to speak with a real person? You can send a direct, priority message to our Founder & Engineering Support desk right here in the Support & Contact panel:\\n• Tracked Priority Ticket (< 2 Business Hours SLA): Click 'Message Founder & Engineering Support' below to submit your question, work email, and urgency level — our system immediately alerts our founder and engineering team and assigns a tracked #RW-SUP-... ticket ID.\\n• Direct Founder Support Email: You can also copy our direct founder support email in the Support & Contact panel.",
+          text: "To send a message, click 'Contact' below to open the Contact form.",
           ctaLabel: 'Contact',
           ctaFn: function() {{ openHumanEscalationForm(q); }},
           actions: [

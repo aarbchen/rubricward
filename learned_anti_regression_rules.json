@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-01T16:04:50.090122+00:00",
-  "total_rules": 42,
+  "updated_at": "2026-11-02T07:02:18.074032+00:00",
+  "total_rules": 43,
   "policy": "Silent detection -> Autonomous diagnosis & repair -> Rule codification -> Resolved-only Discord notification",
   "rules": [
     {
@@ -383,6 +383,17 @@
       "invariant_check": "check_email_deliverability_dns",
       "created_at": "2026-11-01T16:04:50.090122+00:00",
       "last_enforced_at": "2026-11-01T16:04:50.090122+00:00",
+      "times_triggered": 1
+    },
+    {
+      "rule_id": "RULE-AUTO-OMNISCIENT-AUDITOR",
+      "pillar": "Omniscient 3-Pillar Audit",
+      "root_cause": "[omniscient_auditor] Normalized `processed_outbound_replies.json` from legacy list to canonical dict schema.",
+      "fix_applied": "Normalized `processed_outbound_replies.json` from legacy list to canonical dict schema.",
+      "rule_statement": "Prevent regression in `omniscient_auditor` (Normalized `processed_outbound_replies.json` from legacy list to canonical dict schema.) by enforcing automated pre-flight verification (`Normalized `processed_outbound_replies.json` from legacy list to canonical dict schema.`).",
+      "invariant_check": "verify_omniscient_auditor",
+      "created_at": "2026-11-02T07:02:18.074032+00:00",
+      "last_enforced_at": "2026-11-02T07:02:18.074032+00:00",
       "times_triggered": 1
     }
   ]
