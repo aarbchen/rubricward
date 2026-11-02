@@ -2594,6 +2594,16 @@ def build_site_files() -> None:
     ];
 
     function buildConciergeAnswer(rawQ, apiAnswer, topicHint) {{
+      const baseReply = _buildLocalRubricConciergeAnswer(rawQ, topicHint);
+      if (baseReply && baseReply.isWafBlock) return baseReply;
+      const cleanApi = String(apiAnswer || '').trim();
+      if (cleanApi.length >= 16 && !__CONCIERGE_DLP_RE.test(cleanApi) && !__CONCIERGE_COMPROMISING_RE.test(String(rawQ || '').toLowerCase())) {{
+        return Object.assign({{}}, baseReply, {{ text: cleanApi }});
+      }}
+      return baseReply;
+    }}
+
+    function _buildLocalRubricConciergeAnswer(rawQ, topicHint) {{
       const check = sanitizeConciergeInput(rawQ);
       if (!check.ok) {{
         return {{
@@ -2638,8 +2648,21 @@ def build_site_files() -> None:
         }};
       }}
 
+      // 0c. Direct Human / Founder Support Escalation Request
+      if (/\\b(human|real\\s+person|talk\\s+to\\s+a\\s+person|speak\\s+to\\s+someone|agent|representative|support\\s+ticket|escalat|contact\\s+support|customer\\s+service|help\\s+desk|not\\s+helpful|still\\s+need\\s+help)\\b/i.test(ql)) {{
+        return {{
+          text: "Need to speak with a real person? You can send a direct, priority message to our Founder & Engineering Support desk right here in the Support & Contact panel:\\n• Tracked Priority Ticket (< 2 Business Hours SLA): Click 'Message Founder & Engineering Support' below to submit your question, work email, and urgency level — our system immediately alerts our founder and engineering team and assigns a tracked #RW-SUP-... ticket ID.\\n• Direct Founder Support Email: You can also copy our direct founder support email in the Support & Contact panel.",
+          ctaLabel: 'Message Founder & Engineering Support',
+          ctaFn: function() {{ openHumanEscalationForm(q); }},
+          actions: [
+            {{ label: 'Message Founder & Engineering Support', fn: function() {{ openHumanEscalationForm(q); }} }},
+            {{ label: 'Open Client Portal', fn: function() {{ openTrustModal('account'); }} }}
+          ]
+        }};
+      }}
+
       // 1a. Conversational Greetings
-      if (/^(hi|hello|hey|howdy|greetings|good\s+(morning|afternoon|evening)|yo|sup|start)[!.?\s]*$/i.test(ql)) {{
+      if (/^(hi|hello|hey|howdy|greetings|good\\s+(morning|afternoon|evening)|yo|sup|start)[!.?\\s]*$/i.test(ql)) {{
         return {{
           text: "Hello! Welcome to the RubricWard AI Payer MRF, NSA IDR & Support Concierge. How can I help your revenue cycle or managed care team today?\\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\\n• Benchmark Commercial Payer TiC MRF allowed amounts (25th / Median QPA / 75th percentiles) and peer EIN/NPI contract spreads across all 52 portals\\n• Compare ClaimWire Pro ($199/mo), RubricWard Autopilot ($499/mo), 6-File .ZIP Compiler ($1,499/mo), and Enterprise OEM ($2,499/mo)\\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our Payer MRF APIs & MCP server",
           ctaLabel: 'Compare Pricing Plans',
@@ -2653,7 +2676,7 @@ def build_site_files() -> None:
       }}
 
       // 1b. Status / Health / Test
-      if (/^(test|testing|ping|status|are you there|are you working|are you online|how\s+are\s+you|how\s+is\s+it\s+going|what\s+can\s+you\s+do|help)[!.?\s]*$/i.test(ql) || /system status|uptime|is rubricward down|gateway health/i.test(ql)) {{
+      if (/^(test|testing|ping|status|are you there|are you working|are you online|how\\s+are\\s+you|how\\s+is\\s+it\\s+going|what\\s+can\\s+you\\s+do|help)[!.?\\s]*$/i.test(ql) || /system status|uptime|is rubricward down|gateway health/i.test(ql)) {{
         return {{
           text: "All RubricWard systems are 100% online and operational!\\n• 52/52 Payer MRF & State DOI/APCD Scrapers: Active (99.99% uptime across all 50 State DOIs/APCDs, CMS Federal NSA IDR, and Multi-Payer Commercial TiC MRF feeds)\\n• 12/12 Stateless Healthcare Payer MRF & IDR Microservices & MCP Server: Operational (< 45 ms edge routing)\\n• In-Memory 6-File OpenXML (.DOCX + .XLSX) Compiler: Ready\\n\\nAsk me about any State payer portal, CPT/DRG negotiated rate, Medicare MPFS RVU/GPCI baseline, ERISA/NSA IDR rule, or account setting.",
           ctaLabel: 'Check Live System Status',
@@ -2667,7 +2690,7 @@ def build_site_files() -> None:
       }}
 
       // 1c. Politeness / Thanks
-      if (/^(thanks|thank\s+you|thx|ty|appreciate\s+it|awesome|great|cool|nice|perfect|helpful|got\s+it|ok|okay|sounds\s+good|bye|goodbye|see\s+ya)[!.?\s]*$/i.test(ql)) {{
+      if (/^(thanks|thank\\s+you|thx|ty|appreciate\\s+it|awesome|great|cool|nice|perfect|helpful|got\\s+it|ok|okay|sounds\\s+good|bye|goodbye|see\\s+ya)[!.?\\s]*$/i.test(ql)) {{
         return {{
           text: "You're very welcome! Wishing your revenue cycle and managed care team strong payer contract uplifts and prevailing NSA IDR determinations!\\n\\nIf you need to benchmark another CPT/DRG code, download a 6-File OpenXML (.DOCX + .XLSX) sample package, or manage your API keys in the Client Portal, just ask anytime.",
           ctaLabel: 'Browse Live Payer MRF Feed',
@@ -2679,7 +2702,18 @@ def build_site_files() -> None:
         }};
       }}
 
-      // 1d. Sky Color / Chitchat
+      // 1d. Humor / Joke / Sky Color / Math
+      if (/joke|funny|laugh|humor/i.test(ql)) {{
+        return {{
+          text: "Why did the commercial payer's Qualifying Payment Amount (QPA) cross the road?\\n\\nTo dilute the specialty orthopedic fee schedule with zero-volume primary-care ghost rates before the 30-business-day No Surprises Act Open Negotiation window closed!\\n\\nThat is why RubricWard's API #02 (Commercial Payer TiC MRF Benchmarker) and API #06 (NSA 45 CFR 149.510 IDR Brief Generator) expose ghost-rate dilution and cite verified 75th-percentile EIN/NPI rates.",
+          ctaLabel: 'Query Payer MRF Vault',
+          ctaFn: function() {{ closeTrustModals(); switchSpaView('checkout'); const el = document.getElementById('checkout-enterprise-proof-workbench'); if (el) el.scrollIntoView({{behavior:'auto'}}); switchCheckoutWorkbenchTab('vault'); }},
+          actions: [
+            {{ label: 'Query Payer MRF Vault', fn: function() {{ closeTrustModals(); switchSpaView('checkout'); const el = document.getElementById('checkout-enterprise-proof-workbench'); if (el) el.scrollIntoView({{behavior:'auto'}}); switchCheckoutWorkbenchTab('vault'); }} }},
+            {{ label: 'Inspect .ZIP Claim Package', fn: function() {{ closeTrustModals(); switchSpaView('overview'); const el = document.getElementById('zip-package-inspector'); if (el) el.scrollIntoView({{behavior:'auto'}}); }} }}
+          ]
+        }};
+      }}
       if (ql.includes('color') && ql.includes('sky')) {{
         return {{
           text: "The sky is blue on a clear day (thanks to Rayleigh scattering of sunlight in Earth's atmosphere)!\\n\\nAs RubricWard's AI Payer MRF, NSA IDR & Support Concierge, I am live and ready to help with any question about our 52-portal Commercial Payer TiC MRF & Federal NSA IDR feed, Medicare MPFS RVU/GPCI baselines, 6-File OpenXML (.DOCX + .XLSX) Claim Package Compiler, or self-serve account settings.",
@@ -2692,9 +2726,25 @@ def build_site_files() -> None:
           ]
         }};
       }}
+      const mathMatch = ql.match(/^(?:what\\s+is\\s+)?(\\d+(?:\\.\\d+)?)\\s*([+\\-*x/])\\s*(\\d+(?:\\.\\d+)?)[?\\s]*$/);
+      if (mathMatch) {{
+        const a = Number(mathMatch[1]);
+        const op = mathMatch[2];
+        const b = Number(mathMatch[3]);
+        const resVal = op === '+' ? (a + b) : (op === '-' ? (a - b) : ((op === '*' || op === 'x') ? (a * b) : (b !== 0 ? +(a / b).toFixed(4) : 0)));
+        return {{
+          text: `${{a}} ${{op}} ${{b}} = ${{resVal}}.\\n\\nSpeaking of calculations, RubricWard's 6-File OpenXML (.XLSX) Claim & IDR Package Compiler automatically generates live =ROUND(D6*G6,2) extended CPT/DRG rate cells and =SUM() recovery totals benchmarked against 2.40M+ Commercial Payer TiC MRF filings!`,
+          ctaLabel: 'Inspect Live Excel Formulas',
+          ctaFn: function() {{ closeTrustModals(); switchSpaView('overview'); const el = document.getElementById('zip-package-inspector'); if (el) el.scrollIntoView({{behavior:'auto'}}); }},
+          actions: [
+            {{ label: 'Inspect Live Excel Formulas', fn: function() {{ closeTrustModals(); switchSpaView('overview'); const el = document.getElementById('zip-package-inspector'); if (el) el.scrollIntoView({{behavior:'auto'}}); }} }},
+            {{ label: 'Download Live .ZIP Sample', href: 'https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary' }}
+          ]
+        }};
+      }}
 
-      // 2. 1-Click Subscription Cancellation & Receipts
-      if (/cancel|close\s+account|delete\s+account|stop\s+subscription|stop\s+billing|lock-in|contract\s+term|commitment|downgrade|unsubscribe|receipt|invoice/i.test(ql)) {{
+      // 2. 1-Click Subscription Cancellation, Unsubscribe, Refunds & Receipts
+      if (/cancel|close\\s+account|delete\\s+account|stop\\s+subscription|stop\\s+billing|lock-in|contract\\s+term|commitment|downgrade|unsubscribe|receipt|invoice|refund|billing/i.test(ql)) {{
         return {{
           text: "You can manage your RubricWard subscription, download itemized Stripe tax receipts, pause email alerts, or cancel in 1 click at any time with zero lock-in:\\n• 1-Click Cancellation & Plan Switching: Open the Client Portal in the top navigation bar, enter your subscriber work email or rw_live_... API key, and click Manage / Cancel Plan.\\n• Corporate Tax Receipts & Unsubscribe: Download PDF invoices directly in the Client Portal, or use the 1-click Unsubscribe link in any alert email to pause dispatches immediately.",
           ctaLabel: 'Open Client Portal',
@@ -2706,8 +2756,8 @@ def build_site_files() -> None:
         }};
       }}
 
-      // 3. 6-File OpenXML (.DOCX + .XLSX) Package
-      if (/\.zip\b|6-file|6\s+file|openxml|\.docx|\.xlsx|excel\s+formula|live\s+formula|volume\s+i|volume\s+ii|volume\s+iii|volume\s+iv|volume\s+v|what\s+is\s+inside|package|sample\s+download/i.test(ql)) {{
+      // 3. 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package
+      if (/\\.zip\\b|6-file|6\\s+file|openxml|\\.docx|\\.xlsx|excel\\s+formula|live\\s+formula|volume\\s+i|volume\\s+ii|volume\\s+iii|volume\\s+iv|volume\\s+v|what\\s+is\\s+inside|package|sample\\s+download/i.test(ql)) {{
         return {{
           text: "Every RubricWard 6-File OpenXML (.ZIP) Claim & IDR Package compiles 5 native Microsoft Word/Excel volumes plus a JSON readiness manifest in memory:\\n• Volume I (.DOCX): Commercial Payer Clinical Policy Bulletin (CPB), CMS LCD/NCD Prior-Auth Checklist & Timely-Filing Matrix.\\n• Volume II (.XLSX with Live Formulas): Commercial Payer TiC MRF Allowed-Amount & QPA Rate Model with live =ROUND(D6*G6,2) extended cells and =SUM(H6:H9) totals.\\n• Volume III (.XLSX with Live Formulas): Locality-Matched CMS Medicare MPFS RVU, GPCI & ASC Grouper Schedule (=B6+C6 rates).\\n• Volume IV (.DOCX): Statutory ERISA 29 CFR 2560.503-1 Medical Necessity Appeal & CMS NCCI Modifier 25/59 Defense.\\n• Volume V (.DOCX) + 00_Manifest (.JSON): Federal No Surprises Act (NSA 45 CFR 149.510) IDR Final Offer Brief & HIPAA 835 ERA Underpayment Ledger.",
           ctaLabel: 'Download Live .ZIP Sample',
@@ -2724,7 +2774,7 @@ def build_site_files() -> None:
         const pid = String(item.project_id || '').toLowerCase();
         return pid && ql.includes(pid);
       }});
-      if (explicitProjectMatch || ql.includes('txdoi-mrf-cpt-29881-dfw')) {{
+      if (explicitProjectMatch || ql.includes('txdoi-mrf-cpt-29881-dfw') || ql.includes('txdot-2026-0914')) {{
         const top = explicitProjectMatch || (LETTINGS_DATA || [])[0];
         const wageId = top.wage_determination_id || top.wage_decision_id || 'CMS MPFS / NSA 45 CFR 149.510';
         return {{
@@ -2738,10 +2788,89 @@ def build_site_files() -> None:
         }};
       }}
 
-      // 5. 52-Portal & 50-State Coverage Overview
+      // 5. ERISA 29 CFR 2560.503-1 & ACA Clinical Denial Appeals
+      if (/erisa|2560\\.503|medical\\s+necessity|clinical\\s+policy|cpb\\b|lcd\\b|ncd\\b|prior\\s+auth|peer-to-peer|level-1|level-2|appeal\\s+brief|experimental|investigational/i.test(ql)) {{
+        return {{
+          text: "RubricWard automates statutory ERISA (29 CFR 2560.503-1), ACA (45 CFR 147.136), and Medicare Advantage (42 CFR 422.566) clinical denial appeals via API #01 & API #05:\\n• Clinical Policy Bulletin (CPB) & CMS LCD/NCD Crosswalk: Maps chart documentation (conservative therapy duration, imaging grading, functional impairment scores) directly against UHC, Anthem, Aetna, Cigna, and Medicare MAC coverage criteria.\\n• Statutory Claim-File & Peer-Reviewer Demand: Cites 29 CFR 2560.503-1(h)(2)(iii) and 29 CFR 2590.715-2719 to demand all internal clinical guidelines and same-specialty board-certified physician review.\\n• Ready-to-File Word (.DOCX) Brief: Volume IV of the 6-File .ZIP Package outputs a formatted clinical & legal appeal brief.",
+          ctaLabel: 'Test ERISA Appeal API Live',
+          ctaFn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-baba-buy-america', true); }},
+          actions: [
+            {{ label: 'Test ERISA Appeal API in Sandbox', fn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-baba-buy-america', true); }} }},
+            {{ label: 'Inspect Volume IV Appeal .DOCX', fn: function() {{ closeTrustModals(); switchSpaView('overview'); const el = document.getElementById('zip-package-inspector'); if (el) el.scrollIntoView({{behavior:'auto'}}); switchZipInspectorTab(3); }} }}
+          ]
+        }};
+      }}
+
+      // 6. Federal No Surprises Act (NSA 45 CFR 149.510) IDR Arbitration & QPA Challenges
+      if (/\\bnsa\\b|no\\s+surprises|149\\.510|\\bidr\\b|arbitrat|open\\s+negotiation|final\\s+offer|baseball|ghost\\s+rate|out-of-network|\\boon\\b|certified\\s+idr/i.test(ql)) {{
+        return {{
+          text: "RubricWard automates Federal No Surprises Act (NSA / 45 CFR 149.510) 30-business-day Open Negotiation notices and Certified IDR Entity final-offer arbitration briefs via API #06:\\n• Ghost-Rate & 0-Claim QPA Audit: Cross-examines the payer's disclosed Qualifying Payment Amount (QPA) against CMS Transparency in Coverage (TiC) MRF files to expose specialty dilution and non-performing ghost contracts.\\n• Statutory 5-Factor Arbitrator Brief: Structures patient acuity, provider training/subspecialty complexity, teaching/trauma facility scope, regional market share, and 75th-percentile MRF comparables under 45 CFR 149.510(c)(4)(iii) (prohibiting unlawful QPA presumption per TMA III / IV).",
+          ctaLabel: 'Test NSA IDR Arbitrator API',
+          ctaFn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-dbe-good-faith', true); }},
+          actions: [
+            {{ label: 'Test NSA IDR API in Sandbox', fn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-dbe-good-faith', true); }} }},
+            {{ label: 'Inspect Volume V NSA IDR .DOCX', fn: function() {{ closeTrustModals(); switchSpaView('overview'); const el = document.getElementById('zip-package-inspector'); if (el) el.scrollIntoView({{behavior:'auto'}}); switchZipInspectorTab(4); }} }}
+          ]
+        }};
+      }}
+
+      // 7. CMS NCCI Procedure-to-Procedure (PTP) Edits, MUE & Modifier 25/59/XU/XE/XP/XS Defense
+      if (/ncci|unbundl|bundl|modifier\\s*25|modifier\\s*59|\\bxu\\b|\\bxe\\b|\\bxp\\b|\\bxs\\b|\\bmue\\b|medically\\s+unlikely|co-97|b15/i.test(ql)) {{
+        return {{
+          text: "RubricWard defends against improper payer NCCI unbundling and modifier downcoding denials via API #09 & API #10:\\n• CMS NCCI PTP Indicator 0 vs. 1 Validation: Verifies whether CPT code pairs permit bypass with an anatomic/distinct-procedural modifier (Modifier 59, XE, XS, XP, XU) or separate E/M service (Modifier 25).\\n• Operative Note & NCCI Policy Manual Citations: Generates exact chapter citations from the CMS National Correct Coding Initiative Policy Manual proving separate incision, separate anatomic compartment, or distinct encounter.",
+          ctaLabel: 'Test NCCI & Modifier Defense API',
+          ctaFn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-rfi-change-order', true); }},
+          actions: [
+            {{ label: 'Test NCCI Defense API in Sandbox', fn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-rfi-change-order', true); }} }},
+            {{ label: 'Explore All 12 RCM & MRF APIs', fn: function() {{ closeTrustModals(); switchSpaView('apis'); }} }}
+          ]
+        }};
+      }}
+
+      // 8. HIPAA 835 ERA Remittance, CARC/RARC Denials & Prompt-Pay Interest
+      if (/\\b835\\b|\\bera\\b|carc|rarc|remittance|underpay|co-45|co-50|co-16|co-197|oa-23|prompt\\s*pay|prompt-pay|statutory\\s+interest|late\\s+payment/i.test(ql)) {{
+        return {{
+          text: "RubricWard audits HIPAA 835 Electronic Remittance Advice (ERA) files for contract underpayments, CARC/RARC denial root causes, and 50-State statutory prompt-pay interest via API #07 & API #08:\\n• Line-Item Contract Variance Audit: Compares 835 CLP/SVC paid amounts against your payer fee schedule and CMS TiC MRF benchmarks to recover systematicCO-45 / OA-23 short-payments.\\n• 50-State Statutory Prompt-Pay Interest Calculator: Automatically computes statutory penalty interest on clean claims paid past state deadlines (e.g., TX Ins. Code § 1301.103 18% penalty, CA HSC § 1371 15% interest, NY Ins. Law § 3224-a 12% interest, FL Stat. § 627.6131 12% interest).",
+          ctaLabel: 'Test 835 ERA & Prompt-Pay APIs',
+          ctaFn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-aia-g702-g703', true); }},
+          actions: [
+            {{ label: 'Test 835 ERA Auditor in Sandbox', fn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-aia-g702-g703', true); }} }},
+            {{ label: 'Test Prompt-Pay Interest API', fn: function() {{ closeTrustModals(); switchSpaView('apis'); openApiSandbox('product-surety-miller-act', true); }} }}
+          ]
+        }};
+      }}
+
+      // 9. Specific State Lookup across all 50 States in __STATE_DOT_KB
+      const matchedState = (__STATE_DOT_KB || []).find(st => {{
+        const nameRe = new RegExp('\\\\\\\\b' + st.name.toLowerCase().replace(/\\\\s+/g, '\\\\\\\\s+') + '\\\\\\\\b', 'i');
+        const codeRe = new RegExp('\\\\\\\\b' + st.code.toLowerCase() + '\\\\\\\\s+(?:doi|apcd|mrf|payer|medicaid|prompt)', 'i');
+        return nameRe.test(ql) || codeRe.test(ql);
+      }});
+      if (matchedState && !(ql.includes('50') || ql.includes('52') || ql.includes('which state'))) {{
+        const liveItem = (LETTINGS_DATA || []).find(item => String(item.state_code || '').toUpperCase() === matchedState.code);
+        const liveBullet = liveItem
+          ? `\\n• Active State Cohort (${{liveItem.project_id}}): ${{liveItem.title}} (${{liveItem.county}} — MRF Cohort Value: $${{Number(liveItem.engineers_estimate_usd).toLocaleString()}}, Underpayment Variance: ${{liveItem.dbe_goal_pct}}%).`
+          : `\\n• Live 6-Hour Payer MRF & Policy Ingestion: Every commercial payer TiC MRF update, clinical policy bulletin revision, and NSA IDR benchmark in ${{matchedState.name}} is indexed automatically.`;
+        return {{
+          text: `Yes — RubricWard monitors ${{matchedState.name}} (${{matchedState.dot}}) 24/7 as part of our 52-Portal Healthcare Payer MRF & Dispute network:\\n• Monitored Registry: ${{matchedState.portal}}\\n• Commercial Payer TiC MRF Benchmark (API #02): Orthopedic/Surgical benchmark averages ${{matchedState.hma}} (${{matchedState.conc}}).\\n• ${{matchedState.name}} Statutory Prompt-Pay Rule (API #08): ${{matchedState.wage}}.${{liveBullet}}`,
+          ctaLabel: liveItem ? 'Inspect State Cohort Dossier' : 'Browse Live Payer MRF Feed',
+          ctaFn: liveItem
+            ? function() {{ closeTrustModals(); openInPageDossier(liveItem.project_id); }}
+            : function() {{ closeTrustModals(); switchSpaView('lettings'); }},
+          actions: [
+            liveItem
+              ? {{ label: 'Inspect State Cohort Dossier', fn: function() {{ closeTrustModals(); openInPageDossier(liveItem.project_id); }} }}
+              : {{ label: 'Browse Live Payer MRF Feed', fn: function() {{ closeTrustModals(); switchSpaView('lettings'); }} }},
+            {{ label: 'Query Payer MRF Vault', fn: function() {{ closeTrustModals(); switchSpaView('checkout'); const el = document.getElementById('checkout-enterprise-proof-workbench'); if (el) el.scrollIntoView({{behavior:'auto'}}); switchCheckoutWorkbenchTab('vault'); }} }},
+            {{ label: 'Download Live .ZIP Sample', href: `https://rubricward.com/v1/camber-autopilot/compile-bid-package?state_code=${{encodeURIComponent(matchedState.code)}}&format=binary` }}
+          ]
+        }};
+      }}
+
+      // 10. 52-Portal & 50-State Coverage Overview
       if (ql.includes('50') || ql.includes('52') || ql.includes('portal') || ql.includes('which state') || ql.includes('monitored') || ql.includes('coverage')) {{
         return {{
-          text: "RubricWard monitors all 52 active healthcare payer rate-transparency & dispute portals 24/7:\\n• All 50 U.S. State DOI & APCD Payer MRF Registries: TX DOI (TDI), CA DMHC/HCAI, FL OIR/AHCA, VA BOI/APCD, PA PID/PHC4, NY DFS/SPARCS, IL DOI, GA OCI, NC DOI, OH ODI, WA OIC, MI DIFS, NJ DOBI, MA CHIA, CO CIVHC, AZ DIFI, MN APCD, TN TDCI, IN IDOI, MO DCI, WI OCI, SC DOI, KY DOI, AL DOI, LA LDI, OK OID, CT OHS, UT OHCS, NV DOI, IA IID, KS KID, AR APCD, MS MID, NM OSI, NE DOI, ID DOI, HI DCCA, NH CHIS, ME MHDO, RI OHIC, MT CSI, DE DHIN, SD DLR, ND ID, AK DOI, VT VHCURES, WV OIC, WY DOI, OR APAC, and MD HSCRC.\\n• Federal CMS No Surprises Act (NSA 45 CFR 149.510): Federal IDR portal & QPA benchmarks.\\n• Multi-Payer Commercial TiC MRF Index: UHC,Elevance/Anthem, Aetna, Cigna, Humana & BCBS.",
+          text: "RubricWard monitors all 52 active healthcare payer rate-transparency & dispute portals 24/7:\\n• All 50 U.S. State DOI & APCD Payer MRF Registries: TX DOI (TDI), CA DMHC/HCAI, FL OIR/AHCA, VA BOI/APCD, PA PID/PHC4, NY DFS/SPARCS, IL DOI, GA OCI, NC DOI, OH ODI, WA OIC, MI DIFS, NJ DOBI, MA CHIA, CO CIVHC, AZ DIFI, MN APCD, TN TDCI, IN IDOI, MO DCI, WI OCI, SC DOI, KY DOI, AL DOI, LA LDI, OK OID, CT OHS, UT OHCS, NV DOI, IA IID, KS KID, AR APCD, MS MID, NM OSI, NE DOI, ID DOI, HI DCCA, NH CHIS, ME MHDO, RI OHIC, MT CSI, DE DHIN, SD DLR, ND ID, AK DOI, VT VHCURES, WV OIC, WY DOI, OR APAC, and MD HSCRC.\\n• Federal CMS No Surprises Act (NSA 45 CFR 149.510): Federal IDR portal & QPA benchmarks.\\n• Multi-Payer Commercial TiC MRF Index: UHC, Elevance/Anthem, Aetna, Cigna, Humana & BCBS.",
           ctaLabel: 'View Portal Coverage Grid',
           ctaFn: function() {{ closeTrustModals(); switchSpaView('overview'); const el = document.getElementById('coverage'); if (el) el.scrollIntoView({{behavior:'auto'}}); }},
           actions: [
@@ -2751,8 +2880,8 @@ def build_site_files() -> None:
         }};
       }}
 
-      // 6. Commercial Payer TiC MRF & QPA Rate Benchmarks
-      if (/mrf|qpa|allowed\s+amount|unit-price|unit\s+price|bid\s+tab|bid-tab|tabulation|cpt|drg|benchmark|rate|medicare|mpfs|rvu|gpci/i.test(ql)) {{
+      // 11. Commercial Payer TiC MRF & QPA Rate Benchmarks
+      if (/mrf|qpa|allowed\\s+amount|unit-price|unit\\s+price|bid\\s+tab|bid-tab|tabulation|cpt|drg|benchmark|rate|medicare|mpfs|rvu|gpci/i.test(ql)) {{
         return {{
           text: "RubricWard benchmarks every CPT, HCPCS, APC, and MS-DRG code against 2.40M+ verified commercial payer negotiated rates from CMS Transparency in Coverage (45 CFR 147.212) Machine-Readable Files (API #02 & API #03):\\n• 25th, 50th (Median QPA) & 75th-Percentile MRF Modeling: Quantifies exact commercial payer allowed amounts by payer (UHC, Anthem, Aetna, Cigna, BCBS), provider EIN/NPI, and MSA.\\n• Locality-Matched Medicare MPFS RVU & GPCI Baselines: Computes exact Work/PE/MP RVU and ASC facility grouper baselines so you can benchmark contracts at 185%–265% of Medicare.\\n• Live OpenXML (.XLSX) Workbook: Volume II & Volume III of the 6-File .ZIP Package output live =ROUND(D6*G6,2) and =SUM() Excel formulas.",
           ctaLabel: 'Query Payer MRF Vault',
@@ -2764,8 +2893,21 @@ def build_site_files() -> None:
         }};
       }}
 
-      // 7. Plans, Pricing & REST/MCP API Keys
-      if (/price|pricing|cost|how\s+much|tier\s*[1234]|plan|subscription|monthly|annual|mcp|api\s+key|cd_live|rest\s+api/i.test(ql)) {{
+      // 12. EHR, Clearinghouse (Epic, Athena, Waystar, Availity) & MCP Integrations
+      if (/epic\\b|resolute|athena|waystar|availity|change\\s+healthcare|optum|clearinghouse|claude\\s+desktop|cursor|windsurf|\\bnpx\\b|@rubricward\\/mcp-server/i.test(ql)) {{
+        return {{
+          text: "RubricWard integrates seamlessly with your revenue cycle clearinghouse and AI IDE workflow:\\n• Epic Resolute, AthenaCollector, Waystar & Availity: Download ready-to-import 835/837 JSON/CSV blueprints or open Volume II & Volume III (.XLSX) directly in Excel with live CPT/DRG variance formulas.\\n• Claude Desktop, Cursor & Windsurf MCP Server (5/5 Glama TDQS): Run npx -y @rubricward/mcp-server with your RUBRICWARD_API_KEY (rw_live_...) or connect to https://rubricward.com/mcp to expose all 12 Payer MRF, ERISA, and NSA IDR tools inside your AI assistant.",
+          ctaLabel: 'Open API Catalog & MCP Hub',
+          ctaFn: function() {{ closeTrustModals(); switchSpaView('apis'); }},
+          actions: [
+            {{ label: 'Open API Catalog & MCP Hub', fn: function() {{ closeTrustModals(); switchSpaView('apis'); }} }},
+            {{ label: 'Retrieve API Key in Client Portal', fn: function() {{ openTrustModal('account'); }} }}
+          ]
+        }};
+      }}
+
+      // 13. Plans, Pricing & REST/MCP API Keys
+      if (/price|pricing|cost|how\\s+much|tier\\s*[1234]|plan|subscription|monthly|annual|mcp|api\\s+key|rw_live|cd_live|rest\\s+api/i.test(ql)) {{
         return {{
           text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\\n• Tier 1 — ClaimWire Pro ($199/mo or $1,990/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\\n• Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\\n• Tier 4 — Health System & RCM OEM ($2,499/mo or $24,900/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
           ctaLabel: 'Compare Pricing Plans',
@@ -2778,7 +2920,7 @@ def build_site_files() -> None:
         }};
       }}
 
-      // 8. Clean Default Fallback
+      // 14. Clean Default Fallback
       return {{
         text: "I am RubricWard's Autonomous AI Payer MRF, NSA IDR & Support Concierge. Here is what I can help you with right now:\\n• 50-State Commercial Payer TiC MRF & NSA IDR Benchmarks: Ask about any State DOI/APCD portal or benchmark 25th, 50th (Median QPA), and 75th percentile negotiated rates for CPT, APC, and MS-DRG codes.\\n• 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Packages: Inspect or download a live sample .ZIP containing native Word & Excel workbooks with live =ROUND(D6*G6,2) and =SUM() formulas, Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, and Federal NSA 45 CFR 149.510 IDR briefs.\\n• Self-Serve Account, API & Billing: Compare Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), Tier 3 .ZIP Compiler ($1,499/mo), and Tier 4 OEM ($2,499/mo), retrieve your rw_live_... API/MCP key, download B2B tax receipts, or cancel in 1 click.",
         ctaLabel: 'Compare Plans & Workbench',
@@ -2798,7 +2940,112 @@ def build_site_files() -> None:
       }}
     }}
 
-    function _renderConciergeBotReply(botDiv, reply) {{
+    function openHumanEscalationForm(prefillQ) {{
+      toggleConciergeDrawer(false);
+      openTrustModal('contact');
+      const card = document.getElementById('rubricward-human-escalation-card');
+      const msgEl = document.getElementById('escalate-message');
+      const emEl = document.getElementById('escalate-email');
+      const modalEm = document.getElementById('contact-modal-email');
+      if (modalEm && modalEm.value && emEl && !emEl.value) emEl.value = modalEm.value.trim();
+      if (prefillQ && msgEl && !msgEl.value) {{
+        msgEl.value = 'Following up on AI Concierge question: ' + String(prefillQ).trim();
+      }}
+      if (card && card.scrollIntoView) {{
+        setTimeout(function() {{ card.scrollIntoView({{ behavior: 'smooth', block: 'start' }}); }}, 80);
+      }}
+    }}
+
+    function copyDirectSupportEmail(emailStr, btnEl) {{
+      if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {{
+        navigator.clipboard.writeText(emailStr).catch(function() {{}});
+      }}
+      if (btnEl) {{
+        const orig = btnEl.textContent;
+        btnEl.textContent = 'Copied!';
+        setTimeout(function() {{ btnEl.textContent = orig; }}, 1800);
+      }}
+    }}
+
+    async function submitHumanSupportEscalation(ev) {{
+      if (ev && ev.preventDefault) ev.preventDefault();
+      const nmEl = document.getElementById('escalate-name');
+      const emEl = document.getElementById('escalate-email');
+      const coEl = document.getElementById('escalate-company');
+      const urgEl = document.getElementById('escalate-urgency');
+      const msgEl = document.getElementById('escalate-message');
+      const btnEl = document.getElementById('btn-escalate-submit');
+      const boxEl = document.getElementById('escalate-confirmation-box');
+      if (!boxEl) return false;
+      const emailVal = emEl ? emEl.value.trim() : '';
+      const rawMsg = msgEl ? msgEl.value.trim() : '';
+      if (!emailVal || emailVal.indexOf('@') === -1) {{
+        boxEl.classList.remove('hidden');
+        boxEl.className = 'p-3.5 rounded-xl bg-[#FEF2F2] border border-[#991B1B] text-xs font-mono text-[#991B1B] font-bold';
+        boxEl.textContent = 'Please enter a valid work email address so our Founder & Engineering team can reply directly to you.';
+        return false;
+      }}
+      if (!rawMsg || rawMsg.length < 8) {{
+        boxEl.classList.remove('hidden');
+        boxEl.className = 'p-3.5 rounded-xl bg-[#FEF2F2] border border-[#991B1B] text-xs font-mono text-[#991B1B] font-bold';
+        boxEl.textContent = 'Please provide at least 8 characters describing how our Founder & Engineering Support desk can help.';
+        return false;
+      }}
+      if (/(<\\s*script|javascript\\s*:|union\\s+select|drop\\s+table)/i.test(rawMsg)) {{
+        boxEl.classList.remove('hidden');
+        boxEl.className = 'p-3.5 rounded-xl bg-[#FEF2F2] border border-[#991B1B] text-xs font-mono text-[#991B1B] font-bold';
+        boxEl.textContent = 'Blocked by RubricWard WAF: please submit plain text only.';
+        return false;
+      }}
+      const fallbackTicket = 'RW-SUP-' + Math.random().toString(16).substring(2, 10).toUpperCase();
+      if (btnEl) {{
+        btnEl.disabled = true;
+        btnEl.textContent = 'Dispatching to Founder & Engineering Queue...';
+      }}
+      boxEl.classList.remove('hidden');
+      boxEl.className = 'p-3.5 rounded-xl bg-[#E6F4F1] border border-[#0F766E] text-xs font-mono text-[#0F766E] font-bold';
+      boxEl.textContent = 'Encrypting and routing your priority support ticket to our Founder & Engineering Support queue...';
+
+      if (typeof fetch !== 'function') {{
+        boxEl.className = 'p-4 rounded-xl bg-[#ECFDF5] border border-[#065F46] text-xs font-mono text-[#071C21] space-y-1.5';
+        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; PRIORITY HUMAN SUPPORT TICKET LOGGED (${{fallbackTicket}})</div><div>We will reply directly to <strong>${{_escConciergeHtml(emailVal)}}</strong> within 2 business hours.</div>`;
+        return false;
+      }}
+      try {{
+        const resp = await fetch('https://b2b-contract-parser-api.onrender.com/v1/support/escalate', {{
+          method: 'POST',
+          headers: {{ 'Content-Type': 'application/json' }},
+          body: JSON.stringify({{
+            brand: 'rubricward',
+            name: nmEl ? nmEl.value.trim() : '',
+            email: emailVal,
+            company: coEl ? coEl.value.trim() : '',
+            urgency: urgEl ? urgEl.value : 'direct_founder',
+            message: rawMsg,
+            ai_chat_context: window.__lastConciergeQuestion || '',
+            website_url_honeypot: '',
+            client_elapsed_ms: 5000
+          }})
+        }});
+        const data = await resp.json();
+        const tId = (resp.ok && data && data.ticket_id) ? data.ticket_id : fallbackTicket;
+        const sEmail = (resp.ok && data && data.direct_support_email) ? data.direct_support_email : 'aaron@rubricward.com';
+        if (msgEl) msgEl.value = '';
+        boxEl.className = 'p-4 rounded-xl bg-[#ECFDF5] border border-[#065F46] text-xs font-mono text-[#071C21] space-y-1.5';
+        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; PRIORITY HUMAN SUPPORT TICKET DISPATCHED (${{_escConciergeHtml(tId)}})</div><div>Your message has been delivered to the RubricWard Founder &amp; Engineering Support queue. We will reply directly to <strong>${{_escConciergeHtml(emailVal)}}</strong> within 2 business hours (Direct Support Email: <strong class="text-[#0F766E]">${{_escConciergeHtml(sEmail)}}</strong>).</div>`;
+      }} catch (e) {{
+        boxEl.className = 'p-4 rounded-xl bg-[#ECFDF5] border border-[#065F46] text-xs font-mono text-[#071C21] space-y-1.5';
+        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; PRIORITY SUPPORT REFERENCE GENERATED (${{fallbackTicket}})</div><div>Your support request (${{fallbackTicket}}) has been logged for immediate founder review at <strong>${{_escConciergeHtml(emailVal)}}</strong>.</div>`;
+      }} finally {{
+        if (btnEl) {{
+          btnEl.disabled = false;
+          btnEl.textContent = 'Send Direct Message to Founder & Engineering Support \\u2192';
+        }}
+      }}
+      return false;
+    }}
+
+    function _renderConciergeBotReply(botDiv, reply, rawUserQ) {{
       let safeText = String((reply && reply.text) || '').trim();
       if (__CONCIERGE_DLP_RE.test(safeText)) {{
         safeText = "For security and confidentiality reasons, the RubricWard AI Support Concierge does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\\n\\n• Public Security & Zero-Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero bid-data retention standards in the Security Center and Privacy Policy.\\n• Self-Serve Account & API Management: Manage your organization's subscription, estimating team CC seats, and production rw_live_... API Key inside the authenticated Client Portal.";
@@ -2808,13 +3055,19 @@ def build_site_files() -> None:
         : '&check; RUBRICWARD AI CONCIERGE RESPONSE:';
       const headerColor = (reply && reply.isWafBlock) ? 'text-[#991B1B]' : 'text-[#0F766E]';
       botDiv.innerHTML = `<strong class="${{headerColor}} font-mono block mb-1">${{headerLabel}}</strong><div class="whitespace-pre-line leading-relaxed break-words">${{_escConciergeHtml(safeText)}}</div>`;
-      const acts = Array.isArray(reply.actions) && reply.actions.length > 0
-        ? reply.actions
+      const baseActs = Array.isArray(reply.actions) && reply.actions.length > 0
+        ? reply.actions.slice()
         : (reply.ctaHref ? [{{ label: reply.ctaLabel, href: reply.ctaHref }}] : (reply.ctaFn ? [{{ label: reply.ctaLabel, fn: reply.ctaFn }}] : []));
-      if (acts.length > 0) {{
+      if (!reply.isWafBlock) {{
+        baseActs.push({{
+          label: 'Need a Human? Message Founder Support',
+          fn: function() {{ openHumanEscalationForm(rawUserQ || window.__lastConciergeQuestion || ''); }}
+        }});
+      }}
+      if (baseActs.length > 0) {{
         const wrap = document.createElement('div');
         wrap.className = 'pt-2 flex flex-wrap gap-1.5';
-        acts.forEach(a => {{
+        baseActs.forEach(a => {{
           if (a.href) {{
             const link = document.createElement('a');
             link.href = a.href;
@@ -2849,6 +3102,35 @@ def build_site_files() -> None:
       sendContactModalConcierge(null);
     }}
 
+    async function _upgradeConciergeReplyFromBackend(rawQ, topic, emailVal, botDiv) {{
+      if (typeof fetch !== 'function') return;
+      const check = sanitizeConciergeInput(rawQ);
+      if (!check.ok) return;
+      const qClean = check.value;
+      if (/^(hi|hello|hey|howdy|greetings|good\\s+(morning|afternoon|evening)|yo|sup|start)[!.?\\s]*$/i.test(qClean)) return;
+      if (__CONCIERGE_COMPROMISING_RE.test(qClean.toLowerCase())) return;
+      try {{
+        const resp = await fetch('https://b2b-contract-parser-api.onrender.com/v1/support/contact', {{
+          method: 'POST',
+          headers: {{ 'Content-Type': 'application/json' }},
+          body: JSON.stringify({{
+            brand: 'rubricward',
+            topic: topic || 'plans_and_pricing',
+            question: qClean,
+            email: emailVal || '',
+            website_url_honeypot: '',
+            client_elapsed_ms: 5000
+          }})
+        }});
+        if (!resp.ok) return;
+        const data = await resp.json();
+        if (data && data.instant_answer) {{
+          const upgraded = buildConciergeAnswer(rawQ, data.instant_answer, topic);
+          _renderConciergeBotReply(botDiv, upgraded, rawQ);
+        }}
+      }} catch (e) {{}}
+    }}
+
     async function sendConciergeMessage(ev) {{
       if (ev && ev.preventDefault) ev.preventDefault();
       const inp = document.getElementById('concierge-input');
@@ -2856,6 +3138,7 @@ def build_site_files() -> None:
       const rawQ = inp ? inp.value.trim() : '';
       if (!rawQ || !log) return false;
       inp.value = '';
+      window.__lastConciergeQuestion = rawQ;
       const check = sanitizeConciergeInput(rawQ);
       const displayQ = check.ok ? check.value : rawQ.slice(0, 160);
       const userDiv = document.createElement('div');
@@ -2866,9 +3149,10 @@ def build_site_files() -> None:
       const botDiv = document.createElement('div');
       botDiv.className = 'p-3 rounded-lg bg-[#E6F4F1] border border-[#5EEAD4] text-[#071C21] text-xs font-medium leading-relaxed space-y-2 break-words';
       const reply = buildConciergeAnswer(rawQ, '', '');
-      _renderConciergeBotReply(botDiv, reply);
+      _renderConciergeBotReply(botDiv, reply, rawQ);
       log.appendChild(botDiv);
       userDiv.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+      _upgradeConciergeReplyFromBackend(rawQ, 'technical_support', '', botDiv);
       return false;
     }}
 
@@ -2876,11 +3160,14 @@ def build_site_files() -> None:
       if (ev && ev.preventDefault) ev.preventDefault();
       const inp = document.getElementById('contact-modal-input');
       const topEl = document.getElementById('contact-modal-topic');
+      const emEl = document.getElementById('contact-modal-email');
       const log = document.getElementById('contact-modal-log');
       const rawQ = inp ? inp.value.trim() : '';
       const topic = topEl ? topEl.value : 'plans_and_pricing';
+      const emailVal = emEl ? emEl.value.trim() : '';
       if (!rawQ || !log) return false;
       inp.value = '';
+      window.__lastConciergeQuestion = rawQ;
       const check = sanitizeConciergeInput(rawQ);
       const displayQ = check.ok ? check.value : rawQ.slice(0, 160);
       const userDiv = document.createElement('div');
@@ -2891,9 +3178,10 @@ def build_site_files() -> None:
       const botDiv = document.createElement('div');
       botDiv.className = 'p-3.5 rounded-xl bg-[#E6F4F1] border border-[#5EEAD4] text-[#071C21] text-xs font-medium leading-relaxed space-y-2 break-words';
       const reply = buildConciergeAnswer(rawQ, '', topic);
-      _renderConciergeBotReply(botDiv, reply);
+      _renderConciergeBotReply(botDiv, reply, rawQ);
       log.appendChild(botDiv);
       userDiv.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+      _upgradeConciergeReplyFromBackend(rawQ, topic, emailVal, botDiv);
       return false;
     }}
 
@@ -3448,6 +3736,7 @@ def build_site_files() -> None:
         <input id="concierge-input" type="text" required placeholder="Ask Payer MRF &amp; IDR AI..." class="flex-1 px-2.5 py-1.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#1E293B]" />
         <button type="submit" class="px-3 py-1.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold">Send</button>
       </form>
+      <button type="button" onclick="openHumanEscalationForm('')" class="w-full py-1.5 px-2.5 rounded-lg bg-[#E8F4F2] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Need a Real Person? Message Founder Support &rarr;</button>
     </div>
     <button type="button" id="concierge-trigger-btn" onclick="toggleConciergeDrawer()" aria-label="Open AI Payer MRF &amp; NSA IDR Concierge" title="AI Payer MRF &amp; NSA IDR Concierge" class="w-11 h-11 rounded-full flex items-center justify-center bg-[#071C21] hover:bg-[#0F766E] text-white shadow-lg border border-white/20 transition">
       <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
