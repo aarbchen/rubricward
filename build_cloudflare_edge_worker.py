@@ -112,7 +112,7 @@ def build_worker_bundle() -> Path:
         if _pw
     ))
 
-    worker_js = f"""// RubricWard Full-Stack Edge Worker (https://rubricward.com & https://api.rubricward.com)
+    worker_js = rf"""// RubricWard Full-Stack Edge Worker (https://rubricward.com & https://api.rubricward.com)
 // Serves:
 //  - Static HTML/SVG/XML/PNG/ICO pages (/, /apis, /lettings, /lettings/project/*, /sitemap.xml, /robots.txt, /site.webmanifest, /favicon.svg, /bimi-logo.svg, /favicon.ico, /favicon*.png, /apple-touch-icon.png, /og-image.png)
 //  - All 12 Stateless Commercial Payer MRF, Medicare RVU/GPCI, ERISA Appeal & Federal NSA IDR APIs (/v1/*)
@@ -935,7 +935,7 @@ async function handleConciergeEndpoint(body, env) {{
   }}
 
   if (CONCIERGE_COMPROMISING_RE.test(ql)) {{
-    const secAns = "For security and confidentiality reasons, the RubricWard AI Support Concierge cannot verify identity or administrative authority claims in chat and does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\n\n• Public Security & Zero-PHI Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero PHI/claim retention standards in the Security Center (#security) and Privacy Policy (#privacy).\n• Self-Serve Account & API Management: Manage your organization's subscription, RCM & legal team CC seats, and production cd_live_... API Key inside the Client Portal (#account).";
+    const secAns = "For security and confidentiality reasons, the RubricWard AI Support Concierge cannot verify identity or administrative authority claims in chat and does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\n\n• Public Security & Zero-PHI Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero PHI/claim retention standards in the Security Center (#security) and Privacy Policy (#privacy).\n• Self-Serve Account & API Management: Manage your organization's subscription, RCM & legal team CC seats, and production rw_live_... API Key inside the Client Portal (#account).";
     return {{
       status: "ok",
       question: q,
@@ -971,7 +971,7 @@ async function handleConciergeEndpoint(body, env) {{
     fallbackAns = "The sky is blue on a clear day (thanks to Rayleigh scattering of sunlight in Earth's atmosphere)!\n\nAs RubricWard's AI Commercial Payer MRF & NSA IDR Concierge, I am live and ready to help with any question about our 52-portal Commercial Payer TiC MRF & CMS fee-schedule feed, QPA underpayment benchmarks, 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Compiler, or self-serve account settings.";
     anchor = "#contract-directory";
   }} else if (/unsubscribe|cancel|stop email|opt out|pause|refund|invoice|receipt|ach|stripe|billing|downgrade|close account/i.test(ql)) {{
-    fallbackAns = "You can pause payer MRF & LCD email alerts, download corporate tax receipts, or cancel a paid subscription in 1 click with zero lock-in:\n• Pause or Filter Payer MRF Alerts: Click the 1-click Unsubscribe link in any RubricWard digest email, or open the Client Portal (#account -> Section 01) to toggle specific states or payers.\n• 1-Click Self-Serve Cancellation: Open the Client Portal (#account), enter your work email or cd_live_... key, and click Manage / Cancel Plan. Recurring billing stops immediately.\n• Corporate B2B Invoices & Annual Savings: Switch between Monthly and Annual billing anytime (saving $398/yr on Tier 1, $1,498/yr on Tier 2, or $3,088/yr on Tier 3).";
+    fallbackAns = "You can pause payer MRF & LCD email alerts, download corporate tax receipts, or cancel a paid subscription in 1 click with zero lock-in:\n• Pause or Filter Payer MRF Alerts: Click the 1-click Unsubscribe link in any RubricWard digest email, or open the Client Portal (#account -> Section 01) to toggle specific states or payers.\n• 1-Click Self-Serve Cancellation: Open the Client Portal (#account), enter your work email or rw_live_... key, and click Manage / Cancel Plan. Recurring billing stops immediately.\n• Corporate B2B Invoices & Annual Savings: Switch between Monthly and Annual billing anytime (saving $398/yr on Tier 1, $1,498/yr on Tier 2, or $3,088/yr on Tier 3).";
     anchor = "#account";
   }} else if (/teammate|colleague|team|seat|share|multi-user|invite|slack|teams|epic|athena|webhook|filter/i.test(ql)) {{
     fallbackAns = "Every RubricWard workspace supports multi-user RCM team seats, custom 52-portal specialty routing, and real-time webhooks inside the Client Portal (#account):\n• Unlimited RCM & Legal Team CC Seats (Section 02): Add revenue cycle directors, denial appeal nurses, managed-care VPs, and healthcare counsel.\n• Slack, Microsoft Teams & RCM Webhooks (Section 02): Route high-value commercial MRF rate shifts and NSA IDR filing deadlines straight into your denial-management channel.\n• 52-Portal & Specialty Alert Routing (Section 01): Filter alerts across All 50 State Commercial Payer MRFs, CMS MPFS/OPPS/NCCI, Orthopedic/Spine ASC, Emergency Medicine, or Anesthesia.";
@@ -989,7 +989,7 @@ async function handleConciergeEndpoint(body, env) {{
     fallbackAns = "RubricWard monitors all 52 active healthcare commercial payer & federal rate portals 24/7:\n• All 50 U.S. State Commercial Payer TiC MRF & Department of Insurance Portals (tracking UHC, Anthem/Elevance, BCBS, Aetna, Cigna, Humana, and Centene machine-readable files + state surprise-billing registries across TX, CA, FL, NY, PA, IL, OH, GA, NC, MI, NJ, VA, WA, MA, AZ, TN, IN, MO, MD, WI, CO, MN, SC, AL, LA, KY, OR, OK, CT, UT, NV, IA, AR, MS, KS, NM, NE, ID, WV, HI, NH, ME, RI, MT, DE, SD, ND, AK, VT, and WY).\n• Federal CMS Medicare Authority: MPFS RVU/GPCI, Hospital OPPS/ASC Addendum B, NCCI PTP/MUE Edits, and MCD LCD/NCD Policies.\n• Federal No Surprises Act (NSA) IDR Portal: 45 CFR 149.510 QPA & Certified IDRE Arbitration Benchmarks.";
     anchor = "#coverage";
   }} else if (/mcp|api|claude|cursor|windsurf|epic|athena|waystar|endpoint/i.test(ql)) {{
-    fallbackAns = "RubricWard exposes 12 stateless Pydantic V2 healthcare RCM & payer rate-intelligence microservices via REST and Model Context Protocol (MCP):\n• Production API Key (cd_live_...): Included in Tier 2 Autopilot ($499/mo, 2,500 calls/mo), Tier 3 ($1,499/mo, 10,000 calls/mo), and Tier 4 OEM ($2,499/mo, 50,000 calls/mo).\n• Claude Desktop, Cursor & Windsurf MCP (5/5 Glama TDQS): Run npx -y @rubricward/mcp-server locally or connect to https://rubricward.com/mcp.";
+    fallbackAns = "RubricWard exposes 12 stateless Pydantic V2 healthcare RCM & payer rate-intelligence microservices via REST and Model Context Protocol (MCP):\n• Production API Key (rw_live_...): Included in Tier 2 Autopilot ($499/mo, 2,500 calls/mo), Tier 3 ($1,499/mo, 10,000 calls/mo), and Tier 4 OEM ($2,499/mo, 50,000 calls/mo).\n• Claude Desktop, Cursor & Windsurf MCP (5/5 Glama TDQS): Run npx -y @rubricward/mcp-server locally or connect to https://rubricward.com/mcp.";
     anchor = "#apis";
   }}
 
@@ -1012,7 +1012,7 @@ async function handleConciergeEndpoint(body, env) {{
         "   • 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Package Compiler (/v1/camber-autopilot/compile-bid-package): Compiles Volume I ERISA 29 CFR 2560.503-1 & ACA 45 CFR 147.136 Appeal Brief (.docx), Volume II CMS TiC Commercial Payer MRF Allowed-Amount & QPA Benchmark Model (.xlsx with live =ROUND(D6*G6,2) and =SUM() formulas), Volume III Medicare MPFS RVU/GPCI Locality & OPPS/ASC Parity Schedule (.xlsx), Volume IV Federal NSA 45 CFR 149.510 Open Negotiation & IDR Position Statement (.docx), Volume V NCCI PTP Modifier 25/59 Defense & State Prompt-Pay Demand (.docx), and 00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json.",
         "   • 12 Stateless Healthcare RCM & Payer Rate Microservices (5/5 Glama TDQS): API #01 835 CARC/RARC Denial & Policy Shredder, API #02 50-State Commercial Payer TiC MRF Benchmark Modeler (2.4M+ CPT/HCPCS rates), API #03 Medicare MPFS RVU, GPCI & OPPS/ASC Calculator, API #04 52-Portal Live Payer MRF, CMS LCD & NSA IDR Feed, API #05 CMS NCCI PTP Unbundling, MUE & Modifier 25/59 Auditor, API #06 ERISA 29 CFR 2560.503-1 & ACA External Review Appeal Generator, API #07 Payer Contract Underpayment & Prompt-Pay Interest Auditor, API #08 Federal No Surprises Act (45 CFR 149.510) QPA & IDR Offer Calculator, API #09 State Prompt-Pay Statutory Interest & Clean-Claim Demand Pricer, API #10 Prior-Authorization, CMS LCD/NCD & Peer-to-Peer Clinical Auditor, API #11 Regional Payer Contracted Rate Spread & % of Medicare Analyzer, and API #12 NSA Good-Faith Estimate (45 CFR 149.420) & Out-of-Network Consent Generator.",
         "   • MCP Integration: Local STDIO via npx -y @rubricward/mcp-server or Remote Streamable-HTTP at https://rubricward.com/mcp for Claude Desktop, Cursor, and Windsurf, plus Epic Resolute, Athenahealth, and Waystar blueprints.",
-        "   • Client Portal (#account): 1-click self-serve subscription cancellation, B2B tax invoice downloads, 52-portal & specialty alert routing (Section 01), unlimited RCM & legal team CC seats and Slack/Microsoft Teams/Epic webhooks (Section 02), and production cd_live_... API key retrieval.",
+        "   • Client Portal (#account): 1-click self-serve subscription cancellation, B2B tax invoice downloads, 52-portal & specialty alert routing (Section 01), unlimited RCM & legal team CC seats and Slack/Microsoft Teams/Epic webhooks (Section 02), and production rw_live_... API key retrieval.",
         "   • 4 Self-Serve Tiers (#checkout): Tier 1 ClaimWire Pro ($199/mo or $1,990/yr [Save $398]), Tier 2 RubricWard Autopilot ($499/mo or $4,490/yr [Save $1,498] — Recommended, includes full pre-shredded dossiers + 2,500 API calls/mo), Tier 3 1-Click 6-File .ZIP Appeal & IDR Compiler ($1,499/mo or $14,900/yr [Save $3,088], unlimited 6-File OpenXML compilations + 10,000 API calls/mo), and Tier 4 Enterprise RCM & Practice ERP OEM Suite ($2,499/mo or $24,900/yr, 50,000 OEM API calls/mo + full 50-State Commercial Payer MRF Vault)."
       ].join("\n");
 
@@ -1156,7 +1156,7 @@ export default {{
       if (STATIC_HTML[htmlKey]) {{
         return new Response(STATIC_HTML[htmlKey], {{
           status: 200,
-          headers: {{ "Content-Type": "text/html; charset=utf-8", ...CORS_HEADERS }},
+          headers: {{ "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache, must-revalidate", ...CORS_HEADERS }},
         }});
       }}
     }}
@@ -1321,7 +1321,7 @@ export default {{
             tier: "tier_4",
             tier_label: "TIER 4 // ENTERPRISE RCM OEM & MRF VAULT (FOUNDER ADMIN)",
             quota_label: "50,000 API Calls/Mo + Unlimited 6-File .ZIP Appeal Compilations + 50-State MRF Vault",
-            api_key: "cd_live_admin_founder_master_99a4f2c1b0e7d6a3",
+            api_key: "rw_live_admin_founder_master_99a4f2c1b0e7d6a3",
           }}, 200);
         }}
         return jsonResponse({{
@@ -1332,7 +1332,7 @@ export default {{
           tier: "tier_2",
           tier_label: "TIER 2 // RUBRICWARD AUTOPILOT",
           quota_label: "2,500 API Calls/Mo Across All 12 Endpoints + 6-File .ZIP Appeal & IDR Access",
-          api_key: pwIn.startsWith("cd_live_") ? pwIn : "cd_live_98a4f2c1b0e7d6a3",
+          api_key: (pwIn.startsWith("rw_live_") || pwIn.startsWith("cd_live_")) ? pwIn : "rw_live_98a4f2c1b0e7d6a3",
         }}, 200);
       }}
       if (path === "/v1/billing/create-checkout-session" || path === "/v1/billing/checkout") {{
@@ -1348,7 +1348,7 @@ export default {{
     // Fallback to index.html for SPA routes
     return new Response(STATIC_HTML["/"], {{
       status: 200,
-      headers: {{ "Content-Type": "text/html; charset=utf-8", ...CORS_HEADERS }},
+      headers: {{ "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache, must-revalidate", ...CORS_HEADERS }},
     }});
   }},
 }};
@@ -1438,7 +1438,7 @@ export default {{
   <div class="max-w-lg w-full bg-white border-2 border-[#0A0D14] rounded-2xl p-8 shadow-lg space-y-4">
     <div class="text-xs font-mono font-bold text-[#0F766E] uppercase tracking-wider">RUBRICWARD // SELF-SERVE STRIPE CHECKOUT</div>
     <h1 class="text-xl font-extrabold text-[#0A0D14]" id="checkout-heading">Redirecting to RubricWard Stripe Checkout...</h1>
-    <p class="text-xs font-medium text-[#111827]">Instant <code class="font-mono font-bold text-[#059669]">cd_live_...</code> API &amp; MCP Key provisioning across all 50 U.S. State Commercial Payer TiC MRFs + CMS MPFS/OPPS + Federal NSA IDR.</p>
+    <p class="text-xs font-medium text-[#111827]">Instant <code class="font-mono font-bold text-[#059669]">rw_live_...</code> API &amp; MCP Key provisioning across all 50 U.S. State Commercial Payer TiC MRFs + CMS MPFS/OPPS + Federal NSA IDR.</p>
     <div>
       <a id="direct-stripe-btn" href="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" class="inline-block px-5 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#059669] text-white font-mono text-xs font-bold transition">Continue to Stripe Checkout &rarr;</a>
     </div>

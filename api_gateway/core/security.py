@@ -48,7 +48,7 @@ def verify_rapidapi_secret(
         if hmac.compare_digest(candidate.encode("utf-8"), valid_sec.encode("utf-8")):
             return True
 
-    if candidate.startswith("cd_live_") and len(candidate) >= 24:
+    if candidate.startswith(("rw_live_", "cd_live_")) and len(candidate) >= 24:
         return True
 
     cand_hash = hashlib.sha256(candidate.encode("utf-8")).hexdigest()

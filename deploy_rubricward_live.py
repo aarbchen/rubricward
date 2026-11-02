@@ -146,6 +146,13 @@ def step2_configure_cloudflare_dns_and_worker():
     except Exception as exc:
         print(f"  [WARN] Worker deploy/route step: {exc}")
 
+    # Purge Cloudflare global edge cache so updated HTML/CSS/JS is served immediately worldwide
+    try:
+        r_purge = _cf_request("POST", f"https://api.cloudflare.com/client/v4/zones/{ZONE_ID}/purge_cache", json={"purge_everything": True})
+        print(f"  [CLOUDFLARE CACHE PURGE] HTTP {r_purge.status_code}")
+    except Exception as exc:
+        print(f"  [WARN] Cloudflare cache purge: {exc}")
+
 
 def step3_ping_indexnow_and_google_favicon():
     print("\n=== STEP 3: Ping IndexNow & Google Favicon Crawler for rubricward.com ===")

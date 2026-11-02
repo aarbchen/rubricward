@@ -1090,7 +1090,7 @@ def build_site_files() -> None:
 
     api_catalog_block = _build_api_catalog_section()
 
-    common_js = f"""
+    common_js = rf"""
     const LETTINGS_DATA = {json.dumps(lettings)};
     const __CAMBER_ADMIN_SALT = {json.dumps(_admin_salt)};
     const __CAMBER_ADMIN_DIGESTS = {json.dumps(_admin_digests)};
@@ -1493,7 +1493,7 @@ def build_site_files() -> None:
           'Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx',
           'Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx',
           'Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx',
-          '00_RubricWard_Letting_Readiness_Manifest.json'
+          '00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json'
         ],
         excel_formulas_verified: true,
         nsa_idr_qpa_compliance_45cfr149: 'PASS — 75th-Percentile TiC MRF Offer Anchored to Verified Payer EIN/NPI Cohorts',
@@ -1833,7 +1833,7 @@ def build_site_files() -> None:
         if (match) shown++;
       }});
       const badge = document.getElementById('letting-shown-badge');
-      if (badge) badge.textContent = shown + ' PREVIEW LETTINGS SHOWN';
+      if (badge) badge.textContent = shown + ' PREVIEW MRF COHORTS SHOWN';
       if (anchorEl && beforeTop !== null) {{
         const deltaY = anchorEl.getBoundingClientRect().top - beforeTop;
         if (Math.abs(deltaY) > 1) {{
@@ -1929,7 +1929,7 @@ def build_site_files() -> None:
         {{ name: 'Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx', format: 'Microsoft Excel OpenXML (.XLSX with Live Formulas)', summary: 'Locality-matched CMS Medicare Physician Fee Schedule (MPFS) Work/PE/MP RVUs, Geographic Practice Cost Indices (GPCI), and ASC facility grouper baselines.', preview: 'CPT / APC CLASSIFICATION         | WORK+PE RVU | GPCI ADJ    | MEDICARE BASE   | 215% COMMERCIAL TARGET\\nCPT 29881 — ASC Facility Grouper | $1,124.50   | $360.50     | =B6+C6 ($1,485) | $1,890.00 / claim\\nCPT 27447 — Inpatient/ASC Rate   | $6,840.00   | $2,580.00   | =B7+C7 ($9,420) | $11,850.00 / claim\\nCPT 29827 — Rotator Cuff Repair  | $1,720.00   | $620.00     | =B8+C8 ($2,340) | $2,890.00 / claim\\nCPT 64483 — Spinal Injection     | $445.00     | $170.00     | =B9+C9 ($615)   | $780.00 / claim' }},
         {{ name: 'Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx', format: 'Microsoft Word OpenXML (.DOCX)', summary: 'Statutory ERISA 29 CFR 2560.503-1 Adverse Benefit Determination appeal, AAOS/NASS clinical evidence citations, and CMS NCCI Modifier 25/59 unbundling justification.', preview: '1. STATUTORY ERISA 29 CFR 2560.503-1 FULL & FAIR REVIEW DEMAND\\n- Adverse Benefit Determination Challenged: CARC CO-50 / CO-45 / CO-97 Underpayment & Denial\\n- Demand for Disclosure of Internal Clinical Guidelines & Board-Certified Specialty Reviewer Identity\\n\\n2. CMS NCCI PTP & MODIFIER 25 / 59 / XS CLINICAL JUSTIFICATION\\n- Operative Report Verifies Separate Anatomic Compartment & Distinct Procedural Session\\n- Conservative Therapy Prerequisite Satisfied (>= 6 Weeks PT + Radiographic KL Grade 3)' }},
         {{ name: 'Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx', format: 'Microsoft Word OpenXML (.DOCX)', summary: 'Federal No Surprises Act (NSA 45 CFR 149.510) Independent Dispute Resolution Final Offer brief + HIPAA 835 ERA underpayment recovery ledger & State Prompt-Pay demand.', preview: 'FEDERAL NO SURPRISES ACT (42 U.S.C. 300gg-111 / 45 CFR 149.510) IDR BRIEF\\n- Provider Final Offer: Anchored to 75th-Percentile Commercial TiC MRF Allowed Amount (215% MPFS)\\n- 45 CFR 149.140 QPA Audit: Payer QPA Improperly Diluted by Non-Specialty Ghost Rates\\n- Patient Acuity, Comorbidities & Facility Case-Mix Complexity Substantiated\\n- State Prompt-Pay Statutory Interest Demand Attached (12%–18% APR)' }},
-        {{ name: '00_RubricWard_Letting_Readiness_Manifest.json', format: 'Machine-Readable JSON Manifest', summary: 'Complete SHA-256 package manifest, IDR win-probability score, Payer QPA vs. 75th-Percentile MRF spread, and Epic/Waystar/Athena RCM import payload.', preview: '{{\\n  "package_version": "RubricWard-6File-OpenXML-v1.0",\\n  "files_count": 6,\\n  "openxml_formulas_verified": true,\\n  "erisa_29cfr2560_compliance": "PASS",\\n  "nsa_idr_45cfr149_510_compliance": "PASS"\\n}}' }}
+        {{ name: '00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json', format: 'Machine-Readable JSON Manifest', summary: 'Complete SHA-256 package manifest, IDR win-probability score, Payer QPA vs. 75th-Percentile MRF spread, and Epic/Waystar/Athena RCM import payload.', preview: '{{\\n  "package_version": "RubricWard-6File-OpenXML-v1.0",\\n  "files_count": 6,\\n  "openxml_formulas_verified": true,\\n  "erisa_29cfr2560_compliance": "PASS",\\n  "nsa_idr_45cfr149_510_compliance": "PASS"\\n}}' }}
       ];
       const f = files[idx] || files[0];
       for (let i = 0; i < 6; i++) {{
@@ -2451,7 +2451,7 @@ def build_site_files() -> None:
       }}
 
       // 3. If trying to log in with an admin email without valid password, prompt for admin password
-      if ((emailLower === 'admin@rubricward.com' || emailLower.startsWith('aaron@')) && !pw.startsWith('cd_live_')) {{
+      if ((emailLower === 'admin@rubricward.com' || emailLower.startsWith('aaron@')) && !pw.startsWith('rw_live_') && !pw.startsWith('cd_live_')) {{
         if (statusEl) {{
           statusEl.className = 'text-xs font-mono font-bold text-[#991B1B]';
           statusEl.textContent = 'Founder/Admin email detected — please enter your Founder Admin password to unlock the Tier 1–4 Admin Console.';
@@ -2460,9 +2460,9 @@ def build_site_files() -> None:
       }}
 
       // 4. Standard Subscriber Lookup (API Key or Subscriber Work Email)
-      const maskedKey = val.startsWith('cd_live_')
+      const maskedKey = (val.startsWith('rw_live_') || val.startsWith('cd_live_'))
         ? val
-        : (pw.startsWith('cd_live_') ? pw : 'cd_live_' + btoa(val).replace(/[^a-zA-Z0-9]/g, '').slice(0, 18).toLowerCase());
+        : ((pw.startsWith('rw_live_') || pw.startsWith('cd_live_')) ? pw : 'rw_live_' + btoa(val).replace(/[^a-zA-Z0-9]/g, '').slice(0, 18).toLowerCase());
       _applyAccountPortalState({{
         email: val,
         is_admin: false,
@@ -2880,6 +2880,8 @@ def build_site_files() -> None:
 
     function handleHashNavigation() {{
       initProspectAttributionBanner();
+      const _mgEl = document.getElementById('vault-target-margin');
+      if (_mgEl && (_mgEl.value === '8.5%' || _mgEl.value.trim() === '')) _mgEl.value = '215% of MPFS';
       const rawHash = String((window.location && window.location.hash) || '').replace(/^#/, '').trim();
       try {{
         const qs = new URLSearchParams((window.location && window.location.search) || '');
@@ -3627,7 +3629,7 @@ def build_site_files() -> None:
         </select>
         <button type="submit" class="px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Download 6-File .ZIP Sample &rarr;</button>
       </form>
-      <div id="lead-magnet-status" class="text-xs font-mono font-bold text-[#065F46] break-all">Includes Volume I–V (.DOCX + .XLSX) + 00_RubricWard_Letting_Readiness_Manifest.json</div>
+      <div id="lead-magnet-status" class="text-xs font-mono font-bold text-[#065F46] break-all">Includes Volume I–V (.DOCX + .XLSX) + 00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json</div>
     </section>
 
     <!-- Section: Why Basic Plan Rooms Fail Chief Estimators + Side-by-Side Comparison (#capture-moat) -->
@@ -3722,7 +3724,7 @@ Claim CPT 29881 (Knee Arthroscopy Meniscectomy) &amp; CPT 27447 (Total Knee Arth
           <button type="button" id="zip-tab-btn-2" onclick="switchZipInspectorTab(2)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">03 // Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx</button>
           <button type="button" id="zip-tab-btn-3" onclick="switchZipInspectorTab(3)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">04 // Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx</button>
           <button type="button" id="zip-tab-btn-4" onclick="switchZipInspectorTab(4)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">05 // Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx</button>
-          <button type="button" id="zip-tab-btn-5" onclick="switchZipInspectorTab(5)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">06 // 00_RubricWard_Letting_Readiness_Manifest.json</button>
+          <button type="button" id="zip-tab-btn-5" onclick="switchZipInspectorTab(5)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">06 // 00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json</button>
         </div>
         <div class="lg:col-span-7 p-5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-3 min-w-0">
           <div class="flex flex-wrap items-center justify-between gap-2">
@@ -3783,7 +3785,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         <div class="flex flex-wrap items-center gap-2">
           <input id="letting-search-input" type="text" oninput="filterMainLettingTable(window.ACTIVE_PORTAL_FILTER || 'all')" placeholder="Search case ID, CPT/DRG code, payer, or state..." class="px-3 py-1.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#1E293B]" />
           <button type="button" onclick="exportLettingsCsv()" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] text-xs font-mono font-bold transition">Export .CSV</button>
-          <span id="letting-shown-badge" class="px-3 py-1 rounded bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">{len(lettings)} PREVIEW LETTINGS SHOWN</span>
+          <span id="letting-shown-badge" class="px-3 py-1 rounded bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">{len(lettings)} PREVIEW MRF COHORTS SHOWN</span>
         </div>
       </div>
       <div class="flex flex-wrap gap-2 text-xs font-mono">

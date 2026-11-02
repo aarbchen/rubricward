@@ -64,22 +64,23 @@ def verify_email_domain_mx(email: str) -> bool:
 
     valid = False
     parked_mx_tokens = ("parklogic", "sedoparking", "above.com", "bodis", "eftydns", "parkingcrew", "localhost")
-    try:
-        import re as _re
-        import subprocess as _sp
-        out = _sp.check_output(
-            ["nslookup", "-type=mx", dom],
-            stderr=_sp.STDOUT,
-            timeout=4,
-            text=True,
-        )
-        for m in _re.finditer(r"mail exchanger\s*=\s*(?:\d+\s+)?([^\s\r\n]+)", out, _re.I):
-            mx_h = m.group(1).rstrip(".").lower()
-            if mx_h and mx_h != "." and "0.0.0.0" not in mx_h and "(root)" not in mx_h and not any(pk in mx_h for pk in parked_mx_tokens):
-                valid = True
-                break
-    except Exception:
-        valid = False
+    if True:
+        try:
+            import re as _re
+            import subprocess as _sp
+            out = _sp.check_output(
+                ["nslookup", "-type=mx", dom],
+                stderr=_sp.STDOUT,
+                timeout=3,
+                text=True,
+            )
+            for m in _re.finditer(r"mail exchanger\s*=\s*(?:\d+\s+)?([^\s\r\n]+)", out, _re.I):
+                mx_h = m.group(1).rstrip(".").lower()
+                if mx_h and mx_h != "." and "0.0.0.0" not in mx_h and "(root)" not in mx_h and not any(pk in mx_h for pk in parked_mx_tokens):
+                    valid = True
+                    break
+        except Exception:
+            valid = False
 
     _MX_CACHE[dom] = valid
     try:

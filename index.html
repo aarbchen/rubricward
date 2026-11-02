@@ -278,7 +278,7 @@
         </select>
         <button type="submit" class="px-4 py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Download 6-File .ZIP Sample &rarr;</button>
       </form>
-      <div id="lead-magnet-status" class="text-xs font-mono font-bold text-[#065F46] break-all">Includes Volume I–V (.DOCX + .XLSX) + 00_RubricWard_Letting_Readiness_Manifest.json</div>
+      <div id="lead-magnet-status" class="text-xs font-mono font-bold text-[#065F46] break-all">Includes Volume I–V (.DOCX + .XLSX) + 00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json</div>
     </section>
 
     <!-- Section: Why Basic Plan Rooms Fail Chief Estimators + Side-by-Side Comparison (#capture-moat) -->
@@ -373,7 +373,7 @@ Claim CPT 29881 (Knee Arthroscopy Meniscectomy) &amp; CPT 27447 (Total Knee Arth
           <button type="button" id="zip-tab-btn-2" onclick="switchZipInspectorTab(2)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">03 // Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx</button>
           <button type="button" id="zip-tab-btn-3" onclick="switchZipInspectorTab(3)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">04 // Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx</button>
           <button type="button" id="zip-tab-btn-4" onclick="switchZipInspectorTab(4)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">05 // Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx</button>
-          <button type="button" id="zip-tab-btn-5" onclick="switchZipInspectorTab(5)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">06 // 00_RubricWard_Letting_Readiness_Manifest.json</button>
+          <button type="button" id="zip-tab-btn-5" onclick="switchZipInspectorTab(5)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">06 // 00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json</button>
         </div>
         <div class="lg:col-span-7 p-5 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-3 min-w-0">
           <div class="flex flex-wrap items-center justify-between gap-2">
@@ -434,7 +434,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         <div class="flex flex-wrap items-center gap-2">
           <input id="letting-search-input" type="text" oninput="filterMainLettingTable(window.ACTIVE_PORTAL_FILTER || 'all')" placeholder="Search case ID, CPT/DRG code, payer, or state..." class="px-3 py-1.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#1E293B]" />
           <button type="button" onclick="exportLettingsCsv()" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] text-xs font-mono font-bold transition">Export .CSV</button>
-          <span id="letting-shown-badge" class="px-3 py-1 rounded bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">12 PREVIEW LETTINGS SHOWN</span>
+          <span id="letting-shown-badge" class="px-3 py-1 rounded bg-[#DDF0EC] border border-[#7FB5AC] text-xs font-mono font-bold text-[#071C21]">12 PREVIEW MRF COHORTS SHOWN</span>
         </div>
       </div>
       <div class="flex flex-wrap gap-2 text-xs font-mono">
@@ -2936,14 +2936,11 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       });
       if (!resEl) return;
       if (tabName === 'curl') {
-        resEl.textContent = `curl -X ${meta.method} "https://rubricward.com${meta.route}" \\
-  -H "Content-Type: application/json" \\
-  -H "X-RapidAPI-Proxy-Secret: rw_live_your_key" \\
-  -d '${payloadStr.replace(/\n/g, ' ')}'`;
+        resEl.textContent = `curl -X ${meta.method} "https://rubricward.com${meta.route}" \\\\\n  -H "Content-Type: application/json" \\\\\n  -H "X-RapidAPI-Proxy-Secret: rw_live_your_key" \\\\\n  -d '${payloadStr.replace(/\\n/g, ' ')}'`;
       } else if (tabName === 'python') {
-        resEl.textContent = `import requests\n\nurl = "https://rubricward.com${meta.route}"\nheaders = {"X-RapidAPI-Proxy-Secret": "rw_live_your_key"}\npayload = ${payloadStr}\n\nresp = requests.request("${meta.method}", url, json=payload, headers=headers, timeout=15)\nprint(resp.status_code, resp.json())`;
+        resEl.textContent = `import requests\\n\\nurl = "https://rubricward.com${meta.route}"\\nheaders = {"X-RapidAPI-Proxy-Secret": "rw_live_your_key"}\\npayload = ${payloadStr}\\n\\nresp = requests.request("${meta.method}", url, json=payload, headers=headers, timeout=15)\\nprint(resp.status_code, resp.json())`;
       } else if (tabName === 'js') {
-        resEl.textContent = `const res = await fetch("https://rubricward.com${meta.route}", {\n  method: "${meta.method}",\n  headers: {\n    "Content-Type": "application/json",\n    "X-RapidAPI-Proxy-Secret": "rw_live_your_key"\n  },\n  body: JSON.stringify(${payloadStr})\n});\nconsole.log(await res.json());`;
+        resEl.textContent = `const res = await fetch("https://rubricward.com${meta.route}", {\\n  method: "${meta.method}",\\n  headers: {\\n    "Content-Type": "application/json",\\n    "X-RapidAPI-Proxy-Secret": "rw_live_your_key"\\n  },\\n  body: JSON.stringify(${payloadStr})\\n});\\nconsole.log(await res.json());`;
       } else {
         resEl.textContent = JSON.stringify(cat, null, 2);
       }
@@ -3072,28 +3069,28 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       const samples = {
         TX: {
           badge: 'TX DOI & NOVITAS // TXDOI-MRF-CPT-29881-DFW (ORTHOPEDIC & ASC SURGERY)',
-          rawPdf: 'PAYER CLINICAL POLICY BULLETIN CPB-0592 & 835 ERA REMITTANCE (CARC CO-45 / CO-50)\nClaim CPT 29881 (Knee Arthroscopy Meniscectomy, 420 Claims) & CPT 27447 (Total Knee Arthroplasty, 115 Claims) downcoded/underpaid vs. QPA. Payer cites 6-week physical therapy gate and NCCI Column 2 bundling. Timely filing: 180 days. TX Ins. Code § 1301.103 applies.',
-          shredOut: '1. COMMERCIAL PAYER TIC MRF MODEL (API #02):\n   - CPT 29881 (420 Claims): MRF Median QPA $1,485.00 -> 75th-Pct Target $1,890.00 ($793,800.00)\n   - CPT 27447 (115 Claims): MRF Median QPA $9,420.00 -> 75th-Pct Target $11,850.00 ($1,362,750.00)\n2. MEDICARE MPFS RVU/GPCI & NCCI AUDIT (API #03/#05):\n   - DFW Locality 04412-11 MPFS Baseline Verified • Modifier 59/XS Distinct Compartment Supported\n3. ERISA 29 CFR 2560.503-1 & PROMPT-PAY (API #06/#09):\n   - TX Ins. Code § 1301.103 (18% APR Penalty) + NSA 45 CFR 149.510 IDR Brief Ready'
+          rawPdf: 'PAYER CLINICAL POLICY BULLETIN CPB-0592 & 835 ERA REMITTANCE (CARC CO-45 / CO-50)\\nClaim CPT 29881 (Knee Arthroscopy Meniscectomy, 420 Claims) & CPT 27447 (Total Knee Arthroplasty, 115 Claims) downcoded/underpaid vs. QPA. Payer cites 6-week physical therapy gate and NCCI Column 2 bundling. Timely filing: 180 days. TX Ins. Code § 1301.103 applies.',
+          shredOut: '1. COMMERCIAL PAYER TIC MRF MODEL (API #02):\\n   - CPT 29881 (420 Claims): MRF Median QPA $1,485.00 -> 75th-Pct Target $1,890.00 ($793,800.00)\\n   - CPT 27447 (115 Claims): MRF Median QPA $9,420.00 -> 75th-Pct Target $11,850.00 ($1,362,750.00)\\n2. MEDICARE MPFS RVU/GPCI & NCCI AUDIT (API #03/#05):\\n   - DFW Locality 04412-11 MPFS Baseline Verified • Modifier 59/XS Distinct Compartment Supported\\n3. ERISA 29 CFR 2560.503-1 & PROMPT-PAY (API #06/#09):\\n   - TX Ins. Code § 1301.103 (18% APR Penalty) + NSA 45 CFR 149.510 IDR Brief Ready'
         },
         CA: {
           badge: 'CA DMHC & NORIDIAN // CADMHC-MRF-CPT-22551-LAX (SPINE & NEUROSURGERY)',
-          rawPdf: 'CA DMHC COMMERCIAL PAYER MRF & KNOX-KEENE ACT (CA HEALTH & SAFETY CODE § 1371)\nCPT 22551 Anterior Cervical Discectomy & Fusion (ACDF) and CPT 63030 Lumbar Discectomy underpaid at 135% of Medicare MPFS. Payer denied Modifier 59 on multi-level decompression.',
-          shredOut: '1. COMMERCIAL PAYER TIC MRF MODEL (API #02):\n   - CPT 22551 ACDF (95 Claims): MRF Median QPA $4,680.00 -> 75th-Pct Target $6,120.00\n   - CPT 63030 Lumbar Discectomy (140 Claims): 75th-Pct Target $3,890.00\n2. CA KNOX-KEENE PROMPT-PAY & AB 72 IDR (API #08/#09):\n   - 15% APR Statutory Interest under CA Health & Safety Code § 1371 • NASS Clinical Guidelines Attached'
+          rawPdf: 'CA DMHC COMMERCIAL PAYER MRF & KNOX-KEENE ACT (CA HEALTH & SAFETY CODE § 1371)\\nCPT 22551 Anterior Cervical Discectomy & Fusion (ACDF) and CPT 63030 Lumbar Discectomy underpaid at 135% of Medicare MPFS. Payer denied Modifier 59 on multi-level decompression.',
+          shredOut: '1. COMMERCIAL PAYER TIC MRF MODEL (API #02):\\n   - CPT 22551 ACDF (95 Claims): MRF Median QPA $4,680.00 -> 75th-Pct Target $6,120.00\\n   - CPT 63030 Lumbar Discectomy (140 Claims): 75th-Pct Target $3,890.00\\n2. CA KNOX-KEENE PROMPT-PAY & AB 72 IDR (API #08/#09):\\n   - 15% APR Statutory Interest under CA Health & Safety Code § 1371 • NASS Clinical Guidelines Attached'
         },
         FL: {
           badge: 'FL OIR & FIRST COAST // FLOIR-MRF-CPT-45380-MIA (GI ENDOSCOPY & ASC)',
-          rawPdf: 'FLORIDA OIR COMMERCIAL MRF & FL STAT. § 627.6131 PROMPT-PAY AUDIT\nCPT 45380 Colonoscopy with Biopsy (840 Claims) and CPT 43239 Upper GI Endoscopy (520 Claims) paid below ASC grouper floor. CARC CO-97 bundling applied to pathology & anesthesia.',
-          shredOut: '1. COMMERCIAL PAYER TIC MRF MODEL (API #02):\n   - CPT 45380 ASC + Pro (840 Claims): MRF Median QPA $1,140.00 -> 75th-Pct Target $1,425.00\n   - CPT 43239 EGD with Biopsy (520 Claims): 75th-Pct Target $1,190.00\n2. PEER EIN/NPI MRF SPREAD (API #11):\n   - 5 Regional South Florida ASCs Sampled • Contracted Rate Uplift Opportunity: +24.8%'
+          rawPdf: 'FLORIDA OIR COMMERCIAL MRF & FL STAT. § 627.6131 PROMPT-PAY AUDIT\\nCPT 45380 Colonoscopy with Biopsy (840 Claims) and CPT 43239 Upper GI Endoscopy (520 Claims) paid below ASC grouper floor. CARC CO-97 bundling applied to pathology & anesthesia.',
+          shredOut: '1. COMMERCIAL PAYER TIC MRF MODEL (API #02):\\n   - CPT 45380 ASC + Pro (840 Claims): MRF Median QPA $1,140.00 -> 75th-Pct Target $1,425.00\\n   - CPT 43239 EGD with Biopsy (520 Claims): 75th-Pct Target $1,190.00\\n2. PEER EIN/NPI MRF SPREAD (API #11):\\n   - 5 Regional South Florida ASCs Sampled • Contracted Rate Uplift Opportunity: +24.8%'
         },
         VA: {
           badge: 'VA BOI & PALMETTO // VABOI-MRF-CPT-93458-NOVA (CARDIOLOGY & CATH LAB)',
-          rawPdf: 'VIRGINIA BUREAU OF INSURANCE APCD & VA CODE § 38.2-3407.15 ETHICS IN CLAIMS\nCPT 93458 Left Heart Catheterization & Coronary Angiography and CPT 92928 Stent Placement denied under CO-197 prior-authorization technicality despite emergent chest pain presentation.',
-          shredOut: '1. COMMERCIAL PAYER TIC MRF MODEL (API #02):\n   - CPT 93458 Cath Lab (210 Claims): MRF Median QPA $2,840.00 -> 75th-Pct Target $3,580.00\n   - CPT 92928 Coronary Stent (85 Claims): 75th-Pct Target $6,450.00\n2. ERISA 29 CFR 2560.503-1 & PRUDENT LAYPERSON RULE (API #06):\n   - Statutory Emergency / Urgent Care Override Brief Generated'
+          rawPdf: 'VIRGINIA BUREAU OF INSURANCE APCD & VA CODE § 38.2-3407.15 ETHICS IN CLAIMS\\nCPT 93458 Left Heart Catheterization & Coronary Angiography and CPT 92928 Stent Placement denied under CO-197 prior-authorization technicality despite emergent chest pain presentation.',
+          shredOut: '1. COMMERCIAL PAYER TIC MRF MODEL (API #02):\\n   - CPT 93458 Cath Lab (210 Claims): MRF Median QPA $2,840.00 -> 75th-Pct Target $3,580.00\\n   - CPT 92928 Coronary Stent (85 Claims): 75th-Pct Target $6,450.00\\n2. ERISA 29 CFR 2560.503-1 & PRUDENT LAYPERSON RULE (API #06):\\n   - Statutory Emergency / Urgent Care Override Brief Generated'
         },
         USACE: {
           badge: 'CMS FEDERAL NSA IDR // CMS-NSA-IDR-CPT-99285-NAT (EMERGENCY & ANESTHESIA)',
-          rawPdf: 'FEDERAL NO SURPRISES ACT (42 U.S.C. 300gg-111 / 45 CFR 149.510) BASEBALL ARBITRATION\nOut-of-network emergency CPT 99285 Level 5 ED Visit & CPT 00840 Anesthesia paid at deflated payer QPA ($410.00) excluding contracted specialty group incentive rates.',
-          shredOut: '1. FEDERAL NSA IDR FINAL OFFER BRIEF (API #02 / #08):\n   - CPT 99285 Level 5 ED (1,120 Claims): 75th-Pct TiC MRF Offer $945.00 (228% of Medicare MPFS)\n   - 45 CFR 149.140 QPA Disclosure Audit: Payer Ghost-Rate Downward Skew Flagged\n2. CERTIFIED IDR ENTITY SUBMISSION (API #06/#08):\n   - 30-Business-Day Open Negotiation & 4-Business-Day IDR Initiation Packet Complete'
+          rawPdf: 'FEDERAL NO SURPRISES ACT (42 U.S.C. 300gg-111 / 45 CFR 149.510) BASEBALL ARBITRATION\\nOut-of-network emergency CPT 99285 Level 5 ED Visit & CPT 00840 Anesthesia paid at deflated payer QPA ($410.00) excluding contracted specialty group incentive rates.',
+          shredOut: '1. FEDERAL NSA IDR FINAL OFFER BRIEF (API #02 / #08):\\n   - CPT 99285 Level 5 ED (1,120 Claims): 75th-Pct TiC MRF Offer $945.00 (228% of Medicare MPFS)\\n   - 45 CFR 149.140 QPA Disclosure Audit: Payer Ghost-Rate Downward Skew Flagged\\n2. CERTIFIED IDR ENTITY SUBMISSION (API #06/#08):\\n   - 30-Business-Day Open Negotiation & 4-Business-Day IDR Initiation Packet Complete'
         }
       };
       const d = samples[stateKey] || samples.TX;
@@ -3253,7 +3250,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           'Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx',
           'Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx',
           'Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx',
-          '00_RubricWard_Letting_Readiness_Manifest.json'
+          '00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json'
         ],
         excel_formulas_verified: true,
         nsa_idr_qpa_compliance_45cfr149: 'PASS — 75th-Percentile TiC MRF Offer Anchored to Verified Payer EIN/NPI Cohorts',
@@ -3322,7 +3319,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         'Contract Terms: Month-to-Month Self-Serve or Annual (Zero Seat Lock-In)',
         'Self-Serve Portal & Support: https://rubricward.com/#account | https://rubricward.com',
         '===================================================================='
-      ].join('\n');
+      ].join('\\n');
       if (outEl) outEl.textContent = memo;
       return memo;
     }
@@ -3593,7 +3590,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         if (match) shown++;
       });
       const badge = document.getElementById('letting-shown-badge');
-      if (badge) badge.textContent = shown + ' PREVIEW LETTINGS SHOWN';
+      if (badge) badge.textContent = shown + ' PREVIEW MRF COHORTS SHOWN';
       if (anchorEl && beforeTop !== null) {
         const deltaY = anchorEl.getBoundingClientRect().top - beforeTop;
         if (Math.abs(deltaY) > 1) {
@@ -3619,7 +3616,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         ];
         lines.push(row.join(','));
       });
-      const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+      const blob = new Blob([lines.join('\\n')], { type: 'text/csv;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -3684,12 +3681,12 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
 
     function switchZipInspectorTab(idx) {
       const files = [
-        { name: 'Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx', format: 'Microsoft Word OpenXML (.DOCX)', summary: 'Full Commercial Payer Clinical Policy Bulletin (CPB) & CMS LCD/NCD shred: Prior-Authorization Checklist, Step-Therapy Exceptions, NCCI Modifier 25/59 Rules, and Timely-Filing Windows.', preview: 'PAYER CLINICAL POLICY BULLETIN (CPB) & CMS LCD/NCD SHRED\n- Timely Filing & ERISA Appeal Window: 180 Calendar Days from EOB/835 ERA under 29 CFR 2560.503-1\n- State Statutory Prompt-Pay Interest: 18% APR Penalty (TX Ins. Code § 1301.103)\n\nREQUIRED CLINICAL & PRIOR-AUTH DOCUMENTATION (EXTRACTED):\n- CPT 29881 / 27447: Weight-Bearing Radiograph / MRI Report + 6-Week Conservative Therapy Notes\n- CMS NCCI PTP Override: Operative Note Documenting Distinct Compartment (Modifier 59 / XS)\n- CPT 99214-25: Separately Identifiable E/M HPI & MDM Documentation\n- Federal NSA IDR Window: 30-Business-Day Open Negotiation -> 4-Business-Day IDR Initiation' },
-        { name: 'Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx', format: 'Microsoft Excel OpenXML (.XLSX with Live Formulas)', summary: 'CPT/DRG schedule benchmarked against Commercial Payer TiC MRF files (45 CFR 147.212) with live =SUM(H6:H9) and =ROUND(D6*G6,2) extended recovery formulas.', preview: 'ROW | CPT CODE  | CLINICAL DESCRIPTION            | CLAIMS   | UNIT  | MRF MEDIAN | 75TH TARGET | EXTENDED FORMULA\n06  | CPT-29881 | Knee Arthroscopy Meniscectomy   | 420      | CLAIM | $1,485.00  | $1,890.00   | =ROUND(D6*G6,2) -> $793,800.00\n07  | CPT-27447 | Total Knee Arthroplasty         | 115      | CLAIM | $9,420.00  | $11,850.00  | =ROUND(D7*G7,2) -> $1,362,750.00\n08  | CPT-64483 | Lumbar Transforaminal Epidural  | 680      | CLAIM | $615.00    | $780.00     | =ROUND(D8*G8,2) -> $530,400.00\n10  | TOTAL     | MODELED MRF TARGET RECOVERY     | —        | —     | —          | —           | =SUM(H6:H9)     -> $2,686,950.00' },
-        { name: 'Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx', format: 'Microsoft Excel OpenXML (.XLSX with Live Formulas)', summary: 'Locality-matched CMS Medicare Physician Fee Schedule (MPFS) Work/PE/MP RVUs, Geographic Practice Cost Indices (GPCI), and ASC facility grouper baselines.', preview: 'CPT / APC CLASSIFICATION         | WORK+PE RVU | GPCI ADJ    | MEDICARE BASE   | 215% COMMERCIAL TARGET\nCPT 29881 — ASC Facility Grouper | $1,124.50   | $360.50     | =B6+C6 ($1,485) | $1,890.00 / claim\nCPT 27447 — Inpatient/ASC Rate   | $6,840.00   | $2,580.00   | =B7+C7 ($9,420) | $11,850.00 / claim\nCPT 29827 — Rotator Cuff Repair  | $1,720.00   | $620.00     | =B8+C8 ($2,340) | $2,890.00 / claim\nCPT 64483 — Spinal Injection     | $445.00     | $170.00     | =B9+C9 ($615)   | $780.00 / claim' },
-        { name: 'Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx', format: 'Microsoft Word OpenXML (.DOCX)', summary: 'Statutory ERISA 29 CFR 2560.503-1 Adverse Benefit Determination appeal, AAOS/NASS clinical evidence citations, and CMS NCCI Modifier 25/59 unbundling justification.', preview: '1. STATUTORY ERISA 29 CFR 2560.503-1 FULL & FAIR REVIEW DEMAND\n- Adverse Benefit Determination Challenged: CARC CO-50 / CO-45 / CO-97 Underpayment & Denial\n- Demand for Disclosure of Internal Clinical Guidelines & Board-Certified Specialty Reviewer Identity\n\n2. CMS NCCI PTP & MODIFIER 25 / 59 / XS CLINICAL JUSTIFICATION\n- Operative Report Verifies Separate Anatomic Compartment & Distinct Procedural Session\n- Conservative Therapy Prerequisite Satisfied (>= 6 Weeks PT + Radiographic KL Grade 3)' },
-        { name: 'Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx', format: 'Microsoft Word OpenXML (.DOCX)', summary: 'Federal No Surprises Act (NSA 45 CFR 149.510) Independent Dispute Resolution Final Offer brief + HIPAA 835 ERA underpayment recovery ledger & State Prompt-Pay demand.', preview: 'FEDERAL NO SURPRISES ACT (42 U.S.C. 300gg-111 / 45 CFR 149.510) IDR BRIEF\n- Provider Final Offer: Anchored to 75th-Percentile Commercial TiC MRF Allowed Amount (215% MPFS)\n- 45 CFR 149.140 QPA Audit: Payer QPA Improperly Diluted by Non-Specialty Ghost Rates\n- Patient Acuity, Comorbidities & Facility Case-Mix Complexity Substantiated\n- State Prompt-Pay Statutory Interest Demand Attached (12%–18% APR)' },
-        { name: '00_RubricWard_Letting_Readiness_Manifest.json', format: 'Machine-Readable JSON Manifest', summary: 'Complete SHA-256 package manifest, IDR win-probability score, Payer QPA vs. 75th-Percentile MRF spread, and Epic/Waystar/Athena RCM import payload.', preview: '{\n  "package_version": "RubricWard-6File-OpenXML-v1.0",\n  "files_count": 6,\n  "openxml_formulas_verified": true,\n  "erisa_29cfr2560_compliance": "PASS",\n  "nsa_idr_45cfr149_510_compliance": "PASS"\n}' }
+        { name: 'Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx', format: 'Microsoft Word OpenXML (.DOCX)', summary: 'Full Commercial Payer Clinical Policy Bulletin (CPB) & CMS LCD/NCD shred: Prior-Authorization Checklist, Step-Therapy Exceptions, NCCI Modifier 25/59 Rules, and Timely-Filing Windows.', preview: 'PAYER CLINICAL POLICY BULLETIN (CPB) & CMS LCD/NCD SHRED\\n- Timely Filing & ERISA Appeal Window: 180 Calendar Days from EOB/835 ERA under 29 CFR 2560.503-1\\n- State Statutory Prompt-Pay Interest: 18% APR Penalty (TX Ins. Code § 1301.103)\\n\\nREQUIRED CLINICAL & PRIOR-AUTH DOCUMENTATION (EXTRACTED):\\n- CPT 29881 / 27447: Weight-Bearing Radiograph / MRI Report + 6-Week Conservative Therapy Notes\\n- CMS NCCI PTP Override: Operative Note Documenting Distinct Compartment (Modifier 59 / XS)\\n- CPT 99214-25: Separately Identifiable E/M HPI & MDM Documentation\\n- Federal NSA IDR Window: 30-Business-Day Open Negotiation -> 4-Business-Day IDR Initiation' },
+        { name: 'Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx', format: 'Microsoft Excel OpenXML (.XLSX with Live Formulas)', summary: 'CPT/DRG schedule benchmarked against Commercial Payer TiC MRF files (45 CFR 147.212) with live =SUM(H6:H9) and =ROUND(D6*G6,2) extended recovery formulas.', preview: 'ROW | CPT CODE  | CLINICAL DESCRIPTION            | CLAIMS   | UNIT  | MRF MEDIAN | 75TH TARGET | EXTENDED FORMULA\\n06  | CPT-29881 | Knee Arthroscopy Meniscectomy   | 420      | CLAIM | $1,485.00  | $1,890.00   | =ROUND(D6*G6,2) -> $793,800.00\\n07  | CPT-27447 | Total Knee Arthroplasty         | 115      | CLAIM | $9,420.00  | $11,850.00  | =ROUND(D7*G7,2) -> $1,362,750.00\\n08  | CPT-64483 | Lumbar Transforaminal Epidural  | 680      | CLAIM | $615.00    | $780.00     | =ROUND(D8*G8,2) -> $530,400.00\\n10  | TOTAL     | MODELED MRF TARGET RECOVERY     | —        | —     | —          | —           | =SUM(H6:H9)     -> $2,686,950.00' },
+        { name: 'Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx', format: 'Microsoft Excel OpenXML (.XLSX with Live Formulas)', summary: 'Locality-matched CMS Medicare Physician Fee Schedule (MPFS) Work/PE/MP RVUs, Geographic Practice Cost Indices (GPCI), and ASC facility grouper baselines.', preview: 'CPT / APC CLASSIFICATION         | WORK+PE RVU | GPCI ADJ    | MEDICARE BASE   | 215% COMMERCIAL TARGET\\nCPT 29881 — ASC Facility Grouper | $1,124.50   | $360.50     | =B6+C6 ($1,485) | $1,890.00 / claim\\nCPT 27447 — Inpatient/ASC Rate   | $6,840.00   | $2,580.00   | =B7+C7 ($9,420) | $11,850.00 / claim\\nCPT 29827 — Rotator Cuff Repair  | $1,720.00   | $620.00     | =B8+C8 ($2,340) | $2,890.00 / claim\\nCPT 64483 — Spinal Injection     | $445.00     | $170.00     | =B9+C9 ($615)   | $780.00 / claim' },
+        { name: 'Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx', format: 'Microsoft Word OpenXML (.DOCX)', summary: 'Statutory ERISA 29 CFR 2560.503-1 Adverse Benefit Determination appeal, AAOS/NASS clinical evidence citations, and CMS NCCI Modifier 25/59 unbundling justification.', preview: '1. STATUTORY ERISA 29 CFR 2560.503-1 FULL & FAIR REVIEW DEMAND\\n- Adverse Benefit Determination Challenged: CARC CO-50 / CO-45 / CO-97 Underpayment & Denial\\n- Demand for Disclosure of Internal Clinical Guidelines & Board-Certified Specialty Reviewer Identity\\n\\n2. CMS NCCI PTP & MODIFIER 25 / 59 / XS CLINICAL JUSTIFICATION\\n- Operative Report Verifies Separate Anatomic Compartment & Distinct Procedural Session\\n- Conservative Therapy Prerequisite Satisfied (>= 6 Weeks PT + Radiographic KL Grade 3)' },
+        { name: 'Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx', format: 'Microsoft Word OpenXML (.DOCX)', summary: 'Federal No Surprises Act (NSA 45 CFR 149.510) Independent Dispute Resolution Final Offer brief + HIPAA 835 ERA underpayment recovery ledger & State Prompt-Pay demand.', preview: 'FEDERAL NO SURPRISES ACT (42 U.S.C. 300gg-111 / 45 CFR 149.510) IDR BRIEF\\n- Provider Final Offer: Anchored to 75th-Percentile Commercial TiC MRF Allowed Amount (215% MPFS)\\n- 45 CFR 149.140 QPA Audit: Payer QPA Improperly Diluted by Non-Specialty Ghost Rates\\n- Patient Acuity, Comorbidities & Facility Case-Mix Complexity Substantiated\\n- State Prompt-Pay Statutory Interest Demand Attached (12%–18% APR)' },
+        { name: '00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json', format: 'Machine-Readable JSON Manifest', summary: 'Complete SHA-256 package manifest, IDR win-probability score, Payer QPA vs. 75th-Percentile MRF spread, and Epic/Waystar/Athena RCM import payload.', preview: '{\\n  "package_version": "RubricWard-6File-OpenXML-v1.0",\\n  "files_count": 6,\\n  "openxml_formulas_verified": true,\\n  "erisa_29cfr2560_compliance": "PASS",\\n  "nsa_idr_45cfr149_510_compliance": "PASS"\\n}' }
       ];
       const f = files[idx] || files[0];
       for (let i = 0; i < 6; i++) {
@@ -3812,14 +3809,11 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       if (!resBox) return;
       const tab = window.SANDBOX_TAB || 'json';
       if (tab === 'curl') {
-        resBox.textContent = `curl -X ${meta.method} "https://rubricward.com${meta.route}" \\
-  -H "Content-Type: application/json" \\
-  -H "X-RapidAPI-Proxy-Secret: rw_live_your_key" \\
-  -d '${payloadStr.replace(/\n/g, ' ')}'`;
+        resBox.textContent = `curl -X ${meta.method} "https://rubricward.com${meta.route}" \\\\\n  -H "Content-Type: application/json" \\\\\n  -H "X-RapidAPI-Proxy-Secret: rw_live_your_key" \\\\\n  -d '${payloadStr.replace(/\\n/g, ' ')}'`;
       } else if (tab === 'python') {
-        resBox.textContent = `import requests\n\nurl = "https://rubricward.com${meta.route}"\nheaders = {"X-RapidAPI-Proxy-Secret": "rw_live_your_key"}\npayload = ${payloadStr}\n\nresp = requests.request("${meta.method}", url, json=payload, headers=headers, timeout=15)\nprint(resp.status_code, resp.json())`;
+        resBox.textContent = `import requests\\n\\nurl = "https://rubricward.com${meta.route}"\\nheaders = {"X-RapidAPI-Proxy-Secret": "rw_live_your_key"}\\npayload = ${payloadStr}\\n\\nresp = requests.request("${meta.method}", url, json=payload, headers=headers, timeout=15)\\nprint(resp.status_code, resp.json())`;
       } else if (tab === 'js') {
-        resBox.textContent = `const res = await fetch("https://rubricward.com${meta.route}", {\n  method: "${meta.method}",\n  headers: {\n    "Content-Type": "application/json",\n    "X-RapidAPI-Proxy-Secret": "rw_live_your_key"\n  },\n  body: JSON.stringify(${payloadStr})\n});\nconst data = await res.json();\nconsole.log(data);`;
+        resBox.textContent = `const res = await fetch("https://rubricward.com${meta.route}", {\\n  method: "${meta.method}",\\n  headers: {\\n    "Content-Type": "application/json",\\n    "X-RapidAPI-Proxy-Secret": "rw_live_your_key"\\n  },\\n  body: JSON.stringify(${payloadStr})\\n});\\nconst data = await res.json();\\nconsole.log(data);`;
       } else {
         resBox.textContent = JSON.stringify(cat, null, 2);
       }
@@ -4214,7 +4208,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       }
 
       // 3. If trying to log in with an admin email without valid password, prompt for admin password
-      if ((emailLower === 'admin@rubricward.com' || emailLower.startsWith('aaron@')) && !pw.startsWith('cd_live_')) {
+      if ((emailLower === 'admin@rubricward.com' || emailLower.startsWith('aaron@')) && !pw.startsWith('rw_live_') && !pw.startsWith('cd_live_')) {
         if (statusEl) {
           statusEl.className = 'text-xs font-mono font-bold text-[#991B1B]';
           statusEl.textContent = 'Founder/Admin email detected — please enter your Founder Admin password to unlock the Tier 1–4 Admin Console.';
@@ -4223,9 +4217,9 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       }
 
       // 4. Standard Subscriber Lookup (API Key or Subscriber Work Email)
-      const maskedKey = val.startsWith('cd_live_')
+      const maskedKey = (val.startsWith('rw_live_') || val.startsWith('cd_live_'))
         ? val
-        : (pw.startsWith('cd_live_') ? pw : 'cd_live_' + btoa(val).replace(/[^a-zA-Z0-9]/g, '').slice(0, 18).toLowerCase());
+        : ((pw.startsWith('rw_live_') || pw.startsWith('cd_live_')) ? pw : 'rw_live_' + btoa(val).replace(/[^a-zA-Z0-9]/g, '').slice(0, 18).toLowerCase());
       _applyAccountPortalState({
         email: val,
         is_admin: false,
@@ -4257,11 +4251,11 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         .replace(/"/g, '&quot;');
     }
 
-    const __CONCIERGE_WAF_RE = /(<\s*script|<\s*iframe|<\s*object|<\s*embed|<\s*svg|<\s*img|<\s*form|<\s*input|<\s*body|<\s*link|<\s*meta|<\s*style|javascript\s*:|vbscript\s*:|data\s*:\s*text\/html|on(?:load|error|click|mouseover|focus|blur|input|change|submit|keydown|keyup|toggle)\s*=|union\s+(?:all\s+)?select|drop\s+table|insert\s+into|delete\s+from|update\s+\w+\s+set|xp_cmdshell|exec\s*\(|;\s*(?:rm|cat|ls|wget|curl|chmod|chown|bash|sh|powershell|cmd)\b|\|\s*(?:cat|ls|nc|bash|sh)\b|\.\.\/|\.\.\\|\/etc\/passwd|\/etc\/shadow|c:\\windows|169\.254\.169\.254|127\.0\.0\.1|0\.0\.0\.0|localhost\b|\x7b\x7b.*\x7d\x7d|\$\x7b.*\x7d|'\s*or\s*'1'\s*=\s*'1|'\s*or\s*1\s*=\s*1)/i;
+    const __CONCIERGE_WAF_RE = /(<\\s*script|<\\s*iframe|<\\s*object|<\\s*embed|<\\s*svg|<\\s*img|<\\s*form|<\\s*input|<\\s*body|<\\s*link|<\\s*meta|<\\s*style|javascript\\s*:|vbscript\\s*:|data\\s*:\\s*text\\/html|on(?:load|error|click|mouseover|focus|blur|input|change|submit|keydown|keyup|toggle)\\s*=|union\\s+(?:all\\s+)?select|drop\\s+table|insert\\s+into|delete\\s+from|update\\s+\\w+\\s+set|xp_cmdshell|exec\\s*\\(|;\\s*(?:rm|cat|ls|wget|curl|chmod|chown|bash|sh|powershell|cmd)\\b|\\|\\s*(?:cat|ls|nc|bash|sh)\\b|\\.\\.\\/|\\.\\.\\\\|\\/etc\\/passwd|\\/etc\\/shadow|c:\\\\windows|169\\.254\\.169\\.254|127\\.0\\.0\\.1|0\\.0\\.0\\.0|localhost\\b|\\x7b\\x7b.*\\x7d\\x7d|\\$\\x7b.*\\x7d|'\\s*or\\s*'1'\\s*=\\s*'1|'\\s*or\\s*1\\s*=\\s*1)/i;
 
-    const __CONCIERGE_COMPROMISING_RE = /(?:\b(?:i\s+am|i'm|im|this\s+is|it's|its|speaking\s+as|logged\s+in\s+as|acting\s+as|we\s+are|here\s+is)\b[^.?!]{0,45}\b(?:founder|co-founder|cofounder|admin|administrator|owner|ceo|cto|ciso|cfo|president|exec|executive|director|developer|dev|engineer|creator|boss|manager|staff|employee|support|moderator|root|superuser|sudo|aaron|sysadmin|devops|security\s+team|internal\s+team)\b)|(?:\b(?:founder|co-founder|cofounder|admin|administrator|superuser|root|sysadmin|aaron)\b[^.?!]{0,35}\b(?:here|speaking|logged\s+in|override|access|mode|command|instructs?|orders?|telling\s+you|and\s+admin|and\s+founder|login|portal|privileges?)\b)|\b(?:founder\s+and\s+admin|admin\s+and\s+founder|admin\s+override|founder\s+override|executive\s+override|security\s+override|root\s+access|admin\s+access|sudo\s+|su\s+root|grant\s+me\s+access|elevate\s+privileges|privilege\s+escalation|bypass\s+auth|unlock\s+admin|admin\s+mode|god\s+mode|dev\s+mode|developer\s+mode|debug\s+mode|maintenance\s+mode|diagnostic\s+mode|sudo\s+mode|jailbreak|dan\s+mode|do\s+anything\s+now)\b|system\s+prompt|initial\s+prompt|developer\s+prompt|hidden\s+prompt|meta\s+prompt|secret\s+prompt|your\s+instructions|your\s+rules|your\s+directives|your\s+system\s+message|repeat\s+(?:the\s+)?(?:text|words|instructions|above|everything)|verbatim|what\s+were\s+you\s+told|print\s+(?:your\s+)?(?:prompt|instructions|rules)|reveal\s+(?:your\s+)?(?:prompt|instructions|rules)|show\s+(?:me\s+)?(?:your\s+)?(?:prompt|instructions|rules)|ignore\s+(?:all\s+)?(?:previous|prior|above|earlier|system)|disregard\s+(?:all\s+)?(?:previous|prior|above|earlier|system)|forget\s+(?:all\s+)?(?:previous|prior|above|earlier|system)|override\s+(?:your\s+)?(?:instructions|rules|prompt|safety|security)|new\s+instructions|pretend\s+(?:you\s+are|to\s+be)|roleplay\s+as|act\s+as\s+(?:a|an|the)|hypothetical\s+scenario|translate\s+your\s+(?:prompt|instructions)|encode\s+your\s+(?:prompt|instructions)|base64|rot13|hex\s+encode|leetspeak|spell\s+backwards|reverse\s+the\s+text|bypass\s+(?:security|auth|authentication|paywall|payment|stripe|rate\s+limit|filter|waf|captcha|verification)|(?:\b(?:give|show|tell|send|share|reveal|print|output|leak|dump|expose|generate|create|get)\b[^.?!]{0,35}\b(?:free\s+|valid\s+|working\s+|admin\s+|production\s+|master\s+|internal\s+|secret\s+|live\s+)?(?:api\s+key|cd_live|st_live|sk_live|sk-ant|secret|token|password|credential|private\s+key|env\b|\.env|webhook\s+secret|connection\s+string|stripe\s+key|supabase\s+key))\b|env\s*var|environment\s+variable|\.env\b|os\.getenv|os\.environ|process\.env|connection\s+string|database\s+(?:password|url|host|credentials|schema|table|dump|engine|provider)|stripe\s+secret|webhook\s+secret|discord\s+webhook\s+url|proxy\s+secret|x-rapidapi-proxy-secret|service_role|anon_key|private\s+key|session\s+token|jwt\s+secret|bearer\s+token|master\s+key|source\s+code|github\s+repo|git\s+repo|file\s+path|directory\s+structure|stack\s+trace|server\s+ip|internal\s+url|where\s+are\s+you\s+hosted|what\s+(?:cloud|hosting|database|tech\s+stack|backend|framework|server)\b|which\s+(?:cloud|hosting|database|tech\s+stack|backend|framework|server)\b|render\.com|onrender|supabase|postgrest|postgresql|postgres|fastapi|uvicorn|cloudflare\s+worker|how\s+does\s+(?:your|the)\s+scraper\s+work|scraper\s+(?:code|script|architecture|ip|proxy|logic)|pbkdf2|hash\s+iterations|hashing\s+algorithm|how\s+do\s+you\s+hash|list\s+of\s+(?:customers|subscribers|users|clients|accounts|emails|leads)|who\s+are\s+your\s+(?:customers|subscribers|clients|users)|subscriber\s+(?:emails|list|database|count|numbers)|customer\s+(?:emails|list|data|database)|how\s+many\s+(?:customers|subscribers|users|clients)|other\s+(?:users|customers|subscribers|accounts)|dump\s+(?:the\s+)?(?:database|users|table|leads|contacts)|admin\s+(?:account|password|login|email|panel|console|dashboard)|founder(?:s|'s)?\s+(?:personal|phone|address|password|net\s+worth|email|name)|who\s+is\s+the\s+(?:founder|owner|ceo)|company\s+(?:revenue|mrr|arr|bank\s+account|financials|profits|valuation)|how\s+much\s+(?:money|revenue)\s+do\s+you\s+make|exploit|vulnerability|open\s+ports|sql\s+injection|\bxss\b|\bcsrf\b|\bssrf\b|\brce\b|how\s+to\s+hack|penetration\s+test|pentest/i;
+    const __CONCIERGE_COMPROMISING_RE = /(?:\\b(?:i\\s+am|i'm|im|this\\s+is|it's|its|speaking\\s+as|logged\\s+in\\s+as|acting\\s+as|we\\s+are|here\\s+is)\\b[^.?!]{0,45}\\b(?:founder|co-founder|cofounder|admin|administrator|owner|ceo|cto|ciso|cfo|president|exec|executive|director|developer|dev|engineer|creator|boss|manager|staff|employee|support|moderator|root|superuser|sudo|aaron|sysadmin|devops|security\\s+team|internal\\s+team)\\b)|(?:\\b(?:founder|co-founder|cofounder|admin|administrator|superuser|root|sysadmin|aaron)\\b[^.?!]{0,35}\\b(?:here|speaking|logged\\s+in|override|access|mode|command|instructs?|orders?|telling\\s+you|and\\s+admin|and\\s+founder|login|portal|privileges?)\\b)|\\b(?:founder\\s+and\\s+admin|admin\\s+and\\s+founder|admin\\s+override|founder\\s+override|executive\\s+override|security\\s+override|root\\s+access|admin\\s+access|sudo\\s+|su\\s+root|grant\\s+me\\s+access|elevate\\s+privileges|privilege\\s+escalation|bypass\\s+auth|unlock\\s+admin|admin\\s+mode|god\\s+mode|dev\\s+mode|developer\\s+mode|debug\\s+mode|maintenance\\s+mode|diagnostic\\s+mode|sudo\\s+mode|jailbreak|dan\\s+mode|do\\s+anything\\s+now)\\b|system\\s+prompt|initial\\s+prompt|developer\\s+prompt|hidden\\s+prompt|meta\\s+prompt|secret\\s+prompt|your\\s+instructions|your\\s+rules|your\\s+directives|your\\s+system\\s+message|repeat\\s+(?:the\\s+)?(?:text|words|instructions|above|everything)|verbatim|what\\s+were\\s+you\\s+told|print\\s+(?:your\\s+)?(?:prompt|instructions|rules)|reveal\\s+(?:your\\s+)?(?:prompt|instructions|rules)|show\\s+(?:me\\s+)?(?:your\\s+)?(?:prompt|instructions|rules)|ignore\\s+(?:all\\s+)?(?:previous|prior|above|earlier|system)|disregard\\s+(?:all\\s+)?(?:previous|prior|above|earlier|system)|forget\\s+(?:all\\s+)?(?:previous|prior|above|earlier|system)|override\\s+(?:your\\s+)?(?:instructions|rules|prompt|safety|security)|new\\s+instructions|pretend\\s+(?:you\\s+are|to\\s+be)|roleplay\\s+as|act\\s+as\\s+(?:a|an|the)|hypothetical\\s+scenario|translate\\s+your\\s+(?:prompt|instructions)|encode\\s+your\\s+(?:prompt|instructions)|base64|rot13|hex\\s+encode|leetspeak|spell\\s+backwards|reverse\\s+the\\s+text|bypass\\s+(?:security|auth|authentication|paywall|payment|stripe|rate\\s+limit|filter|waf|captcha|verification)|(?:\\b(?:give|show|tell|send|share|reveal|print|output|leak|dump|expose|generate|create|get)\\b[^.?!]{0,35}\\b(?:free\\s+|valid\\s+|working\\s+|admin\\s+|production\\s+|master\\s+|internal\\s+|secret\\s+|live\\s+)?(?:api\\s+key|cd_live|st_live|sk_live|sk-ant|secret|token|password|credential|private\\s+key|env\\b|\\.env|webhook\\s+secret|connection\\s+string|stripe\\s+key|supabase\\s+key))\\b|env\\s*var|environment\\s+variable|\\.env\\b|os\\.getenv|os\\.environ|process\\.env|connection\\s+string|database\\s+(?:password|url|host|credentials|schema|table|dump|engine|provider)|stripe\\s+secret|webhook\\s+secret|discord\\s+webhook\\s+url|proxy\\s+secret|x-rapidapi-proxy-secret|service_role|anon_key|private\\s+key|session\\s+token|jwt\\s+secret|bearer\\s+token|master\\s+key|source\\s+code|github\\s+repo|git\\s+repo|file\\s+path|directory\\s+structure|stack\\s+trace|server\\s+ip|internal\\s+url|where\\s+are\\s+you\\s+hosted|what\\s+(?:cloud|hosting|database|tech\\s+stack|backend|framework|server)\\b|which\\s+(?:cloud|hosting|database|tech\\s+stack|backend|framework|server)\\b|render\\.com|onrender|supabase|postgrest|postgresql|postgres|fastapi|uvicorn|cloudflare\\s+worker|how\\s+does\\s+(?:your|the)\\s+scraper\\s+work|scraper\\s+(?:code|script|architecture|ip|proxy|logic)|pbkdf2|hash\\s+iterations|hashing\\s+algorithm|how\\s+do\\s+you\\s+hash|list\\s+of\\s+(?:customers|subscribers|users|clients|accounts|emails|leads)|who\\s+are\\s+your\\s+(?:customers|subscribers|clients|users)|subscriber\\s+(?:emails|list|database|count|numbers)|customer\\s+(?:emails|list|data|database)|how\\s+many\\s+(?:customers|subscribers|users|clients)|other\\s+(?:users|customers|subscribers|accounts)|dump\\s+(?:the\\s+)?(?:database|users|table|leads|contacts)|admin\\s+(?:account|password|login|email|panel|console|dashboard)|founder(?:s|'s)?\\s+(?:personal|phone|address|password|net\\s+worth|email|name)|who\\s+is\\s+the\\s+(?:founder|owner|ceo)|company\\s+(?:revenue|mrr|arr|bank\\s+account|financials|profits|valuation)|how\\s+much\\s+(?:money|revenue)\\s+do\\s+you\\s+make|exploit|vulnerability|open\\s+ports|sql\\s+injection|\\bxss\\b|\\bcsrf\\b|\\bssrf\\b|\\brce\\b|how\\s+to\\s+hack|penetration\\s+test|pentest/i;
 
-    const __CONCIERGE_DLP_RE = /\b(?:sonnet|opus|haiku|anthropic|openai|chatgpt|gpt-\d|gemini|llama|mistral|claude-\d|onrender|render\.com|supabase|postgrest|postgresql|postgres|fastapi|uvicorn|pbkdf2|sys_prompt|system\s+prompt|os\.getenv)\b|sk-ant-[a-zA-Z0-9_\-]+|sk_live_[a-zA-Z0-9]+|cd_live_[a-zA-Z0-9_]{10,}/i;
+    const __CONCIERGE_DLP_RE = /\\b(?:sonnet|opus|haiku|anthropic|openai|chatgpt|gpt-\\d|gemini|llama|mistral|claude-\\d|onrender|render\\.com|supabase|postgrest|postgresql|postgres|fastapi|uvicorn|pbkdf2|sys_prompt|system\\s+prompt|os\\.getenv)\\b|sk-ant-[a-zA-Z0-9_\\-]+|sk_live_[a-zA-Z0-9]+|cd_live_[a-zA-Z0-9_]{10,}/i;
 
     function sanitizeConciergeInput(rawText) {
       const s = String(rawText || '').trim();
@@ -4273,7 +4267,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           error: 'Blocked by RubricWard WAF: HTML tags, scripts, event handlers, path traversal, and SQL/command injection syntax are prohibited. Please submit plain-text payer MRF, NSA IDR, or account questions only.'
         };
       }
-      if (/https?:\/\/(?!(?:www\.)?rubricward\.com)\S+/i.test(s)) {
+      if (/https?:\\/\\/(?!(?:www\\.)?rubricward\\.com)\\S+/i.test(s)) {
         return {
           ok: false,
           isWafBlock: true,
@@ -4357,7 +4351,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 0. Security, Identity-Spoofing & Confidentiality Guardrail
       if (__CONCIERGE_COMPROMISING_RE.test(ql)) {
         return {
-          text: "For security and confidentiality reasons, the RubricWard AI Support Concierge cannot verify identity or administrative authority claims in chat and does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\n\n• Public Security & Zero-Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero PHI/claim-data retention standards in the Security Center and Privacy Policy.\n• Self-Serve Account & API Management: Manage your organization's subscription, revenue cycle team CC seats, and production rw_live_... API Key inside the authenticated Client Portal.",
+          text: "For security and confidentiality reasons, the RubricWard AI Support Concierge cannot verify identity or administrative authority claims in chat and does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\\n\\n• Public Security & Zero-Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero PHI/claim-data retention standards in the Security Center and Privacy Policy.\\n• Self-Serve Account & API Management: Manage your organization's subscription, revenue cycle team CC seats, and production rw_live_... API Key inside the authenticated Client Portal.",
           ctaLabel: 'View Security Standards',
           ctaFn: function() { openTrustModal('security'); },
           actions: [
@@ -4371,7 +4365,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 0b. Underlying Model / Identity Guardrail
       if ((/what model|which model|what llm|which llm|anthropic|are you claude|use claude|sonnet|opus|haiku|openai|gpt|chatgpt|gemini|who trained you|who built you|who made you|who are you|what are you|are you a real|are you a bot|are you ai/i.test(ql)) && ql.indexOf('claude desktop') === -1) {
         return {
-          text: "I am the RubricWard Autonomous AI Payer MRF, NSA IDR & Support Concierge, powered by RubricWard's proprietary 50-State Commercial Payer TiC MRF, Medicare MPFS RVU/GPCI & ERISA/IDR Engine.\n• Instant Account & Billing Resolution: Ask me about subscription cancellation, corporate tax receipts, revenue cycle team CC seats, or Slack/Teams/Epic/Waystar webhooks.\n• Healthcare Payer Rate & IDR Intelligence: Ask me about any of the 50 U.S. State DOI/APCD portals, Commercial Payer TiC MRF allowed amounts (25th/50th/75th percentiles), Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, Federal NSA 45 CFR 149.510 IDR briefs, or our 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package Compiler.",
+          text: "I am the RubricWard Autonomous AI Payer MRF, NSA IDR & Support Concierge, powered by RubricWard's proprietary 50-State Commercial Payer TiC MRF, Medicare MPFS RVU/GPCI & ERISA/IDR Engine.\\n• Instant Account & Billing Resolution: Ask me about subscription cancellation, corporate tax receipts, revenue cycle team CC seats, or Slack/Teams/Epic/Waystar webhooks.\\n• Healthcare Payer Rate & IDR Intelligence: Ask me about any of the 50 U.S. State DOI/APCD portals, Commercial Payer TiC MRF allowed amounts (25th/50th/75th percentiles), Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, Federal NSA 45 CFR 149.510 IDR briefs, or our 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package Compiler.",
           ctaLabel: 'Compare Pricing Plans',
           ctaFn: function() { closeTrustModals(); switchSpaView('checkout'); },
           actions: [
@@ -4385,7 +4379,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 1a. Conversational Greetings
       if (/^(hi|hello|hey|howdy|greetings|good\s+(morning|afternoon|evening)|yo|sup|start)[!.?\s]*$/i.test(ql)) {
         return {
-          text: "Hello! Welcome to the RubricWard AI Payer MRF, NSA IDR & Support Concierge. How can I help your revenue cycle or managed care team today?\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\n• Benchmark Commercial Payer TiC MRF allowed amounts (25th / Median QPA / 75th percentiles) and peer EIN/NPI contract spreads across all 52 portals\n• Compare ClaimWire Pro ($199/mo), RubricWard Autopilot ($499/mo), 6-File .ZIP Compiler ($1,499/mo), and Enterprise OEM ($2,499/mo)\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our Payer MRF APIs & MCP server",
+          text: "Hello! Welcome to the RubricWard AI Payer MRF, NSA IDR & Support Concierge. How can I help your revenue cycle or managed care team today?\\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\\n• Benchmark Commercial Payer TiC MRF allowed amounts (25th / Median QPA / 75th percentiles) and peer EIN/NPI contract spreads across all 52 portals\\n• Compare ClaimWire Pro ($199/mo), RubricWard Autopilot ($499/mo), 6-File .ZIP Compiler ($1,499/mo), and Enterprise OEM ($2,499/mo)\\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our Payer MRF APIs & MCP server",
           ctaLabel: 'Compare Pricing Plans',
           ctaFn: function() { closeTrustModals(); switchSpaView('checkout'); },
           actions: [
@@ -4399,7 +4393,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 1b. Status / Health / Test
       if (/^(test|testing|ping|status|are you there|are you working|are you online|how\s+are\s+you|how\s+is\s+it\s+going|what\s+can\s+you\s+do|help)[!.?\s]*$/i.test(ql) || /system status|uptime|is rubricward down|gateway health/i.test(ql)) {
         return {
-          text: "All RubricWard systems are 100% online and operational!\n• 52/52 Payer MRF & State DOI/APCD Scrapers: Active (99.99% uptime across all 50 State DOIs/APCDs, CMS Federal NSA IDR, and Multi-Payer Commercial TiC MRF feeds)\n• 12/12 Stateless Healthcare Payer MRF & IDR Microservices & MCP Server: Operational (< 45 ms edge routing)\n• In-Memory 6-File OpenXML (.DOCX + .XLSX) Compiler: Ready\n\nAsk me about any State payer portal, CPT/DRG negotiated rate, Medicare MPFS RVU/GPCI baseline, ERISA/NSA IDR rule, or account setting.",
+          text: "All RubricWard systems are 100% online and operational!\\n• 52/52 Payer MRF & State DOI/APCD Scrapers: Active (99.99% uptime across all 50 State DOIs/APCDs, CMS Federal NSA IDR, and Multi-Payer Commercial TiC MRF feeds)\\n• 12/12 Stateless Healthcare Payer MRF & IDR Microservices & MCP Server: Operational (< 45 ms edge routing)\\n• In-Memory 6-File OpenXML (.DOCX + .XLSX) Compiler: Ready\\n\\nAsk me about any State payer portal, CPT/DRG negotiated rate, Medicare MPFS RVU/GPCI baseline, ERISA/NSA IDR rule, or account setting.",
           ctaLabel: 'Check Live System Status',
           ctaFn: function() { openTrustModal('status'); },
           actions: [
@@ -4413,7 +4407,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 1c. Politeness / Thanks
       if (/^(thanks|thank\s+you|thx|ty|appreciate\s+it|awesome|great|cool|nice|perfect|helpful|got\s+it|ok|okay|sounds\s+good|bye|goodbye|see\s+ya)[!.?\s]*$/i.test(ql)) {
         return {
-          text: "You're very welcome! Wishing your revenue cycle and managed care team strong payer contract uplifts and prevailing NSA IDR determinations!\n\nIf you need to benchmark another CPT/DRG code, download a 6-File OpenXML (.DOCX + .XLSX) sample package, or manage your API keys in the Client Portal, just ask anytime.",
+          text: "You're very welcome! Wishing your revenue cycle and managed care team strong payer contract uplifts and prevailing NSA IDR determinations!\\n\\nIf you need to benchmark another CPT/DRG code, download a 6-File OpenXML (.DOCX + .XLSX) sample package, or manage your API keys in the Client Portal, just ask anytime.",
           ctaLabel: 'Browse Live Payer MRF Feed',
           ctaFn: function() { closeTrustModals(); switchSpaView('lettings'); },
           actions: [
@@ -4426,7 +4420,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 1d. Sky Color / Chitchat
       if (ql.includes('color') && ql.includes('sky')) {
         return {
-          text: "The sky is blue on a clear day (thanks to Rayleigh scattering of sunlight in Earth's atmosphere)!\n\nAs RubricWard's AI Payer MRF, NSA IDR & Support Concierge, I am live and ready to help with any question about our 52-portal Commercial Payer TiC MRF & Federal NSA IDR feed, Medicare MPFS RVU/GPCI baselines, 6-File OpenXML (.DOCX + .XLSX) Claim Package Compiler, or self-serve account settings.",
+          text: "The sky is blue on a clear day (thanks to Rayleigh scattering of sunlight in Earth's atmosphere)!\\n\\nAs RubricWard's AI Payer MRF, NSA IDR & Support Concierge, I am live and ready to help with any question about our 52-portal Commercial Payer TiC MRF & Federal NSA IDR feed, Medicare MPFS RVU/GPCI baselines, 6-File OpenXML (.DOCX + .XLSX) Claim Package Compiler, or self-serve account settings.",
           ctaLabel: 'Browse Live Payer MRF Feed',
           ctaFn: function() { closeTrustModals(); switchSpaView('lettings'); },
           actions: [
@@ -4440,7 +4434,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 2. 1-Click Subscription Cancellation & Receipts
       if (/cancel|close\s+account|delete\s+account|stop\s+subscription|stop\s+billing|lock-in|contract\s+term|commitment|downgrade|unsubscribe|receipt|invoice/i.test(ql)) {
         return {
-          text: "You can manage your RubricWard subscription, download itemized Stripe tax receipts, pause email alerts, or cancel in 1 click at any time with zero lock-in:\n• 1-Click Cancellation & Plan Switching: Open the Client Portal in the top navigation bar, enter your subscriber work email or rw_live_... API key, and click Manage / Cancel Plan.\n• Corporate Tax Receipts & Unsubscribe: Download PDF invoices directly in the Client Portal, or use the 1-click Unsubscribe link in any alert email to pause dispatches immediately.",
+          text: "You can manage your RubricWard subscription, download itemized Stripe tax receipts, pause email alerts, or cancel in 1 click at any time with zero lock-in:\\n• 1-Click Cancellation & Plan Switching: Open the Client Portal in the top navigation bar, enter your subscriber work email or rw_live_... API key, and click Manage / Cancel Plan.\\n• Corporate Tax Receipts & Unsubscribe: Download PDF invoices directly in the Client Portal, or use the 1-click Unsubscribe link in any alert email to pause dispatches immediately.",
           ctaLabel: 'Open Client Portal',
           ctaFn: function() { openTrustModal('account'); },
           actions: [
@@ -4451,9 +4445,9 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       }
 
       // 3. 6-File OpenXML (.DOCX + .XLSX) Package
-      if (/\.zip|6-file|6\s+file|openxml|\.docx|\.xlsx|excel\s+formula|live\s+formula|volume\s+i|volume\s+ii|volume\s+iii|volume\s+iv|volume\s+v|what\s+is\s+inside|package|sample\s+download/i.test(ql)) {
+      if (/\.zip\b|6-file|6\s+file|openxml|\.docx|\.xlsx|excel\s+formula|live\s+formula|volume\s+i|volume\s+ii|volume\s+iii|volume\s+iv|volume\s+v|what\s+is\s+inside|package|sample\s+download/i.test(ql)) {
         return {
-          text: "Every RubricWard 6-File OpenXML (.ZIP) Claim & IDR Package compiles 5 native Microsoft Word/Excel volumes plus a JSON readiness manifest in memory:\n• Volume I (.DOCX): Commercial Payer Clinical Policy Bulletin (CPB), CMS LCD/NCD Prior-Auth Checklist & Timely-Filing Matrix.\n• Volume II (.XLSX with Live Formulas): Commercial Payer TiC MRF Allowed-Amount & QPA Rate Model with live =ROUND(D6*G6,2) extended cells and =SUM(H6:H9) totals.\n• Volume III (.XLSX with Live Formulas): Locality-Matched CMS Medicare MPFS RVU, GPCI & ASC Grouper Schedule (=B6+C6 rates).\n• Volume IV (.DOCX): Statutory ERISA 29 CFR 2560.503-1 Medical Necessity Appeal & CMS NCCI Modifier 25/59 Defense.\n• Volume V (.DOCX) + 00_Manifest (.JSON): Federal No Surprises Act (NSA 45 CFR 149.510) IDR Final Offer Brief & HIPAA 835 ERA Underpayment Ledger.",
+          text: "Every RubricWard 6-File OpenXML (.ZIP) Claim & IDR Package compiles 5 native Microsoft Word/Excel volumes plus a JSON readiness manifest in memory:\\n• Volume I (.DOCX): Commercial Payer Clinical Policy Bulletin (CPB), CMS LCD/NCD Prior-Auth Checklist & Timely-Filing Matrix.\\n• Volume II (.XLSX with Live Formulas): Commercial Payer TiC MRF Allowed-Amount & QPA Rate Model with live =ROUND(D6*G6,2) extended cells and =SUM(H6:H9) totals.\\n• Volume III (.XLSX with Live Formulas): Locality-Matched CMS Medicare MPFS RVU, GPCI & ASC Grouper Schedule (=B6+C6 rates).\\n• Volume IV (.DOCX): Statutory ERISA 29 CFR 2560.503-1 Medical Necessity Appeal & CMS NCCI Modifier 25/59 Defense.\\n• Volume V (.DOCX) + 00_Manifest (.JSON): Federal No Surprises Act (NSA 45 CFR 149.510) IDR Final Offer Brief & HIPAA 835 ERA Underpayment Ledger.",
           ctaLabel: 'Download Live .ZIP Sample',
           ctaHref: 'https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary',
           actions: [
@@ -4472,7 +4466,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
         const top = explicitProjectMatch || (LETTINGS_DATA || [])[0];
         const wageId = top.wage_determination_id || top.wage_decision_id || 'CMS MPFS / NSA 45 CFR 149.510';
         return {
-          text: `Live Commercial Payer TiC MRF & NSA IDR Dossier ready for ${top.project_id}:\n• Cohort: ${top.title} (${top.agency} — ${top.county})\n• Cohort MRF Value: $${Number(top.engineers_estimate_usd).toLocaleString()} | Underpayment Gap: ${top.dbe_goal_pct}% | Appeal Window: ${Number(top.liquidated_damages_per_day_usd || 180)} Days\n• Statutory Basis: ${wageId}\n• Regional Peer Specialty Groups: ${(top.planholders || []).join(', ')}`,
+          text: `Live Commercial Payer TiC MRF & NSA IDR Dossier ready for ${top.project_id}:\\n• Cohort: ${top.title} (${top.agency} — ${top.county})\\n• Cohort MRF Value: $${Number(top.engineers_estimate_usd).toLocaleString()} | Underpayment Gap: ${top.dbe_goal_pct}% | Appeal Window: ${Number(top.liquidated_damages_per_day_usd || 180)} Days\\n• Statutory Basis: ${wageId}\\n• Regional Peer Specialty Groups: ${(top.planholders || []).join(', ')}`,
           ctaLabel: 'Inspect Cohort Dossier',
           ctaFn: function() { closeTrustModals(); openInPageDossier(top.project_id); },
           actions: [
@@ -4485,7 +4479,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 5. 52-Portal & 50-State Coverage Overview
       if (ql.includes('50') || ql.includes('52') || ql.includes('portal') || ql.includes('which state') || ql.includes('monitored') || ql.includes('coverage')) {
         return {
-          text: "RubricWard monitors all 52 active healthcare payer rate-transparency & dispute portals 24/7:\n• All 50 U.S. State DOI & APCD Payer MRF Registries: TX DOI (TDI), CA DMHC/HCAI, FL OIR/AHCA, VA BOI/APCD, PA PID/PHC4, NY DFS/SPARCS, IL DOI, GA OCI, NC DOI, OH ODI, WA OIC, MI DIFS, NJ DOBI, MA CHIA, CO CIVHC, AZ DIFI, MN APCD, TN TDCI, IN IDOI, MO DCI, WI OCI, SC DOI, KY DOI, AL DOI, LA LDI, OK OID, CT OHS, UT OHCS, NV DOI, IA IID, KS KID, AR APCD, MS MID, NM OSI, NE DOI, ID DOI, HI DCCA, NH CHIS, ME MHDO, RI OHIC, MT CSI, DE DHIN, SD DLR, ND ID, AK DOI, VT VHCURES, WV OIC, WY DOI, OR APAC, and MD HSCRC.\n• Federal CMS No Surprises Act (NSA 45 CFR 149.510): Federal IDR portal & QPA benchmarks.\n• Multi-Payer Commercial TiC MRF Index: UHC,Elevance/Anthem, Aetna, Cigna, Humana & BCBS.",
+          text: "RubricWard monitors all 52 active healthcare payer rate-transparency & dispute portals 24/7:\\n• All 50 U.S. State DOI & APCD Payer MRF Registries: TX DOI (TDI), CA DMHC/HCAI, FL OIR/AHCA, VA BOI/APCD, PA PID/PHC4, NY DFS/SPARCS, IL DOI, GA OCI, NC DOI, OH ODI, WA OIC, MI DIFS, NJ DOBI, MA CHIA, CO CIVHC, AZ DIFI, MN APCD, TN TDCI, IN IDOI, MO DCI, WI OCI, SC DOI, KY DOI, AL DOI, LA LDI, OK OID, CT OHS, UT OHCS, NV DOI, IA IID, KS KID, AR APCD, MS MID, NM OSI, NE DOI, ID DOI, HI DCCA, NH CHIS, ME MHDO, RI OHIC, MT CSI, DE DHIN, SD DLR, ND ID, AK DOI, VT VHCURES, WV OIC, WY DOI, OR APAC, and MD HSCRC.\\n• Federal CMS No Surprises Act (NSA 45 CFR 149.510): Federal IDR portal & QPA benchmarks.\\n• Multi-Payer Commercial TiC MRF Index: UHC,Elevance/Anthem, Aetna, Cigna, Humana & BCBS.",
           ctaLabel: 'View Portal Coverage Grid',
           ctaFn: function() { closeTrustModals(); switchSpaView('overview'); const el = document.getElementById('coverage'); if (el) el.scrollIntoView({behavior:'auto'}); },
           actions: [
@@ -4498,7 +4492,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 6. Commercial Payer TiC MRF & QPA Rate Benchmarks
       if (/mrf|qpa|allowed\s+amount|unit-price|unit\s+price|bid\s+tab|bid-tab|tabulation|cpt|drg|benchmark|rate|medicare|mpfs|rvu|gpci/i.test(ql)) {
         return {
-          text: "RubricWard benchmarks every CPT, HCPCS, APC, and MS-DRG code against 2.40M+ verified commercial payer negotiated rates from CMS Transparency in Coverage (45 CFR 147.212) Machine-Readable Files (API #02 & API #03):\n• 25th, 50th (Median QPA) & 75th-Percentile MRF Modeling: Quantifies exact commercial payer allowed amounts by payer (UHC, Anthem, Aetna, Cigna, BCBS), provider EIN/NPI, and MSA.\n• Locality-Matched Medicare MPFS RVU & GPCI Baselines: Computes exact Work/PE/MP RVU and ASC facility grouper baselines so you can benchmark contracts at 185%–265% of Medicare.\n• Live OpenXML (.XLSX) Workbook: Volume II & Volume III of the 6-File .ZIP Package output live =ROUND(D6*G6,2) and =SUM() Excel formulas.",
+          text: "RubricWard benchmarks every CPT, HCPCS, APC, and MS-DRG code against 2.40M+ verified commercial payer negotiated rates from CMS Transparency in Coverage (45 CFR 147.212) Machine-Readable Files (API #02 & API #03):\\n• 25th, 50th (Median QPA) & 75th-Percentile MRF Modeling: Quantifies exact commercial payer allowed amounts by payer (UHC, Anthem, Aetna, Cigna, BCBS), provider EIN/NPI, and MSA.\\n• Locality-Matched Medicare MPFS RVU & GPCI Baselines: Computes exact Work/PE/MP RVU and ASC facility grouper baselines so you can benchmark contracts at 185%–265% of Medicare.\\n• Live OpenXML (.XLSX) Workbook: Volume II & Volume III of the 6-File .ZIP Package output live =ROUND(D6*G6,2) and =SUM() Excel formulas.",
           ctaLabel: 'Query Payer MRF Vault',
           ctaFn: function() { closeTrustModals(); switchSpaView('checkout'); const el = document.getElementById('checkout-enterprise-proof-workbench'); if (el) el.scrollIntoView({behavior:'auto'}); switchCheckoutWorkbenchTab('vault'); },
           actions: [
@@ -4511,7 +4505,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
       // 7. Plans, Pricing & REST/MCP API Keys
       if (/price|pricing|cost|how\s+much|tier\s*[1234]|plan|subscription|monthly|annual|mcp|api\s+key|cd_live|rest\s+api/i.test(ql)) {
         return {
-          text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\n• Tier 1 — ClaimWire Pro ($199/mo or $1,990/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\n• Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\n• Tier 4 — Health System & RCM OEM ($2,499/mo or $24,900/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
+          text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\\n• Tier 1 — ClaimWire Pro ($199/mo or $1,990/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\\n• Tier 2 — RubricWard Autopilot ($499/mo or $4,490/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $14,900/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\\n• Tier 4 — Health System & RCM OEM ($2,499/mo or $24,900/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
           ctaLabel: 'Compare Pricing Plans',
           ctaFn: function() { closeTrustModals(); switchSpaView('checkout'); },
           actions: [
@@ -4524,7 +4518,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
 
       // 8. Clean Default Fallback
       return {
-        text: "I am RubricWard's Autonomous AI Payer MRF, NSA IDR & Support Concierge. Here is what I can help you with right now:\n• 50-State Commercial Payer TiC MRF & NSA IDR Benchmarks: Ask about any State DOI/APCD portal or benchmark 25th, 50th (Median QPA), and 75th percentile negotiated rates for CPT, APC, and MS-DRG codes.\n• 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Packages: Inspect or download a live sample .ZIP containing native Word & Excel workbooks with live =ROUND(D6*G6,2) and =SUM() formulas, Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, and Federal NSA 45 CFR 149.510 IDR briefs.\n• Self-Serve Account, API & Billing: Compare Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), Tier 3 .ZIP Compiler ($1,499/mo), and Tier 4 OEM ($2,499/mo), retrieve your rw_live_... API/MCP key, download B2B tax receipts, or cancel in 1 click.",
+        text: "I am RubricWard's Autonomous AI Payer MRF, NSA IDR & Support Concierge. Here is what I can help you with right now:\\n• 50-State Commercial Payer TiC MRF & NSA IDR Benchmarks: Ask about any State DOI/APCD portal or benchmark 25th, 50th (Median QPA), and 75th percentile negotiated rates for CPT, APC, and MS-DRG codes.\\n• 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Packages: Inspect or download a live sample .ZIP containing native Word & Excel workbooks with live =ROUND(D6*G6,2) and =SUM() formulas, Medicare MPFS RVU/GPCI baselines, ERISA 29 CFR 2560.503-1 appeals, and Federal NSA 45 CFR 149.510 IDR briefs.\\n• Self-Serve Account, API & Billing: Compare Tier 1 ($199/mo), Tier 2 Autopilot ($499/mo), Tier 3 .ZIP Compiler ($1,499/mo), and Tier 4 OEM ($2,499/mo), retrieve your rw_live_... API/MCP key, download B2B tax receipts, or cancel in 1 click.",
         ctaLabel: 'Compare Plans & Workbench',
         ctaFn: function() { closeTrustModals(); switchSpaView('checkout'); },
         actions: [
@@ -4545,7 +4539,7 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
     function _renderConciergeBotReply(botDiv, reply) {
       let safeText = String((reply && reply.text) || '').trim();
       if (__CONCIERGE_DLP_RE.test(safeText)) {
-        safeText = "For security and confidentiality reasons, the RubricWard AI Support Concierge does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\n\n• Public Security & Zero-Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero bid-data retention standards in the Security Center and Privacy Policy.\n• Self-Serve Account & API Management: Manage your organization's subscription, estimating team CC seats, and production rw_live_... API Key inside the authenticated Client Portal.";
+        safeText = "For security and confidentiality reasons, the RubricWard AI Support Concierge does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\\n\\n• Public Security & Zero-Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero bid-data retention standards in the Security Center and Privacy Policy.\\n• Self-Serve Account & API Management: Manage your organization's subscription, estimating team CC seats, and production rw_live_... API Key inside the authenticated Client Portal.";
       }
       const headerLabel = (reply && reply.isWafBlock)
         ? '[!] RUBRICWARD WAF SECURITY BLOCK:'
@@ -4643,6 +4637,8 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
 
     function handleHashNavigation() {
       initProspectAttributionBanner();
+      const _mgEl = document.getElementById('vault-target-margin');
+      if (_mgEl && (_mgEl.value === '8.5%' || _mgEl.value.trim() === '')) _mgEl.value = '215% of MPFS';
       const rawHash = String((window.location && window.location.hash) || '').replace(/^#/, '').trim();
       try {
         const qs = new URLSearchParams((window.location && window.location.search) || '');

@@ -368,13 +368,13 @@ async def redirect_to_checkout(
 @router.post("/webhooks/stripe", status_code=status.HTTP_200_OK)
 async def stripe_webhook_handler(payload: Dict[str, Any]) -> Dict[str, Any]:
     event_type = str(payload.get("type") or "checkout.session.completed")
-    api_key = f"cd_live_{secrets.token_hex(18)}"
+    api_key = f"rw_live_{secrets.token_hex(18)}"
     return {
         "status": "processed",
         "brand": "RubricWard",
         "event_type": event_type,
         "provisioned_api_key_prefix": api_key[:14] + "...",
-        "portal_access": "50-State DOT Lettings + 12 Precon APIs + 6-File .ZIP Compiler",
+        "portal_access": "52-Portal Commercial Payer MRF & CMS Feed + 12 RCM/IDR APIs + 6-File .ZIP Compiler",
     }
 
 
@@ -408,7 +408,7 @@ async def account_portal_login(payload: AccountLoginRequest) -> Dict[str, Any]:
         )
 
     key_seed = f"rubricward_sub_{clean_email}"
-    derived_key = "cd_live_" + hashlib.sha256(key_seed.encode("utf-8")).hexdigest()[:24]
+    derived_key = "rw_live_" + hashlib.sha256(key_seed.encode("utf-8")).hexdigest()[:24]
     tier = "tier_4" if is_admin else "tier_2"
     tier_label = (
         "Founder & Admin // Tier 4 Enterprise OEM & 6-File .ZIP Compiler ($2,499/mo)"
@@ -426,7 +426,7 @@ async def account_portal_login(payload: AccountLoginRequest) -> Dict[str, Any]:
         "tier_label": tier_label,
         "api_calls_per_month": 50000 if is_admin else 2500,
         "zip_compiler_included": True,
-        "api_key": raw_pw if raw_pw.startswith("cd_live_") else derived_key,
+        "api_key": raw_pw if raw_pw.startswith(("rw_live_", "cd_live_")) else derived_key,
         "portals_enabled": 52,
         "states_enabled": 50,
     }
