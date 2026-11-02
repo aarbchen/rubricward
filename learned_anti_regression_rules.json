@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T12:50:06.713263+00:00",
+  "updated_at": "2026-11-02T18:01:58.098584+00:00",
   "total_rules": 43,
   "policy": "Silent detection -> Autonomous diagnosis & repair -> Rule codification -> Resolved-only Discord notification",
   "rules": [
@@ -83,8 +83,8 @@
       "rule_statement": "Maintain 100% count and card parity across `index.html`, `apis.html`, `pseo_generator.py`, MCP servers, and Cloudflare Edge Worker (`52 Portals / 50 State DOTs` and `12 APIs`).",
       "invariant_check": "check_portal_and_catalog_parity",
       "created_at": "2026-11-01T14:50:43.386023+00:00",
-      "last_enforced_at": "2026-11-02T12:50:06.713263+00:00",
-      "times_triggered": 24
+      "last_enforced_at": "2026-11-02T18:01:58.098584+00:00",
+      "times_triggered": 45
     },
     {
       "rule_id": "RULE-008-ZERO-SIBLING_BRAND-OVERLAP",

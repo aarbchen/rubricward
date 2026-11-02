@@ -174,7 +174,7 @@ def build_mlot_and_runner_up_leads(verified_contacts: List[Dict[str, str]] | Non
 
         company = str(contact.get("company_name") or "your revenue cycle team").strip()
         em = str(contact.get("email") or "").strip().lower()
-        note = generate_mlot_sniper_note(bench, recipient_email=em, company_name=company)
+        note = generate_mlot_sniper_note({**bench, "letting_id": active_lid, "award_id": active_lid, "state_code": st, "state": st, "project_title": clean_title}, recipient_email=em, company_name=company)
         step2_body = _sanitize_zero_dollar_zero_link(
             f"Hi {company} team — quick follow-up in case your managed care or billing desk wants the 50-state CMS TiC MRF allowed-amount spread "
             f"and 6-File OpenXML (.DOCX + .XLSX) ERISA Appeal and Federal NSA IDR Package for {active_lid} ({st}).\n\n"
