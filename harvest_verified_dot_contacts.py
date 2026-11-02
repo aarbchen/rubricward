@@ -702,7 +702,14 @@ def _score_scraped_email(em: str, dom: str) -> int:
         return -999
     if local in BAD_LOCALS:
         return -999
-    if any(b in local for b in ("hr", "job", "career", "recruit", "tempcontact", "privacy", "media", "press", "png", "jpg", "svg", "sentry", "wix", "example", "abuse", "webmaster")):
+    if any(b in local for b in (
+        "hr", "job", "career", "recruit", "tempcontact", "privacy", "media", "press",
+        "png", "jpg", "svg", "sentry", "wix", "example", "abuse", "webmaster",
+        "schedul", "appoint", "patient", "ptinquiry", "ptresidency", "residency", "fellowship",
+        "disability", "forms", "records", "refill", "triage", "ada", "marketing", "news",
+        "donate", "foundation", "volunteer", "equation", "help", "support", "customer.service",
+        "comments"
+    )):
         return -999
     score = 10
     for idx, kw in enumerate(("rcm", "billing", "managedcare", "contract", "appeal", "credential", "coding", "refer", "clinic", "asc", "info", "contact", "office", "admin", "sales")):

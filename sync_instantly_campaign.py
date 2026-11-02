@@ -251,8 +251,8 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 comp_url = str(payload_vars.get("compiler_url") or "")
                 has_dollar_or_link = ("$" in s1) or ("$" in s2) or ("$" in subj1) or ("http://" in s1) or ("https://" in s1) or ("http://" in s2) or ("https://" in s2) or ("api.rubricward.com" in comp_url)
                 is_st_overlap = (em_existing in st_excluded_emails) or (dom_existing in st_excluded_domains)
-                is_in_flight = (item.get("status") in (1, 2)) or (int(item.get("email_open_count") or 0) > 0)
-                if lid and (is_st_overlap or has_dollar_or_link or (not is_in_flight and (em_existing not in valid_email_map or not payload_vars.get("source_url")))):
+                is_in_flight = bool(item.get("timestamp_last_contact")) or (int(item.get("email_open_count") or 0) > 0)
+                if lid and (is_st_overlap or has_dollar_or_link or (em_existing not in valid_email_map) or (not is_in_flight and not payload_vars.get("source_url"))):
                     requests.delete(f"https://api.instantly.ai/api/v2/leads/{lid}", headers=auth_only_headers, timeout=10)
                     purged_count += 1
                 elif em_existing in valid_email_map or is_in_flight:
