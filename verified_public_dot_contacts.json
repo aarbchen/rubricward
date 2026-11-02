@@ -36,13 +36,11 @@
     "source_url": "https://www.pinnacleiii.com"
   },
   {
-    "company_name": "Inbox Health Patient Billing",
-    "email": "team@inboxhealth.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-80160",
+    "company": "Connecticut Orthopaedics \u2014 Surgical Revenue Cycle & Payer Contracting",
+    "email": "info@ct-ortho.com",
     "state": "CT",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.inboxhealth.com/"
+    "source_url": "https://www.ct-ortho.com",
+    "verified_mx": true
   },
   {
     "company_name": "24/7 Medical Billing Services",
@@ -135,13 +133,11 @@
     "source_url": "https://rojihealthintel.com"
   },
   {
-    "company_name": "SullivanCotter Physician Compensation & RVU",
-    "email": "surveys@sullivancotter.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-80243",
+    "company": "Illinois Bone & Joint Institute \u2014 Orthopedic & ASC Revenue Cycle Management",
+    "email": "info@ibji.com",
     "state": "IL",
-    "source_type": "website_html_mailto",
-    "source_url": "https://sullivancotter.com/privacy-policy"
+    "source_url": "https://www.ibji.com",
+    "verified_mx": true
   },
   {
     "company_name": "Fort Wayne Orthopedics",
@@ -189,13 +185,11 @@
     "source_url": "https://www.billingadvantage.com"
   },
   {
-    "company_name": "ImageTrend EMS & Hospital Billing",
-    "email": "info@imagetrend.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-80227",
+    "company": "Twin Cities Orthopedics \u2014 Multi-Specialty Surgical & ASC Revenue Cycle",
+    "email": "info@tcomn.com",
     "state": "MN",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.imagetrend.com/"
+    "source_url": "https://tcomn.com",
+    "verified_mx": true
   },
   {
     "company_name": "Orthopedic & Sports Medicine Center MO",

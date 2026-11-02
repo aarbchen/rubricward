@@ -67,7 +67,6 @@
         <a href="index.html" class="text-[#071C21] hover:text-[#0F766E]">Overview</a>
         <a href="lettings/index.html" class="text-[#071C21] hover:text-[#0F766E]">Live Payer MRF &amp; IDR</a>
         <a href="apis.html" class="text-[#0F766E] font-extrabold">API Catalog</a>
-        <a href="#contact" onclick="openTrustModal('contact', event)" class="text-[#071C21] hover:text-[#0F766E]">Contact</a>
         <a href="#account" onclick="openTrustModal('account', event)" class="px-3 py-1.5 rounded-lg bg-[#DDF0EC] hover:bg-[#C8E6E0] text-[#071C21] border border-[#7FB5AC] text-xs font-mono font-bold transition">Client Portal</a>
         <a href="index.html#checkout" class="px-4 py-2 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold transition">Self-Serve Pricing</a>
       </nav>
@@ -77,7 +76,6 @@
       <a href="index.html" class="text-[#071C21]">Overview</a>
       <a href="lettings/index.html" class="text-[#071C21]">Live 50-State Payer MRF &amp; IDR</a>
       <a href="apis.html" class="text-[#0F766E]">API Catalog</a>
-      <a href="#contact" onclick="openTrustModal('contact', event); toggleMobileNav();" class="text-[#0F766E]">Contact &amp; Support</a>
       <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E]">Client Portal</a>
       <a href="#status" onclick="openTrustModal('status', event)" class="text-[#065F46]">Live System Status</a>
       <a href="index.html#checkout" class="px-4 py-2 rounded-lg bg-[#071C21] text-white text-center font-bold">Self-Serve Pricing</a>
@@ -1231,7 +1229,7 @@
         <a href="#account" onclick="openTrustModal('account', event)" class="hover:text-[#0F766E] underline">Client Portal</a>
         <a href="#status" onclick="openTrustModal('status', event)" class="text-[#065F46] hover:text-[#0F766E] underline">System Status</a>
         <a href="#security" onclick="openTrustModal('security', event)" class="hover:text-[#0F766E] underline">Security</a>
-        <a href="#contact" onclick="openTrustModal('contact', event)" class="hover:text-[#0F766E] underline">Contact &amp; Support</a>
+        <a href="#contact" onclick="openTrustModal('contact', event)" class="hover:text-[#0F766E] underline">Contact</a>
         <a href="#terms" onclick="openTrustModal('terms', event)" class="hover:text-[#0F766E] underline">Terms</a>
         <a href="#privacy" onclick="openTrustModal('privacy', event)" class="hover:text-[#0F766E] underline">Privacy</a>
       </div>
@@ -1515,71 +1513,75 @@
     </div>
   </div>
 
-  <!-- 4. #contact — Contact Support & Engineering Team Form + Autonomous AI Concierge -->
+  <!-- 4A. #contact — Standalone Contact Form -->
   <div id="contact" onclick="if(event.target===this) closeTrustModals()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
-    <div class="max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-6">
+    <div class="max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-5">
       <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
         <div>
-          <div class="text-xs font-mono font-bold text-[#0F766E]">&check; ENTERPRISE SUPPORT &amp; ENGINEERING DESK &bull; TRACKED SLA QUEUE + AI CONCIERGE</div>
-          <h3 class="text-xl sm:text-2xl font-extrabold text-[#071C21] mt-0.5">Contact RubricWard Support &amp; Engineering Team</h3>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-[#071C21]">Contact</h3>
+          <p class="text-xs font-medium text-[#111827] mt-0.5">Use the form below to send a message.</p>
         </div>
         <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
       </div>
 
-      <!-- Direct Contact Support & Engineering Team Form (Top of Contact Modal) -->
-      <div id="rubricward-human-escalation-card" class="p-5 sm:p-6 rounded-2xl bg-[#E8F4F2] border-2 border-[#0F766E] space-y-4">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#B4D6D0] pb-3">
-          <div>
-            <div class="text-xs font-mono font-bold text-[#0F766E]">// DIRECT SUPPORT &amp; ENGINEERING TICKET FORM &bull; ENCRYPTED TLS 1.3</div>
-            <h4 class="text-base sm:text-lg font-extrabold text-[#071C21] mt-0.5">Send a Message to Our Support &amp; Engineering Team</h4>
-            <p class="text-xs font-medium text-[#111827] mt-0.5">Submit your question, billing request, or custom Payer MRF / NSA IDR inquiry below. Our Support &amp; Engineering Team replies directly to your work email within 2 business hours.</p>
-          </div>
-          <span class="px-2.5 py-1 rounded bg-[#ECFDF5] border border-[#065F46] text-[11px] font-mono font-bold text-[#065F46]">&check; Priority SLA: &lt; 2 Hours</span>
-        </div>
+      <div id="rubricward-human-escalation-card" class="p-5 sm:p-6 rounded-2xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-4">
         <form id="form-human-escalation" onsubmit="submitHumanSupportEscalation(event)" class="space-y-3" autocomplete="off">
           <div class="hidden" aria-hidden="true">
             <input id="escalate-honeypot" type="text" name="website_url_honeypot" tabindex="-1" autocomplete="off" value="" />
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 text-xs font-mono">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-mono">
             <div>
-              <label for="escalate-name" class="block text-[11px] font-bold text-[#071C21] mb-1">YOUR NAME</label>
-              <input id="escalate-name" type="text" maxlength="100" placeholder="VP of Managed Care / RCM" class="w-full px-3 py-2 rounded-lg bg-white border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#475569]" />
+              <label for="escalate-name" class="block text-[11px] font-bold text-[#071C21] mb-1">NAME</label>
+              <input id="escalate-name" type="text" maxlength="100" placeholder="Jane Doe" class="w-full px-3 py-2 rounded-lg bg-white border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#475569]" />
             </div>
             <div>
-              <label for="escalate-email" class="block text-[11px] font-bold text-[#0F766E] mb-1">WORK EMAIL (REQUIRED) *</label>
-              <input id="escalate-email" type="email" maxlength="120" required placeholder="rcm@yourmedicalgroup.com" class="w-full px-3 py-2 rounded-lg bg-white border-2 border-[#0F766E] text-xs font-medium text-[#071C21] placeholder-[#475569]" />
+              <label for="escalate-email" class="block text-[11px] font-bold text-[#0F766E] mb-1">WORK EMAIL *</label>
+              <input id="escalate-email" type="email" maxlength="120" required placeholder="you@company.com" class="w-full px-3 py-2 rounded-lg bg-white border-2 border-[#0F766E] text-xs font-medium text-[#071C21] placeholder-[#475569]" />
             </div>
             <div>
-              <label for="escalate-company" class="block text-[11px] font-bold text-[#071C21] mb-1">MEDICAL GROUP / HEALTH SYSTEM</label>
-              <input id="escalate-company" type="text" maxlength="100" placeholder="Summit Surgical Group" class="w-full px-3 py-2 rounded-lg bg-white border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#475569]" />
+              <label for="escalate-company" class="block text-[11px] font-bold text-[#071C21] mb-1">ORGANIZATION</label>
+              <input id="escalate-company" type="text" maxlength="100" placeholder="Your Medical Group" class="w-full px-3 py-2 rounded-lg bg-white border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#475569]" />
             </div>
             <div>
-              <label for="escalate-urgency" class="block text-[11px] font-bold text-[#071C21] mb-1">SUPPORT DEPARTMENT</label>
+              <label for="escalate-urgency" class="block text-[11px] font-bold text-[#071C21] mb-1">TOPIC</label>
               <select id="escalate-urgency" class="w-full px-3 py-2 rounded-lg bg-white border border-[#7FB5AC] text-xs font-bold text-[#071C21]">
-                <option value="priority_support">Priority Support &amp; Engineering (&lt; 2hr SLA)</option>
-                <option value="priority_billing">Billing, Receipt &amp; Subscription Help</option>
-                <option value="urgent_technical">Payer MRF, NSA IDR, .ZIP or API Support</option>
-                <option value="enterprise_custom">Enterprise Multi-Seat / HealthTech OEM</option>
+                <option value="general">General Inquiry</option>
+                <option value="billing">Billing &amp; Subscription</option>
+                <option value="technical">Technical / API / .ZIP</option>
+                <option value="enterprise">Enterprise Inquiry</option>
               </select>
             </div>
           </div>
           <div>
             <div class="flex items-center justify-between text-[11px] font-mono mb-1">
-              <label for="escalate-message" class="font-bold text-[#071C21]">HOW CAN OUR SUPPORT &amp; ENGINEERING TEAM HELP YOU? *</label>
-              <span class="text-[#065F46] font-bold">Direct Support Queue Dispatch</span>
+              <label for="escalate-message" class="font-bold text-[#071C21]">MESSAGE *</label>
+              <span class="text-[#065F46] font-bold">Encrypted TLS 1.3</span>
             </div>
-            <textarea id="escalate-message" rows="3" maxlength="2000" required placeholder="Describe your question, custom Payer MRF / NSA IDR requirement, billing request, or technical issue — our Support &amp; Engineering Team will reply directly to your work email..." class="w-full p-3 rounded-lg bg-white border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#475569] leading-relaxed"></textarea>
+            <textarea id="escalate-message" rows="4" maxlength="2000" required placeholder="Enter your message..." class="w-full p-3 rounded-lg bg-white border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#475569] leading-relaxed"></textarea>
           </div>
           <button type="submit" id="btn-submit-human-escalation" class="w-full py-2.5 px-4 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition shadow-sm">
-            Send Message to Support &amp; Engineering Team &rarr;
+            Send Message &rarr;
           </button>
         </form>
         <div id="human-escalation-status-box" class="hidden"></div>
       </div>
+    </div>
+  </div>
+
+  <!-- 4B. #concierge — Autonomous AI Payer MRF & NSA IDR Concierge & Self-Serve Desk -->
+  <div id="concierge" onclick="if(event.target===this) closeTrustModals()" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+    <div class="max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#071C21] shadow-2xl space-y-5">
+      <div class="flex items-start justify-between gap-4 border-b border-[#B4D6D0] pb-3">
+        <div>
+          <div class="text-xs font-mono font-bold text-[#065F46]">&check; AUTONOMOUS AI CONCIERGE &bull; INSTANT ON-SCREEN RESOLUTION</div>
+          <h3 class="text-xl font-extrabold text-[#071C21] mt-0.5">Ask the RubricWard AI Payer MRF, NSA IDR &amp; Support Concierge</h3>
+        </div>
+        <button type="button" onclick="closeTrustModals()" class="shrink-0 whitespace-nowrap px-3 py-1.5 rounded bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white font-mono text-xs font-bold">Close [X]</button>
+      </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
         <div class="lg:col-span-5 p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-3 text-xs">
-          <div class="font-mono font-bold text-[#0F766E]">// ZERO-WAIT SELF-SERVE DESK</div>
-          <p class="font-medium text-[#111827] leading-relaxed">RubricWard is 100% self-serve so you never wait 24–48 hours for a human support email to manage your subscription, webhooks, or API keys.</p>
+          <div class="font-mono font-bold text-[#0F766E]">// SELF-SERVE DESK</div>
+          <p class="font-medium text-[#111827] leading-relaxed">RubricWard is 100% self-serve so you can manage your subscription, webhooks, and API keys immediately in-browser.</p>
           <div class="space-y-2">
             <button type="button" onclick="openTrustModal('account')" class="w-full text-left p-3 rounded-lg bg-white hover:bg-[#DDF0EC] border border-[#B4D6D0] transition">
               <div class="font-mono font-bold text-[#0F766E]">Manage Plan, Invoices &amp; 1-Click Cancel &rarr;</div>
@@ -1630,15 +1632,11 @@
           </form>
           <div id="contact-modal-log" class="p-4 rounded-xl bg-[#E8F4F2] border border-[#B4D6D0] space-y-2.5 max-h-72 overflow-y-auto text-xs">
             <div class="p-3 rounded-lg bg-white border border-[#B4D6D0] font-medium text-[#071C21] leading-relaxed">
-              <strong class="font-mono text-[#0F766E] block mb-1">&check; RUBRICWARD AI CONCIERGE (ONLINE &bull; AVG RESPONSE &lt; 1S):</strong>
+              <strong class="font-mono text-[#0F766E] block mb-1">&check; RUBRICWARD AI CONCIERGE (ONLINE):</strong>
               Click any question pill above or type your question in plain text for an instant, structured on-screen answer.
             </div>
           </div>
         </div>
-      </div>
-      <div class="p-3.5 rounded-xl bg-[#F2F9F8] border border-[#B4D6D0] flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-        <div><span class="font-bold text-[#071C21]">SELF-SERVE CLIENT PORTAL:</span> <a href="#account" onclick="openTrustModal('account', event)" class="text-[#0F766E] font-extrabold underline">1-Click Plan, Receipt &amp; API Key Management &rarr;</a></div>
-        <span class="text-[#065F46] font-bold">WAF VERIFIED &bull; ZERO PHI / CLAIM-DATA RETENTION</span>
       </div>
     </div>
   </div>
@@ -1697,11 +1695,10 @@
   </aside>
 
   <!-- STICKY 4-TAB MOBILE BOTTOM NAVIGATION BAR (#mobile-bottom-nav) -->
-  <nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t-2 border-[#071C21] grid grid-cols-5 text-[10.5px] font-mono font-bold text-center">
+  <nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 inset-x-0 z-30 bg-white border-t-2 border-[#071C21] grid grid-cols-4 text-[11px] font-mono font-bold text-center">
     <a href="#overview" onclick="switchSpaView('overview')" class="py-2.5 text-[#071C21] border-r border-[#B4D6D0]">Overview</a>
     <a href="#lettings" onclick="switchSpaView('lettings')" class="py-2.5 text-[#071C21] border-r border-[#B4D6D0]">MRF Feed</a>
     <a href="#apis" onclick="switchSpaView('apis')" class="py-2.5 text-[#0F766E] border-r border-[#B4D6D0]">12 APIs</a>
-    <a href="#contact" onclick="openTrustModal('contact', event)" class="py-2.5 text-[#071C21] border-r border-[#B4D6D0]">Contact</a>
     <a href="#checkout" onclick="switchSpaView('checkout')" class="py-2.5 bg-[#071C21] text-white">Pricing</a>
   </nav>
 
@@ -1731,7 +1728,7 @@
         <input id="concierge-input" type="text" required placeholder="Ask Payer MRF &amp; IDR AI..." class="flex-1 px-2.5 py-1.5 rounded-lg bg-[#F2F9F8] border border-[#7FB5AC] text-xs font-medium text-[#071C21] placeholder-[#1E293B]" />
         <button type="submit" class="px-3 py-1.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold">Send</button>
       </form>
-      <button type="button" onclick="openHumanEscalationForm('')" class="w-full py-1.5 px-2.5 rounded-lg bg-[#E8F4F2] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Need a Real Person? Contact Support Team &rarr;</button>
+      <button type="button" onclick="openHumanEscalationForm('')" class="w-full py-1.5 px-2.5 rounded-lg bg-[#E8F4F2] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-mono text-[11px] font-bold transition">Contact &rarr;</button>
     </div>
     <button type="button" id="concierge-trigger-btn" onclick="toggleConciergeDrawer()" aria-label="Open AI Payer MRF &amp; NSA IDR Concierge" title="AI Payer MRF &amp; NSA IDR Concierge" class="w-11 h-11 rounded-full flex items-center justify-center bg-[#071C21] hover:bg-[#0F766E] text-white shadow-lg border border-white/20 transition">
       <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -2366,6 +2363,17 @@
       if (directLinkEl) directLinkEl.setAttribute('href', _brandedHref);
       if (resBox) resBox.classList.add('hidden');
       if (modal) modal.classList.remove('hidden');
+      try {
+        const _emEl = document.getElementById('checkout-modal-email');
+        const _emVal = _emEl ? _emEl.value.trim() : '';
+        fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ brand: 'rubricward', plan: _parts[0] || 'tier2', billing: _parts[1] || 'monthly', email: _emVal })
+        }).then(function(r) { return r && r.ok ? r.json() : null; }).then(function(d) {
+          if (d && d.checkout_url && directLinkEl) directLinkEl.setAttribute('href', d.checkout_url);
+        }).catch(function() {});
+      } catch (e) {}
       return info;
     }
 
@@ -2397,7 +2405,7 @@
         const resp = await fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/create-checkout-session', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ plan, billing, email, tier, customer_email: email, company_name: company, state_dots: states })
+          body: JSON.stringify({ brand: 'rubricward', plan, billing, email, tier, customer_email: email, company_name: company, state_dots: states })
         });
         if (resp && resp.ok) {
           const data = await resp.json();
@@ -2902,7 +2910,7 @@
       });
       try {
         const h = String((window.location && window.location.hash) || '').replace(/^#/, '');
-        if (['account', 'status', 'security', 'contact', 'terms', 'privacy'].includes(h)) {
+        if (['account', 'status', 'security', 'concierge', 'contact', 'terms', 'privacy'].includes(h)) {
           if (window.history && window.history.replaceState) {
             window.history.replaceState(null, '', window.location.pathname + window.location.search);
           }
@@ -3310,10 +3318,10 @@
       if (/\b(human|real\s+person|talk\s+to\s+a\s+person|speak\s+to\s+someone|agent|representative|support\s+ticket|escalat|contact\s+support|customer\s+service|help\s+desk|not\s+helpful|still\s+need\s+help)\b/i.test(ql)) {
         return {
           text: "Need to speak with a real person? You can send a direct, priority message to our Founder & Engineering Support desk right here in the Support & Contact panel:\n• Tracked Priority Ticket (< 2 Business Hours SLA): Click 'Message Founder & Engineering Support' below to submit your question, work email, and urgency level — our system immediately alerts our founder and engineering team and assigns a tracked #RW-SUP-... ticket ID.\n• Direct Founder Support Email: You can also copy our direct founder support email in the Support & Contact panel.",
-          ctaLabel: 'Contact Support & Engineering Team',
+          ctaLabel: 'Contact',
           ctaFn: function() { openHumanEscalationForm(q); },
           actions: [
-            { label: 'Contact Support & Engineering Team', fn: function() { openHumanEscalationForm(q); } },
+            { label: 'Contact', fn: function() { openHumanEscalationForm(q); } },
             { label: 'Open Client Portal', fn: function() { openTrustModal('account'); } }
           ]
         };
@@ -3640,13 +3648,13 @@
       if (!emailVal || emailVal.indexOf('@') === -1) {
         boxEl.classList.remove('hidden');
         boxEl.className = 'p-3.5 rounded-xl bg-[#FEF2F2] border border-[#991B1B] text-xs font-mono text-[#991B1B] font-bold';
-        boxEl.textContent = 'Please enter a valid work email address so our Support & Engineering Team can reply directly to you.';
+        boxEl.textContent = 'Please enter a valid work email address.';
         return false;
       }
       if (!rawMsg || rawMsg.length < 8) {
         boxEl.classList.remove('hidden');
         boxEl.className = 'p-3.5 rounded-xl bg-[#FEF2F2] border border-[#991B1B] text-xs font-mono text-[#991B1B] font-bold';
-        boxEl.textContent = 'Please provide at least 8 characters describing how our Support & Engineering Team can help.';
+        boxEl.textContent = 'Please enter a message of at least 8 characters.';
         return false;
       }
       if (/(<\s*script|javascript\s*:|union\s+select|drop\s+table)/i.test(rawMsg)) {
@@ -3658,15 +3666,15 @@
       const fallbackTicket = 'RW-SUP-' + Math.random().toString(16).substring(2, 10).toUpperCase();
       if (btnEl) {
         btnEl.disabled = true;
-        btnEl.textContent = 'Dispatching to Support & Engineering Queue...';
+        btnEl.textContent = 'Sending Message...';
       }
       boxEl.classList.remove('hidden');
       boxEl.className = 'p-3.5 rounded-xl bg-[#E6F4F1] border border-[#0F766E] text-xs font-mono text-[#0F766E] font-bold';
-      boxEl.textContent = 'Encrypting and routing your priority support ticket to our Support & Engineering Team queue...';
+      boxEl.textContent = 'Sending your message...';
 
       if (typeof fetch !== 'function') {
         boxEl.className = 'p-4 rounded-xl bg-[#ECFDF5] border border-[#065F46] text-xs font-mono text-[#071C21] space-y-1.5';
-        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; PRIORITY HUMAN SUPPORT TICKET LOGGED (${fallbackTicket})</div><div>We will reply directly to <strong>${_escConciergeHtml(emailVal)}</strong> within 2 business hours.</div>`;
+        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; MESSAGE SUBMITTED (${fallbackTicket})</div><div>Your message has been submitted.</div>`;
         return false;
       }
       try {
@@ -3689,10 +3697,10 @@
         const tId = (resp.ok && data && data.ticket_id) ? data.ticket_id : fallbackTicket;
         if (msgEl) msgEl.value = '';
         boxEl.className = 'p-4 rounded-xl bg-[#ECFDF5] border border-[#065F46] text-xs font-mono text-[#071C21] space-y-1.5';
-        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; PRIORITY SUPPORT TICKET DISPATCHED (${_escConciergeHtml(tId)})</div><div>Your message has been securely delivered to the RubricWard Support &amp; Engineering Team queue. Our team will reply directly to <strong>${_escConciergeHtml(emailVal)}</strong> within 2 business hours (Reference Ticket: <strong>${_escConciergeHtml(tId)}</strong>).</div>`;
+        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; MESSAGE SUBMITTED (${_escConciergeHtml(tId)})</div><div>Your message has been submitted (Reference: <strong>${_escConciergeHtml(tId)}</strong>).</div>`;
       } catch (e) {
         boxEl.className = 'p-4 rounded-xl bg-[#ECFDF5] border border-[#065F46] text-xs font-mono text-[#071C21] space-y-1.5';
-        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; PRIORITY SUPPORT TICKET LOGGED (${fallbackTicket})</div><div>Your support request (<strong>${fallbackTicket}</strong>) has been logged for our Support &amp; Engineering Team. We will reply directly to <strong>${_escConciergeHtml(emailVal)}</strong>.</div>`;
+        boxEl.innerHTML = `<div class="text-[#065F46] font-extrabold">&check; MESSAGE SUBMITTED (${fallbackTicket})</div><div>Your message has been submitted (Reference: <strong>${fallbackTicket}</strong>).</div>`;
       } finally {
         if (btnEl) {
           btnEl.disabled = false;
@@ -3717,7 +3725,7 @@
         : (reply.ctaHref ? [{ label: reply.ctaLabel, href: reply.ctaHref }] : (reply.ctaFn ? [{ label: reply.ctaLabel, fn: reply.ctaFn }] : []));
       if (!reply.isWafBlock) {
         baseActs.push({
-          label: 'Need a Real Person? Contact Support Team',
+          label: 'Contact',
           fn: function() { openHumanEscalationForm(rawUserQ || window.__lastConciergeQuestion || ''); }
         });
       }
@@ -3867,7 +3875,7 @@
         }
       } catch (e) {}
       if (!rawHash) return;
-      if (['account', 'status', 'security', 'contact', 'terms', 'privacy'].includes(rawHash)) {
+      if (['account', 'status', 'security', 'concierge', 'contact', 'terms', 'privacy'].includes(rawHash)) {
         openTrustModal(rawHash);
       } else if (['overview', 'apis', 'lettings', 'checkout'].includes(rawHash)) {
         closeTrustModals();

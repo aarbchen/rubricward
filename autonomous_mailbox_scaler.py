@@ -66,7 +66,7 @@ COST_PER_SENDING_POD_USD = float(os.getenv("COST_PER_SENDING_POD_USD") or "30.00
 MAILBOXES_PER_DOMAIN = 3
 SENDS_PER_MAILBOX_PER_DAY = 30
 PRIMARY_FORWARDING_DOMAIN = "rubricward.com"
-STRIPE_ACCOUNT_ID = (os.getenv("STRIPE_ACCOUNT_ID") or "acct_1TGr7p2L55s667bb").strip()
+STRIPE_ACCOUNT_ID = (os.getenv("STRIPE_ACCOUNT_ID") or "acct_1Rj7l8CGhMI1Ijip").strip()
 
 
 def compute_dynamic_reinvestment_ratio(active_mailbox_count: int = 3) -> Tuple[float, str]:
@@ -824,6 +824,14 @@ def sync_live_rubricward_stripe_conversions(ledger: Dict[str, Any]) -> int:
             )
             credited.add(sess_id)
             ledger["credited_conversion_keys"] = sorted(credited)
+            if cust_email:
+                ledger.setdefault("payment_events", []).append({
+                    "session_id": sess_id,
+                    "customer_email": cust_email,
+                    "amount_usd": amount_usd,
+                    "tier": str(meta.get("tier") or client_ref or "tier_2"),
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                })
             new_conversions += 1
 
             if cust_email and "@" in cust_email:

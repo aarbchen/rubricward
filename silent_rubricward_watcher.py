@@ -110,6 +110,18 @@ def main() -> int:
             except Exception:
                 pass
 
+        # 5b. Every 48 cycles (~12 hours), refresh 24h branded Stripe Checkout sessions for RubricWard & CamberDesk
+        if cycle % 48 == 0 and cycle > 0:
+            try:
+                import refresh_branded_stripe_sessions
+                rw_u, cd_u = refresh_branded_stripe_sessions.generate_or_load_sessions(force_regenerate=True)
+                if rw_u:
+                    refresh_branded_stripe_sessions.apply_rubricward_branded_urls(rw_u)
+                if cd_u:
+                    refresh_branded_stripe_sessions.apply_camberdesk_branded_urls(cd_u)
+            except Exception:
+                pass
+
         # 6. Every 24 cycles (~6 hours), refresh 52-Portal DOT Lettings, pSEO pages, and Instantly lead queue
         if cycle % 24 == 0 and cycle > 0:
             try:

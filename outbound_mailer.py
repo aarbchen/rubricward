@@ -145,6 +145,81 @@ def compute_dynamic_daily_limit(now_utc: Optional[datetime] = None) -> Tuple[int
     return d_cap, c_cap, f"Full Warmed Cadence ({d_cap}/day | {c_cap}/cron across {mailbox_count} mailboxes)"
 
 
+def send_email(to_email: str, subject: str, body_text: str) -> bool:
+    """
+    Dispatches a transactional/onboarding email to `to_email` via Resend API (if configured)
+    or Instantly V2 reply/subscriber campaign, and alerts Discord.
+    """
+    clean_to = str(to_email or "").strip().lower()
+    if "@" not in clean_to:
+        return False
+    sent_ok = False
+    resend_key = (os.getenv("RESEND_API_KEY") or "").strip()
+    from_addr = (os.getenv("OUTBOUND_FROM_EMAIL") or "Aaron Chen <aaron@tryrubricward.com>").strip()
+    if resend_key:
+        try:
+            r = requests.post(
+                "https://api.resend.com/emails",
+                headers={"Authorization": f"Bearer {resend_key}", "Content-Type": "application/json"},
+                json={"from": from_addr, "to": [clean_to], "subject": subject, "text": body_text},
+                timeout=10,
+            )
+            if r.status_code in (200, 201):
+                sent_ok = True
+        except Exception as exc:
+            report_error("outbound_mailer.py", f"Resend send_email error: {exc}", severity="WARNING")
+
+    if not sent_ok and INSTANTLY_API_KEY:
+        try:
+            hdrs = {"Authorization": f"Bearer {INSTANTLY_API_KEY}", "Content-Type": "application/json"}
+            r_em = requests.get(
+                f"https://api.instantly.ai/api/v2/emails?lead={clean_to}&limit=1",
+                headers=hdrs,
+                timeout=10,
+            )
+            items = (r_em.json() or {}).get("items") or [] if r_em.status_code == 200 else []
+            if items:
+                msg = items[0]
+                reply_id = str(msg.get("id") or "")
+                eaccount = str(msg.get("eaccount") or "aaron@tryrubricward.com")
+                if reply_id:
+                    r_rep = requests.post(
+                        "https://api.instantly.ai/api/v2/emails/reply",
+                        headers=hdrs,
+                        json={
+                            "reply_to_uuid": reply_id,
+                            "eaccount": eaccount,
+                            "subject": subject,
+                            "body": {"text": body_text, "html": "<div style='font-family:sans-serif;font-size:14px;line-height:1.6;'>" + body_text.replace("\n", "<br/>") + "</div>"},
+                        },
+                        timeout=12,
+                    )
+                    if r_rep.status_code in (200, 201):
+                        sent_ok = True
+        except Exception as exc:
+            report_error("outbound_mailer.py", f"Instantly send_email fallback warning: {exc}", severity="WARNING")
+
+    discord_url = (os.getenv("DISCORD_WEBHOOK_URL") or "").strip()
+    if discord_url:
+        try:
+            requests.post(
+                discord_url,
+                json={
+                    "content": (
+                        f"**[RUBRICWARD SUBSCRIBER ONBOARDING]**\n"
+                        f"• **Customer:** `{clean_to}`\n"
+                        f"• **Subject:** `{subject}`\n"
+                        f"• **Email Dispatched:** `{'YES' if sent_ok else 'LOGGED_FOR_FULFILLMENT'}`"
+                    )[:1950],
+                    "flags": 4,
+                },
+                timeout=8,
+            )
+        except Exception:
+            pass
+    return sent_ok
+
+
 if __name__ == "__main__":
     d_cap, c_cap, label = compute_dynamic_daily_limit()
     print(json.dumps({"daily_cap": d_cap, "per_cron_cap": c_cap, "phase": label}, indent=2))

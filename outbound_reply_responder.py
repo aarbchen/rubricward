@@ -126,10 +126,55 @@ def lookup_prospect_context(from_email: str) -> Dict[str, str]:
     }
 
 
-def classify_rcm_reply(reply_text: str) -> str:
+def classify_rcm_reply(reply_text: str, subject: str = "", from_email: str = "") -> str:
     stripped = _strip_quoted_thread(reply_text)
     txt = stripped.lower()
-    if any(u in txt for u in ("unsubscribe", "remove me", "stop emailing", "not interested", "take me off")):
+    subj_low = str(subject or "").lower()
+    em_low = str(from_email or "").lower()
+    if (
+        em_low.startswith(("mailer-daemon@", "postmaster@", "noreply-dmarc@", "bounces@"))
+        or subj_low.startswith(("undeliverable:", "delivery status notification", "returned mail:", "mail delivery failed", "failure notice"))
+        or any(
+            b_p in txt
+            for b_p in (
+                "delivery to the following recipient failed",
+                "550 5.1.1",
+                "address not found",
+                "user unknown",
+                "mailbox unavailable",
+            )
+        )
+    ):
+        return "BOUNCE"
+    if (
+        subj_low.startswith(("automatic reply:", "auto-reply:", "out of office:", "out of the office:"))
+        or any(
+            ooo_p in txt
+            for ooo_p in (
+                "out of the office",
+                "out of office",
+                "currently away from",
+                "limited access to email",
+                "on vacation until",
+                "on parental leave",
+                "on medical leave",
+                "away from my desk",
+                "auto-reply",
+                "automatic reply",
+            )
+        )
+    ):
+        return "OUT_OF_OFFICE"
+    negated_unsub = any(
+        neg in txt
+        for neg in (
+            "don't unsubscribe", "do not unsubscribe", "dont unsubscribe",
+            "don't remove me", "do not remove me", "dont remove me",
+            "don't take me off", "do not take me off", "dont take me off",
+            "don't stop emailing", "do not stop emailing",
+        )
+    )
+    if not negated_unsub and any(u in txt for u in ("unsubscribe", "remove me", "stop emailing", "not interested", "take me off", "no thanks", "off your list")):
         return "UNSUBSCRIBE"
     if "?" in stripped and not any(p in txt for p in ("send zip", "send it", "send over")):
         return "QUESTION"
@@ -172,7 +217,7 @@ def classify_rcm_reply(reply_text: str) -> str:
     return "POSITIVE_INTEREST"
 
 
-def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str = "", from_email: str = "") -> Dict[str, str]:
+def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str = "", from_email: str = "", label: str = "POSITIVE_INTEREST") -> Dict[str, str]:
     cleaned_inbound = _strip_quoted_thread(inbound_body)
     ctx = lookup_prospect_context(from_email) if from_email else {
         "first_name": prospect_name or "Revenue Cycle Team",
@@ -184,6 +229,36 @@ def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str 
         "tier2_checkout_url": TIER2_STRIPE_URL,
         "tier3_checkout_url": TIER3_STRIPE_URL,
     }
+    custom_answer_block = ""
+    if label == "QUESTION" and cleaned_inbound and ANTHROPIC_API_KEY:
+        try:
+            resp = requests.post(
+                "https://api.anthropic.com/v1/messages",
+                headers={
+                    "x-api-key": ANTHROPIC_API_KEY,
+                    "anthropic-version": "2023-06-01",
+                    "content-type": "application/json",
+                },
+                json={
+                    "model": ANTHROPIC_MODEL,
+                    "max_tokens": 220,
+                    "system": (
+                        "You are Aaron at the RubricWard Payer MRF & NSA IDR Desk. "
+                        "Directly answer the revenue cycle director's question in 2-3 concise plain-text sentences (no markdown asterisks or hashtags). "
+                        "Facts: RubricWard indexes all 50 U.S. State Commercial Payer TiC Machine-Readable Files (UHC, Anthem/Elevance, Aetna, Cigna, BCBS) + CMS CY2026 MPFS/OPPS/ASC RVU & GPCI locality schedules + Federal No Surprises Act (45 CFR 149.510) IDR arbitration benchmarks (52 portals total), "
+                        "and compiles 6-File OpenXML (.DOCX ERISA 29 CFR 2560.503-1 / NSA IDR briefs + .XLSX MRF QPA & RVU parity models with live =ROUND(D6*G6,2) and =SUM() formulas) compatible with Epic Resolute, Athenahealth, Waystar, and Excel. "
+                        "Plans: Tier 1 MRF & RVU Wire ($199/mo), Tier 2 Payer MRF & NSA IDR Autopilot ($499/mo), Tier 3 Unlimited 6-File .ZIP Appeal & IDR Compiler ($1,499/mo)."
+                    ),
+                    "messages": [{"role": "user", "content": f"Revenue Cycle Director question: {cleaned_inbound[:500]}"}],
+                },
+                timeout=15,
+            )
+            if resp.status_code == 200:
+                ans = ((resp.json().get("content") or [{}])[0].get("text") or "").strip().replace("**", "")
+                if len(ans) >= 15:
+                    custom_answer_block = f"{ans}\n\n"
+        except Exception:
+            pass
     t2_url = ctx.get("tier2_checkout_url") or TIER2_STRIPE_URL
     t3_url = ctx.get("tier3_checkout_url") or TIER3_STRIPE_URL
     return {
@@ -193,6 +268,7 @@ def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str 
         "subject": f"Re: Commercial Payer TiC MRF, ERISA Appeal & NSA IDR 6-File .ZIP Package for {ctx['project_id']}",
         "body": (
             f"Hi {prospect_name or ctx['first_name']},\n\n"
+            f"{custom_answer_block}"
             f"Here is the direct link to your 6-file OpenXML (.DOCX + .XLSX) Commercial Payer TiC MRF, Medicare MPFS RVU/GPCI & Federal NSA IDR Package for {ctx['project_id']} "
             f"across our 52 monitored State DOI/APCD MRF & Federal IDR portals and 12 Healthcare Revenue Cycle APIs:\n\n"
             f"- 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package (.ZIP): {ctx['compiler_url']}\n"
@@ -442,7 +518,8 @@ def run_reply_responder() -> Dict[str, Any]:
                 if not body_txt:
                     processed.append(msg_id)
                     continue
-                label = classify_rcm_reply(body_txt)
+                subj_in = str(item.get("subject") or "")
+                label = classify_rcm_reply(body_txt, subject=subj_in, from_email=from_em)
                 if label in ("POSITIVE_INTEREST", "QUESTION"):
                     ctx = lookup_prospect_context(from_em)
                     pkg = build_reply_response(
@@ -450,6 +527,7 @@ def run_reply_responder() -> Dict[str, Any]:
                         letting_id=ctx["project_id"],
                         inbound_body=body_txt,
                         from_email=from_em,
+                        label=label,
                     )
                     r_send = requests.post(
                         "https://api.instantly.ai/api/v2/emails/reply",
@@ -465,7 +543,25 @@ def run_reply_responder() -> Dict[str, Any]:
                     if 200 <= r_send.status_code < 300:
                         summary["replied"] += 1
                         _record_warm_zip_delivery(from_em, str(item.get("eaccount") or ""), msg_id, pkg["subject"], ctx)
-                else:
+                        discord_url = (os.getenv("DISCORD_WEBHOOK_URL") or "").strip()
+                        if discord_url:
+                            try:
+                                requests.post(
+                                    discord_url,
+                                    json={
+                                        "content": (
+                                            f"**[RUBRICWARD HOT REPLY — AUTO-ANSWERED BY CLAUDE SONNET 5.5]**\n"
+                                            f"• **RCM Director:** `{from_em}` (`{label}`)\n"
+                                            f"• **Their Reply:** {body_txt[:300]}\n"
+                                            f"• **Auto-Sent Response:** Delivered 6-File OpenXML MRF/IDR `.ZIP` + pre-filled `/#checkout` link."
+                                        ),
+                                        "flags": 4,
+                                    },
+                                    timeout=8,
+                                )
+                            except Exception:
+                                pass
+                elif label in ("UNSUBSCRIBE", "BOUNCE"):
                     summary["unsubscribed"] += 1
                     _archive_and_purge_unsubscribed_lead(from_em)
                 processed.append(msg_id)

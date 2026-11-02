@@ -95,12 +95,24 @@ def _header_html(root_rel: str = "../", dir_href: str = "index.html") -> str:
       <a href="{root_rel}index.html#overview" class="hover:text-[#065F46]">Overview</a>
       <a href="{dir_href}" class="text-[#065F46] font-extrabold">Live Payer MRF &amp; IDR Directory</a>
       <a href="{root_rel}apis.html" class="hover:text-[#065F46]">API Catalog</a>
-      <a href="{root_rel}index.html#contact" class="hover:text-[#065F46]">Contact &amp; Support</a>
       <a href="{root_rel}index.html#checkout" class="px-3.5 py-1.5 bg-[#071C21] text-white rounded hover:bg-[#065F46] transition">Pricing &amp; Access</a>
     </nav>
     <a href="{root_rel}index.html#checkout" class="md:hidden shrink-0 px-3 py-1.5 rounded-lg bg-[#071C21] text-white text-xs font-mono font-bold">PRICING</a>
   </div>
 </header>"""
+
+def _footer_html(root_rel: str = "../") -> str:
+    return f"""<footer class="border-t-2 border-[#071C21] bg-white py-8 mt-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4 text-xs font-mono font-bold text-[#1E293B]">
+    <div>&copy; 2026 RubricWard &bull; 52 Payer &amp; State Portals Active</div>
+    <div class="flex flex-wrap gap-4">
+      <a href="{root_rel}index.html#overview" class="hover:text-[#0F766E] underline">Overview</a>
+      <a href="{root_rel}apis.html" class="hover:text-[#0F766E] underline">API Catalog</a>
+      <a href="{root_rel}index.html#checkout" class="hover:text-[#0F766E] underline">Pricing</a>
+      <a href="{root_rel}index.html#contact" class="hover:text-[#0F766E] underline">Contact</a>
+    </div>
+  </div>
+</footer>"""
 
 
 def build_project_dossier_html(letting: Dict[str, Any], slug: str) -> str:
@@ -234,6 +246,7 @@ def build_project_dossier_html(letting: Dict[str, Any], slug: str) -> str:
       </div>
     </section>
   </main>
+  {_footer_html(root_rel="../../")}
 </body>
 </html>"""
 
@@ -317,6 +330,7 @@ def build_directory_index_html(lettings: List[Dict[str, Any]]) -> str:
       </table>
     </div>
   </main>
+  {_footer_html(root_rel="../")}
 </body>
 </html>"""
 

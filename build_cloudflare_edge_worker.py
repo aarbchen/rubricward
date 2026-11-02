@@ -1465,7 +1465,22 @@ export default {{
       const target = base.startsWith('https://checkout.stripe.com/') ? base : (base + '?client_reference_id=rubricward_' + tierKey + '_' + billKey + (email ? '&prefilled_email=' + encodeURIComponent(email) : ''));
       const btn = document.getElementById('direct-stripe-btn');
       if (btn) btn.setAttribute('href', target);
-      window.location.replace(target);
+      const ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      const timer = ctrl ? setTimeout(function() { ctrl.abort(); }, 2500) : null;
+      fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ brand: 'rubricward', plan: tierKey, billing: billKey, email: email }),
+        signal: ctrl ? ctrl.signal : undefined
+      }).then(function(r) { return r && r.ok ? r.json() : null; }).then(function(d) {
+        if (timer) clearTimeout(timer);
+        const dest = (d && d.checkout_url) ? d.checkout_url : target;
+        if (btn) btn.setAttribute('href', dest);
+        window.location.replace(dest);
+      }).catch(function() {
+        if (timer) clearTimeout(timer);
+        window.location.replace(target);
+      });
     })();
   </script>
 </body>
