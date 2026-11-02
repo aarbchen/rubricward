@@ -1,14 +1,5 @@
 [
   {
-    "company_name": "TruBridge",
-    "email": "contact@trubridge.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-50121",
-    "state": "AL",
-    "source_type": "website_html_mailto",
-    "source_url": "https://trubridge.com/contact/"
-  },
-  {
     "company_name": "SimonMed Imaging",
     "email": "billing@simonmed.com",
     "first_name": "Revenue Cycle",
@@ -124,15 +115,6 @@
     "state": "FL",
     "source_type": "website_html_mailto",
     "source_url": "https://www.aspectbillingsolutions.com"
-  },
-  {
-    "company_name": "ClinicMind",
-    "email": "info@clinicmind.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-80119",
-    "state": "FL",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.clinicmind.com/rcm-in-house-billing"
   },
   {
     "company_name": "Digestive & Liver Center of",
@@ -252,15 +234,6 @@
     "source_url": "https://www.optimorthopedics.com/contactus/"
   },
   {
-    "company_name": "Practolytics Healthcare",
-    "email": "sales@practolytics.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-80109",
-    "state": "GA",
-    "source_type": "website_html_mailto",
-    "source_url": "https://practolytics.com"
-  },
-  {
     "company_name": "Resurgens Orthopaedics",
     "email": "info@resurgens.com",
     "first_name": "Revenue Cycle",
@@ -295,15 +268,6 @@
     "verified_mx": true,
     "company_name": "Illinois Bone & Joint Institute",
     "first_name": "Revenue Cycle"
-  },
-  {
-    "company_name": "Midwest Orthopaedics at Rush",
-    "email": "contact@rushortho.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1407891024",
-    "state": "IL",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.rushortho.com"
   },
   {
     "company_name": "Neolytix Healthcare",
@@ -385,6 +349,69 @@
     "state": "MD",
     "source_type": "website_html_mailto",
     "source_url": "https://aledade.com/"
+  },
+  {
+    "company_name": "Allied Foot & Ankle, Pc",
+    "email": "moa@alliedfoot.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1821271545",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.alliedfootspecialists.com/"
+  },
+  {
+    "company_name": "American Sports And Spine Institute",
+    "email": "info@americansports.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1508237652",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://americansports.com/contact"
+  },
+  {
+    "company_name": "Annapolis Hand Center",
+    "email": "info@annapolishandcenter.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1396093894",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://annapolishandtoshoulder.com/contact/"
+  },
+  {
+    "company_name": "Atlantic General Hospital",
+    "email": "kenny@atlanticgeneral.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1306664933",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://atlanticgeneral.com/"
+  },
+  {
+    "company_name": "Atlantic Orthopaedics",
+    "email": "info@atlantic.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1639140510",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.atlantic.com"
+  },
+  {
+    "company_name": "Avante Ortho",
+    "email": "info@avanteortho.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1699507228",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.avanteortho.com"
+  },
+  {
+    "company_name": "Bay Orthopedic Associates",
+    "email": "staff@bayorthopedic.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1477508299",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.bayorthopedic.com"
   },
   {
     "company_name": "CollectRx Out-of-Network & NSA IDR",
@@ -765,15 +792,6 @@
     "source_url": "https://www.bsisa.com"
   },
   {
-    "company_name": "Dallas Neurosurgical & Spine",
-    "email": "info@dallasneurosurgical.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-ASC-90107",
-    "state": "TX",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.dallasneurosurgical.com"
-  },
-  {
     "company_name": "Digestive Health Associates",
     "email": "info@dhantx.com",
     "first_name": "Revenue Cycle",
@@ -792,15 +810,6 @@
     "source_url": "https://www.directorthocare.com/billing-inquiries/"
   },
   {
-    "company_name": "HaloMD NSA IDR Arbitration",
-    "email": "cindy.williams@halomd.com",
-    "first_name": "Cindy",
-    "license_or_dot_id": "NPI-RCM-80165",
-    "state": "TX",
-    "source_type": "website_html_mailto",
-    "source_url": "https://halomd.com"
-  },
-  {
     "company_name": "Integrative Emergency Services",
     "email": "info@ies.healthcare",
     "first_name": "Revenue Cycle",
@@ -817,15 +826,6 @@
     "state": "TX",
     "source_type": "website_html_mailto",
     "source_url": "https://keywhitman.com"
-  },
-  {
-    "company_name": "PayrHealth Payer Contracting",
-    "email": "info@payrhealth.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-RCM-80168",
-    "state": "TX",
-    "source_type": "website_html_mailto",
-    "source_url": "https://payrhealth.com"
   },
   {
     "company_name": "Plutus Health",
@@ -907,6 +907,33 @@
     "state": "UT",
     "source_type": "website_html_mailto",
     "source_url": "https://imedclaims.com"
+  },
+  {
+    "company_name": "Advanced Orthopaedics",
+    "email": "info@advanced.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1922445147",
+    "state": "VA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.advanced.com"
+  },
+  {
+    "company_name": "Advanced Spine And Pain Centers",
+    "email": "contact@advancedspine.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1982318929",
+    "state": "VA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://advancedspine.com/"
+  },
+  {
+    "company_name": "Bethesda Chevy Chase Orthopaedic Associates",
+    "email": "cs@areaguides.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1477583599",
+    "state": "VA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.areaguides.com/montgomerycountymd"
   },
   {
     "company_name": "Privia Health Medical Group",

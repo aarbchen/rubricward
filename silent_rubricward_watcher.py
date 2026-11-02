@@ -20,6 +20,7 @@ from datetime import datetime
 
 import auto_error_healer
 import autonomous_mailbox_scaler
+import autonomous_outbound_optimizer
 import omniscient_auditor
 import outbound_reply_responder
 import publish_rubricward_rapidapi
@@ -90,6 +91,7 @@ def main() -> int:
         if cycle % 4 == 0:
             try:
                 auto_error_healer.run_healer(clear_resolved=True, run_smoke=False)
+                autonomous_outbound_optimizer.run_autonomous_outbound_optimizer(regenerate_local=True)
             except Exception:
                 pass
 

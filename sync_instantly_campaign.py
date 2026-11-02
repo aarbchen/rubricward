@@ -158,10 +158,10 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
     )
     dynamic_daily_cap, _, _ = compute_dynamic_daily_limit()
     step3_breakup_text = (
-        "Closing the loop on {{project_id}} before the 30-day Federal NSA IDR Open Negotiation "
-        "and ERISA 29 CFR 2560.503-1 appeal window — should I route our 6-file OpenXML CPT/DRG "
-        "TiC MRF benchmark and Medicare MPFS RVU/GPCI workbook to another Managed Care or Revenue "
-        "Cycle director on your team, or hold off for this cycle?\n\n— Aaron\nRubricWard Payer MRF & NSA IDR Desk"
+        "Closing the loop on {{project_id}} before the quarterly payer rate cycle — "
+        "should I route our 6-file OpenXML CPT fee schedule and NSA IDR workbook to "
+        "another revenue-cycle lead on your managed-care desk, or hold off for this cycle?\n\n"
+        "— Aaron\nRubricWard Healthcare Rate Desk"
     )
     three_step_sequences = [
         {
@@ -169,6 +169,8 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 {
                     "type": "email",
                     "delay": 2,
+                    "delay_unit": "days",
+                    "pre_delay_unit": "days",
                     "variants": [
                         {
                             "subject": "{{step1_subject}}",
@@ -179,6 +181,8 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 {
                     "type": "email",
                     "delay": 2,
+                    "delay_unit": "days",
+                    "pre_delay_unit": "days",
                     "variants": [
                         {
                             "subject": "Re: {{step1_subject}}",
@@ -189,6 +193,8 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 {
                     "type": "email",
                     "delay": 3,
+                    "delay_unit": "days",
+                    "pre_delay_unit": "days",
                     "variants": [
                         {
                             "subject": "Re: {{step1_subject}}",
