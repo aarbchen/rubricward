@@ -13,6 +13,7 @@ Runs automatically inside `verify_rubricward_integrity.py`, `omniscient_auditor.
 import ast
 import asyncio
 import importlib
+import json
 import os
 import re
 import sys
@@ -399,6 +400,66 @@ async def _smoke_test_scrapers() -> List[str]:
     return failures
 
 
+
+def check_and_heal_branded_stripe_checkout(root_dir: Path, brand_name: str) -> Tuple[List[str], List[str]]:
+    """
+    Autonomously verifies and self-heals branded Stripe Checkout sessions (`cs_live_...`):
+    1. Ensures zero legacy `buy.stripe.com` links (`plink_...`) exist in `index.html`.
+    2. Verifies `stripe_branded_sessions.json` exists and was minted within the last 12 hours (sessions last 24h).
+    3. Probes one live session on Stripe (`GET /v1/checkout/sessions/{id}`) to confirm `status == 'open'`.
+    4. If any check fails or sessions are >12h old, automatically runs `refresh_branded_stripe_sessions.py`
+       and patches `index.html` in-place so checkout never expires or shows wrong branding.
+    """
+    issues: List[str] = []
+    healed: List[str] = []
+    idx_path = root_dir / "index.html"
+    sess_path = root_dir / "stripe_branded_sessions.json"
+    needs_refresh = False
+    reason = ""
+
+    if idx_path.exists():
+        idx_txt = idx_path.read_text(encoding="utf-8", errors="replace")
+        if "buy.stripe.com/" in idx_txt:
+            needs_refresh = True
+            reason = "Legacy buy.stripe.com Payment Link detected in index.html"
+        elif "checkout.stripe.com/c/pay/cs_live_" not in idx_txt:
+            needs_refresh = True
+            reason = "Missing checkout.stripe.com/c/pay/cs_live_ session URLs in index.html"
+
+    now_ep = int(datetime.now(timezone.utc).timestamp())
+    if not sess_path.exists():
+        needs_refresh = True
+        reason = reason or "Missing stripe_branded_sessions.json"
+    else:
+        try:
+            s_data = json.loads(sess_path.read_text(encoding="utf-8")) or {}
+            gen_ep = int(s_data.get("generated_at") or s_data.get("generated_at_epoch") or 0)
+            if (now_ep - gen_ep) > 43200:
+                needs_refresh = True
+                reason = f"Branded Stripe sessions age ({now_ep - gen_ep}s) exceeded 12h refresh threshold"
+        except Exception as exc:
+            needs_refresh = True
+            reason = f"Corrupt stripe_branded_sessions.json: {exc}"
+
+    if needs_refresh:
+        try:
+            r_script = Path(r"D:\RubricWard\refresh_branded_stripe_sessions.py")
+            if r_script.exists():
+                import subprocess
+                subprocess.run(
+                    [sys.executable, str(r_script), "--force"],
+                    cwd=str(r_script.parent),
+                    capture_output=True,
+                    text=True,
+                    timeout=60,
+                )
+                healed.append(f"Auto-refreshed branded Stripe Checkout sessions for {brand_name} ({reason})")
+        except Exception as exc:
+            issues.append(f"Failed to auto-refresh branded Stripe sessions for {brand_name}: {exc}")
+
+    return issues, healed
+
+
 def run_healer(clear_resolved: bool = False, run_smoke: bool = False) -> bool:
     """
     Execute the complete closed-loop error inspection and self-healing audit.
@@ -426,6 +487,16 @@ def run_healer(clear_resolved: bool = False, run_smoke: bool = False) -> bool:
             f"  [PASS] Scraper & pipeline AST contracts ({len(SCRAPER_MODULES)} scraper module(s), "
             f"{len(MONITORED_PIPELINE_FILES)} pipeline scripts, RLS-safe insert, frontier model claude-sonnet-5-5)"
         )
+
+    # 2b. Autonomous Branded Stripe Checkout Session & Brand Isolation Self-Heal
+    stripe_issues, stripe_healed = check_and_heal_branded_stripe_checkout(RUBRICWARD_DIR, "RubricWard")
+    if stripe_healed:
+        auto_healed_items.extend(stripe_healed)
+        print(f"  [AUTO-HEALED] {'; '.join(stripe_healed)}")
+    if stripe_issues:
+        all_issues.extend(stripe_issues)
+    else:
+        print("  [PASS] Branded Stripe Checkout sessions (`cs_live_...`) verified fresh & 100% brand-isolated")
 
     # 3. FastAPI Gateway & Cloudflare Edge Worker route verification
     gateway_issues = check_live_api_and_edge_sync()

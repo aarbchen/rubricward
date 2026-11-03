@@ -145,6 +145,21 @@ def audit_rendered_sent_outbox_and_learn(cid: str, headers: Dict[str, str], all_
                     elif is_auto:
                         auto_reply_count += 1
                         cohort_stats[cohort_key]["auto_replies"] += 1
+                        p_local = prospect_em.split("@", 1)[0] if "@" in prospect_em else ""
+                        if p_local in ("pq", "prequal", "prequalification", "billing", "ap", "accounts", "noreply", "no-reply", "donotreply", "support", "helpdesk"):
+                            try:
+                                bl_d = {"bounced_emails": [], "bounced_domains": []}
+                                if BLACKLIST_PATH.exists():
+                                    bl_d.update(json.loads(BLACKLIST_PATH.read_text(encoding="utf-8")) or {})
+                                b_set = set(bl_d.get("bounced_emails") or [])
+                                if prospect_em not in b_set:
+                                    b_set.add(prospect_em)
+                                    bl_d["bounced_emails"] = sorted(b_set)
+                                    BLACKLIST_PATH.write_text(json.dumps(bl_d, indent=2), encoding="utf-8")
+                                if ld_obj.get("id"):
+                                    requests.delete(f"https://api.instantly.ai/api/v2/leads/{ld_obj['id']}", headers=headers, timeout=10)
+                            except Exception:
+                                pass
                         for ref_m in re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", body_txt):
                             ref_clean = ref_m.strip().lower().rstrip(".")
                             ref_dom = ref_clean.split("@", 1)[-1]
@@ -155,6 +170,21 @@ def audit_rendered_sent_outbox_and_learn(cid: str, headers: Dict[str, str], all_
                                 and ref_clean not in ooo_referrals
                             ):
                                 ooo_referrals.append(ref_clean)
+                                try:
+                                    if CONTACTS_PATH.exists():
+                                        c_list = json.loads(CONTACTS_PATH.read_text(encoding="utf-8")) or []
+                                        if not any(str(x.get("email") or "").strip().lower() == ref_clean for x in c_list if isinstance(x, dict)):
+                                            c_list.insert(0, {
+                                                "email": ref_clean,
+                                                "first_name": ref_clean.split("@")[0].split(".")[0].title(),
+                                                "company_name": str(ld_obj.get("company_name") or ref_dom.split(".")[0].title()),
+                                                "state": str(pl.get("state") or "TX"),
+                                                "source_type": "ooo_colleague_referral",
+                                                "source_url": f"https://{ref_dom}",
+                                            })
+                                            CONTACTS_PATH.write_text(json.dumps(c_list, indent=2), encoding="utf-8")
+                                except Exception:
+                                    pass
                     else:
                         human_reply_count += 1
                         cohort_stats[cohort_key]["human_replies"] += 1
