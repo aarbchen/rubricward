@@ -73,7 +73,7 @@ def provision_stripe_catalog() -> Dict[str, str]:
                 headers=STRIPE_HEADERS,
                 data={
                     "name": f"RubricWard — {name}",
-                    "description": f"RubricWard ({name}) — Autonomous 52-Portal Intelligence, 12-API Suite & 6-File OpenXML .ZIP Compiler",
+                    "description": f"RubricWard ({name}) — Autonomous 72-Portal Commercial Payer TiC MRF, CMS MPFS RVU/GPCI, ERISA Appeal & Federal NSA IDR Engine",
                     "metadata[brand]": "rubricward",
                     "metadata[tier]": tier,
                 },

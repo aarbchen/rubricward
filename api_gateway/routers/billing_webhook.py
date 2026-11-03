@@ -72,7 +72,7 @@ RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
         "product_id": "prod_VY7S2Xtq7uxth3",
         "price_id": "price_1UXZSiCGhMI1IjipRiaN38w7",
         "payment_link_id": "plink_1UX1DrCGhMI1IjipaBSrWZt2",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1MSisHNYwegSUQDFzb24tPp1uddpqUEc9LV1kVq1q3LJx9g2bx4BzXFBd#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1qhJcDY8t3PDjSXXEKjkyFnB1j21O28kXBgJ1mdPfJ4SSVg8fCQpfxc8m#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     },
     ("tier1", "annual"): {
         "plan": "tier1",
@@ -87,7 +87,7 @@ RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
         "product_id": "prod_VY7S2Xtq7uxth3",
         "price_id": "price_1UXZSjCGhMI1IjipA0M2v2z9",
         "payment_link_id": "plink_1UX1DsCGhMI1IjipDBRZVMW3",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1giRGPpNBu8Dftx1eP71st2wkyW5BW6K2C2VFo629D0HKLjTiF9t52kDa#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1WOWdab3OFvTgLbBAmxkfhG2EWw1ulEUVGbs8ho1ncDwcwYfPmSFLyqqR#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     },
     ("tier2", "monthly"): {
         "plan": "tier2",
@@ -102,7 +102,7 @@ RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
         "product_id": "prod_VY7Scll5eScNEe",
         "price_id": "price_1UXZSkCGhMI1IjiplZtv2IfA",
         "payment_link_id": "plink_1UX1DuCGhMI1Ijip970Sdvax",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1N6b82qvV2BN8qhghGEUPyIF9ICP7IXHuXUFqaMqgI00Cz0njCBRVl1W5#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1qJyKwMelfWEQjbnX52AHR2pW7IjVGmnwf2CrvAUFwMiFRnsZMyrXqyP8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     },
     ("tier2", "annual"): {
         "plan": "tier2",
@@ -117,7 +117,7 @@ RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
         "product_id": "prod_VY7Scll5eScNEe",
         "price_id": "price_1UXZSlCGhMI1IjipL8m97W6m",
         "payment_link_id": "plink_1UWoFHCGhMI1IjipkQNa1UAN",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1OoxqkajgFoZXavkbhXh0hKywmCN9XIcGAzmTolkkZPG72G5VSzzip1e5#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1ldBCokrsiQPHni8maQQxxGEaw7fU7UUJl3Wsr1Jb4ckia8PRkSc25ChJ#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     },
     ("tier3", "monthly"): {
         "plan": "tier3",
@@ -132,7 +132,7 @@ RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
         "product_id": "prod_VXu3fQIoexvWq4",
         "price_id": "price_1UXZSmCGhMI1IjipkK4H1p3j",
         "payment_link_id": "plink_1UWoFJCGhMI1Ijip5D8xERnZ",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1ZO7QN9P5SoNVIYdlYbQK6lX28RigNTDyvF2t43d6K5kXnKnbS2uhhEVD#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1Nb0PtYbwZ4HHdTqVgLyqt6Vv6RxCZCzaEVpf1ERPua8mgci4OJwR5cy7#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     },
     ("tier3", "annual"): {
         "plan": "tier3",
@@ -147,7 +147,7 @@ RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
         "product_id": "prod_VXu3fQIoexvWq4",
         "price_id": "price_1UXZSnCGhMI1IjipM7eQ5X2n",
         "payment_link_id": "plink_1UWoFJCGhMI1Ijipwl7XQWDE",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1r58UabGL8K9ScaH6PO7p1pOoPNH9Sxdh9gDquk1GthfkdMffsH358Wu3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1ibvrVPOhcjXYMMgBSPrizwfTg880tPtG8LHZx33UmnXsZ110tjzcHNUe#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     },
     ("tier4", "monthly"): {
         "plan": "tier4",
@@ -162,7 +162,7 @@ RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
         "product_id": "prod_VXu3p3VL6qkvrw",
         "price_id": "price_1UXZSoCGhMI1IjipV8qR2W1p",
         "payment_link_id": "plink_1UWoFLCGhMI1Ijipzmiak8Cw",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1sckR6D249t8Xk3VHi7uQL4B4dAu8sbsRA7Y199wE9v5WNba80YeX0vzj#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1hCaY8YB1IbW7uxcK44pBVUNM6c5GRi8reXcyS7RZaX5PrFnysniTKRUD#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     },
     ("tier4", "annual"): {
         "plan": "tier4",
@@ -177,7 +177,7 @@ RUBRICWARD_STRIPE_CATALOG: Dict[Tuple[str, str], Dict[str, Any]] = {
         "product_id": "prod_VXu3p3VL6qkvrw",
         "price_id": "price_1UXZSpCGhMI1IjipB3tK9Y4r",
         "payment_link_id": "plink_1UWoFMCGhMI1Ijip2ilk7Ar6",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1xxBGQZgAaRBImF1vEl8yKRAFMqA1kLmyHTPAUSz4A7MdAmnr9ods0HLL#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b1i5mdFxK4qyeUgOhU7mZ08yDgVKz9J8QTFNoG5Uf4BAmtCZIgEzWPPl8d#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
     },
 }
 

@@ -9,6 +9,8 @@ branded `https://checkout.stripe.com/c/pay/cs_live_...` session with per-brand `
 import json
 import os
 import re
+import subprocess
+import sys
 import time
 from pathlib import Path
 from typing import Dict
@@ -63,8 +65,9 @@ def generate_or_load_sessions(force_regenerate: bool = False) -> tuple[Dict[str,
     if not force_regenerate and rw_json_path.exists():
         try:
             d = json.loads(rw_json_path.read_text(encoding="utf-8"))
-            if int(d.get("expires_at") or 0) - now > 21600 and len(d.get("urls") or {}) == 8:
-                rw_urls = d["urls"]
+            u_map = d.get("urls") or d.get("sessions") or {}
+            if int(d.get("expires_at") or 0) - now > 21600 and len(u_map) == 8:
+                rw_urls = u_map
         except Exception:
             pass
 
@@ -100,15 +103,16 @@ def generate_or_load_sessions(force_regenerate: bool = False) -> tuple[Dict[str,
                 rw_urls[key] = r.json()["url"]
         if len(rw_urls) == 8:
             rw_json_path.write_text(
-                json.dumps({"generated_at": now, "expires_at": expires_at, "urls": rw_urls}, indent=2),
+                json.dumps({"brand": "rubricward", "generated_at": now, "expires_at": expires_at, "urls": rw_urls, "sessions": rw_urls}, indent=2),
                 encoding="utf-8",
             )
 
     if not force_regenerate and cd_json_path.exists():
         try:
             d = json.loads(cd_json_path.read_text(encoding="utf-8"))
-            if int(d.get("expires_at") or 0) - now > 21600 and len(d.get("urls") or {}) == 8:
-                cd_urls = d["urls"]
+            u_map = d.get("urls") or d.get("sessions") or {}
+            if int(d.get("expires_at") or 0) - now > 21600 and len(u_map) == 8:
+                cd_urls = u_map
         except Exception:
             pass
 
@@ -144,7 +148,7 @@ def generate_or_load_sessions(force_regenerate: bool = False) -> tuple[Dict[str,
                 cd_urls[key] = r.json()["url"]
         if len(cd_urls) == 8:
             cd_json_path.write_text(
-                json.dumps({"generated_at": now, "expires_at": expires_at, "urls": cd_urls}, indent=2),
+                json.dumps({"brand": "camberdesk", "generated_at": now, "expires_at": expires_at, "urls": cd_urls, "sessions": cd_urls}, indent=2),
                 encoding="utf-8",
             )
 
@@ -152,12 +156,24 @@ def generate_or_load_sessions(force_regenerate: bool = False) -> tuple[Dict[str,
 
 
 def apply_branded_urls_to_repo(repo_dir: Path, brand: str, urls: Dict[str, str]) -> None:
-    site_py = "build_rubricward_site.py" if brand == "rubricward" else "build_camberdesk_site.py"
-    for rel in (site_py, "build_cloudflare_edge_worker.py", "api_gateway/routers/billing_webhook.py", "outbound_reply_responder.py"):
+    site_py_name = "build_rubricward_site.py" if brand == "rubricward" else "build_camberdesk_site.py"
+    site_py = repo_dir / site_py_name
+    if not site_py.exists():
+        return
+    site_txt = site_py.read_text(encoding="utf-8")
+    old_map: Dict[str, str] = {}
+    for k in urls:
+        m = re.search(rf"{k}\s*:\s*'(https://checkout\.stripe\.com/c/pay/cs_live_[^']+)'", site_txt)
+        if m:
+            old_map[k] = m.group(1)
+
+    for rel in (site_py_name, "build_cloudflare_edge_worker.py", "api_gateway/routers/billing_webhook.py", "outbound_reply_responder.py"):
         fp = repo_dir / rel
         if not fp.exists():
             continue
         txt = fp.read_text(encoding="utf-8")
+        for k, old_u in old_map.items():
+            txt = txt.replace(old_u, urls[k])
         for tkey, new_u in urls.items():
             txt = re.sub(
                 rf"({tkey}[\"']?\s*:\s*[\"'])(https://checkout\.stripe\.com/c/pay/cs_live_[^\s\"']+)([\"'])",
@@ -169,12 +185,31 @@ def apply_branded_urls_to_repo(repo_dir: Path, brand: str, urls: Dict[str, str])
                 lambda m, u=new_u: m.group(1) + u + m.group(3),
                 txt,
             )
+        if rel == site_py_name:
+            txt = txt.replace(
+                "if (d && d.checkout_url && directLinkEl) directLinkEl.setAttribute('href', d.checkout_url);",
+                "if (d && d.checkout_url && d.checkout_url.indexOf('checkout.stripe.com/c/pay/cs_live_') !== -1 && directLinkEl) directLinkEl.setAttribute('href', d.checkout_url);",
+            )
+            txt = txt.replace(
+                "if (data && data.checkout_url) {\n            resolvedCheckoutUrl = data.checkout_url;\n          }",
+                "if (data && data.checkout_url && data.checkout_url.indexOf('checkout.stripe.com/c/pay/cs_live_') !== -1) {\n            resolvedCheckoutUrl = data.checkout_url;\n          }",
+            )
         fp.write_text(txt, encoding="utf-8")
+
+    subprocess.run([sys.executable, str(site_py)], cwd=str(repo_dir), check=False)
+
+
+def apply_rubricward_branded_urls(urls: Dict[str, str]) -> None:
+    apply_branded_urls_to_repo(RUBRICWARD_DIR, "rubricward", urls)
+
+
+def apply_camberdesk_branded_urls(urls: Dict[str, str]) -> None:
+    apply_branded_urls_to_repo(CAMBERDESK_DIR, "camberdesk", urls)
 
 
 if __name__ == "__main__":
     rw, cd = generate_or_load_sessions(force_regenerate=False)
     if rw:
-        apply_branded_urls_to_repo(RUBRICWARD_DIR, "rubricward", rw)
+        apply_rubricward_branded_urls(rw)
     if cd:
-        apply_branded_urls_to_repo(CAMBERDESK_DIR, "camberdesk", cd)
+        apply_camberdesk_branded_urls(cd)
