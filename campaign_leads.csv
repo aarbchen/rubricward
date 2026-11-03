@@ -1,5 +1,5 @@
 lead_id,letting_id,project_id,state_code,state,agency,company_name,first_name,license_or_dot_id,email,recipient_email,source_type,source_url,dossier_url,compiler_url,subject,body,step1_subject,step1_body_zero_link,step2_body_dossier_link,portals_monitored,apis_live,status
-RW-RLOT-079,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,NorthStar Anesthesia,Adam,NPI-1124610142,adam.spiegel@northstaranesthesia.com,adam.spiegel@northstaranesthesia.com,website_html_mailto,https://northstaranesthesia.com/our-culture/our-leadership/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (NorthStar Anesthesia — NPI 1124610142),"Hi Adam,
+RW-RLOT-078,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,NorthStar Anesthesia,Adam,NPI-1124610142,adam.spiegel@northstaranesthesia.com,adam.spiegel@northstaranesthesia.com,website_html_mailto,https://northstaranesthesia.com/our-culture/our-leadership/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (NorthStar Anesthesia — NPI 1124610142),"Hi Adam,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 99285 Level-5 Emergency E/M & Anesthesia Base/Time Units (NPI 1124610142).
 
@@ -144,7 +144,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-077,TXDOI-MRF-CPT-66984,TXDOI-MRF-CPT-66984,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Key-Whitman Eye Center,Miriam,NPI-1467927897,miriam@keywhitman.com,miriam@keywhitman.com,website_html_mailto,https://keywhitman.com,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-66984&state_code=TX&format=binary,TX commercial payer MRF & CPT 66984 / 67028 rate spread (Key-Whitman Eye Center — NPI 1467927897),"Hi Miriam,
+RW-RLOT-076,TXDOI-MRF-CPT-66984,TXDOI-MRF-CPT-66984,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Key-Whitman Eye Center,Miriam,NPI-1467927897,miriam@keywhitman.com,miriam@keywhitman.com,website_html_mailto,https://keywhitman.com,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-66984&state_code=TX&format=binary,TX commercial payer MRF & CPT 66984 / 67028 rate spread (Key-Whitman Eye Center — NPI 1467927897),"Hi Miriam,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 66984 Cataract Extraction with IOL & CPT 67028 Intravitreal Injection (NPI 1467927897).
 
@@ -318,7 +318,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-097,WADOI-MRF-CPT-88305,WADOI-MRF-CPT-88305,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,CellNetix,Revenue Cycle,NPI-1063481570,billing@cellnetix.com,billing@cellnetix.com,website_html_mailto,https://cellnetix.com/billing/,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-88305&state_code=WA&format=binary,WA commercial payer MRF & CPT 88305 / 80053 rate spread (CellNetix — NPI 1063481570),"Hi CellNetix Revenue Cycle team,
+RW-RLOT-096,WADOI-MRF-CPT-88305,WADOI-MRF-CPT-88305,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,CellNetix,Revenue Cycle,NPI-1063481570,billing@cellnetix.com,billing@cellnetix.com,website_html_mailto,https://cellnetix.com/billing/,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-88305&state_code=WA&format=binary,WA commercial payer MRF & CPT 88305 / 80053 rate spread (CellNetix — NPI 1063481570),"Hi CellNetix Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WA for CPT 88305 Level IV Surgical Pathology & Out-of-Network Lab Payer MRF Rates (NPI 1063481570).
 
@@ -372,35 +372,6 @@ RubricWard Payer MRF & NSA IDR Desk","Hi CureMB Medical Billing Services Revenue
 Quick follow-up on the IL commercial payer MRF & NSA IDR benchmark cohort (CPT 29881 / 45380 / 99285) for CureMB Medical Billing Services.
 
 Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package, or let me know if I should hold off.
-
-Best,
-Aaron Chen
-RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-073,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Direct Orthopedic Care,Revenue Cycle,NPI-1306842315,billing@directorthocare.com,billing@directorthocare.com,website_html_mailto,https://www.directorthocare.com/billing-inquiries/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 27447 rate spread (Direct Orthopedic Care — NPI 1306842315),"Hi Direct Orthopedic Care Revenue Cycle team,
-
-We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306842315).
-
-Contracted tiers in this TX cohort sit 27.9% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.
-
-Before Direct Orthopedic Care's next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.
-
-Best,
-Aaron Chen
-RubricWard Payer MRF & NSA IDR Desk",TX commercial payer MRF & CPT 29881 / 27447 rate spread (Direct Orthopedic Care — NPI 1306842315),"Hi Direct Orthopedic Care Revenue Cycle team,
-
-We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306842315).
-
-Contracted tiers in this TX cohort sit 27.9% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.
-
-Before Direct Orthopedic Care's next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.
-
-Best,
-Aaron Chen
-RubricWard Payer MRF & NSA IDR Desk","Hi Direct Orthopedic Care team,
-
-Quick follow-up — want me to send the TX CMS TiC MRF allowed-amount spread (CPT 29881 / 27447) and 6-file Word/Excel ERISA & NSA IDR appeal package for Direct Orthopedic Care?
-
-Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me know if I should hold off.
 
 Best,
 Aaron Chen
@@ -695,7 +666,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-087,TXDOI-MRF-CPT-52356,TXDOI-MRF-CPT-52356,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Urology Austin,Revenue Cycle,NPI-1922706324,billing@urologyaustin.com,billing@urologyaustin.com,website_html_mailto,https://urologyaustin.com/locations/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-52356&state_code=TX&format=binary,TX commercial payer MRF & CPT 52000 / 52356 rate spread (Urology Austin — NPI 1922706324),"Hi Urology Austin Revenue Cycle team,
+RW-RLOT-086,TXDOI-MRF-CPT-52356,TXDOI-MRF-CPT-52356,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Urology Austin,Revenue Cycle,NPI-1922706324,billing@urologyaustin.com,billing@urologyaustin.com,website_html_mailto,https://urologyaustin.com/locations/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-52356&state_code=TX&format=binary,TX commercial payer MRF & CPT 52000 / 52356 rate spread (Urology Austin — NPI 1922706324),"Hi Urology Austin Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 52356 Cystourethroscopy with Lithotripsy & Stent Insertion (NPI 1922706324).
 
@@ -724,7 +695,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-088,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Ventra Health,Revenue Cycle,NPI-1356586390,billing@ventrahealth.com,billing@ventrahealth.com,website_html_mailto,https://ventrahealth.com/contact-us/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (Ventra Health — NPI 1356586390),"Hi Ventra Health Revenue Cycle team,
+RW-RLOT-087,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Ventra Health,Revenue Cycle,NPI-1356586390,billing@ventrahealth.com,billing@ventrahealth.com,website_html_mailto,https://ventrahealth.com/contact-us/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (Ventra Health — NPI 1356586390),"Hi Ventra Health Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 99285 Level-5 Emergency E/M & Anesthesia Base/Time Units (NPI 1356586390).
 
@@ -869,7 +840,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-084,TXDOI-MRF-CPT-66984,TXDOI-MRF-CPT-66984,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Solis Mammography & Imaging,Revenue Cycle,NPI-1205732203,insuranceinfo@solismammo.com,insuranceinfo@solismammo.com,website_html_mailto,https://www.solismammo.com,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-66984&state_code=TX&format=binary,TX commercial payer MRF & CPT 66984 / 67028 rate spread (Solis Mammography & Imaging — NPI 1205732203),"Hi Solis Mammography & Imaging Revenue Cycle team,
+RW-RLOT-083,TXDOI-MRF-CPT-66984,TXDOI-MRF-CPT-66984,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Solis Mammography & Imaging,Revenue Cycle,NPI-1205732203,insuranceinfo@solismammo.com,insuranceinfo@solismammo.com,website_html_mailto,https://www.solismammo.com,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-66984&state_code=TX&format=binary,TX commercial payer MRF & CPT 66984 / 67028 rate spread (Solis Mammography & Imaging — NPI 1205732203),"Hi Solis Mammography & Imaging Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 66984 Cataract Extraction with IOL & CPT 67028 Intravitreal Injection (NPI 1205732203).
 
@@ -898,7 +869,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-100,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,Orthopedic Physician Associates Seattle,Revenue Cycle,NPI-1043256897,access@opaortho.com,access@opaortho.com,website_html_mailto,https://www.opaortho.com/about/,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 27447 rate spread (Orthopedic Physician Associates Seattle — NPI 1043256897),"Hi Orthopedic Physician Associates Seattle Revenue Cycle team,
+RW-RLOT-099,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,Orthopedic Physician Associates Seattle,Revenue Cycle,NPI-1043256897,access@opaortho.com,access@opaortho.com,website_html_mailto,https://www.opaortho.com/about/,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 27447 rate spread (Orthopedic Physician Associates Seattle — NPI 1043256897),"Hi Orthopedic Physician Associates Seattle Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WA for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1043256897).
 
@@ -1362,7 +1333,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-094,VADOI-MRF-CPT-29881,VADOI-MRF-CPT-29881,VA,VA,VA Department of Insurance & Commercial Payer TiC MRF,Privia Health Medical Group,Revenue Cycle,NPI-1730664012,connecticutdoctors@priviahealth.com,connecticutdoctors@priviahealth.com,website_html_mailto,https://www.priviahealth.com/where-we-are/northeast/connecticut,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VADOI-MRF-CPT-29881&state_code=VA&format=binary,VA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Privia Health Medical Group — NPI 1730664012),"Hi Privia Health Medical Group Revenue Cycle team,
+RW-RLOT-093,VADOI-MRF-CPT-29881,VADOI-MRF-CPT-29881,VA,VA,VA Department of Insurance & Commercial Payer TiC MRF,Privia Health Medical Group,Revenue Cycle,NPI-1730664012,connecticutdoctors@priviahealth.com,connecticutdoctors@priviahealth.com,website_html_mailto,https://www.priviahealth.com/where-we-are/northeast/connecticut,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VADOI-MRF-CPT-29881&state_code=VA&format=binary,VA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Privia Health Medical Group — NPI 1730664012),"Hi Privia Health Medical Group Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in VA for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1730664012).
 
@@ -1565,7 +1536,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-093,VADOI-MRF-CPT-29881,VADOI-MRF-CPT-29881,VA,VA,VA Department of Insurance & Commercial Payer TiC MRF,Bethesda Chevy Chase Orthopaedic Associates,Revenue Cycle,NPI-1093480972,cs@areaguides.com,cs@areaguides.com,website_html_mailto,https://www.areaguides.com/montgomerycountymd,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VADOI-MRF-CPT-29881&state_code=VA&format=binary,VA commercial payer MRF & CPT 29881 / 27447 rate spread (Bethesda Chevy Chase Orthopaedic Associates — NPI 1093480972),"Hi Bethesda Chevy Chase Orthopaedic Associates Revenue Cycle team,
+RW-RLOT-092,VADOI-MRF-CPT-29881,VADOI-MRF-CPT-29881,VA,VA,VA Department of Insurance & Commercial Payer TiC MRF,Bethesda Chevy Chase Orthopaedic Associates,Revenue Cycle,NPI-1093480972,cs@areaguides.com,cs@areaguides.com,website_html_mailto,https://www.areaguides.com/montgomerycountymd,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VADOI-MRF-CPT-29881&state_code=VA&format=binary,VA commercial payer MRF & CPT 29881 / 27447 rate spread (Bethesda Chevy Chase Orthopaedic Associates — NPI 1093480972),"Hi Bethesda Chevy Chase Orthopaedic Associates Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in VA for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1093480972).
 
@@ -1681,7 +1652,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-074,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Essential Anesthesia Management,Revenue Cycle,NPI-1841810306,drbleak@essentialanesthesia.com,drbleak@essentialanesthesia.com,website_html_mailto,https://www.essentialanesthesia.com/contactus.html,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (Essential Anesthesia Management — NPI 1841810306),"Hi Essential Anesthesia Management Revenue Cycle team,
+RW-RLOT-073,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Essential Anesthesia Management,Revenue Cycle,NPI-1841810306,drbleak@essentialanesthesia.com,drbleak@essentialanesthesia.com,website_html_mailto,https://www.essentialanesthesia.com/contactus.html,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (Essential Anesthesia Management — NPI 1841810306),"Hi Essential Anesthesia Management Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 99285 Level-5 Emergency E/M & Anesthesia Base/Time Units (NPI 1841810306).
 
@@ -1739,7 +1710,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-098,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,ECG Management Consultants,Revenue Cycle,NPI-1427237361,ecg@ecgmc.com,ecg@ecgmc.com,website_html_mailto,https://www.ecgmc.com/contact/general-inquiries,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (ECG Management Consultants — NPI 1427237361),"Hi ECG Management Consultants Revenue Cycle team,
+RW-RLOT-097,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,ECG Management Consultants,Revenue Cycle,NPI-1427237361,ecg@ecgmc.com,ecg@ecgmc.com,website_html_mailto,https://www.ecgmc.com/contact/general-inquiries,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (ECG Management Consultants — NPI 1427237361),"Hi ECG Management Consultants Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WA for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1427237361).
 
@@ -2203,7 +2174,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-092,VADOI-MRF-CPT-29881,VADOI-MRF-CPT-29881,VA,VA,VA Department of Insurance & Commercial Payer TiC MRF,Advanced Orthopaedics,Revenue Cycle,NPI-1023410792,info@advanced.com,info@advanced.com,website_html_mailto,https://www.advanced.com,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VADOI-MRF-CPT-29881&state_code=VA&format=binary,VA commercial payer MRF & CPT 29881 / 27447 rate spread (Advanced Orthopaedics — NPI 1023410792),"Hi Advanced Orthopaedics team (Attn: Billing / Managed Care),
+RW-RLOT-091,VADOI-MRF-CPT-29881,VADOI-MRF-CPT-29881,VA,VA,VA Department of Insurance & Commercial Payer TiC MRF,Advanced Orthopaedics,Revenue Cycle,NPI-1023410792,info@advanced.com,info@advanced.com,website_html_mailto,https://www.advanced.com,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VADOI-MRF-CPT-29881&state_code=VA&format=binary,VA commercial payer MRF & CPT 29881 / 27447 rate spread (Advanced Orthopaedics — NPI 1023410792),"Hi Advanced Orthopaedics team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in VA for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1023410792).
 
@@ -3073,7 +3044,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-089,UTDOI-MRF-CPT-99285,UTDOI-MRF-CPT-99285,UT,UT,UT Department of Insurance & Commercial Payer TiC MRF,Emergency Physicians Integrated Care,Revenue Cycle,NPI-1487709549,info@epicllc.net,info@epicllc.net,website_html_mailto,https://www.epicllc.net,https://rubricward.com/lettings/project/utdoi-mrf-cpt-93458-324-utdoi-mrf-cpt-93458-324-regence.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=UTDOI-MRF-CPT-99285&state_code=UT&format=binary,UT commercial payer MRF & CPT 99285 / 00100 rate spread (Emergency Physicians Integrated Care — NPI 1487709549),"Hi Emergency Physicians Integrated Care team (Attn: Billing / Managed Care),
+RW-RLOT-088,UTDOI-MRF-CPT-99285,UTDOI-MRF-CPT-99285,UT,UT,UT Department of Insurance & Commercial Payer TiC MRF,Emergency Physicians Integrated Care,Revenue Cycle,NPI-1487709549,info@epicllc.net,info@epicllc.net,website_html_mailto,https://www.epicllc.net,https://rubricward.com/lettings/project/utdoi-mrf-cpt-93458-324-utdoi-mrf-cpt-93458-324-regence.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=UTDOI-MRF-CPT-99285&state_code=UT&format=binary,UT commercial payer MRF & CPT 99285 / 00100 rate spread (Emergency Physicians Integrated Care — NPI 1487709549),"Hi Emergency Physicians Integrated Care team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in UT for CPT 99285 Level-5 Emergency E/M & Anesthesia Base/Time Units (NPI 1487709549).
 
@@ -3160,7 +3131,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-090,UTDOI-MRF-CPT-66984,UTDOI-MRF-CPT-66984,UT,UT,UT Department of Insurance & Commercial Payer TiC MRF,Hoopes Vision,Revenue Cycle,NPI-1609362094,info@hoopesvision.com,info@hoopesvision.com,website_html_mailto,https://hoopesvision.com/contact/,https://rubricward.com/lettings/project/utdoi-mrf-cpt-93458-324-utdoi-mrf-cpt-93458-324-regence.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=UTDOI-MRF-CPT-66984&state_code=UT&format=binary,UT commercial payer MRF & CPT 66984 / 67028 rate spread (Hoopes Vision — NPI 1609362094),"Hi Hoopes Vision team (Attn: Billing / Managed Care),
+RW-RLOT-089,UTDOI-MRF-CPT-66984,UTDOI-MRF-CPT-66984,UT,UT,UT Department of Insurance & Commercial Payer TiC MRF,Hoopes Vision,Revenue Cycle,NPI-1609362094,info@hoopesvision.com,info@hoopesvision.com,website_html_mailto,https://hoopesvision.com/contact/,https://rubricward.com/lettings/project/utdoi-mrf-cpt-93458-324-utdoi-mrf-cpt-93458-324-regence.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=UTDOI-MRF-CPT-66984&state_code=UT&format=binary,UT commercial payer MRF & CPT 66984 / 67028 rate spread (Hoopes Vision — NPI 1609362094),"Hi Hoopes Vision team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in UT for CPT 66984 Cataract Extraction with IOL & CPT 67028 Intravitreal Injection (NPI 1609362094).
 
@@ -3218,7 +3189,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-076,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Integrative Emergency Services,Revenue Cycle,NPI-1508615147,info@ies.healthcare,info@ies.healthcare,website_html_mailto,https://www.ies.healthcare,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (Integrative Emergency Services — NPI 1508615147),"Hi Integrative Emergency Services team (Attn: Billing / Managed Care),
+RW-RLOT-075,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Integrative Emergency Services,Revenue Cycle,NPI-1508615147,info@ies.healthcare,info@ies.healthcare,website_html_mailto,https://www.ies.healthcare,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (Integrative Emergency Services — NPI 1508615147),"Hi Integrative Emergency Services team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 99285 Level-5 Emergency E/M & Anesthesia Base/Time Units (NPI 1508615147).
 
@@ -3247,7 +3218,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-091,UTDOI-MRF-CPT-29881,UTDOI-MRF-CPT-29881,UT,UT,UT Department of Insurance & Commercial Payer TiC MRF,I-Med Claims Medical Billing,Revenue Cycle,NPI-1225708431,info@imedclaims.com,info@imedclaims.com,website_html_mailto,https://imedclaims.com,https://rubricward.com/lettings/project/utdoi-mrf-cpt-93458-324-utdoi-mrf-cpt-93458-324-regence.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=UTDOI-MRF-CPT-29881&state_code=UT&format=binary,UT commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (I-Med Claims Medical Billing — NPI 1225708431),"Hi I-Med Claims Medical Billing team (Attn: Billing / Managed Care),
+RW-RLOT-090,UTDOI-MRF-CPT-29881,UTDOI-MRF-CPT-29881,UT,UT,UT Department of Insurance & Commercial Payer TiC MRF,I-Med Claims Medical Billing,Revenue Cycle,NPI-1225708431,info@imedclaims.com,info@imedclaims.com,website_html_mailto,https://imedclaims.com,https://rubricward.com/lettings/project/utdoi-mrf-cpt-93458-324-utdoi-mrf-cpt-93458-324-regence.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=UTDOI-MRF-CPT-29881&state_code=UT&format=binary,UT commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (I-Med Claims Medical Billing — NPI 1225708431),"Hi I-Med Claims Medical Billing team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in UT for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1225708431).
 
@@ -3537,7 +3508,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-078,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,MediBillMD Revenue Cycle,Revenue Cycle,NPI-1346201638,info@medibillmd.com,info@medibillmd.com,website_html_mailto,https://medibillmd.com/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (MediBillMD Revenue Cycle — NPI 1346201638),"Hi MediBillMD Revenue Cycle team (Attn: Billing / Managed Care),
+RW-RLOT-077,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,MediBillMD Revenue Cycle,Revenue Cycle,NPI-1346201638,info@medibillmd.com,info@medibillmd.com,website_html_mailto,https://medibillmd.com/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (MediBillMD Revenue Cycle — NPI 1346201638),"Hi MediBillMD Revenue Cycle team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1346201638).
 
@@ -3798,7 +3769,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-082,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Precision Medical Billing,Revenue Cycle,NPI-1578019535,info@precisionmedicalbilling.com,info@precisionmedicalbilling.com,website_html_mailto,https://precisionmedicalbilling.com,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Precision Medical Billing — NPI 1578019535),"Hi Precision Medical Billing team (Attn: Billing / Managed Care),
+RW-RLOT-081,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Precision Medical Billing,Revenue Cycle,NPI-1578019535,info@precisionmedicalbilling.com,info@precisionmedicalbilling.com,website_html_mailto,https://precisionmedicalbilling.com,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Precision Medical Billing — NPI 1578019535),"Hi Precision Medical Billing team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1578019535).
 
@@ -3827,7 +3798,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-104,WYDOI-MRF-CPT-29881,WYDOI-MRF-CPT-29881,WY,WY,WY Department of Insurance & Commercial Payer TiC MRF,Premier Bone & Joint Centers,Revenue Cycle,NPI-1336706282,info@premierboneandjoint.com,info@premierboneandjoint.com,website_html_mailto,https://www.premierboneandjoint.com/,https://rubricward.com/lettings/project/wydoi-mrf-cpt-99285-348-wydoi-mrf-cpt-99285-348-blue-cross-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WYDOI-MRF-CPT-29881&state_code=WY&format=binary,WY commercial payer MRF & CPT 29881 / 27447 rate spread (Premier Bone & Joint Centers — NPI 1336706282),"Hi Premier Bone & Joint Centers team (Attn: Billing / Managed Care),
+RW-RLOT-103,WYDOI-MRF-CPT-29881,WYDOI-MRF-CPT-29881,WY,WY,WY Department of Insurance & Commercial Payer TiC MRF,Premier Bone & Joint Centers,Revenue Cycle,NPI-1336706282,info@premierboneandjoint.com,info@premierboneandjoint.com,website_html_mailto,https://www.premierboneandjoint.com/,https://rubricward.com/lettings/project/wydoi-mrf-cpt-99285-348-wydoi-mrf-cpt-99285-348-blue-cross-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WYDOI-MRF-CPT-29881&state_code=WY&format=binary,WY commercial payer MRF & CPT 29881 / 27447 rate spread (Premier Bone & Joint Centers — NPI 1336706282),"Hi Premier Bone & Joint Centers team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WY for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1336706282).
 
@@ -3943,7 +3914,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-095,VADOI-MRF-CPT-29881,VADOI-MRF-CPT-29881,VA,VA,VA Department of Insurance & Commercial Payer TiC MRF,Quality Medical Billing,Revenue Cycle,NPI-1225561871,info@qualitymedicalbilling.com,info@qualitymedicalbilling.com,website_html_mailto,https://www.qualitymedicalbilling.com/contact_us.html,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VADOI-MRF-CPT-29881&state_code=VA&format=binary,VA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Quality Medical Billing — NPI 1225561871),"Hi Quality Medical Billing team (Attn: Billing / Managed Care),
+RW-RLOT-094,VADOI-MRF-CPT-29881,VADOI-MRF-CPT-29881,VA,VA,VA Department of Insurance & Commercial Payer TiC MRF,Quality Medical Billing,Revenue Cycle,NPI-1225561871,info@qualitymedicalbilling.com,info@qualitymedicalbilling.com,website_html_mailto,https://www.qualitymedicalbilling.com/contact_us.html,https://rubricward.com/lettings/project/vaboi-mrf-cpt-99285-ric-vaboi-mrf-cpt-99285-ric-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=VADOI-MRF-CPT-29881&state_code=VA&format=binary,VA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Quality Medical Billing — NPI 1225561871),"Hi Quality Medical Billing team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in VA for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1225561871).
 
@@ -4175,7 +4146,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-103,WVDOI-MRF-CPT-29881,WVDOI-MRF-CPT-29881,WV,WV,WV Department of Insurance & Commercial Payer TiC MRF,Scott Orthopedic Center WV,Revenue Cycle,NPI-1306840192,info@scottorthopedic.com,info@scottorthopedic.com,website_html_mailto,https://scottorthopedic.com/,https://rubricward.com/lettings/project/wvdoi-mrf-cpt-45378-347-wvdoi-mrf-cpt-45378-347-highmark-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WVDOI-MRF-CPT-29881&state_code=WV&format=binary,WV commercial payer MRF & CPT 29881 / 27447 rate spread (Scott Orthopedic Center WV — NPI 1306840192),"Hi Scott Orthopedic Center WV team (Attn: Billing / Managed Care),
+RW-RLOT-102,WVDOI-MRF-CPT-29881,WVDOI-MRF-CPT-29881,WV,WV,WV Department of Insurance & Commercial Payer TiC MRF,Scott Orthopedic Center WV,Revenue Cycle,NPI-1306840192,info@scottorthopedic.com,info@scottorthopedic.com,website_html_mailto,https://scottorthopedic.com/,https://rubricward.com/lettings/project/wvdoi-mrf-cpt-45378-347-wvdoi-mrf-cpt-45378-347-highmark-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WVDOI-MRF-CPT-29881&state_code=WV&format=binary,WV commercial payer MRF & CPT 29881 / 27447 rate spread (Scott Orthopedic Center WV — NPI 1306840192),"Hi Scott Orthopedic Center WV team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WV for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306840192).
 
@@ -4407,7 +4378,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-086,TXDOI-MRF-CPT-63030,TXDOI-MRF-CPT-63030,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Texas Back Institute,Revenue Cycle,NPI-1629434873,info@texasback.com,info@texasback.com,website_html_mailto,https://texasback.com/contact-us/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-63030&state_code=TX&format=binary,TX commercial payer MRF & CPT 63030 / 22551 rate spread (Texas Back Institute — NPI 1629434873),"Hi Texas Back Institute team (Attn: Billing / Managed Care),
+RW-RLOT-085,TXDOI-MRF-CPT-63030,TXDOI-MRF-CPT-63030,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Texas Back Institute,Revenue Cycle,NPI-1629434873,info@texasback.com,info@texasback.com,website_html_mailto,https://texasback.com/contact-us/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-63030&state_code=TX&format=binary,TX commercial payer MRF & CPT 63030 / 22551 rate spread (Texas Back Institute — NPI 1629434873),"Hi Texas Back Institute team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 63030 Lumbar Discectomy & CPT 22551 Anterior Cervical Fusion (ACDF) (NPI 1629434873).
 
@@ -4494,7 +4465,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-101,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,Valant Behavioral Billing,Revenue Cycle,NPI-1235190533,info@valant.com,info@valant.com,website_html_mailto,https://www.valant.io,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Valant Behavioral Billing — NPI 1235190533),"Hi Valant Behavioral Billing team (Attn: Billing / Managed Care),
+RW-RLOT-100,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,Valant Behavioral Billing,Revenue Cycle,NPI-1235190533,info@valant.com,info@valant.com,website_html_mailto,https://www.valant.io,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Valant Behavioral Billing — NPI 1235190533),"Hi Valant Behavioral Billing team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WA for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1235190533).
 
@@ -4581,7 +4552,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-105,WYDOI-MRF-CPT-29881,WYDOI-MRF-CPT-29881,WY,WY,WY Department of Insurance & Commercial Payer TiC MRF,Teton Orthopedics Jackson,Revenue Cycle,NPI-1952345886,information@tetonortho.com,information@tetonortho.com,website_html_mailto,https://www.tetonortho.com/locations,https://rubricward.com/lettings/project/wydoi-mrf-cpt-99285-348-wydoi-mrf-cpt-99285-348-blue-cross-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WYDOI-MRF-CPT-29881&state_code=WY&format=binary,WY commercial payer MRF & CPT 29881 / 27447 rate spread (Teton Orthopedics Jackson — NPI 1952345886),"Hi Teton Orthopedics Jackson team (Attn: Billing / Managed Care),
+RW-RLOT-104,WYDOI-MRF-CPT-29881,WYDOI-MRF-CPT-29881,WY,WY,WY Department of Insurance & Commercial Payer TiC MRF,Teton Orthopedics Jackson,Revenue Cycle,NPI-1952345886,information@tetonortho.com,information@tetonortho.com,website_html_mailto,https://www.tetonortho.com/locations,https://rubricward.com/lettings/project/wydoi-mrf-cpt-99285-348-wydoi-mrf-cpt-99285-348-blue-cross-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WYDOI-MRF-CPT-29881&state_code=WY&format=binary,WY commercial payer MRF & CPT 29881 / 27447 rate spread (Teton Orthopedics Jackson — NPI 1952345886),"Hi Teton Orthopedics Jackson team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WY for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1952345886).
 
@@ -4784,7 +4755,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-080,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,NorthStar Anesthesia,Revenue Cycle,NPI-1013859578,meagan.barkett@northstaranesthesia.com,meagan.barkett@northstaranesthesia.com,website_html_mailto,https://northstaranesthesia.com/our-culture/our-leadership/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (NorthStar Anesthesia — NPI 1013859578),"Hi NorthStar Anesthesia Revenue Cycle team,
+RW-RLOT-079,TXDOI-MRF-CPT-99285,TXDOI-MRF-CPT-99285,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,NorthStar Anesthesia,Revenue Cycle,NPI-1013859578,meagan.barkett@northstaranesthesia.com,meagan.barkett@northstaranesthesia.com,website_html_mailto,https://northstaranesthesia.com/our-culture/our-leadership/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-99285&state_code=TX&format=binary,TX commercial payer MRF & CPT 99285 / 00100 rate spread (NorthStar Anesthesia — NPI 1013859578),"Hi NorthStar Anesthesia Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 99285 Level-5 Emergency E/M & Anesthesia Base/Time Units (NPI 1013859578).
 
@@ -4842,7 +4813,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-085,TXDOI-MRF-CPT-88305,TXDOI-MRF-CPT-88305,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Sonic Healthcare USA Laboratory,Revenue Cycle,NPI-1417180845,motoole@sonichealthcareusa.com,motoole@sonichealthcareusa.com,website_html_mailto,https://www.sonichealthcareusa.com/about-us/hospital-lab-partnerships/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-88305&state_code=TX&format=binary,TX commercial payer MRF & CPT 88305 / 80053 rate spread (Sonic Healthcare USA Laboratory — NPI 1417180845),"Hi Sonic Healthcare USA Laboratory Revenue Cycle team,
+RW-RLOT-084,TXDOI-MRF-CPT-88305,TXDOI-MRF-CPT-88305,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Sonic Healthcare USA Laboratory,Revenue Cycle,NPI-1417180845,motoole@sonichealthcareusa.com,motoole@sonichealthcareusa.com,website_html_mailto,https://www.sonichealthcareusa.com/about-us/hospital-lab-partnerships/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-88305&state_code=TX&format=binary,TX commercial payer MRF & CPT 88305 / 80053 rate spread (Sonic Healthcare USA Laboratory — NPI 1417180845),"Hi Sonic Healthcare USA Laboratory Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 88305 Level IV Surgical Pathology & Out-of-Network Lab Payer MRF Rates (NPI 1417180845).
 
@@ -5161,7 +5132,7 @@ Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me kn
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-102,WIDOI-MRF-CPT-29881,WIDOI-MRF-CPT-29881,WI,WI,WI Department of Insurance & Commercial Payer TiC MRF,Orthopedic Associates of Wisconsin,Revenue Cycle,NPI-1184244519,rknowski@orthowisconsin.com,rknowski@orthowisconsin.com,website_html_mailto,https://orthowisconsin.com/,https://rubricward.com/lettings/project/widoi-mrf-cpt-29881-320-widoi-mrf-cpt-29881-320-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WIDOI-MRF-CPT-29881&state_code=WI&format=binary,WI commercial payer MRF & CPT 29881 / 27447 rate spread (Orthopedic Associates of Wisconsin — NPI 1184244519),"Hi Orthopedic Associates of Wisconsin Revenue Cycle team,
+RW-RLOT-101,WIDOI-MRF-CPT-29881,WIDOI-MRF-CPT-29881,WI,WI,WI Department of Insurance & Commercial Payer TiC MRF,Orthopedic Associates of Wisconsin,Revenue Cycle,NPI-1184244519,rknowski@orthowisconsin.com,rknowski@orthowisconsin.com,website_html_mailto,https://orthowisconsin.com/,https://rubricward.com/lettings/project/widoi-mrf-cpt-29881-320-widoi-mrf-cpt-29881-320-anthem-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WIDOI-MRF-CPT-29881&state_code=WI&format=binary,WI commercial payer MRF & CPT 29881 / 27447 rate spread (Orthopedic Associates of Wisconsin — NPI 1184244519),"Hi Orthopedic Associates of Wisconsin Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WI for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1184244519).
 
@@ -5219,7 +5190,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-096,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,Alpine Orthopaedic And Spine A Professional,Revenue Cycle,NPI-1497501274,roi@alpineorthopaedic.com,roi@alpineorthopaedic.com,website_html_mailto,https://www.alpineorthopaedic.com/insurance.html,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 27447 rate spread (Alpine Orthopaedic And Spine A Professional — NPI 1497501274),"Hi Alpine Orthopaedic And Spine A Professional Revenue Cycle team,
+RW-RLOT-095,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,Alpine Orthopaedic And Spine A Professional,Revenue Cycle,NPI-1497501274,roi@alpineorthopaedic.com,roi@alpineorthopaedic.com,website_html_mailto,https://www.alpineorthopaedic.com/insurance.html,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 27447 rate spread (Alpine Orthopaedic And Spine A Professional — NPI 1497501274),"Hi Alpine Orthopaedic And Spine A Professional Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WA for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1497501274).
 
@@ -5393,7 +5364,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-075,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Fast Pay Health,Revenue Cycle,NPI-1699701870,sales@fastpayhealth.com,sales@fastpayhealth.com,website_html_mailto,https://www.fastpayhealth.com/about,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Fast Pay Health — NPI 1699701870),"Hi Fast Pay Health Revenue Cycle team,
+RW-RLOT-074,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Fast Pay Health,Revenue Cycle,NPI-1699701870,sales@fastpayhealth.com,sales@fastpayhealth.com,website_html_mailto,https://www.fastpayhealth.com/about,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Fast Pay Health — NPI 1699701870),"Hi Fast Pay Health Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1699701870).
 
@@ -5538,7 +5509,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-083,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Right Medical Billing,Revenue Cycle,NPI-1457312749,sales@rightmedicalbilling.com,sales@rightmedicalbilling.com,website_html_mailto,https://rightmedicalbilling.com/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Right Medical Billing — NPI 1457312749),"Hi Right Medical Billing Revenue Cycle team,
+RW-RLOT-082,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Right Medical Billing,Revenue Cycle,NPI-1457312749,sales@rightmedicalbilling.com,sales@rightmedicalbilling.com,website_html_mailto,https://rightmedicalbilling.com/,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Right Medical Billing — NPI 1457312749),"Hi Right Medical Billing Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1457312749).
 
@@ -5741,7 +5712,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-099,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,ECG Management Consultants,Revenue Cycle,NPI-1922334804,stcook@ecgmc.com,stcook@ecgmc.com,website_html_mailto,https://www.ecgmc.com/contact/general-inquiries,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (ECG Management Consultants — NPI 1922334804),"Hi ECG Management Consultants Revenue Cycle team,
+RW-RLOT-098,WADOI-MRF-CPT-29881,WADOI-MRF-CPT-29881,WA,WA,WA Department of Insurance & Commercial Payer TiC MRF,ECG Management Consultants,Revenue Cycle,NPI-1922334804,stcook@ecgmc.com,stcook@ecgmc.com,website_html_mailto,https://www.ecgmc.com/contact/general-inquiries,https://rubricward.com/lettings/project/wadoi-mrf-cpt-29881-310-wadoi-mrf-cpt-29881-310-premera-blue.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=WADOI-MRF-CPT-29881&state_code=WA&format=binary,WA commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (ECG Management Consultants — NPI 1922334804),"Hi ECG Management Consultants Revenue Cycle team,
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in WA for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1922334804).
 
@@ -5828,7 +5799,7 @@ Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package,
 Best,
 Aaron Chen
 RubricWard Payer MRF & NSA IDR Desk",52,12,READY
-RW-RLOT-081,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Plutus Health,Revenue Cycle,NPI-1356586390,support@plutushealthinc.com,support@plutushealthinc.com,website_html_mailto,https://www.plutushealthinc.com,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Plutus Health — NPI 1356586390),"Hi Plutus Health team (Attn: Billing / Managed Care),
+RW-RLOT-080,TXDOI-MRF-CPT-29881,TXDOI-MRF-CPT-29881,TX,TX,TX Department of Insurance & Commercial Payer TiC MRF,Plutus Health,Revenue Cycle,NPI-1356586390,support@plutushealthinc.com,support@plutushealthinc.com,website_html_mailto,https://www.plutushealthinc.com,https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html,https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary,TX commercial payer MRF & CPT 29881 / 45380 / 99285 rate spread (Plutus Health — NPI 1356586390),"Hi Plutus Health team (Attn: Billing / Managed Care),
 
 We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M (NPI 1356586390).
 

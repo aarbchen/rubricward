@@ -1,8 +1,8 @@
 {
-  "count": 209,
+  "count": 208,
   "outbox_queue": [
     {
-      "lead_id": "RW-RLOT-079",
+      "lead_id": "RW-RLOT-078",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -127,7 +127,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-077",
+      "lead_id": "RW-RLOT-076",
       "letting_id": "TXDOI-MRF-CPT-66984",
       "project_id": "TXDOI-MRF-CPT-66984",
       "state_code": "TX",
@@ -277,7 +277,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-097",
+      "lead_id": "RW-RLOT-096",
       "letting_id": "WADOI-MRF-CPT-88305",
       "project_id": "WADOI-MRF-CPT-88305",
       "state_code": "WA",
@@ -322,31 +322,6 @@
       "step1_subject": "IL commercial payer MRF & CPT 29881 / 45380 / 99285 benchmark (CureMB Medical Billing Services \u2014 NPI 1992161202)",
       "step1_body_zero_link": "Hi CureMB Medical Billing Services Revenue Cycle team,\n\nNoticed CureMB Medical Billing Services's clinical footprint (NPI 1992161202) in IL while indexing the IL commercial payer MRF cohort for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M.\n\nWe already compiled the IL CMS Transparency in Coverage MRF allowed-amount percentiles, locality Medicare MPFS RVU/GPCI rates, and ERISA / Federal NSA IDR appeal templates into a 6-file Word/Excel bundle.\n\nReply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file .DOCX + .XLSX claim recovery and IDR bundle over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
       "step2_body_dossier_link": "Hi CureMB Medical Billing Services Revenue Cycle team,\n\nQuick follow-up on the IL commercial payer MRF & NSA IDR benchmark cohort (CPT 29881 / 45380 / 99285) for CureMB Medical Billing Services.\n\nReply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package, or let me know if I should hold off.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "portals_monitored": 52,
-      "apis_live": 12,
-      "status": "READY"
-    },
-    {
-      "lead_id": "RW-RLOT-073",
-      "letting_id": "TXDOI-MRF-CPT-29881",
-      "project_id": "TXDOI-MRF-CPT-29881",
-      "state_code": "TX",
-      "state": "TX",
-      "agency": "TX Department of Insurance & Commercial Payer TiC MRF",
-      "company_name": "Direct Orthopedic Care",
-      "first_name": "Revenue Cycle",
-      "license_or_dot_id": "NPI-1306842315",
-      "email": "billing@directorthocare.com",
-      "recipient_email": "billing@directorthocare.com",
-      "source_type": "website_html_mailto",
-      "source_url": "https://www.directorthocare.com/billing-inquiries/",
-      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html",
-      "compiler_url": "https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary",
-      "subject": "TX commercial payer MRF & CPT 29881 / 27447 rate spread (Direct Orthopedic Care \u2014 NPI 1306842315)",
-      "body": "Hi Direct Orthopedic Care Revenue Cycle team,\n\nWe benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306842315).\n\nContracted tiers in this TX cohort sit 27.9% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\nBefore Direct Orthopedic Care's next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "step1_subject": "TX commercial payer MRF & CPT 29881 / 27447 rate spread (Direct Orthopedic Care \u2014 NPI 1306842315)",
-      "step1_body_zero_link": "Hi Direct Orthopedic Care Revenue Cycle team,\n\nWe benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306842315).\n\nContracted tiers in this TX cohort sit 27.9% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\nBefore Direct Orthopedic Care's next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "step2_body_dossier_link": "Hi Direct Orthopedic Care team,\n\nQuick follow-up \u2014 want me to send the TX CMS TiC MRF allowed-amount spread (CPT 29881 / 27447) and 6-file Word/Excel ERISA & NSA IDR appeal package for Direct Orthopedic Care?\n\nReply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me know if I should hold off.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
       "portals_monitored": 52,
       "apis_live": 12,
       "status": "READY"
@@ -602,7 +577,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-087",
+      "lead_id": "RW-RLOT-086",
       "letting_id": "TXDOI-MRF-CPT-52356",
       "project_id": "TXDOI-MRF-CPT-52356",
       "state_code": "TX",
@@ -627,7 +602,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-088",
+      "lead_id": "RW-RLOT-087",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -752,7 +727,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-084",
+      "lead_id": "RW-RLOT-083",
       "letting_id": "TXDOI-MRF-CPT-66984",
       "project_id": "TXDOI-MRF-CPT-66984",
       "state_code": "TX",
@@ -777,7 +752,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-100",
+      "lead_id": "RW-RLOT-099",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -1177,7 +1152,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-094",
+      "lead_id": "RW-RLOT-093",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -1352,7 +1327,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-093",
+      "lead_id": "RW-RLOT-092",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -1452,7 +1427,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-074",
+      "lead_id": "RW-RLOT-073",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -1502,7 +1477,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-098",
+      "lead_id": "RW-RLOT-097",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -1902,7 +1877,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-092",
+      "lead_id": "RW-RLOT-091",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -2652,7 +2627,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-089",
+      "lead_id": "RW-RLOT-088",
       "letting_id": "UTDOI-MRF-CPT-99285",
       "project_id": "UTDOI-MRF-CPT-99285",
       "state_code": "UT",
@@ -2727,7 +2702,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-090",
+      "lead_id": "RW-RLOT-089",
       "letting_id": "UTDOI-MRF-CPT-66984",
       "project_id": "UTDOI-MRF-CPT-66984",
       "state_code": "UT",
@@ -2777,7 +2752,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-076",
+      "lead_id": "RW-RLOT-075",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -2802,7 +2777,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-091",
+      "lead_id": "RW-RLOT-090",
       "letting_id": "UTDOI-MRF-CPT-29881",
       "project_id": "UTDOI-MRF-CPT-29881",
       "state_code": "UT",
@@ -3052,7 +3027,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-078",
+      "lead_id": "RW-RLOT-077",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -3277,7 +3252,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-082",
+      "lead_id": "RW-RLOT-081",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -3302,7 +3277,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-104",
+      "lead_id": "RW-RLOT-103",
       "letting_id": "WYDOI-MRF-CPT-29881",
       "project_id": "WYDOI-MRF-CPT-29881",
       "state_code": "WY",
@@ -3402,7 +3377,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-095",
+      "lead_id": "RW-RLOT-094",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -3602,7 +3577,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-103",
+      "lead_id": "RW-RLOT-102",
       "letting_id": "WVDOI-MRF-CPT-29881",
       "project_id": "WVDOI-MRF-CPT-29881",
       "state_code": "WV",
@@ -3802,7 +3777,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-086",
+      "lead_id": "RW-RLOT-085",
       "letting_id": "TXDOI-MRF-CPT-63030",
       "project_id": "TXDOI-MRF-CPT-63030",
       "state_code": "TX",
@@ -3877,7 +3852,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-101",
+      "lead_id": "RW-RLOT-100",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -3952,7 +3927,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-105",
+      "lead_id": "RW-RLOT-104",
       "letting_id": "WYDOI-MRF-CPT-29881",
       "project_id": "WYDOI-MRF-CPT-29881",
       "state_code": "WY",
@@ -4127,7 +4102,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-080",
+      "lead_id": "RW-RLOT-079",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -4177,7 +4152,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-085",
+      "lead_id": "RW-RLOT-084",
       "letting_id": "TXDOI-MRF-CPT-88305",
       "project_id": "TXDOI-MRF-CPT-88305",
       "state_code": "TX",
@@ -4452,7 +4427,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-102",
+      "lead_id": "RW-RLOT-101",
       "letting_id": "WIDOI-MRF-CPT-29881",
       "project_id": "WIDOI-MRF-CPT-29881",
       "state_code": "WI",
@@ -4502,7 +4477,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-096",
+      "lead_id": "RW-RLOT-095",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -4652,7 +4627,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-075",
+      "lead_id": "RW-RLOT-074",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -4777,7 +4752,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-083",
+      "lead_id": "RW-RLOT-082",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -4952,7 +4927,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-099",
+      "lead_id": "RW-RLOT-098",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -5027,7 +5002,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-081",
+      "lead_id": "RW-RLOT-080",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -5229,7 +5204,7 @@
   ],
   "emails": [
     {
-      "lead_id": "RW-RLOT-079",
+      "lead_id": "RW-RLOT-078",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -5354,7 +5329,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-077",
+      "lead_id": "RW-RLOT-076",
       "letting_id": "TXDOI-MRF-CPT-66984",
       "project_id": "TXDOI-MRF-CPT-66984",
       "state_code": "TX",
@@ -5504,7 +5479,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-097",
+      "lead_id": "RW-RLOT-096",
       "letting_id": "WADOI-MRF-CPT-88305",
       "project_id": "WADOI-MRF-CPT-88305",
       "state_code": "WA",
@@ -5549,31 +5524,6 @@
       "step1_subject": "IL commercial payer MRF & CPT 29881 / 45380 / 99285 benchmark (CureMB Medical Billing Services \u2014 NPI 1992161202)",
       "step1_body_zero_link": "Hi CureMB Medical Billing Services Revenue Cycle team,\n\nNoticed CureMB Medical Billing Services's clinical footprint (NPI 1992161202) in IL while indexing the IL commercial payer MRF cohort for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M.\n\nWe already compiled the IL CMS Transparency in Coverage MRF allowed-amount percentiles, locality Medicare MPFS RVU/GPCI rates, and ERISA / Federal NSA IDR appeal templates into a 6-file Word/Excel bundle.\n\nReply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file .DOCX + .XLSX claim recovery and IDR bundle over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
       "step2_body_dossier_link": "Hi CureMB Medical Billing Services Revenue Cycle team,\n\nQuick follow-up on the IL commercial payer MRF & NSA IDR benchmark cohort (CPT 29881 / 45380 / 99285) for CureMB Medical Billing Services.\n\nReply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package, or let me know if I should hold off.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "portals_monitored": 52,
-      "apis_live": 12,
-      "status": "READY"
-    },
-    {
-      "lead_id": "RW-RLOT-073",
-      "letting_id": "TXDOI-MRF-CPT-29881",
-      "project_id": "TXDOI-MRF-CPT-29881",
-      "state_code": "TX",
-      "state": "TX",
-      "agency": "TX Department of Insurance & Commercial Payer TiC MRF",
-      "company_name": "Direct Orthopedic Care",
-      "first_name": "Revenue Cycle",
-      "license_or_dot_id": "NPI-1306842315",
-      "email": "billing@directorthocare.com",
-      "recipient_email": "billing@directorthocare.com",
-      "source_type": "website_html_mailto",
-      "source_url": "https://www.directorthocare.com/billing-inquiries/",
-      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html",
-      "compiler_url": "https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary",
-      "subject": "TX commercial payer MRF & CPT 29881 / 27447 rate spread (Direct Orthopedic Care \u2014 NPI 1306842315)",
-      "body": "Hi Direct Orthopedic Care Revenue Cycle team,\n\nWe benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306842315).\n\nContracted tiers in this TX cohort sit 27.9% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\nBefore Direct Orthopedic Care's next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "step1_subject": "TX commercial payer MRF & CPT 29881 / 27447 rate spread (Direct Orthopedic Care \u2014 NPI 1306842315)",
-      "step1_body_zero_link": "Hi Direct Orthopedic Care Revenue Cycle team,\n\nWe benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306842315).\n\nContracted tiers in this TX cohort sit 27.9% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\nBefore Direct Orthopedic Care's next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "step2_body_dossier_link": "Hi Direct Orthopedic Care team,\n\nQuick follow-up \u2014 want me to send the TX CMS TiC MRF allowed-amount spread (CPT 29881 / 27447) and 6-file Word/Excel ERISA & NSA IDR appeal package for Direct Orthopedic Care?\n\nReply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me know if I should hold off.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
       "portals_monitored": 52,
       "apis_live": 12,
       "status": "READY"
@@ -5829,7 +5779,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-087",
+      "lead_id": "RW-RLOT-086",
       "letting_id": "TXDOI-MRF-CPT-52356",
       "project_id": "TXDOI-MRF-CPT-52356",
       "state_code": "TX",
@@ -5854,7 +5804,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-088",
+      "lead_id": "RW-RLOT-087",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -5979,7 +5929,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-084",
+      "lead_id": "RW-RLOT-083",
       "letting_id": "TXDOI-MRF-CPT-66984",
       "project_id": "TXDOI-MRF-CPT-66984",
       "state_code": "TX",
@@ -6004,7 +5954,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-100",
+      "lead_id": "RW-RLOT-099",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -6404,7 +6354,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-094",
+      "lead_id": "RW-RLOT-093",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -6579,7 +6529,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-093",
+      "lead_id": "RW-RLOT-092",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -6679,7 +6629,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-074",
+      "lead_id": "RW-RLOT-073",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -6729,7 +6679,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-098",
+      "lead_id": "RW-RLOT-097",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -7129,7 +7079,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-092",
+      "lead_id": "RW-RLOT-091",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -7879,7 +7829,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-089",
+      "lead_id": "RW-RLOT-088",
       "letting_id": "UTDOI-MRF-CPT-99285",
       "project_id": "UTDOI-MRF-CPT-99285",
       "state_code": "UT",
@@ -7954,7 +7904,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-090",
+      "lead_id": "RW-RLOT-089",
       "letting_id": "UTDOI-MRF-CPT-66984",
       "project_id": "UTDOI-MRF-CPT-66984",
       "state_code": "UT",
@@ -8004,7 +7954,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-076",
+      "lead_id": "RW-RLOT-075",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -8029,7 +7979,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-091",
+      "lead_id": "RW-RLOT-090",
       "letting_id": "UTDOI-MRF-CPT-29881",
       "project_id": "UTDOI-MRF-CPT-29881",
       "state_code": "UT",
@@ -8279,7 +8229,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-078",
+      "lead_id": "RW-RLOT-077",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -8504,7 +8454,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-082",
+      "lead_id": "RW-RLOT-081",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -8529,7 +8479,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-104",
+      "lead_id": "RW-RLOT-103",
       "letting_id": "WYDOI-MRF-CPT-29881",
       "project_id": "WYDOI-MRF-CPT-29881",
       "state_code": "WY",
@@ -8629,7 +8579,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-095",
+      "lead_id": "RW-RLOT-094",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -8829,7 +8779,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-103",
+      "lead_id": "RW-RLOT-102",
       "letting_id": "WVDOI-MRF-CPT-29881",
       "project_id": "WVDOI-MRF-CPT-29881",
       "state_code": "WV",
@@ -9029,7 +8979,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-086",
+      "lead_id": "RW-RLOT-085",
       "letting_id": "TXDOI-MRF-CPT-63030",
       "project_id": "TXDOI-MRF-CPT-63030",
       "state_code": "TX",
@@ -9104,7 +9054,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-101",
+      "lead_id": "RW-RLOT-100",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -9179,7 +9129,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-105",
+      "lead_id": "RW-RLOT-104",
       "letting_id": "WYDOI-MRF-CPT-29881",
       "project_id": "WYDOI-MRF-CPT-29881",
       "state_code": "WY",
@@ -9354,7 +9304,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-080",
+      "lead_id": "RW-RLOT-079",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -9404,7 +9354,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-085",
+      "lead_id": "RW-RLOT-084",
       "letting_id": "TXDOI-MRF-CPT-88305",
       "project_id": "TXDOI-MRF-CPT-88305",
       "state_code": "TX",
@@ -9679,7 +9629,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-102",
+      "lead_id": "RW-RLOT-101",
       "letting_id": "WIDOI-MRF-CPT-29881",
       "project_id": "WIDOI-MRF-CPT-29881",
       "state_code": "WI",
@@ -9729,7 +9679,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-096",
+      "lead_id": "RW-RLOT-095",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -9879,7 +9829,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-075",
+      "lead_id": "RW-RLOT-074",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -10004,7 +9954,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-083",
+      "lead_id": "RW-RLOT-082",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -10179,7 +10129,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-099",
+      "lead_id": "RW-RLOT-098",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -10254,7 +10204,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-081",
+      "lead_id": "RW-RLOT-080",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -10456,7 +10406,7 @@
   ],
   "leads": [
     {
-      "lead_id": "RW-RLOT-079",
+      "lead_id": "RW-RLOT-078",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -10581,7 +10531,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-077",
+      "lead_id": "RW-RLOT-076",
       "letting_id": "TXDOI-MRF-CPT-66984",
       "project_id": "TXDOI-MRF-CPT-66984",
       "state_code": "TX",
@@ -10731,7 +10681,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-097",
+      "lead_id": "RW-RLOT-096",
       "letting_id": "WADOI-MRF-CPT-88305",
       "project_id": "WADOI-MRF-CPT-88305",
       "state_code": "WA",
@@ -10776,31 +10726,6 @@
       "step1_subject": "IL commercial payer MRF & CPT 29881 / 45380 / 99285 benchmark (CureMB Medical Billing Services \u2014 NPI 1992161202)",
       "step1_body_zero_link": "Hi CureMB Medical Billing Services Revenue Cycle team,\n\nNoticed CureMB Medical Billing Services's clinical footprint (NPI 1992161202) in IL while indexing the IL commercial payer MRF cohort for CPT 29881 Arthroscopy, CPT 45380 Endoscopy & CPT 99285 High-Severity E/M.\n\nWe already compiled the IL CMS Transparency in Coverage MRF allowed-amount percentiles, locality Medicare MPFS RVU/GPCI rates, and ERISA / Federal NSA IDR appeal templates into a 6-file Word/Excel bundle.\n\nReply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file .DOCX + .XLSX claim recovery and IDR bundle over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
       "step2_body_dossier_link": "Hi CureMB Medical Billing Services Revenue Cycle team,\n\nQuick follow-up on the IL commercial payer MRF & NSA IDR benchmark cohort (CPT 29881 / 45380 / 99285) for CureMB Medical Billing Services.\n\nReply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package, or let me know if I should hold off.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "portals_monitored": 52,
-      "apis_live": 12,
-      "status": "READY"
-    },
-    {
-      "lead_id": "RW-RLOT-073",
-      "letting_id": "TXDOI-MRF-CPT-29881",
-      "project_id": "TXDOI-MRF-CPT-29881",
-      "state_code": "TX",
-      "state": "TX",
-      "agency": "TX Department of Insurance & Commercial Payer TiC MRF",
-      "company_name": "Direct Orthopedic Care",
-      "first_name": "Revenue Cycle",
-      "license_or_dot_id": "NPI-1306842315",
-      "email": "billing@directorthocare.com",
-      "recipient_email": "billing@directorthocare.com",
-      "source_type": "website_html_mailto",
-      "source_url": "https://www.directorthocare.com/billing-inquiries/",
-      "dossier_url": "https://rubricward.com/lettings/project/txdoi-mrf-cpt-29881-dfw-txdoi-mrf-cpt-29881-dfw-uhc-bcbs-tx.html",
-      "compiler_url": "https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id=TXDOI-MRF-CPT-29881&state_code=TX&format=binary",
-      "subject": "TX commercial payer MRF & CPT 29881 / 27447 rate spread (Direct Orthopedic Care \u2014 NPI 1306842315)",
-      "body": "Hi Direct Orthopedic Care Revenue Cycle team,\n\nWe benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306842315).\n\nContracted tiers in this TX cohort sit 27.9% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\nBefore Direct Orthopedic Care's next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "step1_subject": "TX commercial payer MRF & CPT 29881 / 27447 rate spread (Direct Orthopedic Care \u2014 NPI 1306842315)",
-      "step1_body_zero_link": "Hi Direct Orthopedic Care Revenue Cycle team,\n\nWe benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in TX for CPT 29881 Knee Arthroscopy & CPT 27447 Total Knee Arthroplasty (NPI 1306842315).\n\nContracted tiers in this TX cohort sit 27.9% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\nBefore Direct Orthopedic Care's next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
-      "step2_body_dossier_link": "Hi Direct Orthopedic Care team,\n\nQuick follow-up \u2014 want me to send the TX CMS TiC MRF allowed-amount spread (CPT 29881 / 27447) and 6-file Word/Excel ERISA & NSA IDR appeal package for Direct Orthopedic Care?\n\nReply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me know if I should hold off.\n\nBest,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk",
       "portals_monitored": 52,
       "apis_live": 12,
       "status": "READY"
@@ -11056,7 +10981,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-087",
+      "lead_id": "RW-RLOT-086",
       "letting_id": "TXDOI-MRF-CPT-52356",
       "project_id": "TXDOI-MRF-CPT-52356",
       "state_code": "TX",
@@ -11081,7 +11006,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-088",
+      "lead_id": "RW-RLOT-087",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -11206,7 +11131,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-084",
+      "lead_id": "RW-RLOT-083",
       "letting_id": "TXDOI-MRF-CPT-66984",
       "project_id": "TXDOI-MRF-CPT-66984",
       "state_code": "TX",
@@ -11231,7 +11156,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-100",
+      "lead_id": "RW-RLOT-099",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -11631,7 +11556,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-094",
+      "lead_id": "RW-RLOT-093",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -11806,7 +11731,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-093",
+      "lead_id": "RW-RLOT-092",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -11906,7 +11831,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-074",
+      "lead_id": "RW-RLOT-073",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -11956,7 +11881,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-098",
+      "lead_id": "RW-RLOT-097",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -12356,7 +12281,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-092",
+      "lead_id": "RW-RLOT-091",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -13106,7 +13031,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-089",
+      "lead_id": "RW-RLOT-088",
       "letting_id": "UTDOI-MRF-CPT-99285",
       "project_id": "UTDOI-MRF-CPT-99285",
       "state_code": "UT",
@@ -13181,7 +13106,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-090",
+      "lead_id": "RW-RLOT-089",
       "letting_id": "UTDOI-MRF-CPT-66984",
       "project_id": "UTDOI-MRF-CPT-66984",
       "state_code": "UT",
@@ -13231,7 +13156,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-076",
+      "lead_id": "RW-RLOT-075",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -13256,7 +13181,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-091",
+      "lead_id": "RW-RLOT-090",
       "letting_id": "UTDOI-MRF-CPT-29881",
       "project_id": "UTDOI-MRF-CPT-29881",
       "state_code": "UT",
@@ -13506,7 +13431,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-078",
+      "lead_id": "RW-RLOT-077",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -13731,7 +13656,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-082",
+      "lead_id": "RW-RLOT-081",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -13756,7 +13681,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-104",
+      "lead_id": "RW-RLOT-103",
       "letting_id": "WYDOI-MRF-CPT-29881",
       "project_id": "WYDOI-MRF-CPT-29881",
       "state_code": "WY",
@@ -13856,7 +13781,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-095",
+      "lead_id": "RW-RLOT-094",
       "letting_id": "VADOI-MRF-CPT-29881",
       "project_id": "VADOI-MRF-CPT-29881",
       "state_code": "VA",
@@ -14056,7 +13981,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-103",
+      "lead_id": "RW-RLOT-102",
       "letting_id": "WVDOI-MRF-CPT-29881",
       "project_id": "WVDOI-MRF-CPT-29881",
       "state_code": "WV",
@@ -14256,7 +14181,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-086",
+      "lead_id": "RW-RLOT-085",
       "letting_id": "TXDOI-MRF-CPT-63030",
       "project_id": "TXDOI-MRF-CPT-63030",
       "state_code": "TX",
@@ -14331,7 +14256,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-101",
+      "lead_id": "RW-RLOT-100",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -14406,7 +14331,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-105",
+      "lead_id": "RW-RLOT-104",
       "letting_id": "WYDOI-MRF-CPT-29881",
       "project_id": "WYDOI-MRF-CPT-29881",
       "state_code": "WY",
@@ -14581,7 +14506,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-080",
+      "lead_id": "RW-RLOT-079",
       "letting_id": "TXDOI-MRF-CPT-99285",
       "project_id": "TXDOI-MRF-CPT-99285",
       "state_code": "TX",
@@ -14631,7 +14556,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-085",
+      "lead_id": "RW-RLOT-084",
       "letting_id": "TXDOI-MRF-CPT-88305",
       "project_id": "TXDOI-MRF-CPT-88305",
       "state_code": "TX",
@@ -14906,7 +14831,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-102",
+      "lead_id": "RW-RLOT-101",
       "letting_id": "WIDOI-MRF-CPT-29881",
       "project_id": "WIDOI-MRF-CPT-29881",
       "state_code": "WI",
@@ -14956,7 +14881,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-096",
+      "lead_id": "RW-RLOT-095",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -15106,7 +15031,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-075",
+      "lead_id": "RW-RLOT-074",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -15231,7 +15156,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-083",
+      "lead_id": "RW-RLOT-082",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",
@@ -15406,7 +15331,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-099",
+      "lead_id": "RW-RLOT-098",
       "letting_id": "WADOI-MRF-CPT-29881",
       "project_id": "WADOI-MRF-CPT-29881",
       "state_code": "WA",
@@ -15481,7 +15406,7 @@
       "status": "READY"
     },
     {
-      "lead_id": "RW-RLOT-081",
+      "lead_id": "RW-RLOT-080",
       "letting_id": "TXDOI-MRF-CPT-29881",
       "project_id": "TXDOI-MRF-CPT-29881",
       "state_code": "TX",

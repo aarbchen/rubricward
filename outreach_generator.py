@@ -45,15 +45,34 @@ QUEUE_OUT_PATH = ROOT_DIR / "outbox_ready_queue.json"
 BLACKLIST_PATH = ROOT_DIR / "bounced_leads_blacklist.json"
 
 
-def _lead_inbox_priority(lead: Dict[str, Any]) -> tuple[int, str]:
+def _lead_inbox_priority(lead: Dict[str, Any]) -> tuple[float, int, str]:
     em = str(lead.get("email") or "").strip().lower()
     local = em.split("@", 1)[0] if "@" in em else ""
     fn = str(lead.get("first_name") or "").strip().lower()
+    st = str(lead.get("state") or "TX").strip().upper()
+    intel_weights = {"named_person": 1.0, "dept_desk": 0.9, "generic_info": 0.25}
+    cohort_bonus = 0.0
+    intel_file = ROOT_DIR / "learned_outbound_intelligence.json"
+    if intel_file.exists():
+        try:
+            intel_d = json.loads(intel_file.read_text(encoding="utf-8")) or {}
+            intel_weights.update(intel_d.get("adaptive_prefix_priority_weights") or {})
+            c_stats = (intel_d.get("cohort_stats") or {}).get(st) or {}
+            if int(c_stats.get("human_replies") or 0) > 0:
+                cohort_bonus = 0.15
+        except Exception:
+            pass
     if fn not in ("revenue cycle", "estimating", "capture", "info", "contact", "office", "sales", "billing", ""):
-        return (0, em)
-    if any(k in local for k in ("billing", "rcm", "managedcare", "insur", "claim", "business", "appeal", "coding")):
-        return (1, em)
-    return (2, em)
+        bucket = "named_person"
+        tier = 0
+    elif any(k in local for k in ("billing", "rcm", "managedcare", "insur", "claim", "business", "appeal", "coding")):
+        bucket = "dept_desk"
+        tier = 1
+    else:
+        bucket = "generic_info"
+        tier = 2
+    score = -(float(intel_weights.get(bucket, 0.5)) + cohort_bonus)
+    return (score, tier, em)
 
 
 def build_outreach_queue() -> List[Dict[str, Any]]:
