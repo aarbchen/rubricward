@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-11-03T11:39:43.529177+00:00",
+  "updated_at": "2026-11-03T18:42:58.776618+00:00",
   "campaign_id": "672de7d4-7ff6-42ec-be56-9b6ce8519e8c",
-  "recent_rendered_emails_audited": 49,
-  "recent_inbound_replies_detected": 1,
+  "recent_rendered_emails_audited": 50,
+  "recent_inbound_replies_detected": 0,
   "unrendered_template_tags_detected": 0,
   "prefix_delivery_stats": {
     "named_person": {
-      "clean": 91,
-      "bounced": 0
+      "clean": 88,
+      "bounced": 2
     },
     "dept_desk": {
       "clean": 26,
       "bounced": 0
     },
     "generic_info": {
-      "clean": 100,
+      "clean": 95,
       "bounced": 0
     }
   },
   "adaptive_prefix_priority_weights": {
-    "named_person": 1.0,
+    "named_person": 0.889,
     "dept_desk": 0.85,
     "generic_info": 0.5
   },
@@ -70,7 +70,7 @@
     },
     "TX": {
       "sent": 1,
-      "replies": 13
+      "replies": 16
     },
     "TN": {
       "sent": 1,
@@ -113,6 +113,42 @@
       "replies": 0
     },
     "NY": {
+      "sent": 1,
+      "replies": 0
+    },
+    "PA": {
+      "sent": 1,
+      "replies": 0
+    },
+    "NC": {
+      "sent": 1,
+      "replies": 0
+    },
+    "ME": {
+      "sent": 1,
+      "replies": 0
+    },
+    "WA": {
+      "sent": 1,
+      "replies": 0
+    },
+    "UT": {
+      "sent": 1,
+      "replies": 0
+    },
+    "SC": {
+      "sent": 1,
+      "replies": 0
+    },
+    "AL": {
+      "sent": 1,
+      "replies": 0
+    },
+    "OR": {
+      "sent": 1,
+      "replies": 0
+    },
+    "DC": {
       "sent": 1,
       "replies": 0
     }

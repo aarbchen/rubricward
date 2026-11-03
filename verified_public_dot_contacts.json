@@ -169,19 +169,6 @@
     "authorized_official_title": "Contract Manager"
   },
   {
-    "company_name": "Congress Orthopaedic Associates",
-    "email": "administrator@congressmedical.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1073893863",
-    "state": "CA",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.congressmedical.com/about/congress-medical-foundation.php",
-    "npi_number": "1073893863",
-    "taxonomy_desc": "Orthopaedic Surgery",
-    "authorized_official_name": "Adam Brooks",
-    "authorized_official_title": "President"
-  },
-  {
     "company_name": "Golden State Ortho & Spine",
     "email": "info@goldenstateortho.com",
     "first_name": "Revenue Cycle",
@@ -375,19 +362,6 @@
     "taxonomy_desc": "Durable Medical Equipment & Medical Supplies",
     "authorized_official_name": "Candace Palumbo",
     "authorized_official_title": "Credentialing Manager"
-  },
-  {
-    "company_name": "Pinnacle III",
-    "email": "info@pinnacleiii.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1942379136",
-    "state": "CO",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.pinnacleiii.com",
-    "npi_number": "1942379136",
-    "taxonomy_desc": "Orthopaedic Surgery, Orthopaedic Surgery of the Spine",
-    "authorized_official_name": "Amir Abtahi",
-    "authorized_official_title": "Physician"
   },
   {
     "company_name": "Rocky Mountain Gastroenterology",
@@ -724,19 +698,6 @@
     "source_type": "website_html_mailto",
     "source_url": "https://athensorthopedicclinic.com/contact/",
     "npi_number": "1366128936",
-    "taxonomy_desc": "Orthopaedic Surgery, Orthopaedic Trauma",
-    "authorized_official_name": "Francis Acquah",
-    "authorized_official_title": "Owner"
-  },
-  {
-    "company_name": "Atl Orthopedics Medical Group",
-    "email": "info@atlorthopedics.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1881085603",
-    "state": "GA",
-    "source_type": "website_html_mailto",
-    "source_url": "https://atlorthopedics.com/",
-    "npi_number": "1881085603",
     "taxonomy_desc": "Orthopaedic Surgery, Orthopaedic Trauma",
     "authorized_official_name": "Francis Acquah",
     "authorized_official_title": "Owner"
@@ -1355,19 +1316,6 @@
     "authorized_official_title": "Cfo"
   },
   {
-    "company_name": "Charlotte Eye Ear Nose & Throat",
-    "email": "trdavis@ceenta.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1104597350",
-    "state": "NC",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.ceenta.com/locations/southpark",
-    "npi_number": "1104597350",
-    "taxonomy_desc": "Orthopaedic Surgery",
-    "authorized_official_name": "Jim Bross",
-    "authorized_official_title": "President"
-  },
-  {
     "company_name": "Delaney Radiologists Wilmington",
     "email": "info@delaneyrad.com",
     "first_name": "Revenue Cycle",
@@ -1416,19 +1364,6 @@
     "source_url": "https://www.raleighortho.com/locations/cary-morrisville-performance-center/",
     "npi_number": "1720194820",
     "taxonomy_desc": "Orthopaedic Surgery",
-    "authorized_official_name": "Mary Long",
-    "authorized_official_title": "Sr Vp Medical Staff Relations"
-  },
-  {
-    "company_name": "Raleigh Radiology",
-    "email": "info@raleighrad.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1861260507",
-    "state": "NC",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.raleighrad.com",
-    "npi_number": "1861260507",
-    "taxonomy_desc": "Internal Medicine",
     "authorized_official_name": "Mary Long",
     "authorized_official_title": "Sr Vp Medical Staff Relations"
   },
@@ -2105,19 +2040,6 @@
     "authorized_official_title": "Owner"
   },
   {
-    "company_name": "Southeastern Spine Institute",
-    "email": "contact@southeasternspine.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1740995802",
-    "state": "SC",
-    "source_type": "website_html_mailto",
-    "source_url": "https://southeasternspine.com/contact/",
-    "npi_number": "1740995802",
-    "taxonomy_desc": "Family Medicine",
-    "authorized_official_name": "Todd Evans",
-    "authorized_official_title": "Cfo"
-  },
-  {
     "company_name": "American Esoteric Laboratories",
     "email": "clienthelpdesk@ael.com",
     "first_name": "Revenue Cycle",
@@ -2625,19 +2547,6 @@
     "authorized_official_title": "Cfo"
   },
   {
-    "company_name": "Advanced Spine And Pain Centers",
-    "email": "contact@advancedspine.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1023410792",
-    "state": "VA",
-    "source_type": "website_html_mailto",
-    "source_url": "https://advancedspine.com/",
-    "npi_number": "1023410792",
-    "taxonomy_desc": "Orthopaedic Surgery, Pediatric Orthopaedic Surgery",
-    "authorized_official_name": "Michael Lowery",
-    "authorized_official_title": "Controller"
-  },
-  {
     "company_name": "Bethesda Chevy Chase Orthopaedic Associates",
     "email": "cs@areaguides.com",
     "first_name": "Revenue Cycle",
@@ -2738,19 +2647,6 @@
     "source_url": "https://www.opaortho.com/about/",
     "npi_number": "1043256897",
     "taxonomy_desc": "Plastic Surgery, Surgery of the Hand",
-    "authorized_official_name": "Catherine Boelke",
-    "authorized_official_title": "Executive Director"
-  },
-  {
-    "company_name": "Spokane Eye Clinic",
-    "email": "directmessaging@spokaneeye.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1811445968",
-    "state": "WA",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.spokaneeye.com/about/referring-providers/",
-    "npi_number": "1811445968",
-    "taxonomy_desc": "Dermatology",
     "authorized_official_name": "Catherine Boelke",
     "authorized_official_title": "Executive Director"
   },

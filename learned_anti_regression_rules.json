@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-11-03T10:38:50.932915+00:00",
-  "total_rules": 43,
+  "total_rules": 44,
   "policy": "Silent detection -> Autonomous diagnosis & repair -> Rule codification -> Resolved-only Discord notification",
   "rules": [
     {
@@ -396,6 +396,17 @@
       "invariant_check": "verify_omniscient_auditor",
       "created_at": "2026-11-02T07:02:18.074032+00:00",
       "last_enforced_at": "2026-11-02T07:02:18.074032+00:00",
+      "times_triggered": 1
+    },
+    {
+      "rule_id": "RULE-026-BRANDED-STRIPE-CHECKOUT-ISOLATION",
+      "pillar": "Cross-Brand Isolation & Checkout Branding",
+      "root_cause": "Stripe `buy.stripe.com` Payment Links ignore per-brand `branding_settings` and render the global default SignalTender brand, and parent account `business_profile` fields leaked `SignalTender` into `payment_pages/init`.",
+      "fix_applied": "Banned `buy.stripe.com` across RubricWard, minted 8 branded `checkout.stripe.com/c/pay/cs_live_...` sessions with `display_name=RubricWard` and `background_color=#f2f9f8`, added `refreshLiveBrandedStripeLinks()`, set neutral parent `Apex B2B Cloud` on Stripe account, and added live `payment_pages/init` verification in `verify_rubricward_integrity.py`.",
+      "rule_statement": "Never use `buy.stripe.com` Payment Links in RubricWard; always use branded `checkout.stripe.com/c/pay/cs_live_...` sessions with `order_summary_display_name == 'RubricWard'` and zero `signaltender` strings in `payment_pages/init`.",
+      "invariant_check": "check_tier_value_prop_and_capture_moat_parity",
+      "created_at": "2026-11-03T19:00:00+00:00",
+      "last_enforced_at": "2026-11-03T19:00:00+00:00",
       "times_triggered": 1
     }
   ]

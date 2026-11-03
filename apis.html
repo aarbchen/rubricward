@@ -1275,7 +1275,7 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
           <button type="submit" class="w-full py-3 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Provision RubricWard Workspace &amp; API Key &rarr;</button>
-          <a id="checkout-modal-direct-stripe-link" href="https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-[#0F766E] hover:bg-[#071C21] text-white font-mono text-xs font-bold text-center transition">Complete Payment on Stripe &rarr;</a>
+          <a id="checkout-modal-direct-stripe-link" href="https://checkout.stripe.com/c/pay/cs_live_b1N6b82qvV2BN8qhghGEUPyIF9ICP7IXHuXUFqaMqgI00Cz0njCBRVl1W5#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-[#0F766E] hover:bg-[#071C21] text-white font-mono text-xs font-bold text-center transition">Complete Payment on Stripe &rarr;</a>
         </div>
       </form>
       <div id="checkout-modal-status" class="text-xs font-mono font-bold text-[#065F46]">Zero Lock-In &bull; Instant <code class="text-[#0F766E]">rw_live_...</code> API Key &amp; 6-File OpenXML (.DOCX + .XLSX) Access</div>
@@ -2307,15 +2307,42 @@
     window.BILLING_MODE = 'monthly';
     window.ACTIVE_CHECKOUT_TIER = 'tier2_monthly';
     window.RUBRICWARD_STRIPE_LINKS = {
-      tier1_monthly: 'https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q',
-      tier1_annual: 'https://buy.stripe.com/7sY7sKbD4e7VfJmgj27wA0r',
-      tier2_monthly: 'https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s',
-      tier2_annual: 'https://buy.stripe.com/bJeeVc7mOfbZ54I6Is7wA0t',
-      tier3_monthly: 'https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u',
-      tier3_annual: 'https://buy.stripe.com/9B64gyaz03th1SweaU7wA0v',
-      tier4_monthly: 'https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w',
-      tier4_annual: 'https://buy.stripe.com/7sY9ASaz03th1Sw8QA7wA0x'
+      tier1_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1MSisHNYwegSUQDFzb24tPp1uddpqUEc9LV1kVq1q3LJx9g2bx4BzXFBd#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier1_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1giRGPpNBu8Dftx1eP71st2wkyW5BW6K2C2VFo629D0HKLjTiF9t52kDa#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier2_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1N6b82qvV2BN8qhghGEUPyIF9ICP7IXHuXUFqaMqgI00Cz0njCBRVl1W5#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier2_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1OoxqkajgFoZXavkbhXh0hKywmCN9XIcGAzmTolkkZPG72G5VSzzip1e5#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier3_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1ZO7QN9P5SoNVIYdlYbQK6lX28RigNTDyvF2t43d6K5kXnKnbS2uhhEVD#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier3_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1r58UabGL8K9ScaH6PO7p1pOoPNH9Sxdh9gDquk1GthfkdMffsH358Wu3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier4_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1sckR6D249t8Xk3VHi7uQL4B4dAu8sbsRA7Y199wE9v5WNba80YeX0vzj#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
+      tier4_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1xxBGQZgAaRBImF1vEl8yKRAFMqA1kLmyHTPAUSz4A7MdAmnr9ods0HLL#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl'
     };
+
+    
+    function refreshLiveBrandedStripeLinks() {
+      if (typeof fetch !== 'function') return;
+      const isAnn = window.BILLING_MODE === 'annual';
+      const bill = isAnn ? 'annual' : 'monthly';
+      ['tier1', 'tier2', 'tier3', 'tier4'].forEach(function(pl, idx) {
+        const key = pl + '_' + bill;
+        fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ brand: 'rubricward', plan: pl, billing: bill })
+        }).then(function(r) { return r && r.ok ? r.json() : null; }).then(function(d) {
+          if (d && d.checkout_url && d.checkout_url.indexOf('checkout.stripe.com') !== -1) {
+            window.RUBRICWARD_STRIPE_LINKS[key] = d.checkout_url;
+            const n = idx + 1;
+            const sl = document.getElementById('stripe-link-tier' + n);
+            const btn = document.getElementById('btn-checkout-tier' + n);
+            if (sl) sl.setAttribute('href', d.checkout_url);
+            if (btn) btn.setAttribute('data-stripe-link', d.checkout_url);
+          }
+        }).catch(function() {});
+      });
+    }
+    if (typeof window !== 'undefined' && typeof setTimeout === 'function' && typeof fetch === 'function') {
+      setTimeout(refreshLiveBrandedStripeLinks, 50);
+    }
 
     function setCheckoutBilling(mode) {
       window.BILLING_MODE = mode === 'annual' ? 'annual' : 'monthly';
@@ -2373,20 +2400,21 @@
       if (sl2) sl2.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k2]);
       if (sl3) sl3.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k3]);
       if (sl4) sl4.setAttribute('href', window.RUBRICWARD_STRIPE_LINKS[k4]);
+      try { refreshLiveBrandedStripeLinks(); } catch (e) {}
     }
 
     function openCamberCheckoutModal(tierKey) {
       closeTrustModals();
       window.ACTIVE_CHECKOUT_TIER = tierKey || 'tier2_monthly';
       const catalog = {
-        tier1_monthly: { name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$249 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q' },
-        tier1_annual: { name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$2,240 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://buy.stripe.com/7sY7sKbD4e7VfJmgj27wA0r' },
-        tier2_monthly: { name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$599 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s' },
-        tier2_annual: { name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$5,390 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://buy.stripe.com/bJeeVc7mOfbZ54I6Is7wA0t' },
-        tier3_monthly: { name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Monthly)', price: '$1,499 / month', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u' },
-        tier3_annual: { name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$13,490 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://buy.stripe.com/9B64gyaz03th1SweaU7wA0v' },
-        tier4_monthly: { name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,999 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w' },
-        tier4_annual: { name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$26,990 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://buy.stripe.com/7sY9ASaz03th1Sw8QA7wA0x' }
+        tier1_monthly: { name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$249 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1MSisHNYwegSUQDFzb24tPp1uddpqUEc9LV1kVq1q3LJx9g2bx4BzXFBd#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier1_annual: { name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$2,240 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1giRGPpNBu8Dftx1eP71st2wkyW5BW6K2C2VFo629D0HKLjTiF9t52kDa#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier2_monthly: { name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$599 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1N6b82qvV2BN8qhghGEUPyIF9ICP7IXHuXUFqaMqgI00Cz0njCBRVl1W5#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier2_annual: { name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$5,390 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1OoxqkajgFoZXavkbhXh0hKywmCN9XIcGAzmTolkkZPG72G5VSzzip1e5#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier3_monthly: { name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Monthly)', price: '$1,499 / month', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1ZO7QN9P5SoNVIYdlYbQK6lX28RigNTDyvF2t43d6K5kXnKnbS2uhhEVD#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier3_annual: { name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$13,490 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1r58UabGL8K9ScaH6PO7p1pOoPNH9Sxdh9gDquk1GthfkdMffsH358Wu3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier4_monthly: { name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,999 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1sckR6D249t8Xk3VHi7uQL4B4dAu8sbsRA7Y199wE9v5WNba80YeX0vzj#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' },
+        tier4_annual: { name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$26,990 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1xxBGQZgAaRBImF1vEl8yKRAFMqA1kLmyHTPAUSz4A7MdAmnr9ods0HLL#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }
       };
       const info = catalog[window.ACTIVE_CHECKOUT_TIER] || catalog.tier2_monthly;
       const modal = document.getElementById('rubricward-checkout-modal');
@@ -2439,7 +2467,7 @@
       const plan = parts[0] || 'tier2';
       const billing = parts[1] || 'monthly';
       const generatedKey = 'rw_live_' + btoa(email + ':' + tier).replace(/[^a-zA-Z0-9]/g, '').slice(0, 20).toLowerCase();
-      let resolvedCheckoutUrl = (window.RUBRICWARD_STRIPE_LINKS && window.RUBRICWARD_STRIPE_LINKS[tier]) || 'https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s';
+      let resolvedCheckoutUrl = (window.RUBRICWARD_STRIPE_LINKS && window.RUBRICWARD_STRIPE_LINKS[tier]) || 'https://checkout.stripe.com/c/pay/cs_live_b1N6b82qvV2BN8qhghGEUPyIF9ICP7IXHuXUFqaMqgI00Cz0njCBRVl1W5#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl';
       if (statusEl) statusEl.textContent = 'Provisioning RubricWard Workspace & Stripe Checkout Session via https://rubricward.com/v1/billing/create-checkout-session...';
       try {
         const resp = await fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/create-checkout-session', {
