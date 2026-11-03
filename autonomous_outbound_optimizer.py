@@ -264,14 +264,14 @@ def run_autonomous_outbound_optimizer(regenerate_local: bool = True) -> Dict[str
                 },
                 {
                     "type": "email",
-                    "delay": 2,
+                    "delay": 1,
                     "delay_unit": "days",
                     "pre_delay_unit": "days",
                     "variants": [{"subject": "Re: {{step1_subject}}", "body": "{{step2_body_dossier_link}}"}],
                 },
                 {
                     "type": "email",
-                    "delay": 3,
+                    "delay": 2,
                     "delay_unit": "days",
                     "pre_delay_unit": "days",
                     "variants": [{"subject": "Re: {{step1_subject}}", "body": step3_breakup}],
@@ -285,7 +285,7 @@ def run_autonomous_outbound_optimizer(regenerate_local: bool = True) -> Dict[str
             cdata = rc.json() or {}
             seqs = cdata.get("sequences") or []
             steps = (seqs[0].get("steps") or []) if seqs and isinstance(seqs[0], dict) else []
-            needs_seq_fix = len(steps) < 3
+            needs_seq_fix = len(steps) < 3 or int(steps[1].get('delay') or 99) > 1 or int(steps[2].get('delay') or 99) > 2
             for st_item in steps:
                 vars_list = st_item.get("variants") or []
                 if not vars_list or not str(vars_list[0].get("subject") or "").strip() or not str(vars_list[0].get("body") or "").strip():

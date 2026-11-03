@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-03T20:43:45.054210+00:00",
+  "updated_at": "2026-11-03T21:46:22.800421+00:00",
   "campaign_id": "672de7d4-7ff6-42ec-be56-9b6ce8519e8c",
-  "recent_rendered_emails_audited": 50,
+  "recent_rendered_emails_audited": 100,
   "recent_inbound_replies_detected": 0,
   "unrendered_template_tags_detected": 0,
   "prefix_delivery_stats": {
@@ -20,8 +20,8 @@
   },
   "adaptive_prefix_priority_weights": {
     "named_person": 1.0,
-    "dept_desk": 0.85,
-    "generic_info": 0.5
+    "dept_desk": 0.9,
+    "generic_info": 0.25
   },
   "cohort_stats": {
     "OK": {

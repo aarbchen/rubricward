@@ -1184,17 +1184,22 @@ def _score_scraped_email(em: str, dom: str, final_host_dom: str = "") -> int:
     if "patient" in local and not any(k in local for k in ("bill", "account", "financ", "claim", "insur", "rcm")):
         return -999
     score = 15 if dom_matched else 8
+    if is_receptionist_or_generic_inbox(em):
+        return max(2, score - 12)
+    matched_dept = False
     for idx, kw in enumerate((
         "estimat", "bid", "quote", "precon", "civil", "rcm", "billing", "businessoffice",
         "managedcare", "contract", "appeal", "credential", "coding", "claim", "insur",
-        "reimburs", "refer", "clinic", "asc", "project", "eng", "info", "contact",
-        "office", "admin", "sales", "inquir", "hello"
+        "reimburs", "refer", "clinic", "asc", "project", "eng", "sales"
     )):
         if kw in local:
-            score += max(4, 38 - idx * 2)
+            score += max(16, 40 - idx * 2)
+            matched_dept = True
             break
-    if "." in local:
-        score += 18
+    if "." in local or "_" in local:
+        score += 24
+    elif not matched_dept and local.isalpha() and 3 <= len(local) <= 18:
+        score += 14
     return score
 
 
@@ -1312,19 +1317,20 @@ async def _async_crawl_one(
         if not base_url:
             return None
 
-        if not found:
+        has_non_generic = any(not is_receptionist_or_generic_inbox(e) for e in found)
+        if not has_non_generic:
             discovered_urls = _discover_internal_contact_urls(home_html, base_url, dom, final_host_dom)
             fallback_paths = (
-                ("/contact", "/contact-us", "/billing")
+                ("/billing", "/patient-resources/billing", "/contact", "/contact-us", "/about", "/leadership")
                 if IS_RUBRICWARD_HARVESTER
-                else ("/contact", "/contact-us", "/estimating")
+                else ("/estimating", "/bids", "/contact", "/contact-us", "/about", "/leadership", "/team")
             )
             for fp in fallback_paths:
                 cand_u = f"{base_url}{fp}"
                 if cand_u not in discovered_urls:
                     discovered_urls.append(cand_u)
 
-            for sub_url in discovered_urls[:3]:
+            for sub_url in discovered_urls[:5]:
                 try:
                     r = await asyncio.wait_for(client.get(sub_url), timeout=2.2)
                     if r.status_code == 200 and r.text and len(r.text) > 250:
@@ -1332,7 +1338,7 @@ async def _async_crawl_one(
                             clean = re.sub(r"^[0-9-]+", "", raw_m.strip().lower().rstrip("."))
                             if _score_scraped_email(clean, dom, final_host_dom) > 0:
                                 found.setdefault(clean, str(r.url))
-                        if found:
+                        if any(not is_receptionist_or_generic_inbox(e) for e in found):
                             break
                 except Exception:
                     continue
@@ -1539,7 +1545,7 @@ def harvest_and_save_verified_dot_contacts(target_count: Optional[int] = None) -
                 else:
                     deferred_seeds.append(item)
 
-    if len(by_email) < effective_target:
+    if sum(1 for _em in by_email if not is_receptionist_or_generic_inbox(_em)) < effective_target:
         all_candidate_seeds.extend(discover_live_targets_from_public_apis(seen_seed_doms, max_new=45))
 
     if not all_candidate_seeds and deferred_seeds:
@@ -1593,7 +1599,7 @@ def harvest_and_save_verified_dot_contacts(target_count: Optional[int] = None) -
             except Exception:
                 pass
 
-    if all_candidate_seeds and len(by_email) < effective_target:
+    if all_candidate_seeds and sum(1 for _em in by_email if not is_receptionist_or_generic_inbox(_em)) < effective_target:
         try:
             asyncio.run(_run_batches())
         except Exception:

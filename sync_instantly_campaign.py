@@ -28,7 +28,7 @@ import requests
 from dotenv import load_dotenv
 
 from autonomous_mailbox_scaler import fetch_live_rubricward_instantly_accounts
-from harvest_verified_dot_contacts import load_signaltender_exclusion_sets
+from harvest_verified_dot_contacts import is_receptionist_or_generic_inbox, load_signaltender_exclusion_sets
 from outbound_mailer import compute_dynamic_daily_limit
 from outreach_generator import generate_outreach_queue
 
@@ -180,7 +180,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 },
                 {
                     "type": "email",
-                    "delay": 2,
+                    "delay": 1,
                     "delay_unit": "days",
                     "pre_delay_unit": "days",
                     "variants": [
@@ -192,7 +192,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 },
                 {
                     "type": "email",
-                    "delay": 3,
+                    "delay": 2,
                     "delay_unit": "days",
                     "pre_delay_unit": "days",
                     "variants": [
@@ -248,6 +248,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
         and l["email"].strip().lower().split("@", 1)[-1] not in st_excluded_domains
         and l["email"].strip().lower() not in bl_emails
         and l["email"].strip().lower().split("@", 1)[-1] not in bl_domains
+        and not is_receptionist_or_generic_inbox(l["email"])
     }
 
     purged_count = 0
@@ -373,7 +374,8 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
         return (0, 0)
 
     with ThreadPoolExecutor(max_workers=8) as pool:
-        results = list(pool.map(_sync_one_lead, leads))
+        instantly_priority_leads = [l for l in leads if not is_receptionist_or_generic_inbox(l['email'])]
+        results = list(pool.map(_sync_one_lead, instantly_priority_leads))
 
     uploaded = sum(x[0] for x in results)
     patched_count = sum(x[1] for x in results)

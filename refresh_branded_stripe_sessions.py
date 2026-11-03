@@ -208,7 +208,7 @@ def apply_camberdesk_branded_urls(urls: Dict[str, str]) -> None:
 
 
 if __name__ == "__main__":
-    rw, cd = generate_or_load_sessions(force_regenerate=False)
+    rw, cd = generate_or_load_sessions(force_regenerate=("--force" in sys.argv))
     if rw:
         apply_rubricward_branded_urls(rw)
     if cd:
