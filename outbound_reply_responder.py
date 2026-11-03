@@ -161,6 +161,12 @@ def classify_rcm_reply(reply_text: str, subject: str = "", from_email: str = "")
                 "away from my desk",
                 "auto-reply",
                 "automatic reply",
+                "automated response",
+                "this is an automated",
+                "do not reply to this",
+                "we have received your e-mail",
+                "we have received your email",
+                "our typical response time",
             )
         )
     ):
@@ -431,41 +437,67 @@ def _process_warm_zip_followups() -> int:
     return nudges_sent
 
 
-def _archive_and_purge_unsubscribed_lead(from_email: str) -> None:
-    clean_unsub = str(from_email or "").strip().lower()
-    if not clean_unsub or "@" not in clean_unsub:
+def _archive_and_purge_unsubscribed_lead(from_email: str, lead_email: str = "", body_text: str = "", is_bounce: bool = False) -> None:
+    raw_candidates = [from_email, lead_email]
+    if is_bounce:
+        raw_candidates.extend(re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", body_text or ""))
+    target_emails = set()
+    for cand in raw_candidates:
+        c_low = str(cand or "").strip().lower().strip(".,;<>()[]\"'")
+        if (
+            "@" in c_low
+            and not c_low.startswith(("mailer-daemon@", "postmaster@", "noreply-dmarc@", "bounces@", "noreply@", "no-reply@"))
+            and not any(own in c_low for own in ("signaltender", "camberdesk", "rubricward", "googlemail.com", "google.com"))
+        ):
+            target_emails.add(c_low)
+    if not target_emails:
         return
+    if is_bounce:
+        bl_path = ROOT_DIR / "bounced_leads_blacklist.json"
+        try:
+            bl_data: Dict[str, Any] = {"bounced_emails": [], "bounced_domains": []}
+            if bl_path.exists():
+                loaded_bl = json.loads(bl_path.read_text(encoding="utf-8"))
+                if isinstance(loaded_bl, dict):
+                    bl_data = loaded_bl
+            cur_bounced = {str(x).strip().lower() for x in (bl_data.get("bounced_emails") or []) if x}
+            if not target_emails.issubset(cur_bounced):
+                bl_data["bounced_emails"] = sorted(cur_bounced | target_emails)
+                bl_path.write_text(json.dumps(bl_data, indent=2), encoding="utf-8")
+        except Exception:
+            pass
     try:
         archived: List[str] = []
         if ARCHIVE_PATH.exists():
             raw = json.loads(ARCHIVE_PATH.read_text(encoding="utf-8"))
             if isinstance(raw, list):
                 archived = [str(x).strip().lower() for x in raw if x]
-        if clean_unsub not in archived:
-            archived.append(clean_unsub)
-            ARCHIVE_PATH.write_text(json.dumps(sorted(set(archived)), indent=2), encoding="utf-8")
+        merged_arch = sorted(set(archived) | target_emails)
+        if len(merged_arch) != len(set(archived)):
+            ARCHIVE_PATH.write_text(json.dumps(merged_arch, indent=2), encoding="utf-8")
     except Exception:
         pass
 
     if INSTANTLY_API_KEY and RUBRICWARD_CAMPAIGN_ID:
-        try:
-            headers = {"Authorization": f"Bearer {INSTANTLY_API_KEY}", "Content-Type": "application/json"}
-            l_resp = requests.post(
-                "https://api.instantly.ai/api/v2/leads/list",
-                headers=headers,
-                json={"campaign": RUBRICWARD_CAMPAIGN_ID, "search": clean_unsub, "limit": 20},
-                timeout=10,
-            )
-            if l_resp.status_code == 200:
-                for l_it in (l_resp.json().get("items") or []):
-                    if str(l_it.get("email") or "").strip().lower() == clean_unsub and l_it.get("id"):
-                        requests.delete(
-                            f"https://api.instantly.ai/api/v2/leads/{l_it['id']}",
-                            headers={"Authorization": f"Bearer {INSTANTLY_API_KEY}"},
-                            timeout=10,
-                        )
-        except Exception:
-            pass
+        for clean_unsub in sorted(target_emails):
+            try:
+                headers = {"Authorization": f"Bearer {INSTANTLY_API_KEY}", "Content-Type": "application/json"}
+                l_resp = requests.post(
+                    "https://api.instantly.ai/api/v2/leads/list",
+                    headers=headers,
+                    json={"campaign": RUBRICWARD_CAMPAIGN_ID, "search": clean_unsub, "limit": 20},
+                    timeout=10,
+                )
+                if l_resp.status_code == 200:
+                    for l_it in (l_resp.json().get("items") or []):
+                        if str(l_it.get("email") or "").strip().lower() == clean_unsub and l_it.get("id"):
+                            requests.delete(
+                                f"https://api.instantly.ai/api/v2/leads/{l_it['id']}",
+                                headers={"Authorization": f"Bearer {INSTANTLY_API_KEY}"},
+                                timeout=10,
+                            )
+            except Exception:
+                pass
 
 
 def run_reply_responder() -> Dict[str, Any]:
@@ -563,7 +595,12 @@ def run_reply_responder() -> Dict[str, Any]:
                                 pass
                 elif label in ("UNSUBSCRIBE", "BOUNCE"):
                     summary["unsubscribed"] += 1
-                    _archive_and_purge_unsubscribed_lead(from_em)
+                    _archive_and_purge_unsubscribed_lead(
+                        from_em,
+                        lead_email=str(item.get("lead") or ""),
+                        body_text=body_txt,
+                        is_bounce=(label == "BOUNCE"),
+                    )
                 processed.append(msg_id)
             PROCESSED_PATH.write_text(json.dumps(processed[-500:], indent=2), encoding="utf-8")
         summary["nudges_sent"] = _process_warm_zip_followups()

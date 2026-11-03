@@ -1180,7 +1180,7 @@ export default {{
       if (!matchedLet && allLettings.length > 0) {{
         matchedLet = allLettings[0];
       }}
-      const resolvedPid = (matchedLet && matchedLet.project_id) ? matchedLet.project_id : (reqPid || "TXDOI-MRF-CPT-29881-DFW");
+      const resolvedPid = reqPid || ((matchedLet && matchedLet.project_id) ? matchedLet.project_id : "TXDOI-MRF-CPT-29881-DFW");
       const resolvedState = (matchedLet && matchedLet.state_code) ? String(matchedLet.state_code).toUpperCase() : (reqState || "TX");
       const selectedZipB64 = PRECOMPILED_ZIPS_BY_PROJECT[resolvedPid.toUpperCase()] || PRECOMPILED_ZIPS_BY_PROJECT[resolvedState] || DEFAULT_ZIP_B64;
       const safeFilePid = resolvedPid.replace(/[^A-Za-z0-9_-]/g, "_");
@@ -1518,11 +1518,11 @@ export default {{
     <h1 class="text-2xl font-extrabold text-[#0A0D14] mt-1" id="pkg-heading">Downloading 6-File OpenXML Appeal &amp; IDR Arbitration Package (.ZIP)...</h1>
     <p class="text-sm text-[#1F2937] mt-2">Your native Microsoft Word (<span class="font-mono font-bold">.docx</span>) and Excel (<span class="font-mono font-bold">.xlsx</span> with live <span class="font-mono font-bold">=ROUND(D6*G6,2)</span> and <span class="font-mono font-bold">=SUM()</span> formulas) ERISA appeal &amp; Federal NSA IDR arbitration archive is ready.</p>
     <div class="mt-4 p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] text-xs font-mono space-y-1 text-[#0A0D14]">
-      <div>01 // Volume_I_ERISA_29CFR2560_and_ACA_45CFR147_Clinical_Medical_Necessity_Appeal_Brief.docx</div>
-      <div>02 // Volume_II_CMS_TiC_Commercial_Payer_MRF_Allowed_Amount_and_QPA_Benchmark_Model.xlsx</div>
-      <div>03 // Volume_III_Medicare_MPFS_RVU_GPCI_Locality_and_OPPS_ASC_Parity_Schedule.xlsx</div>
-      <div>04 // Volume_IV_Federal_NSA_45CFR149_510_Open_Negotiation_and_IDR_Arbitration_Packet.docx</div>
-      <div>05 // Volume_V_NCCI_PTP_Modifier_25_59_Unbundling_Defense_and_Prompt_Pay_Demand.docx</div>
+      <div>01 // Volume_I_ERISA_29CFR2560_Clinical_Appeal_Brief.docx</div>
+      <div>02 // Volume_II_No_Surprises_Act_45CFR149_IDR_Position_Paper.docx</div>
+      <div>03 // Volume_III_State_DOI_Prompt_Pay_Penalty_Demand.docx</div>
+      <div>04 // Volume_IV_TiC_Payer_MRF_Rate_Percentile_Model.xlsx</div>
+      <div>05 // Volume_V_Medicare_MPFS_ASC_GPCI_Repricing_Workbook.xlsx</div>
       <div>06 // 00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json</div>
     </div>
     <div class="mt-6 flex flex-wrap gap-3">
