@@ -133,3 +133,16 @@
 [2026-11-03 01:44:17 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
 [2026-11-03 01:59:23 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
 [2026-11-03 02:01:54 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
+
+=== ARCHIVED & RESOLVED AT 2026-11-03 02:11:00 UTC (1 lines) ===
+[2026-11-03 02:10:52 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
+
+=== ARCHIVED & RESOLVED AT 2026-11-03 02:35:15 UTC (2 lines) ===
+[2026-11-03 02:26:06 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
+[2026-11-03 02:35:05 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
+
+=== ARCHIVED & RESOLVED AT 2026-11-03 03:35:42 UTC (4 lines) ===
+[2026-11-03 02:50:22 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
+[2026-11-03 03:05:26 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
+[2026-11-03 03:20:30 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'
+[2026-11-03 03:35:34 UTC] [ERROR] [outbound_reply_responder.py] Reply polling note: 'dict' object has no attribute 'append'

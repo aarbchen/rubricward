@@ -178,9 +178,9 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     usd: 249,
     name: "Tier 1 // ClaimWire Pro ($249/mo)",
     product_id: "prod_VY7S2Xtq7uxth3",
-    price_id: "price_1UX1DrCGhMI1Ijip9ii9DAJJ",
+    price_id: "price_1UXZSgCGhMI1IjipKtizXJYQ",
     payment_link_id: "plink_1UX1DrCGhMI1IjipaBSrWZt2",
-    url: "https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+    url: "https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q",
     zip_compiler_included: false,
   }},
   tier1_annual: {{
@@ -190,9 +190,9 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     usd: 2240,
     name: "Tier 1 // ClaimWire Pro ($2,240/yr — 2 Months Free)",
     product_id: "prod_VY7S2Xtq7uxth3",
-    price_id: "price_1UX1DsCGhMI1IjipZTHNJCnb",
+    price_id: "price_1UXZSiCGhMI1Ijip3Pb4u9WW",
     payment_link_id: "plink_1UX1DsCGhMI1IjipDBRZVMW3",
-    url: "https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+    url: "https://buy.stripe.com/7sY7sKbD4e7VfJmgj27wA0r",
     zip_compiler_included: false,
   }},
   tier2_monthly: {{
@@ -202,9 +202,9 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     usd: 599,
     name: "Tier 2 // RubricWard Autopilot ($599/mo)",
     product_id: "prod_VY7Scll5eScNEe",
-    price_id: "price_1UX1DtCGhMI1IjiplKs9mqqj",
+    price_id: "price_1UXZSkCGhMI1IjiplZtv2IfA",
     payment_link_id: "plink_1UX1DuCGhMI1Ijip970Sdvax",
-    url: "https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+    url: "https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s",
     zip_compiler_included: true,
   }},
   tier2_annual: {{
@@ -214,9 +214,9 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     usd: 5390,
     name: "Tier 2 // RubricWard Autopilot ($5,390/yr — Save $1,798/yr)",
     product_id: "prod_VY7Scll5eScNEe",
-    price_id: "price_1UX1DuCGhMI1IjipvoX6LqRg",
+    price_id: "price_1UXZSmCGhMI1IjipWjvgLddS",
     payment_link_id: "plink_1UX1DvCGhMI1IjiptIVmMD0J",
-    url: "https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+    url: "https://buy.stripe.com/bJeeVc7mOfbZ54I6Is7wA0t",
     zip_compiler_included: true,
   }},
   tier3_monthly: {{
@@ -228,7 +228,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     product_id: "prod_VY7SAl5NeCG5lL",
     price_id: "price_1UX1DvCGhMI1IjipJermub29",
     payment_link_id: "plink_1UX1DwCGhMI1IjipOFjtfx6f",
-    url: "https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+    url: "https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u",
     zip_compiler_included: true,
   }},
   tier3_annual: {{
@@ -238,9 +238,9 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     usd: 13490,
     name: "Tier 3 // 1-Click 6-File .ZIP Appeal & IDR Compiler ($13,490/yr — Save $4,498/yr)",
     product_id: "prod_VY7SAl5NeCG5lL",
-    price_id: "price_1UX1DwCGhMI1Ijipt8YrWKjX",
+    price_id: "price_1UXZSqCGhMI1Ijip81RHV6JM",
     payment_link_id: "plink_1UX1DxCGhMI1IjipuaS3ChAK",
-    url: "https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+    url: "https://buy.stripe.com/9B64gyaz03th1SweaU7wA0v",
     zip_compiler_included: true,
   }},
   tier4_monthly: {{
@@ -250,9 +250,9 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     usd: 2999,
     name: "Tier 4 // Enterprise RCM & Practice ERP OEM Suite ($2,999/mo)",
     product_id: "prod_VY7SG4WSmA0rgJ",
-    price_id: "price_1UX1DyCGhMI1IjipzoXYNULY",
+    price_id: "price_1UXZSsCGhMI1Ijip2gKfcjte",
     payment_link_id: "plink_1UX1DyCGhMI1IjipB8z3q5Eu",
-    url: "https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+    url: "https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w",
     zip_compiler_included: true,
   }},
   tier4_annual: {{
@@ -262,9 +262,9 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     usd: 26990,
     name: "Tier 4 // Enterprise RCM & Practice ERP OEM Suite ($26,990/yr — Save $8,998/yr)",
     product_id: "prod_VY7SG4WSmA0rgJ",
-    price_id: "price_1UX1DyCGhMI1IjipyDtDW5iE",
+    price_id: "price_1UXZSvCGhMI1IjipK7SYyQeZ",
     payment_link_id: "plink_1UX1DzCGhMI1Ijipqx1ysQPF",
-    url: "https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+    url: "https://buy.stripe.com/7sY9ASaz03th1Sw8QA7wA0x",
     zip_compiler_included: true,
   }},
 }};
@@ -1396,6 +1396,14 @@ export default {{
     telem_dir.mkdir(parents=True, exist_ok=True)
     (telem_dir / "index.html").write_text(json.dumps({"status": "ok", "open_count": 0, "errors": []}, indent=2), encoding="utf-8")
 
+    mrf_live_dir = ROOT_DIR / "v1" / "mrf-disparities" / "live"
+    mrf_live_dir.mkdir(parents=True, exist_ok=True)
+    (mrf_live_dir / "index.html").write_text(json.dumps(lettings_seed, indent=2), encoding="utf-8")
+
+    lettings_live_dir = ROOT_DIR / "v1" / "lettings" / "live"
+    lettings_live_dir.mkdir(parents=True, exist_ok=True)
+    (lettings_live_dir / "index.html").write_text(json.dumps(lettings_seed, indent=2), encoding="utf-8")
+
     mcp_dir = ROOT_DIR / "mcp"
     mcp_dir.mkdir(parents=True, exist_ok=True)
     (mcp_dir / "index.html").write_text(json.dumps({
@@ -1417,19 +1425,19 @@ export default {{
         "tier_name": "Tier 2 // RubricWard Autopilot ($599/mo)",
         "amount_usd": 599,
         "product_id": "prod_VY7Scll5eScNEe",
-        "price_id": "price_1UX1DtCGhMI1IjiplKs9mqqj",
+        "price_id": "price_1UXZSkCGhMI1IjiplZtv2IfA",
         "payment_link_id": "plink_1UX1DuCGhMI1Ijip970Sdvax",
-        "base_checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
-        "checkout_url": "https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+        "base_checkout_url": "https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s",
+        "checkout_url": "https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s",
         "links": {
-            "tier1_monthly": "https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
-            "tier1_annual": "https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
-            "tier2_monthly": "https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
-            "tier2_annual": "https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
-            "tier3_monthly": "https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
-            "tier3_annual": "https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
-            "tier4_monthly": "https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
-            "tier4_annual": "https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl",
+            "tier1_monthly": "https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q",
+            "tier1_annual": "https://buy.stripe.com/7sY7sKbD4e7VfJmgj27wA0r",
+            "tier2_monthly": "https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s",
+            "tier2_annual": "https://buy.stripe.com/bJeeVc7mOfbZ54I6Is7wA0t",
+            "tier3_monthly": "https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u",
+            "tier3_annual": "https://buy.stripe.com/9B64gyaz03th1SweaU7wA0v",
+            "tier4_monthly": "https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w",
+            "tier4_annual": "https://buy.stripe.com/7sY9ASaz03th1Sw8QA7wA0x",
         },
         "portals_included": 52,
         "states_included": 50,
@@ -1453,20 +1461,20 @@ export default {{
     <h1 class="text-xl font-extrabold text-[#0A0D14]" id="checkout-heading">Redirecting to RubricWard Stripe Checkout...</h1>
     <p class="text-xs font-medium text-[#111827]">Instant <code class="font-mono font-bold text-[#059669]">rw_live_...</code> API &amp; MCP Key provisioning across all 50 U.S. State Commercial Payer TiC MRFs + CMS MPFS/OPPS + Federal NSA IDR.</p>
     <div>
-      <a id="direct-stripe-btn" href="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" class="inline-block px-5 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#059669] text-white font-mono text-xs font-bold transition">Continue to Stripe Checkout &rarr;</a>
+      <a id="direct-stripe-btn" href="https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s" class="inline-block px-5 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#059669] text-white font-mono text-xs font-bold transition">Continue to Stripe Checkout &rarr;</a>
     </div>
   </div>
   <script>
     (function() {
       const links = {
-        tier1_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-        tier1_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-        tier2_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-        tier2_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-        tier3_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-        tier3_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-        tier4_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-        tier4_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl'
+        tier1_monthly: 'https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q',
+        tier1_annual: 'https://buy.stripe.com/7sY7sKbD4e7VfJmgj27wA0r',
+        tier2_monthly: 'https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s',
+        tier2_annual: 'https://buy.stripe.com/bJeeVc7mOfbZ54I6Is7wA0t',
+        tier3_monthly: 'https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u',
+        tier3_annual: 'https://buy.stripe.com/9B64gyaz03th1SweaU7wA0v',
+        tier4_monthly: 'https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w',
+        tier4_annual: 'https://buy.stripe.com/7sY9ASaz03th1Sw8QA7wA0x'
       };
       const qs = new URLSearchParams(window.location.search || '');
       const rawPlan = (qs.get('plan') || qs.get('tier') || 'tier2').toLowerCase();
@@ -1479,7 +1487,7 @@ export default {{
       const btn = document.getElementById('direct-stripe-btn');
       if (btn) btn.setAttribute('href', target);
       const ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
-      const timer = ctrl ? setTimeout(function() { ctrl.abort(); }, 2500) : null;
+      const timer = ctrl ? setTimeout(function() { ctrl.abort(); }, 8000) : null;
       fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -628,8 +628,8 @@ def build_social_and_favicon_head(
                     "applicationCategory": "BusinessApplication",
                     "operatingSystem": "Web, REST API, Model Context Protocol (MCP)",
                     "offers": [
-                        {"@type": "Offer", "name": "Tier 1 ClaimWire Pro", "price": "199.00", "priceCurrency": "USD"},
-                        {"@type": "Offer", "name": "Tier 2 RubricWard Autopilot", "price": "499.00", "priceCurrency": "USD"},
+                        {"@type": "Offer", "name": "Tier 1 ClaimWire Pro", "price": "249.00", "priceCurrency": "USD"},
+                        {"@type": "Offer", "name": "Tier 2 RubricWard Autopilot", "price": "599.00", "priceCurrency": "USD"},
                         {"@type": "Offer", "name": "Tier 3 6-File .ZIP Appeal & IDR Compiler", "price": "1499.00", "priceCurrency": "USD"},
                     ],
                 },
@@ -1268,7 +1268,7 @@ def build_site_files() -> None:
         hcss_heavybid: {{
           blueprint_id: 'rubricward_epic_waystar_mrf_v1',
           target_system: 'Epic Resolute / Waystar Contract Modeling',
-          endpoints_used: ['/v1/model/dot-unit-bid-tabs', '/v1/calculate/davis-bacon-prevailing-wage'],
+          endpoints_used: ['/v1/model/tic-payer-mrf-rates', '/v1/calculate/medicare-mpfs-rvu-gpci'],
           field_mapping: {{
             cpt_drg_code: 'ContractModel.ProcedureCode',
             mrf_75th_pct_usd: 'ContractModel.TargetAllowedAmount',
@@ -1414,10 +1414,10 @@ def build_site_files() -> None:
 
     function switchOverviewProductTab(stageIdx) {{
       const stages = [
-        {{ title: 'Stage 01 // 52-Portal Commercial Payer MRF & Federal NSA IDR Ingestion (API #04)', detail: 'Normalizes commercial payer TiC MRF rate-disparity cohorts, CMS Federal NSA IDR arbitration benchmarks, and State DOI prompt-pay rules across all 50 U.S. States.', code: 'GET /v1/lettings/live -> 52 Portals Normalized • Zero $25K Consultant Lock-In' }},
-        {{ title: 'Stage 02 // Payer Clinical Policy Bulletin (CPB) & LCD/NCD Shredder (API #01)', detail: 'Extracts every prior-authorization prerequisite, conservative therapy step gate, NCCI Modifier 25/59 rule, and timely-filing deadline from payer policy PDFs.', code: 'POST /v1/shred/csi-masterformat -> Prior-Auth Matrix + Timely-Filing Window' }},
-        {{ title: 'Stage 03 // Commercial Payer TiC MRF & QPA Rate Modeler (API #02 & #11)', detail: 'Benchmarks CPT, HCPCS, APC, and MS-DRG codes against 25th, 50th (Median QPA), and 75th percentile commercial payer MRF negotiated rates and peer EIN/NPI spreads.', code: 'POST /v1/model/dot-unit-bid-tabs -> MRF 25th / Median QPA / 75th-Pct Target' }},
-        {{ title: 'Stage 04 // Medicare MPFS RVU/GPCI, NCCI & ERISA 29 CFR 2560 Audit (API #03/#05/#06)', detail: 'Computes county-specific Medicare MPFS RVU/GPCI baselines, audits CMS NCCI PTP bundling edits, and generates statutory ERISA 29 CFR 2560.503-1 appeal briefs.', code: 'POST /v1/calculate/davis-bacon-prevailing-wage -> Locality MPFS + ASC Rate' }},
+        {{ title: 'Stage 01 // 52-Portal Commercial Payer MRF & Federal NSA IDR Ingestion (API #04)', detail: 'Normalizes commercial payer TiC MRF rate-disparity cohorts, CMS Federal NSA IDR arbitration benchmarks, and State DOI prompt-pay rules across all 50 U.S. States.', code: 'GET /v1/mrf-disparities/live -> 52 Portals Normalized • Zero $25K Consultant Lock-In' }},
+        {{ title: 'Stage 02 // Payer Clinical Policy Bulletin (CPB) & LCD/NCD Shredder (API #01)', detail: 'Extracts every prior-authorization prerequisite, conservative therapy step gate, NCCI Modifier 25/59 rule, and timely-filing deadline from payer policy PDFs.', code: 'POST /v1/shred/cpb-lcd-medical-policy -> Prior-Auth Matrix + Timely-Filing Window' }},
+        {{ title: 'Stage 03 // Commercial Payer TiC MRF & QPA Rate Modeler (API #02 & #11)', detail: 'Benchmarks CPT, HCPCS, APC, and MS-DRG codes against 25th, 50th (Median QPA), and 75th percentile commercial payer MRF negotiated rates and peer EIN/NPI spreads.', code: 'POST /v1/model/tic-payer-mrf-rates -> MRF 25th / Median QPA / 75th-Pct Target' }},
+        {{ title: 'Stage 04 // Medicare MPFS RVU/GPCI, NCCI & ERISA 29 CFR 2560 Audit (API #03/#05/#06)', detail: 'Computes county-specific Medicare MPFS RVU/GPCI baselines, audits CMS NCCI PTP bundling edits, and generates statutory ERISA 29 CFR 2560.503-1 appeal briefs.', code: 'POST /v1/calculate/medicare-mpfs-rvu-gpci -> Locality MPFS + ASC Rate' }},
         {{ title: 'Stage 05 // 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package Compiler', detail: 'Compiles all 5 volumes (Word CPB/ERISA/IDR briefs + Excel TiC MRF & MPFS models with live =SUM() and =ROUND(D6*G6,2) formulas) + JSON manifest into a single .ZIP archive.', code: 'GET /v1/camber-autopilot/compile-bid-package?format=binary -> 6-File .ZIP Archive' }}
       ];
       const s = stages[stageIdx] || stages[0];
@@ -1606,14 +1606,14 @@ def build_site_files() -> None:
     window.BILLING_MODE = 'monthly';
     window.ACTIVE_CHECKOUT_TIER = 'tier2_monthly';
     window.RUBRICWARD_STRIPE_LINKS = {{
-      tier1_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-      tier1_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-      tier2_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-      tier2_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-      tier3_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-      tier3_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-      tier4_monthly: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl',
-      tier4_annual: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl'
+      tier1_monthly: 'https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q',
+      tier1_annual: 'https://buy.stripe.com/7sY7sKbD4e7VfJmgj27wA0r',
+      tier2_monthly: 'https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s',
+      tier2_annual: 'https://buy.stripe.com/bJeeVc7mOfbZ54I6Is7wA0t',
+      tier3_monthly: 'https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u',
+      tier3_annual: 'https://buy.stripe.com/9B64gyaz03th1SweaU7wA0v',
+      tier4_monthly: 'https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w',
+      tier4_annual: 'https://buy.stripe.com/7sY9ASaz03th1Sw8QA7wA0x'
     }};
 
     function setCheckoutBilling(mode) {{
@@ -1678,14 +1678,14 @@ def build_site_files() -> None:
       closeTrustModals();
       window.ACTIVE_CHECKOUT_TIER = tierKey || 'tier2_monthly';
       const catalog = {{
-        tier1_monthly: {{ name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$249 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier1_annual: {{ name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$2,240 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1fkUSWJSCwuCB6EfwWCgnYd5x9rJl6dv7NyrX9nFQTkgZOUdHJfUne9j0#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier2_monthly: {{ name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$599 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier2_annual: {{ name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$5,390 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1HE7wxRg0nDoGbIjCw4575ciWGpkUXAQ2GEKee8MmoAHscRbAlDcS4hBI#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier3_monthly: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Monthly)', price: '$1,499 / month', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier3_annual: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$13,490 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1vdRKD1mbHjOFNZy88aixXhBwQZPvEaCeHALMjsRWPi9PR7pgwsJoOJE3#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier4_monthly: {{ name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,999 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }},
-        tier4_annual: {{ name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$26,990 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://checkout.stripe.com/c/pay/cs_live_b1kIUEBWl68HtbKRedTgmPBjQAHDYK5u83xllf9zMBcYo1W8JJJy3FTjTn#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl' }}
+        tier1_monthly: {{ name: 'Tier 1 // ClaimWire Pro (Monthly)', price: '$249 / month', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q' }},
+        tier1_annual: {{ name: 'Tier 1 // ClaimWire Pro (Annual — 2 Months Free)', price: '$2,240 / year', desc: 'Real-time 50-State Commercial Payer TiC MRF & CMS NSA IDR alerts + peer EIN/NPI tracking.', stripeUrl: 'https://buy.stripe.com/7sY7sKbD4e7VfJmgj27wA0r' }},
+        tier2_monthly: {{ name: 'Tier 2 // RubricWard Autopilot (Monthly)', price: '$599 / month', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s' }},
+        tier2_annual: {{ name: 'Tier 2 // RubricWard Autopilot (Annual — 2 Months Free)', price: '$5,390 / year', desc: 'Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA appeals & all 12 APIs.', stripeUrl: 'https://buy.stripe.com/bJeeVc7mOfbZ54I6Is7wA0t' }},
+        tier3_monthly: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Monthly)', price: '$1,499 / month', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u' }},
+        tier3_annual: {{ name: 'Tier 3 // 6-File .ZIP Claim & IDR Compiler (Annual — 2 Months Free)', price: '$13,490 / year', desc: 'Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live Excel formulas) Claim & IDR Package compilations + dedicated MCP.', stripeUrl: 'https://buy.stripe.com/9B64gyaz03th1SweaU7wA0v' }},
+        tier4_monthly: {{ name: 'Tier 4 // Health System & RCM OEM License (Monthly)', price: '$2,999 / month', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w' }},
+        tier4_annual: {{ name: 'Tier 4 // Health System & RCM OEM License (Annual — 2 Months Free)', price: '$26,990 / year', desc: 'Multi-TIN MSO rate intelligence, Epic/Athena/Waystar RCM webhook pipes, custom SLA & unlimited team seats.', stripeUrl: 'https://buy.stripe.com/7sY9ASaz03th1Sw8QA7wA0x' }}
       }};
       const info = catalog[window.ACTIVE_CHECKOUT_TIER] || catalog.tier2_monthly;
       const modal = document.getElementById('rubricward-checkout-modal');
@@ -1738,7 +1738,7 @@ def build_site_files() -> None:
       const plan = parts[0] || 'tier2';
       const billing = parts[1] || 'monthly';
       const generatedKey = 'rw_live_' + btoa(email + ':' + tier).replace(/[^a-zA-Z0-9]/g, '').slice(0, 20).toLowerCase();
-      let resolvedCheckoutUrl = (window.RUBRICWARD_STRIPE_LINKS && window.RUBRICWARD_STRIPE_LINKS[tier]) || 'https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl';
+      let resolvedCheckoutUrl = (window.RUBRICWARD_STRIPE_LINKS && window.RUBRICWARD_STRIPE_LINKS[tier]) || 'https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s';
       if (statusEl) statusEl.textContent = 'Provisioning RubricWard Workspace & Stripe Checkout Session via https://rubricward.com/v1/billing/create-checkout-session...';
       try {{
         const resp = await fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/create-checkout-session', {{
@@ -2339,7 +2339,7 @@ def build_site_files() -> None:
       const tierMap = {{
         tier_4: {{
           tier: 'tier_4',
-          tier_label: 'TIER 4 // ENTERPRISE OEM & PAYER MRF VAULT ($2,499/MO)',
+          tier_label: 'TIER 4 // ENTERPRISE OEM & PAYER MRF VAULT ($2,999/MO)',
           quota_label: '50,000 API Calls/Mo + Unlimited 6-File .ZIP Compilations + 50-State Historical Vault',
           api_key: 'rw_live_admin_tier4_oem_99a4f2c1b0e7d6a3'
         }},
@@ -2351,13 +2351,13 @@ def build_site_files() -> None:
         }},
         tier_2: {{
           tier: 'tier_2',
-          tier_label: 'TIER 2 // RUBRICWARD AUTOPILOT ($499/MO)',
+          tier_label: 'TIER 2 // RUBRICWARD AUTOPILOT ($599/MO)',
           quota_label: '2,500 API Calls/Mo Across All 12 Endpoints + Pre-Modeled Payer MRF Dossiers & MPFS Schedules',
           api_key: 'rw_live_admin_tier2_auto_77c2d0e9b8a5e4a1'
         }},
         tier_1: {{
           tier: 'tier_1',
-          tier_label: 'TIER 1 // CLAIMWIRE PRO ($199/MO)',
+          tier_label: 'TIER 1 // CLAIMWIRE PRO ($249/MO)',
           quota_label: 'Real-Time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR Alerts + Peer EIN Tracking',
           api_key: 'rw_live_admin_tier1_wire_66d1c9f8a7b4d3f0'
         }}
@@ -2911,7 +2911,7 @@ def build_site_files() -> None:
       // 13. Plans, Pricing & REST/MCP API Keys
       if (/price|pricing|cost|how\\s+much|tier\\s*[1234]|plan|subscription|monthly|annual|mcp|api\\s+key|rw_live|cd_live|rest\\s+api/i.test(ql)) {{
         return {{
-          text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\\n• Tier 1 — ClaimWire Pro ($249/mo or $1,990/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\\n• Tier 2 — RubricWard Autopilot ($599/mo or $5,390/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $13,490/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\\n• Tier 4 — Health System & RCM OEM ($2,999/mo or $26,990/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
+          text: "RubricWard offers 4 self-serve tiers with instant activation, unlimited RCM team seats, and zero annual lock-in:\\n• Tier 1 — ClaimWire Pro ($249/mo or $2,240/yr): Real-time 52-Portal Commercial Payer TiC MRF & CMS NSA IDR alerts and peer EIN/NPI tracking.\\n• Tier 2 — RubricWard Autopilot ($599/mo or $5,390/yr — Recommended): Everything in Tier 1 PLUS full pre-modeled Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and a production rw_live_... API & MCP key (2,500 calls/mo across all 12 APIs).\\n• Tier 3 — 1-Click 6-File .ZIP Claim & IDR Compiler ($1,499/mo or $13,490/yr): Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package compilations with live Excel formulas and 10,000 API calls/mo.\\n• Tier 4 — Health System & RCM OEM ($2,999/mo or $26,990/yr): 50,000 OEM API calls/mo, multi-TIN MSO rate intelligence, and Epic/Athena/Waystar webhook pipes.",
           ctaLabel: 'Compare Pricing Plans',
           ctaFn: function() {{ closeTrustModals(); switchSpaView('checkout'); }},
           actions: [
@@ -3346,7 +3346,7 @@ def build_site_files() -> None:
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
           <button type="submit" class="w-full py-3 rounded-xl bg-[#071C21] hover:bg-[#0F766E] text-white font-mono text-xs font-bold transition">Provision RubricWard Workspace &amp; API Key &rarr;</button>
-          <a id="checkout-modal-direct-stripe-link" href="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-[#0F766E] hover:bg-[#071C21] text-white font-mono text-xs font-bold text-center transition">Complete Payment on Stripe &rarr;</a>
+          <a id="checkout-modal-direct-stripe-link" href="https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-[#0F766E] hover:bg-[#071C21] text-white font-mono text-xs font-bold text-center transition">Complete Payment on Stripe &rarr;</a>
         </div>
       </form>
       <div id="checkout-modal-status" class="text-xs font-mono font-bold text-[#065F46]">Zero Lock-In &bull; Instant <code class="text-[#0F766E]">rw_live_...</code> API Key &amp; 6-File OpenXML (.DOCX + .XLSX) Access</div>
@@ -3961,7 +3961,7 @@ def build_site_files() -> None:
             <div id="stage-step-title" class="text-sm font-mono font-extrabold text-[#071C21]">Stage 01 // 52-Portal Commercial Payer MRF &amp; Federal NSA IDR Ingestion (API #04)</div>
             <p id="stage-step-detail" class="text-xs font-medium text-[#111827]">Normalizes commercial payer TiC MRF rate-disparity cohorts, CMS Federal NSA IDR arbitration benchmarks, and State DOI prompt-pay rules across all 50 U.S. States.</p>
           </div>
-          <code id="stage-step-code" class="shrink-0 px-3 py-2 rounded-lg bg-white border border-[#7FB5AC] text-xs font-mono font-bold text-[#0F766E]">GET /v1/lettings/live -> 52 Portals Normalized</code>
+          <code id="stage-step-code" class="shrink-0 px-3 py-2 rounded-lg bg-white border border-[#7FB5AC] text-xs font-mono font-bold text-[#0F766E]">GET /v1/mrf-disparities/live -> 52 Portals Normalized</code>
         </div>
       </div>
     </section>
@@ -4281,8 +4281,8 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Real-time 50-State Commercial Payer TiC MRF rate alerts, CMS NSA IDR updates &amp; peer EIN/NPI tracking.</p>
         </div>
         <div class="space-y-2">
-          <button type="button" id="btn-checkout-tier1" data-stripe-link="https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" onclick="openCamberCheckoutModal('tier1_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-xs font-mono transition">Activate Tier 1</button>
-          <a id="stripe-link-tier1" href="https://checkout.stripe.com/c/pay/cs_live_b1h00k147jFGyk5neHvighM2UwtWYmhSwMqYbZuZNGFqtIeQ7P3tsKvrF8#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <button type="button" id="btn-checkout-tier1" data-stripe-link="https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q" onclick="openCamberCheckoutModal('tier1_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-xs font-mono transition">Activate Tier 1</button>
+          <a id="stripe-link-tier1" href="https://buy.stripe.com/8x26oGePg2pd8gUc2M7wA0q" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
@@ -4293,8 +4293,8 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Full pre-modeled Commercial Payer TiC MRF dossiers, Medicare MPFS RVU/GPCI schedules, ERISA 29 CFR 2560.503-1 appeals, and API key for all 12 microservices.</p>
         </div>
         <div class="space-y-2">
-          <button type="button" id="btn-checkout-tier2" data-stripe-link="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" onclick="openCamberCheckoutModal('tier2_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-xs font-mono transition">Activate Tier 2 Autopilot</button>
-          <a id="stripe-link-tier2" href="https://checkout.stripe.com/c/pay/cs_live_b18Ho66J3DSUhsGAzPLBCLY3gnP4b3VQZJ9r9UFGmvtm20eFdqdo3RJqwk#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#E6F4F1] hover:bg-[#CCFBF1] text-[#0F766E] border border-[#5EEAD4] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <button type="button" id="btn-checkout-tier2" data-stripe-link="https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s" onclick="openCamberCheckoutModal('tier2_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#071C21] hover:bg-[#0F766E] text-white font-bold text-xs font-mono transition">Activate Tier 2 Autopilot</button>
+          <a id="stripe-link-tier2" href="https://buy.stripe.com/7sY14mgXoe7V2WAaYI7wA0s" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#E6F4F1] hover:bg-[#CCFBF1] text-[#0F766E] border border-[#5EEAD4] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
@@ -4305,8 +4305,8 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX with live formulas) Payer MRF, Medicare MPFS, ERISA Appeal &amp; NSA IDR compilations.</p>
         </div>
         <div class="space-y-2">
-          <button type="button" id="btn-checkout-tier3" data-stripe-link="https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" onclick="openCamberCheckoutModal('tier3_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#0F766E] hover:bg-[#071C21] text-white font-bold text-xs font-mono transition">Activate Tier 3 Compiler</button>
-          <a id="stripe-link-tier3" href="https://checkout.stripe.com/c/pay/cs_live_b1okmrsHiLk24BYWi6vbPWJaWmzax1zTlTyeohYBHdUw3K7WHO2fEDYwtE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <button type="button" id="btn-checkout-tier3" data-stripe-link="https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u" onclick="openCamberCheckoutModal('tier3_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#0F766E] hover:bg-[#071C21] text-white font-bold text-xs font-mono transition">Activate Tier 3 Compiler</button>
+          <a id="stripe-link-tier3" href="https://buy.stripe.com/fZu3cucH86Ft2WAgj27wA0u" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
 
@@ -4317,8 +4317,8 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           <p class="text-xs font-medium text-[#111827] leading-relaxed">Multi-TIN health system &amp; MSO rate intelligence, Epic/Athena/Waystar webhook pipes, custom SLA &amp; unlimited RCM seats.</p>
         </div>
         <div class="space-y-2">
-          <button type="button" id="btn-checkout-tier4" data-stripe-link="https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" onclick="openCamberCheckoutModal('tier4_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-xs font-mono transition">Activate Tier 4 OEM</button>
-          <a id="stripe-link-tier4" href="https://checkout.stripe.com/c/pay/cs_live_b1qFfmZ8kRht4jggyBmrCIlMYVlESy6gnJpiO6z5cOtMcXMc5WBjdu2BfE#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSd2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2JzJz81KSdkdWxOYHwnPyd1blppbHNgWjA0V28yaT1GQm1ITDRMb2x1ZE9cN3VRUncyb3xLXzVRdjNyMEdJRjFtQUZpNXQ2Y0xIbG9tdmNtUXNtfU1XQ0Y1MnFDSlViXDI3NlFyYWhKV2dJVUhDbDwwNTV0VWxAfXxTRycpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyZjN2M8Yz0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
+          <button type="button" id="btn-checkout-tier4" data-stripe-link="https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w" onclick="openCamberCheckoutModal('tier4_monthly')" class="w-full text-center py-2.5 rounded-lg bg-[#DDF0EC] hover:bg-[#071C21] text-[#071C21] hover:text-white border border-[#7FB5AC] font-bold text-xs font-mono transition">Activate Tier 4 OEM</button>
+          <a id="stripe-link-tier4" href="https://buy.stripe.com/fZu14m4aC8NBbt64Ak7wA0w" target="_blank" rel="noopener" class="block w-full text-center py-1.5 rounded-lg bg-[#F2F9F8] hover:bg-[#DDF0EC] text-[#0F766E] border border-[#B4D6D0] font-mono text-[11px] font-bold transition">Direct Stripe Checkout &rarr;</a>
         </div>
       </div>
     </div>
@@ -4428,10 +4428,10 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
           <thead>
             <tr class="bg-[#DDF0EC] border-b-2 border-[#7FB5AC] font-mono font-bold text-[#071C21]">
               <th class="py-2.5 px-3">CAPABILITY / DELIVERABLE</th>
-              <th class="py-2.5 px-3">TIER 1 ($199/MO)</th>
-              <th class="py-2.5 px-3 text-[#0F766E]">TIER 2 ($499/MO)</th>
+              <th class="py-2.5 px-3">TIER 1 ($249/MO)</th>
+              <th class="py-2.5 px-3 text-[#0F766E]">TIER 2 ($599/MO)</th>
               <th class="py-2.5 px-3 text-[#065F46]">TIER 3 ($1,499/MO)</th>
-              <th class="py-2.5 px-3">TIER 4 ($2,499/MO)</th>
+              <th class="py-2.5 px-3">TIER 4 ($2,999/MO)</th>
             </tr>
           </thead>
           <tbody class="font-medium text-[#111827]">
@@ -4586,6 +4586,8 @@ REQUIRED CLINICAL &amp; PRIOR-AUTH DOCUMENTATION (EXTRACTED):
 </body>
 </html>"""
 
+    for _ov_hash in ("#contract-directory", "#interactive-state-shredder", "#roi-calculator", "#zip-package-inspector"):
+        apis_html = apis_html.replace(f'href="{_ov_hash}"', f'href="index.html{_ov_hash}"')
     with open(os.path.join(BASE_DIR, "index.html"), "w", encoding="utf-8") as fh:
         fh.write(index_html)
     with open(os.path.join(BASE_DIR, "apis.html"), "w", encoding="utf-8") as fh:

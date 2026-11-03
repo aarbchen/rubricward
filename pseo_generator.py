@@ -242,7 +242,8 @@ def build_project_dossier_html(letting: Dict[str, Any], slug: str) -> str:
 
       <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-[#B4D6D0]">
         <div class="flex flex-wrap gap-3">
-          <a href="../../index.html#checkout-tier2" class="px-4 py-2.5 bg-[#071C21] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-lg hover:bg-[#065F46] transition">Compile 6-File OpenXML Claim &amp; IDR .ZIP Package (&rarr;)</a>
+          <a href="https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id={lid}&amp;state_code={st}&amp;format=binary" class="px-4 py-2.5 bg-[#071C21] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-lg hover:bg-[#065F46] transition">Download 6-File OpenXML Claim &amp; IDR .ZIP</a>
+          <a href="../../index.html#checkout-tier2" class="px-4 py-2.5 bg-[#0F766E] text-white text-xs font-mono font-bold uppercase tracking-wider rounded-lg hover:bg-[#071C21] transition">Activate RubricWard Autopilot ($599/mo)</a>
           <a href="../../apis.html#product-dot-unit-bid-tabs" class="px-4 py-2.5 bg-[#DDF0EC] text-[#071C21] border border-[#7FB5AC] text-xs font-mono font-bold uppercase tracking-wider rounded-lg hover:bg-[#C8E6E0] transition">Test API #02 Payer MRF Modeler</a>
         </div>
         <a href="{src_url}" target="_blank" rel="noopener noreferrer" class="text-xs font-mono font-bold text-[#065F46] hover:underline">Verify Official Payer MRF / Regulatory Portal &rarr;</a>

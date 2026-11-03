@@ -24,11 +24,12 @@
       "url": "https://www.tdi.texas.gov/health/payor-mrf-benchmarks.html#TXDOI-MRF-CPT-29881-DFW",
       "scope_summary": "Commercial payer Transparency in Coverage (TiC) Machine-Readable File (MRF) rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for Orthopedic & ASC surgical procedures (CPT 29881 Knee Arthroscopy Meniscectomy, CPT 27447 Total Knee Arthroplasty, CPT 29827 Rotator Cuff Repair, and CPT 64483 Transforaminal Epidural Steroid Injection) across UnitedHealthcare, BCBS-TX, Aetna, and Cigna in Texas.",
       "planholders": [
+        "Abc Plastic Surgery Center Pa (NPI 1700073566)",
+        "A S Surgical Affiliates, Pa (NPI 1447382445)",
         "Texas Orthopedic Specialists PA",
         "Baylor Scott & White Surgicare",
         "Lonestar Ambulatory Surgery Center LLC",
-        "Austin Spine & Neurosurgery Associates",
-        "Methodist Orthopedic Surgical Group"
+        "Austin Spine & Neurosurgery Associates"
       ],
       "pay_items": [
         {
@@ -102,11 +103,12 @@
       "url": "https://www.dmhc.ca.gov/DataResearch/FinancialSummaryData.aspx#CADMHC-MRF-CPT-63030-SFO",
       "scope_summary": "Commercial payer TiC MRF negotiated rate percentile audit and ERISA 29 CFR 2560.503-1 clinical medical-necessity appeal cohort for California Spine & Neurosurgery procedures (CPT 63030 Lumbar Laminotomy/Discectomy, CPT 22551 Anterior Cervical Discectomy & Fusion ACDF, CPT 63047 Lumbar Laminectomy, and CPT 64483 Transforaminal Epidural Injection) across Blue Cross Blue Shield of California & UnitedHealthcare.",
       "planholders": [
+        "120 Spalding Surgery Center, Llc (NPI 1689113037)",
+        "120 Spalding Partners, Llc (NPI 1326498155)",
         "Cedars-Sinai Kerlan-Jobe Surgery Center",
         "DISC Sports & Spine Center Newport Beach",
         "Sutter Sierra Surgery Center",
-        "Pacific Rim Orthopedic Surgeons Medical Group",
-        "Silicon Valley Ambulatory Surgery Center"
+        "Pacific Rim Orthopedic Surgeons Medical Group"
       ],
       "pay_items": [
         {
@@ -170,11 +172,12 @@
       "url": "https://floir.com/sections/pandc/productreview/mrf-index.aspx#FLOIR-MRF-CPT-45378-MIA",
       "scope_summary": "Commercial payer MRF negotiated rate audit and Florida Statute \u00a7 627.6131 prompt-pay enforcement package for Gastroenterology & Endoscopy ASCs (CPT 45378 Diagnostic Colonoscopy, CPT 45380 Colonoscopy with Biopsy, CPT 45385 Colonoscopy with Lesion Removal by Snare, CPT 43239 Upper GI Endoscopy EGD with Biopsy, and CPT 00812 Monitored Anesthesia Care).",
       "planholders": [
+        "2047 Palm Beach Lakes Partners Llc (NPI 1992740674)",
+        "1-4 Surgical Services, Llc (NPI 1215115373)",
         "Gastro Health Miami Endoscopy Center",
         "Baptist Health Endoscopy Center of Coral Gables",
         "South Florida Gastroenterology Associates PA",
-        "Mount Sinai Medical Center Outpatient Surgery",
-        "Palm Beach Digestive & Surgical Specialists"
+        "Mount Sinai Medical Center Outpatient Surgery"
       ],
       "pay_items": [
         {
@@ -229,11 +232,12 @@
       "url": "https://scc.virginia.gov/pages/Bureau-of-Insurance#VABOI-MRF-CPT-99285-RIC",
       "scope_summary": "Commercial payer TiC MRF negotiated rate benchmark and bilateral/MIGS multiple-procedure reduction (50% MPPR) audit for Virginia Ophthalmic Ambulatory Surgery Centers (CPT 66984 Extracapsular Cataract Extraction with IOL, CPT 66991 Cataract with Anterior Segment Aqueous Drainage Device, CPT 66821 YAG Laser Capsulotomy, and CPT 65855 Trabeculoplasty) across Blue Cross Blue Shield of Virginia & UnitedHealthcare.",
       "planholders": [
+        "Advanced Sedation Dentistry - Hampton (NPI 1336585702)",
+        "Advanced Health Care And Wellness Llc (NPI 1356186787)",
         "OrthoVirginia Outpatient Surgery Center",
         "Inova Fairfax Ambulatory Surgery Center",
         "Virginia Cardiovascular Specialists PC",
-        "Tuckahoe Orthopaedics Surgery Center",
-        "Sentara Leigh Surgical Center"
+        "Tuckahoe Orthopaedics Surgery Center"
       ],
       "pay_items": [
         {
@@ -297,11 +301,12 @@
       "url": "https://www.insurance.pa.gov/Companies/ProductAndRateRequire/Pages/default.aspx#PAPID-MRF-CPT-66984-PHL",
       "scope_summary": "Commercial payer TiC MRF negotiated rate audit and Federal No Surprises Act (NSA) IDR arbitration dossier for Pennsylvania Interventional Cardiology & Outpatient Cath Lab procedures (CPT 93458 Left Heart Catheterization with Coronary Angiography, CPT 92928 Percutaneous Transcatheter Coronary Stent Placement, CPT 33249 ICD Pulse Generator & Lead Insertion, and CPT 93306 Complete Transthoracic Echocardiography) across Blue Cross Blue Shield of Pennsylvania & UnitedHealthcare.",
       "planholders": [
+        "325 Asc, Llc (NPI 1952785438)",
+        "20-20 Surgery Center Llc (NPI 1194718940)",
         "Rothman Orthopaedic Specialty Hospital",
         "UPMC St. Margaret Harmar Outpatient Center",
         "Main Line Health Surgery Center at Wynnewood",
-        "Allegheny Health Network Monroeville ASC",
-        "Penn Medicine University City Surgery Center"
+        "Allegheny Health Network Monroeville ASC"
       ],
       "pay_items": [
         {
@@ -365,11 +370,12 @@
       "url": "https://www.dfs.ny.gov/consumers/health_insurance/surprise_medical_bills#NYDFS-MRF-CPT-01402-NYC",
       "scope_summary": "Commercial payer TiC MRF rate disparity audit and ERISA clinical appeal package for New York Urology & Lithotripsy Ambulatory Surgery Centers (CPT 52356 Cystourethroscopy with Ureteroscopy, Laser Lithotripsy & Indwelling Stent, CPT 50590 Extracorporeal Shock Wave Lithotripsy ESWL, CPT 52000 Diagnostic Cystourethroscopy, and CPT 52601 Transurethral Electrosurgical Resection of Prostate TURP) across Blue Cross Blue Shield of New York & UnitedHealthcare.",
       "planholders": [
+        "154 Northern Medical Practice (NPI 1710311691)",
+        "128 Plastic Surgery Associates Pllc (NPI 1720381569)",
         "Hospital for Special Surgery (HSS) Manhattan ASC",
         "NYU Langone Ambulatory Care Center",
         "Northwell Health Syosset Surgery Center",
-        "Mount Sinai Union Square Surgical Center",
-        "ColumbiaDoctors Midtown Endoscopy & Surgery"
+        "Mount Sinai Union Square Surgical Center"
       ],
       "pay_items": [
         {
