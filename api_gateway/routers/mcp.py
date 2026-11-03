@@ -55,21 +55,6 @@ from api_gateway.schemas.precon_schemas import (
 
 router = APIRouter()
 
-TOOL_ROUTE_MAP: Dict[str, str] = {
-    "shred_csi_masterformat": "/v1/shred/csi-masterformat",
-    "model_dot_unit_bid_tabs": "/v1/model/dot-unit-bid-tabs",
-    "calculate_davis_bacon_prevailing_wage": "/v1/calculate/davis-bacon-prevailing-wage",
-    "get_live_dot_lettings": "/v1/lettings/live",
-    "audit_baba_buy_america": "/v1/audit/baba-buy-america",
-    "generate_dbe_good_faith_effort": "/v1/generate/dbe-good-faith-effort",
-    "generate_aia_g702_g703_pay_app": "/v1/generate/aia-g702-g703-pay-app",
-    "audit_surety_miller_act_bond": "/v1/audit/surety-miller-act-bond",
-    "generate_rfi_change_order_claim": "/v1/generate/rfi-change-order-claim",
-    "audit_osha_emr_site_safety": "/v1/audit/osha-emr-site-safety",
-    "analyze_planholder_competitor_spread": "/v1/analyze/planholder-competitor-spread",
-    "generate_subcontractor_scope_itb": "/v1/generate/subcontractor-scope-itb",
-}
-
 MCP_TOOLS: List[Dict[str, Any]] = [
     {
         "name": "shred_payer_cpb_lcd_medical_policy",
@@ -710,33 +695,33 @@ TOOL_ROUTE_MAP: Dict[str, str] = {
 
 
 async def _execute_mcp_tool(tool_name: str, arguments: Dict[str, Any]) -> Dict[str, Any]:
-    if tool_name == "shred_csi_masterformat":
+    if tool_name in ("shred_payer_cpb_lcd_medical_policy", "shred_csi_masterformat", "shred_csi_masterformat_spec"):
         data = await shred_csi_masterformat(CsiSpecShredRequest(**arguments))
-    elif tool_name == "model_dot_unit_bid_tabs":
+    elif tool_name in ("model_tic_payer_mrf_negotiated_rates", "model_dot_unit_bid_tabs"):
         data = await model_dot_bid_tabs(DotBidTabRequest(**arguments))
-    elif tool_name == "calculate_davis_bacon_prevailing_wage":
+    elif tool_name in ("calculate_medicare_mpfs_rvu_gpci", "calculate_davis_bacon_prevailing_wage"):
         data = await calculate_prevailing_wage(PrevailingWageRequest(**arguments))
-    elif tool_name == "get_live_dot_lettings":
+    elif tool_name in ("get_live_payer_mrf_rate_disparities", "get_live_dot_lettings", "get_live_dot_construction_lettings"):
         data = await get_live_lettings(
             state=arguments.get("state", "TX"),
             naics=arguments.get("naics"),
             limit=int(arguments.get("limit", 10)),
         )
-    elif tool_name == "audit_baba_buy_america":
+    elif tool_name in ("scrub_ncci_ptp_mue_modifier_25_59", "audit_baba_buy_america", "audit_baba_buy_america_materials"):
         data = await audit_baba_compliance(BabaComplianceRequest(**arguments))
-    elif tool_name == "generate_dbe_good_faith_effort":
+    elif tool_name in ("generate_nsa_idr_erisa_appeal_brief", "generate_dbe_good_faith_effort", "generate_dot_dbe_good_faith_effort"):
         data = await generate_dbe_good_faith(DbeGoodFaithRequest(**arguments))
-    elif tool_name == "generate_aia_g702_g703_pay_app":
+    elif tool_name in ("reconcile_hipaa_835_era_remittance", "generate_aia_g702_g703_pay_app"):
         data = await generate_aia_pay_app(AiaPayAppRequest(**arguments))
-    elif tool_name == "audit_surety_miller_act_bond":
+    elif tool_name in ("audit_caqh_pecos_nppes_credentialing", "audit_surety_miller_act_bond", "underwrite_surety_miller_act_bond"):
         data = await audit_surety_bond(SuretyBondAuditRequest(**arguments))
-    elif tool_name == "generate_rfi_change_order_claim":
+    elif tool_name in ("generate_nsa_good_faith_estimate_gfe", "generate_rfi_change_order_claim"):
         data = await generate_rfi_change_order(RfiChangeOrderRequest(**arguments))
-    elif tool_name == "audit_osha_emr_site_safety":
+    elif tool_name in ("screen_oig_leie_stark_aks_compliance", "audit_osha_emr_site_safety"):
         data = await audit_osha_emr(OshaEmrAuditRequest(**arguments))
-    elif tool_name == "analyze_planholder_competitor_spread":
+    elif tool_name in ("analyze_ein_npi_payer_rate_spread", "analyze_planholder_competitor_spread", "analyze_planholder_competitor_mlot"):
         data = await analyze_planholder_spread(PlanholderSpreadRequest(**arguments))
-    elif tool_name == "generate_subcontractor_scope_itb":
+    elif tool_name in ("generate_payer_contract_redline_demand", "generate_subcontractor_scope_itb"):
         data = await generate_subcontractor_itb(SubcontractorItbRequest(**arguments))
     else:
         raise ValueError(f"Unknown MCP tool: {tool_name}")

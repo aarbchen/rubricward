@@ -17,6 +17,7 @@ configure_utf8_stdio()
 import csv
 import json
 import os
+import re
 import time
 import urllib.parse
 from pathlib import Path
@@ -500,13 +501,29 @@ def _archive_and_purge_unsubscribed_lead(from_email: str, lead_email: str = "", 
                 pass
 
 
-def run_reply_responder() -> Dict[str, Any]:
-    processed: List[str] = []
+def _load_processed_list() -> List[str]:
     if PROCESSED_PATH.exists():
         try:
-            processed = json.loads(PROCESSED_PATH.read_text(encoding="utf-8"))
+            loaded = json.loads(PROCESSED_PATH.read_text(encoding="utf-8"))
+            if isinstance(loaded, list):
+                return [str(x) for x in loaded if x]
+            if isinstance(loaded, dict):
+                return [str(x) for x in (loaded.get("processed_ids") or []) if x]
         except Exception:
-            processed = []
+            pass
+    return []
+
+
+def _save_processed_list(items: List[str]) -> None:
+    deduped = list(dict.fromkeys(str(x) for x in items if x))[-500:]
+    try:
+        PROCESSED_PATH.write_text(json.dumps(deduped, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def run_reply_responder() -> Dict[str, Any]:
+    processed: List[str] = _load_processed_list()
 
     summary = {"checked": 0, "replied": 0, "nudges_sent": 0, "unsubscribed": 0, "model": ANTHROPIC_MODEL}
     if not INSTANTLY_API_KEY or not RUBRICWARD_CAMPAIGN_ID:
@@ -549,6 +566,7 @@ def run_reply_responder() -> Dict[str, Any]:
                 body_txt = str(body_obj.get("text") or body_obj.get("html") or "").strip()
                 if not body_txt:
                     processed.append(msg_id)
+                    _save_processed_list(processed)
                     continue
                 subj_in = str(item.get("subject") or "")
                 label = classify_rcm_reply(body_txt, subject=subj_in, from_email=from_em)
@@ -574,6 +592,8 @@ def run_reply_responder() -> Dict[str, Any]:
                     )
                     if 200 <= r_send.status_code < 300:
                         summary["replied"] += 1
+                        processed.append(msg_id)
+                        _save_processed_list(processed)
                         _record_warm_zip_delivery(from_em, str(item.get("eaccount") or ""), msg_id, pkg["subject"], ctx)
                         discord_url = (os.getenv("DISCORD_HOT_REPLIES_WEBHOOK_URL") or os.getenv("DISCORD_WEBHOOK_URL") or "").strip()
                         if discord_url:
@@ -601,8 +621,9 @@ def run_reply_responder() -> Dict[str, Any]:
                         body_text=body_txt,
                         is_bounce=(label == "BOUNCE"),
                     )
-                processed.append(msg_id)
-            PROCESSED_PATH.write_text(json.dumps(processed[-500:], indent=2), encoding="utf-8")
+                if msg_id not in processed:
+                    processed.append(msg_id)
+                _save_processed_list(processed)
         summary["nudges_sent"] = _process_warm_zip_followups()
     except Exception as exc:
         report_error("outbound_reply_responder.py", f"Reply polling note: {exc}")

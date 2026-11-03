@@ -66,6 +66,11 @@ async def get_health() -> HealthResponse:
 
 # API #01: Commercial Payer Clinical Policy Bulletin (CPB), LCD/NCD & Prior-Auth Shredder
 @router.post(
+    "/shred/cpb-lcd-medical-policy",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
     "/shred/csi-masterformat",
     status_code=status.HTTP_200_OK,
     dependencies=[Depends(verify_rapidapi_secret)],
@@ -131,6 +136,11 @@ async def shred_csi_masterformat(req: CsiSpecShredRequest) -> Dict[str, Any]:
 
 # API #02: 50-State Commercial Payer TiC MRF Allowed-Amount & QPA Modeler
 @router.post(
+    "/model/tic-payer-mrf-rates",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
     "/model/dot-unit-bid-tabs",
     status_code=status.HTTP_200_OK,
     dependencies=[Depends(verify_rapidapi_secret)],
@@ -146,6 +156,11 @@ async def model_dot_bid_tabs(req: DotBidTabRequest) -> Dict[str, Any]:
 
 
 # API #03: CMS Medicare Physician Fee Schedule (MPFS) RVU, GPCI Locality & ASC Calculator
+@router.post(
+    "/calculate/medicare-mpfs-rvu-gpci",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
 @router.post(
     "/calculate/davis-bacon-prevailing-wage",
     status_code=status.HTTP_200_OK,
@@ -163,6 +178,11 @@ async def calculate_prevailing_wage(req: PrevailingWageRequest) -> Dict[str, Any
 
 
 # API #04: 52-Portal Live Commercial Payer MRF Rate Disparities, ERISA & NSA IDR Feed
+@router.get(
+    "/mrf-disparities/live",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
 @router.get(
     "/lettings/live",
     status_code=status.HTTP_200_OK,
@@ -195,6 +215,16 @@ async def get_live_lettings(
 
 # API #05: CMS NCCI Procedure-to-Procedure (PTP) Unbundling, MUE & Modifier 25/59 Scrubber
 @router.post(
+    "/scrub/ncci-ptp-mue-modifiers",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
+    "/scrub/ncci-ptp-mue-edits",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
     "/audit/baba-buy-america",
     status_code=status.HTTP_200_OK,
     dependencies=[Depends(verify_rapidapi_secret)],
@@ -221,6 +251,11 @@ async def audit_baba_compliance(req: BabaComplianceRequest) -> Dict[str, Any]:
 
 
 # API #06: Federal No Surprises Act (NSA 45 CFR 149.510) Open Negotiation & IDR Position Brief Generator
+@router.post(
+    "/synthesize/nsa-idr-erisa-appeal",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
 @router.post(
     "/generate/dbe-good-faith-effort",
     status_code=status.HTTP_200_OK,
@@ -260,6 +295,11 @@ async def generate_dbe_good_faith(req: DbeGoodFaithRequest) -> Dict[str, Any]:
 
 
 # API #07: HIPAA X12 835 Electronic Remittance Advice (ERA) CARC/RARC Underpayment Auditor
+@router.post(
+    "/reconcile/hipaa-835-era-remittance",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
 @router.post(
     "/generate/aia-g702-g703-pay-app",
     status_code=status.HTTP_200_OK,
@@ -301,6 +341,11 @@ async def generate_aia_pay_app(req: AiaPayAppRequest) -> Dict[str, Any]:
 
 # API #08: 50-State Prompt-Pay Statute Interest Penalty & Timely-Filing Calculator
 @router.post(
+    "/audit/caqh-pecos-credentialing",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
     "/audit/surety-miller-act-bond",
     status_code=status.HTTP_200_OK,
     dependencies=[Depends(verify_rapidapi_secret)],
@@ -328,6 +373,16 @@ async def audit_surety_bond(req: SuretyBondAuditRequest) -> Dict[str, Any]:
 
 
 # API #09: ERISA 29 CFR 2560.503-1 Level-1 & Level-2 Medical Necessity Appeal Drafter
+@router.post(
+    "/estimate/gfe-advanced-eob",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
+    "/generate/prior-auth-p2p-rebuttal",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
 @router.post(
     "/generate/rfi-change-order-claim",
     status_code=status.HTTP_200_OK,
@@ -360,6 +415,16 @@ async def generate_rfi_change_order(req: RfiChangeOrderRequest) -> Dict[str, Any
 
 # API #10: MS-DRG / APR-DRG Inpatient Clinical Validation & DRG Downcode Defense
 @router.post(
+    "/screen/oig-leie-stark-aks",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
+    "/audit/oig-rac-upic-extrapolation",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
     "/audit/osha-emr-site-safety",
     status_code=status.HTTP_200_OK,
     dependencies=[Depends(verify_rapidapi_secret)],
@@ -384,6 +449,16 @@ async def audit_osha_emr(req: OshaEmrAuditRequest) -> Dict[str, Any]:
 
 
 # API #11: Regional Specialty Group Tax-ID (EIN/NPI) Payer Leverage & RLOT Analyzer
+@router.post(
+    "/benchmark/ein-npi-payer-spread",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
+    "/analyze/group-npi-ein-payer-leverage",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
 @router.post(
     "/analyze/planholder-competitor-spread",
     status_code=status.HTTP_200_OK,
@@ -418,6 +493,16 @@ async def analyze_planholder_spread(req: PlanholderSpreadRequest) -> Dict[str, A
 
 
 # API #12: Managed Care Payer Contract Redline & Rate-Escalator Term Sheet Generator
+@router.post(
+    "/generate/payer-contract-redline",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
+@router.post(
+    "/model/asc-drg-implant-carveout",
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_rapidapi_secret)],
+)
 @router.post(
     "/generate/subcontractor-scope-itb",
     status_code=status.HTTP_200_OK,

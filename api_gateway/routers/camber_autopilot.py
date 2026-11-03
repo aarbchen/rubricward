@@ -237,6 +237,9 @@ STATE_HEALTHCARE_MRF_REGISTRY: Dict[str, Dict[str, str]] = {
 }
 
 
+STATE_PROMPT_PAY_STATUTES: Dict[str, str] = {k: v["statute"] for k, v in STATE_HEALTHCARE_MRF_REGISTRY.items()}
+
+
 def _resolve_rubricward_package_context(req: CompileBidPackageRequest) -> Dict[str, Any]:
     seed = load_seed_data()
     lettings = seed.get("lettings", [])
@@ -607,6 +610,11 @@ def build_six_file_bid_package_zip(req: CompileBidPackageRequest) -> bytes:
     return zip_buf.getvalue()
 
 
+@router.post(
+    "/rubricward-autopilot/compile-appeal-package",
+    status_code=status.HTTP_200_OK,
+    tags=["Master Moat #1: 6-File OpenXML Claim & NSA IDR .ZIP Compiler"],
+)
 @router.post(
     "/camber-autopilot/compile-bid-package",
     status_code=status.HTTP_200_OK,

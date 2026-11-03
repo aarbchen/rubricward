@@ -38,8 +38,10 @@ from api_gateway.core.security import verify_rapidapi_secret
 from api_gateway.routers.camber_autopilot import STATE_PROMPT_PAY_STATUTES
 from api_gateway.schemas.claim_schemas import (
     Era835AuditRequest,
+    Era835LineItem,
     ErisaMedicalNecessityRequest,
     GoodFaithEstimateRequest,
+    NcciClaimPair,
     NcciModifierAuditRequest,
     NsaIdrArbitrationRequest,
     OigUpcodingAuditRequest,
@@ -47,6 +49,7 @@ from api_gateway.schemas.claim_schemas import (
     PayerRenegotiationRequest,
     PriorAuthPacketRequest,
     PromptPayDemandRequest,
+    RvuGpciLineRequest,
     RvuGpciScheduleRequest,
 )
 from api_gateway.services.llm_extractor import load_seed_data
@@ -75,8 +78,9 @@ async def benchmark_payer_mrf_rates(req: PayerMrfBenchmarkRequest) -> Dict[str, 
     cpt = req.cpt_code.strip()
     ref = CPT_BASE_RATES.get(cpt, {"desc": f"CPT {cpt} Surgical / Clinical Procedure", "mpfs": 1250.0, "p25": 1880.0, "p50": 2650.0, "p75": 3420.0, "p90": 4180.0})
     st = req.state_code.upper()
-    seed = load_seed_data()
-    st_case = next((c for c in seed if str(c.get("state_code", "")).upper() == st), seed[0] if seed else {})
+    raw_seed = load_seed_data()
+    seed = raw_seed.get("lettings", []) if isinstance(raw_seed, dict) else list(raw_seed)
+    st_case = next((c for c in seed if isinstance(c, dict) and str(c.get("state_code", "")).upper() == st), seed[0] if seed else {})
     peer_npis = st_case.get("planholders", [f"{st} Orthopedic & Spine Surgery Center (NPI Verified)"])[:4]
     return {
         "status": "success",
@@ -194,7 +198,8 @@ async def get_live_rate_disparities(
     state: Optional[str] = Query(default=None, description="Optional 2-letter state code or US / MU"),
     limit: int = Query(default=25, ge=1, le=52, description="Max cohorts to return"),
 ) -> Dict[str, Any]:
-    lettings = load_seed_data()
+    raw_seed = load_seed_data()
+    lettings = raw_seed.get("lettings", []) if isinstance(raw_seed, dict) else list(raw_seed)
     if state and state.upper() != "ALL":
         st_up = state.upper().strip()
         filtered = [c for c in lettings if str(c.get("state_code", "")).upper() == st_up]

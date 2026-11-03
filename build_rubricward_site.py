@@ -18,7 +18,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "Payer Clinical Policy Bulletin (CPB), LCD/NCD & Prior-Auth Shredder",
         "method": "POST",
         "route": "/v1/shred/cpb-lcd-medical-policy",
-        "mcp_tool": "shred_csi_masterformat_specs",
+        "mcp_tool": "shred_payer_cpb_lcd_medical_policy",
         "badge": "CPB & LCD SHREDDER",
         "connect_to_tier2": True,
         "summary": "Shreds commercial payer Clinical Policy Bulletins (UHC, Anthem, Aetna, Cigna, BCBS), CMS LCD/NCD coverage policies, step-therapy gates, and timely-filing deadlines into structured prior-authorization and appeal checklists.",
@@ -46,7 +46,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "Commercial Payer TiC MRF Allowed-Amount & QPA Benchmark Modeler",
         "method": "POST",
         "route": "/v1/model/tic-payer-mrf-rates",
-        "mcp_tool": "model_dot_unit_price_bid_tabs",
+        "mcp_tool": "model_tic_payer_mrf_negotiated_rates",
         "badge": "PAYER MRF & QPA MODELER",
         "connect_to_tier2": True,
         "summary": "Benchmarks CPT, HCPCS, APC, and MS-DRG codes against CMS Transparency in Coverage (45 CFR 147.212) commercial payer Machine-Readable Files (MRFs) to compute 25th, 50th (Median QPA), and 75th percentile negotiated rates.",
@@ -61,12 +61,12 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "res_sample": {
             "status": "success",
             "state_payer_market": "TX",
-            "historical_lettings_sampled": 384,
+            "mrf_payer_files_sampled": 384,
             "unit_price_benchmarks": [
                 {"item_code": "CPT-29881", "unit": "CLAIM", "low_25th_usd": 640.00, "median_50th_usd": 1485.00, "recommended_unit_usd": 1890.00, "extended_total_usd": 793800.00},
                 {"item_code": "CPT-27447", "unit": "CLAIM", "low_25th_usd": 4850.00, "median_50th_usd": 9420.00, "recommended_unit_usd": 11850.00, "extended_total_usd": 1362750.00},
             ],
-            "estimated_total_bid_usd": 2156550.00,
+            "estimated_total_allowed_usd": 2156550.00,
         },
     },
     {
@@ -82,20 +82,20 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "req_sample": {
             "state": "TX",
             "county": "Dallas County",
-            "construction_type": "Outpatient_ASC_and_Physician",
+            "facility_setting": "Outpatient_ASC_and_Physician",
             "cpt_rvu_schedule": [
-                {"craft": "CPT 29881 — Facility ASC Payment Rate (Wage-Adjusted)", "weekly_hours": 40},
-                {"craft": "CPT 29881 — Physician Professional Fee (215% Medicare Target)", "weekly_hours": 40},
+                {"cpt_component": "CPT 29881 — Facility ASC Payment Rate (GPCI-Adjusted)", "annual_claim_volume": 420},
+                {"cpt_component": "CPT 29881 — Physician Professional Fee (215% Medicare Target)", "annual_claim_volume": 420},
             ],
         },
         "res_sample": {
             "status": "success",
-            "wage_decision_id": "CMS-MPFS-2026B-TX-04412",
+            "cms_mpfs_release_id": "CMS-MPFS-2026B-TX-04412",
             "county": "Dallas County, TX",
             "mpfs_rvu_gpci_locality_verified": True,
-            "craft_rates": [
-                {"craft": "CPT 29881 — Facility ASC Payment Rate (Wage-Adjusted)", "base_hourly_usd": 1124.50, "fringe_hourly_usd": 360.50, "loaded_hourly_usd": 1485.00},
-                {"craft": "CPT 29881 — Physician Professional Fee (215% Medicare Target)", "base_hourly_usd": 582.40, "fringe_hourly_usd": 670.10, "loaded_hourly_usd": 1252.50},
+            "rvu_gpci_rates": [
+                {"cpt_component": "CPT 29881 — Facility ASC Payment Rate (GPCI-Adjusted)", "medicare_baseline_usd": 1124.50, "commercial_lift_usd": 360.50, "negotiated_target_usd": 1485.00},
+                {"cpt_component": "CPT 29881 — Physician Professional Fee (215% Medicare Target)", "medicare_baseline_usd": 582.40, "commercial_lift_usd": 670.10, "negotiated_target_usd": 1252.50},
             ],
         },
     },
@@ -105,7 +105,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "52-Portal Commercial Payer MRF, ERISA & NSA IDR Dispute Feed",
         "method": "GET",
         "route": "/v1/mrf-disparities/live",
-        "mcp_tool": "fetch_live_dot_Construction_lettings",
+        "mcp_tool": "get_live_payer_mrf_rate_disparities",
         "badge": "52-PORTAL MRF & IDR FEED",
         "connect_to_tier2": True,
         "summary": "Streams normalized commercial payer TiC MRF rate-disparity cohorts, CMS Federal NSA IDR arbitration benchmarks, and State DOI/APCD fee schedule updates across all 50 U.S. States.",
@@ -120,12 +120,12 @@ APIS_CATALOG: List[Dict[str, Any]] = [
             "portals_monitored": 52,
             "states_covered": 50,
             "active_mrf_cohorts_count": 52,
-            "sample_letting": {
+            "sample_disparity_cohort": {
                 "project_id": "TXDOI-MRF-CPT-29881-DFW",
                 "agency": "Texas Department of Insurance (TDI) & CMS Novitas JH Payer MRF Index",
                 "title": "UHC & BCBS-TX Commercial MRF Rate Disparity & NSA IDR Benchmark (CPT 29881 / 27447)",
                 "mrf_75th_percentile_benchmark_usd": 1845000.0,
-                "target_pct_of_medicare": 14.5,
+                "target_pct_of_medicare": 228.5,
             },
         },
     },
@@ -135,24 +135,24 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "CMS NCCI PTP Edits, MUE Limits & Modifier 25/59/XU Bundling Auditor",
         "method": "POST",
         "route": "/v1/scrub/ncci-ptp-mue-modifiers",
-        "mcp_tool": "audit_baba_buy_america_compliance",
+        "mcp_tool": "scrub_ncci_ptp_mue_modifier_25_59",
         "badge": "NCCI & MODIFIER AUDITOR",
         "connect_to_tier2": True,
         "summary": "Audits surgical and outpatient claim lines against CMS National Correct Coding Initiative (NCCI) Procedure-to-Procedure (PTP) bundling edits, Medically Unlikely Edits (MUE), and Modifier 25/59/XE/XS/XP/XU unbundling rules.",
         "req_sample": {
             "project_id": "TXDOI-MRF-CPT-29881-DFW",
             "funding_agency": "Commercial_ERISA_and_CMS_NCCI",
-            "bill_of_materials": [
-                {"material": "CPT 29881 + CPT 29877 (Ipsilateral Knee Chondroplasty NCCI Column 2)", "category": "ncci_ptp_pair", "origin_country": "US", "cost_usd": 189000},
-                {"material": "CPT 99214-25 + CPT 20610 (E/M with Major Joint Injection Mod 25)", "category": "modifier_25_override", "origin_country": "US", "cost_usd": 142000},
+            "claim_line_pairs": [
+                {"cpt_pair": "CPT 29881 + CPT 29877 (Ipsilateral Knee Chondroplasty NCCI Column 2)", "category": "ncci_ptp_pair", "place_of_service": "24_ASC", "cost_usd": 189000},
+                {"cpt_pair": "CPT 99214-25 + CPT 20610 (E/M with Major Joint Injection Mod 25)", "category": "modifier_25_override", "place_of_service": "11_OFFICE", "cost_usd": 142000},
             ],
         },
         "res_sample": {
             "status": "success",
             "ncci_ptp_override_supported": True,
             "modifier_25_59_clinical_defense_ready": True,
-            "manufactured_products_domestic_pct": 98.4,
-            "de_minimis_waiver_eligible": True,
+            "clean_claim_pass_rate_pct": 98.4,
+            "distinct_anatomical_site_verified": True,
             "required_certifications": [
                 "Operative Note Documenting Separate Compartment / Distinct Procedural Service (Modifier 59 / XS)",
                 "Separately Identifiable E/M HPI & MDM Documentation Supporting Modifier 25 Override",
@@ -172,19 +172,19 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "req_sample": {
             "state_payer_market": "TX",
             "contract_total_usd": 1845000.0,
-            "target_pct_of_medicare": 14.5,
-            "subcontractor_quotes": [
-                {"firm": "ERISA 29 CFR 2560.503-1 Full & Fair Review Clinical Dossier", "naics": "621111", "role": "subcontractor", "quote_usd": 1240000.0},
-                {"firm": "AAOS / NASS Peer-Reviewed Clinical Guidelines & CPB Evidentiary Matrix", "naics": "621493", "role": "regular_dealer_supply", "quote_usd": 820000.0},
+            "target_pct_of_medicare": 215.0,
+            "clinical_appeal_exhibits": [
+                {"firm": "ERISA 29 CFR 2560.503-1 Full & Fair Review Clinical Dossier", "naics": "621111", "role": "erisa_statutory_demand", "quote_usd": 1240000.0},
+                {"firm": "AAOS / NASS Peer-Reviewed Clinical Guidelines & CPB Evidentiary Matrix", "naics": "621493", "role": "clinical_guideline_evidence", "quote_usd": 820000.0},
             ],
         },
         "res_sample": {
             "status": "success",
-            "target_pct_of_medicare": 14.5,
-            "achieved_dbe_pct": 15.82,
+            "target_pct_of_medicare": 215.0,
+            "mrf_75th_percentile_multiple": 228.5,
             "goal_met": True,
-            "regular_dealer_60pct_adjustment_applied": True,
-            "good_faith_effort_status": "VERIFIED — ERISA 29 CFR 2560.503-1 Statutory Appeal & IRO Demand Ready",
+            "tma_iii_iv_no_qpa_presumption_applied": True,
+            "erisa_appeal_status": "VERIFIED — ERISA 29 CFR 2560.503-1 Statutory Appeal & IRO Demand Ready",
         },
     },
     {
@@ -193,7 +193,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "HIPAA 835 ERA Remittance, CARC/RARC Denial & Underpayment Modeler",
         "method": "POST",
         "route": "/v1/reconcile/hipaa-835-era-remittance",
-        "mcp_tool": "generate_aia_g702_g703_schedule_of_values",
+        "mcp_tool": "reconcile_hipaa_835_era_remittance",
         "badge": "835 ERA & CARC LEDGER",
         "connect_to_tier2": False,
         "summary": "Parses HIPAA X12 835 Electronic Remittance Advice (ERA) files, CARC/RARC adjustment codes (CO-45, CO-50, CO-97, OA-23), and payer fee-schedule variances into a line-item underpayment recovery ledger.",
@@ -209,7 +209,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
             "status": "success",
             "form": "HIPAA X12 835 ERA Underpayment & CARC/RARC Recovery Ledger",
             "tma_iii_iv_qpa_rebuttal_ready": True,
-            "front_loading_risk": "LOW",
+            "timely_filing_risk": "LOW",
             "net_current_payment_due_usd": 1434495.0,
         },
     },
@@ -219,7 +219,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "Federal No Surprises Act (NSA 45 CFR 149.510) IDR Brief & QPA Auditor",
         "method": "POST",
         "route": "/v1/audit/caqh-pecos-credentialing",
-        "mcp_tool": "audit_surety_miller_act_bond_capacity",
+        "mcp_tool": "audit_caqh_pecos_nppes_credentialing",
         "badge": "NSA 45 CFR 149.510 IDR",
         "connect_to_tier2": False,
         "summary": "Audits payer Qualifying Payment Amount (QPA) disclosures under 45 CFR 149.140, models baseball-style Final Offer arbitration positioning, and drafts Federal Independent Dispute Resolution (IDR) position briefs.",
@@ -227,14 +227,14 @@ APIS_CATALOG: List[Dict[str, Any]] = [
             "jurisdiction": "Federal_CMS_NSA_IDR_45CFR149",
             "contract_amount_usd": 1845000.0,
             "provider_malpractice_per_occurrence_usd": 15000000.0,
-            "contractor_aggregate_wip_usd": 42000000.0,
+            "annual_disputed_oon_claims_usd": 42000000.0,
         },
         "res_sample": {
             "status": "success",
             "statute": "Federal No Surprises Act (42 U.S.C. 300gg-111 / 45 CFR 149.510)",
-            "performance_bond_pct": 100,
-            "payment_bond_pct": 100,
-            "estimated_bond_premium_usd": 12450.0,
+            "qpa_rebuttal_strength_pct": 100,
+            "tic_mrf_percentile_target": 75,
+            "projected_idr_net_recovery_usd": 12450.0,
             "capacity_verdict": "PASS — 75th-Percentile TiC MRF Offer Supported by Acuity & Case-Mix Evidence",
         },
     },
@@ -244,22 +244,22 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "Payer Post-Payment Recoupment, RAC/ZPIC Audit & Prompt-Pay Demand Drafter",
         "method": "POST",
         "route": "/v1/estimate/gfe-advanced-eob",
-        "mcp_tool": "generate_rfi_and_change_order_claim",
+        "mcp_tool": "generate_nsa_good_faith_estimate_gfe",
         "badge": "RECOUPMENT & PROMPT-PAY",
         "connect_to_tier2": False,
         "summary": "Drafts statutory defenses against commercial payer post-payment clawbacks, SIU/RAC extrapolation audits, and State Prompt-Pay Act statutory interest demands (12%–18% APR).",
         "req_sample": {
             "project_id": "TXDOI-MRF-CPT-29881-DFW",
             "clause_type": "State_Prompt_Pay_and_ERISA_Anti_Clawback",
-            "field_condition": "Payer withheld clean claims > 45 days and issued retroactive DRG/CPT downcode recoupment notice without peer-to-peer review.",
+            "recoupment_basis": "Payer withheld clean claims > 45 days and issued retroactive DRG/CPT downcode recoupment notice without peer-to-peer review.",
             "direct_cost_impact_usd": 148500.0,
-            "schedule_delay_days": 62,
+            "overdue_clean_claim_days": 62,
         },
         "res_sample": {
             "status": "success",
             "entitlement_basis": "TX Ins. Code § 1301.103 (18% APR Penalty) & ERISA 29 CFR 2560.503-1 Adverse Benefit Protections",
             "recommended_claim_amount_usd": 173745.0,
-            "critical_path_extension_days": 62,
+            "statutory_interest_accrual_days": 62,
         },
     },
     {
@@ -268,7 +268,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "CAQH / PECOS Provider Roster, NPPES NPI & Payer Network Adequacy Auditor",
         "method": "POST",
         "route": "/v1/screen/oig-leie-stark-aks",
-        "mcp_tool": "audit_osha_emr_and_safety_plan",
+        "mcp_tool": "screen_oig_leie_stark_aks_compliance",
         "badge": "NPI, PECOS & NETWORK AUDIT",
         "connect_to_tier2": False,
         "summary": "Audits medical group NPPES Type 1/Type 2 NPIs, CMS PECOS enrollment, CAQH ProView attestation currency, and CMS 42 CFR 422.116 time-and-distance specialty network adequacy.",
@@ -280,8 +280,8 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "res_sample": {
             "status": "success",
             "oig_leie_exclusion_clear": True,
-            "max_emr_threshold": 1.00,
-            "required_aha_modules": [
+            "pecos_caqh_attestation_score": 1.00,
+            "verified_credentialing_modules": [
                 "NPPES Type 1 & Type 2 NPI Taxonomy 207X00000X Crosswalk Verified",
                 "CMS PECOS & CAQH ProView 120-Day Re-Attestation Active",
                 "CMS 42 CFR 422.116 Specialty Network Adequacy Leverage Confirmed",
@@ -301,14 +301,14 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "req_sample": {
             "state_payer_market": "TX",
             "mrf_75th_percentile_benchmark_usd": 1845000.0,
-            "planholders": ["Texas Orthopedic Specialists PA", "Baylor Scott & White Surgicare", "Lonestar ASC LLC"],
+            "peer_specialty_groups": ["Texas Orthopedic Specialists PA", "Baylor Scott & White Surgicare", "Lonestar ASC LLC"],
         },
         "res_sample": {
             "status": "success",
-            "expected_bidder_count": 3,
-            "predicted_winning_discount_vs_estimate_pct": -4.2,
-            "recommended_optimal_bid_usd": 1767510.0,
-            "expected_money_left_on_table_pct": 1.8,
+            "peer_npi_cohorts_compared": 3,
+            "current_schedule_vs_mrf_75th_gap_pct": -14.2,
+            "recommended_renegotiated_schedule_usd": 2106990.0,
+            "projected_annual_reimbursement_lift_pct": 14.2,
         },
     },
     {
@@ -317,7 +317,7 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         "title": "Value-Based Care, ASC Carve-Out & Commercial Payer Rate Term-Sheet Generator",
         "method": "POST",
         "route": "/v1/generate/payer-contract-redline",
-        "mcp_tool": "generate_subcontractor_itb_scope_packages",
+        "mcp_tool": "generate_payer_contract_redline_demand",
         "badge": "PAYER CONTRACT TERM SHEET",
         "connect_to_tier2": False,
         "summary": "Generates commercial payer contract renegotiation term sheets, ASC implant carve-out schedules, and anti-downcoding contract riders anchored to 75th-percentile TiC MRF benchmarks.",
@@ -328,8 +328,8 @@ APIS_CATALOG: List[Dict[str, Any]] = [
         },
         "res_sample": {
             "status": "success",
-            "itb_packages_generated": 3,
-            "flow_down_audit": "PASS — 215% Medicare MPFS Floor, Cost+15% Implant Carve-Out & 30-Day Prompt-Pay Rider Verified",
+            "contract_redline_riders_generated": 3,
+            "managed_care_rider_audit": "PASS — 215% Medicare MPFS Floor, Cost+15% Implant Carve-Out & 30-Day Prompt-Pay Rider Verified",
         },
     },
 ]
@@ -1044,7 +1044,7 @@ def build_site_files() -> None:
     )
 
     account_letting_options_html = "\n              ".join(
-        f'<option value="{item["project_id"]}|{item.get("state_code", "TX")}" data-state="{item.get("state_code", "TX")}">{item["project_id"]} ({item.get("state_code", "TX")}) — {item["title"].replace("[" + item["project_id"] + "] ", "")[:58]}</option>'
+        f'<option value="{item["project_id"]}|{item.get("state_code", "TX")}" data-state="{item.get("state_code", "TX")}">{item["project_id"]} ({item.get("state_code", "TX")}) — {item["title"].replace("[" + item["project_id"] + "] ", "")}</option>'
         for item in lettings
     )
 
@@ -1175,7 +1175,7 @@ def build_site_files() -> None:
     }}
 
     function switchCardCodeTab(cardId, tabName) {{
-      const meta = (window.API_META || {{}})[cardId] || {{ method: 'POST', route: '/v1/shred/csi-masterformat', defaultPayload: {{}} }};
+      const meta = (window.API_META || {{}})[cardId] || {{ method: 'POST', route: '/v1/shred/cpb-lcd-medical-policy', defaultPayload: {{}} }};
       const cat = (window.CATALOG || {{}})[cardId] || {{ status: 'success' }};
       const payloadStr = JSON.stringify(meta.defaultPayload || {{}}, null, 2);
       const resEl = document.getElementById('card-res-' + cardId);
@@ -1278,7 +1278,7 @@ def build_site_files() -> None:
         procore_precon: {{
           blueprint_id: 'rubricward_athena_nextgen_cpb_v1',
           target_system: 'Athenahealth / NextGen Prior-Auth & ERISA Queue',
-          endpoints_used: ['/v1/shred/csi-masterformat', '/v1/generate/dbe-good-faith-effort'],
+          endpoints_used: ['/v1/shred/cpb-lcd-medical-policy', '/v1/synthesize/nsa-idr-erisa-appeal'],
           field_mapping: {{
             cpb_policy_id: 'PriorAuth.ClinicalPolicySection',
             prior_auth_checklist: 'PriorAuth.RequiredDocumentation',
@@ -1288,7 +1288,7 @@ def build_site_files() -> None:
         sage_300_cre: {{
           blueprint_id: 'rubricward_availity_835_idr_v1',
           target_system: 'Change Healthcare / Availity 835 ERA & NSA IDR Queue',
-          endpoints_used: ['/v1/generate/aia-g702-g703-pay-app', '/v1/audit/surety-miller-act-bond'],
+          endpoints_used: ['/v1/reconcile/hipaa-835-era-remittance', '/v1/audit/caqh-pecos-credentialing'],
           field_mapping: {{
             remittance_variance_ledger: 'ERA835.UnderpaymentRecoveryQueue',
             carc_rarc_group: 'ERA835.AdjustmentReasonCode',
@@ -1299,7 +1299,7 @@ def build_site_files() -> None:
           blueprint_id: 'rubricward_n8n_slack_teams_v1',
           target_system: 'Slack / Microsoft Teams / n8n RCM Webhook',
           schedule_cron: '0 */6 * * *',
-          endpoints_used: ['/v1/lettings/live', '/v1/camber-autopilot/compile-bid-package?format=binary']
+          endpoints_used: ['/v1/mrf-disparities/live', '/v1/camber-autopilot/compile-bid-package?format=binary']
         }}
       }};
       const data = blueprints[key] || blueprints.hcss_heavybid;
@@ -2065,7 +2065,7 @@ def build_site_files() -> None:
     function renderSandboxOutput() {{
       const sel = document.getElementById('sandbox-api-select');
       const cardId = sel ? sel.value : 'product-csi-masterformat';
-      const meta = (window.API_META || {{}})[cardId] || {{ method: 'POST', route: '/v1/shred/csi-masterformat', defaultPayload: {{}} }};
+      const meta = (window.API_META || {{}})[cardId] || {{ method: 'POST', route: '/v1/shred/cpb-lcd-medical-policy', defaultPayload: {{}} }};
       const cat = (window.CATALOG || {{}})[cardId] || {{ status: 'success' }};
       const reqBox = document.getElementById('sandbox-req-box');
       const payloadStr = reqBox ? reqBox.value : JSON.stringify(meta.defaultPayload, null, 2);

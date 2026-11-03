@@ -579,7 +579,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/scrub/ncci-ptp-mue-modifiers" || path === "/v1/audit/baba-buy-america" || path === "/v1/audit/ncci-modifier-unbundling") {{
+  if (path === "/v1/scrub/ncci-ptp-mue-edits" || path === "/v1/scrub/ncci-ptp-mue-modifiers" || path === "/v1/audit/baba-buy-america" || path === "/v1/audit/ncci-modifier-unbundling") {{
     const items = Array.isArray(body.bom_items) && body.bom_items.length > 0 ? body.bom_items : [
       {{ material_name: "CPT 63030 + CPT 63035 (2-Level Lumbar Microdiscectomy with Modifier 59)", category: "Spine Surgery / NCCI PTP", ncci_modifier_indicator_code: "MOD-59-VALID", domestic_cost_pct: 100.0, extended_cost_usd: 6840 }},
     ];
@@ -589,7 +589,7 @@ function handleV1Endpoint(path, method, url, body) {{
       return {{
         material_name: item.material_name || "CPT/HCPCS Claim Line Pair",
         category: item.category || "NCCI PTP / MUE Audit",
-        ncci_modifier_indicator_code: item.country_of_melt_and_pour || "MOD-59-VALID",
+        ncci_modifier_indicator_code: item.ncci_modifier_indicator_code || item.modifier_appended || item.country_of_melt_and_pour || "MOD-59-VALID",
         domestic_cost_pct: domPct,
         extended_cost_usd: Number(item.extended_cost_usd || 4890),
         ncci_ptp_mue_compliance_status: compliant ? "COMPLIANT" : "MODIFIER_DOCUMENTATION_REQUIRED",
@@ -601,7 +601,7 @@ function handleV1Endpoint(path, method, url, body) {{
       project_name: body.project_name || "Multi-Line Spine & Orthopedic ASC Claim NCCI/MUE Audit",
       funding_agency: body.funding_agency || "CMS NCCI PTP & Commercial Payer Payment Integrity",
       statutory_authority: "CMS National Correct Coding Initiative (NCCI) Policy Manual & Medically Unlikely Edits (MUE)",
-      overall_compliance_status: audited.every(i => i.baba_23_cfr_635_410_status === "COMPLIANT") ? "PASS" : "MODIFIER_ADDENDUM_REQUIRED",
+      overall_compliance_status: audited.every(i => i.ncci_ptp_mue_compliance_status === "COMPLIANT") ? "PASS" : "MODIFIER_ADDENDUM_REQUIRED",
       audited_bom_items: audited,
     }};
   }}
@@ -715,7 +715,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/estimate/gfe-advanced-eob" || path === "/v1/generate/rfi-change-order-claim" || path === "/v1/generate/prompt-pay-interest-demand") {{
+  if (path === "/v1/generate/prior-auth-p2p-rebuttal" || path === "/v1/estimate/gfe-advanced-eob" || path === "/v1/generate/rfi-change-order-claim" || path === "/v1/generate/prompt-pay-interest-demand") {{
     const direct = Number(body.direct_cost_impact_usd || 4920);
     const days = Number(body.critical_path_delay_days || 48);
     const ohp = Number((direct * 0.18 * (days / 365)).toFixed(2));
@@ -737,7 +737,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/screen/oig-leie-stark-aks" || path === "/v1/audit/osha-emr-site-safety" || path === "/v1/generate/prior-auth-clinical-packet") {{
+  if (path === "/v1/audit/oig-rac-upic-extrapolation" || path === "/v1/screen/oig-leie-stark-aks" || path === "/v1/audit/osha-emr-site-safety" || path === "/v1/generate/prior-auth-clinical-packet") {{
     const emr = Number(body.contractor_emr ?? 0.92);
     const maxEmr = Number(body.max_allowed_emr ?? 1.00);
     const hazards = Array.isArray(body.high_hazard_activities) && body.high_hazard_activities.length > 0 ? body.high_hazard_activities : [
@@ -763,7 +763,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/benchmark/ein-npi-payer-spread" || path === "/v1/analyze/planholder-competitor-spread" || path === "/v1/analyze/payer-contract-renegotiation") {{
+  if (path === "/v1/analyze/group-npi-ein-payer-leverage" || path === "/v1/benchmark/ein-npi-payer-spread" || path === "/v1/analyze/planholder-competitor-spread" || path === "/v1/analyze/payer-contract-renegotiation") {{
     const engEst = Number(body.engineers_estimate_usd || 6840);
     const directCost = Number(body.our_direct_cost_usd || 4210);
     const optBid = Number((engEst * 0.95).toFixed(2));
@@ -784,7 +784,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/generate/payer-contract-redline" || path === "/v1/generate/subcontractor-scope-itb" || path === "/v1/generate/good-faith-estimate-gfe") {{
+  if (path === "/v1/model/asc-drg-implant-carveout" || path === "/v1/generate/payer-contract-redline" || path === "/v1/generate/subcontractor-scope-itb" || path === "/v1/generate/good-faith-estimate-gfe") {{
     return {{
       status: "success",
       project_name: body.project_name || "45 CFR 149.420 Good-Faith Estimate (GFE) & Out-of-Network Financial Clearance Packet",
@@ -980,10 +980,10 @@ async function handleConciergeEndpoint(body, env) {{
     fallbackAns = "Every RubricWard 6-File OpenXML (.ZIP) Appeal & IDR Arbitration Package compiles 5 native Word/Excel volumes plus a JSON readiness manifest in memory:\n• Volume I (.DOCX): ERISA 29 CFR 2560.503-1 & ACA 45 CFR 147.136 Clinical Medical-Necessity Appeal Brief\n• Volume II (.XLSX): CMS TiC Commercial Payer MRF Allowed-Amount & QPA Benchmark Model (with live =ROUND(D6*G6,2) & =SUM() formulas)\n• Volume III (.XLSX): Medicare MPFS RVU/GPCI Locality & OPPS/ASC Parity Schedule\n• Volume IV (.DOCX): Federal NSA 45 CFR 149.510 30-Day Open Negotiation Notice & IDR Arbitration Position Statement\n• Volume V (.DOCX) + 00_Manifest (.JSON): CMS NCCI PTP Modifier 25/59/XE/XS Unbundling Defense & State Prompt-Pay Interest Demand";
     anchor = "#zip-package-inspector";
   }} else if (/mrf|qpa|allowed|benchmark|cpt|hcpcs|rvu|gpci|medicare|mpfs|opps|asc|rate/i.test(ql)) {{
-    fallbackAns = "RubricWard benchmarks every CPT, HCPCS, DRG, and APC code against 2.4M+ verified commercial payer in-network MRF rates across all 50 states:\n• API #02 (/v1/model/dot-unit-bid-tabs): Computes 25th, 50th (median), and 75th percentile commercial allowed amounts from UHC, Anthem/Elevance, BCBS, Aetna, and Cigna TiC MRFs under 45 CFR 147.212.\n• API #03 (/v1/calculate/davis-bacon-prevailing-wage): Calculates exact Medicare MPFS Work, Practice Expense, and Malpractice RVU reimbursement adjusted by CMS Locality GPCI and Conversion Factor ($33.2875).\n• API #11 (/v1/analyze/planholder-competitor-spread): Compares payer contracted schedules at 140%–210% of Medicare to maximize managed-care contract renegotiations and NSA IDR final offers.";
+    fallbackAns = "RubricWard benchmarks every CPT, HCPCS, DRG, and APC code against 2.4M+ verified commercial payer in-network MRF rates across all 50 states:\n• API #02 (/v1/model/tic-payer-mrf-rates): Computes 25th, 50th (median), and 75th percentile commercial allowed amounts from UHC, Anthem/Elevance, BCBS, Aetna, and Cigna TiC MRFs under 45 CFR 147.212.\n• API #03 (/v1/calculate/medicare-mpfs-rvu-gpci): Calculates exact Medicare MPFS Work, Practice Expense, and Malpractice RVU reimbursement adjusted by CMS Locality GPCI and Conversion Factor ($33.2875).\n• API #11 (/v1/analyze/group-npi-ein-payer-leverage): Compares payer contracted schedules at 140%–210% of Medicare to maximize managed-care contract renegotiations and NSA IDR final offers.";
     anchor = "#product-dot-unit-bid-tabs";
   }} else if (/carc|rarc|835|denial|ncci|mue|modifier|25|59|prompt pay|interest|lcd|ncd|prior auth/i.test(ql)) {{
-    fallbackAns = "RubricWard automates clinical denial reversal, NCCI unbundling defense, and statutory prompt-pay interest calculation:\n• API #01 (/v1/shred/csi-masterformat): Shreds X12 835 ERA CARC/RARC denial codes (CO-45, CO-50, CO-97, CO-197) into statutory appeal checklists and filing windows.\n• API #05 (/v1/audit/baba-buy-america): Audits multi-line CPT claims against CMS NCCI Procedure-to-Procedure (PTP) edits and MUE limits, generating Modifier 25/59/XE/XS operative note documentation.\n• API #09 (/v1/generate/rfi-change-order-claim): Computes accrued statutory prompt-pay interest under TX Ins. Code § 1301.103 (18% p.a.), NY ISC § 3224-a (12% p.a.), CA H&SC § 1371 (15% p.a.), and FL Stat. § 627.6131 (12% p.a.).";
+    fallbackAns = "RubricWard automates clinical denial reversal, NCCI unbundling defense, and statutory prompt-pay interest calculation:\n• API #01 (/v1/shred/cpb-lcd-medical-policy): Shreds X12 835 ERA CARC/RARC denial codes (CO-45, CO-50, CO-97, CO-197) and Payer CPBs/LCDs into statutory appeal checklists and filing windows.\n• API #05 (/v1/scrub/ncci-ptp-mue-edits): Audits multi-line CPT claims against CMS NCCI Procedure-to-Procedure (PTP) edits and MUE limits, generating Modifier 25/59/XE/XS operative note documentation.\n• API #09 (/v1/generate/prior-auth-p2p-rebuttal): Synthesizes Peer-to-Peer (P2P) clinical rebuttal briefs and computes accrued statutory prompt-pay interest under TX Ins. Code § 1301.103 (18% p.a.), NY ISC § 3224-a (12% p.a.), CA H&SC § 1371 (15% p.a.), and FL Stat. § 627.6131 (12% p.a.).";
     anchor = "#product-davis-bacon-wage";
   }} else if (/50|52|portal|state|monitored|which|coverage|uhc|bcbs|aetna|cigna/i.test(ql)) {{
     fallbackAns = "RubricWard monitors all 52 active healthcare commercial payer & federal rate portals 24/7:\n• All 50 U.S. State Commercial Payer TiC MRF & Department of Insurance Portals (tracking UHC, Anthem/Elevance, BCBS, Aetna, Cigna, Humana, and Centene machine-readable files + state surprise-billing registries across TX, CA, FL, NY, PA, IL, OH, GA, NC, MI, NJ, VA, WA, MA, AZ, TN, IN, MO, MD, WI, CO, MN, SC, AL, LA, KY, OR, OK, CT, UT, NV, IA, AR, MS, KS, NM, NE, ID, WV, HI, NH, ME, RI, MT, DE, SD, ND, AK, VT, and WY).\n• Federal CMS Medicare Authority: MPFS RVU/GPCI, Hospital OPPS/ASC Addendum B, NCCI PTP/MUE Edits, and MCD LCD/NCD Policies.\n• Federal No Surprises Act (NSA) IDR Portal: 45 CFR 149.510 QPA & Certified IDRE Arbitration Benchmarks.";
@@ -1511,7 +1511,7 @@ export default {{
 
     compile_dir = ROOT_DIR / "v1" / "camber-autopilot" / "compile-bid-package"
     compile_dir.mkdir(parents=True, exist_ok=True)
-    valid_zip_keys = sorted(zips_by_project.keys())
+    valid_zip_keys = sorted({"".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in k) for k in zips_by_project.keys()})
     compiler_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1568,6 +1568,9 @@ export default {{
 </html>
 """
     (compile_dir / "index.html").write_text(compiler_html, encoding="utf-8")
+    rw_compile_dir = ROOT_DIR / "v1" / "rubricward-autopilot" / "compile-appeal-package"
+    rw_compile_dir.mkdir(parents=True, exist_ok=True)
+    (rw_compile_dir / "index.html").write_text(compiler_html, encoding="utf-8")
     return out_path
 
 

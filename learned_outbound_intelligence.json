@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T03:35:47.824883+00:00",
+  "updated_at": "2026-11-03T11:39:43.529177+00:00",
   "campaign_id": "672de7d4-7ff6-42ec-be56-9b6ce8519e8c",
   "recent_rendered_emails_audited": 49,
   "recent_inbound_replies_detected": 1,
@@ -70,7 +70,7 @@
     },
     "TX": {
       "sent": 1,
-      "replies": 6
+      "replies": 13
     },
     "TN": {
       "sent": 1,
