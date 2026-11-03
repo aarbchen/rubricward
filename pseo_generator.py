@@ -129,7 +129,7 @@ def build_project_dossier_html(letting: Dict[str, Any], slug: str) -> str:
     dbe_pct = float(letting.get("dbe_goal_pct") or 215.0)
     wd_id = html.escape(str(letting.get("wage_determination_id") or letting.get("wage_decision_id") or ""))
     ld_day = int(letting.get("liquidated_damages_per_day_usd") or 180)
-    src_url = html.escape(str(letting.get("source_url") or "https://www.cms.gov/nosurprises"))
+    src_url = html.escape(str(letting.get("url") or letting.get("source_url") or "https://www.cms.gov/nosurprises"))
     scope = html.escape(str(letting.get("description") or letting.get("scope_summary") or ""))
 
     pay_rows = []

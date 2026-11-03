@@ -273,7 +273,7 @@ def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str 
             f"across our 52 monitored State DOI/APCD MRF & Federal IDR portals and 12 Healthcare Revenue Cycle APIs:\n\n"
             f"- 1-Click 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package (.ZIP): {ctx['compiler_url']}\n"
             f"- Live Payer MRF & NSA IDR Dossier (Pre-Configured for {ctx['company_name']}): {ctx['dossier_url']}\n"
-            f"- Tier 2 Payer MRF & NSA IDR Autopilot Desk ($599/mo): {t2_url}\n"
+            f"- Tier 2 Payer MRF & NSA IDR Autopilot Desk ($599/mo — includes your first full custom 6-File .ZIP ERISA Appeal & NSA IDR Packet, $500 standalone value + 30 days unlimited dossiers, 1-click cancel anytime): {t2_url}\n"
             f"- Tier 3 Unlimited 6-File .ZIP Appeal & IDR Compiler ($1,499/mo): {t3_url}\n\n"
             f"Best,\n"
             f"Aaron Chen\n"

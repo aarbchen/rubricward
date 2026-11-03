@@ -175,7 +175,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     plan: "tier1",
     tier: "tier_1",
     billing: "monthly",
-    usd: 199,
+    usd: 249,
     name: "Tier 1 // ClaimWire Pro ($249/mo)",
     product_id: "prod_VY7S2Xtq7uxth3",
     price_id: "price_1UX1DrCGhMI1Ijip9ii9DAJJ",
@@ -187,8 +187,8 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     plan: "tier1",
     tier: "tier_1",
     billing: "annual",
-    usd: 1990,
-    name: "Tier 1 // ClaimWire Pro ($1,990/yr — 2 Months Free)",
+    usd: 2240,
+    name: "Tier 1 // ClaimWire Pro ($2,240/yr — 2 Months Free)",
     product_id: "prod_VY7S2Xtq7uxth3",
     price_id: "price_1UX1DsCGhMI1IjipZTHNJCnb",
     payment_link_id: "plink_1UX1DsCGhMI1IjipDBRZVMW3",
@@ -199,7 +199,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     plan: "tier2",
     tier: "tier_2",
     billing: "monthly",
-    usd: 499,
+    usd: 599,
     name: "Tier 2 // RubricWard Autopilot ($599/mo)",
     product_id: "prod_VY7Scll5eScNEe",
     price_id: "price_1UX1DtCGhMI1IjiplKs9mqqj",
@@ -211,8 +211,8 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     plan: "tier2",
     tier: "tier_2",
     billing: "annual",
-    usd: 4490,
-    name: "Tier 2 // RubricWard Autopilot ($4,490/yr — Save $1,498/yr)",
+    usd: 5390,
+    name: "Tier 2 // RubricWard Autopilot ($5,390/yr — Save $1,798/yr)",
     product_id: "prod_VY7Scll5eScNEe",
     price_id: "price_1UX1DuCGhMI1IjipvoX6LqRg",
     payment_link_id: "plink_1UX1DvCGhMI1IjiptIVmMD0J",
@@ -235,8 +235,8 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     plan: "tier3",
     tier: "tier_3",
     billing: "annual",
-    usd: 14900,
-    name: "Tier 3 // 1-Click 6-File .ZIP Appeal & IDR Compiler ($14,900/yr — Save $3,088/yr)",
+    usd: 13490,
+    name: "Tier 3 // 1-Click 6-File .ZIP Appeal & IDR Compiler ($13,490/yr — Save $4,498/yr)",
     product_id: "prod_VY7SAl5NeCG5lL",
     price_id: "price_1UX1DwCGhMI1Ijipt8YrWKjX",
     payment_link_id: "plink_1UX1DxCGhMI1IjipuaS3ChAK",
@@ -247,7 +247,7 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     plan: "tier4",
     tier: "tier_4",
     billing: "monthly",
-    usd: 2499,
+    usd: 2999,
     name: "Tier 4 // Enterprise RCM & Practice ERP OEM Suite ($2,999/mo)",
     product_id: "prod_VY7SG4WSmA0rgJ",
     price_id: "price_1UX1DyCGhMI1IjipzoXYNULY",
@@ -259,8 +259,8 @@ const RUBRICWARD_STRIPE_CATALOG = {{
     plan: "tier4",
     tier: "tier_4",
     billing: "annual",
-    usd: 24900,
-    name: "Tier 4 // Enterprise RCM & Practice ERP OEM Suite ($24,900/yr — Save $5,088/yr)",
+    usd: 26990,
+    name: "Tier 4 // Enterprise RCM & Practice ERP OEM Suite ($26,990/yr — Save $8,998/yr)",
     product_id: "prod_VY7SG4WSmA0rgJ",
     price_id: "price_1UX1DyCGhMI1IjipyDtDW5iE",
     payment_link_id: "plink_1UX1DzCGhMI1Ijipqx1ysQPF",
@@ -397,7 +397,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/shred/csi-masterformat" || path === "/v1/generate/erisa-medical-necessity-appeal") {{
+  if (path === "/v1/shred/cpb-lcd-medical-policy" || path === "/v1/shred/csi-masterformat" || path === "/v1/generate/erisa-medical-necessity-appeal") {{
     const project = body.project_name || "UHC Choice Plus ASC Lumbar Microdiscectomy Claim Audit";
     const sol = body.solicitation_number || "CLM-2026-UHC-88412";
     const state = (body.state_code || "TX").toUpperCase();
@@ -407,14 +407,14 @@ function handleV1Endpoint(path, method, url, body) {{
       solicitation_number: sol,
       state_code: state,
       model_used: "claude-sonnet-5-5",
-      contract_risk_summary: {{
-        liquidated_damages_per_day_usd: 4920.0,
-        contract_duration_calendar_days: 30,
-        retainage_pct: 162.4,
-        warranty_months: 180,
-        buy_america_baba_applicable: true,
+      claim_denial_risk_summary: {{
+        recoverable_underpayment_usd: 4920.0,
+        open_negotiation_business_days: 30,
+        mrf_to_medicare_pct: 228.5,
+        erisa_appeal_window_days: 180,
+        nsa_45_cfr_149_510_idr_eligible: true,
       }},
-      shredded_csi_divisions: [
+      shredded_medical_policy_criteria: [
         {{
           division_code: "CARC-50",
           division_title: "Non-Covered Service: Medical Necessity & Prior Authorization Policy",
@@ -461,9 +461,9 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/model/dot-unit-bid-tabs" || path === "/v1/benchmark/payer-mrf-rates") {{
+  if (path === "/v1/model/tic-payer-mrf-rates" || path === "/v1/model/dot-unit-bid-tabs" || path === "/v1/benchmark/payer-mrf-rates") {{
     const state = (body.state_code || "TX").toUpperCase();
-    const agency = body.dot_agency || `${{state}} Commercial Payer MRF Cohort (UHC / BCBS / Aetna / Cigna)`;
+    const agency = body.payer_cohort_agency || body.dot_agency || `${{state}} Commercial Payer MRF Cohort (UHC / BCBS / Aetna / Cigna)`;
     const items = Array.isArray(body.pay_items) && body.pay_items.length > 0 ? body.pay_items : [
       {{ item_code: "63030", description: "Lumbar Laminotomy / Microdiscectomy (1 Interspace)", unit: "CPT", quantity: 1 }},
       {{ item_code: "29881", description: "Knee Arthroscopy with Medial/Lateral Meniscectomy", unit: "CPT", quantity: 1 }},
@@ -498,7 +498,7 @@ function handleV1Endpoint(path, method, url, body) {{
     return {{
       status: "success",
       state_code: state,
-      dot_agency: agency,
+      payer_cohort_agency: agency,
       letting_quarter: body.letting_quarter || "2026-Q4",
       modeled_pay_items: modeled,
       unit_price_benchmarks: modeled,
@@ -510,7 +510,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/calculate/davis-bacon-prevailing-wage" || path === "/v1/calculate/rvu-gpci-fee-schedule") {{
+  if (path === "/v1/calculate/medicare-mpfs-rvu-gpci" || path === "/v1/calculate/davis-bacon-prevailing-wage" || path === "/v1/calculate/rvu-gpci-fee-schedule") {{
     const state = (body.state_code || "TX").toUpperCase();
     const county = body.county_name || "Houston-The Woodlands-Sugar Land (Locality 04412-18)";
     const ctype = body.construction_type || "Non-Facility / ASC";
@@ -532,7 +532,7 @@ function handleV1Endpoint(path, method, url, body) {{
         trade_classification: c.trade || "CMS MPFS CPT/HCPCS Procedure",
         estimated_hours: hrs,
         base_hourly_wage_usd: baseRate,
-        davis_bacon_base_hourly_usd: baseRate,
+        medicare_facility_allowable_usd: baseRate,
         bona_fide_fringe_hourly_usd: fringeRate,
         total_prevailing_package_hourly_usd: Number((baseRate + fringeRate).toFixed(2)),
         payroll_taxes_workers_comp_hourly_usd: taxesIns,
@@ -547,20 +547,20 @@ function handleV1Endpoint(path, method, url, body) {{
       construction_type: ctype,
       wage_determination_decision_no: `CMS-MPFS-2026B (${{state}} Locality GPCI — CF $33.2875)`,
       wage_determination_reference: `CMS CY2026 MPFS & OPPS/ASC Locality Schedule (${{ctype}} — ${{county}})`,
-      wh347_certified_payroll_schedule: lines,
+      mpfs_locality_rvu_schedule: lines,
       wage_classifications: lines,
       fully_burdened_crew_hourly_usd: 2986.80,
       total_burdened_labor_cost_usd: Number(totalPayroll.toFixed(2)),
       total_estimated_prevailing_labor_usd: Number(totalPayroll.toFixed(2)),
       weighted_fringe_burden_pct: 162.4,
-      wh347_compliance_notes: [
+      mpfs_gpci_compliance_notes: [
         "CY2026 CMS Medicare Conversion Factor ($33.2875) applied to geographically adjusted Work, PE, and MP RVUs.",
         "Commercial target reimbursement modeled at 162.4% of locality-adjusted Medicare MPFS baseline.",
       ],
     }};
   }}
 
-  if (path === "/v1/lettings/live" || path === "/v1/rates/live-disparities") {{
+  if (path === "/v1/mrf-disparities/live" || path === "/v1/lettings/live" || path === "/v1/rates/live-disparities") {{
     const stateParam = (url.searchParams.get("state") || body.state || "ALL").toUpperCase();
     const limitParam = Math.min(Math.max(Number(url.searchParams.get("limit") || body.limit || 10), 1), 50);
     const baseList = Array.isArray(LETTINGS_SEED) ? LETTINGS_SEED : (LETTINGS_SEED.lettings || LETTINGS_SEED.active_lettings || []);
@@ -579,9 +579,9 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/audit/baba-buy-america" || path === "/v1/audit/ncci-modifier-unbundling") {{
+  if (path === "/v1/scrub/ncci-ptp-mue-modifiers" || path === "/v1/audit/baba-buy-america" || path === "/v1/audit/ncci-modifier-unbundling") {{
     const items = Array.isArray(body.bom_items) && body.bom_items.length > 0 ? body.bom_items : [
-      {{ material_name: "CPT 63030 + CPT 63035 (2-Level Lumbar Microdiscectomy with Modifier 59)", category: "Spine Surgery / NCCI PTP", country_of_melt_and_pour: "MOD-59-VALID", domestic_cost_pct: 100.0, extended_cost_usd: 6840 }},
+      {{ material_name: "CPT 63030 + CPT 63035 (2-Level Lumbar Microdiscectomy with Modifier 59)", category: "Spine Surgery / NCCI PTP", ncci_modifier_indicator_code: "MOD-59-VALID", domestic_cost_pct: 100.0, extended_cost_usd: 6840 }},
     ];
     const audited = items.map(item => {{
       const domPct = Number(item.domestic_cost_pct ?? 100);
@@ -589,10 +589,10 @@ function handleV1Endpoint(path, method, url, body) {{
       return {{
         material_name: item.material_name || "CPT/HCPCS Claim Line Pair",
         category: item.category || "NCCI PTP / MUE Audit",
-        country_of_melt_and_pour: item.country_of_melt_and_pour || "MOD-59-VALID",
+        ncci_modifier_indicator_code: item.country_of_melt_and_pour || "MOD-59-VALID",
         domestic_cost_pct: domPct,
         extended_cost_usd: Number(item.extended_cost_usd || 4890),
-        baba_23_cfr_635_410_status: compliant ? "COMPLIANT" : "MODIFIER_DOCUMENTATION_REQUIRED",
+        ncci_ptp_mue_compliance_status: compliant ? "COMPLIANT" : "MODIFIER_DOCUMENTATION_REQUIRED",
         required_certification: "Operative Note Distinct Anatomical Site & CMS NCCI PTP Modifier 25/59/XE/XS Addendum",
       }};
     }});
@@ -606,7 +606,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/generate/dbe-good-faith-effort" || path === "/v1/generate/nsa-idr-arbitration-brief") {{
+  if (path === "/v1/synthesize/nsa-idr-erisa-appeal" || path === "/v1/generate/dbe-good-faith-effort" || path === "/v1/generate/nsa-idr-arbitration-brief") {{
     const baseBid = Number(body.total_base_bid_usd || 18450);
     const goalPct = Number(body.dbe_goal_percent || 100.0);
     const subs = Array.isArray(body.proposed_dbe_commitments) && body.proposed_dbe_commitments.length > 0 ? body.proposed_dbe_commitments : [
@@ -624,7 +624,7 @@ function handleV1Endpoint(path, method, url, body) {{
         certification: s.certification || "ERISA / ACA Statutory Mandate",
         role: s.role || "Clinical & Legal Citation",
         quote_amount_usd: quote,
-        cfr_49_part_26_55_credit_multiplier: creditFactor,
+        tma_iii_iv_qpa_weight_factor: creditFactor,
         counted_dbe_credit_usd: credited,
         commercially_useful_function_cuf_check: "VERIFIED",
       }};
@@ -638,12 +638,12 @@ function handleV1Endpoint(path, method, url, body) {{
       achieved_dbe_credit_usd: Number(totalCredit.toFixed(2)),
       achieved_dbe_participation_pct: achievedPct,
       goal_met: achievedPct >= goalPct,
-      good_faith_effort_49_cfr_26_appendix_a_status: "STATUTORY_APPEAL_PACKET_READY",
+      nsa_idr_45_cfr_149_510_packet_status: "STATUTORY_APPEAL_PACKET_READY",
       evaluated_commitments: evaluated,
     }};
   }}
 
-  if (path === "/v1/generate/aia-g702-g703-pay-app" || path === "/v1/audit/835-era-underpayment") {{
+  if (path === "/v1/reconcile/hipaa-835-era-remittance" || path === "/v1/generate/aia-g702-g703-pay-app" || path === "/v1/audit/835-era-underpayment") {{
     const retPct = Number(body.retainage_pct ?? 12.0);
     const lines = Array.isArray(body.sov_lines) && body.sov_lines.length > 0 ? body.sov_lines : [
       {{ item_no: "63030", description: "Lumbar Laminotomy / Microdiscectomy (CMS TiC MRF Median vs Paid QPA)", scheduled_value_usd: 6840, prev_completed_usd: 1920, this_period_usd: 4920, stored_materials_usd: 0 }},
@@ -678,7 +678,7 @@ function handleV1Endpoint(path, method, url, body) {{
       status: "success",
       project_name: body.project_name || "Commercial Payer Contract Underpayment & Prompt-Pay Interest Ledger",
       application_number: Number(body.application_number || 1),
-      g702_executive_summary: {{
+      era_835_remittance_summary: {{
         original_contract_sum_usd: contractSum,
         total_completed_and_stored_to_date_usd: totalCompletedStored,
         retainage_pct: retPct,
@@ -687,11 +687,11 @@ function handleV1Endpoint(path, method, url, body) {{
         less_previous_certificates_for_payment_usd: prevCert,
         current_payment_due_usd: currentPaymentDue,
       }},
-      g703_continuation_sheet: g703,
+      era_835_claim_line_adjustments: g703,
     }};
   }}
 
-  if (path === "/v1/audit/surety-miller-act-bond" || path === "/v1/audit/oig-upcoding-compliance-risk") {{
+  if (path === "/v1/audit/caqh-pecos-credentialing" || path === "/v1/audit/surety-miller-act-bond" || path === "/v1/audit/oig-upcoding-compliance-risk") {{
     const ca = Number(body.current_assets_usd || 6840);
     const cl = Number(body.current_liabilities_usd || 1920);
     const tnw = Number(body.tangible_net_worth_usd || 4210);
@@ -707,15 +707,15 @@ function handleV1Endpoint(path, method, url, body) {{
       contractor_name: body.contractor_name || "Lone Star Spine & Orthopedic Surgery Center LLC",
       statutory_citation: "Federal No Surprises Act (42 U.S.C. 300gg-111 / 45 CFR 149.510) Independent Dispute Resolution (IDR)",
       verified_working_capital_usd: workingCap,
-      single_project_bond_limit_usd: singleLimit,
-      aggregate_bonded_backlog_limit_usd: aggLimit,
-      pro_forma_bonded_backlog_usd: newAggBacklog,
+      malpractice_per_occurrence_limit_usd: singleLimit,
+      malpractice_aggregate_limit_usd: aggLimit,
+      verified_active_npi_pecos_enrollment_usd: newAggBacklog,
       underwriting_decision: "ELIGIBLE_FOR_FEDERAL_NSA_IDR_ARBITRATION_OFFER_RECOMMENDED",
-      estimated_performance_and_payment_bond_premium_usd: premium,
+      caqh_proview_attestation_cycle_days: premium,
     }};
   }}
 
-  if (path === "/v1/generate/rfi-change-order-claim" || path === "/v1/generate/prompt-pay-interest-demand") {{
+  if (path === "/v1/estimate/gfe-advanced-eob" || path === "/v1/generate/rfi-change-order-claim" || path === "/v1/generate/prompt-pay-interest-demand") {{
     const direct = Number(body.direct_cost_impact_usd || 4920);
     const days = Number(body.critical_path_delay_days || 48);
     const ohp = Number((direct * 0.18 * (days / 365)).toFixed(2));
@@ -726,7 +726,7 @@ function handleV1Endpoint(path, method, url, body) {{
       project_name: body.project_name || "Emergency Trauma & ASC Surgical Underpayment Prompt-Pay Demand",
       contract_clause_reference: body.contract_clause_reference || "TX Ins. Code § 1301.103 (18% p.a.) / NY ISC § 3224-a (12% p.a.) / CA H&SC § 1371 (15% p.a.)",
       rfi_number: "DEMAND-2026-PP-0042",
-      aia_g701_change_order_pricing: {{
+      good_faith_estimate_co_provider_pricing: {{
         direct_labor_equipment_material_usd: direct,
         contractor_overhead_and_profit_15pct_usd: ohp,
         extended_field_and_unabsorbed_overhead_usd: eichleay,
@@ -737,7 +737,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/audit/osha-emr-site-safety" || path === "/v1/generate/prior-auth-clinical-packet") {{
+  if (path === "/v1/screen/oig-leie-stark-aks" || path === "/v1/audit/osha-emr-site-safety" || path === "/v1/generate/prior-auth-clinical-packet") {{
     const emr = Number(body.contractor_emr ?? 0.92);
     const maxEmr = Number(body.max_allowed_emr ?? 1.00);
     const hazards = Array.isArray(body.high_hazard_activities) && body.high_hazard_activities.length > 0 ? body.high_hazard_activities : [
@@ -749,7 +749,7 @@ function handleV1Endpoint(path, method, url, body) {{
       contractor_emr: emr,
       max_allowed_emr: maxEmr,
       emr_prequalification_status: emr <= maxEmr ? "CLINICAL_CRITERIA_MET_APPROVAL_RECOMMENDED" : "SUPPLEMENTAL_CLINICAL_ADDENDUM_REQUIRED",
-      usace_em_385_1_1_activity_hazard_analyses: hazards.map((h, i) => ({{
+      oig_leie_stark_aks_compliance_audits: hazards.map((h, i) => ({{
         aha_id: `LCD-CRIT-0${{i + 1}}`,
         activity_description: h,
         governing_standard: "CMS Local Coverage Determination (LCD) & InterQual / MCG Clinical Guidelines",
@@ -763,7 +763,7 @@ function handleV1Endpoint(path, method, url, body) {{
     }};
   }}
 
-  if (path === "/v1/analyze/planholder-competitor-spread" || path === "/v1/analyze/payer-contract-renegotiation") {{
+  if (path === "/v1/benchmark/ein-npi-payer-spread" || path === "/v1/analyze/planholder-competitor-spread" || path === "/v1/analyze/payer-contract-renegotiation") {{
     const engEst = Number(body.engineers_estimate_usd || 6840);
     const directCost = Number(body.our_direct_cost_usd || 4210);
     const optBid = Number((engEst * 0.95).toFixed(2));
@@ -777,23 +777,23 @@ function handleV1Endpoint(path, method, url, body) {{
       recommended_winning_bid_usd: optBid,
       recommended_gross_markup_pct: markupPct,
       expected_margin_left_on_table_mlot_pct: 162.4,
-      planholder_threat_matrix: body.planholders || [
+      payer_mrf_rate_leverage_matrix: body.planholders || [
         {{ contractor_name: "UnitedHealthcare Choice Plus MRF (50th Pct Median)", threat_level: "BENCHMARK", expected_bid_vs_engineer_pct: 162.4 }},
         {{ contractor_name: "BCBS BlueCard PPO MRF (75th Pct Allowed)", threat_level: "HIGH_LEVERAGE", expected_bid_vs_engineer_pct: 184.0 }},
       ],
     }};
   }}
 
-  if (path === "/v1/generate/subcontractor-scope-itb" || path === "/v1/generate/good-faith-estimate-gfe") {{
+  if (path === "/v1/generate/payer-contract-redline" || path === "/v1/generate/subcontractor-scope-itb" || path === "/v1/generate/good-faith-estimate-gfe") {{
     return {{
       status: "success",
       project_name: body.project_name || "45 CFR 149.420 Good-Faith Estimate (GFE) & Out-of-Network Financial Clearance Packet",
       trade_division: body.trade_division || "CPT 63030 / ASC Facility & Surgeon Co-Provider GFE Schedule",
-      liquidated_damages_flowdown_per_day_usd: Number(body.prime_contract_liquidated_damages_per_day_usd || 400),
+      ppdr_dispute_threshold_usd: Number(body.prime_contract_liquidated_damages_per_day_usd || 400),
       scope_inclusions_checklist: body.scope_highlights || [
         "Itemized Primary Surgeon, Assistant Surgeon, Anesthesia, and ASC Facility CPT/HCPCS Good-Faith Estimate",
       ],
-      aia_a401_mandatory_flowdown_clauses: [
+      payer_contract_redline_clauses: [
         "45 CFR 149.610 Uninsured / Self-Pay Patient-Provider Dispute Resolution ($400 Threshold Notice)",
         "45 CFR 149.420 Notice & Consent Standard Waiver Eligibility Verification (Non-Emergency Post-Stabilization Only)",
         "ERISA Assignment of Benefits (AOB) & Direct-Payment Authorization Clause",
@@ -822,11 +822,11 @@ function handleV1Endpoint(path, method, url, body) {{
       company_name: companyName,
       filename: "RubricWard_6File_Bid_Package.zip",
       files_included: [
-        "Volume_I_ERISA_29CFR2560_and_ACA_45CFR147_Clinical_Medical_Necessity_Appeal_Brief.docx",
-        "Volume_II_CMS_TiC_Commercial_Payer_MRF_Allowed_Amount_and_QPA_Benchmark_Model.xlsx",
-        "Volume_III_Medicare_MPFS_RVU_GPCI_Locality_and_OPPS_ASC_Parity_Schedule.xlsx",
-        "Volume_IV_Federal_NSA_45CFR149_510_Open_Negotiation_and_IDR_Arbitration_Packet.docx",
-        "Volume_V_NCCI_PTP_Modifier_25_59_Unbundling_Defense_and_Prompt_Pay_Demand.docx",
+        "Volume_I_ERISA_29CFR2560_Clinical_Appeal_Brief.docx",
+        "Volume_II_No_Surprises_Act_45CFR149_IDR_Position_Paper.docx",
+        "Volume_III_State_DOI_Prompt_Pay_Penalty_Demand.docx",
+        "Volume_IV_TiC_Payer_MRF_Rate_Percentile_Model.xlsx",
+        "Volume_V_Medicare_MPFS_ASC_GPCI_Repricing_Workbook.xlsx",
         "00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json",
       ],
       download_url: "https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary",
@@ -1194,11 +1194,11 @@ export default {{
           state_code: resolvedState,
           contractor_name: url.searchParams.get("contractor_name") || body.contractor_name || "Multi-Specialty Surgical Group & ASC LLC",
           files_included: [
-            "Volume_I_ERISA_29CFR2560_and_ACA_45CFR147_Clinical_Medical_Necessity_Appeal_Brief.docx",
-            "Volume_II_CMS_TiC_Commercial_Payer_MRF_Allowed_Amount_and_QPA_Benchmark_Model.xlsx",
-            "Volume_III_Medicare_MPFS_RVU_GPCI_Locality_and_OPPS_ASC_Parity_Schedule.xlsx",
-            "Volume_IV_Federal_NSA_45CFR149_510_Open_Negotiation_and_IDR_Arbitration_Packet.docx",
-            "Volume_V_NCCI_PTP_Modifier_25_59_Unbundling_Defense_and_Prompt_Pay_Demand.docx",
+            "Volume_I_ERISA_29CFR2560_Clinical_Appeal_Brief.docx",
+            "Volume_II_No_Surprises_Act_45CFR149_IDR_Position_Paper.docx",
+            "Volume_III_State_DOI_Prompt_Pay_Penalty_Demand.docx",
+            "Volume_IV_TiC_Payer_MRF_Rate_Percentile_Model.xlsx",
+            "Volume_V_Medicare_MPFS_ASC_GPCI_Repricing_Workbook.xlsx",
             "00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json",
           ],
           zip_base64: selectedZipB64,
@@ -1256,6 +1256,18 @@ export default {{
         const toolName = params.name || "";
         const args = params.arguments || {{}};
         const routeMap = {{
+          shred_payer_cpb_lcd_medical_policy: "/v1/shred/cpb-lcd-medical-policy",
+          model_tic_payer_mrf_negotiated_rates: "/v1/model/tic-payer-mrf-rates",
+          calculate_medicare_mpfs_rvu_gpci: "/v1/calculate/medicare-mpfs-rvu-gpci",
+          get_live_payer_mrf_rate_disparities: "/v1/mrf-disparities/live",
+          scrub_ncci_ptp_mue_modifier_25_59: "/v1/scrub/ncci-ptp-mue-modifiers",
+          generate_nsa_idr_erisa_appeal_brief: "/v1/synthesize/nsa-idr-erisa-appeal",
+          reconcile_hipaa_835_era_remittance: "/v1/reconcile/hipaa-835-era-remittance",
+          audit_caqh_pecos_nppes_credentialing: "/v1/audit/caqh-pecos-credentialing",
+          generate_nsa_good_faith_estimate_gfe: "/v1/estimate/gfe-advanced-eob",
+          screen_oig_leie_stark_aks_compliance: "/v1/screen/oig-leie-stark-aks",
+          analyze_ein_npi_payer_rate_spread: "/v1/benchmark/ein-npi-payer-spread",
+          generate_payer_contract_redline_demand: "/v1/generate/payer-contract-redline",
           shred_csi_masterformat: "/v1/shred/csi-masterformat",
           shred_csi_masterformat_spec: "/v1/shred/csi-masterformat",
           model_dot_unit_bid_tabs: "/v1/model/dot-unit-bid-tabs",
@@ -1403,7 +1415,7 @@ export default {{
         "tier": "tier_2",
         "billing": "monthly",
         "tier_name": "Tier 2 // RubricWard Autopilot ($599/mo)",
-        "amount_usd": 499,
+        "amount_usd": 599,
         "product_id": "prod_VY7Scll5eScNEe",
         "price_id": "price_1UX1DtCGhMI1IjiplKs9mqqj",
         "payment_link_id": "plink_1UX1DuCGhMI1Ijip970Sdvax",

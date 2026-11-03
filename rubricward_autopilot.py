@@ -86,7 +86,7 @@ def classify_jurisdiction(letting: Dict[str, Any]) -> str:
 
 
 def synthesize_tier2_dossier(letting: Dict[str, Any]) -> Dict[str, Any]:
-    lid = str(letting.get("letting_id") or "TXDOI-MRF-CPT-29881-DFW")
+    lid = str(letting.get("project_id") or letting.get("letting_id") or "TXDOI-MRF-CPT-29881-DFW")
     title = str(letting.get("title") or "")
     est_usd = float(letting.get("engineers_estimate_usd") or 1000000.0)
     dbe_pct = float(letting.get("dbe_goal_pct") or 215.0)
@@ -100,6 +100,7 @@ def synthesize_tier2_dossier(letting: Dict[str, Any]) -> Dict[str, Any]:
 
     return {
         "letting_id": lid,
+        "project_id": lid,
         "slug": slug,
         "jurisdiction": classify_jurisdiction(letting),
         "state_code": letting.get("state_code", "TX"),
@@ -116,10 +117,11 @@ def synthesize_tier2_dossier(letting: Dict[str, Any]) -> Dict[str, Any]:
         "wage_determination_id": letting.get("wage_determination_id", "TX-INS-CODE-CH-1301"),
         "liquidated_damages_per_day_usd": letting.get("liquidated_damages_per_day_usd", 180),
         "tier2_api_suite_connected": TIER2_AUTOPILOT_API_SUITE,
-        "unit_bid_tab_preview": letting.get("key_pay_items", []),
+        "unit_bid_tab_preview": letting.get("pay_items") or letting.get("key_pay_items", []),
         "planholders": planholders,
-        "source_url": letting.get("source_url", "https://www.cms.gov/nosurprises"),
+        "source_url": letting.get("url") or letting.get("source_url") or "https://www.cms.gov/nosurprises",
         "dossier_url": f"https://rubricward.com/lettings/project/{slug}.html",
+        "rates_dossier_url": f"https://rubricward.com/rates/cpt/{slug}.html",
     }
 
 
