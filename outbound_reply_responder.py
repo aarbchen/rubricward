@@ -575,7 +575,7 @@ def run_reply_responder() -> Dict[str, Any]:
                     if 200 <= r_send.status_code < 300:
                         summary["replied"] += 1
                         _record_warm_zip_delivery(from_em, str(item.get("eaccount") or ""), msg_id, pkg["subject"], ctx)
-                        discord_url = (os.getenv("DISCORD_WEBHOOK_URL") or "").strip()
+                        discord_url = (os.getenv("DISCORD_HOT_REPLIES_WEBHOOK_URL") or os.getenv("DISCORD_WEBHOOK_URL") or "").strip()
                         if discord_url:
                             try:
                                 requests.post(
