@@ -484,6 +484,12 @@ def check_and_heal_outbound_campaign_hygiene(root_dir: Path, brand_name: str) ->
     except Exception as exc:
         issues.append(f"{brand_name}: Failed to verify `_score_scraped_email()` hierarchy: {exc}")
 
+    resp_p = root_dir / "outbound_reply_responder.py"
+    if resp_p.exists():
+        resp_src = resp_p.read_text(encoding="utf-8", errors="replace")
+        if "checkout.stripe.com/c/pay/cs_live_" in resp_src or "buy.stripe.com/" in resp_src:
+            issues.append(f"{brand_name}: `outbound_reply_responder.py` contains hardcoded expiring Stripe URL (`cs_live_` or `buy.stripe.com`); use `#checkout-tier1/2/3` site URLs instead.")
+
     sync_p = root_dir / "sync_instantly_campaign.py"
     if sync_p.exists():
         sync_src = sync_p.read_text(encoding="utf-8", errors="replace")
