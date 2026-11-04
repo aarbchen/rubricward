@@ -513,6 +513,63 @@ def check_and_heal_outbound_campaign_hygiene(root_dir: Path, brand_name: str) ->
                 except Exception as exc:
                     issues.append(f"RubricWard: {len(missing_pct)} leads missing concrete MRF % and auto-heal failed: {exc}")
 
+
+    # Live Instantly API & Production Funnel Goalie Check (Audits live campaign state & ALL paginated leads, not just local CSV)
+    inst_key = (os.getenv("INSTANTLY_API_KEY") or "").strip()
+    inst_cid = (os.getenv("INSTANTLY_CAMPAIGN_ID") or "672de7d4-7ff6-42ec-be56-9b6ce8519e8c").strip()
+    if inst_key and inst_cid:
+        try:
+            ih = {"Authorization": f"Bearer {inst_key}", "Content-Type": "application/json"}
+            rc = requests.get(f"https://api.instantly.ai/api/v2/campaigns/{inst_cid}", headers=ih, timeout=12)
+            if rc.status_code == 200:
+                cd = rc.json() or {}
+                need_opt = False
+                if int(cd.get("status") or 0) != 1 or not bool(cd.get("disable_bounce_protect")) or int(cd.get("not_sending_status") or 0) == 2:
+                    need_opt = True
+                all_inst_leads = []
+                sa = None
+                for _ in range(10):
+                    b = {"campaign": inst_cid, "limit": 100}
+                    if sa:
+                        b["starting_after"] = sa
+                    rl = requests.post("https://api.instantly.ai/api/v2/leads/list", headers=ih, json=b, timeout=12)
+                    if rl.status_code != 200:
+                        break
+                    rj = rl.json() or {}
+                    its = rj.get("items") or []
+                    all_inst_leads.extend(its)
+                    sa = rj.get("next_starting_after")
+                    if not sa or len(its) < 100:
+                        break
+                bounced_cnt = sum(1 for x in all_inst_leads if int(x.get("status") or 0) < 0)
+                unc_cnt = sum(1 for x in all_inst_leads if int(x.get("status") or 0) == 1 and not x.get("timestamp_last_contact"))
+                bad_payloads = 0
+                for x in all_inst_leads:
+                    em_x = str(x.get("email") or "").lower()
+                    p = x.get("payload") or {}
+                    s1 = str(p.get("step1_body_zero_link") or "")
+                    s2 = str(p.get("step2_body_dossier_link") or "")
+                    subj1 = str(p.get("step1_subject") or "")
+                    if (
+                        "https://" not in s2
+                        or "https://" in s1
+                        or "{" in (s1 + s2 + subj1)
+                        or "$" in (s1 + s2 + subj1)
+                        or re.search(r"DOT-PREQ-\d+", s1 + s2 + subj1)
+                        or re.search(r"-2026-10\d\d", s1 + s2 + subj1)
+                        or re.search(r"NPI\s+\d{10}", subj1)
+                        or any(em_x.endswith(bad_d) for bad_d in ("@icanotes.com", "@pjkclaims.com", ".co.uk", ".uk", ".ca", ".au"))
+                    ):
+                        bad_payloads += 1
+                if bounced_cnt > 0 or unc_cnt < 40 or bad_payloads > 0:
+                    need_opt = True
+                if need_opt:
+                    import autonomous_outbound_optimizer
+                    autonomous_outbound_optimizer.run_autonomous_outbound_optimizer(regenerate_local=True)
+                    healed.append(f"Live Instantly Goalie healed {brand_name} campaign (bounced={bounced_cnt}, uncontacted={unc_cnt}, bad_payloads={bad_payloads})")
+        except Exception as exc:
+            issues.append(f"{brand_name}: Live Instantly Goalie check warning: {exc}")
+
     return issues, healed
 
 
