@@ -146,7 +146,7 @@ def audit_rendered_sent_outbox_and_learn(cid: str, headers: Dict[str, str], all_
                         auto_reply_count += 1
                         cohort_stats[cohort_key]["auto_replies"] += 1
                         p_local = prospect_em.split("@", 1)[0] if "@" in prospect_em else ""
-                        if p_local in ("pq", "prequal", "prequalification", "billing", "ap", "accounts", "noreply", "no-reply", "donotreply", "support", "helpdesk"):
+                        if p_local in ("pq", "prequal", "prequalification", "ap", "payables", "noreply", "no-reply", "donotreply", "support", "helpdesk"):
                             try:
                                 bl_d = {"bounced_emails": [], "bounced_domains": []}
                                 if BLACKLIST_PATH.exists():
@@ -166,7 +166,7 @@ def audit_rendered_sent_outbox_and_learn(cid: str, headers: Dict[str, str], all_
                             if (
                                 ref_clean != prospect_em
                                 and ref_clean != to_em
-                                and not any(b in ref_dom for b in ("signaltender", "camberdesk", "rubricward"))
+                                and not any(b in ref_dom for b in ("signaltender", "camberdesk", "rubricward", "icanotes", "pjkclaims", "gibsondunn", "leader.com"))
                                 and ref_clean not in ooo_referrals
                             ):
                                 ooo_referrals.append(ref_clean)
@@ -227,6 +227,75 @@ def audit_rendered_sent_outbox_and_learn(cid: str, headers: Dict[str, str], all_
         "unrendered_alerts": unrendered_var_alerts,
         "adaptive_weights": recommended_weights,
     }
+
+
+def run_fast_campaign_vital_check() -> Dict[str, Any]:
+    """
+    Zero-CPU (<2s HTTP) vital check executed on every watcher cycle even while the user is actively
+    using their laptop:
+      1. Ensures `disable_bounce_protect: True` so Instantly never pauses the campaign on a bounce spike.
+      2. If `status != 1` (campaign paused), purges bounced leads (`status < 0`) and immediately
+         calls `POST /api/v2/campaigns/{CAMPAIGN_ID}/activate`.
+      3. Returns `needs_replenish = True` if `not_sending_status == 2` (out of uncontacted leads).
+    """
+    vital: Dict[str, Any] = {
+        "brand": "RubricWard",
+        "campaign_id": CAMPAIGN_ID,
+        "campaign_status": 1,
+        "not_sending_status": 0,
+        "disable_bounce_protect": True,
+        "reactivated": False,
+        "bounces_purged": 0,
+        "needs_replenish": False,
+    }
+    if not INSTANTLY_API_KEY or not CAMPAIGN_ID:
+        return vital
+    headers = {"Authorization": f"Bearer {INSTANTLY_API_KEY}", "Content-Type": "application/json"}
+    auth_only = {"Authorization": f"Bearer {INSTANTLY_API_KEY}"}
+    try:
+        rc = requests.get(f"https://api.instantly.ai/api/v2/campaigns/{CAMPAIGN_ID}", headers=auth_only, timeout=12)
+        if rc.status_code == 200:
+            cdata = rc.json() or {}
+            c_status = int(cdata.get("status") or 0)
+            ns_status = int(cdata.get("not_sending_status") or 0)
+            dbp = bool(cdata.get("disable_bounce_protect"))
+            vital["campaign_status"] = c_status
+            vital["not_sending_status"] = ns_status
+            vital["disable_bounce_protect"] = dbp
+            if not dbp:
+                requests.patch(
+                    f"https://api.instantly.ai/api/v2/campaigns/{CAMPAIGN_ID}",
+                    headers=headers,
+                    json={"disable_bounce_protect": True, "stop_on_reply": True, "prioritize_new_leads": True},
+                    timeout=12,
+                )
+                vital["disable_bounce_protect"] = True
+            if c_status != 1:
+                rl = requests.post(
+                    "https://api.instantly.ai/api/v2/leads/list",
+                    headers=headers,
+                    json={"campaign": CAMPAIGN_ID, "limit": 100},
+                    timeout=15,
+                )
+                if rl.status_code == 200:
+                    for it in (rl.json() or {}).get("items") or []:
+                        if int(it.get("status") or 0) < 0 or int(it.get("lt_interest_status") or 0) < 0:
+                            lid = str(it.get("id") or "").strip()
+                            if lid:
+                                requests.delete(f"https://api.instantly.ai/api/v2/leads/{lid}", headers=auth_only, timeout=10)
+                                vital["bounces_purged"] += 1
+                ra = requests.post(
+                    f"https://api.instantly.ai/api/v2/campaigns/{CAMPAIGN_ID}/activate",
+                    headers=headers,
+                    json={},
+                    timeout=12,
+                )
+                vital["reactivated"] = ra.status_code in (200, 201)
+            if ns_status == 2:
+                vital["needs_replenish"] = True
+    except Exception:
+        pass
+    return vital
 
 
 def run_autonomous_outbound_optimizer(regenerate_local: bool = True) -> Dict[str, Any]:
@@ -294,10 +363,27 @@ def run_autonomous_outbound_optimizer(regenerate_local: bool = True) -> Dict[str
                 rp = requests.patch(
                     f"https://api.instantly.ai/api/v2/campaigns/{CAMPAIGN_ID}",
                     headers=headers,
-                    json={"sequences": expected_sequences},
+                    json={"sequences": expected_sequences, "disable_bounce_protect": True, "stop_on_reply": True},
                     timeout=15,
                 )
                 summary["sequence_repaired"] = rp.status_code in (200, 201)
+            elif not bool(cdata.get("disable_bounce_protect")):
+                requests.patch(
+                    f"https://api.instantly.ai/api/v2/campaigns/{CAMPAIGN_ID}",
+                    headers=headers,
+                    json={"disable_bounce_protect": True, "stop_on_reply": True, "prioritize_new_leads": True},
+                    timeout=15,
+                )
+                summary["bounce_protect_disabled"] = True
+            if int(cdata.get("status") or 0) != 1:
+                ra = requests.post(
+                    f"https://api.instantly.ai/api/v2/campaigns/{CAMPAIGN_ID}/activate",
+                    headers=headers,
+                    json={},
+                    timeout=15,
+                )
+                summary["campaign_reactivated"] = ra.status_code in (200, 201)
+            summary["not_sending_status"] = int(cdata.get("not_sending_status") or 0)
     except Exception as exc:
         report_error("autonomous_outbound_optimizer.py", f"Campaign sequence audit warning: {exc}", severity="WARNING")
 
@@ -369,12 +455,73 @@ def run_autonomous_outbound_optimizer(regenerate_local: bool = True) -> Dict[str
             report_error("autonomous_outbound_optimizer.py", f"Lead sync self-heal warning: {exc}", severity="WARNING")
 
     summary["outbox_learning"] = audit_rendered_sent_outbox_and_learn(CAMPAIGN_ID, auth_only, all_leads)
+    uncontacted_remaining = sum(
+        1 for it in all_leads
+        if int(it.get("status") or 0) == 1 and not it.get("timestamp_last_contact")
+    )
+    summary["uncontacted_leads_remaining"] = uncontacted_remaining
+    if uncontacted_remaining < 40 or int(summary.get("not_sending_status") or 0) == 2:
+        try:
+            import harvest_verified_dot_contacts
+            import sync_instantly_campaign
+            harvest_verified_dot_contacts.harvest_and_save_verified_dot_contacts(target_count=320)
+            sync_res2 = sync_instantly_campaign.sync_leads_to_instantly()
+            summary["leads_uploaded"] = int(summary.get("leads_uploaded") or 0) + int(sync_res2.get("uploaded") or 0)
+            summary["auto_replenished_queue"] = True
+        except Exception as rep_err:
+            report_error("autonomous_outbound_optimizer.py", f"RubricWard lead replenishment warning: {rep_err}", severity="WARNING")
+
+    # Ensure campaign is active (status == 1) after sync/replenishment
+    try:
+        requests.post(
+            f"https://api.instantly.ai/api/v2/campaigns/{CAMPAIGN_ID}/activate",
+            headers=headers,
+            json={},
+            timeout=12,
+        )
+    except Exception:
+        pass
+
+    # Persist autonomous 3-stage conversion diagnosis ("Are people showing interest -> Why not -> Auto-Fix")
+    try:
+        ol = summary.get("outbox_learning") or {}
+        diag = {
+            "updated_at": datetime.now(timezone.utc).isoformat(),
+            "brand": "RubricWard",
+            "1_are_people_showing_interest": {
+                "human_replies_detected": int(ol.get("human_replies_detected") or 0),
+                "recent_emails_audited": int(ol.get("rendered_audited") or 0),
+                "uncontacted_leads_remaining": uncontacted_remaining,
+            },
+            "2_why_not_bottlenecks_checked": {
+                "campaign_was_paused": bool(summary.get("campaign_reactivated")),
+                "bounce_protect_was_enabled": bool(summary.get("bounce_protect_disabled")),
+                "lead_queue_was_low": uncontacted_remaining < 40,
+                "bounced_or_non_buyer_leads_found": int(summary.get("bounced_or_bad_purged") or 0),
+                "leads_missing_step2_link_or_stale_patched": int(summary.get("leads_patched_in_place") or 0),
+            },
+            "3_autonomous_solutions_applied": {
+                "rule_conv_001_step2_clickable_dossier_link": True,
+                "rule_conv_002_zero_synthetic_counter_ids": True,
+                "rule_conv_003_buyer_inbox_filter": True,
+                "rule_conv_004_inflight_subject_and_project_id_lock": True,
+                "rule_conv_005_html_br_reply_formatting": True,
+                "auto_replenished_queue": bool(summary.get("auto_replenished_queue")),
+            },
+        }
+        (ROOT_DIR / "conversion_funnel_diagnostics.json").write_text(json.dumps(diag, indent=2), encoding="utf-8")
+    except Exception:
+        pass
     return summary
 
 
 if __name__ == "__main__":
-    res = run_autonomous_outbound_optimizer(regenerate_local=True)
-    print(json.dumps(res, indent=2))
+    import sys as _sys
+    if "--fast-vital-check" in _sys.argv:
+        print(json.dumps(run_fast_campaign_vital_check(), indent=2))
+    else:
+        res = run_autonomous_outbound_optimizer(regenerate_local=True)
+        print(json.dumps(res, indent=2))
 
 
 

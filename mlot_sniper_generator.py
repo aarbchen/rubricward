@@ -195,6 +195,12 @@ def classify_medical_specialty_cohort(company_name: str, email: str, state: str)
     }
 
 
+def _sanitize_zero_dollar(text: str) -> str:
+    """Guarantees zero `$` characters while preserving `https://` dossier links in Step 2."""
+    out = re.sub(r"\$(\d)", r"USD \1", str(text or ""))
+    return out.replace("$", "USD ").strip()
+
+
 def _sanitize_zero_dollar_zero_link(text: str) -> str:
     """Guarantees zero `$` characters and zero `http://` or `https://` links in email copy."""
     out = re.sub(r"\$(\d)", r"USD \1", str(text or ""))
@@ -233,7 +239,8 @@ def load_verified_dot_contacts() -> List[Dict[str, str]]:
                         existing_valid.append(r)
         except Exception:
             pass
-    if len(existing_valid) >= min(200, target_leads) or os.getenv("OUTREACH_SKIP_HARVESTER") == "1":
+    non_generic_valid = [r for r in existing_valid if not is_receptionist_or_generic_inbox(str(r.get("email") or ""))]
+    if len(non_generic_valid) >= min(150, target_leads) or os.getenv("OUTREACH_SKIP_HARVESTER") == "1":
         return existing_valid
     return harvest_and_save_verified_dot_contacts(target_count=target_leads)
 
@@ -261,12 +268,10 @@ def generate_mlot_sniper_note(row: Dict[str, Any], recipient_email: str = "", co
     else:
         greeting_line = f"Hi {clean_fname},"
 
-    npi_raw = str(row.get("npi_number") or row.get("license_or_dot_id") or "").replace("NPI-", "").strip()
-    npi_label = f"NPI {npi_raw}" if npi_raw.isdigit() and len(npi_raw) == 10 else f"{state} MRF Registry"
-    subject = _sanitize_zero_dollar_zero_link(f"{state} commercial payer MRF & {cpt_short} rate spread ({firm} — {npi_label})")
+    subject = _sanitize_zero_dollar_zero_link(f"{state} commercial payer MRF & {cpt_short} rate spread ({firm})")
     body = _sanitize_zero_dollar_zero_link(
         f"{greeting_line}\n\n"
-        f"We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in {state} for {pay_item} ({npi_label}).\n\n"
+        f"We benchmarked published CMS Transparency in Coverage payer MRF allowed amounts in {state} for {pay_item} across {firm}'s {cohort['specialty_label']} specialty cohort.\n\n"
         f"Contracted tiers in this {state} cohort sit {pct:.1f}% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\n"
         f"Before {firm}'s next payer fee-schedule review or 30-day Federal NSA IDR filing, reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file Word/Excel MRF benchmark & ERISA appeal packet over.\n\n"
         f"Best,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk"
@@ -296,8 +301,9 @@ def build_mlot_and_runner_up_leads(verified_contacts: List[Dict[str, str]] | Non
         cohort = classify_medical_specialty_cohort(company, em, st)
         active_lid = cohort["letting_id"]
         clean_title = cohort["project_title"]
+        from urllib.parse import quote_plus as _qp
         slug = slugify(f"{active_lid}-{clean_title}")
-        dossier_url = f"{SITE_BASE_URL}/lettings/project/{slug}.html"
+        dossier_url = f"{SITE_BASE_URL}/lettings/project/{slug}.html?co={_qp(company)}&state={_qp(st)}&email={_qp(em)}"
         compiler_url = f"{API_BASE_URL}/v1/camber-autopilot/compile-bid-package?project_id={active_lid}&state_code={st}&format=binary"
 
         note = generate_mlot_sniper_note(
@@ -321,11 +327,12 @@ def build_mlot_and_runner_up_leads(verified_contacts: List[Dict[str, str]] | Non
             else (f"Hi {company} team," if is_generic_person else f"Hi {clean_fname},")
         )
 
-        step2_body = _sanitize_zero_dollar_zero_link(
+        step2_body = _sanitize_zero_dollar(
             f"{greeting_line}\n\n"
-            f"Quick follow-up — want me to send the {st} CMS TiC MRF allowed-amount spread ({cohort['cpt_short']}) "
-            f"and 6-file Word/Excel ERISA & NSA IDR appeal package for {company}?\n\n"
-            f"Reply 'SEND ZIP' and I will send the 6-file .ZIP bundle right over, or let me know if I should hold off.\n\n"
+            f"Quick follow-up on {active_lid} ({cohort['cpt_short']}) — you can inspect the pre-populated {st} CMS TiC MRF allowed-amount spread, "
+            f"locality Medicare MPFS RVU/GPCI benchmarks, and 6-file Word/Excel ERISA & NSA IDR appeal workbench for {company} directly here:\n"
+            f"{dossier_url}\n\n"
+            f"Or reply 'SEND ZIP' and I will reply with the 6-file .DOCX + .XLSX bundle attached.\n\n"
             f"Best,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk"
         )
 

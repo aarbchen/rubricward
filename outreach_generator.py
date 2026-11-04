@@ -30,6 +30,7 @@ from harvest_verified_dot_contacts import (
     load_signaltender_exclusion_sets,
 )
 from mlot_sniper_generator import (
+    _sanitize_zero_dollar,
     _sanitize_zero_dollar_zero_link,
     build_mlot_and_runner_up_leads,
     classify_medical_specialty_cohort,
@@ -116,8 +117,9 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
         cpt_short = cohort["cpt_short"]
         pay_item = cohort["key_pay_item"]
         agency = f"{st} Department of Insurance & Commercial Payer TiC MRF"
+        from urllib.parse import quote_plus as _qp
         slug = slugify(f"{lid}-{title}")
-        dossier_url = f"https://rubricward.com/lettings/project/{slug}.html"
+        dossier_url = f"https://rubricward.com/lettings/project/{slug}.html?co={_qp(primary_firm)}&state={_qp(st)}&email={_qp(clean_em)}"
         compiler_url = f"https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id={lid}&state_code={st}&format=binary"
 
         is_generic_person = clean_fname.lower() in ("revenue cycle", "estimating", "capture", "info", "contact", "office", "sales", "billing")
@@ -130,25 +132,25 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
         else:
             greeting_line = f"Hi {clean_fname},"
 
-        npi_raw = str(contact.get("npi_number") or contact.get("license_or_dot_id") or f"NPI-{st}").replace("NPI-", "").strip()
-        npi_label = f"NPI {npi_raw}" if npi_raw.isdigit() and len(npi_raw) == 10 else f"{st} MRF Registry"
         mlot_pct = float(cohort.get("mlot_pct") or 28.4)
         subject = _sanitize_zero_dollar_zero_link(
-            f"{st} commercial payer MRF & {cpt_short} benchmark ({primary_firm} — {npi_label})"
+            f"{st} commercial payer MRF & {cpt_short} benchmark ({primary_firm})"
         )
         body = _sanitize_zero_dollar_zero_link(
             f"{greeting_line}\n\n"
-            f"Noticed {primary_firm}'s clinical footprint ({npi_label}) in {st} while indexing the {st} commercial payer MRF cohort for {pay_item}, "
+            f"Noticed {primary_firm}'s {cohort['specialty_label']} footprint in {st} while indexing the {st} commercial payer MRF cohort for {pay_item}, "
             f"where contracted tiers in this {st} cohort sit {mlot_pct:.1f}% below the 75th-percentile regional in-network MRF benchmark due to CARC-45/97 bundling.\n\n"
             f"We already compiled the {st} CMS Transparency in Coverage MRF allowed-amount percentiles, locality Medicare MPFS RVU/GPCI rates, "
             f"and ERISA / Federal NSA IDR appeal templates into a 6-file Word/Excel bundle.\n\n"
             f"Reply 'SEND MRF' (or 'SEND ZIP') and I will send the 6-file .DOCX + .XLSX claim recovery and IDR bundle over.\n\n"
             f"Best,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk"
         )
-        step2_body = _sanitize_zero_dollar_zero_link(
+        step2_body = _sanitize_zero_dollar(
             f"{greeting_line}\n\n"
-            f"Quick follow-up on the {st} commercial payer MRF & NSA IDR benchmark cohort ({cpt_short}, {mlot_pct:.1f}% below the 75th-percentile {st} MRF benchmark) for {primary_firm}.\n\n"
-            f"Reply 'SEND ZIP' if you would like the 6-file OpenXML Word/Excel appeal package, or let me know if I should hold off.\n\n"
+            f"Quick follow-up on the {st} commercial payer MRF & NSA IDR benchmark cohort ({cpt_short}, {mlot_pct:.1f}% below the 75th-percentile {st} MRF benchmark) — "
+            f"you can inspect the pre-populated {st} TiC MRF allowed-amount matrix, Medicare MPFS RVU/GPCI tables, and 6-file OpenXML appeal workbench for {primary_firm} directly here:\n"
+            f"{dossier_url}\n\n"
+            f"Or reply 'SEND ZIP' and I will reply with the 6-file .DOCX + .XLSX appeal package attached.\n\n"
             f"Best,\nAaron Chen\nRubricWard Payer MRF & NSA IDR Desk"
         )
 

@@ -493,8 +493,8 @@ def check_and_heal_outbound_campaign_hygiene(root_dir: Path, brand_name: str) ->
     sync_p = root_dir / "sync_instantly_campaign.py"
     if sync_p.exists():
         sync_src = sync_p.read_text(encoding="utf-8", errors="replace")
-        if "not is_receptionist_or_generic_inbox" not in sync_src:
-            issues.append(f"{brand_name}: `sync_instantly_campaign.py` must filter out `is_receptionist_or_generic_inbox` from Instantly uploads (Root Cause #4).")
+        if "not is_receptionist_or_generic_inbox" not in sync_src and "not is_non_buyer_or_trap_inbox" not in sync_src:
+            issues.append(f"{brand_name}: `sync_instantly_campaign.py` must filter out `is_non_buyer_or_trap_inbox` / `is_receptionist_or_generic_inbox` from Instantly uploads (Root Cause #4).")
 
     if brand_name == "RubricWard":
         import csv

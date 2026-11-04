@@ -543,8 +543,10 @@ def check_conversion_and_distribution_surfaces() -> List[str]:
                 val = str(r.get(col) or "")
                 if "$" in val:
                     errors.append(f"`campaign_leads.csv` row `{em}` column `{col}` contains forbidden `$` sign (use `USD `)")
-                if "http://" in val or "https://" in val:
-                    errors.append(f"`campaign_leads.csv` row `{em}` column `{col}` contains forbidden link (Zero-Link Rule)")
+                if col in ("step1_subject", "step1_body_zero_link") and ("http://" in val or "https://" in val):
+                    errors.append(f"`campaign_leads.csv` row `{em}` column `{col}` contains forbidden link in Step 1 (Zero-Link Step 1 Rule)")
+                if col == "step2_body_dossier_link" and "/lettings/project/" not in val:
+                    errors.append(f"`campaign_leads.csv` row `{em}` column `step2_body_dossier_link` missing clickable `/lettings/project/` dossier link (RULE-CONV-001)")
             durl = str(r.get("dossier_url") or "")
             if "/lettings/project/" not in durl:
                 errors.append(f"`campaign_leads.csv` row missing `/lettings/project/` dossier_url: {durl}")

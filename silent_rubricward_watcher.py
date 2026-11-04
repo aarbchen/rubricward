@@ -134,6 +134,14 @@ def main() -> int:
                 timeout=120,
                 creationflags=no_win_flag,
             )
+            subprocess.run(
+                [python_exe, str(ROOT_DIR / "autonomous_outbound_optimizer.py"), "--fast-vital-check"],
+                cwd=str(ROOT_DIR),
+                capture_output=True,
+                text=True,
+                timeout=45,
+                creationflags=no_win_flag,
+            )
         except Exception:
             pass
 

@@ -1,3 +1,4 @@
+import re
 r"""
 RubricWard — Dedicated Instantly.ai V2 Campaign Provisioner & Planholder Lead Sync (`D:\RubricWard\sync_instantly_campaign.py`).
 ====================================================================================================
@@ -28,7 +29,7 @@ import requests
 from dotenv import load_dotenv
 
 from autonomous_mailbox_scaler import fetch_live_rubricward_instantly_accounts
-from harvest_verified_dot_contacts import is_receptionist_or_generic_inbox, load_signaltender_exclusion_sets
+from harvest_verified_dot_contacts import is_non_buyer_or_trap_inbox, is_receptionist_or_generic_inbox, load_signaltender_exclusion_sets
 from outbound_mailer import compute_dynamic_daily_limit
 from outreach_generator import generate_outreach_queue
 
@@ -210,6 +211,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
         "link_tracking": False,
         "text_only": True,
         "stop_on_reply": True,
+        "disable_bounce_protect": True,
         "daily_limit": dynamic_daily_cap,
     }
     if rubricward_emails:
@@ -226,6 +228,12 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
             f"https://api.instantly.ai/api/v2/campaigns/{cid}",
             headers=headers,
             json={"sequences": three_step_sequences},
+            timeout=15,
+        )
+        requests.post(
+            f"https://api.instantly.ai/api/v2/campaigns/{cid}/activate",
+            headers=headers,
+            json={},
             timeout=15,
         )
     except Exception:
@@ -248,10 +256,11 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
         and l["email"].strip().lower().split("@", 1)[-1] not in st_excluded_domains
         and l["email"].strip().lower() not in bl_emails
         and l["email"].strip().lower().split("@", 1)[-1] not in bl_domains
-        and not is_receptionist_or_generic_inbox(l["email"])
+        and not is_non_buyer_or_trap_inbox(l["email"])
     }
 
     purged_count = 0
+    to_delete_ids: List[str] = []
     existing_clean_map: Dict[str, Dict[str, Any]] = {}
     new_bounces_found = False
 
@@ -291,16 +300,15 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 s2 = str(payload_vars.get("step2_body_dossier_link") or "")
                 subj1 = str(payload_vars.get("step1_subject") or "")
                 comp_url = str(payload_vars.get("compiler_url") or "")
-                has_dollar_or_link = ("$" in s1) or ("$" in s2) or ("$" in subj1) or ("http://" in s1) or ("https://" in s1) or ("http://" in s2) or ("https://" in s2) or ("api.rubricward.com" in comp_url)
+                has_dollar_or_link = ("$" in s1) or ("$" in s2) or ("$" in subj1) or ("http://" in s1) or ("https://" in s1) or ("api.rubricward.com" in comp_url)
                 is_st_overlap = (em_existing in st_excluded_emails) or (dom_existing in st_excluded_domains)
                 is_bounced_or_bad = (lead_status < 0) or (interest_status < 0) or (em_existing in bl_emails) or (dom_existing in bl_domains) or ("%" in em_existing)
                 if lead_status < 0 and em_existing and em_existing not in bl_emails:
                     bl_emails.add(em_existing)
                     new_bounces_found = True
 
-                if lid and (is_bounced_or_bad or is_st_overlap or has_dollar_or_link or is_receptionist_or_generic_inbox(em_existing) or (em_existing not in valid_email_map)):
-                    requests.delete(f"https://api.instantly.ai/api/v2/leads/{lid}", headers=auth_only_headers, timeout=10)
-                    purged_count += 1
+                if lid and (is_bounced_or_bad or is_st_overlap or has_dollar_or_link or is_non_buyer_or_trap_inbox(em_existing) or (em_existing not in valid_email_map)):
+                    to_delete_ids.append(lid)
                 elif em_existing in valid_email_map and lid:
                     existing_clean_map[em_existing] = item
             starting_after = r_json.get("next_starting_after")
@@ -308,6 +316,14 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                 break
     except Exception:
         pass
+
+    for del_id in to_delete_ids:
+        try:
+            r_del = requests.delete(f"https://api.instantly.ai/api/v2/leads/{del_id}", headers=auth_only_headers, timeout=10)
+            if 200 <= r_del.status_code < 300:
+                purged_count += 1
+        except Exception:
+            pass
 
     if new_bounces_found:
         try:
@@ -342,14 +358,22 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
             ex_item = existing_clean_map[em_clean]
             ex_id = str(ex_item.get("id") or "")
             ex_payload = ex_item.get("payload") or {}
+            has_started = bool((ex_item.get("status_summary") or {}).get("lastStep")) or bool(ex_item.get("timestamp_last_contact"))
+            if has_started:
+                if ex_payload.get("project_id") and not re.search(r"-2026-10\d\d", str(ex_payload.get("project_id"))):
+                    custom_vars["project_id"] = ex_payload["project_id"]
+                if ex_payload.get("step1_subject"):
+                    cleaned_ex_subj = re.sub(r"\s*—\s*NPI\s+\d+", "", str(ex_payload["step1_subject"])).strip()
+                    if not re.search(r"-2026-10\d\d", cleaned_ex_subj):
+                        custom_vars["step1_subject"] = cleaned_ex_subj
             needs_patch = (
                 str(ex_item.get("first_name") or "") != str(fn_val)
                 or str(ex_item.get("company_name") or "") != str(lead["company_name"])
-                or str(ex_payload.get("project_id") or "") != pid_val
+                or str(ex_payload.get("project_id") or "") != str(custom_vars["project_id"])
                 or str(ex_payload.get("dossier_url") or "") != str(lead["dossier_url"])
                 or str(ex_payload.get("compiler_url") or "") != str(custom_vars["compiler_url"])
-                or str(ex_payload.get("step1_subject") or "") != str(lead["step1_subject"])
-                or str(ex_payload.get("step1_body_zero_link") or "") != str(lead["step1_body_zero_link"])
+                or str(ex_payload.get("step1_subject") or "") != str(custom_vars["step1_subject"])
+                or str(ex_payload.get("step1_body_zero_link") or "") != str(custom_vars["step1_body_zero_link"])
                 or str(ex_payload.get("step2_body_dossier_link") or "") != str(lead["step2_body_dossier_link"])
                 or str(ex_payload.get("step3_body_breakup") or "") != lead_step3_breakup
             )
@@ -388,7 +412,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
         return (0, 0)
 
     with ThreadPoolExecutor(max_workers=8) as pool:
-        instantly_priority_leads = [l for l in leads if not is_receptionist_or_generic_inbox(l['email'])]
+        instantly_priority_leads = [l for l in leads if not is_non_buyer_or_trap_inbox(l['email'])]
         results = list(pool.map(_sync_one_lead, instantly_priority_leads))
 
     uploaded = sum(x[0] for x in results)

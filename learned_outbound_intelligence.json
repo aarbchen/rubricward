@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-04T18:32:59.896512+00:00",
+  "updated_at": "2026-11-04T20:05:15.442728+00:00",
   "campaign_id": "672de7d4-7ff6-42ec-be56-9b6ce8519e8c",
-  "recent_rendered_emails_audited": 87,
+  "recent_rendered_emails_audited": 85,
   "recent_inbound_replies_detected": 0,
   "unrendered_template_tags_detected": 0,
   "prefix_delivery_stats": {
     "named_person": {
-      "clean": 76,
-      "bounced": 0
+      "clean": 60,
+      "bounced": 2
     },
     "dept_desk": {
-      "clean": 25,
+      "clean": 24,
       "bounced": 0
     },
     "generic_info": {
@@ -19,25 +19,25 @@
     }
   },
   "adaptive_prefix_priority_weights": {
-    "named_person": 1.0,
+    "named_person": 0.839,
     "dept_desk": 0.9,
     "generic_info": 0.25
   },
   "cohort_stats": {
-    "MD": {
-      "sent": 11,
-      "human_replies": 0,
-      "auto_replies": 7,
-      "unsubscribes": 6
-    },
-    "NC": {
+    "NJ": {
       "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
     "default": {
-      "sent": 20,
+      "sent": 34,
+      "human_replies": 0,
+      "auto_replies": 9,
+      "unsubscribes": 6
+    },
+    "NC": {
+      "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -55,7 +55,7 @@
       "unsubscribes": 0
     },
     "WA": {
-      "sent": 2,
+      "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -67,7 +67,7 @@
       "unsubscribes": 0
     },
     "TX": {
-      "sent": 11,
+      "sent": 10,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -85,25 +85,19 @@
       "unsubscribes": 0
     },
     "LA": {
-      "sent": 2,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "NJ": {
       "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "IA": {
-      "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
     "FL": {
       "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "MD": {
+      "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -115,7 +109,7 @@
       "unsubscribes": 0
     },
     "TN": {
-      "sent": 3,
+      "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -168,17 +162,21 @@
       "auto_replies": 0,
       "unsubscribes": 0
     },
+    "IA": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
     "AL": {
-      "sent": 2,
+      "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     }
   },
   "recent_human_replies_detected": 0,
-  "recent_auto_replies_detected": 7,
+  "recent_auto_replies_detected": 9,
   "recent_unsubscribes_detected": 6,
-  "ooo_referral_emails": [
-    "ceo@icanotes.com"
-  ]
+  "ooo_referral_emails": []
 }
