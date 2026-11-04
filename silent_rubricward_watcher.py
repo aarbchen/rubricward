@@ -29,6 +29,39 @@ HEARTBEAT_PATH = ROOT_DIR / ".rubricward_watcher_heartbeat.json"
 CHECK_INTERVAL_SECONDS = 900  # 15 minutes
 
 
+
+class _LASTINPUTINFO(ctypes.Structure):
+    _fields_ = [("cbSize", ctypes.c_uint), ("dwTime", ctypes.c_uint)]
+
+
+def get_user_idle_seconds() -> float:
+    """Return seconds since the last keyboard or mouse input on Windows."""
+    if os.name != "nt":
+        return 999999.0
+    try:
+        lii = _LASTINPUTINFO()
+        lii.cbSize = ctypes.sizeof(_LASTINPUTINFO)
+        if ctypes.windll.user32.GetLastInputInfo(ctypes.byref(lii)):
+            millis = (ctypes.windll.kernel32.GetTickCount() - lii.dwTime) & 0xFFFFFFFF
+            return float(millis) / 1000.0
+    except Exception:
+        pass
+    return 999999.0
+
+
+def set_background_low_priority() -> int:
+    """Set current process to BELOW_NORMAL_PRIORITY_CLASS and return subprocess creationflags."""
+    if os.name != "nt":
+        return 0
+    BELOW_NORMAL = 0x00004000
+    CREATE_NO_WIN = 0x08000000
+    try:
+        ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(), BELOW_NORMAL)
+    except Exception:
+        pass
+    return CREATE_NO_WIN | BELOW_NORMAL
+
+
 def prevent_windows_sleep() -> None:
     if os.name != "nt":
         return
@@ -58,7 +91,7 @@ def keepalive_rubricward_rapidapi() -> bool:
 def main() -> int:
     prevent_windows_sleep()
     python_exe = sys.executable
-    no_win_flag = getattr(subprocess, "CREATE_NO_WINDOW", 0) if os.name == "nt" else 0
+    no_win_flag = set_background_low_priority()
     print(
         "[*] RubricWard Silent 24/7 Autopilot & Self-Healing Watcher active in background "
         "(15m Subprocess Error Healer + Outbound Optimizer + Reply Responder + RapidAPI Keepalive).",
@@ -69,10 +102,21 @@ def main() -> int:
         prevent_windows_sleep()
         now_iso = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S %z")
         try:
-            HEARTBEAT_PATH.write_text(
-                json.dumps({"pid": os.getpid(), "timestamp": time.time(), "updated_at": now_iso, "cycle": cycle}, indent=2),
-                encoding="utf-8",
-            )
+            if cycle == 0:
+                HEARTBEAT_PATH.write_text(
+                    json.dumps({"pid": os.getpid(), "primary_pid": os.getpid(), "timestamp": time.time(), "updated_at": now_iso, "cycle": cycle}, indent=2),
+                    encoding="utf-8",
+                )
+            elif HEARTBEAT_PATH.exists():
+                old_hb = json.loads(HEARTBEAT_PATH.read_text(encoding="utf-8"))
+                prim_pid = int(old_hb.get("primary_pid") or old_hb.get("pid") or 0)
+                if prim_pid > 0 and prim_pid != os.getpid():
+                    # Another newer primary watcher took over; exit cleanly to prevent duplicate processes
+                    return 0
+                HEARTBEAT_PATH.write_text(
+                    json.dumps({"pid": os.getpid(), "primary_pid": os.getpid(), "timestamp": time.time(), "updated_at": now_iso, "cycle": cycle}, indent=2),
+                    encoding="utf-8",
+                )
         except Exception:
             pass
 
@@ -80,45 +124,60 @@ def main() -> int:
         keepalive_rubricward_rapidapi()
 
         # 2. Every 15m cycle: run reply responder, mailbox scaler, outbound optimizer, and error healer in fresh subprocesses
-        for script_args, t_out in (
-            (["outbound_reply_responder.py"], 180),
-            (["autonomous_mailbox_scaler.py"], 180),
-            (["autonomous_outbound_optimizer.py"], 240),
-        ):
-            try:
-                subprocess.run(
-                    [python_exe, str(ROOT_DIR / script_args[0]), *script_args[1:]],
-                    cwd=str(ROOT_DIR),
-                    capture_output=True,
-                    text=True,
-                    timeout=t_out,
-                    creationflags=no_win_flag,
-                )
-            except Exception:
-                pass
-
+        # Always run lightweight reply responder (1s HTTP check); defer heavy CPU/disk tasks until user is idle >= 10m
         try:
-            healer_res = subprocess.run(
-                [python_exe, str(ROOT_DIR / "auto_error_healer.py"), "--clear-resolved"],
+            subprocess.run(
+                [python_exe, str(ROOT_DIR / "outbound_reply_responder.py")],
                 cwd=str(ROOT_DIR),
                 capture_output=True,
                 text=True,
-                timeout=240,
+                timeout=120,
                 creationflags=no_win_flag,
             )
-            if healer_res.returncode != 0:
-                tail_out = (healer_res.stdout or "")[-1500:] + "\n" + (healer_res.stderr or "")[-800:]
-                print(
-                    "\n[WAKEUP_AGENT: SELF_HEALING_REQUIRED]\n"
-                    f"RubricWard auto_error_healer.py detected unhealed issue(s) (exit={healer_res.returncode}):\n"
-                    f"{tail_out}\n"
-                    "Please diagnose and fix the reported RubricWard issue immediately, codify a prevention rule, "
-                    "and restart silent_rubricward_watcher.py.",
-                    flush=True,
-                )
-                return 0
         except Exception:
             pass
+
+        if get_user_idle_seconds() >= 600:
+            if cycle % 4 == 0:
+                for script_args, t_out in (
+                    (["autonomous_mailbox_scaler.py"], 180),
+                    (["autonomous_outbound_optimizer.py"], 240),
+                ):
+                    try:
+                        subprocess.run(
+                            [python_exe, str(ROOT_DIR / script_args[0]), *script_args[1:]],
+                            cwd=str(ROOT_DIR),
+                            capture_output=True,
+                            text=True,
+                            timeout=t_out,
+                            creationflags=no_win_flag,
+                        )
+                    except Exception:
+                        pass
+
+        if get_user_idle_seconds() >= 600:
+            try:
+                healer_res = subprocess.run(
+                    [python_exe, str(ROOT_DIR / "auto_error_healer.py"), "--clear-resolved"],
+                    cwd=str(ROOT_DIR),
+                    capture_output=True,
+                    text=True,
+                    timeout=240,
+                    creationflags=no_win_flag,
+                )
+                if healer_res.returncode != 0:
+                    tail_out = (healer_res.stdout or "")[-1500:] + "\n" + (healer_res.stderr or "")[-800:]
+                    print(
+                        "\n[WAKEUP_AGENT: SELF_HEALING_REQUIRED]\n"
+                        f"RubricWard auto_error_healer.py detected unhealed issue(s) (exit={healer_res.returncode}):\n"
+                        f"{tail_out}\n"
+                        "Please diagnose and fix the reported RubricWard issue immediately, codify a prevention rule, "
+                        "and restart silent_rubricward_watcher.py.",
+                        flush=True,
+                    )
+                    return 0
+            except Exception:
+                pass
 
         # 3. Run 3-Pillar Omniscient Auditor at most ONCE per calendar night (gated to Nighttime & User-Away)
         try:

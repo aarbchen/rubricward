@@ -534,6 +534,19 @@
     "authorized_official_title": "Owner"
   },
   {
+    "company_name": "Holy Cross Orthopedic Institute",
+    "email": "hospital.billing@holy-cross.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1109374143",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.holy-cross.com/for-patients/billing-and-insurance/pay-your-bill-online",
+    "npi_number": "1109374143",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "MedbillingExperts",
     "email": "info@outsourcercm.com",
     "first_name": "Revenue Cycle",
@@ -1146,19 +1159,6 @@
     "authorized_official_title": "Owner"
   },
   {
-    "company_name": "ICANotes Behavioral",
-    "email": "ticket@icanotes.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1346201644",
-    "state": "MD",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.icanotes.com/contact-us/",
-    "npi_number": "1346201644",
-    "taxonomy_desc": "Orthopaedic Surgery",
-    "authorized_official_name": "Thomas Raley",
-    "authorized_official_title": "Owner"
-  },
-  {
     "company_name": "InterMed",
     "email": "katherine.hilscher@intermed.com",
     "first_name": "Katherine",
@@ -1209,6 +1209,19 @@
     "taxonomy_desc": "Orthopaedic Surgery",
     "authorized_official_name": "Mark Warner",
     "authorized_official_title": "Physician"
+  },
+  {
+    "company_name": "Michigan Ear Nose & Throat Associates",
+    "email": "office.mient@michiganentallergy.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1109374196",
+    "state": "MI",
+    "source_type": "website_html_mailto",
+    "source_url": "https://michiganentallergy.com/about-us/referral/",
+    "npi_number": "1109374196",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Michigan Eye Institute Flint",
@@ -1301,6 +1314,19 @@
     "taxonomy_desc": "Orthopaedic Surgery",
     "authorized_official_name": "Faisal Gill",
     "authorized_official_title": "Legal Counsel"
+  },
+  {
+    "company_name": "Cape Fear Orthopaedic Clinic",
+    "email": "jlsmith@capefear.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1477890069",
+    "state": "NC",
+    "source_type": "website_html_mailto",
+    "source_url": "https://virginialiving.com/about/",
+    "npi_number": "1477890069",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Cape Fear Valley Health Medical Group",
@@ -2138,14 +2164,14 @@
     "company_name": "TeamHealth",
     "email": "heather_vines@teamhealth.com",
     "first_name": "Heather",
-    "license_or_dot_id": "NPI-1306395629",
+    "license_or_dot_id": "NPI-1109374267",
     "state": "TN",
     "source_type": "website_html_mailto",
     "source_url": "https://www.teamhealth.com/feed/",
-    "npi_number": "1306395629",
-    "taxonomy_desc": "Physical Therapist",
-    "authorized_official_name": "Chad Calendine",
-    "authorized_official_title": "Ceo"
+    "npi_number": "1109374267",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Tennessee Orthopaedic Alliance",

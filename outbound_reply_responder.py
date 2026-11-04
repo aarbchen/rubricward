@@ -210,8 +210,16 @@ def classify_rcm_reply(reply_text: str, subject: str = "", from_email: str = "")
                 "challenge-response",
                 "unattended mailbox",
                 "no longer monitored",
+                "new ticket confirmation",
+                "assigned ticket number",
+                "please reply above this line",
+                "was created for you",
+                "qualification portal",
+                "requesting access to",
             )
         )
+        or em_low.startswith(("ticket@", "tickets@", "support@", "helpdesk@", "pq@", "prequal@", "noreply@", "no-reply@", "donotreply@"))
+        or ("ticket [" in subj_low and ("was created" in subj_low or "was closed" in subj_low))
     ):
         return "OUT_OF_OFFICE"
     negated_unsub = any(
@@ -570,9 +578,13 @@ def _load_processed_list() -> List[str]:
 
 
 def _save_processed_list(items: List[str]) -> None:
+    from datetime import datetime, timezone
     deduped = list(dict.fromkeys(str(x) for x in items if x))[-500:]
     try:
-        PROCESSED_PATH.write_text(json.dumps(deduped, indent=2), encoding="utf-8")
+        PROCESSED_PATH.write_text(
+            json.dumps({"processed_ids": deduped, "updated_at": datetime.now(timezone.utc).isoformat()}, indent=2),
+            encoding="utf-8",
+        )
     except Exception:
         pass
 
@@ -625,7 +637,15 @@ def run_reply_responder() -> Dict[str, Any]:
                     continue
                 subj_in = str(item.get("subject") or "")
                 label = classify_rcm_reply(body_txt, subject=subj_in, from_email=from_em)
-                if label in ("POSITIVE_INTEREST", "QUESTION"):
+                already_delivered = False
+                if WARM_FOLLOWUP_PATH.exists():
+                    try:
+                        wf_map = json.loads(WARM_FOLLOWUP_PATH.read_text(encoding="utf-8")) or {}
+                        if isinstance(wf_map, dict) and from_em.strip().lower() in wf_map:
+                            already_delivered = True
+                    except Exception:
+                        pass
+                if label in ("POSITIVE_INTEREST", "QUESTION") and not already_delivered:
                     ctx = lookup_prospect_context(from_em, reply_text=body_txt, subject=subj_in)
                     pkg = build_reply_response(
                         prospect_name=ctx["first_name"],

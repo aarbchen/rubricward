@@ -1129,12 +1129,15 @@ def is_receptionist_or_generic_inbox(email: str) -> bool:
     dom_stem = re.sub(r"[^a-z0-9]", "", em_str.split("@")[-1].split(".")[0]) if "@" in em_str else ""
     if dom_stem and len(dom_stem) >= 3 and local_clean == dom_stem:
         return True
+    if local_clean in ("pq", "prequal", "prequalification", "ticket", "tickets", "firstname", "lastname", "firstlast", "yourname", "username", "user", "test", "sample", "example"):
+        return True
     return any(
         local == k or local.startswith(k)
         for k in (
             "info", "contact", "office", "general", "hello", "admin", "inquir", "mail",
             "support", "service", "customercare", "communications", "publicrelations",
             "frontdesk", "reception", "receptionist", "operator", "clerk", "helpdesk", "webmaster", "mailroom",
+            "ticket", "prequal", "firstname", "lastname", "yourname", "example",
         )
     )
 

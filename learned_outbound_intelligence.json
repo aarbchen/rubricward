@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-04T05:46:33.623006+00:00",
+  "updated_at": "2026-11-04T18:32:59.896512+00:00",
   "campaign_id": "672de7d4-7ff6-42ec-be56-9b6ce8519e8c",
-  "recent_rendered_emails_audited": 100,
+  "recent_rendered_emails_audited": 87,
   "recent_inbound_replies_detected": 0,
   "unrendered_template_tags_detected": 0,
   "prefix_delivery_stats": {
     "named_person": {
-      "clean": 75,
+      "clean": 76,
       "bounced": 0
     },
     "dept_desk": {
@@ -24,74 +24,26 @@
     "generic_info": 0.25
   },
   "cohort_stats": {
+    "MD": {
+      "sent": 11,
+      "human_replies": 0,
+      "auto_replies": 7,
+      "unsubscribes": 6
+    },
+    "NC": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
     "default": {
-      "sent": 51,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "IA": {
-      "sent": 2,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "AL": {
-      "sent": 4,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "CO": {
-      "sent": 3,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "CA": {
-      "sent": 2,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "TX": {
-      "sent": 3,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "WA": {
-      "sent": 4,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "MI": {
-      "sent": 3,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "SC": {
-      "sent": 4,
+      "sent": 20,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
     "NY": {
-      "sent": 3,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "TN": {
-      "sent": 3,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "FL": {
-      "sent": 3,
+      "sent": 5,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -102,32 +54,56 @@
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "NC": {
+    "WA": {
       "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "MD": {
+    "CA": {
+      "sent": 5,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "TX": {
+      "sent": 11,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "OK": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "GA": {
       "sent": 4,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "NJ": {
+    "LA": {
       "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "PA": {
+    "NJ": {
       "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "IL": {
-      "sent": 1,
+    "IA": {
+      "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "FL": {
+      "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -138,15 +114,71 @@
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "ME": {
+    "TN": {
+      "sent": 3,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "IL": {
       "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "CO": {
+      "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "MA": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "IN": {
+      "sent": 3,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "AZ": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "WI": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "DE": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "KY": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "AL": {
+      "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     }
   },
   "recent_human_replies_detected": 0,
-  "recent_auto_replies_detected": 0,
-  "recent_unsubscribes_detected": 0,
-  "ooo_referral_emails": []
+  "recent_auto_replies_detected": 7,
+  "recent_unsubscribes_detected": 6,
+  "ooo_referral_emails": [
+    "ceo@icanotes.com"
+  ]
 }
