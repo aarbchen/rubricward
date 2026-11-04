@@ -1241,7 +1241,7 @@ def build_site_files() -> None:
       const mgEl = document.getElementById('vault-target-margin');
       const statusEl = document.getElementById('profile-vault-status');
       const profile = {{
-        company_name: coEl ? coEl.value.trim() : 'Lone Star Orthopedic &amp; Spine ASC LLC',
+        company_name: coEl ? coEl.value.trim() : 'Lone Star Orthopedic & Spine ASC LLC',
         state_dots: stEl ? stEl.value.trim() : 'TX, VA, FL, CA, PA',
         bond_limit: bdEl ? bdEl.value.trim() : '$35,000,000',
         target_margin: mgEl ? mgEl.value.trim() : '215% of MPFS'
@@ -1498,7 +1498,7 @@ def build_site_files() -> None:
           total_modeled_mrf_recovery_usd: 2686950.00
         }},
         files_compiled: [
-          'Volume_I_Payer_CPB_LCD_Prior_Auth_Matrix.docx',
+          'Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx',
           'Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx',
           'Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx',
           'Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx',
@@ -2012,11 +2012,12 @@ def build_site_files() -> None:
         if (statusEl) statusEl.textContent = 'Please enter a valid work email address to receive your 6-File .ZIP package.';
         return false;
       }}
-      if (statusEl) statusEl.textContent = 'Compiling your 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package for ' + stateDot + '...';
+      if (statusEl) statusEl.textContent = 'Compiling your 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package for ' + stateDot + '...';
       try {{ localStorage.setItem('rubricward_lead_magnet', JSON.stringify({{ email, state_dot: stateDot, trade_focus: tradeFocus }})); }} catch (e) {{}}
       const stCode = stateDot.startsWith('All') ? 'TX' : stateDot.slice(0, 2).toUpperCase();
+      try {{ fetch('https://b2b-contract-parser-api.onrender.com/v1/leads/capture', {{ method: 'POST', headers: {{ 'Content-Type': 'application/json' }}, body: JSON.stringify({{ email: email, target_state: stCode.toLowerCase(), naics_focus: tradeFocus, source_page: 'https://rubricward.com/', brand: 'rubricward' }}), keepalive: true }}).catch(function () {{}}); }} catch (e) {{}}
       window.location.href = 'https://rubricward.com/v1/camber-autopilot/compile-bid-package?state_code=' + encodeURIComponent(stCode) + '&format=binary';
-      if (statusEl) statusEl.textContent = 'Success — Your 6-File OpenXML (.DOCX + .XLSX) Claim &amp; IDR Package (.ZIP) download has started!';
+      if (statusEl) statusEl.textContent = 'Success — Your 6-File OpenXML (.DOCX + .XLSX) Claim & IDR Package (.ZIP) download has started!';
       return false;
     }}
 
@@ -2373,7 +2374,7 @@ def build_site_files() -> None:
         }},
         tier_3: {{
           tier: 'tier_3',
-          tier_label: 'TIER 3 // 6-FILE .ZIP CLAIM &amp; IDR COMPILER ($1,499/MO)',
+          tier_label: 'TIER 3 // 6-FILE .ZIP CLAIM & IDR COMPILER ($1,499/MO)',
           quota_label: '10,000 API Calls/Mo + Unlimited 1-Click 6-File OpenXML (.DOCX + .XLSX) Packages',
           api_key: 'rw_live_admin_tier3_zip_88b3e1d0a9c6f5b2'
         }},
@@ -2480,7 +2481,7 @@ def build_site_files() -> None:
           const r = await fetch('https://b2b-contract-parser-api.onrender.com/v1/billing/account/login', {{
             method: 'POST',
             headers: {{ 'Content-Type': 'application/json' }},
-            body: JSON.stringify({{ email: val, password: pw }})
+            body: JSON.stringify({{ email: val, password: pw, brand: 'rubricward' }})
           }});
           if (r.ok) {{
             const d = await r.json();
@@ -4162,7 +4163,7 @@ Claim CPT 29881 (Knee Arthroscopy Meniscectomy) &amp; CPT 27447 (Total Knee Arth
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
         <div class="lg:col-span-5 flex flex-col gap-2 min-w-0">
-          <button type="button" id="zip-tab-btn-0" onclick="switchZipInspectorTab(0)" class="px-3 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold text-left break-all w-full transition">01 // Volume_I_Payer_CPB_LCD_Prior_Auth_Matrix.docx</button>
+          <button type="button" id="zip-tab-btn-0" onclick="switchZipInspectorTab(0)" class="px-3 py-2 rounded-lg bg-[#071C21] text-white font-mono text-xs font-bold text-left break-all w-full transition">01 // Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx</button>
           <button type="button" id="zip-tab-btn-1" onclick="switchZipInspectorTab(1)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">02 // Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx</button>
           <button type="button" id="zip-tab-btn-2" onclick="switchZipInspectorTab(2)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">03 // Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx</button>
           <button type="button" id="zip-tab-btn-3" onclick="switchZipInspectorTab(3)" class="px-3 py-2 rounded-lg bg-[#E8F4F2] hover:bg-[#DDF0EC] text-[#071C21] border border-[#B4D6D0] font-mono text-xs font-bold text-left break-all w-full transition">04 // Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx</button>

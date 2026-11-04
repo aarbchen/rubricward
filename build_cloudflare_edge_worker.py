@@ -73,6 +73,24 @@ async def _load_precompiled_assets():
                         format="json",
                     )
                     zips_by_project[s_lid] = pkg_sp["zip_base64"]
+        import csv as _csv
+        csv_p = ROOT_DIR / "campaign_leads.csv"
+        if csv_p.exists():
+            with open(csv_p, "r", encoding="utf-8", newline="") as cf:
+                for row in _csv.DictReader(cf):
+                    c_pid = str(row.get("project_id") or "").strip().upper()
+                    c_st = str(row.get("state_code") or "TX").strip().upper()
+                    c_title = str(row.get("project_title") or "").strip()
+                    if c_pid and c_pid not in zips_by_project:
+                        pkg_c = await compile_full_bid_package(
+                            CompileBidPackageRequest(
+                                project_id=c_pid,
+                                project_title=c_title or f"{c_st} Commercial Payer TiC MRF Rate Audit ({c_pid})",
+                                state_code=c_st,
+                            ),
+                            format="json",
+                        )
+                        zips_by_project[c_pid] = pkg_c["zip_base64"]
     except Exception:
         pass
     pkg = await compile_full_bid_package(CompileBidPackageRequest(), format="json")
@@ -82,6 +100,7 @@ async def _load_precompiled_assets():
 
 
 def build_worker_bundle() -> Path:
+    import re as _re
     from pseo_generator import slugify
     lettings_seed = json.loads((ROOT_DIR / "dot_lettings_seed.json").read_text(encoding="utf-8"))
     seed_lettings = lettings_seed.get("lettings", [])
@@ -121,12 +140,19 @@ def build_worker_bundle() -> Path:
                 s_slug = slugify(f"{s_lid}-{s_title}")
                 if s_slug not in base_slugs and st_c in base_slug_by_state:
                     b_key, old_lid, old_title = base_slug_by_state[st_c]
+                    sp_file = project_dir / f"{s_slug}.html"
+                    main_html = ""
+                    if sp_file.exists():
+                        m_match = _re.search(r"<main[\s\S]*?</main>", sp_file.read_text(encoding="utf-8"))
+                        if m_match:
+                            main_html = m_match.group(0)
                     specialty_dossier_map[f"/lettings/project/{s_slug}.html"] = {
                         "base": b_key,
                         "old_lid": old_lid,
                         "new_lid": s_lid,
                         "old_title": old_title,
                         "new_title": s_title,
+                        "main_html": main_html,
                     }
     except Exception:
         pass
@@ -888,12 +914,12 @@ function handleV1Endpoint(path, method, url, body) {{
       company_name: companyName,
       filename: "RubricWard_6File_Bid_Package.zip",
       files_included: [
-        "Volume_I_ERISA_29CFR2560_Clinical_Appeal_Brief.docx",
-        "Volume_II_No_Surprises_Act_45CFR149_IDR_Position_Paper.docx",
-        "Volume_III_State_DOI_Prompt_Pay_Penalty_Demand.docx",
-        "Volume_IV_TiC_Payer_MRF_Rate_Percentile_Model.xlsx",
-        "Volume_V_Medicare_MPFS_ASC_GPCI_Repricing_Workbook.xlsx",
-        "00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json",
+        "Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx",
+        "Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx",
+        "Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx",
+        "Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx",
+        "Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx",
+        "00_RubricWard_Preconstruction_Readiness_Manifest.json",
       ],
       download_url: "https://rubricward.com/v1/camber-autopilot/compile-bid-package?format=binary",
       zip_base64: DEFAULT_ZIP_B64,
@@ -1001,7 +1027,7 @@ async function handleConciergeEndpoint(body, env) {{
   }}
 
   if (CONCIERGE_COMPROMISING_RE.test(ql)) {{
-    const secAns = "For security and confidentiality reasons, the RubricWard AI Support Concierge cannot verify identity or administrative authority claims in chat and does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\n\n• Public Security & Zero-PHI Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero PHI/claim retention standards in the Security Center (#security) and Privacy Policy (#privacy).\n• Self-Serve Account & API Management: Manage your organization's subscription, RCM & legal team CC seats, and production rw_live_... API Key inside the Client Portal (#account).";
+    const secAns = "For security and confidentiality reasons, the RubricWard AI Support Concierge cannot verify identity or administrative authority claims in chat and does not disclose internal infrastructure details, source code, system instructions, cryptographic parameters, credentials, or subscriber account data.\\n\\n• Public Security & Zero-PHI Retention Posture: Review our public security controls, stateless TLS 1.3 API processing, and zero PHI/claim retention standards in the Security Center (#security) and Privacy Policy (#privacy).\\n• Self-Serve Account & API Management: Manage your organization's subscription, RCM & legal team CC seats, and production rw_live_... API Key inside the Client Portal (#account).";
     return {{
       status: "ok",
       question: q,
@@ -1014,7 +1040,7 @@ async function handleConciergeEndpoint(body, env) {{
   }}
 
   if ((/what model|which model|what llm|which llm|anthropic|are you claude|use claude|sonnet|opus|haiku|openai|gpt|chatgpt|gemini|who trained you|who are you|what are you|are you a real|are you ai/i.test(ql)) && !ql.includes("claude desktop")) {{
-    const idAns = "I am the RubricWard Autonomous AI Commercial Payer MRF, ERISA Appeal & NSA IDR Concierge, powered by RubricWard's proprietary 52-Portal Payer MRF, Medicare RVU/GPCI & OpenXML Appeal Engine.\n• I can dynamically answer questions about 1-click subscription cancellation, B2B tax receipts, RCM team CC seats, and Slack/Teams/Epic/Athena webhooks (#account).\n• I can also help you compare Tier 1 ClaimWire Pro ($249/mo), Tier 2 RubricWard Autopilot ($599/mo), Tier 3 6-File .ZIP Appeal & IDR Compiler ($1,499/mo), and Tier 4 Enterprise RCM OEM ($2,999/mo), benchmark CMS TiC 25th/50th/75th percentile MRF rates, or connect our 12 Healthcare RCM APIs & MCP server.";
+    const idAns = "I am the RubricWard Autonomous AI Commercial Payer MRF, ERISA Appeal & NSA IDR Concierge, powered by RubricWard's proprietary 52-Portal Payer MRF, Medicare RVU/GPCI & OpenXML Appeal Engine.\\n• I can dynamically answer questions about 1-click subscription cancellation, B2B tax receipts, RCM team CC seats, and Slack/Teams/Epic/Athena webhooks (#account).\\n• I can also help you compare Tier 1 ClaimWire Pro ($249/mo), Tier 2 RubricWard Autopilot ($599/mo), Tier 3 6-File .ZIP Appeal & IDR Compiler ($1,499/mo), and Tier 4 Enterprise RCM OEM ($2,999/mo), benchmark CMS TiC 25th/50th/75th percentile MRF rates, or connect our 12 Healthcare RCM APIs & MCP server.";
     return {{
       status: "ok",
       question: q,
@@ -1027,35 +1053,35 @@ async function handleConciergeEndpoint(body, env) {{
   }}
 
   const isGreeting = /^(hi|hello|hey|howdy|greetings|good\\s+(morning|afternoon|evening)|yo|sup|test|testing|help|how\\s+are\\s+you|what\\s+can\\s+you\\s+do|start)[!.?\\s]*$/i.test(ql);
-  let fallbackAns = "RubricWard monitors all 50 U.S. State Commercial Payer TiC MRF cohorts (UHC, Anthem/Elevance, BCBS, Aetna, Cigna, Humana) plus Federal CMS MPFS/OPPS/NCCI and the Federal No Surprises Act (NSA) IDR Portal (52 Portals total).\n• 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Compiler: Compiles Volume I ERISA 29 CFR 2560.503-1 & ACA 45 CFR 147.136 Appeal Brief (.docx), Volume II CMS TiC Commercial Payer MRF Allowed-Amount & QPA Matrix (.xlsx with live =ROUND(D6*G6,2) and =SUM() formulas), Volume III Medicare MPFS RVU/GPCI Parity Schedule (.xlsx), Volume IV Federal NSA 45 CFR 149.510 Open Negotiation & IDR Position Statement (.docx), Volume V NCCI PTP Modifier 25/59 Defense & Prompt-Pay Demand (.docx), and 00_Manifest (.json).\n• 4 Self-Serve Tiers (#checkout): Tier 1 ClaimWire Pro ($249/mo), Tier 2 RubricWard Autopilot ($599/mo — Recommended, includes all 12 APIs), Tier 3 6-File .ZIP Appeal & IDR Compiler ($1,499/mo), and Tier 4 Enterprise RCM OEM ($2,999/mo).";
+  let fallbackAns = "RubricWard monitors all 50 U.S. State Commercial Payer TiC MRF cohorts (UHC, Anthem/Elevance, BCBS, Aetna, Cigna, Humana) plus Federal CMS MPFS/OPPS/NCCI and the Federal No Surprises Act (NSA) IDR Portal (52 Portals total).\\n• 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Compiler: Compiles Volume I ERISA 29 CFR 2560.503-1 & ACA 45 CFR 147.136 Appeal Brief (.docx), Volume II CMS TiC Commercial Payer MRF Allowed-Amount & QPA Matrix (.xlsx with live =ROUND(D6*G6,2) and =SUM() formulas), Volume III Medicare MPFS RVU/GPCI Parity Schedule (.xlsx), Volume IV Federal NSA 45 CFR 149.510 Open Negotiation & IDR Position Statement (.docx), Volume V NCCI PTP Modifier 25/59 Defense & Prompt-Pay Demand (.docx), and 00_Manifest (.json).\\n• 4 Self-Serve Tiers (#checkout): Tier 1 ClaimWire Pro ($249/mo), Tier 2 RubricWard Autopilot ($599/mo — Recommended, includes all 12 APIs), Tier 3 6-File .ZIP Appeal & IDR Compiler ($1,499/mo), and Tier 4 Enterprise RCM OEM ($2,999/mo).";
   let anchor = "#checkout";
 
   if (isGreeting) {{
-    fallbackAns = "Hello! Welcome to the RubricWard AI Commercial Payer MRF, ERISA Appeal & NSA IDR Concierge. How can I help your revenue cycle or managed-care team today?\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Arbitration Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\n• Benchmark CMS TiC Commercial Payer MRF 25th/50th/75th percentile allowed rates, % of Medicare MPFS, and NSA QPA underpayment spreads across all 52 portals\n• Compare Tier 1 ClaimWire Pro ($249/mo), Tier 2 RubricWard Autopilot ($599/mo), Tier 3 6-File .ZIP Appeal & IDR Compiler ($1,499/mo), and Tier 4 Enterprise RCM OEM ($2,999/mo)\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our 12 Healthcare RCM APIs & MCP server (#account)";
+    fallbackAns = "Hello! Welcome to the RubricWard AI Commercial Payer MRF, ERISA Appeal & NSA IDR Concierge. How can I help your revenue cycle or managed-care team today?\\n• Compile or inspect a 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Arbitration Package with live Excel =ROUND(D6*G6,2) and =SUM() formulas\\n• Benchmark CMS TiC Commercial Payer MRF 25th/50th/75th percentile allowed rates, % of Medicare MPFS, and NSA QPA underpayment spreads across all 52 portals\\n• Compare Tier 1 ClaimWire Pro ($249/mo), Tier 2 RubricWard Autopilot ($599/mo), Tier 3 6-File .ZIP Appeal & IDR Compiler ($1,499/mo), and Tier 4 Enterprise RCM OEM ($2,999/mo)\\n• Manage your subscription, download B2B receipts, cancel in 1 click, or connect our 12 Healthcare RCM APIs & MCP server (#account)";
     anchor = "#checkout";
   }} else if (ql.includes("color") && ql.includes("sky")) {{
-    fallbackAns = "The sky is blue on a clear day (thanks to Rayleigh scattering of sunlight in Earth's atmosphere)!\n\nAs RubricWard's AI Commercial Payer MRF & NSA IDR Concierge, I am live and ready to help with any question about our 52-portal Commercial Payer TiC MRF & CMS fee-schedule feed, QPA underpayment benchmarks, 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Compiler, or self-serve account settings.";
+    fallbackAns = "The sky is blue on a clear day (thanks to Rayleigh scattering of sunlight in Earth's atmosphere)!\\n\\nAs RubricWard's AI Commercial Payer MRF & NSA IDR Concierge, I am live and ready to help with any question about our 52-portal Commercial Payer TiC MRF & CMS fee-schedule feed, QPA underpayment benchmarks, 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Compiler, or self-serve account settings.";
     anchor = "#contract-directory";
   }} else if (/unsubscribe|cancel|stop email|opt out|pause|refund|invoice|receipt|ach|stripe|billing|downgrade|close account/i.test(ql)) {{
-    fallbackAns = "You can pause payer MRF & LCD email alerts, download corporate tax receipts, or cancel a paid subscription in 1 click with zero lock-in:\n• Pause or Filter Payer MRF Alerts: Click the 1-click Unsubscribe link in any RubricWard digest email, or open the Client Portal (#account -> Section 01) to toggle specific states or payers.\n• 1-Click Self-Serve Cancellation: Open the Client Portal (#account), enter your work email or rw_live_... key, and click Manage / Cancel Plan. Recurring billing stops immediately.\n• Corporate B2B Invoices & Annual Savings: Switch between Monthly and Annual billing anytime (saving $748/yr on Tier 1, $1,798/yr on Tier 2, or $4,498/yr on Tier 3).";
+    fallbackAns = "You can pause payer MRF & LCD email alerts, download corporate tax receipts, or cancel a paid subscription in 1 click with zero lock-in:\\n• Pause or Filter Payer MRF Alerts: Click the 1-click Unsubscribe link in any RubricWard digest email, or open the Client Portal (#account -> Section 01) to toggle specific states or payers.\\n• 1-Click Self-Serve Cancellation: Open the Client Portal (#account), enter your work email or rw_live_... key, and click Manage / Cancel Plan. Recurring billing stops immediately.\\n• Corporate B2B Invoices & Annual Savings: Switch between Monthly and Annual billing anytime (saving $748/yr on Tier 1, $1,798/yr on Tier 2, or $4,498/yr on Tier 3).";
     anchor = "#account";
   }} else if (/teammate|colleague|team|seat|share|multi-user|invite|slack|teams|epic|athena|webhook|filter/i.test(ql)) {{
-    fallbackAns = "Every RubricWard workspace supports multi-user RCM team seats, custom 52-portal specialty routing, and real-time webhooks inside the Client Portal (#account):\n• Unlimited RCM & Legal Team CC Seats (Section 02): Add revenue cycle directors, denial appeal nurses, managed-care VPs, and healthcare counsel.\n• Slack, Microsoft Teams & RCM Webhooks (Section 02): Route high-value commercial MRF rate shifts and NSA IDR filing deadlines straight into your denial-management channel.\n• 52-Portal & Specialty Alert Routing (Section 01): Filter alerts across All 50 State Commercial Payer MRFs, CMS MPFS/OPPS/NCCI, Orthopedic/Spine ASC, Emergency Medicine, or Anesthesia.";
+    fallbackAns = "Every RubricWard workspace supports multi-user RCM team seats, custom 52-portal specialty routing, and real-time webhooks inside the Client Portal (#account):\\n• Unlimited RCM & Legal Team CC Seats (Section 02): Add revenue cycle directors, denial appeal nurses, managed-care VPs, and healthcare counsel.\\n• Slack, Microsoft Teams & RCM Webhooks (Section 02): Route high-value commercial MRF rate shifts and NSA IDR filing deadlines straight into your denial-management channel.\\n• 52-Portal & Specialty Alert Routing (Section 01): Filter alerts across All 50 State Commercial Payer MRFs, CMS MPFS/OPPS/NCCI, Orthopedic/Spine ASC, Emergency Medicine, or Anesthesia.";
     anchor = "#account";
   }} else if (/zip|sample|package|download|6-file|6 file|volume|excel|formula|erisa|idr|nsa/i.test(ql)) {{
-    fallbackAns = "Every RubricWard 6-File OpenXML (.ZIP) Appeal & IDR Arbitration Package compiles 5 native Word/Excel volumes plus a JSON readiness manifest in memory:\n• Volume I (.DOCX): ERISA 29 CFR 2560.503-1 & ACA 45 CFR 147.136 Clinical Medical-Necessity Appeal Brief\n• Volume II (.XLSX): CMS TiC Commercial Payer MRF Allowed-Amount & QPA Benchmark Model (with live =ROUND(D6*G6,2) & =SUM() formulas)\n• Volume III (.XLSX): Medicare MPFS RVU/GPCI Locality & OPPS/ASC Parity Schedule\n• Volume IV (.DOCX): Federal NSA 45 CFR 149.510 30-Day Open Negotiation Notice & IDR Arbitration Position Statement\n• Volume V (.DOCX) + 00_Manifest (.JSON): CMS NCCI PTP Modifier 25/59/XE/XS Unbundling Defense & State Prompt-Pay Interest Demand";
+    fallbackAns = "Every RubricWard 6-File OpenXML (.ZIP) Appeal & IDR Arbitration Package compiles 5 native Word/Excel volumes plus a JSON readiness manifest in memory:\\n• Volume I (.DOCX): ERISA 29 CFR 2560.503-1 & ACA 45 CFR 147.136 Clinical Medical-Necessity Appeal Brief\\n• Volume II (.XLSX): CMS TiC Commercial Payer MRF Allowed-Amount & QPA Benchmark Model (with live =ROUND(D6*G6,2) & =SUM() formulas)\\n• Volume III (.XLSX): Medicare MPFS RVU/GPCI Locality & OPPS/ASC Parity Schedule\\n• Volume IV (.DOCX): Federal NSA 45 CFR 149.510 30-Day Open Negotiation Notice & IDR Arbitration Position Statement\\n• Volume V (.DOCX) + 00_Manifest (.JSON): CMS NCCI PTP Modifier 25/59/XE/XS Unbundling Defense & State Prompt-Pay Interest Demand";
     anchor = "#zip-package-inspector";
   }} else if (/mrf|qpa|allowed|benchmark|cpt|hcpcs|rvu|gpci|medicare|mpfs|opps|asc|rate/i.test(ql)) {{
-    fallbackAns = "RubricWard benchmarks every CPT, HCPCS, DRG, and APC code against 2.4M+ verified commercial payer in-network MRF rates across all 50 states:\n• API #02 (/v1/model/tic-payer-mrf-rates): Computes 25th, 50th (median), and 75th percentile commercial allowed amounts from UHC, Anthem/Elevance, BCBS, Aetna, and Cigna TiC MRFs under 45 CFR 147.212.\n• API #03 (/v1/calculate/medicare-mpfs-rvu-gpci): Calculates exact Medicare MPFS Work, Practice Expense, and Malpractice RVU reimbursement adjusted by CMS Locality GPCI and Conversion Factor ($33.2875).\n• API #11 (/v1/analyze/group-npi-ein-payer-leverage): Compares payer contracted schedules at 140%–210% of Medicare to maximize managed-care contract renegotiations and NSA IDR final offers.";
+    fallbackAns = "RubricWard benchmarks every CPT, HCPCS, DRG, and APC code against 2.4M+ verified commercial payer in-network MRF rates across all 50 states:\\n• API #02 (/v1/model/tic-payer-mrf-rates): Computes 25th, 50th (median), and 75th percentile commercial allowed amounts from UHC, Anthem/Elevance, BCBS, Aetna, and Cigna TiC MRFs under 45 CFR 147.212.\\n• API #03 (/v1/calculate/medicare-mpfs-rvu-gpci): Calculates exact Medicare MPFS Work, Practice Expense, and Malpractice RVU reimbursement adjusted by CMS Locality GPCI and Conversion Factor ($33.2875).\\n• API #11 (/v1/analyze/group-npi-ein-payer-leverage): Compares payer contracted schedules at 140%–210% of Medicare to maximize managed-care contract renegotiations and NSA IDR final offers.";
     anchor = "#product-dot-unit-bid-tabs";
   }} else if (/carc|rarc|835|denial|ncci|mue|modifier|25|59|prompt pay|interest|lcd|ncd|prior auth/i.test(ql)) {{
-    fallbackAns = "RubricWard automates clinical denial reversal, NCCI unbundling defense, and statutory prompt-pay interest calculation:\n• API #01 (/v1/shred/cpb-lcd-medical-policy): Shreds X12 835 ERA CARC/RARC denial codes (CO-45, CO-50, CO-97, CO-197) and Payer CPBs/LCDs into statutory appeal checklists and filing windows.\n• API #05 (/v1/scrub/ncci-ptp-mue-edits): Audits multi-line CPT claims against CMS NCCI Procedure-to-Procedure (PTP) edits and MUE limits, generating Modifier 25/59/XE/XS operative note documentation.\n• API #09 (/v1/generate/prior-auth-p2p-rebuttal): Synthesizes Peer-to-Peer (P2P) clinical rebuttal briefs and computes accrued statutory prompt-pay interest under TX Ins. Code § 1301.103 (18% p.a.), NY ISC § 3224-a (12% p.a.), CA H&SC § 1371 (15% p.a.), and FL Stat. § 627.6131 (12% p.a.).";
+    fallbackAns = "RubricWard automates clinical denial reversal, NCCI unbundling defense, and statutory prompt-pay interest calculation:\\n• API #01 (/v1/shred/cpb-lcd-medical-policy): Shreds X12 835 ERA CARC/RARC denial codes (CO-45, CO-50, CO-97, CO-197) and Payer CPBs/LCDs into statutory appeal checklists and filing windows.\\n• API #05 (/v1/scrub/ncci-ptp-mue-edits): Audits multi-line CPT claims against CMS NCCI Procedure-to-Procedure (PTP) edits and MUE limits, generating Modifier 25/59/XE/XS operative note documentation.\\n• API #09 (/v1/generate/prior-auth-p2p-rebuttal): Synthesizes Peer-to-Peer (P2P) clinical rebuttal briefs and computes accrued statutory prompt-pay interest under TX Ins. Code § 1301.103 (18% p.a.), NY ISC § 3224-a (12% p.a.), CA H&SC § 1371 (15% p.a.), and FL Stat. § 627.6131 (12% p.a.).";
     anchor = "#product-davis-bacon-wage";
   }} else if (/50|52|portal|state|monitored|which|coverage|uhc|bcbs|aetna|cigna/i.test(ql)) {{
-    fallbackAns = "RubricWard monitors all 52 active healthcare commercial payer & federal rate portals 24/7:\n• All 50 U.S. State Commercial Payer TiC MRF & Department of Insurance Portals (tracking UHC, Anthem/Elevance, BCBS, Aetna, Cigna, Humana, and Centene machine-readable files + state surprise-billing registries across TX, CA, FL, NY, PA, IL, OH, GA, NC, MI, NJ, VA, WA, MA, AZ, TN, IN, MO, MD, WI, CO, MN, SC, AL, LA, KY, OR, OK, CT, UT, NV, IA, AR, MS, KS, NM, NE, ID, WV, HI, NH, ME, RI, MT, DE, SD, ND, AK, VT, and WY).\n• Federal CMS Medicare Authority: MPFS RVU/GPCI, Hospital OPPS/ASC Addendum B, NCCI PTP/MUE Edits, and MCD LCD/NCD Policies.\n• Federal No Surprises Act (NSA) IDR Portal: 45 CFR 149.510 QPA & Certified IDRE Arbitration Benchmarks.";
+    fallbackAns = "RubricWard monitors all 52 active healthcare commercial payer & federal rate portals 24/7:\\n• All 50 U.S. State Commercial Payer TiC MRF & Department of Insurance Portals (tracking UHC, Anthem/Elevance, BCBS, Aetna, Cigna, Humana, and Centene machine-readable files + state surprise-billing registries across TX, CA, FL, NY, PA, IL, OH, GA, NC, MI, NJ, VA, WA, MA, AZ, TN, IN, MO, MD, WI, CO, MN, SC, AL, LA, KY, OR, OK, CT, UT, NV, IA, AR, MS, KS, NM, NE, ID, WV, HI, NH, ME, RI, MT, DE, SD, ND, AK, VT, and WY).\\n• Federal CMS Medicare Authority: MPFS RVU/GPCI, Hospital OPPS/ASC Addendum B, NCCI PTP/MUE Edits, and MCD LCD/NCD Policies.\\n• Federal No Surprises Act (NSA) IDR Portal: 45 CFR 149.510 QPA & Certified IDRE Arbitration Benchmarks.";
     anchor = "#coverage";
   }} else if (/mcp|api|claude|cursor|windsurf|epic|athena|waystar|endpoint/i.test(ql)) {{
-    fallbackAns = "RubricWard exposes 12 stateless Pydantic V2 healthcare RCM & payer rate-intelligence microservices via REST and Model Context Protocol (MCP):\n• Production API Key (rw_live_...): Included in Tier 2 Autopilot ($599/mo, 2,500 calls/mo), Tier 3 ($1,499/mo, 10,000 calls/mo), and Tier 4 OEM ($2,999/mo, 50,000 calls/mo).\n• Claude Desktop, Cursor & Windsurf MCP (5/5 Glama TDQS): Run npx -y @rubricward/mcp-server locally or connect to https://rubricward.com/mcp.";
+    fallbackAns = "RubricWard exposes 12 stateless Pydantic V2 healthcare RCM & payer rate-intelligence microservices via REST and Model Context Protocol (MCP):\\n• Production API Key (rw_live_...): Included in Tier 2 Autopilot ($599/mo, 2,500 calls/mo), Tier 3 ($1,499/mo, 10,000 calls/mo), and Tier 4 OEM ($2,999/mo, 50,000 calls/mo).\\n• Claude Desktop, Cursor & Windsurf MCP (5/5 Glama TDQS): Run npx -y @rubricward/mcp-server locally or connect to https://rubricward.com/mcp.";
     anchor = "#apis";
   }}
 
@@ -1075,12 +1101,12 @@ async function handleConciergeEndpoint(body, env) {{
         "3. Write in clean plain text using bullet points (•) where helpful. NEVER use Markdown bold (**asterisks**), backticks (`code`), or # headings.",
         "4. Adhere strictly to these verified RubricWard facts:",
         "   • Coverage (52 Portals Total): All 50 U.S. State Commercial Payer TiC MRF cohorts (UHC, Anthem/Elevance, BCBS, Aetna, Cigna, Humana) + Federal CMS Medicare MPFS/OPPS/NCCI/LCD + Federal No Surprises Act (NSA) IDR Arbitration Portal.",
-        "   • 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Package Compiler (/v1/camber-autopilot/compile-bid-package): Compiles Volume I ERISA 29 CFR 2560.503-1 & ACA 45 CFR 147.136 Appeal Brief (.docx), Volume II CMS TiC Commercial Payer MRF Allowed-Amount & QPA Benchmark Model (.xlsx with live =ROUND(D6*G6,2) and =SUM() formulas), Volume III Medicare MPFS RVU/GPCI Locality & OPPS/ASC Parity Schedule (.xlsx), Volume IV Federal NSA 45 CFR 149.510 Open Negotiation & IDR Position Statement (.docx), Volume V NCCI PTP Modifier 25/59 Defense & State Prompt-Pay Demand (.docx), and 00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json.",
+        "   • 6-File OpenXML (.DOCX + .XLSX) Appeal & IDR Package Compiler (/v1/camber-autopilot/compile-bid-package): Compiles Volume I ERISA 29 CFR 2560.503-1 & ACA 45 CFR 147.136 Appeal Brief (.docx), Volume II CMS TiC Commercial Payer MRF Allowed-Amount & QPA Benchmark Model (.xlsx with live =ROUND(D6*G6,2) and =SUM() formulas), Volume III Medicare MPFS RVU/GPCI Locality & OPPS/ASC Parity Schedule (.xlsx), Volume IV Federal NSA 45 CFR 149.510 Open Negotiation & IDR Position Statement (.docx), Volume V NCCI PTP Modifier 25/59 Defense & State Prompt-Pay Demand (.docx), and 00_RubricWard_Preconstruction_Readiness_Manifest.json.",
         "   • 12 Stateless Healthcare RCM & Payer Rate Microservices (5/5 Glama TDQS): API #01 835 CARC/RARC Denial & Policy Shredder, API #02 50-State Commercial Payer TiC MRF Benchmark Modeler (2.4M+ CPT/HCPCS rates), API #03 Medicare MPFS RVU, GPCI & OPPS/ASC Calculator, API #04 52-Portal Live Payer MRF, CMS LCD & NSA IDR Feed, API #05 CMS NCCI PTP Unbundling, MUE & Modifier 25/59 Auditor, API #06 ERISA 29 CFR 2560.503-1 & ACA External Review Appeal Generator, API #07 Payer Contract Underpayment & Prompt-Pay Interest Auditor, API #08 Federal No Surprises Act (45 CFR 149.510) QPA & IDR Offer Calculator, API #09 State Prompt-Pay Statutory Interest & Clean-Claim Demand Pricer, API #10 Prior-Authorization, CMS LCD/NCD & Peer-to-Peer Clinical Auditor, API #11 Regional Payer Contracted Rate Spread & % of Medicare Analyzer, and API #12 NSA Good-Faith Estimate (45 CFR 149.420) & Out-of-Network Consent Generator.",
         "   • MCP Integration: Local STDIO via npx -y @rubricward/mcp-server or Remote Streamable-HTTP at https://rubricward.com/mcp for Claude Desktop, Cursor, and Windsurf, plus Epic Resolute, Athenahealth, and Waystar blueprints.",
         "   • Client Portal (#account): 1-click self-serve subscription cancellation, B2B tax invoice downloads, 52-portal & specialty alert routing (Section 01), unlimited RCM & legal team CC seats and Slack/Microsoft Teams/Epic webhooks (Section 02), and production rw_live_... API key retrieval.",
         "   • 4 Self-Serve Tiers (#checkout): Tier 1 ClaimWire Pro ($249/mo or $2,240/yr [Save $748]), Tier 2 RubricWard Autopilot ($599/mo or $5,390/yr [Save $1,798] — Recommended, includes full pre-shredded dossiers + 2,500 API calls/mo), Tier 3 1-Click 6-File .ZIP Appeal & IDR Compiler ($1,499/mo or $13,490/yr [Save $4,498], unlimited 6-File OpenXML compilations + 10,000 API calls/mo), and Tier 4 Enterprise RCM & Practice ERP OEM Suite ($2,999/mo or $26,990/yr, 50,000 OEM API calls/mo + full 50-State Commercial Payer MRF Vault)."
-      ].join("\n");
+      ].join("\\n");
 
       const llmResp = await fetch("https://api.anthropic.com/v1/messages", {{
         method: "POST",
@@ -1228,7 +1254,10 @@ export default {{
       }}
       if (SPECIALTY_DOSSIER_MAP[htmlKey] && STATIC_HTML[SPECIALTY_DOSSIER_MAP[htmlKey].base]) {{
         const sp = SPECIALTY_DOSSIER_MAP[htmlKey];
-        const rendered = STATIC_HTML[sp.base].split(sp.old_title).join(sp.new_title).split(sp.old_lid).join(sp.new_lid);
+        let rendered = STATIC_HTML[sp.base].split(sp.old_title).join(sp.new_title).split(sp.old_lid).join(sp.new_lid);
+        if (sp.main_html) {{
+          rendered = rendered.replace(/<main[\\s\\S]*?<\\/main>/, sp.main_html);
+        }}
         return new Response(rendered, {{
           status: 200,
           headers: {{ "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache, must-revalidate", ...CORS_HEADERS }},
@@ -1269,12 +1298,12 @@ export default {{
           state_code: resolvedState,
           contractor_name: url.searchParams.get("contractor_name") || body.contractor_name || "Multi-Specialty Surgical Group & ASC LLC",
           files_included: [
-            "Volume_I_ERISA_29CFR2560_Clinical_Appeal_Brief.docx",
-            "Volume_II_No_Surprises_Act_45CFR149_IDR_Position_Paper.docx",
-            "Volume_III_State_DOI_Prompt_Pay_Penalty_Demand.docx",
-            "Volume_IV_TiC_Payer_MRF_Rate_Percentile_Model.xlsx",
-            "Volume_V_Medicare_MPFS_ASC_GPCI_Repricing_Workbook.xlsx",
-            "00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json",
+            "Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx",
+            "Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx",
+            "Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx",
+            "Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx",
+            "Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx",
+            "00_RubricWard_Preconstruction_Readiness_Manifest.json",
           ],
           zip_base64: selectedZipB64,
         }}, 200);
@@ -1446,12 +1475,23 @@ export default {{
     print(f"[RUBRICWARD EDGE WORKER] Built {out_path} ({out_path.stat().st_size:,} bytes)")
 
     # Write static GitHub Pages fallback files for /samples/*.zip, /v1/camber-autopilot/compile-bid-package/index.html, /v1/health, /v1/telemetry/errors, and /mcp
+    def _atomic_write_bytes_if_changed(dest: Path, data: bytes) -> None:
+        if dest.exists():
+            try:
+                if dest.read_bytes() == data:
+                    return
+            except Exception:
+                pass
+        tmp = dest.with_suffix(f".tmp.{os.getpid()}")
+        tmp.write_bytes(data)
+        os.replace(tmp, dest)
+
     samples_dir = ROOT_DIR / "samples"
     samples_dir.mkdir(parents=True, exist_ok=True)
-    (samples_dir / "RubricWard_6File_Bid_Package.zip").write_bytes(base64.b64decode(zip_b64))
+    _atomic_write_bytes_if_changed(samples_dir / "RubricWard_6File_Bid_Package.zip", base64.b64decode(zip_b64))
     for key, b64_val in zips_by_project.items():
         safe_key = "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in key)
-        (samples_dir / f"RubricWard_{safe_key}_6File_Bid_Package.zip").write_bytes(base64.b64decode(b64_val))
+        _atomic_write_bytes_if_changed(samples_dir / f"RubricWard_{safe_key}_6File_Bid_Package.zip", base64.b64decode(b64_val))
 
     health_payload = json.dumps({
         "status": "healthy",
@@ -1601,12 +1641,12 @@ export default {{
     <h1 class="text-2xl font-extrabold text-[#0A0D14] mt-1" id="pkg-heading">Downloading 6-File OpenXML Appeal &amp; IDR Arbitration Package (.ZIP)...</h1>
     <p class="text-sm text-[#1F2937] mt-2">Your native Microsoft Word (<span class="font-mono font-bold">.docx</span>) and Excel (<span class="font-mono font-bold">.xlsx</span> with live <span class="font-mono font-bold">=ROUND(D6*G6,2)</span> and <span class="font-mono font-bold">=SUM()</span> formulas) ERISA appeal &amp; Federal NSA IDR arbitration archive is ready.</p>
     <div class="mt-4 p-4 rounded-xl bg-[#F4F1EA] border border-[#CBD5E1] text-xs font-mono space-y-1 text-[#0A0D14]">
-      <div>01 // Volume_I_ERISA_29CFR2560_Clinical_Appeal_Brief.docx</div>
-      <div>02 // Volume_II_No_Surprises_Act_45CFR149_IDR_Position_Paper.docx</div>
-      <div>03 // Volume_III_State_DOI_Prompt_Pay_Penalty_Demand.docx</div>
-      <div>04 // Volume_IV_TiC_Payer_MRF_Rate_Percentile_Model.xlsx</div>
-      <div>05 // Volume_V_Medicare_MPFS_ASC_GPCI_Repricing_Workbook.xlsx</div>
-      <div>06 // 00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json</div>
+      <div>01 // Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx</div>
+      <div>02 // Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx</div>
+      <div>03 // Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx</div>
+      <div>04 // Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx</div>
+      <div>05 // Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx</div>
+      <div>06 // 00_RubricWard_Preconstruction_Readiness_Manifest.json</div>
     </div>
     <div class="mt-6 flex flex-wrap gap-3">
       <a id="direct-zip-btn" href="/samples/RubricWard_6File_Bid_Package.zip" download class="px-5 py-2.5 rounded-lg bg-[#0A0D14] hover:bg-[#059669] text-white font-mono text-xs font-bold transition">Download .ZIP Archive Again</a>

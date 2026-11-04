@@ -717,7 +717,8 @@ def check_product_output_quality_controls() -> List[str]:
         worker_js_path = os.path.join(BASE_DIR, "cloudflare_worker.js")
         if os.path.exists(worker_js_path):
             with open(worker_js_path, "r", encoding="utf-8") as wfh:
-                if "PRECOMPILED_ZIPS_BY_PROJECT" not in wfh.read():
+                w_txt = wfh.read()
+                if "PRECOMPILED_ZIPS_BY_PROJECT" not in w_txt and "PROJECT_TO_ZIP_IDX" not in w_txt:
                     errors.append("`cloudflare_worker.js` missing `PRECOMPILED_ZIPS_BY_PROJECT` multi-project `.ZIP` map")
     except Exception as exc:
         errors.append(f"6-File OpenXML .ZIP Compiler quality check failed: {exc}")
@@ -1449,6 +1450,23 @@ def verify_integrity() -> int:
     print("  [STEP 8b] Verified 100% Zero Prospect Email, Domain, Mailbox & Discord Webhook Overlap with SignalTender")
 
     all_errors.extend(check_master_plan_and_domain_native_depth())
+    # Verify cloudflare_worker.js syntax with node --check and zero raw &amp; in .textContent
+    worker_p = os.path.join(BASE_DIR, "cloudflare_worker.js")
+    if os.path.exists(worker_p):
+        w_res = subprocess.run(["node", "--check", worker_p], capture_output=True, text=True)
+        if w_res.returncode != 0:
+            all_errors.append(f"node --check failed on cloudflare_worker.js: {w_res.stderr.strip()[:200]}")
+    for _hname in ("index.html", "apis.html"):
+        _hp = os.path.join(BASE_DIR, _hname)
+        if os.path.exists(_hp):
+            _htxt = open(_hp, "r", encoding="utf-8").read()
+            for _lno, _ln in enumerate(_htxt.splitlines(), 1):
+                if ".replace(" in _ln:
+                    continue
+                if "textContent" in _ln and "&amp;" in _ln:
+                    all_errors.append(f"[{_hname}:{_lno}] Raw `&amp;` assigned to `.textContent`: {_ln.strip()[:90]}")
+                if re.search(r"\b(?:tier_label|company_name)\s*:\s*'[^']*&amp;", _ln):
+                    all_errors.append(f"[{_hname}:{_lno}] Raw `&amp;` in plain-text JS property: {_ln.strip()[:90]}")
     print("  [STEP 8c] Verified RULE-024 Master-Plan Fidelity (Native Healthcare OpenXML/Routes, 52 `/rates/cpt/*.html` Dossiers, 200+ NPI-Enriched Contacts)")
 
     # Step 9: Closed-Loop Autonomous Error Healer

@@ -627,9 +627,9 @@ def build_six_file_bid_package_zip(req: CompileBidPackageRequest) -> bytes:
         rows=vol5_rows,
     )
 
-    # 6. Volume VI (.DOCX): Federal No Surprises Act (NSA 45 CFR 149.510) IDR Position Brief
+    # 5. Volume V (.DOCX): Federal No Surprises Act (NSA 45 CFR 149.510) IDR Position Brief & 835 ERA Demand
     vol6_bytes = _build_openxml_docx(
-        title=f"VOLUME VI — FEDERAL NO SURPRISES ACT (45 CFR § 149.510) IDR ARBITRATION POSITION BRIEF ({eff_pid})",
+        title=f"VOLUME V — FEDERAL NO SURPRISES ACT (45 CFR § 149.510) IDR ARBITRATION BRIEF & 835 ERA DEMAND ({eff_pid})",
         subtitle=f"Initiating Party: {eff_contractor} ({eff_npi}) | Jurisdiction: {eff_agency}",
         sections=[
             (
@@ -664,11 +664,11 @@ def build_six_file_bid_package_zip(req: CompileBidPackageRequest) -> bytes:
         "statutory_authority": st_statute,
         "target_pct_of_medicare": req.target_markup_pct,
         "files_included": [
-            "Volume_I_ERISA_29CFR2560_Clinical_Appeal_Brief.docx",
-            "Volume_II_No_Surprises_Act_45CFR149_IDR_Position_Paper.docx",
-            "Volume_III_State_DOI_Prompt_Pay_Penalty_Demand.docx",
-            "Volume_IV_TiC_Payer_MRF_Rate_Percentile_Model.xlsx",
-            "Volume_V_Medicare_MPFS_ASC_GPCI_Repricing_Workbook.xlsx",
+            "Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx",
+            "Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx",
+            "Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx",
+            "Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx",
+            "Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx",
             "00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json",
         ],
         "compliance_checks": {
@@ -681,11 +681,11 @@ def build_six_file_bid_package_zip(req: CompileBidPackageRequest) -> bytes:
 
     zip_buf = io.BytesIO()
     with zipfile.ZipFile(zip_buf, "w", zipfile.ZIP_DEFLATED) as zf:
-        zf.writestr("Volume_I_ERISA_29CFR2560_Clinical_Appeal_Brief.docx", vol4_bytes)
-        zf.writestr("Volume_II_No_Surprises_Act_45CFR149_IDR_Position_Paper.docx", vol6_bytes)
-        zf.writestr("Volume_III_State_DOI_Prompt_Pay_Penalty_Demand.docx", vol1_bytes)
-        zf.writestr("Volume_IV_TiC_Payer_MRF_Rate_Percentile_Model.xlsx", vol2_bytes)
-        zf.writestr("Volume_V_Medicare_MPFS_ASC_GPCI_Repricing_Workbook.xlsx", vol3_bytes)
+        zf.writestr("Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx", vol1_bytes)
+        zf.writestr("Volume_II_Commercial_TiC_MRF_QPA_Rate_Model.xlsx", vol2_bytes)
+        zf.writestr("Volume_III_Medicare_MPFS_RVU_GPCI_Schedule.xlsx", vol3_bytes)
+        zf.writestr("Volume_IV_ERISA_29CFR2560_Medical_Necessity_Appeal.docx", vol4_bytes)
+        zf.writestr("Volume_V_NSA_45CFR149_IDR_Brief_and_835_ERA.docx", vol6_bytes)
         zf.writestr("00_RubricWard_Appeal_and_IDR_Readiness_Manifest.json", json.dumps(manifest_payload, indent=2).encode("utf-8"))
 
     return zip_buf.getvalue()

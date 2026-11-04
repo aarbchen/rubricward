@@ -530,6 +530,7 @@ def check_and_heal_client_semantic_quality(root_dir: Path, brand_name: str) -> T
     6. Reply classifier edge-case regression self-test ('yesterday', 'not sure', hostile '?' unsubscribes, spam-filter challenges).
     """
     import csv
+    import io
     import zipfile
     issues: List[str] = []
     healed: List[str] = []
@@ -606,8 +607,15 @@ def check_and_heal_client_semantic_quality(root_dir: Path, brand_name: str) -> T
                         need_rebuild_zips = True
                         break
                     manifest = json.loads(zf.read(json_files[0]).decode("utf-8"))
-                    c_for = str(manifest.get("compiled_for") or "")
+                    c_for = str(manifest.get("compiled_for") or manifest.get("provider_group") or "")
                     if any(bad_co in c_for for bad_co in ("Southwest Valley Constructors", "2047 Palm Beach Lakes")):
+                        need_rebuild_zips = True
+                        break
+                    if "Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx" not in zf.namelist():
+                        need_rebuild_zips = True
+                        break
+                    v1_xml = zipfile.ZipFile(io.BytesIO(zf.read("Volume_I_Payer_CPB_LCD_Prior_Auth_and_Medical_Necessity_Matrix.docx"))).read("word/document.xml").decode("utf-8", errors="ignore")
+                    if "VOLUME I " not in v1_xml and "VOLUME I—" not in v1_xml:
                         need_rebuild_zips = True
                         break
             except Exception:
