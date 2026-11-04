@@ -1072,15 +1072,18 @@ def clean_company_display_name(raw_company: str, email: str = "") -> str:
             s = " ".join(tokens[:-1]).strip()
     if s.startswith("TOA Tennessee"):
         s = s.replace("TOA ", "", 1)
-    # Strip trailing legal entity suffixes unless it would leave a single bare surname (e.g. 'Griffith Company')
+    # Strip trailing legal entity suffixes unless it would leave a single bare surname (e.g. 'Griffith Company', 'The Ruhlin Company')
     stripped_legal = re.sub(
         r",?\s*\b(L\.?L\.?C\.?|Inc\.?|Incorporated|Corporation|Corp\.?|Company|Co\.?|L\.?P\.?|P\.?A\.?|P\.?L\.?L\.?C\.?)\b[\s,.]*$",
         "",
         s,
         flags=re.I,
     ).strip(" ,.-")
-    if len(stripped_legal.split()) >= 2 or not s.lower().endswith((" company", " co.", " co")):
+    non_article_words = [w for w in stripped_legal.split() if w.lower() not in ("the", "a", "an")]
+    if len(non_article_words) >= 2 or not s.lower().endswith((" company", " co.", " co", " corporation", " corp.", " corp")):
         s = stripped_legal
+    if re.match(r"^The\s+[A-Z][a-zA-Z0-9&-]+$", s):
+        s = f"{s} Company"
     if s.islower() or s.isupper() or " Llc" in s:
         acronyms = {"lb": "LB", "cw": "C.W.", "tb": "T.B.", "t.b.": "T.B.", "rcm": "RCM", "asc": "ASC", "usa": "USA", "llc": "LLC", "hnl": "HNL", "ubmd": "UBMD", "ora": "ORA"}
         s = " ".join(acronyms.get(w.lower(), w.capitalize()) for w in s.split())
@@ -1090,10 +1093,13 @@ def clean_company_display_name(raw_company: str, email: str = "") -> str:
 def clean_person_first_name(raw_fname: str, email: str = "", default_role: str = "Estimating") -> str:
     """
     Returns a verified human first name (e.g. 'Katherine', 'Heather', 'Miriam', 'Justin')
-    or `default_role` when the email local-part is a generic inbox (`info@`, `estimating@`)
+    or `default_role` when the email local-part is a generic inbox (`info@`, `estimating@`),
+    a company-name echo (`hunter@huntercontracting.com`, `ruhlin@ruhlin.com`),
     or a dotless `first_initial + last_name` handle (`tbuzan@`, `jcheng@`, `rknowski@`).
     """
-    local = str(email or "").strip().lower().split("@")[0] if "@" in str(email or "") else ""
+    em_str = str(email or "").strip().lower()
+    local = em_str.split("@")[0] if "@" in em_str else ""
+    dom_stem = re.sub(r"[^a-z0-9]", "", em_str.split("@")[-1].split(".")[0]) if "@" in em_str else ""
     local_clean = re.sub(r"^[0-9|\-_+.]+", "", local)
     fn_cand = str(raw_fname or "").strip()
     if fn_cand.lower() in ("none", "null", "", "estimating", "revenue cycle", "capture", "there", "team", "info", "contact", "sales", "billing", "office"):
@@ -1104,19 +1110,32 @@ def clean_person_first_name(raw_fname: str, email: str = "", default_role: str =
         if first_tok in KNOWN_FIRST_NAMES:
             return first_tok.capitalize()
     if local_clean in KNOWN_FIRST_NAMES:
+        if dom_stem and len(local_clean) >= 4 and dom_stem.startswith(local_clean):
+            return default_role
         return local_clean.capitalize()
     if fn_cand:
         first_word = fn_cand.split()[0].split(".")[0].strip().lower()
         if first_word in KNOWN_FIRST_NAMES:
+            if "." not in local_clean and "_" not in local_clean and dom_stem and len(first_word) >= 4 and dom_stem.startswith(first_word):
+                return default_role
             return first_word.capitalize()
     return default_role
 
 
 def is_receptionist_or_generic_inbox(email: str) -> bool:
-    local = str(email or "").strip().lower().split("@")[0]
+    em_str = str(email or "").strip().lower()
+    local = em_str.split("@")[0]
+    local_clean = re.sub(r"[^a-z0-9]", "", local)
+    dom_stem = re.sub(r"[^a-z0-9]", "", em_str.split("@")[-1].split(".")[0]) if "@" in em_str else ""
+    if dom_stem and len(dom_stem) >= 3 and local_clean == dom_stem:
+        return True
     return any(
         local == k or local.startswith(k)
-        for k in ("info", "contact", "office", "general", "hello", "admin", "inquir", "mail", "support", "service", "customercare", "communications", "publicrelations")
+        for k in (
+            "info", "contact", "office", "general", "hello", "admin", "inquir", "mail",
+            "support", "service", "customercare", "communications", "publicrelations",
+            "frontdesk", "reception", "receptionist", "operator", "clerk", "helpdesk", "webmaster", "mailroom",
+        )
     )
 
 

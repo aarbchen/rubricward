@@ -257,16 +257,25 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
 
     try:
         starting_after = None
-        for _ in range(15):
-            list_req: Dict[str, Any] = {"campaign": cid, "limit": 100}
+        for _ in range(25):
+            list_req: Dict[str, Any] = {"campaign": cid, "limit": 50}
             if starting_after:
                 list_req["starting_after"] = starting_after
-            r_existing = requests.post(
-                "https://api.instantly.ai/api/v2/leads/list",
-                headers=headers,
-                json=list_req,
-                timeout=15,
-            )
+            r_existing = None
+            for _att in range(3):
+                try:
+                    r_existing = requests.post(
+                        "https://api.instantly.ai/api/v2/leads/list",
+                        headers=headers,
+                        json=list_req,
+                        timeout=35,
+                    )
+                    if r_existing.status_code == 200:
+                        break
+                except Exception:
+                    pass
+            if r_existing is None:
+                break
             if r_existing.status_code != 200:
                 break
             r_json = r_existing.json() or {}
@@ -289,13 +298,13 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                     bl_emails.add(em_existing)
                     new_bounces_found = True
 
-                if lid and (is_bounced_or_bad or is_st_overlap or has_dollar_or_link or (em_existing not in valid_email_map)):
+                if lid and (is_bounced_or_bad or is_st_overlap or has_dollar_or_link or is_receptionist_or_generic_inbox(em_existing) or (em_existing not in valid_email_map)):
                     requests.delete(f"https://api.instantly.ai/api/v2/leads/{lid}", headers=auth_only_headers, timeout=10)
                     purged_count += 1
                 elif em_existing in valid_email_map and lid:
                     existing_clean_map[em_existing] = item
             starting_after = r_json.get("next_starting_after")
-            if not starting_after or len(items) < 100:
+            if not starting_after or len(items) < 50:
                 break
     except Exception:
         pass
@@ -311,10 +320,12 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
 
     def _sync_one_lead(lead: Dict[str, Any]) -> tuple[int, int]:
         em_clean = lead["email"].strip().lower()
+        pid_val = str(lead.get("project_id") or lead.get("letting_id") or "TXDOI-MRF-CPT-29881-DFW")
+        lead_step3_breakup = step3_breakup_text.replace("{{project_id}}", pid_val)
         custom_vars = {
             "license_or_dot_id": lead.get("license_or_dot_id") or "NPI-VERIFIED",
             "state": lead.get("state") or lead.get("state_code") or "TX",
-            "project_id": lead.get("project_id") or lead.get("letting_id") or "TXDOI-MRF-CPT-29881-DFW",
+            "project_id": pid_val,
             "project_title": lead.get("project_title") or lead.get("subject") or "Commercial Payer TiC MRF Cohort",
             "letting_date": lead.get("letting_date") or "2026-11-30",
             "dossier_url": lead["dossier_url"],
@@ -324,7 +335,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
             "step1_subject": lead["step1_subject"],
             "step1_body_zero_link": lead["step1_body_zero_link"],
             "step2_body_dossier_link": lead["step2_body_dossier_link"],
-            "step3_body_breakup": step3_breakup_text,
+            "step3_body_breakup": lead_step3_breakup,
         }
         fn_val = lead.get("first_name") or "Revenue Cycle"
         if em_clean in existing_clean_map:
@@ -334,10 +345,13 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
             needs_patch = (
                 str(ex_item.get("first_name") or "") != str(fn_val)
                 or str(ex_item.get("company_name") or "") != str(lead["company_name"])
+                or str(ex_payload.get("project_id") or "") != pid_val
+                or str(ex_payload.get("dossier_url") or "") != str(lead["dossier_url"])
+                or str(ex_payload.get("compiler_url") or "") != str(custom_vars["compiler_url"])
                 or str(ex_payload.get("step1_subject") or "") != str(lead["step1_subject"])
                 or str(ex_payload.get("step1_body_zero_link") or "") != str(lead["step1_body_zero_link"])
                 or str(ex_payload.get("step2_body_dossier_link") or "") != str(lead["step2_body_dossier_link"])
-                or not str(ex_payload.get("step3_body_breakup") or "").strip()
+                or str(ex_payload.get("step3_body_breakup") or "") != lead_step3_breakup
             )
             if needs_patch and ex_id:
                 try:
@@ -349,7 +363,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                             "company_name": lead["company_name"],
                             "custom_variables": custom_vars,
                         },
-                        timeout=12,
+                        timeout=25,
                     )
                     if 200 <= rp.status_code < 300:
                         return (1, 1)

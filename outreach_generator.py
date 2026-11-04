@@ -110,22 +110,14 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
         primary_firm = clean_company_display_name(str(contact.get("company_name") or "Specialty Medical Group").strip(), clean_em)
         clean_fname = clean_person_first_name(str(contact.get("first_name") or "Revenue Cycle").strip(), clean_em, "Revenue Cycle")
 
-        # Resolve static dossier file from dot_lettings_seed.json so dossier_url always exists on disk
-        seed_item = next(
-            (l for l in lettings if l.get("state_code") == st),
-            lettings[idx % len(lettings)] if lettings else {},
-        )
-        seed_lid = str(seed_item.get("letting_id") or seed_item.get("project_id") or f"{st}DOI-MRF-CPT-29881")
-        seed_title = str(seed_item.get("title") or "Commercial Payer TiC MRF & NSA IDR Cohort")
-        slug = slugify(f"{seed_lid}-{seed_title}")
-        dossier_url = f"https://rubricward.com/lettings/project/{slug}.html"
-
         cohort = classify_medical_specialty_cohort(primary_firm, clean_em, st)
         lid = cohort["letting_id"]
         title = cohort["project_title"]
         cpt_short = cohort["cpt_short"]
         pay_item = cohort["key_pay_item"]
         agency = f"{st} Department of Insurance & Commercial Payer TiC MRF"
+        slug = slugify(f"{lid}-{title}")
+        dossier_url = f"https://rubricward.com/lettings/project/{slug}.html"
         compiler_url = f"https://rubricward.com/v1/camber-autopilot/compile-bid-package?project_id={lid}&state_code={st}&format=binary"
 
         is_generic_person = clean_fname.lower() in ("revenue cycle", "estimating", "capture", "info", "contact", "office", "sales", "billing")

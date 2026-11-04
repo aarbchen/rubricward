@@ -293,19 +293,11 @@ def build_mlot_and_runner_up_leads(verified_contacts: List[Dict[str, str]] | Non
         company = clean_company_display_name(str(contact.get("company_name") or ""), em)
         clean_fname = clean_person_first_name(str(contact.get("first_name") or ""), em, "Revenue Cycle")
 
-        # Resolve static dossier file from dot_lettings_seed.json so dossier_url always exists on disk
-        matched_let = next(
-            (l for l in lettings if l.get("state_code") == st),
-            lettings[idx % len(lettings)] if lettings else {},
-        )
-        seed_lid = str(matched_let.get("letting_id") or matched_let.get("project_id") or "TXDOI-MRF-CPT-29881-DFW")
-        seed_title = str(matched_let.get("title") or "Commercial Payer TiC MRF Cohort")
-        slug = slugify(f"{seed_lid}-{seed_title}")
-        dossier_url = f"{SITE_BASE_URL}/lettings/project/{slug}.html"
-
         cohort = classify_medical_specialty_cohort(company, em, st)
         active_lid = cohort["letting_id"]
         clean_title = cohort["project_title"]
+        slug = slugify(f"{active_lid}-{clean_title}")
+        dossier_url = f"{SITE_BASE_URL}/lettings/project/{slug}.html"
         compiler_url = f"{API_BASE_URL}/v1/camber-autopilot/compile-bid-package?project_id={active_lid}&state_code={st}&format=binary"
 
         note = generate_mlot_sniper_note(

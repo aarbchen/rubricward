@@ -55,6 +55,26 @@ async def _load_precompiled_assets():
                 format="json",
             )
             zips_by_project[st_code.upper()] = pkg_st["zip_base64"]
+    try:
+        from mlot_sniper_generator import classify_medical_specialty_cohort
+        contacts_p = ROOT_DIR / "verified_public_dot_contacts.json"
+        if contacts_p.exists():
+            for c_row in (json.loads(contacts_p.read_text(encoding="utf-8")) or []):
+                st_c = str(c_row.get("state") or "TX").strip().upper()
+                cohort = classify_medical_specialty_cohort(str(c_row.get("company_name") or ""), str(c_row.get("email") or ""), st_c)
+                s_lid = cohort["letting_id"].strip().upper()
+                if s_lid not in zips_by_project:
+                    pkg_sp = await compile_full_bid_package(
+                        CompileBidPackageRequest(
+                            project_id=s_lid,
+                            project_title=cohort["project_title"],
+                            state_code=st_c,
+                        ),
+                        format="json",
+                    )
+                    zips_by_project[s_lid] = pkg_sp["zip_base64"]
+    except Exception:
+        pass
     pkg = await compile_full_bid_package(CompileBidPackageRequest(), format="json")
     vault = await get_dot_bid_tab_vault(state=None)
     dbe = await match_dbe_sub_clearinghouse(DbeClearinghouseRequest())
@@ -62,19 +82,54 @@ async def _load_precompiled_assets():
 
 
 def build_worker_bundle() -> Path:
-    # 1. Load static HTML/SVG/XML assets (each HTML document stored once to stay ~450 KB)
+    from pseo_generator import slugify
+    lettings_seed = json.loads((ROOT_DIR / "dot_lettings_seed.json").read_text(encoding="utf-8"))
+    seed_lettings = lettings_seed.get("lettings", [])
+    base_slug_by_state = {}
+    base_slugs = set()
+    for let in seed_lettings:
+        lid_raw = str(let.get("letting_id") or let.get("project_id") or "")
+        bslug = slugify(f"{lid_raw}-{let.get('title', '')}")
+        base_slugs.add(bslug)
+        st_u = str(let.get("state_code") or "TX").strip().upper()
+        base_slug_by_state[st_u] = (f"/lettings/project/{bslug}.html", lid_raw, str(let.get("title") or ""))
+
+    # 1. Load static HTML/SVG/XML assets (52 base state pages in STATIC_HTML + compact SPECIALTY_DOSSIER_MAP for specialty slugs)
     static_pages = {
         "/": (ROOT_DIR / "index.html").read_text(encoding="utf-8"),
         "/apis": (ROOT_DIR / "apis.html").read_text(encoding="utf-8"),
         "/lettings": (ROOT_DIR / "lettings" / "index.html").read_text(encoding="utf-8"),
     }
+    specialty_dossier_map = {}
 
     project_dir = ROOT_DIR / "lettings" / "project"
     if project_dir.exists():
         for html_file in sorted(project_dir.glob("*.html")):
-            content = html_file.read_text(encoding="utf-8")
             slug = html_file.stem
-            static_pages[f"/lettings/project/{slug}.html"] = content
+            if slug in base_slugs:
+                static_pages[f"/lettings/project/{slug}.html"] = html_file.read_text(encoding="utf-8")
+
+    try:
+        from mlot_sniper_generator import classify_medical_specialty_cohort
+        contacts_p = ROOT_DIR / "verified_public_dot_contacts.json"
+        if contacts_p.exists():
+            for c_row in (json.loads(contacts_p.read_text(encoding="utf-8")) or []):
+                st_c = str(c_row.get("state") or "TX").strip().upper()
+                cohort = classify_medical_specialty_cohort(str(c_row.get("company_name") or ""), str(c_row.get("email") or ""), st_c)
+                s_lid = cohort["letting_id"]
+                s_title = cohort["project_title"]
+                s_slug = slugify(f"{s_lid}-{s_title}")
+                if s_slug not in base_slugs and st_c in base_slug_by_state:
+                    b_key, old_lid, old_title = base_slug_by_state[st_c]
+                    specialty_dossier_map[f"/lettings/project/{s_slug}.html"] = {
+                        "base": b_key,
+                        "old_lid": old_lid,
+                        "new_lid": s_lid,
+                        "old_title": old_title,
+                        "new_title": s_title,
+                    }
+    except Exception:
+        pass
 
     favicon_svg = (ROOT_DIR / "lettings" / "favicon.svg").read_text(encoding="utf-8")
     bimi_svg = (ROOT_DIR / "bimi-logo.svg").read_text(encoding="utf-8") if (ROOT_DIR / "bimi-logo.svg").exists() else favicon_svg
@@ -93,8 +148,17 @@ def build_worker_bundle() -> Path:
     indexnow_key = "a4f8e2c91b7d3056e8a12f4c9d0b3e71"
     lettings_seed = json.loads((ROOT_DIR / "dot_lettings_seed.json").read_text(encoding="utf-8"))
 
-    # 2. Pre-compile default 6-File OpenXML .ZIP package as base64 + per-project .ZIP map + Bid-Tab Vault + DBE Clearinghouse
+    # 2. Pre-compile default 6-File OpenXML .ZIP package as base64 + deduplicated per-project .ZIP pool + Bid-Tab Vault + DBE Clearinghouse
     zip_b64, zips_by_project, vault_data, dbe_default = asyncio.run(_load_precompiled_assets())
+    zip_b64_pool = []
+    b64_to_idx = {}
+    project_to_zip_idx = {}
+    for k_proj, v_b64 in zips_by_project.items():
+        if v_b64 not in b64_to_idx:
+            b64_to_idx[v_b64] = len(zip_b64_pool)
+            zip_b64_pool.append(v_b64)
+        project_to_zip_idx[k_proj] = b64_to_idx[v_b64]
+
     _admin_email = (os.getenv("RUBRICWARD_ADMIN_EMAIL") or "aaron@tryrubricward.com").strip().lower()
     _admin_password = (os.getenv("RUBRICWARD_ADMIN_PASSWORD") or "RubricAdmin!6D812228").strip()
     _admin_salt = (os.getenv("RUBRICWARD_ADMIN_SALT") or "0f5b69d3a75dc6ba823aa1975353ed11").strip()
@@ -120,6 +184,7 @@ def build_worker_bundle() -> Path:
 //  - Remote Streamable-HTTP MCP Server (/mcp) with 5/5 Glama TDQS compliance
 
 const STATIC_HTML = {json.dumps(static_pages)};
+const SPECIALTY_DOSSIER_MAP = {json.dumps(specialty_dossier_map)};
 const FAVICON_SVG = {json.dumps(favicon_svg)};
 const BIMI_SVG = {json.dumps(bimi_svg)};
 const SITE_WEBMANIFEST = {json.dumps(site_webmanifest)};
@@ -139,7 +204,8 @@ const LETTINGS_SEED = {json.dumps(lettings_seed)};
 const CAMBER_ADMIN_SALT = {json.dumps(_admin_salt)};
 const CAMBER_ADMIN_DIGESTS = {json.dumps(_admin_digests)};
 const DEFAULT_ZIP_B64 = {json.dumps(zip_b64)};
-const PRECOMPILED_ZIPS_BY_PROJECT = {json.dumps(zips_by_project)};
+const ZIP_B64_POOL = {json.dumps(zip_b64_pool)};
+const PROJECT_TO_ZIP_IDX = {json.dumps(project_to_zip_idx)};
 const VAULT_DATA = {json.dumps(vault_data)};
 const DBE_DEFAULT = {json.dumps(dbe_default)};
 const MCP_TOOLS = {json.dumps(MCP_TOOLS)};
@@ -1160,6 +1226,14 @@ export default {{
           headers: {{ "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache, must-revalidate", ...CORS_HEADERS }},
         }});
       }}
+      if (SPECIALTY_DOSSIER_MAP[htmlKey] && STATIC_HTML[SPECIALTY_DOSSIER_MAP[htmlKey].base]) {{
+        const sp = SPECIALTY_DOSSIER_MAP[htmlKey];
+        const rendered = STATIC_HTML[sp.base].split(sp.old_title).join(sp.new_title).split(sp.old_lid).join(sp.new_lid);
+        return new Response(rendered, {{
+          status: 200,
+          headers: {{ "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-cache, must-revalidate", ...CORS_HEADERS }},
+        }});
+      }}
     }}
 
     // 2. 6-File OpenXML .ZIP Compiler Endpoint
@@ -1182,7 +1256,8 @@ export default {{
       }}
       const resolvedPid = reqPid || ((matchedLet && matchedLet.project_id) ? matchedLet.project_id : "TXDOI-MRF-CPT-29881-DFW");
       const resolvedState = (matchedLet && matchedLet.state_code) ? String(matchedLet.state_code).toUpperCase() : (reqState || "TX");
-      const selectedZipB64 = PRECOMPILED_ZIPS_BY_PROJECT[resolvedPid.toUpperCase()] || PRECOMPILED_ZIPS_BY_PROJECT[resolvedState] || DEFAULT_ZIP_B64;
+      const zIdx = PROJECT_TO_ZIP_IDX[resolvedPid.toUpperCase()] ?? PROJECT_TO_ZIP_IDX[resolvedState];
+      const selectedZipB64 = (zIdx !== undefined && ZIP_B64_POOL[zIdx]) ? ZIP_B64_POOL[zIdx] : DEFAULT_ZIP_B64;
       const safeFilePid = resolvedPid.replace(/[^A-Za-z0-9_-]/g, "_");
       const zipFilename = `RubricWard_${{safeFilePid}}_6File_Bid_Package.zip`;
 

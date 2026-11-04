@@ -287,8 +287,33 @@ def _resolve_rubricward_package_context(req: CompileBidPackageRequest) -> Dict[s
         if (req_pid and req_pid != default_tx_pid)
         else str((matched_letting or {}).get("letting_id") or (matched_letting or {}).get("project_id") or f"{norm_st}-MRF-CPT-29881-2026").strip()
     )
+    pid_up = eff_pid.upper()
+    specialty_map = {
+        "45380": ("Gastroenterology & Endoscopy ASC", f"{norm_st} Commercial Payer TiC MRF & Modifier-59 Cohort — CPT 45378 / 45380 Gastroenterology & Endoscopy ASC"),
+        "45378": ("Gastroenterology & Endoscopy ASC", f"{norm_st} Commercial Payer TiC MRF & Modifier-59 Cohort — CPT 45378 / 45380 Gastroenterology & Endoscopy ASC"),
+        "63030": ("Neurosurgery & Spine Surgery", f"{norm_st} Commercial Payer TiC MRF & ERISA Appeal Cohort — CPT 63030 / 22551 Spine & Neurosurgery"),
+        "66984": ("Ophthalmology & Ophthalmic ASC", f"{norm_st} Commercial Payer TiC MRF & ASC Facility Cohort — CPT 66984 / 67028 Ophthalmology"),
+        "52356": ("Urology & Lithotripsy Surgical", f"{norm_st} Commercial Payer TiC MRF & NSA IDR Cohort — CPT 52000 / 52356 Urology"),
+        "70553": ("Diagnostic Radiology & Imaging", f"{norm_st} Commercial Payer TiC MRF & Technical Component Cohort — CPT 70553 / 74177 Radiology"),
+        "99285": ("Emergency Medicine & Acute Care", f"{norm_st} Commercial Payer TiC MRF & Federal NSA IDR QPA Cohort — CPT 99285 / 00100 Emergency & Anesthesia"),
+        "01402": ("Anesthesiology & Acute Care", f"{norm_st} Commercial Payer TiC MRF & Federal NSA IDR QPA Cohort — CPT 01402 / 99285 Anesthesia & Acute Care"),
+        "93306": ("Cardiology & Vascular Cath Lab", f"{norm_st} Commercial Payer TiC MRF & Outpatient Cath Cohort — CPT 93306 / 93458 Cardiology"),
+        "93458": ("Cardiology & Vascular Cath Lab", f"{norm_st} Commercial Payer TiC MRF & Outpatient Cath Cohort — CPT 93306 / 93458 Cardiology"),
+        "88305": ("Pathology & Clinical Laboratory", f"{norm_st} Commercial Payer TiC MRF & Lab Reimbursement Cohort — CPT 88305 / 80053 Pathology"),
+        "29881": ("Orthopedic & ASC Surgery", f"{norm_st} Commercial Payer TiC MRF & NSA IDR Cohort — CPT 29881 / 27447 Orthopedic & ASC"),
+    }
+    matched_spec_label = "Multi-Specialty Surgical & ASC"
+    matched_spec_title = ""
+    for cpt_key, (s_lbl, s_title) in specialty_map.items():
+        if cpt_key in pid_up:
+            matched_spec_label = s_lbl
+            matched_spec_title = s_title
+            break
+
     if req.project_title and req.project_title.strip() and req.project_title.strip() != default_tx_title:
         eff_title = req.project_title.strip()
+    elif matched_spec_title:
+        eff_title = matched_spec_title
     elif matched_letting and matched_letting.get("title"):
         eff_title = str(matched_letting["title"]).strip()
     else:
@@ -308,12 +333,11 @@ def _resolve_rubricward_package_context(req: CompileBidPackageRequest) -> Dict[s
     else:
         eff_county = reg["county"]
 
+    # Never fall back to matched_letting["planholders"][0] (which is another medical group's corporate name)
     if req.contractor_name and req.contractor_name.strip() and req.contractor_name.strip() != default_co:
         eff_contractor = req.contractor_name.strip()
-    elif matched_letting and matched_letting.get("planholders"):
-        eff_contractor = str(matched_letting["planholders"][0]).split("(")[0].strip()
     else:
-        eff_contractor = reg["provider"]
+        eff_contractor = f"{norm_st} {matched_spec_label} Revenue Cycle & NSA IDR Desk"
 
     eff_npi = req.license_or_dot_id.strip() or default_npi
     return {
@@ -433,7 +457,7 @@ def build_six_file_bid_package_zip(req: CompileBidPackageRequest) -> bytes:
         ],
         [
             "CPT-45380",
-            "Colonoscopy, Flexible; with Biopsy, Single or Multiple",
+            "Colonoscopy, Flexible; with Biopsy, Single or Multiple (ASC Facility + Professional)",
             "CLAIM",
             610,
             520.00,
@@ -443,8 +467,63 @@ def build_six_file_bid_package_zip(req: CompileBidPackageRequest) -> bytes:
             round(610 * 1019.25, 2),
         ],
         [
+            "CPT-66984",
+            "Extracapsular Cataract Removal with Insertion of Intraocular Lens Prosthesis (Ophthalmic ASC)",
+            "CLAIM",
+            540,
+            680.00,
+            985.00,
+            1390.00,
+            1265.00,
+            round(540 * 1265.00, 2),
+        ],
+        [
+            "CPT-52356",
+            "Cystourethroscopy, with Ureteroscopy and/or Pyeloscopy; with Lithotripsy & Indwelling Stent",
+            "CLAIM",
+            230,
+            810.00,
+            1240.00,
+            1745.00,
+            1590.00,
+            round(230 * 1590.00, 2),
+        ],
+        [
+            "CPT-70553",
+            "Magnetic Resonance (e.g., Proton) Imaging, Brain (Including Brain Stem); without & with Contrast",
+            "CLAIM",
+            480,
+            410.00,
+            685.00,
+            995.00,
+            895.00,
+            round(480 * 895.00, 2),
+        ],
+        [
+            "CPT-93306",
+            "Echocardiography, Transthoracic, Real-Time with Image Documentation (2D), Complete Spectral/Color Doppler",
+            "CLAIM",
+            510,
+            310.00,
+            495.00,
+            740.00,
+            675.00,
+            round(510 * 675.00, 2),
+        ],
+        [
+            "CPT-88305",
+            "Level IV — Surgical Pathology, Gross and Microscopic Examination (Biopsy / Tissue Resection)",
+            "CLAIM",
+            1250,
+            95.00,
+            158.00,
+            235.00,
+            212.00,
+            round(1250 * 212.00, 2),
+        ],
+        [
             "CPT-99285",
-            "Emergency Department Visit for the Evaluation and Management of a Patient (High Severity)",
+            "Emergency Department Visit for the Evaluation and Management of a Patient (High Severity / Anesthesia QPA)",
             "CLAIM",
             890,
             340.00,
@@ -454,6 +533,8 @@ def build_six_file_bid_package_zip(req: CompileBidPackageRequest) -> bytes:
             round(890 * 747.00, 2),
         ],
     ]
+    eff_pid_up = eff_pid.upper()
+    vol2_rows.sort(key=lambda r: 0 if r[0].replace("CPT-", "") in eff_pid_up or ("45378" in eff_pid_up and r[0] == "CPT-45380") else 1)
     vol2_bytes = _build_openxml_xlsx(
         sheet_name="TiC_MRF_QPA_Rate_Model",
         headers=[

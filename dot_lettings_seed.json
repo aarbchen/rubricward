@@ -76,6 +76,60 @@
           "hist_low_unit_usd": 118.0,
           "hist_median_unit_usd": 176.0,
           "recommended_unit_usd": 208.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -146,6 +200,60 @@
           "hist_low_unit_usd": 276.95,
           "hist_median_unit_usd": 611.2,
           "recommended_unit_usd": 778.32
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -206,6 +314,60 @@
           "hist_low_unit_usd": 365.0,
           "hist_median_unit_usd": 780.0,
           "recommended_unit_usd": 985.0
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -275,6 +437,60 @@
           "hist_low_unit_usd": 290.57,
           "hist_median_unit_usd": 600.85,
           "recommended_unit_usd": 763.38
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -344,6 +560,69 @@
           "hist_low_unit_usd": 195.0,
           "hist_median_unit_usd": 445.0,
           "recommended_unit_usd": 570.0
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -413,6 +692,60 @@
           "hist_low_unit_usd": 1674.75,
           "hist_median_unit_usd": 3593.1,
           "recommended_unit_usd": 4486.3
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -481,6 +814,69 @@
           "hist_low_unit_usd": 865.2,
           "hist_median_unit_usd": 1874.6,
           "recommended_unit_usd": 2358.7
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -549,6 +945,69 @@
           "hist_low_unit_usd": 250.8,
           "hist_median_unit_usd": 548.62,
           "recommended_unit_usd": 700.15
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -617,6 +1076,60 @@
           "hist_low_unit_usd": 1780.8,
           "hist_median_unit_usd": 3625.2,
           "recommended_unit_usd": 4441.4
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -685,6 +1198,60 @@
           "hist_low_unit_usd": 311.75,
           "hist_median_unit_usd": 688.0,
           "recommended_unit_usd": 876.12
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -753,6 +1320,60 @@
           "hist_low_unit_usd": 539.55,
           "hist_median_unit_usd": 1139.05,
           "recommended_unit_usd": 1427.9
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -821,6 +1442,60 @@
           "hist_low_unit_usd": 277.3,
           "hist_median_unit_usd": 573.4,
           "recommended_unit_usd": 728.5
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ]
     },
@@ -892,6 +1567,69 @@
           "hist_low_unit_usd": 186.22,
           "hist_median_unit_usd": 424.97,
           "recommended_unit_usd": 544.35
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -992,6 +1730,60 @@
           "hist_low_unit_usd": 1600.5,
           "hist_median_unit_usd": 3433.8,
           "recommended_unit_usd": 4287.4
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1092,6 +1884,69 @@
           "hist_low_unit_usd": 827.4,
           "hist_median_unit_usd": 1792.7,
           "recommended_unit_usd": 2255.65
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1192,6 +2047,69 @@
           "hist_low_unit_usd": 240.0,
           "hist_median_unit_usd": 525.0,
           "recommended_unit_usd": 670.0
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1292,6 +2210,60 @@
           "hist_low_unit_usd": 1705.2,
           "hist_median_unit_usd": 3471.3,
           "recommended_unit_usd": 4252.85
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1392,6 +2364,60 @@
           "hist_low_unit_usd": 298.7,
           "hist_median_unit_usd": 659.2,
           "recommended_unit_usd": 839.45
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1491,6 +2517,60 @@
           "hist_low_unit_usd": 517.27,
           "hist_median_unit_usd": 1092.02,
           "recommended_unit_usd": 1368.95
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1591,6 +2671,60 @@
           "hist_low_unit_usd": 312.7,
           "hist_median_unit_usd": 646.6,
           "recommended_unit_usd": 821.5
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1691,6 +2825,69 @@
           "hist_low_unit_usd": 209.62,
           "hist_median_unit_usd": 478.38,
           "recommended_unit_usd": 612.75
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1791,6 +2988,60 @@
           "hist_low_unit_usd": 1798.5,
           "hist_median_unit_usd": 3858.6,
           "recommended_unit_usd": 4817.8
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1890,6 +3141,69 @@
           "hist_low_unit_usd": 789.6,
           "hist_median_unit_usd": 1710.8,
           "recommended_unit_usd": 2152.6
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -1990,6 +3304,69 @@
           "hist_low_unit_usd": 229.2,
           "hist_median_unit_usd": 501.38,
           "recommended_unit_usd": 639.85
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2089,6 +3466,60 @@
           "hist_low_unit_usd": 1629.6,
           "hist_median_unit_usd": 3317.4,
           "recommended_unit_usd": 4064.3
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2188,6 +3619,60 @@
           "hist_low_unit_usd": 285.65,
           "hist_median_unit_usd": 630.4,
           "recommended_unit_usd": 802.77
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2288,6 +3773,60 @@
           "hist_low_unit_usd": 495.0,
           "hist_median_unit_usd": 1045.0,
           "recommended_unit_usd": 1310.0
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2388,6 +3927,60 @@
           "hist_low_unit_usd": 299.42,
           "hist_median_unit_usd": 619.15,
           "recommended_unit_usd": 786.62
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2488,6 +4081,69 @@
           "hist_low_unit_usd": 200.85,
           "hist_median_unit_usd": 458.35,
           "recommended_unit_usd": 587.1
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2588,6 +4244,60 @@
           "hist_low_unit_usd": 1724.25,
           "hist_median_unit_usd": 3699.3,
           "recommended_unit_usd": 4618.9
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2688,6 +4398,69 @@
           "hist_low_unit_usd": 890.4,
           "hist_median_unit_usd": 1929.2,
           "recommended_unit_usd": 2427.4
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2787,6 +4560,69 @@
           "hist_low_unit_usd": 258.0,
           "hist_median_unit_usd": 564.38,
           "recommended_unit_usd": 720.25
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2887,6 +4723,60 @@
           "hist_low_unit_usd": 1831.2,
           "hist_median_unit_usd": 3727.8,
           "recommended_unit_usd": 4567.1
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -2986,6 +4876,60 @@
           "hist_low_unit_usd": 272.6,
           "hist_median_unit_usd": 601.6,
           "recommended_unit_usd": 766.1
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3084,6 +5028,60 @@
           "hist_low_unit_usd": 472.72,
           "hist_median_unit_usd": 997.97,
           "recommended_unit_usd": 1251.05
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3182,6 +5180,60 @@
           "hist_low_unit_usd": 286.15,
           "hist_median_unit_usd": 591.7,
           "recommended_unit_usd": 751.75
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3280,6 +5332,69 @@
           "hist_low_unit_usd": 192.07,
           "hist_median_unit_usd": 438.32,
           "recommended_unit_usd": 561.45
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3378,6 +5493,60 @@
           "hist_low_unit_usd": 1650.0,
           "hist_median_unit_usd": 3540.0,
           "recommended_unit_usd": 4420.0
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3476,6 +5645,69 @@
           "hist_low_unit_usd": 852.6,
           "hist_median_unit_usd": 1847.3,
           "recommended_unit_usd": 2324.35
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3575,6 +5807,69 @@
           "hist_low_unit_usd": 247.2,
           "hist_median_unit_usd": 540.75,
           "recommended_unit_usd": 690.1
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3675,6 +5970,60 @@
           "hist_low_unit_usd": 1755.6,
           "hist_median_unit_usd": 3573.9,
           "recommended_unit_usd": 4378.55
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3774,6 +6123,60 @@
           "hist_low_unit_usd": 307.4,
           "hist_median_unit_usd": 678.4,
           "recommended_unit_usd": 863.9
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3872,6 +6275,60 @@
           "hist_low_unit_usd": 532.12,
           "hist_median_unit_usd": 1123.38,
           "recommended_unit_usd": 1408.25
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -3970,6 +6427,60 @@
           "hist_low_unit_usd": 321.55,
           "hist_median_unit_usd": 664.9,
           "recommended_unit_usd": 844.75
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -4070,6 +6581,69 @@
           "hist_low_unit_usd": 183.3,
           "hist_median_unit_usd": 418.3,
           "recommended_unit_usd": 535.8
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -4168,6 +6742,60 @@
           "hist_low_unit_usd": 1575.75,
           "hist_median_unit_usd": 3380.7,
           "recommended_unit_usd": 4221.1
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -4266,6 +6894,69 @@
           "hist_low_unit_usd": 814.8,
           "hist_median_unit_usd": 1765.4,
           "recommended_unit_usd": 2221.3
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -4364,6 +7055,69 @@
           "hist_low_unit_usd": 236.4,
           "hist_median_unit_usd": 517.12,
           "recommended_unit_usd": 659.95
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -4462,6 +7216,60 @@
           "hist_low_unit_usd": 1680.0,
           "hist_median_unit_usd": 3420.0,
           "recommended_unit_usd": 4190.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -4561,6 +7369,60 @@
           "hist_low_unit_usd": 294.35,
           "hist_median_unit_usd": 649.6,
           "recommended_unit_usd": 827.22
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -4661,6 +7523,60 @@
           "hist_low_unit_usd": 509.85,
           "hist_median_unit_usd": 1076.35,
           "recommended_unit_usd": 1349.3
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-66984",
+          "description": "Ophthalmology & Ophthalmic ASC: Extracapsular Cataract Removal with IOL Prosthesis & CPT 67028",
+          "unit": "CLAIM",
+          "quantity": 540,
+          "hist_low_unit_usd": 680.0,
+          "hist_median_unit_usd": 985.0,
+          "recommended_unit_usd": 1390.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [
@@ -4761,6 +7677,60 @@
           "hist_low_unit_usd": 308.27,
           "hist_median_unit_usd": 637.45,
           "recommended_unit_usd": 809.88
+        },
+        {
+          "item_code": "CPT-29881",
+          "description": "Orthopedic & ASC: Arthroscopy, Knee, Surgical; with Meniscectomy (Medial/Lateral) & CPT 27447 Total Knee",
+          "unit": "CLAIM",
+          "quantity": 420,
+          "hist_low_unit_usd": 640.0,
+          "hist_median_unit_usd": 1185.0,
+          "recommended_unit_usd": 1495.0
+        },
+        {
+          "item_code": "CPT-63030",
+          "description": "Neurosurgery & Spine: Lumbar Laminotomy/Discectomy (1 Interspace) & CPT 22551 Anterior Cervical ACDF",
+          "unit": "CLAIM",
+          "quantity": 185,
+          "hist_low_unit_usd": 1480.0,
+          "hist_median_unit_usd": 2190.0,
+          "recommended_unit_usd": 2940.0
+        },
+        {
+          "item_code": "CPT-45380",
+          "description": "Gastroenterology & Endoscopy ASC: Flexible Colonoscopy with Biopsy & CPT 43239 Upper GI EGD",
+          "unit": "CLAIM",
+          "quantity": 610,
+          "hist_low_unit_usd": 520.0,
+          "hist_median_unit_usd": 795.0,
+          "recommended_unit_usd": 1140.0
+        },
+        {
+          "item_code": "CPT-52356",
+          "description": "Urology & Lithotripsy: Cystourethroscopy with Ureteroscopy, Lithotripsy & Indwelling Stent Insertion",
+          "unit": "CLAIM",
+          "quantity": 230,
+          "hist_low_unit_usd": 810.0,
+          "hist_median_unit_usd": 1240.0,
+          "recommended_unit_usd": 1745.0
+        },
+        {
+          "item_code": "CPT-70553",
+          "description": "Diagnostic Radiology & Cardiology: Brain MRI w/ & w/o Contrast, CPT 74177 CT & CPT 93306 Echo",
+          "unit": "CLAIM",
+          "quantity": 480,
+          "hist_low_unit_usd": 410.0,
+          "hist_median_unit_usd": 685.0,
+          "recommended_unit_usd": 995.0
+        },
+        {
+          "item_code": "CPT-99285",
+          "description": "Emergency Medicine, Pathology & Anesthesia: Level-5 E/M, CPT 88305 Surgical Path & CPT 01402 QPA",
+          "unit": "CLAIM",
+          "quantity": 890,
+          "hist_low_unit_usd": 340.0,
+          "hist_median_unit_usd": 565.0,
+          "recommended_unit_usd": 845.0
         }
       ],
       "key_pay_items": [

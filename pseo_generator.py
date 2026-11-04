@@ -362,6 +362,43 @@ def generate_pseo_pages() -> int:
         out_file.write_text(build_project_dossier_html(item, slug), encoding="utf-8")
         urls.append(f"https://rubricward.com/lettings/project/{slug}.html")
 
+    # Also generate specialty-specific cohort dossiers for every (state, specialty) cohort in verified_public_dot_contacts.json
+    try:
+        from mlot_sniper_generator import classify_medical_specialty_cohort
+        contacts_p = ROOT_DIR / "verified_public_dot_contacts.json"
+        if contacts_p.exists():
+            contacts_list = json.loads(contacts_p.read_text(encoding="utf-8")) or []
+            by_state = {str(l.get("state_code") or "").upper(): l for l in lettings}
+            seen_spec_slugs = {slugify(f"{(l.get('letting_id') or l.get('project_id') or '')}-{l.get('title', '')}") for l in lettings}
+            for c_row in contacts_list:
+                st_c = str(c_row.get("state") or "TX").strip().upper()
+                comp_c = str(c_row.get("company_name") or "")
+                em_c = str(c_row.get("email") or "")
+                cohort = classify_medical_specialty_cohort(comp_c, em_c, st_c)
+                s_lid = cohort["letting_id"]
+                s_title = cohort["project_title"]
+                s_slug = slugify(f"{s_lid}-{s_title}")
+                if s_slug in seen_spec_slugs:
+                    continue
+                seen_spec_slugs.add(s_slug)
+                base_let = dict(by_state.get(st_c) or (lettings[0] if lettings else {}))
+                base_let["letting_id"] = s_lid
+                base_let["project_id"] = s_lid
+                base_let["title"] = s_title
+                base_let["state_code"] = st_c
+                base_let["scope_summary"] = (
+                    f"Commercial payer TiC MRF negotiated rate audit, CMS Medicare MPFS RVU/GPCI locality repricing, "
+                    f"and ERISA 29 CFR § 2560.503-1 / Federal No Surprises Act (45 CFR § 149.510) IDR arbitration package "
+                    f"for {cohort['specialty_label']} in {st_c} ({cohort['key_pay_item']})."
+                )
+                raw_items = list(base_let.get("pay_items") or [])
+                cpt_digits = re.sub(r"\D", "", s_lid.split("CPT-")[-1]) if "CPT-" in s_lid else "29881"
+                raw_items.sort(key=lambda r: 0 if cpt_digits in str(r.get("item_code", "")) or (cpt_digits == "45378" and "45380" in str(r.get("item_code", ""))) else 1)
+                base_let["pay_items"] = raw_items
+                (PROJECTS_DIR / f"{s_slug}.html").write_text(build_project_dossier_html(base_let, s_slug), encoding="utf-8")
+    except Exception:
+        pass
+
     (LETTINGS_DIR / "index.html").write_text(build_directory_index_html(lettings), encoding="utf-8")
 
     # Also generate native Healthcare /rates/index.html & /rates/cpt/<slug>.html per Section 10 of rubricward_1m_business_plan.md

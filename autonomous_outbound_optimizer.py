@@ -315,8 +315,8 @@ def run_autonomous_outbound_optimizer(regenerate_local: bool = True) -> Dict[str
 
     try:
         starting_after = None
-        for _ in range(15):
-            req_body: Dict[str, Any] = {"campaign": CAMPAIGN_ID, "limit": 100}
+        for _ in range(25):
+            req_body: Dict[str, Any] = {"campaign": CAMPAIGN_ID, "limit": 50}
             if starting_after:
                 req_body["starting_after"] = starting_after
             rl = requests.post("https://api.instantly.ai/api/v2/leads/list", headers=headers, json=req_body, timeout=15)
@@ -333,7 +333,7 @@ def run_autonomous_outbound_optimizer(regenerate_local: bool = True) -> Dict[str
                     bl_emails.add(em)
                     new_bounces = True
             starting_after = rj.get("next_starting_after")
-            if not starting_after or len(items) < 100:
+            if not starting_after or len(items) < 50:
                 break
     except Exception:
         pass

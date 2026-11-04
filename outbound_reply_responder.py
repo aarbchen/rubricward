@@ -75,16 +75,46 @@ def _build_prefilled_site_url(base_path: str, company_name: str, state: str, ema
     return f"{SITE_BASE_URL}{base_path}{qs}{frag}"
 
 
-def lookup_prospect_context(from_email: str) -> Dict[str, str]:
+def _format_rcm_greeting(first_name: str, company_name: str) -> str:
+    fn = str(first_name or "").strip()
+    co = str(company_name or "").strip()
+    role_tokens = {
+        "revenue cycle", "revenue cycle director", "revenue cycle team",
+        "specialty group revenue cycle team", "billing", "managed care",
+        "director", "capture", "info", "sales", "team", "there", "contracts",
+        "office", "admin", "patient financial services",
+    }
+    co_first = co.lower().split()[0] if co else ""
+    if not fn or fn.lower() in role_tokens or "revenue cycle" in fn.lower() or (co and fn.lower() in (co.lower(), co_first)):
+        if co and co.lower() not in ("your revenue cycle team", "revenue cycle team", "specialty group revenue cycle team"):
+            return f"Hi {co} Revenue Cycle team,"
+        return "Hi there,"
+    return f"Hi {fn},"
+
+
+def lookup_prospect_context(from_email: str, reply_text: str = "", subject: str = "") -> Dict[str, str]:
     clean_em = str(from_email or "").strip().lower()
     dom = clean_em.split("@", 1)[1] if "@" in clean_em else ""
+    combined_thread = f"{subject or ''}\n{reply_text or ''}"
+    thread_emails = {
+        e.strip().lower()
+        for e in re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", combined_thread)
+        if "rubricward" not in e.lower()
+    }
     matched: Dict[str, str] = {}
     if CSV_PATH.exists():
         try:
             with open(CSV_PATH, mode="r", encoding="utf-8", newline="") as f:
-                for row in csv.DictReader(f):
-                    row_em = str(row.get("email") or "").strip().lower()
-                    if row_em == clean_em or (dom and row_em.endswith("@" + dom)):
+                rows = list(csv.DictReader(f))
+            for row in rows:
+                row_em = str(row.get("email") or "").strip().lower()
+                if row_em == clean_em or (dom and row_em.endswith("@" + dom)) or (row_em and row_em in thread_emails):
+                    matched = dict(row)
+                    break
+            if not matched and combined_thread.strip():
+                for row in rows:
+                    pid_cand = str(row.get("project_id") or "").strip()
+                    if pid_cand and len(pid_cand) >= 6 and pid_cand.lower() in combined_thread.lower():
                         matched = dict(row)
                         break
         except Exception:
@@ -94,7 +124,7 @@ def lookup_prospect_context(from_email: str) -> Dict[str, str]:
         try:
             for item in json.loads(verified_json.read_text(encoding="utf-8")) or []:
                 row_em = str(item.get("email") or "").strip().lower()
-                if row_em == clean_em or (dom and row_em.endswith("@" + dom)):
+                if row_em == clean_em or (dom and row_em.endswith("@" + dom)) or (row_em and row_em in thread_emails):
                     matched = dict(item)
                     break
         except Exception:
@@ -106,6 +136,9 @@ def lookup_prospect_context(from_email: str) -> Dict[str, str]:
     raw_compiler = matched.get("compiler_url") or ""
     if not raw_compiler or "project_id=" not in raw_compiler or "api.rubricward.com" in raw_compiler:
         raw_compiler = f"{SITE_BASE_URL}/v1/camber-autopilot/compile-bid-package?project_id={res_pid}&state_code={res_state}&format=binary"
+    if comp_name and comp_name.lower() not in ("your revenue cycle team", "revenue cycle team") and "co=" not in raw_compiler:
+        sep = "&" if "?" in raw_compiler else "?"
+        raw_compiler = f"{raw_compiler}{sep}{urllib.parse.urlencode({'co': comp_name})}"
     raw_dossier = matched.get("dossier_url") or _build_prefilled_site_url("/", comp_name, res_state, clean_em, "lettings")
     if "?" not in raw_dossier and (comp_name or clean_em):
         q_params = urllib.parse.urlencode({"co": comp_name, "state": res_state, "email": clean_em})
@@ -143,12 +176,13 @@ def classify_rcm_reply(reply_text: str, subject: str = "", from_email: str = "")
                 "address not found",
                 "user unknown",
                 "mailbox unavailable",
+                "does not exist",
             )
         )
     ):
         return "BOUNCE"
     if (
-        subj_low.startswith(("automatic reply:", "auto-reply:", "out of office:", "out of the office:"))
+        subj_low.startswith(("automatic reply:", "auto-reply:", "out of office:", "out of the office:", "anti-spam", "email verification"))
         or any(
             ooo_p in txt
             for ooo_p in (
@@ -168,6 +202,14 @@ def classify_rcm_reply(reply_text: str, subject: str = "", from_email: str = "")
                 "we have received your e-mail",
                 "we have received your email",
                 "our typical response time",
+                "barracuda",
+                "mimecast",
+                "proofpoint",
+                "boxbe",
+                "verify your email",
+                "challenge-response",
+                "unattended mailbox",
+                "no longer monitored",
             )
         )
     ):
@@ -181,11 +223,22 @@ def classify_rcm_reply(reply_text: str, subject: str = "", from_email: str = "")
             "don't stop emailing", "do not stop emailing",
         )
     )
-    if not negated_unsub and any(u in txt for u in ("unsubscribe", "remove me", "stop emailing", "not interested", "take me off", "no thanks", "off your list")):
+    unsub_phrases = (
+        "unsubscribe", "remove me", "remove us", "remove this", "take me off", "take us off",
+        "stop emailing", "stop sending", "stop contacting", "do not contact", "don't contact",
+        "dont contact", "never email", "not interested", "no thanks", "off your list",
+        "wrong person", "wrong email", "retired", "no longer with", "left the company",
+        "doesn't work here", "does not work here", "opt out", "opt-out",
+        "who gave you", "why are you emailing",
+    )
+    if not negated_unsub and any(u in txt for u in unsub_phrases):
         return "UNSUBSCRIBE"
     if "?" in stripped and not any(p in txt for p in ("send zip", "send mrf", "mrf", "send it", "send over")):
         return "QUESTION"
-    if any(p in txt for p in ("send zip", "send mrf", "mrf", "send it", "yes", "sure", "send over", "interested", "mrf", "appeal", "spreadsheet")):
+    if (
+        any(p in txt for p in ("send zip", "send mrf", "mrf", "send it", "send over", "appeal", "spreadsheet"))
+        or re.search(r"\b(yes|yeah|yep|please|interested)\b|(?<!not\s)(?<!un)\bsure\b", txt)
+    ):
         return "POSITIVE_INTEREST"
 
     if ANTHROPIC_API_KEY and txt:
@@ -224,9 +277,9 @@ def classify_rcm_reply(reply_text: str, subject: str = "", from_email: str = "")
     return "POSITIVE_INTEREST"
 
 
-def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str = "", from_email: str = "", label: str = "POSITIVE_INTEREST") -> Dict[str, str]:
+def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str = "", from_email: str = "", label: str = "POSITIVE_INTEREST", subject: str = "") -> Dict[str, str]:
     cleaned_inbound = _strip_quoted_thread(inbound_body)
-    ctx = lookup_prospect_context(from_email) if from_email else {
+    ctx = lookup_prospect_context(from_email, reply_text=inbound_body, subject=subject) if from_email else {
         "first_name": prospect_name or "Revenue Cycle Team",
         "company_name": prospect_name or "your revenue cycle team",
         "state": letting_id[:2] if len(letting_id) >= 2 else "TX",
@@ -268,13 +321,14 @@ def build_reply_response(prospect_name: str, letting_id: str, inbound_body: str 
             pass
     t2_url = ctx.get("tier2_checkout_url") or TIER2_STRIPE_URL
     t3_url = ctx.get("tier3_checkout_url") or TIER3_STRIPE_URL
+    greeting_line = _format_rcm_greeting(prospect_name or ctx.get("first_name", ""), ctx.get("company_name", ""))
     return {
         "model": ANTHROPIC_MODEL,
         "letting_id": ctx["project_id"],
         "cleaned_inbound": cleaned_inbound,
         "subject": f"Re: Commercial Payer TiC MRF, ERISA Appeal & NSA IDR 6-File .ZIP Package for {ctx['project_id']}",
         "body": (
-            f"Hi {prospect_name or ctx['first_name']},\n\n"
+            f"{greeting_line}\n\n"
             f"{custom_answer_block}"
             f"Here is the direct link to your 6-file OpenXML (.DOCX + .XLSX) Commercial Payer TiC MRF, Medicare MPFS RVU/GPCI & Federal NSA IDR Package for {ctx['project_id']} "
             f"across our 52 monitored State DOI/APCD MRF & Federal IDR portals and 12 Healthcare Revenue Cycle APIs:\n\n"
@@ -377,6 +431,7 @@ def _process_warm_zip_followups() -> int:
         fname = info.get("first_name") or "there"
         pid = info.get("project_id") or "TXDOI-MRF-CPT-29881-DFW"
         comp = info.get("company_name") or "your revenue cycle team"
+        greeting_line = _format_rcm_greeting(fname, comp)
         t2_url = info.get("tier2_checkout_url") or TIER2_STRIPE_URL
         subj = str(info.get("subject") or f"Re: {pid} Payer TiC MRF & NSA IDR .ZIP Package")
         if not subj.lower().startswith("re:"):
@@ -384,7 +439,7 @@ def _process_warm_zip_followups() -> int:
 
         if elapsed_hrs >= 48.0 and not info.get("nudge_48h_sent"):
             body_48 = (
-                f"Hi {fname},\n\n"
+                f"{greeting_line}\n\n"
                 f"Quick check-in on the 6-file OpenXML (.DOCX + .XLSX) Payer MRF & NSA IDR package I sent over for {pid} — "
                 f"did the live =ROUND(D6*G6,2) Excel formulas in Volume II and the locality-matched Medicare MPFS RVU/GPCI schedule in Volume III open cleanly for {comp}?\n\n"
                 f"If your team wants automated 50-State Commercial Payer TiC MRF & Federal NSA IDR dispatches or unlimited 1-click 6-file .ZIP compilations across all CPT/DRG cohorts, "
@@ -408,7 +463,7 @@ def _process_warm_zip_followups() -> int:
                 pass
         elif elapsed_hrs >= 96.0 and info.get("nudge_48h_sent") and not info.get("nudge_96h_sent"):
             body_96 = (
-                f"Hi {fname},\n\n"
+                f"{greeting_line}\n\n"
                 f"Closing the loop on {pid} before the 30-business-day Federal NSA IDR Open Negotiation & ERISA 29 CFR 2560.503-1 appeal window — "
                 f"if {comp} needs ongoing Commercial Payer TiC MRF 75th-percentile benchmarks, Medicare MPFS RVU/GPCI schedules, and 1-click 6-file OpenXML .ZIP packages, "
                 f"you can activate your self-serve workspace anytime here:\n"
@@ -571,13 +626,14 @@ def run_reply_responder() -> Dict[str, Any]:
                 subj_in = str(item.get("subject") or "")
                 label = classify_rcm_reply(body_txt, subject=subj_in, from_email=from_em)
                 if label in ("POSITIVE_INTEREST", "QUESTION"):
-                    ctx = lookup_prospect_context(from_em)
+                    ctx = lookup_prospect_context(from_em, reply_text=body_txt, subject=subj_in)
                     pkg = build_reply_response(
                         prospect_name=ctx["first_name"],
                         letting_id=ctx["project_id"],
                         inbound_body=body_txt,
                         from_email=from_em,
                         label=label,
+                        subject=subj_in,
                     )
                     r_send = requests.post(
                         "https://api.instantly.ai/api/v2/emails/reply",
