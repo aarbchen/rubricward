@@ -1,19 +1,17 @@
 {
-  "updated_at": "2026-11-04T20:12:24.636959+00:00",
+  "updated_at": "2026-11-05T02:46:15.778823+00:00",
   "brand": "RubricWard",
   "1_are_people_showing_interest": {
     "human_replies_detected": 0,
     "recent_emails_audited": 85,
-    "uncontacted_leads_remaining": 113,
-    "in_flight_leads": 87,
-    "total_active_leads": 200
+    "uncontacted_leads_remaining": 1
   },
   "2_why_not_bottlenecks_checked": {
     "campaign_was_paused": false,
     "bounce_protect_was_enabled": false,
-    "lead_queue_was_low": false,
-    "bounced_or_non_buyer_leads_found": 2,
-    "leads_missing_step2_link_or_stale_patched": 84
+    "lead_queue_was_low": true,
+    "bounced_or_non_buyer_leads_found": 0,
+    "leads_missing_step2_link_or_stale_patched": 0
   },
   "3_autonomous_solutions_applied": {
     "rule_conv_001_step2_clickable_dossier_link": true,

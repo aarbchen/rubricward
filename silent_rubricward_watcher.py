@@ -107,7 +107,7 @@ def main() -> int:
                     json.dumps({"pid": os.getpid(), "primary_pid": os.getpid(), "timestamp": time.time(), "updated_at": now_iso, "cycle": cycle}, indent=2),
                     encoding="utf-8",
                 )
-            elif HEARTBEAT_PATH.exists():
+            elif cycle % 15 == 0 and HEARTBEAT_PATH.exists():
                 old_hb = json.loads(HEARTBEAT_PATH.read_text(encoding="utf-8"))
                 prim_pid = int(old_hb.get("primary_pid") or old_hb.get("pid") or 0)
                 if prim_pid > 0 and prim_pid != os.getpid():

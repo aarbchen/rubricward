@@ -227,6 +227,14 @@ def build_outreach_queue() -> List[Dict[str, Any]]:
         json.dumps({"count": len(queue), "outbox_queue": queue, "emails": queue, "leads": queue}, indent=2),
         encoding="utf-8",
     )
+    missing_dossiers = [
+        r["dossier_url"] for r in queue
+        if "/lettings/project/" in str(r.get("dossier_url") or "")
+        and not (ROOT_DIR / str(r["dossier_url"]).split(".com/", 1)[-1].split("?", 1)[0].split("#", 1)[0]).exists()
+    ]
+    if missing_dossiers:
+        import pseo_generator
+        pseo_generator.generate_pseo_pages()
     print(f"[RUBRICWARD OUTREACH] Generated {len(queue)} 100% HTML/Directory-Verified leads -> {CSV_OUT_PATH} & {QUEUE_OUT_PATH}")
     return queue
 

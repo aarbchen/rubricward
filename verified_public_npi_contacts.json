@@ -39,6 +39,32 @@
     "authorized_official_title": "Director / Authorized Official"
   },
   {
+    "company_name": "Charles A. Clark, Md",
+    "email": "charles@charlesclark.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1316184815",
+    "state": "AR",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.charlesclark.com",
+    "npi_number": "1316184815",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
+    "company_name": "Harris Medical Clinics",
+    "email": "contact@harrismedical.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1588663660",
+    "state": "AR",
+    "source_type": "website_html_mailto",
+    "source_url": "https://harrismedical.com/",
+    "npi_number": "1588663660",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "Arizona Physician Consultants Professional",
     "email": "info@arizonaphysician.com",
     "first_name": "Revenue Cycle",
@@ -50,19 +76,6 @@
     "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
     "authorized_official_name": "Clinical Revenue Cycle Director",
     "authorized_official_title": "VP of Managed Care & Revenue Cycle"
-  },
-  {
-    "company_name": "Radiology Ltd. Tucson",
-    "email": "inquiries@radltd.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1790044410",
-    "state": "AZ",
-    "source_type": "website_html_mailto",
-    "source_url": "https://radltd.com/",
-    "npi_number": "1790044410",
-    "taxonomy_desc": "Orthopaedic Surgery, Sports Medicine",
-    "authorized_official_name": "Daniel Mullen",
-    "authorized_official_title": "Physician / Owner"
   },
   {
     "company_name": "SimonMed Imaging",
@@ -547,6 +560,19 @@
     "authorized_official_title": "Managing Member"
   },
   {
+    "company_name": "Valet Health Physician Growth &",
+    "email": "support@valethealth.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1332822448",
+    "state": "FL",
+    "source_type": "website_html_mailto",
+    "source_url": "https://valethealth.com/contact/",
+    "npi_number": "1332822448",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "Vesta Teleradiology Services",
     "email": "info@vestarad.com",
     "first_name": "Revenue Cycle",
@@ -599,7 +625,7 @@
     "authorized_official_title": "Insurance Collections Manager"
   },
   {
-    "company_name": "Apex Osn Sc",
+    "company_name": "Apex Osn",
     "email": "info@apexosn.com",
     "first_name": "Revenue Cycle",
     "license_or_dot_id": "NPI-1366215162",
@@ -899,6 +925,19 @@
     "authorized_official_title": "Ceo"
   },
   {
+    "company_name": "Boston Orthopaedic",
+    "email": "kaitlyn.johnston@boston.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1578002366",
+    "state": "MA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.boston.com/contact-us/",
+    "npi_number": "1578002366",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "Boston Orthopaedic And Spine",
     "email": "natalie@bostonorthopaedic.com",
     "first_name": "Natalie",
@@ -907,19 +946,6 @@
     "source_type": "website_html_mailto",
     "source_url": "https://www.bostonorthopaedic.com",
     "npi_number": "1811580392",
-    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
-    "authorized_official_name": "Clinical Revenue Cycle Director",
-    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
-  },
-  {
-    "company_name": "Boston Orthopaedic Pc",
-    "email": "kaitlyn.johnston@boston.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1578002366",
-    "state": "MA",
-    "source_type": "website_html_mailto",
-    "source_url": "https://www.boston.com/contact-us/",
-    "npi_number": "1578002366",
     "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
     "authorized_official_name": "Clinical Revenue Cycle Director",
     "authorized_official_title": "VP of Managed Care & Revenue Cycle"
@@ -964,7 +990,7 @@
     "authorized_official_title": "Practice Operations Liaison"
   },
   {
-    "company_name": "Allied Foot & Ankle, Pc",
+    "company_name": "Allied Foot & Ankle",
     "email": "moa@alliedfoot.com",
     "first_name": "Revenue Cycle",
     "license_or_dot_id": "NPI-1306354915",
@@ -1107,6 +1133,19 @@
     "authorized_official_title": "Physician/President"
   },
   {
+    "company_name": "Stroudwater Associates Rural Hospital",
+    "email": "eshell@stroudwater.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1547738389",
+    "state": "ME",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.stroudwater.com/about/leadership/",
+    "npi_number": "1547738389",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "Advantage Health Saint Mary'S Medical Group",
     "email": "ahinfo@advantagehealth.com",
     "first_name": "Revenue Cycle",
@@ -1185,6 +1224,32 @@
     "authorized_official_title": "President"
   },
   {
+    "company_name": "Infinite Health Collaborative",
+    "email": "followmyhealth@i-health.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1164474250",
+    "state": "MN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://i-health.com",
+    "npi_number": "1164474250",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
+    "company_name": "Merit Spine",
+    "email": "info@endurancespine.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1710785233",
+    "state": "MN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.endurancespine.com/contact-us",
+    "npi_number": "1710785233",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company": "Twin Cities Orthopedics \u2014 Multi-Specialty Surgical & ASC Revenue Cycle",
     "email": "info@tcomn.com",
     "state": "MN",
@@ -1197,6 +1262,19 @@
     "taxonomy_desc": "Orthopaedic Surgery",
     "authorized_official_name": "Millie Snyder",
     "authorized_official_title": "Office Manager"
+  },
+  {
+    "company_name": "Amy Elizabeth Summers D/B/A Quality Administration",
+    "email": "amy@amyelizabeth.com",
+    "first_name": "Amy",
+    "license_or_dot_id": "NPI-1891744587",
+    "state": "MO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://amyelizabeth.com/",
+    "npi_number": "1891744587",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Columbia Orthopaedic Group",
@@ -1236,6 +1314,19 @@
     "taxonomy_desc": "Orthopaedic Surgery",
     "authorized_official_name": "Matt Daggett",
     "authorized_official_title": "Do"
+  },
+  {
+    "company_name": "Hattiesburg Clinic",
+    "email": "info@hattiesburg.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1598846438",
+    "state": "MS",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.hattiesburg.com",
+    "npi_number": "1598846438",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Bowling Orthopaedics",
@@ -1381,6 +1472,19 @@
     "authorized_official_title": "Vp Business Operations"
   },
   {
+    "company_name": "Garden State Orthopaedic Associates",
+    "email": "wcdept@gardenstateortho.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1915329621",
+    "state": "NJ",
+    "source_type": "website_html_mailto",
+    "source_url": "https://gardenstateortho.com/contact-us/",
+    "npi_number": "1915329621",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "ProMantra Medical Billing",
     "email": "info@promantra.us",
     "first_name": "Revenue Cycle",
@@ -1391,19 +1495,6 @@
     "npi_number": "1164706974",
     "taxonomy_desc": "Orthopaedic Surgery, Sports Medicine",
     "authorized_official_name": "Michael Gross",
-    "authorized_official_title": "Owner"
-  },
-  {
-    "company_name": "ProMantra Medical Billing",
-    "email": "info@promantra.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1409467432",
-    "state": "NJ",
-    "source_type": "website_html_mailto",
-    "source_url": "https://promantra.us/medical-billing-services/",
-    "npi_number": "1409467432",
-    "taxonomy_desc": "Orthopaedic Surgery, Sports Medicine",
-    "authorized_official_name": "Adam Cohen",
     "authorized_official_title": "Owner"
   },
   {
@@ -1459,7 +1550,7 @@
     "authorized_official_title": "Do"
   },
   {
-    "company_name": "Active Sports Medicine & Orthopaedic Surgery Pc",
+    "company_name": "Active Sports Medicine & Orthopaedic Surgery",
     "email": "activesales@activenetwork.com",
     "first_name": "Revenue Cycle",
     "license_or_dot_id": "NPI-1477579332",
@@ -1927,7 +2018,7 @@
     "authorized_official_title": "Ceo"
   },
   {
-    "company_name": "Midlands Orthopaedics & Neurosurgery SC",
+    "company_name": "Midlands Orthopaedics & Neurosurgery",
     "email": "jack.robertson@midorthoneuro.com",
     "first_name": "Jack",
     "license_or_dot_id": "NPI-1881324481",
@@ -1940,7 +2031,7 @@
     "authorized_official_title": "Ceo"
   },
   {
-    "company_name": "Midlands Orthopaedics & Neurosurgery SC",
+    "company_name": "Midlands Orthopaedics & Neurosurgery",
     "email": "lee.webb@midorthoneuro.com",
     "first_name": "Lee",
     "license_or_dot_id": "NPI-1134429863",
@@ -1953,7 +2044,7 @@
     "authorized_official_title": "President And Ceo"
   },
   {
-    "company_name": "Palmetto Retina Center SC",
+    "company_name": "Palmetto Retina Center",
     "email": "office@palmettoretina.com",
     "first_name": "Revenue Cycle",
     "license_or_dot_id": "NPI-1134231996",
@@ -2148,6 +2239,19 @@
     "authorized_official_title": "President"
   },
   {
+    "company_name": "Blue Cloud Pediatric Surgery Centers",
+    "email": "maria.ocampo@bluecloudpsc.com",
+    "first_name": "Maria",
+    "license_or_dot_id": "NPI-1128644790",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://bluecloudpsc.com/billing-information-and-disclosures/",
+    "npi_number": "1128644790",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "Brain and Spine Institute San Antonio",
     "email": "info@bsisa.com",
     "first_name": "Revenue Cycle",
@@ -2252,6 +2356,19 @@
     "authorized_official_title": "Administrator"
   },
   {
+    "company_name": "MedCycle Solutions",
+    "email": "c5ff2feb7e54a72a6e99294ac2cc227@medcyclesolutions.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1590031146",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://medcyclesolutions.com/contact-us/",
+    "npi_number": "1590031146",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "MediBillMD Revenue Cycle",
     "email": "info@medibillmd.com",
     "first_name": "Revenue Cycle",
@@ -2315,6 +2432,32 @@
     "taxonomy_desc": "Orthopaedic Surgery",
     "authorized_official_name": "Aaron Schrayer",
     "authorized_official_title": "President/Owner"
+  },
+  {
+    "company_name": "Precision Spine Care Tyler",
+    "email": "info@precisionspinecare.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1219291337",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://precisionspinecare.com/staff/",
+    "npi_number": "1219291337",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
+    "company_name": "Radiology Associates of North Texas",
+    "email": "billing@radntx.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1492277359",
+    "state": "TX",
+    "source_type": "website_html_mailto",
+    "source_url": "https://radntx.com/contact-us/",
+    "npi_number": "1492277359",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Right Medical Billing",
@@ -2562,6 +2705,32 @@
     "taxonomy_desc": "Orthopaedic Surgery",
     "authorized_official_name": "Steve Patonai",
     "authorized_official_title": "Ceo"
+  },
+  {
+    "company_name": "Advanced Healthcare",
+    "email": "central_clinic@advancedpaincare.us",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1154371847",
+    "state": "WI",
+    "source_type": "website_html_mailto",
+    "source_url": "https://austinpaindoctor.com/locations",
+    "npi_number": "1154371847",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
+    "company_name": "Allina Health System",
+    "email": "community@allina.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1184244519",
+    "state": "WI",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.allinahealth.org/about-us/community-involvement",
+    "npi_number": "1184244519",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Orthopedic Associates of Wisconsin",

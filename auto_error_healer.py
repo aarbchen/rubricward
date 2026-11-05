@@ -493,7 +493,7 @@ def check_and_heal_outbound_campaign_hygiene(root_dir: Path, brand_name: str) ->
     sync_p = root_dir / "sync_instantly_campaign.py"
     if sync_p.exists():
         sync_src = sync_p.read_text(encoding="utf-8", errors="replace")
-        if "not is_receptionist_or_generic_inbox" not in sync_src and "not is_non_buyer_or_trap_inbox" not in sync_src:
+        if "not is_receptionist_or_generic_inbox" not in sync_src:
             issues.append(f"{brand_name}: `sync_instantly_campaign.py` must filter out `is_non_buyer_or_trap_inbox` / `is_receptionist_or_generic_inbox` from Instantly uploads (Root Cause #4).")
 
     if brand_name == "RubricWard":
@@ -524,7 +524,14 @@ def check_and_heal_outbound_campaign_hygiene(root_dir: Path, brand_name: str) ->
             if rc.status_code == 200:
                 cd = rc.json() or {}
                 need_opt = False
-                if int(cd.get("status") or 0) != 1 or not bool(cd.get("disable_bounce_protect")) or int(cd.get("not_sending_status") or 0) == 2:
+                seqs = cd.get("sequences") or []
+                step0_delay = ((seqs[0].get("steps") or [{}])[0].get("delay")) if seqs and isinstance(seqs[0], dict) else 1
+                if (
+                    int(cd.get("status") or 0) != 1
+                    or not bool(cd.get("disable_bounce_protect"))
+                    or bool(cd.get("prioritize_new_leads"))
+                    or int(step0_delay or 0) != 1
+                ):
                     need_opt = True
                 all_inst_leads = []
                 sa = None
@@ -542,31 +549,39 @@ def check_and_heal_outbound_campaign_hygiene(root_dir: Path, brand_name: str) ->
                     if not sa or len(its) < 100:
                         break
                 bounced_cnt = sum(1 for x in all_inst_leads if int(x.get("status") or 0) < 0)
-                unc_cnt = sum(1 for x in all_inst_leads if int(x.get("status") or 0) == 1 and not x.get("timestamp_last_contact"))
+                active_cnt = sum(1 for x in all_inst_leads if int(x.get("status") or 0) == 1)
                 bad_payloads = 0
+                import harvest_verified_dot_contacts as hv
                 for x in all_inst_leads:
                     em_x = str(x.get("email") or "").lower()
+                    cn_x = str(x.get("company_name") or "")
                     p = x.get("payload") or {}
                     s1 = str(p.get("step1_body_zero_link") or "")
                     s2 = str(p.get("step2_body_dossier_link") or "")
+                    s3 = str(p.get("step3_body_breakup") or "")
                     subj1 = str(p.get("step1_subject") or "")
+                    pid_x = str(p.get("project_id") or "")
+                    m_subj_pid = re.search(r"\b([A-Z]{2,8}-[A-Z0-9-]{4,24})\b", subj1)
                     if (
                         "https://" not in s2
                         or "https://" in s1
-                        or "{" in (s1 + s2 + subj1)
-                        or "$" in (s1 + s2 + subj1)
+                        or "{" in (s1 + s2 + s3 + subj1)
+                        or "$" in (s1 + s2 + s3 + subj1)
                         or re.search(r"DOT-PREQ-\d+", s1 + s2 + subj1)
                         or re.search(r"-2026-10\d\d", s1 + s2 + subj1)
                         or re.search(r"NPI\s+\d{10}", subj1)
+                        or re.search(r"\s+(Sc|Pa|Pc|Pllc)\b", cn_x)
+                        or (m_subj_pid and pid_x and m_subj_pid.group(1) != pid_x)
+                        or hv.is_receptionist_or_generic_inbox(em_x)
                         or any(em_x.endswith(bad_d) for bad_d in ("@icanotes.com", "@pjkclaims.com", ".co.uk", ".uk", ".ca", ".au"))
                     ):
                         bad_payloads += 1
-                if bounced_cnt > 0 or unc_cnt < 40 or bad_payloads > 0:
+                if bounced_cnt > 0 or active_cnt < 50 or bad_payloads > 0:
                     need_opt = True
                 if need_opt:
                     import autonomous_outbound_optimizer
                     autonomous_outbound_optimizer.run_autonomous_outbound_optimizer(regenerate_local=True)
-                    healed.append(f"Live Instantly Goalie healed {brand_name} campaign (bounced={bounced_cnt}, uncontacted={unc_cnt}, bad_payloads={bad_payloads})")
+                    healed.append(f"Live Instantly Goalie healed {brand_name} campaign (bounced={bounced_cnt}, active={active_cnt}, bad_payloads={bad_payloads})")
         except Exception as exc:
             issues.append(f"{brand_name}: Live Instantly Goalie check warning: {exc}")
 
@@ -688,6 +703,17 @@ def check_and_heal_client_semantic_quality(root_dir: Path, brand_name: str) -> T
                 need_regen_pseo = True
                 break
 
+    if need_regen_outreach:
+        try:
+            import outreach_generator
+            if hasattr(outreach_generator, "build_outreach_queue"):
+                outreach_generator.build_outreach_queue()
+            else:
+                outreach_generator.generate_outreach_queue()
+            healed.append(f"Auto-regenerated {brand_name} outreach leads & greetings (RULE-021)")
+        except Exception as exc:
+            issues.append(f"{brand_name}: Failed to auto-regenerate outreach queue: {exc}")
+
     if need_regen_pseo:
         try:
             import pseo_generator
@@ -695,14 +721,6 @@ def check_and_heal_client_semantic_quality(root_dir: Path, brand_name: str) -> T
             healed.append(f"Auto-regenerated {brand_name} pSEO specialty/project dossiers (RULE-021)")
         except Exception as exc:
             issues.append(f"{brand_name}: Failed to auto-regenerate pSEO dossiers: {exc}")
-
-    if need_regen_outreach:
-        try:
-            import outreach_generator
-            outreach_generator.build_outreach_queue()
-            healed.append(f"Auto-regenerated {brand_name} outreach leads & greetings (RULE-021)")
-        except Exception as exc:
-            issues.append(f"{brand_name}: Failed to auto-regenerate outreach queue: {exc}")
 
     if need_rebuild_zips:
         try:

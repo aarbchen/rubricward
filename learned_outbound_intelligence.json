@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-11-04T20:05:15.442728+00:00",
+  "updated_at": "2026-11-05T02:42:51.236836+00:00",
   "campaign_id": "672de7d4-7ff6-42ec-be56-9b6ce8519e8c",
   "recent_rendered_emails_audited": 85,
   "recent_inbound_replies_detected": 0,
   "unrendered_template_tags_detected": 0,
   "prefix_delivery_stats": {
     "named_person": {
-      "clean": 60,
-      "bounced": 2
+      "clean": 76,
+      "bounced": 0
     },
     "dept_desk": {
-      "clean": 24,
+      "clean": 14,
       "bounced": 0
     },
     "generic_info": {
@@ -19,22 +19,46 @@
     }
   },
   "adaptive_prefix_priority_weights": {
-    "named_person": 0.839,
+    "named_person": 1.0,
     "dept_desk": 0.9,
     "generic_info": 0.25
   },
   "cohort_stats": {
-    "NJ": {
+    "default": {
+      "sent": 50,
+      "human_replies": 0,
+      "auto_replies": 9,
+      "unsubscribes": 6
+    },
+    "WI": {
       "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "default": {
-      "sent": 34,
+    "MN": {
+      "sent": 1,
       "human_replies": 0,
-      "auto_replies": 9,
-      "unsubscribes": 6
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "MO": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "MA": {
+      "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "TN": {
+      "sent": 3,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
     },
     "NC": {
       "sent": 1,
@@ -43,7 +67,7 @@
       "unsubscribes": 0
     },
     "NY": {
-      "sent": 5,
+      "sent": 4,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -61,37 +85,37 @@
       "unsubscribes": 0
     },
     "CA": {
-      "sent": 5,
+      "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
     "TX": {
-      "sent": 10,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "OK": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "GA": {
-      "sent": 4,
+      "sent": 7,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
     "LA": {
+      "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "GA": {
+      "sent": 3,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "IA": {
       "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
     "FL": {
-      "sent": 2,
+      "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
@@ -103,72 +127,6 @@
       "unsubscribes": 0
     },
     "VA": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "TN": {
-      "sent": 2,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "IL": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "CO": {
-      "sent": 2,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "MA": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "IN": {
-      "sent": 3,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "AZ": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "WI": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "DE": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "KY": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "IA": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "AL": {
       "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,

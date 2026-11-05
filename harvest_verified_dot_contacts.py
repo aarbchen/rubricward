@@ -1175,9 +1175,10 @@ def is_receptionist_or_generic_inbox(email: str) -> bool:
     return any(
         local == k or local.startswith(k)
         for k in (
-            "info", "contact", "contactus", "webcontact", "warwebcontactus",
+            "info", "contact", "contactus", "contacts", "webcontact", "warwebcontactus",
             "office", "general", "hello", "admin", "inquir", "mail",
             "frontdesk", "reception", "receptionist", "operator", "clerk", "mailroom",
+            "callcenter", "central_clinic", "clinic", "sales", "communications", "marketing",
         )
     )
 
@@ -1612,38 +1613,29 @@ def harvest_and_save_verified_dot_contacts(target_count: Optional[int] = None) -
 
     if not all_candidate_seeds and deferred_seeds:
         prev_crawled_doms.clear()
-        all_candidate_seeds = deferred_seeds[:165]
+        all_candidate_seeds = deferred_seeds[:90]
     else:
-        all_candidate_seeds = all_candidate_seeds[:220]
-
-    for item in all_candidate_seeds:
-        prev_crawled_doms.add(item[1].strip().lower())
-    try:
-        if os.path.exists(cursor_path):
-            with open(cursor_path, "r", encoding="utf-8") as cf:
-                cursor_data = json.load(cf) or {}
-        cursor_data["crawled_domains"] = sorted(prev_crawled_doms)[-1500:]
-        with open(cursor_path, "w", encoding="utf-8") as cf:
-            json.dump(cursor_data, cf, indent=2)
-    except Exception:
-        pass
+        all_candidate_seeds = all_candidate_seeds[:90]
 
     scraped_html: List[Dict[str, str]] = []
+    actually_crawled_doms: set[str] = set()
     default_fn = "Revenue Cycle" if IS_RUBRICWARD_HARVESTER else "Estimating"
 
     async def _run_batches() -> None:
         asyncio.get_running_loop().set_default_executor(ThreadPoolExecutor(max_workers=96))
-        sem = asyncio.Semaphore(55)
-        limits = httpx.Limits(max_keepalive_connections=45, max_connections=95)
+        sem = asyncio.Semaphore(45)
+        limits = httpx.Limits(max_keepalive_connections=45, max_connections=90)
         client = httpx.AsyncClient(headers=HEADERS, timeout=3.2, follow_redirects=True, verify=False, limits=limits)
         try:
-            batch_size = 55
+            batch_size = 45
             for i in range(0, len(all_candidate_seeds), batch_size):
                 if sum(1 for _e in by_email if not is_receptionist_or_generic_inbox(_e)) + sum(1 for _r in scraped_html if not is_receptionist_or_generic_inbox(_r.get('email', ''))) >= effective_target + 60:
                     break
                 batch = all_candidate_seeds[i : i + batch_size]
+                for b_item in batch:
+                    actually_crawled_doms.add(b_item[1].strip().lower())
                 tasks = [asyncio.create_task(_async_crawl_one(client, sem, item, default_fn)) for item in batch]
-                done, pending = await asyncio.wait(tasks, timeout=9.5)
+                done, pending = await asyncio.wait(tasks, timeout=14.0)
                 for p_task in pending:
                     p_task.cancel()
                 for d_task in done:
@@ -1666,6 +1658,17 @@ def harvest_and_save_verified_dot_contacts(target_count: Optional[int] = None) -
             asyncio.run(_run_batches())
         except Exception:
             pass
+
+    prev_crawled_doms.update(actually_crawled_doms)
+    try:
+        if os.path.exists(cursor_path):
+            with open(cursor_path, "r", encoding="utf-8") as cf:
+                cursor_data = json.load(cf) or {}
+        cursor_data["crawled_domains"] = sorted(prev_crawled_doms)[-1500:]
+        with open(cursor_path, "w", encoding="utf-8") as cf:
+            json.dump(cursor_data, cf, indent=2)
+    except Exception:
+        pass
 
     # Parallel DNS MX verification on unique candidate domains
     cand_rows = []

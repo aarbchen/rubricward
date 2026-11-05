@@ -169,7 +169,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
             "steps": [
                 {
                     "type": "email",
-                    "delay": 2,
+                    "delay": 1,
                     "delay_unit": "days",
                     "pre_delay_unit": "days",
                     "variants": [
@@ -256,7 +256,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
         and l["email"].strip().lower().split("@", 1)[-1] not in st_excluded_domains
         and l["email"].strip().lower() not in bl_emails
         and l["email"].strip().lower().split("@", 1)[-1] not in bl_domains
-        and not is_non_buyer_or_trap_inbox(l["email"])
+        and not is_receptionist_or_generic_inbox(l["email"])
     }
 
     purged_count = 0
@@ -307,7 +307,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
                     bl_emails.add(em_existing)
                     new_bounces_found = True
 
-                if lid and (is_bounced_or_bad or is_st_overlap or has_dollar_or_link or is_non_buyer_or_trap_inbox(em_existing) or (em_existing not in valid_email_map)):
+                if lid and (is_bounced_or_bad or is_st_overlap or has_dollar_or_link or is_receptionist_or_generic_inbox(em_existing) or (em_existing not in valid_email_map)):
                     to_delete_ids.append(lid)
                 elif em_existing in valid_email_map and lid:
                     existing_clean_map[em_existing] = item
@@ -412,7 +412,7 @@ def sync_leads_to_instantly() -> Dict[str, Any]:
         return (0, 0)
 
     with ThreadPoolExecutor(max_workers=8) as pool:
-        instantly_priority_leads = [l for l in leads if not is_non_buyer_or_trap_inbox(l['email'])]
+        instantly_priority_leads = [l for l in leads if not is_receptionist_or_generic_inbox(l['email'])]
         results = list(pool.map(_sync_one_lead, instantly_priority_leads))
 
     uploaded = sum(x[0] for x in results)
