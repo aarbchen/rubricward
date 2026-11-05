@@ -38,9 +38,16 @@ TELEMETRY_API_BASE = (
 
 def configure_utf8_stdio() -> None:
     """Ensure stdout and stderr use UTF-8 encoding across Windows PowerShell and Linux containers."""
+    is_pythonw = os.path.basename(sys.executable or "").lower().startswith("pythonw")
     for stream_name in ("stdout", "stderr"):
         stream = getattr(sys, stream_name, None)
-        if stream is not None and hasattr(stream, "reconfigure"):
+        if is_pythonw or stream is None:
+            try:
+                setattr(sys, stream_name, open(os.devnull, "w", encoding="utf-8", errors="replace"))
+            except Exception:
+                pass
+            continue
+        if hasattr(stream, "reconfigure"):
             try:
                 stream.reconfigure(encoding="utf-8", errors="replace")
             except Exception:

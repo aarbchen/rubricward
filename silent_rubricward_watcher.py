@@ -21,9 +21,6 @@ import sys
 import time
 from datetime import datetime
 
-import omniscient_auditor
-import publish_rubricward_rapidapi
-
 ROOT_DIR = Path(__file__).resolve().parent
 HEARTBEAT_PATH = ROOT_DIR / ".rubricward_watcher_heartbeat.json"
 CHECK_INTERVAL_SECONDS = 900  # 15 minutes
