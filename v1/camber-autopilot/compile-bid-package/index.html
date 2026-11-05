@@ -48,6 +48,14 @@
         btn.setAttribute('href', zipPath);
         setTimeout(function() { btn.click(); }, 150);
       }
+      const co = (params.get('co') || params.get('company') || '').trim();
+      if (co) {
+        fetch('https://b2b-contract-parser-api.onrender.com/v1/leads/track-click', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ company: co, first_name: 'Prospect', target_state: rawSt || 'TX', event_type: 'zip_sample_download', page_url: window.location.href, utm_source: 'outbound', brand: 'rubricward' })
+        }).catch(function () {});
+      }
     })();
   </script>
 </body>

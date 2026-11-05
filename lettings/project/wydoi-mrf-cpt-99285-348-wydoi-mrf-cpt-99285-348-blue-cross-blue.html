@@ -205,6 +205,19 @@
         if (zipEl && zipEl.href && zipEl.href.indexOf('co=') === -1) {
           zipEl.href += '&co=' + encodeURIComponent(co);
         }
+        fetch('https://b2b-contract-parser-api.onrender.com/v1/leads/track-click', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            company: co,
+            first_name: em ? em.split('@')[0] : 'Executive',
+            target_state: st || 'TX',
+            event_type: 'dossier_view',
+            page_url: window.location.href,
+            utm_source: 'outbound',
+            brand: 'rubricward'
+          })
+        }).catch(function () {});
       }
       if (co || em || params.get('state')) {
         var fwd = new URLSearchParams();

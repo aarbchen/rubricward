@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-05T05:35:02.377778+00:00",
+  "updated_at": "2026-11-05T23:20:14.961736+00:00",
   "campaign_id": "672de7d4-7ff6-42ec-be56-9b6ce8519e8c",
-  "recent_rendered_emails_audited": 85,
+  "recent_rendered_emails_audited": 100,
   "recent_inbound_replies_detected": 0,
   "unrendered_template_tags_detected": 0,
   "prefix_delivery_stats": {
     "named_person": {
-      "clean": 80,
+      "clean": 81,
       "bounced": 0
     },
     "dept_desk": {
@@ -24,79 +24,139 @@
     "generic_info": 0.25
   },
   "cohort_stats": {
-    "default": {
-      "sent": 50,
-      "human_replies": 0,
-      "auto_replies": 9,
-      "unsubscribes": 6
-    },
-    "WI": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "MN": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "MO": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "MA": {
-      "sent": 2,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "TN": {
-      "sent": 3,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "NC": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "NY": {
+    "SC": {
       "sent": 4,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "OH": {
+    "TN": {
+      "sent": 7,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "NC": {
       "sent": 3,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "WA": {
-      "sent": 1,
+    "MD": {
+      "sent": 6,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "CA": {
+    "OH": {
+      "sent": 6,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "default": {
+      "sent": 5,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "NY": {
+      "sent": 8,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "WA": {
+      "sent": 5,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "ME": {
+      "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "LA": {
       "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
     "TX": {
-      "sent": 7,
+      "sent": 13,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "LA": {
+    "IA": {
+      "sent": 3,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "AR": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "MO": {
+      "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "CA": {
+      "sent": 4,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "CO": {
+      "sent": 4,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "MI": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "FL": {
+      "sent": 5,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "PA": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "AL": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "IL": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "NJ": {
+      "sent": 1,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "VA": {
       "sent": 2,
       "human_replies": 0,
       "auto_replies": 0,
@@ -108,25 +168,37 @@
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "IA": {
+    "MA": {
+      "sent": 3,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "IN": {
+      "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "AZ": {
       "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "FL": {
+    "WI": {
+      "sent": 2,
+      "human_replies": 0,
+      "auto_replies": 0,
+      "unsubscribes": 0
+    },
+    "KY": {
       "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
       "unsubscribes": 0
     },
-    "MD": {
-      "sent": 1,
-      "human_replies": 0,
-      "auto_replies": 0,
-      "unsubscribes": 0
-    },
-    "VA": {
+    "MN": {
       "sent": 1,
       "human_replies": 0,
       "auto_replies": 0,
@@ -134,7 +206,7 @@
     }
   },
   "recent_human_replies_detected": 0,
-  "recent_auto_replies_detected": 9,
-  "recent_unsubscribes_detected": 6,
+  "recent_auto_replies_detected": 0,
+  "recent_unsubscribes_detected": 0,
   "ooo_referral_emails": []
 }

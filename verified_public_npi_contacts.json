@@ -299,6 +299,19 @@
     "authorized_official_title": "Founder/ Ceo"
   },
   {
+    "company_name": "Aaron J. Burrows, Md P.C",
+    "email": "info@aaronburrows.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1669653242",
+    "state": "CO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://aaronburrows.com/about/",
+    "npi_number": "1669653242",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "Clinic Service",
     "email": "info@clinicservice.com",
     "first_name": "Revenue Cycle",
@@ -349,6 +362,19 @@
     "taxonomy_desc": "Durable Medical Equipment & Medical Supplies",
     "authorized_official_name": "Candace Palumbo",
     "authorized_official_title": "Credentialing Manager"
+  },
+  {
+    "company_name": "Glenwood Medical Assoc",
+    "email": "gmaemployment@glenwoodmedical.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1427191501",
+    "state": "CO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.glenwoodmedical.com/about/careers/",
+    "npi_number": "1427191501",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Rocky Mountain Gastroenterology",
@@ -1271,6 +1297,32 @@
     "source_type": "website_html_mailto",
     "source_url": "https://www.endurancespine.com/contact-us",
     "npi_number": "1710785233",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
+    "company_name": "North Clinic",
+    "email": "custservice@north.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1639643455",
+    "state": "MN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.north.com",
+    "npi_number": "1639643455",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
+    "company_name": "Oshi Health Medical Group",
+    "email": "carecoordinator@oshihealth.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1174287700",
+    "state": "MN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://oshihealth.com/contact-us/",
+    "npi_number": "1174287700",
     "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
     "authorized_official_name": "Clinical Revenue Cycle Director",
     "authorized_official_title": "VP of Managed Care & Revenue Cycle"
@@ -2408,19 +2460,6 @@
     "authorized_official_title": "Administrator"
   },
   {
-    "company_name": "MedCycle Solutions",
-    "email": "c5ff2feb7e54a72a6e99294ac2cc227@medcyclesolutions.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1590031146",
-    "state": "TX",
-    "source_type": "website_html_mailto",
-    "source_url": "https://medcyclesolutions.com/contact-us/",
-    "npi_number": "1590031146",
-    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
-    "authorized_official_name": "Clinical Revenue Cycle Director",
-    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
-  },
-  {
     "company_name": "MediBillMD Revenue Cycle",
     "email": "info@medibillmd.com",
     "first_name": "Revenue Cycle",
@@ -2772,6 +2811,19 @@
     "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
+    "company_name": "Advanced Healthcare Sc",
+    "email": "noclinic@advancedpaincare.us",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1154371847",
+    "state": "WI",
+    "source_type": "website_html_mailto",
+    "source_url": "https://austinpaindoctor.com/locations",
+    "npi_number": "1154371847",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "Allina Health System",
     "email": "community@allina.com",
     "first_name": "Revenue Cycle",
@@ -2780,6 +2832,19 @@
     "source_type": "website_html_mailto",
     "source_url": "https://www.allinahealth.org/about-us/community-involvement",
     "npi_number": "1184244519",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
+    "company_name": "Associated Physicians, Llp",
+    "email": "info@associatedphysicians.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1861412785",
+    "state": "WI",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.associatedphysicians.com",
+    "npi_number": "1861412785",
     "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
     "authorized_official_name": "Clinical Revenue Cycle Director",
     "authorized_official_title": "VP of Managed Care & Revenue Cycle"
