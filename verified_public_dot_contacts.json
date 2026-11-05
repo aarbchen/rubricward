@@ -78,6 +78,19 @@
     "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
+    "company_name": "Associated Billing Services",
+    "email": "info@associatedbilling.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1649381922",
+    "state": "AZ",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.associatedbilling.com/contact.html",
+    "npi_number": "1649381922",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "SimonMed Imaging",
     "email": "billing@simonmed.com",
     "first_name": "Revenue Cycle",
@@ -560,19 +573,6 @@
     "authorized_official_title": "Managing Member"
   },
   {
-    "company_name": "Valet Health Physician Growth &",
-    "email": "support@valethealth.com",
-    "first_name": "Revenue Cycle",
-    "license_or_dot_id": "NPI-1332822448",
-    "state": "FL",
-    "source_type": "website_html_mailto",
-    "source_url": "https://valethealth.com/contact/",
-    "npi_number": "1332822448",
-    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
-    "authorized_official_name": "Clinical Revenue Cycle Director",
-    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
-  },
-  {
     "company_name": "Vesta Teleradiology Services",
     "email": "info@vestarad.com",
     "first_name": "Revenue Cycle",
@@ -925,6 +925,19 @@
     "authorized_official_title": "Ceo"
   },
   {
+    "company_name": "Belmont Medical Associates",
+    "email": "info@belmontmedical.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1649210410",
+    "state": "MA",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.belmontmedical.com",
+    "npi_number": "1649210410",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
     "company_name": "Boston Orthopaedic",
     "email": "kaitlyn.johnston@boston.com",
     "first_name": "Revenue Cycle",
@@ -1079,6 +1092,19 @@
     "taxonomy_desc": "Orthopaedic Surgery, Orthopaedic Surgery of the Spine",
     "authorized_official_name": "Joana Gomes",
     "authorized_official_title": "Credential Manager"
+  },
+  {
+    "company_name": "Chesapeake Digestive Associates, Pc",
+    "email": "pex_support@chesapeakeregional.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1124857214",
+    "state": "MD",
+    "source_type": "website_html_mailto",
+    "source_url": "https://chesapeakeregional.com/services-specialties/digestive-health",
+    "npi_number": "1124857214",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "CollectRx Out-of-Network & NSA IDR",
@@ -1272,6 +1298,19 @@
     "source_type": "website_html_mailto",
     "source_url": "https://amyelizabeth.com/",
     "npi_number": "1891744587",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
+  },
+  {
+    "company_name": "Capital City Medical Associates, Pc",
+    "email": "wholesale@capitalcity.com",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1639129232",
+    "state": "MO",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.capitalcity.com/pages/contact",
+    "npi_number": "1639129232",
     "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
     "authorized_official_name": "Clinical Revenue Cycle Director",
     "authorized_official_title": "VP of Managed Care & Revenue Cycle"
@@ -2081,6 +2120,19 @@
     "taxonomy_desc": "Orthopaedic Surgery",
     "authorized_official_name": "Susan Fenton",
     "authorized_official_title": "Credentialing Director"
+  },
+  {
+    "company_name": "David N. Collins, Md Pc",
+    "email": "studio@davidcollins.studio",
+    "first_name": "Revenue Cycle",
+    "license_or_dot_id": "NPI-1649347717",
+    "state": "TN",
+    "source_type": "website_html_mailto",
+    "source_url": "https://www.davidcollins.studio/contact",
+    "npi_number": "1649347717",
+    "taxonomy_desc": "Multi-Specialty Surgical Group & ASC (207X00000X)",
+    "authorized_official_name": "Clinical Revenue Cycle Director",
+    "authorized_official_title": "VP of Managed Care & Revenue Cycle"
   },
   {
     "company_name": "Galen Medical Group",

@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-05T02:46:15.778823+00:00",
+  "updated_at": "2026-11-05T05:35:56.274985+00:00",
   "brand": "RubricWard",
   "1_are_people_showing_interest": {
     "human_replies_detected": 0,
     "recent_emails_audited": 85,
-    "uncontacted_leads_remaining": 1
+    "uncontacted_leads_remaining": 6
   },
   "2_why_not_bottlenecks_checked": {
     "campaign_was_paused": false,

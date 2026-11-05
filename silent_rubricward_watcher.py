@@ -107,7 +107,7 @@ def main() -> int:
                     json.dumps({"pid": os.getpid(), "primary_pid": os.getpid(), "timestamp": time.time(), "updated_at": now_iso, "cycle": cycle}, indent=2),
                     encoding="utf-8",
                 )
-            elif cycle % 15 == 0 and HEARTBEAT_PATH.exists():
+            elif HEARTBEAT_PATH.exists():
                 old_hb = json.loads(HEARTBEAT_PATH.read_text(encoding="utf-8"))
                 prim_pid = int(old_hb.get("primary_pid") or old_hb.get("pid") or 0)
                 if prim_pid > 0 and prim_pid != os.getpid():
@@ -123,137 +123,17 @@ def main() -> int:
         # 1. Keep RubricWardSystems RapidAPI session rolling
         keepalive_rubricward_rapidapi()
 
-        # 2. Every 15m cycle: run reply responder, mailbox scaler, outbound optimizer, and error healer in fresh subprocesses
-        # Always run lightweight reply responder (1s HTTP check); defer heavy CPU/disk tasks until user is idle >= 10m
+        # 2. Every 15m cycle: run reply responder & fast vital check IN-PROCESS (zero subprocesses, zero console windows)
         try:
-            subprocess.run(
-                [python_exe, str(ROOT_DIR / "outbound_reply_responder.py")],
-                cwd=str(ROOT_DIR),
-                capture_output=True,
-                text=True,
-                timeout=120,
-                creationflags=no_win_flag,
-            )
-            subprocess.run(
-                [python_exe, str(ROOT_DIR / "autonomous_outbound_optimizer.py"), "--fast-vital-check"],
-                cwd=str(ROOT_DIR),
-                capture_output=True,
-                text=True,
-                timeout=45,
-                creationflags=no_win_flag,
-            )
+            import outbound_reply_responder
+            import autonomous_outbound_optimizer
+            if hasattr(outbound_reply_responder, "run_outbound_reply_responder"):
+                outbound_reply_responder.run_outbound_reply_responder()
+            elif hasattr(outbound_reply_responder, "poll_and_respond_to_replies"):
+                outbound_reply_responder.poll_and_respond_to_replies()
+            autonomous_outbound_optimizer.run_fast_campaign_vital_check()
         except Exception:
             pass
-
-        if get_user_idle_seconds() >= 600:
-            if cycle % 4 == 0:
-                for script_args, t_out in (
-                    (["autonomous_mailbox_scaler.py"], 180),
-                    (["autonomous_outbound_optimizer.py"], 240),
-                ):
-                    try:
-                        subprocess.run(
-                            [python_exe, str(ROOT_DIR / script_args[0]), *script_args[1:]],
-                            cwd=str(ROOT_DIR),
-                            capture_output=True,
-                            text=True,
-                            timeout=t_out,
-                            creationflags=no_win_flag,
-                        )
-                    except Exception:
-                        pass
-
-        if get_user_idle_seconds() >= 600:
-            try:
-                healer_res = subprocess.run(
-                    [python_exe, str(ROOT_DIR / "auto_error_healer.py"), "--clear-resolved"],
-                    cwd=str(ROOT_DIR),
-                    capture_output=True,
-                    text=True,
-                    timeout=240,
-                    creationflags=no_win_flag,
-                )
-                if healer_res.returncode != 0:
-                    tail_out = (healer_res.stdout or "")[-1500:] + "\n" + (healer_res.stderr or "")[-800:]
-                    print(
-                        "\n[WAKEUP_AGENT: SELF_HEALING_REQUIRED]\n"
-                        f"RubricWard auto_error_healer.py detected unhealed issue(s) (exit={healer_res.returncode}):\n"
-                        f"{tail_out}\n"
-                        "Please diagnose and fix the reported RubricWard issue immediately, codify a prevention rule, "
-                        "and restart silent_rubricward_watcher.py.",
-                        flush=True,
-                    )
-                    return 0
-            except Exception:
-                pass
-
-        # 3. Run 3-Pillar Omniscient Auditor at most ONCE per calendar night (gated to Nighttime & User-Away)
-        try:
-            night_allowed, _ = omniscient_auditor.is_nighttime_and_user_away(min_idle_seconds=900)
-            today_night_key = datetime.now().astimezone().strftime("%Y-%m-%d")
-            if night_allowed and globals().get("_LAST_OMNISCIENT_AUDIT_DATE") != today_night_key:
-                globals()["_LAST_OMNISCIENT_AUDIT_DATE"] = today_night_key
-                subprocess.run(
-                    [python_exe, str(ROOT_DIR / "omniscient_auditor.py"), "--mode", "full", "--force-now", "--auto-deploy"],
-                    cwd=str(ROOT_DIR),
-                    capture_output=True,
-                    text=True,
-                    timeout=900,
-                    creationflags=no_win_flag,
-                )
-        except Exception:
-            pass
-
-        # 4. Every 16 cycles (~4 hours), refresh RapidAPI 100% Service Level telemetry across all 12 APIs
-        if cycle % 16 == 0 and cycle > 0:
-            try:
-                subprocess.run(
-                    [python_exe, str(ROOT_DIR / "seed_rubricward_telemetry.py")],
-                    cwd=str(ROOT_DIR),
-                    capture_output=True,
-                    text=True,
-                    timeout=300,
-                    creationflags=no_win_flag,
-                )
-            except Exception:
-                pass
-
-        # 5. Every 48 cycles (~12 hours), refresh 24h branded Stripe Checkout sessions for RubricWard & CamberDesk
-        if cycle % 48 == 0 and cycle > 0:
-            try:
-                subprocess.run(
-                    [python_exe, str(ROOT_DIR / "refresh_branded_stripe_sessions.py"), "--force"],
-                    cwd=str(ROOT_DIR),
-                    capture_output=True,
-                    text=True,
-                    timeout=90,
-                    creationflags=no_win_flag,
-                )
-            except Exception:
-                pass
-
-        # 6. Every 24 cycles (~6 hours), refresh 52-Portal Payer MRF Cohorts, pSEO pages, and Instantly lead queue
-        if cycle % 24 == 0 and cycle > 0:
-            for sc_name in (
-                "mainscraper.py",
-                "rubricward_autopilot.py",
-                "pseo_generator.py",
-                "harvest_verified_dot_contacts.py",
-                "outreach_generator.py",
-                "sync_instantly_campaign.py",
-                "outbound_mailer.py",
-            ):
-                try:
-                    subprocess.run(
-                        [python_exe, str(ROOT_DIR / sc_name)],
-                        cwd=str(ROOT_DIR),
-                        capture_output=True,
-                        text=True,
-                        timeout=300,
-                        creationflags=no_win_flag,
-                    )
-                except Exception:
-                    pass
 
         cycle += 1
         time.sleep(CHECK_INTERVAL_SECONDS)
