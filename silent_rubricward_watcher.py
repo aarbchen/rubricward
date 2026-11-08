@@ -23,7 +23,7 @@ from datetime import datetime
 
 ROOT_DIR = Path(__file__).resolve().parent
 HEARTBEAT_PATH = ROOT_DIR / ".rubricward_watcher_heartbeat.json"
-CHECK_INTERVAL_SECONDS = 900  # 15 minutes
+CHECK_INTERVAL_SECONDS = 3600  # 1 hour ($0.00 Skeleton Keepalive Mode)
 
 
 
@@ -120,17 +120,18 @@ def main() -> int:
         # 1. Keep RubricWardSystems RapidAPI session rolling
         keepalive_rubricward_rapidapi()
 
-        # 2. Every 15m cycle: run reply responder & fast vital check IN-PROCESS (zero subprocesses, zero console windows)
-        try:
-            import outbound_reply_responder
-            import autonomous_outbound_optimizer
-            if hasattr(outbound_reply_responder, "run_outbound_reply_responder"):
-                outbound_reply_responder.run_outbound_reply_responder()
-            elif hasattr(outbound_reply_responder, "poll_and_respond_to_replies"):
-                outbound_reply_responder.poll_and_respond_to_replies()
-            autonomous_outbound_optimizer.run_fast_campaign_vital_check()
-        except Exception:
-            pass
+        # 2. $0.00 Skeleton Mode: Instantly outbound campaigns & LLM auto-responders paused unless SKELETON_ZERO_COST_MODE=0
+        if os.getenv("SKELETON_ZERO_COST_MODE", "1") != "1":
+            try:
+                import outbound_reply_responder
+                import autonomous_outbound_optimizer
+                if hasattr(outbound_reply_responder, "run_outbound_reply_responder"):
+                    outbound_reply_responder.run_outbound_reply_responder()
+                elif hasattr(outbound_reply_responder, "poll_and_respond_to_replies"):
+                    outbound_reply_responder.poll_and_respond_to_replies()
+                autonomous_outbound_optimizer.run_fast_campaign_vital_check()
+            except Exception:
+                pass
 
         cycle += 1
         time.sleep(CHECK_INTERVAL_SECONDS)
